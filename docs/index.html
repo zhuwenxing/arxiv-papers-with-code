@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArXiv Papers with Code - IR & DB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-radius: 8px;
+            padding: 30px;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .last-update {
+            color: #95a5a6;
+            font-size: 0.9em;
+        }
+        
+        .statistics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .stat-card h3 {
+            color: #3498db;
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        
+        .filters {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover {
+            background: #f8f9fa;
+        }
+        
+        .filter-btn.active {
+            background: #3498db;
+            color: #fff;
+            border-color: #3498db;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .papers-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .paper-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .paper-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        
+        .paper-title {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        .paper-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+        
+        .authors {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        
+        .category {
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+        
+        .category.information_retrieval {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .category.databases {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .abstract {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .paper-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .paper-links a {
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+        
+        .arxiv-link {
+            background: #f44336;
+            color: #fff;
+        }
+        
+        .arxiv-link:hover {
+            background: #d32f2f;
+        }
+        
+        .pdf-link {
+            background: #ff9800;
+            color: #fff;
+        }
+        
+        .pdf-link:hover {
+            background: #f57c00;
+        }
+        
+        .code-link {
+            background: #4caf50;
+            color: #fff;
+        }
+        
+        .code-link:hover {
+            background: #388e3c;
+        }
+        
+        .code-link.github {
+            background: #24292e;
+        }
+        
+        .code-link.github:hover {
+            background: #1a1e22;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 20px;
+            }
+            
+            .paper-meta {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ArXiv Papers with Open Source Code</h1>
+            <p class="subtitle">Information Retrieval & Database Research Papers</p>
+            <p class="last-update">Last updated: 2025-06-29 12:45 UTC</p>
+        </header>
+        
+        
+    <div class="statistics">
+        <div class="stat-card">
+            <h3>6</h3>
+            <p>Total Papers</p>
+        </div>
+        <div class="stat-card">
+            <h3>6</h3>
+            <p>With GitHub</p>
+        </div>
+        <div class="stat-card">
+            <h3>6</h3>
+            <p>Last 7 Days</p>
+        </div>
+        <div class="stat-card">
+            <h3>6</h3>
+            <p>Information Retrieval</p>
+        </div>
+        <div class="stat-card">
+            <h3>0</h3>
+            <p>Databases</p>
+        </div>
+    </div>
+    
+        
+        <div class="filters">
+            <input type="text" class="search-box" id="searchBox" placeholder="Search papers by title, authors, or abstract...">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Papers</button>
+                <button class="filter-btn" data-filter="information_retrieval">Information Retrieval</button>
+                <button class="filter-btn" data-filter="databases">Databases</button>
+                <button class="filter-btn" data-filter="recent">Last 7 Days</button>
+                <button class="filter-btn" data-filter="github">With GitHub</button>
+            </div>
+        </div>
+        
+        <div class="papers-grid" id="papersGrid">
+            
+    <div class="paper-card" data-category="information_retrieval" data-date="2025-06-26">
+        <h3 class="paper-title">skLEP: A Slovak General Language Understanding Benchmark</h3>
+        <div class="paper-meta">
+            <span class="authors">Marek Šuppa, Andrej Ridzik, Daniel Hládek, Tomáš Javůrek, Viktória Ondrejová, Kristína Sásiková, Martin Tamajka, Marián Šimko</span>
+            <span class="date">2025-06-26</span>
+            <span class="category information_retrieval">Information Retrieval</span>
+        </div>
+        <p class="abstract">In this work, we introduce skLEP, the first comprehensive benchmark
+specifically designed for evaluating Slovak natural language understanding
+(NLU) models. We have compiled skLEP to encompass nine diverse tasks that span
+token-level, sentence-pair, and document-level challenges, thereby offering a
+...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2506.21508v1" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="http://arxiv.org/pdf/2506.21508v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/slovak-nlp/sklep" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+
+    <div class="paper-card" data-category="information_retrieval" data-date="2025-06-26">
+        <h3 class="paper-title">Small Encoders Can Rival Large Decoders in Detecting Groundedness</h3>
+        <div class="paper-meta">
+            <span class="authors">Istabrak Abbes, Gabriele Prato, Quentin Fournier, Fernando Rodriguez, Alaa Boukhary, Adam Elwood, Sarath Chandar</span>
+            <span class="date">2025-06-26</span>
+            <span class="category information_retrieval">Information Retrieval</span>
+        </div>
+        <p class="abstract">Augmenting large language models (LLMs) with external context significantly
+improves their performance in natural language processing (NLP) tasks. However,
+LLMs struggle to answer queries reliably when the provided context lacks
+information, often resorting to ungrounded speculation or internal know...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2506.21288v1" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="http://arxiv.org/pdf/2506.21288v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/chandarlab/Hallucinate-less" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+
+    <div class="paper-card" data-category="information_retrieval" data-date="2025-06-26">
+        <h3 class="paper-title">Response Quality Assessment for Retrieval-Augmented Generation via Conditional Conformal Factuality</h3>
+        <div class="paper-meta">
+            <span class="authors">Naihe Feng, Yi Sui, Shiyi Hou, Jesse C. Cresswell, Ga Wu</span>
+            <span class="date">2025-06-26</span>
+            <span class="category information_retrieval">Information Retrieval</span>
+        </div>
+        <p class="abstract">Existing research on Retrieval-Augmented Generation (RAG) primarily focuses
+on improving overall question-answering accuracy, often overlooking the quality
+of sub-claims within generated responses. Recent methods that attempt to
+improve RAG trustworthiness, such as through auto-evaluation metrics, l...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2506.20978v1" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="http://arxiv.org/pdf/2506.20978v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/n4feng/ResponseQualityAssessment" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+
+    <div class="paper-card" data-category="information_retrieval" data-date="2025-06-26">
+        <h3 class="paper-title">EraRAG: Efficient and Incremental Retrieval Augmented Generation for Growing Corpora</h3>
+        <div class="paper-meta">
+            <span class="authors">Fangyuan Zhang, Zhengjun Huang, Yingli Zhou, Qintian Guo, Zhixun Li, Wensheng Luo, Di Jiang, Yixiang Fang, Xiaofang Zhou</span>
+            <span class="date">2025-06-26</span>
+            <span class="category information_retrieval">Information Retrieval</span>
+        </div>
+        <p class="abstract">Graph-based Retrieval-Augmented Generation (Graph-RAG) enhances large
+language models (LLMs) by structuring retrieval over an external corpus.
+However, existing approaches typically assume a static corpus, requiring
+expensive full-graph reconstruction whenever new documents arrive, limiting
+their sc...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2506.20963v1" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="http://arxiv.org/pdf/2506.20963v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/EverM0re/EraRAG-Official" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+
+    <div class="paper-card" data-category="information_retrieval" data-date="2025-06-25">
+        <h3 class="paper-title">RAG-VisualRec: An Open Resource for Vision- and Text-Enhanced Retrieval-Augmented Generation in Recommendation</h3>
+        <div class="paper-meta">
+            <span class="authors">Ali Tourani, Fatemeh Nazary, Yashar Deldjoo</span>
+            <span class="date">2025-06-25</span>
+            <span class="category information_retrieval">Information Retrieval</span>
+        </div>
+        <p class="abstract">This paper addresses the challenge of developing multimodal recommender
+systems for the movie domain, where limited metadata (e.g., title, genre) often
+hinders the generation of robust recommendations. We introduce a resource that
+combines LLM-generated plot descriptions with trailer-derived visual ...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2506.20817v1" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="http://arxiv.org/pdf/2506.20817v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/RecSys-lab/RAG-VisualRec" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+
+    <div class="paper-card" data-category="information_retrieval" data-date="2025-06-25">
+        <h3 class="paper-title">ReCode: Updating Code API Knowledge with Reinforcement Learning</h3>
+        <div class="paper-meta">
+            <span class="authors">Haoze Wu, Yunzhi Yao, Wenhao Yu, Huajun Chen, Ningyu Zhang</span>
+            <span class="date">2025-06-25</span>
+            <span class="category information_retrieval">Information Retrieval</span>
+        </div>
+        <p class="abstract">Large Language Models (LLMs) exhibit remarkable code generation capabilities
+but falter when adapting to frequent updates in external library APIs. This
+critical limitation, stemming from reliance on outdated API knowledge from
+their training data, even with access to current documentation, impedes
+...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2506.20495v1" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="http://arxiv.org/pdf/2506.20495v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/zjunlp/ReCode" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+        </div>
+        
+        <div class="no-results" id="noResults" style="display: none;">
+            No papers found matching your criteria.
+        </div>
+    </div>
+    
+    <script>
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const paperCards = document.querySelectorAll('.paper-card');
+        const searchBox = document.getElementById('searchBox');
+        const noResults = document.getElementById('noResults');
+        
+        function filterPapers() {
+            const activeFilter = document.querySelector('.filter-btn.active').dataset.filter;
+            const searchTerm = searchBox.value.toLowerCase();
+            let visibleCount = 0;
+            
+            paperCards.forEach(card => {
+                let showCard = true;
+                
+                // Category filter
+                if (activeFilter !== 'all') {
+                    if (activeFilter === 'recent') {
+                        const paperDate = new Date(card.dataset.date);
+                        const weekAgo = new Date();
+                        weekAgo.setDate(weekAgo.getDate() - 7);
+                        showCard = paperDate >= weekAgo;
+                    } else if (activeFilter === 'github') {
+                        showCard = card.innerHTML.includes('github.com');
+                    } else {
+                        showCard = card.dataset.category === activeFilter;
+                    }
+                }
+                
+                // Search filter
+                if (showCard && searchTerm) {
+                    const text = card.textContent.toLowerCase();
+                    showCard = text.includes(searchTerm);
+                }
+                
+                card.style.display = showCard ? 'block' : 'none';
+                if (showCard) visibleCount++;
+            });
+            
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+        
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                filterPapers();
+            });
+        });
+        
+        searchBox.addEventListener('input', filterPapers);
+        
+        // Initialize
+        filterPapers();
+    </script>
+</body>
+</html>

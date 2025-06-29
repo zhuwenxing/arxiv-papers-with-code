@@ -1,0 +1,11 @@
+# GitHub Pages configuration
+theme: null
+plugins: []
+
+# Build settings
+source: .
+destination: ./_site
+
+# Include docs folder
+include:
+  - docs/
