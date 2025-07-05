@@ -1,0 +1,287 @@
+[
+  {
+    "title": "Decoupled Planning and Execution: A Hierarchical Reasoning Framework for Deep Search",
+    "authors": "Jiajie Jin, Xiaoxi Li, Guanting Dong, Yuyao Zhang, Yutao Zhu, Yang Zhao, Hongjin Qian, Zhicheng Dou",
+    "published": "2025-07-03",
+    "arxiv_id": "2507.02652v1",
+    "url": "http://arxiv.org/abs/2507.02652v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.02652v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Complex information needs in real-world search scenarios demand deep\nreasoning and knowledge synthesis across diverse sources, which traditional\nretrieval-augmented generation (RAG) pipelines struggle to address effectively.\nCurrent reasoning-based approaches suffer from a fundamental limitation: they\nuse a single model to handle both high-level planning and detailed execution,\nleading to inefficient reasoning and limited scalability. In this paper, we\nintroduce HiRA, a hierarchical framework that separates strategic planning from\nspecialized execution. Our approach decomposes complex search tasks into\nfocused subtasks, assigns each subtask to domain-specific agents equipped with\nexternal tools and reasoning capabilities, and coordinates the results through\na structured integration mechanism. This separation prevents execution details\nfrom disrupting high-level reasoning while enabling the system to leverage\nspecialized expertise for different types of information processing.\nExperiments on four complex, cross-modal deep search benchmarks demonstrate\nthat HiRA significantly outperforms state-of-the-art RAG and agent-based\nsystems. Our results show improvements in both answer quality and system\nefficiency, highlighting the effectiveness of decoupled planning and execution\nfor multi-step information seeking tasks. Our code is available at\nhttps://github.com/ignorejjj/HiRA.",
+    "code_links": [
+      "https://github.com/ignorejjj/HiRA"
+    ],
+    "comment": "9 pages"
+  },
+  {
+    "title": "Listwise Preference Alignment Optimization for Tail Item Recommendation",
+    "authors": "Zihao Li, Chao Yang, Tong Zhang, Yakun Chen, Xianzhi Wang, Guandong Xu, Daoyi Dong",
+    "published": "2025-07-03",
+    "arxiv_id": "2507.02255v1",
+    "url": "http://arxiv.org/abs/2507.02255v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.02255v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Preference alignment has achieved greater success on Large Language Models\n(LLMs) and drawn broad interest in recommendation research. Existing preference\nalignment methods for recommendation either require explicit reward modeling or\nonly support pairwise preference comparison. The former directly increases\nsubstantial computational costs, while the latter hinders training efficiency\non negative samples. Moreover, no existing effort has explored preference\nalignment solutions for tail-item recommendation. To bridge the above gaps, we\npropose LPO4Rec, which extends the Bradley-Terry model from pairwise comparison\nto listwise comparison, to improve the efficiency of model training.\nSpecifically, we derive a closed form optimal policy to enable more efficient\nand effective training without explicit reward modeling. We also present an\nadaptive negative sampling and reweighting strategy to prioritize tail items\nduring optimization and enhance performance in tail-item recommendations.\nBesides, we theoretically prove that optimizing the listwise preference\noptimization (LPO) loss is equivalent to maximizing the upper bound of the\noptimal reward. Our experiments on three public datasets show that our method\noutperforms 10 baselines by a large margin, achieving up to 50% performance\nimprovement while reducing 17.9% GPU memory usage when compared with direct\npreference optimization (DPO) in tail-item recommendation. Our code is\navailable at https://github.com/Yuhanleeee/LPO4Rec.",
+    "code_links": [
+      "https://github.com/Yuhanleeee/LPO4Rec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Confidence and Stability of Global and Pairwise Scores in NLP Evaluation",
+    "authors": "Georgii Levtsov, Dmitry Ustalov",
+    "published": "2025-07-02",
+    "arxiv_id": "2507.01633v1",
+    "url": "http://arxiv.org/abs/2507.01633v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.01633v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "With the advent of highly capable instruction-tuned neural language models,\nbenchmarking in natural language processing (NLP) is increasingly shifting\ntowards pairwise comparison leaderboards, such as LMSYS Arena, from traditional\nglobal pointwise scores (e.g., GLUE, BIG-bench, SWE-bench). This paper\nempirically investigates the strengths and weaknesses of both global scores and\npairwise comparisons to aid decision-making in selecting appropriate model\nevaluation strategies. Through computational experiments on synthetic and\nreal-world datasets using standard global metrics and the popular Bradley-Terry\nmodel for pairwise comparisons, we found that while global scores provide more\nreliable overall rankings, they can underestimate strong models with rare,\nsignificant errors or low confidence. Conversely, pairwise comparisons are\nparticularly effective for identifying strong contenders among models with\nlower global scores, especially where quality metrics are hard to define (e.g.,\ntext generation), though they require more comparisons to converge if ties are\nfrequent. Our code and data are available at\nhttps://github.com/HSPyroblast/srw-ranking under a permissive license.",
+    "code_links": [
+      "https://github.com/HSPyroblast/srw-ranking"
+    ],
+    "comment": "8 pages, accepted at ACL SRW 2025"
+  },
+  {
+    "title": "Uncertainty-Aware Complex Scientific Table Data Extraction",
+    "authors": "Kehinde Ajayi, Yi He, Jian Wu",
+    "published": "2025-07-02",
+    "arxiv_id": "2507.02009v1",
+    "url": "http://arxiv.org/abs/2507.02009v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.02009v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Table structure recognition (TSR) and optical character recognition (OCR)\nplay crucial roles in extracting structured data from tables in scientific\ndocuments. However, existing extraction frameworks built on top of TSR and OCR\nmethods often fail to quantify the uncertainties of extracted results. To\nobtain highly accurate data for scientific domains, all extracted data must be\nmanually verified, which can be time-consuming and labor-intensive. We propose\na framework that performs uncertainty-aware data extraction for complex\nscientific tables, built on conformal prediction, a model-agnostic method for\nuncertainty quantification (UQ). We explored various uncertainty scoring\nmethods to aggregate the uncertainties introduced by TSR and OCR. We rigorously\nevaluated the framework using a standard benchmark and an in-house dataset\nconsisting of complex scientific tables in six scientific domains. The results\ndemonstrate the effectiveness of using UQ for extraction error detection, and\nby manually verifying only 47\\% of extraction results, the data quality can be\nimproved by 30\\%. Our work quantitatively demonstrates the role of UQ with the\npotential of improving the efficiency in the human-machine cooperation process\nto obtain scientifically usable data from complex tables in scientific\ndocuments. All code and data are available on GitHub at\nhttps://github.com/lamps-lab/TSR-OCR-UQ/tree/main.",
+    "code_links": [
+      "https://github.com/lamps-lab/TSR-OCR-UQ"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Why Multi-Interest Fairness Matters: Hypergraph Contrastive Multi-Interest Learning for Fair Conversational Recommender System",
+    "authors": "Yongsen Zheng, Zongxuan Xie, Guohua Wang, Ziyao Liu, Liang Lin, Kwok-Yan Lam",
+    "published": "2025-07-01",
+    "arxiv_id": "2507.02000v1",
+    "url": "http://arxiv.org/abs/2507.02000v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.02000v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Unfairness is a well-known challenge in Recommender Systems (RSs), often\nresulting in biased outcomes that disadvantage users or items based on\nattributes such as gender, race, age, or popularity. Although some approaches\nhave started to improve fairness recommendation in offline or static contexts,\nthe issue of unfairness often exacerbates over time, leading to significant\nproblems like the Matthew effect, filter bubbles, and echo chambers. To address\nthese challenges, we proposed a novel framework, Hypergraph Contrastive\nMulti-Interest Learning for Fair Conversational Recommender System (HyFairCRS),\naiming to promote multi-interest diversity fairness in dynamic and interactive\nConversational Recommender Systems (CRSs). HyFairCRS first captures a wide\nrange of user interests by establishing diverse hypergraphs through contrastive\nlearning. These interests are then utilized in conversations to generate\ninformative responses and ensure fair item predictions within the dynamic\nuser-system feedback loop. Experiments on two CRS-based datasets show that\nHyFairCRS achieves a new state-of-the-art performance while effectively\nalleviating unfairness. Our code is available at\nhttps://github.com/zysensmile/HyFairCRS.",
+    "code_links": [
+      "https://github.com/zysensmile/HyFairCRS"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MassTool: A Multi-Task Search-Based Tool Retrieval Framework for Large Language Models",
+    "authors": "Jianghao Lin, Xinyuan Wang, Xinyi Dai, Menghui Zhu, Bo Chen, Ruiming Tang, Yong Yu, Weinan Zhang",
+    "published": "2025-07-01",
+    "arxiv_id": "2507.00487v2",
+    "url": "http://arxiv.org/abs/2507.00487v2",
+    "pdf_url": "http://arxiv.org/pdf/2507.00487v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Tool retrieval is a critical component in enabling large language models\n(LLMs) to interact effectively with external tools. It aims to precisely filter\nthe massive tools into a small set of candidates for the downstream\ntool-augmented LLMs. However, most existing approaches primarily focus on\noptimizing tool representations, often neglecting the importance of precise\nquery comprehension. To address this gap, we introduce MassTool, a multi-task\nsearch-based framework designed to enhance both query representation and tool\nretrieval accuracy. MassTool employs a two-tower architecture: a tool usage\ndetection tower that predicts the need for function calls, and a tool retrieval\ntower that leverages a query-centric graph convolution network (QC-GCN) for\neffective query-tool matching. It also incorporates search-based user intent\nmodeling (SUIM) to handle diverse and out-of-distribution queries, alongside an\nadaptive knowledge transfer (AdaKT) module for efficient multi-task learning.\nBy jointly optimizing tool usage detection loss, list-wise retrieval loss, and\ncontrastive regularization loss, MassTool establishes a robust dual-step\nsequential decision-making pipeline for precise query understanding. Extensive\nexperiments demonstrate its effectiveness in improving retrieval accuracy. Our\ncode is available at https://github.com/wxydada/MassTool.",
+    "code_links": [
+      "https://github.com/wxydada/MassTool"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Thought-Augmented Planning for LLM-Powered Interactive Recommender Agent",
+    "authors": "Haocheng Yu, Yaxiong Wu, Hao Wang, Wei Guo, Yong Liu, Yawen Li, Yuyang Ye, Junping Du, Enhong Chen",
+    "published": "2025-06-30",
+    "arxiv_id": "2506.23485v1",
+    "url": "http://arxiv.org/abs/2506.23485v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.23485v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Interactive recommendation is a typical information-seeking task that allows\nusers to interactively express their needs through natural language and obtain\npersonalized recommendations. Large language model-powered (LLM-powered) agents\nhave become a new paradigm in interactive recommendations, effectively\ncapturing users' real-time needs and enhancing personalized experiences.\nHowever, due to limited planning and generalization capabilities, existing\nformulations of LLM-powered interactive recommender agents struggle to\neffectively address diverse and complex user intents, such as intuitive,\nunrefined, or occasionally ambiguous requests. To tackle this challenge, we\npropose a novel thought-augmented interactive recommender agent system (TAIRA)\nthat addresses complex user intents through distilled thought patterns.\nSpecifically, TAIRA is designed as an LLM-powered multi-agent system featuring\na manager agent that orchestrates recommendation tasks by decomposing user\nneeds and planning subtasks, with its planning capacity strengthened through\nThought Pattern Distillation (TPD), a thought-augmentation method that extracts\nhigh-level thoughts from the agent's and human experts' experiences. Moreover,\nwe designed a set of user simulation schemes to generate personalized queries\nof different difficulties and evaluate the recommendations based on specific\ndatasets. Through comprehensive experiments conducted across multiple datasets,\nTAIRA exhibits significantly enhanced performance compared to existing methods.\nNotably, TAIRA shows a greater advantage on more challenging tasks while\ngeneralizing effectively on novel tasks, further validating its superiority in\nmanaging complex user intents within interactive recommendation systems. The\ncode is publicly available at:https://github.com/Alcein/TAIRA.",
+    "code_links": [
+      "https://github.com/Alcein/TAIRA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "JointRank: Rank Large Set with Single Pass",
+    "authors": "Evgeny Dedov",
+    "published": "2025-06-27",
+    "arxiv_id": "2506.22262v1",
+    "url": "http://arxiv.org/abs/2506.22262v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.22262v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Efficiently ranking relevant items from large candidate pools is a\ncornerstone of modern information retrieval systems -- such as web search,\nrecommendation, and retrieval-augmented generation. Listwise rerankers, which\nimprove relevance by jointly considering multiple candidates, are often limited\nin practice: either by model input size constraints, or by degraded quality\nwhen processing large sets. We propose a model-agnostic method for fast\nreranking large sets that exceed a model input limits. The method first\npartitions candidate items into overlapping blocks, each of which is ranked\nindependently in parallel. Implicit pairwise comparisons are then derived from\nthese local rankings. Finally, these comparisons are aggregated to construct a\nglobal ranking using algorithms such as Winrate or PageRank. Experiments on\nTREC DL-2019 show that our method achieves an nDCG@10 of 70.88 compared to the\n57.68 for full-context listwise approach using gpt-4.1-mini as long-context\nmodel, while reducing latency from 21 to 8 seconds.\n  The implementation of the algorithm and the experiments is available in the\nrepository: https://github.com/V3RGANz/jointrank",
+    "code_links": [
+      "https://github.com/V3RGANz/jointrank"
+    ],
+    "comment": "ICTIR'25 Accepted"
+  },
+  {
+    "title": "skLEP: A Slovak General Language Understanding Benchmark",
+    "authors": "Marek Šuppa, Andrej Ridzik, Daniel Hládek, Tomáš Javůrek, Viktória Ondrejová, Kristína Sásiková, Martin Tamajka, Marián Šimko",
+    "published": "2025-06-26",
+    "arxiv_id": "2506.21508v1",
+    "url": "http://arxiv.org/abs/2506.21508v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.21508v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "In this work, we introduce skLEP, the first comprehensive benchmark\nspecifically designed for evaluating Slovak natural language understanding\n(NLU) models. We have compiled skLEP to encompass nine diverse tasks that span\ntoken-level, sentence-pair, and document-level challenges, thereby offering a\nthorough assessment of model capabilities. To create this benchmark, we curated\nnew, original datasets tailored for Slovak and meticulously translated\nestablished English NLU resources. Within this paper, we also present the first\nsystematic and extensive evaluation of a wide array of Slovak-specific,\nmultilingual, and English pre-trained language models using the skLEP tasks.\nFinally, we also release the complete benchmark data, an open-source toolkit\nfacilitating both fine-tuning and evaluation of models, and a public\nleaderboard at https://github.com/slovak-nlp/sklep in the hopes of fostering\nreproducibility and drive future research in Slovak NLU.",
+    "code_links": [
+      "https://github.com/slovak-nlp/sklep"
+    ],
+    "comment": "ACL 2025 Findings"
+  },
+  {
+    "title": "Small Encoders Can Rival Large Decoders in Detecting Groundedness",
+    "authors": "Istabrak Abbes, Gabriele Prato, Quentin Fournier, Fernando Rodriguez, Alaa Boukhary, Adam Elwood, Sarath Chandar",
+    "published": "2025-06-26",
+    "arxiv_id": "2506.21288v1",
+    "url": "http://arxiv.org/abs/2506.21288v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.21288v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Augmenting large language models (LLMs) with external context significantly\nimproves their performance in natural language processing (NLP) tasks. However,\nLLMs struggle to answer queries reliably when the provided context lacks\ninformation, often resorting to ungrounded speculation or internal knowledge.\nGroundedness - generating responses strictly supported by the context - is\nessential for ensuring factual consistency and trustworthiness. This study\nfocuses on detecting whether a given query is grounded in a document provided\nin context before the costly answer generation by LLMs. Such a detection\nmechanism can significantly reduce both inference time and resource\nconsumption. We show that lightweight, task specific encoder models such as\nRoBERTa and NomicBERT, fine-tuned on curated datasets, can achieve accuracy\ncomparable to state-of-the-art LLMs, such as Llama3 8B and GPT4o, in\ngroundedness detection while reducing inference latency by orders of magnitude.\nThe code is available at : https://github.com/chandarlab/Hallucinate-less",
+    "code_links": [
+      "https://github.com/chandarlab/Hallucinate-less"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Response Quality Assessment for Retrieval-Augmented Generation via Conditional Conformal Factuality",
+    "authors": "Naihe Feng, Yi Sui, Shiyi Hou, Jesse C. Cresswell, Ga Wu",
+    "published": "2025-06-26",
+    "arxiv_id": "2506.20978v1",
+    "url": "http://arxiv.org/abs/2506.20978v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.20978v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Existing research on Retrieval-Augmented Generation (RAG) primarily focuses\non improving overall question-answering accuracy, often overlooking the quality\nof sub-claims within generated responses. Recent methods that attempt to\nimprove RAG trustworthiness, such as through auto-evaluation metrics, lack\nprobabilistic guarantees or require ground truth answers. To address these\nlimitations, we propose Conformal-RAG, a novel framework inspired by recent\napplications of conformal prediction (CP) on large language models (LLMs).\nConformal-RAG leverages CP and internal information from the RAG mechanism to\noffer statistical guarantees on response quality. It ensures group-conditional\ncoverage spanning multiple sub-domains without requiring manual labelling of\nconformal sets, making it suitable for complex RAG applications. Compared to\nexisting RAG auto-evaluation methods, Conformal-RAG offers statistical\nguarantees on the quality of refined sub-claims, ensuring response reliability\nwithout the need for ground truth answers. Additionally, our experiments\ndemonstrate that by leveraging information from the RAG system, Conformal-RAG\nretains up to 60\\% more high-quality sub-claims from the response compared to\ndirect applications of CP to LLMs, while maintaining the same reliability\nguarantee.",
+    "code_links": [
+      "https://github.com/n4feng/ResponseQualityAssessment"
+    ],
+    "comment": "Accepted by SIGIR 2025 short paper, 5 pages, Code is available at\n  https://github.com/n4feng/ResponseQualityAssessment"
+  },
+  {
+    "title": "EraRAG: Efficient and Incremental Retrieval Augmented Generation for Growing Corpora",
+    "authors": "Fangyuan Zhang, Zhengjun Huang, Yingli Zhou, Qintian Guo, Zhixun Li, Wensheng Luo, Di Jiang, Yixiang Fang, Xiaofang Zhou",
+    "published": "2025-06-26",
+    "arxiv_id": "2506.20963v1",
+    "url": "http://arxiv.org/abs/2506.20963v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.20963v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Graph-based Retrieval-Augmented Generation (Graph-RAG) enhances large\nlanguage models (LLMs) by structuring retrieval over an external corpus.\nHowever, existing approaches typically assume a static corpus, requiring\nexpensive full-graph reconstruction whenever new documents arrive, limiting\ntheir scalability in dynamic, evolving environments. To address these\nlimitations, we introduce EraRAG, a novel multi-layered Graph-RAG framework\nthat supports efficient and scalable dynamic updates. Our method leverages\nhyperplane-based Locality-Sensitive Hashing (LSH) to partition and organize the\noriginal corpus into hierarchical graph structures, enabling efficient and\nlocalized insertions of new data without disrupting the existing topology. The\ndesign eliminates the need for retraining or costly recomputation while\npreserving high retrieval accuracy and low latency. Experiments on large-scale\nbenchmarks demonstrate that EraRag achieves up to an order of magnitude\nreduction in update time and token consumption compared to existing Graph-RAG\nsystems, while providing superior accuracy performance. This work offers a\npractical path forward for RAG systems that must operate over continually\ngrowing corpora, bridging the gap between retrieval efficiency and\nadaptability. Our code and data are available at\nhttps://github.com/EverM0re/EraRAG-Official.",
+    "code_links": [
+      "https://github.com/EverM0re/EraRAG-Official"
+    ],
+    "comment": "Under review"
+  },
+  {
+    "title": "RAG-VisualRec: An Open Resource for Vision- and Text-Enhanced Retrieval-Augmented Generation in Recommendation",
+    "authors": "Ali Tourani, Fatemeh Nazary, Yashar Deldjoo",
+    "published": "2025-06-25",
+    "arxiv_id": "2506.20817v1",
+    "url": "http://arxiv.org/abs/2506.20817v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.20817v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "This paper addresses the challenge of developing multimodal recommender\nsystems for the movie domain, where limited metadata (e.g., title, genre) often\nhinders the generation of robust recommendations. We introduce a resource that\ncombines LLM-generated plot descriptions with trailer-derived visual embeddings\nin a unified pipeline supporting both Retrieval-Augmented Generation (RAG) and\ncollaborative filtering. Central to our approach is a data augmentation step\nthat transforms sparse metadata into richer textual signals, alongside fusion\nstrategies (e.g., PCA, CCA) that integrate visual cues. Experimental\nevaluations demonstrate that CCA-based fusion significantly boosts recall\ncompared to unimodal baselines, while an LLM-driven re-ranking step further\nimproves NDCG, particularly in scenarios with limited textual data. By\nreleasing this framework, we invite further exploration of multi-modal\nrecommendation techniques tailored to cold-start, novelty-focused, and\ndomain-specific settings. All code, data, and detailed documentation are\npublicly available at: https://github.com/RecSys-lab/RAG-VisualRec",
+    "code_links": [
+      "https://github.com/RecSys-lab/RAG-VisualRec"
+    ],
+    "comment": "20 pages, 6 figures, 5 tables"
+  },
+  {
+    "title": "ReCode: Updating Code API Knowledge with Reinforcement Learning",
+    "authors": "Haoze Wu, Yunzhi Yao, Wenhao Yu, Huajun Chen, Ningyu Zhang",
+    "published": "2025-06-25",
+    "arxiv_id": "2506.20495v1",
+    "url": "http://arxiv.org/abs/2506.20495v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.20495v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large Language Models (LLMs) exhibit remarkable code generation capabilities\nbut falter when adapting to frequent updates in external library APIs. This\ncritical limitation, stemming from reliance on outdated API knowledge from\ntheir training data, even with access to current documentation, impedes\nreliable code generation in dynamic environments. To tackle this issue, we\npropose ReCode (rule-based Reinforcement learning for Code Update), a novel\nframework that mimics human programmer adaptation to API changes. Specifically,\nwe construct a dataset of approximately 2,000 data entries to train the LLMs to\nperform version migration based on updated information. Then, we introduce a\nmodified string similarity metric for code evaluation as the reward for\nreinforcement learning. Our experiments demonstrate that ReCode substantially\nboosts LLMs' code generation performance in dynamic API scenarios, especially\non the unseen CodeUpdateArena task. Crucially, compared to supervised\nfine-tuning, ReCode has less impact on LLMs' general code generation abilities.\nWe apply ReCode on various LLMs and reinforcement learning algorithms (GRPO and\nDAPO), all achieving consistent improvements. Notably, after training,\nQwen2.5-Coder-7B outperforms that of the 32B parameter code instruction-tuned\nmodel and the reasoning model with the same architecture. Code is available at\nhttps://github.com/zjunlp/ReCode.",
+    "code_links": [
+      "https://github.com/zjunlp/ReCode"
+    ],
+    "comment": "Work in progress"
+  },
+  {
+    "title": "CoVE: Compressed Vocabulary Expansion Makes Better LLM-based Recommender Systems",
+    "authors": "Haochen Zhang, Tianyi Zhang, Junze Yin, Oren Gal, Anshumali Shrivastava, Vladimir Braverman",
+    "published": "2025-06-24",
+    "arxiv_id": "2506.19993v1",
+    "url": "http://arxiv.org/abs/2506.19993v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.19993v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems play a pivotal role in providing relevant content to\nusers. With the rapid development of large language models (LLMs), researchers\nhave begun utilizing LLMs to build more powerful recommender systems. However,\nexisting approaches that focus on aligning LLMs with recommendation tasks do\nnot fully leverage their sequential information processing capabilities,\nleading to suboptimal performance.\n  In this paper, we propose a novel system called compressed vocabulary\nexpansion (CoVE). In CoVE, each item is assigned a unique ID within the\nexpanded vocabulary. Our framework effectively capitalizes on sequence\nunderstanding abilities of LLMs, significantly enhancing their performance on\nrecommendation tasks. Additionally, we compress the embedding layer, making\nCoVE practical for large-scale industrial applications. The effectiveness and\nperformance of CoVE are demonstrated through comprehensive experiments on\nmultiple recommendation datasets and comparisons with prior works. Our code can\nbe found at https://github.com/HaochenZhang717/CoVE-official-Repo.",
+    "code_links": [
+      "https://github.com/HaochenZhang717/CoVE-official-Repo"
+    ],
+    "comment": "Accepted by ACL 2025 Findings"
+  },
+  {
+    "title": "Schema-R1: A reasoning training approach for schema linking in Text-to-SQL Task",
+    "authors": "Wuzhenghong Wen, Su Pan, yuwei Sun",
+    "published": "2025-06-13",
+    "arxiv_id": "2506.11986v1",
+    "url": "http://arxiv.org/abs/2506.11986v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.11986v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Schema linking is a critical step in Text-to-SQL task, aiming to accurately\npredict the table names and column names required for the SQL query based on\nthe given question. However, current fine-tuning approaches for schema linking\nmodels employ a rote-learning paradigm, excessively optimizing for ground truth\nschema linking outcomes while compromising reasoning ability. This limitation\narises because of the difficulty in acquiring a high-quality reasoning sample\nfor downstream tasks. To address this, we propose Schema-R1, a reasoning schema\nlinking model trained using reinforcement learning. Specifically, Schema-R1\nconsists of three key steps: constructing small batches of high-quality\nreasoning samples, supervised fine-tuning for cold-start initialization, and\nrule-based reinforcement learning training. The final results demonstrate that\nour method effectively enhances the reasoning ability of the schema linking\nmodel, achieving a 10\\% improvement in filter accuracy compared to the existing\nmethod. Our code is available at https://github.com/hongWin/Schema-R1/.",
+    "code_links": [
+      "https://github.com/hongWin/Schema-R1"
+    ],
+    "comment": "11 pages, 3 figures, conference"
+  },
+  {
+    "title": "Bridging RDF Knowledge Graphs with Graph Neural Networks for Semantically-Rich Recommender Systems",
+    "authors": "Michael Färber, David Lamprecht, Yuni Susanti",
+    "published": "2025-06-10",
+    "arxiv_id": "2506.08743v1",
+    "url": "http://arxiv.org/abs/2506.08743v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.08743v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "Graph Neural Networks (GNNs) have substantially advanced the field of\nrecommender systems. However, despite the creation of more than a thousand\nknowledge graphs (KGs) under the W3C standard RDF, their rich semantic\ninformation has not yet been fully leveraged in GNN-based recommender systems.\nTo address this gap, we propose a comprehensive integration of RDF KGs with\nGNNs that utilizes both the topological information from RDF object properties\nand the content information from RDF datatype properties. Our main focus is an\nin-depth evaluation of various GNNs, analyzing how different semantic feature\ninitializations and types of graph structure heterogeneity influence their\nperformance in recommendation tasks. Through experiments across multiple\nrecommendation scenarios involving multi-million-node RDF graphs, we\ndemonstrate that harnessing the semantic richness of RDF KGs significantly\nimproves recommender systems and lays the groundwork for GNN-based recommender\nsystems for the Linked Open Data cloud. The code and data are available on our\nGitHub repository: https://github.com/davidlamprecht/rdf-gnn-recommendation",
+    "code_links": [
+      "https://github.com/davidlamprecht/rdf-gnn-recommendation"
+    ],
+    "comment": "Accepted at DASFAA 2025"
+  },
+  {
+    "title": "KramaBench: A Benchmark for AI Systems on Data-to-Insight Pipelines over Data Lakes",
+    "authors": "Eugenie Lai, Gerardo Vitagliano, Ziyu Zhang, Sivaprasad Sudhir, Om Chabra, Anna Zeng, Anton A. Zabreyko, Chenning Li, Ferdi Kossmann, Jialin Ding, Jun Chen, Markos Markakis, Matthew Russo, Weiyang Wang, Ziniu Wu, Michael J. Cafarella, Lei Cao, Samuel Madden, Tim Kraska",
+    "published": "2025-06-06",
+    "arxiv_id": "2506.06541v1",
+    "url": "http://arxiv.org/abs/2506.06541v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.06541v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Constructing real-world data-to-insight pipelines often involves data\nextraction from data lakes, data integration across heterogeneous data sources,\nand diverse operations from data cleaning to analysis. The design and\nimplementation of data science pipelines require domain knowledge, technical\nexpertise, and even project-specific insights. AI systems have shown remarkable\nreasoning, coding, and understanding capabilities. However, it remains unclear\nto what extent these capabilities translate into successful design and\nexecution of such complex pipelines. We introduce KRAMABENCH: a benchmark\ncomposed of 104 manually-curated real-world data science pipelines spanning\n1700 data files from 24 data sources in 6 different domains. We show that these\npipelines test the end-to-end capabilities of AI systems on data processing,\nrequiring data discovery, wrangling and cleaning, efficient processing,\nstatistical reasoning, and orchestrating data processing steps given a\nhigh-level task. Our evaluation tests 5 general models and 3 code generation\nmodels using our reference framework, DS-GURU, which instructs the AI model to\ndecompose a question into a sequence of subtasks, reason through each step, and\nsynthesize Python code that implements the proposed design. Our results on\nKRAMABENCH show that, although the models are sufficiently capable of solving\nwell-specified data science code generation tasks, when extensive data\nprocessing and domain knowledge are required to construct real-world data\nscience pipelines, existing out-of-box models fall short. Progress on\nKramaBench represents crucial steps towards developing autonomous data science\nagents for real-world applications. Our code, reference framework, and data are\navailable at https://github.com/mitdbg/KramaBench.",
+    "code_links": [
+      "https://github.com/mitdbg/KramaBench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MMTU: A Massive Multi-Task Table Understanding and Reasoning Benchmark",
+    "authors": "Junjie Xing, Yeye He, Mengyu Zhou, Haoyu Dong, Shi Han, Lingjiao Chen, Dongmei Zhang, Surajit Chaudhuri, H. V. Jagadish",
+    "published": "2025-06-05",
+    "arxiv_id": "2506.05587v1",
+    "url": "http://arxiv.org/abs/2506.05587v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.05587v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Tables and table-based use cases play a crucial role in many important\nreal-world applications, such as spreadsheets, databases, and computational\nnotebooks, which traditionally require expert-level users like data engineers,\ndata analysts, and database administrators to operate. Although LLMs have shown\nremarkable progress in working with tables (e.g., in spreadsheet and database\ncopilot scenarios), comprehensive benchmarking of such capabilities remains\nlimited. In contrast to an extensive and growing list of NLP benchmarks,\nevaluations of table-related tasks are scarce, and narrowly focus on tasks like\nNL-to-SQL and Table-QA, overlooking the broader spectrum of real-world tasks\nthat professional users face. This gap limits our understanding and model\nprogress in this important area.\n  In this work, we introduce MMTU, a large-scale benchmark with over 30K\nquestions across 25 real-world table tasks, designed to comprehensively\nevaluate models ability to understand, reason, and manipulate real tables at\nthe expert-level. These tasks are drawn from decades' worth of computer science\nresearch on tabular data, with a focus on complex table tasks faced by\nprofessional users. We show that MMTU require a combination of skills --\nincluding table understanding, reasoning, and coding -- that remain challenging\nfor today's frontier models, where even frontier reasoning models like OpenAI\no4-mini and DeepSeek R1 score only around 60%, suggesting significant room for\nimprovement. We highlight key findings in our evaluation using MMTU and hope\nthat this benchmark drives further advances in understanding and developing\nfoundation models for structured data processing and analysis. Our code and\ndata are available at https://github.com/MMTU-Benchmark/MMTU and\nhttps://huggingface.co/datasets/MMTU-benchmark/MMTU.",
+    "code_links": [
+      "https://github.com/MMTU-Benchmark/MMTU"
+    ],
+    "comment": null
+  }
+]
