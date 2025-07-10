@@ -1,0 +1,227 @@
+[
+  {
+    "title": "Unconditional Diffusion for Generative Sequential Recommendation",
+    "authors": "Yimeng Bai, Yang Zhang, Sihao Ding, Shaohui Ruan, Han Yao, Danhui Guan, Fuli Feng, Tat-Seng Chua",
+    "published": "2025-07-08",
+    "arxiv_id": "2507.06121v1",
+    "url": "http://arxiv.org/abs/2507.06121v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.06121v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Diffusion models, known for their generative ability to simulate data\ncreation through noise-adding and denoising processes, have emerged as a\npromising approach for building generative recommenders. To incorporate user\nhistory for personalization, existing methods typically adopt a conditional\ndiffusion framework, where the reverse denoising process of reconstructing\nitems from noise is modified to be conditioned on the user history. However,\nthis design may fail to fully utilize historical information, as it gets\ndistracted by the need to model the \"item $\\leftrightarrow$ noise\" translation.\nThis motivates us to reformulate the diffusion process for sequential\nrecommendation in an unconditional manner, treating user history (instead of\nnoise) as the endpoint of the forward diffusion process (i.e., the starting\npoint of the reverse process), rather than as a conditional input. This\nformulation allows for exclusive focus on modeling the \"item $\\leftrightarrow$\nhistory\" translation. To this end, we introduce Brownian Bridge Diffusion\nRecommendation (BBDRec). By leveraging a Brownian bridge process, BBDRec\nenforces a structured noise addition and denoising mechanism, ensuring that the\ntrajectories are constrained towards a specific endpoint -- user history,\nrather than noise. Extensive experiments demonstrate BBDRec's effectiveness in\nenhancing sequential recommendation performance. The source code is available\nat https://github.com/baiyimeng/BBDRec.",
+    "code_links": [
+      "https://github.com/baiyimeng/BBDRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Tile-Based ViT Inference with Visual-Cluster Priors for Zero-Shot Multi-Species Plant Identification",
+    "authors": "Murilo Gustineli, Anthony Miyaguchi, Adrian Cheung, Divyansh Khattak",
+    "published": "2025-07-08",
+    "arxiv_id": "2507.06093v1",
+    "url": "http://arxiv.org/abs/2507.06093v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.06093v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "We describe DS@GT's second-place solution to the PlantCLEF 2025 challenge on\nmulti-species plant identification in vegetation quadrat images. Our pipeline\ncombines (i) a fine-tuned Vision Transformer ViTD2PC24All for patch-level\ninference, (ii) a 4x4 tiling strategy that aligns patch size with the network's\n518x518 receptive field, and (iii) domain-prior adaptation through PaCMAP +\nK-Means visual clustering and geolocation filtering. Tile predictions are\naggregated by majority vote and re-weighted with cluster-specific Bayesian\npriors, yielding a macro-averaged F1 of 0.348 (private leaderboard) while\nrequiring no additional training. All code, configuration files, and\nreproducibility scripts are publicly available at\nhttps://github.com/dsgt-arc/plantclef-2025.",
+    "code_links": [
+      "https://github.com/dsgt-arc/plantclef-2025"
+    ],
+    "comment": null
+  },
+  {
+    "title": "When Transformers Meet Recommenders: Integrating Self-Attentive Sequential Recommendation with Fine-Tuned LLMs",
+    "authors": "Kechen Liu",
+    "published": "2025-07-08",
+    "arxiv_id": "2507.05733v1",
+    "url": "http://arxiv.org/abs/2507.05733v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.05733v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Self-Attentive Sequential Recommendation (SASRec) effectively captures\nlong-term user preferences by applying attention mechanisms to historical\ninteractions. Concurrently, the rise of Large Language Models (LLMs) has\nmotivated research into LLM-based recommendation, which leverages their\npowerful generalization and language understanding capabilities. However, LLMs\noften lack the domain-specific knowledge and collaborative signals essential\nfor high-quality recommendations when relying solely on textual prompts. To\naddress this limitation, this study proposes SASRecLLM, a novel framework that\nintegrates SASRec as a collaborative encoder with an LLM fine-tuned using\nLow-Rank Adaptation (LoRA). The components are connected via a mapping layer to\nalign their dimensional spaces, and three targeted training strategies are\ndesigned to optimize the hybrid architecture. Extensive experiments on multiple\ndatasets demonstrate that SASRecLLM achieves robust and consistent improvements\nover strong baselines in both cold-start and warm-start scenarios. This work\nadvances the field of LLM-based recommendation by presenting a modular and\neffective paradigm for fusing structured collaborative filtering with the\nsemantic power of fine-tuned LLMs. The implementation is available on GitHub:\nhttps://github.com/kechenkristin/RecLLM",
+    "code_links": [
+      "https://github.com/kechenkristin/RecLLM"
+    ],
+    "comment": null
+  },
+  {
+    "title": "From ID-based to ID-free: Rethinking ID Effectiveness in Multimodal Collaborative Filtering Recommendation",
+    "authors": "Guohao Li, Li Jing, Jia Wu, Xuefei Li, Kai Zhu, Yue He",
+    "published": "2025-07-08",
+    "arxiv_id": "2507.05715v1",
+    "url": "http://arxiv.org/abs/2507.05715v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.05715v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Most existing multimodal collaborative filtering recommendation (MCFRec)\nmethods rely heavily on ID features and multimodal content to enhance\nrecommendation performance. However, this paper reveals that ID features are\neffective but have limited benefits in multimodal collaborative filtering\nrecommendation. Therefore, this paper systematically deconstruct the pros and\ncons of ID features: (i) they provide initial embedding but lack semantic\nrichness, (ii) they provide a unique identifier for each user and item but\nhinder generalization to untrained data, and (iii) they assist in aligning and\nfusing multimodal features but may lead to representation shift. Based on these\ninsights, this paper proposes IDFREE, an ID-free multimodal collaborative\nFiltering REcommEndation baseline. IDFREE replaces ID features with multimodal\nfeatures and positional encodings to generate semantically meaningful ID-free\nembeddings. For ID-free multimodal collaborative filtering, it further proposes\nan adaptive similarity graph module to construct dynamic user-user and\nitem-item graphs based on multimodal features. Then, an augmented user-item\ngraph encoder is proposed to construct more effective user and item encoding.\nFinally, IDFREE achieves inter-multimodal alignment based on the contrastive\nlearning and uses Softmax loss as recommendation loss. Basic experiments on\nthree public datasets demonstrate that IDFREE outperforms existing ID-based\nMCFRec methods, achieving an average performance gain of 72.24% across standard\nmetrics (Recall@5, 10, 20, 50 and NDCG@5, 10, 20, 50). Exploratory and extended\nexperiments further validate our findings on the limitations of ID features in\nMCFRec. The code is released at https://github.com/G-H-Li/IDFREE.",
+    "code_links": [
+      "https://github.com/G-H-Li/IDFREE"
+    ],
+    "comment": "ACM MM'25 (Experimental supplementary version)"
+  },
+  {
+    "title": "FindRec: Stein-Guided Entropic Flow for Multi-Modal Sequential Recommendation",
+    "authors": "Maolin Wang, Yutian Xiao, Binhao Wang, Sheng Zhang, Shanshan Ye, Wanyu Wang, Hongzhi Yin, Ruocheng Guo, Zenglin Xu",
+    "published": "2025-07-07",
+    "arxiv_id": "2507.04651v1",
+    "url": "http://arxiv.org/abs/2507.04651v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.04651v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Modern recommendation systems face significant challenges in processing\nmultimodal sequential data, particularly in temporal dynamics modeling and\ninformation flow coordination. Traditional approaches struggle with\ndistribution discrepancies between heterogeneous features and noise\ninterference in multimodal signals. We propose \\textbf{FindRec}~\n(\\textbf{F}lexible unified \\textbf{in}formation \\textbf{d}isentanglement for\nmulti-modal sequential \\textbf{Rec}ommendation), introducing a novel\n\"information flow-control-output\" paradigm. The framework features two key\ninnovations: (1) A Stein kernel-based Integrated Information Coordination\nModule (IICM) that theoretically guarantees distribution consistency between\nmultimodal features and ID streams, and (2) A cross-modal expert routing\nmechanism that adaptively filters and combines multimodal features based on\ntheir contextual relevance. Our approach leverages multi-head subspace\ndecomposition for routing stability and RBF-Stein gradient for unbiased\ndistribution alignment, enhanced by linear-complexity Mamba layers for\nefficient temporal modeling. Extensive experiments on three real-world datasets\ndemonstrate FindRec's superior performance over state-of-the-art baselines,\nparticularly in handling long sequences and noisy multimodal inputs. Our\nframework achieves both improved recommendation accuracy and enhanced model\ninterpretability through its modular design. The implementation code is\navailable anonymously online for easy\nreproducibility~\\footnote{https://github.com/Applied-Machine-Learning-Lab/FindRec}.",
+    "code_links": [
+      "https://github.com/Applied-Machine-Learning-Lab/FindRec"
+    ],
+    "comment": "Accepted by KDD 2025"
+  },
+  {
+    "title": "Hierarchical Intent-guided Optimization with Pluggable LLM-Driven Semantics for Session-based Recommendation",
+    "authors": "Jinpeng Chen, Jianxiang He, Huan Li, Senzhang Wang, Yuan Cao, Kaimin Wei, Zhenye Yang, Ye Ji",
+    "published": "2025-07-07",
+    "arxiv_id": "2507.04623v1",
+    "url": "http://arxiv.org/abs/2507.04623v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.04623v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Session-based Recommendation (SBR) aims to predict the next item a user will\nlikely engage with, using their interaction sequence within an anonymous\nsession. Existing SBR models often focus only on single-session information,\nignoring inter-session relationships and valuable cross-session insights. Some\nmethods try to include inter-session data but struggle with noise and\nirrelevant information, reducing performance. Additionally, most models rely on\nitem ID co-occurrence and overlook rich semantic details, limiting their\nability to capture fine-grained item features. To address these challenges, we\npropose a novel hierarchical intent-guided optimization approach with pluggable\nLLM-driven semantic learning for session-based recommendations, called HIPHOP.\nFirst, we introduce a pluggable embedding module based on large language models\n(LLMs) to generate high-quality semantic representations, enhancing item\nembeddings. Second, HIPHOP utilizes graph neural networks (GNNs) to model item\ntransition relationships and incorporates a dynamic multi-intent capturing\nmodule to address users' diverse interests within a session. Additionally, we\ndesign a hierarchical inter-session similarity learning module, guided by user\nintent, to capture global and local session relationships, effectively\nexploring users' long-term and short-term interests. To mitigate noise, an\nintent-guided denoising strategy is applied during inter-session learning.\nFinally, we enhance the model's discriminative capability by using contrastive\nlearning to optimize session representations. Experiments on multiple datasets\nshow that HIPHOP significantly outperforms existing methods, demonstrating its\neffectiveness in improving recommendation quality. Our code is available:\nhttps://github.com/hjx159/HIPHOP.",
+    "code_links": [
+      "https://github.com/hjx159/HIPHOP"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Decoupled Planning and Execution: A Hierarchical Reasoning Framework for Deep Search",
+    "authors": "Jiajie Jin, Xiaoxi Li, Guanting Dong, Yuyao Zhang, Yutao Zhu, Yang Zhao, Hongjin Qian, Zhicheng Dou",
+    "published": "2025-07-03",
+    "arxiv_id": "2507.02652v1",
+    "url": "http://arxiv.org/abs/2507.02652v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.02652v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Complex information needs in real-world search scenarios demand deep\nreasoning and knowledge synthesis across diverse sources, which traditional\nretrieval-augmented generation (RAG) pipelines struggle to address effectively.\nCurrent reasoning-based approaches suffer from a fundamental limitation: they\nuse a single model to handle both high-level planning and detailed execution,\nleading to inefficient reasoning and limited scalability. In this paper, we\nintroduce HiRA, a hierarchical framework that separates strategic planning from\nspecialized execution. Our approach decomposes complex search tasks into\nfocused subtasks, assigns each subtask to domain-specific agents equipped with\nexternal tools and reasoning capabilities, and coordinates the results through\na structured integration mechanism. This separation prevents execution details\nfrom disrupting high-level reasoning while enabling the system to leverage\nspecialized expertise for different types of information processing.\nExperiments on four complex, cross-modal deep search benchmarks demonstrate\nthat HiRA significantly outperforms state-of-the-art RAG and agent-based\nsystems. Our results show improvements in both answer quality and system\nefficiency, highlighting the effectiveness of decoupled planning and execution\nfor multi-step information seeking tasks. Our code is available at\nhttps://github.com/ignorejjj/HiRA.",
+    "code_links": [
+      "https://github.com/ignorejjj/HiRA"
+    ],
+    "comment": "9 pages"
+  },
+  {
+    "title": "Listwise Preference Alignment Optimization for Tail Item Recommendation",
+    "authors": "Zihao Li, Chao Yang, Tong Zhang, Yakun Chen, Xianzhi Wang, Guandong Xu, Daoyi Dong",
+    "published": "2025-07-03",
+    "arxiv_id": "2507.02255v1",
+    "url": "http://arxiv.org/abs/2507.02255v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.02255v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Preference alignment has achieved greater success on Large Language Models\n(LLMs) and drawn broad interest in recommendation research. Existing preference\nalignment methods for recommendation either require explicit reward modeling or\nonly support pairwise preference comparison. The former directly increases\nsubstantial computational costs, while the latter hinders training efficiency\non negative samples. Moreover, no existing effort has explored preference\nalignment solutions for tail-item recommendation. To bridge the above gaps, we\npropose LPO4Rec, which extends the Bradley-Terry model from pairwise comparison\nto listwise comparison, to improve the efficiency of model training.\nSpecifically, we derive a closed form optimal policy to enable more efficient\nand effective training without explicit reward modeling. We also present an\nadaptive negative sampling and reweighting strategy to prioritize tail items\nduring optimization and enhance performance in tail-item recommendations.\nBesides, we theoretically prove that optimizing the listwise preference\noptimization (LPO) loss is equivalent to maximizing the upper bound of the\noptimal reward. Our experiments on three public datasets show that our method\noutperforms 10 baselines by a large margin, achieving up to 50% performance\nimprovement while reducing 17.9% GPU memory usage when compared with direct\npreference optimization (DPO) in tail-item recommendation. Our code is\navailable at https://github.com/Yuhanleeee/LPO4Rec.",
+    "code_links": [
+      "https://github.com/Yuhanleeee/LPO4Rec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Confidence and Stability of Global and Pairwise Scores in NLP Evaluation",
+    "authors": "Georgii Levtsov, Dmitry Ustalov",
+    "published": "2025-07-02",
+    "arxiv_id": "2507.01633v1",
+    "url": "http://arxiv.org/abs/2507.01633v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.01633v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "With the advent of highly capable instruction-tuned neural language models,\nbenchmarking in natural language processing (NLP) is increasingly shifting\ntowards pairwise comparison leaderboards, such as LMSYS Arena, from traditional\nglobal pointwise scores (e.g., GLUE, BIG-bench, SWE-bench). This paper\nempirically investigates the strengths and weaknesses of both global scores and\npairwise comparisons to aid decision-making in selecting appropriate model\nevaluation strategies. Through computational experiments on synthetic and\nreal-world datasets using standard global metrics and the popular Bradley-Terry\nmodel for pairwise comparisons, we found that while global scores provide more\nreliable overall rankings, they can underestimate strong models with rare,\nsignificant errors or low confidence. Conversely, pairwise comparisons are\nparticularly effective for identifying strong contenders among models with\nlower global scores, especially where quality metrics are hard to define (e.g.,\ntext generation), though they require more comparisons to converge if ties are\nfrequent. Our code and data are available at\nhttps://github.com/HSPyroblast/srw-ranking under a permissive license.",
+    "code_links": [
+      "https://github.com/HSPyroblast/srw-ranking"
+    ],
+    "comment": "8 pages, accepted at ACL SRW 2025"
+  },
+  {
+    "title": "PDFMathTranslate: Scientific Document Translation Preserving Layouts",
+    "authors": "Rongxin Ouyang, Chang Chu, Zhikuang Xin, Xiangyao Ma",
+    "published": "2025-07-02",
+    "arxiv_id": "2507.03009v2",
+    "url": "http://arxiv.org/abs/2507.03009v2",
+    "pdf_url": "http://arxiv.org/pdf/2507.03009v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Language barriers in scientific documents hinder the diffusion and\ndevelopment of science and technologies. However, prior efforts in translating\nsuch documents largely overlooked the information in layouts. To bridge the\ngap, we introduce PDFMathTranslate, the world's first open-source software for\ntranslating scientific documents while preserving layouts. Leveraging the most\nrecent advances in large language models and precise layout detection, we\ncontribute to the community with key improvements in precision, flexibility,\nand efficiency. The work has been open-sourced at\nhttps://github.com/byaidu/pdfmathtranslate with more than 222k downloads.",
+    "code_links": [
+      "https://github.com/byaidu/pdfmathtranslate"
+    ],
+    "comment": "7 pages, 4 figures"
+  },
+  {
+    "title": "Uncertainty-Aware Complex Scientific Table Data Extraction",
+    "authors": "Kehinde Ajayi, Yi He, Jian Wu",
+    "published": "2025-07-02",
+    "arxiv_id": "2507.02009v2",
+    "url": "http://arxiv.org/abs/2507.02009v2",
+    "pdf_url": "http://arxiv.org/pdf/2507.02009v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Table structure recognition (TSR) and optical character recognition (OCR)\nplay crucial roles in extracting structured data from tables in scientific\ndocuments. However, existing extraction frameworks built on top of TSR and OCR\nmethods often fail to quantify the uncertainties of extracted results. To\nobtain highly accurate data for scientific domains, all extracted data must be\nmanually verified, which can be time-consuming and labor-intensive. We propose\na framework that performs uncertainty-aware data extraction for complex\nscientific tables, built on conformal prediction, a model-agnostic method for\nuncertainty quantification (UQ). We explored various uncertainty scoring\nmethods to aggregate the uncertainties introduced by TSR and OCR. We rigorously\nevaluated the framework using a standard benchmark and an in-house dataset\nconsisting of complex scientific tables in six scientific domains. The results\ndemonstrate the effectiveness of using UQ for extraction error detection, and\nby manually verifying only 47% of extraction results, the data quality can be\nimproved by 30%. Our work quantitatively demonstrates the role of UQ with the\npotential of improving the efficiency in the human-machine cooperation process\nto obtain scientifically usable data from complex tables in scientific\ndocuments. All code and data are available on GitHub at\nhttps://github.com/lamps-lab/TSR-OCR-UQ/tree/main.",
+    "code_links": [
+      "https://github.com/lamps-lab/TSR-OCR-UQ"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Why Multi-Interest Fairness Matters: Hypergraph Contrastive Multi-Interest Learning for Fair Conversational Recommender System",
+    "authors": "Yongsen Zheng, Zongxuan Xie, Guohua Wang, Ziyao Liu, Liang Lin, Kwok-Yan Lam",
+    "published": "2025-07-01",
+    "arxiv_id": "2507.02000v1",
+    "url": "http://arxiv.org/abs/2507.02000v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.02000v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Unfairness is a well-known challenge in Recommender Systems (RSs), often\nresulting in biased outcomes that disadvantage users or items based on\nattributes such as gender, race, age, or popularity. Although some approaches\nhave started to improve fairness recommendation in offline or static contexts,\nthe issue of unfairness often exacerbates over time, leading to significant\nproblems like the Matthew effect, filter bubbles, and echo chambers. To address\nthese challenges, we proposed a novel framework, Hypergraph Contrastive\nMulti-Interest Learning for Fair Conversational Recommender System (HyFairCRS),\naiming to promote multi-interest diversity fairness in dynamic and interactive\nConversational Recommender Systems (CRSs). HyFairCRS first captures a wide\nrange of user interests by establishing diverse hypergraphs through contrastive\nlearning. These interests are then utilized in conversations to generate\ninformative responses and ensure fair item predictions within the dynamic\nuser-system feedback loop. Experiments on two CRS-based datasets show that\nHyFairCRS achieves a new state-of-the-art performance while effectively\nalleviating unfairness. Our code is available at\nhttps://github.com/zysensmile/HyFairCRS.",
+    "code_links": [
+      "https://github.com/zysensmile/HyFairCRS"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MassTool: A Multi-Task Search-Based Tool Retrieval Framework for Large Language Models",
+    "authors": "Jianghao Lin, Xinyuan Wang, Xinyi Dai, Menghui Zhu, Bo Chen, Ruiming Tang, Yong Yu, Weinan Zhang",
+    "published": "2025-07-01",
+    "arxiv_id": "2507.00487v2",
+    "url": "http://arxiv.org/abs/2507.00487v2",
+    "pdf_url": "http://arxiv.org/pdf/2507.00487v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Tool retrieval is a critical component in enabling large language models\n(LLMs) to interact effectively with external tools. It aims to precisely filter\nthe massive tools into a small set of candidates for the downstream\ntool-augmented LLMs. However, most existing approaches primarily focus on\noptimizing tool representations, often neglecting the importance of precise\nquery comprehension. To address this gap, we introduce MassTool, a multi-task\nsearch-based framework designed to enhance both query representation and tool\nretrieval accuracy. MassTool employs a two-tower architecture: a tool usage\ndetection tower that predicts the need for function calls, and a tool retrieval\ntower that leverages a query-centric graph convolution network (QC-GCN) for\neffective query-tool matching. It also incorporates search-based user intent\nmodeling (SUIM) to handle diverse and out-of-distribution queries, alongside an\nadaptive knowledge transfer (AdaKT) module for efficient multi-task learning.\nBy jointly optimizing tool usage detection loss, list-wise retrieval loss, and\ncontrastive regularization loss, MassTool establishes a robust dual-step\nsequential decision-making pipeline for precise query understanding. Extensive\nexperiments demonstrate its effectiveness in improving retrieval accuracy. Our\ncode is available at https://github.com/wxydada/MassTool.",
+    "code_links": [
+      "https://github.com/wxydada/MassTool"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Thought-Augmented Planning for LLM-Powered Interactive Recommender Agent",
+    "authors": "Haocheng Yu, Yaxiong Wu, Hao Wang, Wei Guo, Yong Liu, Yawen Li, Yuyang Ye, Junping Du, Enhong Chen",
+    "published": "2025-06-30",
+    "arxiv_id": "2506.23485v1",
+    "url": "http://arxiv.org/abs/2506.23485v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.23485v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Interactive recommendation is a typical information-seeking task that allows\nusers to interactively express their needs through natural language and obtain\npersonalized recommendations. Large language model-powered (LLM-powered) agents\nhave become a new paradigm in interactive recommendations, effectively\ncapturing users' real-time needs and enhancing personalized experiences.\nHowever, due to limited planning and generalization capabilities, existing\nformulations of LLM-powered interactive recommender agents struggle to\neffectively address diverse and complex user intents, such as intuitive,\nunrefined, or occasionally ambiguous requests. To tackle this challenge, we\npropose a novel thought-augmented interactive recommender agent system (TAIRA)\nthat addresses complex user intents through distilled thought patterns.\nSpecifically, TAIRA is designed as an LLM-powered multi-agent system featuring\na manager agent that orchestrates recommendation tasks by decomposing user\nneeds and planning subtasks, with its planning capacity strengthened through\nThought Pattern Distillation (TPD), a thought-augmentation method that extracts\nhigh-level thoughts from the agent's and human experts' experiences. Moreover,\nwe designed a set of user simulation schemes to generate personalized queries\nof different difficulties and evaluate the recommendations based on specific\ndatasets. Through comprehensive experiments conducted across multiple datasets,\nTAIRA exhibits significantly enhanced performance compared to existing methods.\nNotably, TAIRA shows a greater advantage on more challenging tasks while\ngeneralizing effectively on novel tasks, further validating its superiority in\nmanaging complex user intents within interactive recommendation systems. The\ncode is publicly available at:https://github.com/Alcein/TAIRA.",
+    "code_links": [
+      "https://github.com/Alcein/TAIRA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Schema-R1: A reasoning training approach for schema linking in Text-to-SQL Task",
+    "authors": "Wuzhenghong Wen, Su Pan, yuwei Sun",
+    "published": "2025-06-13",
+    "arxiv_id": "2506.11986v1",
+    "url": "http://arxiv.org/abs/2506.11986v1",
+    "pdf_url": "http://arxiv.org/pdf/2506.11986v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Schema linking is a critical step in Text-to-SQL task, aiming to accurately\npredict the table names and column names required for the SQL query based on\nthe given question. However, current fine-tuning approaches for schema linking\nmodels employ a rote-learning paradigm, excessively optimizing for ground truth\nschema linking outcomes while compromising reasoning ability. This limitation\narises because of the difficulty in acquiring a high-quality reasoning sample\nfor downstream tasks. To address this, we propose Schema-R1, a reasoning schema\nlinking model trained using reinforcement learning. Specifically, Schema-R1\nconsists of three key steps: constructing small batches of high-quality\nreasoning samples, supervised fine-tuning for cold-start initialization, and\nrule-based reinforcement learning training. The final results demonstrate that\nour method effectively enhances the reasoning ability of the schema linking\nmodel, achieving a 10\\% improvement in filter accuracy compared to the existing\nmethod. Our code is available at https://github.com/hongWin/Schema-R1/.",
+    "code_links": [
+      "https://github.com/hongWin/Schema-R1"
+    ],
+    "comment": "11 pages, 3 figures, conference"
+  }
+]
