@@ -1,0 +1,330 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+DTECT: Dynamic Topic Explorer & Context Tracker,"Suman Adhya, Debarshi Kumar Sanyal",2025-07-10,2507.07910v1,http://arxiv.org/abs/2507.07910v1,http://arxiv.org/pdf/2507.07910v1,information_retrieval,cs.CL,"The explosive growth of textual data over time presents a significant
+challenge in uncovering evolving themes and trends. Existing dynamic topic
+modeling techniques, while powerful, often exist in fragmented pipelines that
+lack robust support for interpretation and user-friendly exploration. We
+introduce DTECT (Dynamic Topic Explorer & Context Tracker), an end-to-end
+system that bridges the gap between raw textual data and meaningful temporal
+insights. DTECT provides a unified workflow that supports data preprocessing,
+multiple model architectures, and dedicated evaluation metrics to analyze the
+topic quality of temporal topic models. It significantly enhances
+interpretability by introducing LLM-driven automatic topic labeling, trend
+analysis via temporally salient words, interactive visualizations with
+document-level summarization, and a natural language chat interface for
+intuitive data querying. By integrating these features into a single, cohesive
+platform, DTECT empowers users to more effectively track and understand
+thematic dynamics. DTECT is open-source and available at
+https://github.com/AdhyaSuman/DTECT.",https://github.com/AdhyaSuman/DTECT,"Code: https://github.com/AdhyaSuman/DTECT | Demo:
+  https://huggingface.co/spaces/AdhyaSuman/DTECT | Video:
+  https://youtu.be/B8nNfxFoJAU"
+Boosting Parameter Efficiency in LLM-Based Recommendation through Sophisticated Pruning,"Shanle Zheng, Keqin Bao, Jizhi Zhang, Yang Zhang, Fuli Feng, Xiangnan He",2025-07-09,2507.07064v1,http://arxiv.org/abs/2507.07064v1,http://arxiv.org/pdf/2507.07064v1,information_retrieval,cs.IR,"LLM-based recommender systems have made significant progress; however, the
+deployment cost associated with the large parameter volume of LLMs still
+hinders their real-world applications. This work explores parameter pruning to
+improve parameter efficiency while maintaining recommendation quality, thereby
+enabling easier deployment. Unlike existing approaches that focus primarily on
+inter-layer redundancy, we uncover intra-layer redundancy within components
+such as self-attention and MLP modules. Building on this analysis, we propose a
+more fine-grained pruning approach that integrates both intra-layer and
+layer-wise pruning. Specifically, we introduce a three-stage pruning strategy
+that progressively prunes parameters at different levels and parts of the
+model, moving from intra-layer to layer-wise pruning, or from width to depth.
+Each stage also includes a performance restoration step using distillation
+techniques, helping to strike a balance between performance and parameter
+efficiency. Empirical results demonstrate the effectiveness of our approach:
+across three datasets, our models achieve an average of 88% of the original
+model's performance while pruning more than 95% of the non-embedding
+parameters. This underscores the potential of our method to significantly
+reduce resource requirements without greatly compromising recommendation
+quality. Our code will be available at: https://github.com/zheng-sl/PruneRec",https://github.com/zheng-sl/PruneRec,
+CDC: Causal Domain Clustering for Multi-Domain Recommendation,"Huishi Luo, Yiqing Wu, Yiwen Chen, Fuzhen Zhuang, Deqing Wang",2025-07-09,2507.06877v1,http://arxiv.org/abs/2507.06877v1,http://arxiv.org/pdf/2507.06877v1,information_retrieval,cs.IR,"Multi-domain recommendation leverages domain-general knowledge to improve
+recommendations across several domains. However, as platforms expand to dozens
+or hundreds of scenarios, training all domains in a unified model leads to
+performance degradation due to significant inter-domain differences. Existing
+domain grouping methods, based on business logic or data similarities, often
+fail to capture the true transfer relationships required for optimal grouping.
+To effectively cluster domains, we propose Causal Domain Clustering (CDC). CDC
+models domain transfer patterns within a large number of domains using two
+distinct effects: the Isolated Domain Affinity Matrix for modeling
+non-interactive domain transfers, and the Hybrid Domain Affinity Matrix for
+considering dynamic domain synergy or interference under joint training. To
+integrate these two transfer effects, we introduce causal discovery to
+calculate a cohesion-based coefficient that adaptively balances their
+contributions. A Co-Optimized Dynamic Clustering algorithm iteratively
+optimizes target domain clustering and source domain selection for training.
+CDC significantly enhances performance across over 50 domains on public
+datasets and in industrial settings, achieving a 4.9% increase in online eCPM.
+Code is available at
+https://github.com/Chrissie-Law/Causal-Domain-Clustering-for-Multi-Domain-Recommendation",https://github.com/Chrissie-Law/Causal-Domain-Clustering-for-Multi-Domain-Recommendation,Accepted at SIGIR 2025
+Shifting from Ranking to Set Selection for Retrieval Augmented Generation,"Dahyun Lee, Yongrae Jo, Haeju Park, Moontae Lee",2025-07-09,2507.06838v2,http://arxiv.org/abs/2507.06838v2,http://arxiv.org/pdf/2507.06838v2,information_retrieval,cs.CL,"Retrieval in Retrieval-Augmented Generation(RAG) must ensure that retrieved
+passages are not only individually relevant but also collectively form a
+comprehensive set. Existing approaches primarily rerank top-k passages based on
+their individual relevance, often failing to meet the information needs of
+complex queries in multi-hop question answering. In this work, we propose a
+set-wise passage selection approach and introduce SETR, which explicitly
+identifies the information requirements of a query through Chain-of-Thought
+reasoning and selects an optimal set of passages that collectively satisfy
+those requirements. Experiments on multi-hop RAG benchmarks show that SETR
+outperforms both proprietary LLM-based rerankers and open-source baselines in
+terms of answer correctness and retrieval quality, providing an effective and
+efficient alternative to traditional rerankers in RAG systems. The code is
+available at https://github.com/LGAI-Research/SetR",https://github.com/LGAI-Research/SetR,Accepted to ACL 2025 main (Oral Presentation)
+Temporal Information Retrieval via Time-Specifier Model Merging,"SeungYoon Han, Taeho Hwang, Sukmin Cho, Soyeong Jeong, Hoyun Song, Huije Lee, Jong C. Park",2025-07-09,2507.06782v1,http://arxiv.org/abs/2507.06782v1,http://arxiv.org/pdf/2507.06782v1,information_retrieval,cs.IR,"The rapid expansion of digital information and knowledge across structured
+and unstructured sources has heightened the importance of Information Retrieval
+(IR). While dense retrieval methods have substantially improved semantic
+matching for general queries, they consistently underperform on queries with
+explicit temporal constraints--often those containing numerical expressions and
+time specifiers such as ``in 2015.'' Existing approaches to Temporal
+Information Retrieval (TIR) improve temporal reasoning but often suffer from
+catastrophic forgetting, leading to reduced performance on non-temporal
+queries. To address this, we propose Time-Specifier Model Merging (TSM), a
+novel method that enhances temporal retrieval while preserving accuracy on
+non-temporal queries. TSM trains specialized retrievers for individual time
+specifiers and merges them in to a unified model, enabling precise handling of
+temporal constraints without compromising non-temporal retrieval. Extensive
+experiments on both temporal and non-temporal datasets demonstrate that TSM
+significantly improves performance on temporally constrained queries while
+maintaining strong results on non-temporal queries, consistently outperforming
+other baseline methods. Our code is available at
+https://github.com/seungyoonee/TSM .",https://github.com/seungyoonee/TSM,
+MS-DPPs: Multi-Source Determinantal Point Processes for Contextual Diversity Refinement of Composite Attributes in Text to Image Retrieval,"Naoya Sogi, Takashi Shibata, Makoto Terao, Masanori Suganuma, Takayuki Okatani",2025-07-09,2507.06654v1,http://arxiv.org/abs/2507.06654v1,http://arxiv.org/pdf/2507.06654v1,information_retrieval,cs.CV,"Result diversification (RD) is a crucial technique in Text-to-Image Retrieval
+for enhancing the efficiency of a practical application. Conventional methods
+focus solely on increasing the diversity metric of image appearances. However,
+the diversity metric and its desired value vary depending on the application,
+which limits the applications of RD. This paper proposes a novel task called
+CDR-CA (Contextual Diversity Refinement of Composite Attributes). CDR-CA aims
+to refine the diversities of multiple attributes, according to the
+application's context. To address this task, we propose Multi-Source DPPs, a
+simple yet strong baseline that extends the Determinantal Point Process (DPP)
+to multi-sources. We model MS-DPP as a single DPP model with a unified
+similarity matrix based on a manifold representation. We also introduce Tangent
+Normalization to reflect contexts. Extensive experiments demonstrate the
+effectiveness of the proposed method. Our code is publicly available at
+https://github.com/NEC-N-SOGI/msdpp.",https://github.com/NEC-N-SOGI/msdpp,IJCAI 2025. Code: https://github.com/NEC-N-SOGI/msdpp
+DS@GT at CheckThat! 2025: Exploring Retrieval and Reranking Pipelines for Scientific Claim Source Retrieval on Social Media Discourse,"Jeanette Schofield, Shuyu Tian, Hoang Thanh Thanh Truong, Maximilian Heil",2025-07-09,2507.06563v1,http://arxiv.org/abs/2507.06563v1,http://arxiv.org/pdf/2507.06563v1,information_retrieval,cs.IR,"Social media users often make scientific claims without citing where these
+claims come from, generating a need to verify these claims. This paper details
+work done by the DS@GT team for CLEF 2025 CheckThat! Lab Task 4b Scientific
+Claim Source Retrieval which seeks to find relevant scientific papers based on
+implicit references in tweets. Our team explored 6 different data augmentation
+techniques, 7 different retrieval and reranking pipelines, and finetuned a
+bi-encoder. Achieving an MRR@5 of 0.58, our team ranked 16th out of 30 teams
+for the CLEF 2025 CheckThat! Lab Task 4b, and improvement of 0.15 over the BM25
+baseline of 0.43. Our code is available on Github at
+https://github.com/dsgt-arc/checkthat-2025-swd/tree/main/subtask-4b.",https://github.com/dsgt-arc/checkthat-2025-swd,
+Unconditional Diffusion for Generative Sequential Recommendation,"Yimeng Bai, Yang Zhang, Sihao Ding, Shaohui Ruan, Han Yao, Danhui Guan, Fuli Feng, Tat-Seng Chua",2025-07-08,2507.06121v1,http://arxiv.org/abs/2507.06121v1,http://arxiv.org/pdf/2507.06121v1,information_retrieval,cs.IR,"Diffusion models, known for their generative ability to simulate data
+creation through noise-adding and denoising processes, have emerged as a
+promising approach for building generative recommenders. To incorporate user
+history for personalization, existing methods typically adopt a conditional
+diffusion framework, where the reverse denoising process of reconstructing
+items from noise is modified to be conditioned on the user history. However,
+this design may fail to fully utilize historical information, as it gets
+distracted by the need to model the ""item $\leftrightarrow$ noise"" translation.
+This motivates us to reformulate the diffusion process for sequential
+recommendation in an unconditional manner, treating user history (instead of
+noise) as the endpoint of the forward diffusion process (i.e., the starting
+point of the reverse process), rather than as a conditional input. This
+formulation allows for exclusive focus on modeling the ""item $\leftrightarrow$
+history"" translation. To this end, we introduce Brownian Bridge Diffusion
+Recommendation (BBDRec). By leveraging a Brownian bridge process, BBDRec
+enforces a structured noise addition and denoising mechanism, ensuring that the
+trajectories are constrained towards a specific endpoint -- user history,
+rather than noise. Extensive experiments demonstrate BBDRec's effectiveness in
+enhancing sequential recommendation performance. The source code is available
+at https://github.com/baiyimeng/BBDRec.",https://github.com/baiyimeng/BBDRec,
+Tile-Based ViT Inference with Visual-Cluster Priors for Zero-Shot Multi-Species Plant Identification,"Murilo Gustineli, Anthony Miyaguchi, Adrian Cheung, Divyansh Khattak",2025-07-08,2507.06093v1,http://arxiv.org/abs/2507.06093v1,http://arxiv.org/pdf/2507.06093v1,information_retrieval,cs.CV,"We describe DS@GT's second-place solution to the PlantCLEF 2025 challenge on
+multi-species plant identification in vegetation quadrat images. Our pipeline
+combines (i) a fine-tuned Vision Transformer ViTD2PC24All for patch-level
+inference, (ii) a 4x4 tiling strategy that aligns patch size with the network's
+518x518 receptive field, and (iii) domain-prior adaptation through PaCMAP +
+K-Means visual clustering and geolocation filtering. Tile predictions are
+aggregated by majority vote and re-weighted with cluster-specific Bayesian
+priors, yielding a macro-averaged F1 of 0.348 (private leaderboard) while
+requiring no additional training. All code, configuration files, and
+reproducibility scripts are publicly available at
+https://github.com/dsgt-arc/plantclef-2025.",https://github.com/dsgt-arc/plantclef-2025,
+When Transformers Meet Recommenders: Integrating Self-Attentive Sequential Recommendation with Fine-Tuned LLMs,Kechen Liu,2025-07-08,2507.05733v1,http://arxiv.org/abs/2507.05733v1,http://arxiv.org/pdf/2507.05733v1,information_retrieval,cs.IR,"Self-Attentive Sequential Recommendation (SASRec) effectively captures
+long-term user preferences by applying attention mechanisms to historical
+interactions. Concurrently, the rise of Large Language Models (LLMs) has
+motivated research into LLM-based recommendation, which leverages their
+powerful generalization and language understanding capabilities. However, LLMs
+often lack the domain-specific knowledge and collaborative signals essential
+for high-quality recommendations when relying solely on textual prompts. To
+address this limitation, this study proposes SASRecLLM, a novel framework that
+integrates SASRec as a collaborative encoder with an LLM fine-tuned using
+Low-Rank Adaptation (LoRA). The components are connected via a mapping layer to
+align their dimensional spaces, and three targeted training strategies are
+designed to optimize the hybrid architecture. Extensive experiments on multiple
+datasets demonstrate that SASRecLLM achieves robust and consistent improvements
+over strong baselines in both cold-start and warm-start scenarios. This work
+advances the field of LLM-based recommendation by presenting a modular and
+effective paradigm for fusing structured collaborative filtering with the
+semantic power of fine-tuned LLMs. The implementation is available on GitHub:
+https://github.com/kechenkristin/RecLLM",https://github.com/kechenkristin/RecLLM,
+From ID-based to ID-free: Rethinking ID Effectiveness in Multimodal Collaborative Filtering Recommendation,"Guohao Li, Li Jing, Jia Wu, Xuefei Li, Kai Zhu, Yue He",2025-07-08,2507.05715v1,http://arxiv.org/abs/2507.05715v1,http://arxiv.org/pdf/2507.05715v1,information_retrieval,cs.IR,"Most existing multimodal collaborative filtering recommendation (MCFRec)
+methods rely heavily on ID features and multimodal content to enhance
+recommendation performance. However, this paper reveals that ID features are
+effective but have limited benefits in multimodal collaborative filtering
+recommendation. Therefore, this paper systematically deconstruct the pros and
+cons of ID features: (i) they provide initial embedding but lack semantic
+richness, (ii) they provide a unique identifier for each user and item but
+hinder generalization to untrained data, and (iii) they assist in aligning and
+fusing multimodal features but may lead to representation shift. Based on these
+insights, this paper proposes IDFREE, an ID-free multimodal collaborative
+Filtering REcommEndation baseline. IDFREE replaces ID features with multimodal
+features and positional encodings to generate semantically meaningful ID-free
+embeddings. For ID-free multimodal collaborative filtering, it further proposes
+an adaptive similarity graph module to construct dynamic user-user and
+item-item graphs based on multimodal features. Then, an augmented user-item
+graph encoder is proposed to construct more effective user and item encoding.
+Finally, IDFREE achieves inter-multimodal alignment based on the contrastive
+learning and uses Softmax loss as recommendation loss. Basic experiments on
+three public datasets demonstrate that IDFREE outperforms existing ID-based
+MCFRec methods, achieving an average performance gain of 72.24% across standard
+metrics (Recall@5, 10, 20, 50 and NDCG@5, 10, 20, 50). Exploratory and extended
+experiments further validate our findings on the limitations of ID features in
+MCFRec. The code is released at https://github.com/G-H-Li/IDFREE.",https://github.com/G-H-Li/IDFREE,ACM MM'25 (Experimental supplementary version)
+FindRec: Stein-Guided Entropic Flow for Multi-Modal Sequential Recommendation,"Maolin Wang, Yutian Xiao, Binhao Wang, Sheng Zhang, Shanshan Ye, Wanyu Wang, Hongzhi Yin, Ruocheng Guo, Zenglin Xu",2025-07-07,2507.04651v1,http://arxiv.org/abs/2507.04651v1,http://arxiv.org/pdf/2507.04651v1,information_retrieval,cs.IR,"Modern recommendation systems face significant challenges in processing
+multimodal sequential data, particularly in temporal dynamics modeling and
+information flow coordination. Traditional approaches struggle with
+distribution discrepancies between heterogeneous features and noise
+interference in multimodal signals. We propose \textbf{FindRec}~
+(\textbf{F}lexible unified \textbf{in}formation \textbf{d}isentanglement for
+multi-modal sequential \textbf{Rec}ommendation), introducing a novel
+""information flow-control-output"" paradigm. The framework features two key
+innovations: (1) A Stein kernel-based Integrated Information Coordination
+Module (IICM) that theoretically guarantees distribution consistency between
+multimodal features and ID streams, and (2) A cross-modal expert routing
+mechanism that adaptively filters and combines multimodal features based on
+their contextual relevance. Our approach leverages multi-head subspace
+decomposition for routing stability and RBF-Stein gradient for unbiased
+distribution alignment, enhanced by linear-complexity Mamba layers for
+efficient temporal modeling. Extensive experiments on three real-world datasets
+demonstrate FindRec's superior performance over state-of-the-art baselines,
+particularly in handling long sequences and noisy multimodal inputs. Our
+framework achieves both improved recommendation accuracy and enhanced model
+interpretability through its modular design. The implementation code is
+available anonymously online for easy
+reproducibility~\footnote{https://github.com/Applied-Machine-Learning-Lab/FindRec}.",https://github.com/Applied-Machine-Learning-Lab/FindRec,Accepted by KDD 2025
+Hierarchical Intent-guided Optimization with Pluggable LLM-Driven Semantics for Session-based Recommendation,"Jinpeng Chen, Jianxiang He, Huan Li, Senzhang Wang, Yuan Cao, Kaimin Wei, Zhenye Yang, Ye Ji",2025-07-07,2507.04623v1,http://arxiv.org/abs/2507.04623v1,http://arxiv.org/pdf/2507.04623v1,information_retrieval,cs.IR,"Session-based Recommendation (SBR) aims to predict the next item a user will
+likely engage with, using their interaction sequence within an anonymous
+session. Existing SBR models often focus only on single-session information,
+ignoring inter-session relationships and valuable cross-session insights. Some
+methods try to include inter-session data but struggle with noise and
+irrelevant information, reducing performance. Additionally, most models rely on
+item ID co-occurrence and overlook rich semantic details, limiting their
+ability to capture fine-grained item features. To address these challenges, we
+propose a novel hierarchical intent-guided optimization approach with pluggable
+LLM-driven semantic learning for session-based recommendations, called HIPHOP.
+First, we introduce a pluggable embedding module based on large language models
+(LLMs) to generate high-quality semantic representations, enhancing item
+embeddings. Second, HIPHOP utilizes graph neural networks (GNNs) to model item
+transition relationships and incorporates a dynamic multi-intent capturing
+module to address users' diverse interests within a session. Additionally, we
+design a hierarchical inter-session similarity learning module, guided by user
+intent, to capture global and local session relationships, effectively
+exploring users' long-term and short-term interests. To mitigate noise, an
+intent-guided denoising strategy is applied during inter-session learning.
+Finally, we enhance the model's discriminative capability by using contrastive
+learning to optimize session representations. Experiments on multiple datasets
+show that HIPHOP significantly outperforms existing methods, demonstrating its
+effectiveness in improving recommendation quality. Our code is available:
+https://github.com/hjx159/HIPHOP.",https://github.com/hjx159/HIPHOP,
+Decoupled Planning and Execution: A Hierarchical Reasoning Framework for Deep Search,"Jiajie Jin, Xiaoxi Li, Guanting Dong, Yuyao Zhang, Yutao Zhu, Yang Zhao, Hongjin Qian, Zhicheng Dou",2025-07-03,2507.02652v1,http://arxiv.org/abs/2507.02652v1,http://arxiv.org/pdf/2507.02652v1,information_retrieval,cs.AI,"Complex information needs in real-world search scenarios demand deep
+reasoning and knowledge synthesis across diverse sources, which traditional
+retrieval-augmented generation (RAG) pipelines struggle to address effectively.
+Current reasoning-based approaches suffer from a fundamental limitation: they
+use a single model to handle both high-level planning and detailed execution,
+leading to inefficient reasoning and limited scalability. In this paper, we
+introduce HiRA, a hierarchical framework that separates strategic planning from
+specialized execution. Our approach decomposes complex search tasks into
+focused subtasks, assigns each subtask to domain-specific agents equipped with
+external tools and reasoning capabilities, and coordinates the results through
+a structured integration mechanism. This separation prevents execution details
+from disrupting high-level reasoning while enabling the system to leverage
+specialized expertise for different types of information processing.
+Experiments on four complex, cross-modal deep search benchmarks demonstrate
+that HiRA significantly outperforms state-of-the-art RAG and agent-based
+systems. Our results show improvements in both answer quality and system
+efficiency, highlighting the effectiveness of decoupled planning and execution
+for multi-step information seeking tasks. Our code is available at
+https://github.com/ignorejjj/HiRA.",https://github.com/ignorejjj/HiRA,9 pages
+Listwise Preference Alignment Optimization for Tail Item Recommendation,"Zihao Li, Chao Yang, Tong Zhang, Yakun Chen, Xianzhi Wang, Guandong Xu, Daoyi Dong",2025-07-03,2507.02255v1,http://arxiv.org/abs/2507.02255v1,http://arxiv.org/pdf/2507.02255v1,information_retrieval,cs.IR,"Preference alignment has achieved greater success on Large Language Models
+(LLMs) and drawn broad interest in recommendation research. Existing preference
+alignment methods for recommendation either require explicit reward modeling or
+only support pairwise preference comparison. The former directly increases
+substantial computational costs, while the latter hinders training efficiency
+on negative samples. Moreover, no existing effort has explored preference
+alignment solutions for tail-item recommendation. To bridge the above gaps, we
+propose LPO4Rec, which extends the Bradley-Terry model from pairwise comparison
+to listwise comparison, to improve the efficiency of model training.
+Specifically, we derive a closed form optimal policy to enable more efficient
+and effective training without explicit reward modeling. We also present an
+adaptive negative sampling and reweighting strategy to prioritize tail items
+during optimization and enhance performance in tail-item recommendations.
+Besides, we theoretically prove that optimizing the listwise preference
+optimization (LPO) loss is equivalent to maximizing the upper bound of the
+optimal reward. Our experiments on three public datasets show that our method
+outperforms 10 baselines by a large margin, achieving up to 50% performance
+improvement while reducing 17.9% GPU memory usage when compared with direct
+preference optimization (DPO) in tail-item recommendation. Our code is
+available at https://github.com/Yuhanleeee/LPO4Rec.",https://github.com/Yuhanleeee/LPO4Rec,
+Confidence and Stability of Global and Pairwise Scores in NLP Evaluation,"Georgii Levtsov, Dmitry Ustalov",2025-07-02,2507.01633v1,http://arxiv.org/abs/2507.01633v1,http://arxiv.org/pdf/2507.01633v1,information_retrieval,cs.CL,"With the advent of highly capable instruction-tuned neural language models,
+benchmarking in natural language processing (NLP) is increasingly shifting
+towards pairwise comparison leaderboards, such as LMSYS Arena, from traditional
+global pointwise scores (e.g., GLUE, BIG-bench, SWE-bench). This paper
+empirically investigates the strengths and weaknesses of both global scores and
+pairwise comparisons to aid decision-making in selecting appropriate model
+evaluation strategies. Through computational experiments on synthetic and
+real-world datasets using standard global metrics and the popular Bradley-Terry
+model for pairwise comparisons, we found that while global scores provide more
+reliable overall rankings, they can underestimate strong models with rare,
+significant errors or low confidence. Conversely, pairwise comparisons are
+particularly effective for identifying strong contenders among models with
+lower global scores, especially where quality metrics are hard to define (e.g.,
+text generation), though they require more comparisons to converge if ties are
+frequent. Our code and data are available at
+https://github.com/HSPyroblast/srw-ranking under a permissive license.",https://github.com/HSPyroblast/srw-ranking,"8 pages, accepted at ACL SRW 2025"
+PDFMathTranslate: Scientific Document Translation Preserving Layouts,"Rongxin Ouyang, Chang Chu, Zhikuang Xin, Xiangyao Ma",2025-07-02,2507.03009v2,http://arxiv.org/abs/2507.03009v2,http://arxiv.org/pdf/2507.03009v2,information_retrieval,cs.CL,"Language barriers in scientific documents hinder the diffusion and
+development of science and technologies. However, prior efforts in translating
+such documents largely overlooked the information in layouts. To bridge the
+gap, we introduce PDFMathTranslate, the world's first open-source software for
+translating scientific documents while preserving layouts. Leveraging the most
+recent advances in large language models and precise layout detection, we
+contribute to the community with key improvements in precision, flexibility,
+and efficiency. The work has been open-sourced at
+https://github.com/byaidu/pdfmathtranslate with more than 222k downloads.",https://github.com/byaidu/pdfmathtranslate,"7 pages, 4 figures"
+Uncertainty-Aware Complex Scientific Table Data Extraction,"Kehinde Ajayi, Yi He, Jian Wu",2025-07-02,2507.02009v2,http://arxiv.org/abs/2507.02009v2,http://arxiv.org/pdf/2507.02009v2,information_retrieval,cs.IR,"Table structure recognition (TSR) and optical character recognition (OCR)
+play crucial roles in extracting structured data from tables in scientific
+documents. However, existing extraction frameworks built on top of TSR and OCR
+methods often fail to quantify the uncertainties of extracted results. To
+obtain highly accurate data for scientific domains, all extracted data must be
+manually verified, which can be time-consuming and labor-intensive. We propose
+a framework that performs uncertainty-aware data extraction for complex
+scientific tables, built on conformal prediction, a model-agnostic method for
+uncertainty quantification (UQ). We explored various uncertainty scoring
+methods to aggregate the uncertainties introduced by TSR and OCR. We rigorously
+evaluated the framework using a standard benchmark and an in-house dataset
+consisting of complex scientific tables in six scientific domains. The results
+demonstrate the effectiveness of using UQ for extraction error detection, and
+by manually verifying only 47% of extraction results, the data quality can be
+improved by 30%. Our work quantitatively demonstrates the role of UQ with the
+potential of improving the efficiency in the human-machine cooperation process
+to obtain scientifically usable data from complex tables in scientific
+documents. All code and data are available on GitHub at
+https://github.com/lamps-lab/TSR-OCR-UQ/tree/main.",https://github.com/lamps-lab/TSR-OCR-UQ,
+Why Multi-Interest Fairness Matters: Hypergraph Contrastive Multi-Interest Learning for Fair Conversational Recommender System,"Yongsen Zheng, Zongxuan Xie, Guohua Wang, Ziyao Liu, Liang Lin, Kwok-Yan Lam",2025-07-01,2507.02000v1,http://arxiv.org/abs/2507.02000v1,http://arxiv.org/pdf/2507.02000v1,information_retrieval,cs.IR,"Unfairness is a well-known challenge in Recommender Systems (RSs), often
+resulting in biased outcomes that disadvantage users or items based on
+attributes such as gender, race, age, or popularity. Although some approaches
+have started to improve fairness recommendation in offline or static contexts,
+the issue of unfairness often exacerbates over time, leading to significant
+problems like the Matthew effect, filter bubbles, and echo chambers. To address
+these challenges, we proposed a novel framework, Hypergraph Contrastive
+Multi-Interest Learning for Fair Conversational Recommender System (HyFairCRS),
+aiming to promote multi-interest diversity fairness in dynamic and interactive
+Conversational Recommender Systems (CRSs). HyFairCRS first captures a wide
+range of user interests by establishing diverse hypergraphs through contrastive
+learning. These interests are then utilized in conversations to generate
+informative responses and ensure fair item predictions within the dynamic
+user-system feedback loop. Experiments on two CRS-based datasets show that
+HyFairCRS achieves a new state-of-the-art performance while effectively
+alleviating unfairness. Our code is available at
+https://github.com/zysensmile/HyFairCRS.",https://github.com/zysensmile/HyFairCRS,
