@@ -1,0 +1,272 @@
+[
+  {
+    "title": "Advancing Retrieval-Augmented Generation for Structured Enterprise and Internal Data",
+    "authors": "Chandana Cheerla",
+    "published": "2025-07-16",
+    "arxiv_id": "2507.12425v1",
+    "url": "http://arxiv.org/abs/2507.12425v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.12425v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Organizations increasingly rely on proprietary enterprise data, including HR\nrecords, structured reports, and tabular documents, for critical\ndecision-making. While Large Language Models (LLMs) have strong generative\ncapabilities, they are limited by static pretraining, short context windows,\nand challenges in processing heterogeneous data formats. Conventional\nRetrieval-Augmented Generation (RAG) frameworks address some of these gaps but\noften struggle with structured and semi-structured data.\n  This work proposes an advanced RAG framework that combines hybrid retrieval\nstrategies using dense embeddings (all-mpnet-base-v2) and BM25, enhanced by\nmetadata-aware filtering with SpaCy NER and cross-encoder reranking. The\nframework applies semantic chunking to maintain textual coherence and retains\ntabular data structures to preserve row-column integrity. Quantized indexing\noptimizes retrieval efficiency, while human-in-the-loop feedback and\nconversation memory improve adaptability.\n  Experiments on enterprise datasets show notable improvements: Precision@5\nincreased by 15 percent (90 versus 75), Recall@5 by 13 percent (87 versus 74),\nand Mean Reciprocal Rank by 16 percent (0.85 versus 0.69). Qualitative\nevaluations show higher scores in Faithfulness (4.6 versus 3.0), Completeness\n(4.2 versus 2.5), and Relevance (4.5 versus 3.2) on a 5-point Likert scale.\nThese results demonstrate the framework's effectiveness in delivering accurate,\ncomprehensive, and contextually relevant responses for enterprise tasks. Future\nwork includes extending to multimodal data and integrating agent-based\nretrieval. The source code will be released at\nhttps://github.com/CheerlaChandana/Enterprise-Chatbot",
+    "code_links": [
+      "https://github.com/CheerlaChandana/Enterprise-Chatbot"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Non-parametric Graph Convolution for Re-ranking in Recommendation Systems",
+    "authors": "Zhongyu Ouyang, Mingxuan Ju, Soroush Vosoughi, Yanfang Ye",
+    "published": "2025-07-14",
+    "arxiv_id": "2507.09969v1",
+    "url": "http://arxiv.org/abs/2507.09969v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.09969v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Graph knowledge has been proven effective in enhancing item rankings in\nrecommender systems (RecSys), particularly during the retrieval stage. However,\nits application in the ranking stage, especially when richer contextual\ninformation in user-item interactions is available, remains underexplored. A\nmajor challenge lies in the substantial computational cost associated with\nrepeatedly retrieving neighborhood information from billions of items stored in\ndistributed systems. This resource-intensive requirement makes it difficult to\nscale graph-based methods in practical RecSys. To bridge this gap, we first\ndemonstrate that incorporating graphs in the ranking stage improves ranking\nqualities. Notably, while the improvement is evident, we show that the\nsubstantial computational overheads entailed by graphs are prohibitively\nexpensive for real-world recommendations. In light of this, we propose a\nnon-parametric strategy that utilizes graph convolution for re-ranking only\nduring test time. Our strategy circumvents the notorious computational\noverheads from graph convolution during training, and utilizes structural\nknowledge hidden in graphs on-the-fly during testing. It can be used as a\nplug-and-play module and easily employed to enhance the ranking ability of\nvarious ranking layers of a real-world RecSys with significantly reduced\ncomputational overhead. Through comprehensive experiments across four benchmark\ndatasets with varying levels of sparsity, we demonstrate that our strategy\nyields noticeable improvements (i.e., 8.1% on average) during testing time with\nlittle to no additional computational overheads (i.e., 0.5 on average). Code:\nhttps://github.com/zyouyang/RecSys2025_NonParamGC.git",
+    "code_links": [
+      "https://github.com/zyouyang/RecSys2025_NonParamGC"
+    ],
+    "comment": "Accepted to RecSys2025 Main"
+  },
+  {
+    "title": "Generative Cognitive Diagnosis",
+    "authors": "Jiatong Li, Qi Liu, Mengxiao Zhu",
+    "published": "2025-07-13",
+    "arxiv_id": "2507.09831v1",
+    "url": "http://arxiv.org/abs/2507.09831v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.09831v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Cognitive diagnosis (CD) models latent cognitive states of human learners by\nanalyzing their response patterns on diagnostic tests, serving as a crucial\nmachine learning technique for educational assessment and evaluation.\nTraditional cognitive diagnosis models typically follow a transductive\nprediction paradigm that optimizes parameters to fit response scores and\nextract learner abilities. These approaches face significant limitations as\nthey cannot perform instant diagnosis for new learners without computationally\nexpensive retraining and produce diagnostic outputs with limited reliability.\nIn this study, we introduces a novel generative diagnosis paradigm that\nfundamentally shifts CD from predictive to generative modeling, enabling\ninductive inference of cognitive states without parameter re-optimization. We\npropose two simple yet effective instantiations of this paradigm: Generative\nItem Response Theory (G-IRT) and Generative Neural Cognitive Diagnosis Model\n(G-NCDM), which achieve excellent performance improvements over traditional\nmethods. The generative approach disentangles cognitive state inference from\nresponse prediction through a well-designed generation process that\nincorporates identifiability and monotonicity conditions. Extensive experiments\non real-world datasets demonstrate the effectiveness of our methodology in\naddressing scalability and reliability challenges, especially $\\times 100$\nspeedup for the diagnosis of new learners. Our framework opens new avenues for\ncognitive diagnosis applications in artificial intelligence, particularly for\nintelligent model evaluation and intelligent education systems. The code is\navailable at https://github.com/CSLiJT/Generative-CD.git.",
+    "code_links": [
+      "https://github.com/CSLiJT/Generative-CD"
+    ],
+    "comment": "Preprint; 15 pages, 12 figures"
+  },
+  {
+    "title": "Ambiguity-Aware and High-Order Relation Learning for Multi-Grained Image-Text Matching",
+    "authors": "Junyu Chen, Yihua Gao, Mingyuan Ge, Mingyong Li",
+    "published": "2025-07-12",
+    "arxiv_id": "2507.09256v1",
+    "url": "http://arxiv.org/abs/2507.09256v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.09256v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Image-text matching is crucial for bridging the semantic gap between computer\nvision and natural language processing. However, existing methods still face\nchallenges in handling high-order associations and semantic ambiguities among\nsimilar instances. These ambiguities arise from subtle differences between soft\npositive samples (semantically similar but incorrectly labeled) and soft\nnegative samples (locally matched but globally inconsistent), creating matching\nuncertainties. Furthermore, current methods fail to fully utilize the\nneighborhood relationships among semantically similar instances within training\nbatches, limiting the model's ability to learn high-order shared knowledge.\nThis paper proposes the Ambiguity-Aware and High-order Relation learning\nframework (AAHR) to address these issues. AAHR constructs a unified\nrepresentation space through dynamic clustering prototype contrastive learning,\neffectively mitigating the soft positive sample problem. The framework\nintroduces global and local feature extraction mechanisms and an adaptive\naggregation network, significantly enhancing full-grained semantic\nunderstanding capabilities. Additionally, AAHR employs intra-modal and\ninter-modal correlation matrices to investigate neighborhood relationships\namong sample instances thoroughly. It incorporates GNN to enhance semantic\ninteractions between instances. Furthermore, AAHR integrates momentum\ncontrastive learning to expand the negative sample set. These combined\nstrategies significantly improve the model's ability to discriminate between\nfeatures. Experimental results demonstrate that AAHR outperforms existing\nstate-of-the-art methods on Flickr30K, MSCOCO, and ECCV Caption datasets,\nconsiderably improving the accuracy and efficiency of image-text matching. The\ncode and model checkpoints for this research are available at\nhttps://github.com/Image-Text-Matching/AAHR .",
+    "code_links": [
+      "https://github.com/Image-Text-Matching/AAHR"
+    ],
+    "comment": "Accepted by the Knowledge-Based Systems(KBS), 2025"
+  },
+  {
+    "title": "DS@GT at Touché: Large Language Models for Retrieval-Augmented Debate",
+    "authors": "Anthony Miyaguchi, Conor Johnston, Aaryan Potdar",
+    "published": "2025-07-12",
+    "arxiv_id": "2507.09090v1",
+    "url": "http://arxiv.org/abs/2507.09090v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.09090v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models (LLMs) demonstrate strong conversational abilities. In\nthis Working Paper, we study them in the context of debating in two ways: their\nability to perform in a structured debate along with a dataset of arguments to\nuse and their ability to evaluate utterances throughout the debate. We deploy\nsix leading publicly available models from three providers for the\nRetrieval-Augmented Debate and Evaluation. The evaluation is performed by\nmeasuring four key metrics: Quality, Quantity, Manner, and Relation. Throughout\nthis task, we found that although LLMs perform well in debates when given\nrelated arguments, they tend to be verbose in responses yet consistent in\nevaluation. The accompanying source code for this paper is located at\nhttps://github.com/dsgt-arc/touche-2025-rad.",
+    "code_links": [
+      "https://github.com/dsgt-arc/touche-2025-rad"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DS@GT at LongEval: Evaluating Temporal Performance in Web Search Systems and Topics with Two-Stage Retrieval",
+    "authors": "Anthony Miyaguchi, Imran Afrulbasha, Aleksandar Pramov",
+    "published": "2025-07-11",
+    "arxiv_id": "2507.08360v1",
+    "url": "http://arxiv.org/abs/2507.08360v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.08360v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Information Retrieval (IR) models are often trained on static datasets,\nmaking them vulnerable to performance degradation as web content evolves. The\nDS@GT competition team participated in the Longitudinal Evaluation of Model\nPerformance (LongEval) lab at CLEF 2025, which evaluates IR systems across\ntemporally distributed web snapshots. Our analysis of the Qwant web dataset\nincludes exploratory data analysis with topic modeling over time. The two-phase\nretrieval system employs sparse keyword searches, utilizing query expansion and\ndocument reranking. Our best system achieves an average NDCG@10 of 0.296 across\nthe entire training and test dataset, with an overall best score of 0.395 on\n2023-05. The accompanying source code for this paper is at\nhttps://github.com/dsgt-arc/longeval-2025",
+    "code_links": [
+      "https://github.com/dsgt-arc/longeval-2025"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Transfer Learning and Mixup for Fine-Grained Few-Shot Fungi Classification",
+    "authors": "Jason Kahei Tam, Murilo Gustineli, Anthony Miyaguchi",
+    "published": "2025-07-11",
+    "arxiv_id": "2507.08248v1",
+    "url": "http://arxiv.org/abs/2507.08248v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.08248v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Accurate identification of fungi species presents a unique challenge in\ncomputer vision due to fine-grained inter-species variation and high\nintra-species variation. This paper presents our approach for the FungiCLEF\n2025 competition, which focuses on few-shot fine-grained visual categorization\n(FGVC) using the FungiTastic Few-Shot dataset. Our team (DS@GT) experimented\nwith multiple vision transformer models, data augmentation, weighted sampling,\nand incorporating textual information. We also explored generative AI models\nfor zero-shot classification using structured prompting but found them to\nsignificantly underperform relative to vision-based models. Our final model\noutperformed both competition baselines and highlighted the effectiveness of\ndomain specific pretraining and balanced sampling strategies. Our approach\nranked 35/74 on the private test set in post-completion evaluation, this\nsuggests additional work can be done on metadata selection and domain-adapted\nmulti-modal learning. Our code is available at\nhttps://github.com/dsgt-arc/fungiclef-2025.",
+    "code_links": [
+      "https://github.com/dsgt-arc/fungiclef-2025"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DTECT: Dynamic Topic Explorer & Context Tracker",
+    "authors": "Suman Adhya, Debarshi Kumar Sanyal",
+    "published": "2025-07-10",
+    "arxiv_id": "2507.07910v2",
+    "url": "http://arxiv.org/abs/2507.07910v2",
+    "pdf_url": "http://arxiv.org/pdf/2507.07910v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "The explosive growth of textual data over time presents a significant\nchallenge in uncovering evolving themes and trends. Existing dynamic topic\nmodeling techniques, while powerful, often exist in fragmented pipelines that\nlack robust support for interpretation and user-friendly exploration. We\nintroduce DTECT (Dynamic Topic Explorer & Context Tracker), an end-to-end\nsystem that bridges the gap between raw textual data and meaningful temporal\ninsights. DTECT provides a unified workflow that supports data preprocessing,\nmultiple model architectures, and dedicated evaluation metrics to analyze the\ntopic quality of temporal topic models. It significantly enhances\ninterpretability by introducing LLM-driven automatic topic labeling, trend\nanalysis via temporally salient words, interactive visualizations with\ndocument-level summarization, and a natural language chat interface for\nintuitive data querying. By integrating these features into a single, cohesive\nplatform, DTECT empowers users to more effectively track and understand\nthematic dynamics. DTECT is open-source and available at\nhttps://github.com/AdhyaSuman/DTECT.",
+    "code_links": [
+      "https://github.com/AdhyaSuman/DTECT"
+    ],
+    "comment": "Code: https://github.com/AdhyaSuman/DTECT | Demo:\n  https://huggingface.co/spaces/AdhyaSuman/DTECT | Video:\n  https://youtu.be/B8nNfxFoJAU"
+  },
+  {
+    "title": "Boosting Parameter Efficiency in LLM-Based Recommendation through Sophisticated Pruning",
+    "authors": "Shanle Zheng, Keqin Bao, Jizhi Zhang, Yang Zhang, Fuli Feng, Xiangnan He",
+    "published": "2025-07-09",
+    "arxiv_id": "2507.07064v1",
+    "url": "http://arxiv.org/abs/2507.07064v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.07064v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "LLM-based recommender systems have made significant progress; however, the\ndeployment cost associated with the large parameter volume of LLMs still\nhinders their real-world applications. This work explores parameter pruning to\nimprove parameter efficiency while maintaining recommendation quality, thereby\nenabling easier deployment. Unlike existing approaches that focus primarily on\ninter-layer redundancy, we uncover intra-layer redundancy within components\nsuch as self-attention and MLP modules. Building on this analysis, we propose a\nmore fine-grained pruning approach that integrates both intra-layer and\nlayer-wise pruning. Specifically, we introduce a three-stage pruning strategy\nthat progressively prunes parameters at different levels and parts of the\nmodel, moving from intra-layer to layer-wise pruning, or from width to depth.\nEach stage also includes a performance restoration step using distillation\ntechniques, helping to strike a balance between performance and parameter\nefficiency. Empirical results demonstrate the effectiveness of our approach:\nacross three datasets, our models achieve an average of 88% of the original\nmodel's performance while pruning more than 95% of the non-embedding\nparameters. This underscores the potential of our method to significantly\nreduce resource requirements without greatly compromising recommendation\nquality. Our code will be available at: https://github.com/zheng-sl/PruneRec",
+    "code_links": [
+      "https://github.com/zheng-sl/PruneRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "CDC: Causal Domain Clustering for Multi-Domain Recommendation",
+    "authors": "Huishi Luo, Yiqing Wu, Yiwen Chen, Fuzhen Zhuang, Deqing Wang",
+    "published": "2025-07-09",
+    "arxiv_id": "2507.06877v1",
+    "url": "http://arxiv.org/abs/2507.06877v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.06877v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multi-domain recommendation leverages domain-general knowledge to improve\nrecommendations across several domains. However, as platforms expand to dozens\nor hundreds of scenarios, training all domains in a unified model leads to\nperformance degradation due to significant inter-domain differences. Existing\ndomain grouping methods, based on business logic or data similarities, often\nfail to capture the true transfer relationships required for optimal grouping.\nTo effectively cluster domains, we propose Causal Domain Clustering (CDC). CDC\nmodels domain transfer patterns within a large number of domains using two\ndistinct effects: the Isolated Domain Affinity Matrix for modeling\nnon-interactive domain transfers, and the Hybrid Domain Affinity Matrix for\nconsidering dynamic domain synergy or interference under joint training. To\nintegrate these two transfer effects, we introduce causal discovery to\ncalculate a cohesion-based coefficient that adaptively balances their\ncontributions. A Co-Optimized Dynamic Clustering algorithm iteratively\noptimizes target domain clustering and source domain selection for training.\nCDC significantly enhances performance across over 50 domains on public\ndatasets and in industrial settings, achieving a 4.9% increase in online eCPM.\nCode is available at\nhttps://github.com/Chrissie-Law/Causal-Domain-Clustering-for-Multi-Domain-Recommendation",
+    "code_links": [
+      "https://github.com/Chrissie-Law/Causal-Domain-Clustering-for-Multi-Domain-Recommendation"
+    ],
+    "comment": "Accepted at SIGIR 2025"
+  },
+  {
+    "title": "Shifting from Ranking to Set Selection for Retrieval Augmented Generation",
+    "authors": "Dahyun Lee, Yongrae Jo, Haeju Park, Moontae Lee",
+    "published": "2025-07-09",
+    "arxiv_id": "2507.06838v2",
+    "url": "http://arxiv.org/abs/2507.06838v2",
+    "pdf_url": "http://arxiv.org/pdf/2507.06838v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Retrieval in Retrieval-Augmented Generation(RAG) must ensure that retrieved\npassages are not only individually relevant but also collectively form a\ncomprehensive set. Existing approaches primarily rerank top-k passages based on\ntheir individual relevance, often failing to meet the information needs of\ncomplex queries in multi-hop question answering. In this work, we propose a\nset-wise passage selection approach and introduce SETR, which explicitly\nidentifies the information requirements of a query through Chain-of-Thought\nreasoning and selects an optimal set of passages that collectively satisfy\nthose requirements. Experiments on multi-hop RAG benchmarks show that SETR\noutperforms both proprietary LLM-based rerankers and open-source baselines in\nterms of answer correctness and retrieval quality, providing an effective and\nefficient alternative to traditional rerankers in RAG systems. The code is\navailable at https://github.com/LGAI-Research/SetR",
+    "code_links": [
+      "https://github.com/LGAI-Research/SetR"
+    ],
+    "comment": "Accepted to ACL 2025 main (Oral Presentation)"
+  },
+  {
+    "title": "Temporal Information Retrieval via Time-Specifier Model Merging",
+    "authors": "SeungYoon Han, Taeho Hwang, Sukmin Cho, Soyeong Jeong, Hoyun Song, Huije Lee, Jong C. Park",
+    "published": "2025-07-09",
+    "arxiv_id": "2507.06782v1",
+    "url": "http://arxiv.org/abs/2507.06782v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.06782v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "The rapid expansion of digital information and knowledge across structured\nand unstructured sources has heightened the importance of Information Retrieval\n(IR). While dense retrieval methods have substantially improved semantic\nmatching for general queries, they consistently underperform on queries with\nexplicit temporal constraints--often those containing numerical expressions and\ntime specifiers such as ``in 2015.'' Existing approaches to Temporal\nInformation Retrieval (TIR) improve temporal reasoning but often suffer from\ncatastrophic forgetting, leading to reduced performance on non-temporal\nqueries. To address this, we propose Time-Specifier Model Merging (TSM), a\nnovel method that enhances temporal retrieval while preserving accuracy on\nnon-temporal queries. TSM trains specialized retrievers for individual time\nspecifiers and merges them in to a unified model, enabling precise handling of\ntemporal constraints without compromising non-temporal retrieval. Extensive\nexperiments on both temporal and non-temporal datasets demonstrate that TSM\nsignificantly improves performance on temporally constrained queries while\nmaintaining strong results on non-temporal queries, consistently outperforming\nother baseline methods. Our code is available at\nhttps://github.com/seungyoonee/TSM .",
+    "code_links": [
+      "https://github.com/seungyoonee/TSM"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MS-DPPs: Multi-Source Determinantal Point Processes for Contextual Diversity Refinement of Composite Attributes in Text to Image Retrieval",
+    "authors": "Naoya Sogi, Takashi Shibata, Makoto Terao, Masanori Suganuma, Takayuki Okatani",
+    "published": "2025-07-09",
+    "arxiv_id": "2507.06654v1",
+    "url": "http://arxiv.org/abs/2507.06654v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.06654v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Result diversification (RD) is a crucial technique in Text-to-Image Retrieval\nfor enhancing the efficiency of a practical application. Conventional methods\nfocus solely on increasing the diversity metric of image appearances. However,\nthe diversity metric and its desired value vary depending on the application,\nwhich limits the applications of RD. This paper proposes a novel task called\nCDR-CA (Contextual Diversity Refinement of Composite Attributes). CDR-CA aims\nto refine the diversities of multiple attributes, according to the\napplication's context. To address this task, we propose Multi-Source DPPs, a\nsimple yet strong baseline that extends the Determinantal Point Process (DPP)\nto multi-sources. We model MS-DPP as a single DPP model with a unified\nsimilarity matrix based on a manifold representation. We also introduce Tangent\nNormalization to reflect contexts. Extensive experiments demonstrate the\neffectiveness of the proposed method. Our code is publicly available at\nhttps://github.com/NEC-N-SOGI/msdpp.",
+    "code_links": [
+      "https://github.com/NEC-N-SOGI/msdpp"
+    ],
+    "comment": "IJCAI 2025. Code: https://github.com/NEC-N-SOGI/msdpp"
+  },
+  {
+    "title": "DS@GT at CheckThat! 2025: Exploring Retrieval and Reranking Pipelines for Scientific Claim Source Retrieval on Social Media Discourse",
+    "authors": "Jeanette Schofield, Shuyu Tian, Hoang Thanh Thanh Truong, Maximilian Heil",
+    "published": "2025-07-09",
+    "arxiv_id": "2507.06563v1",
+    "url": "http://arxiv.org/abs/2507.06563v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.06563v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Social media users often make scientific claims without citing where these\nclaims come from, generating a need to verify these claims. This paper details\nwork done by the DS@GT team for CLEF 2025 CheckThat! Lab Task 4b Scientific\nClaim Source Retrieval which seeks to find relevant scientific papers based on\nimplicit references in tweets. Our team explored 6 different data augmentation\ntechniques, 7 different retrieval and reranking pipelines, and finetuned a\nbi-encoder. Achieving an MRR@5 of 0.58, our team ranked 16th out of 30 teams\nfor the CLEF 2025 CheckThat! Lab Task 4b, and improvement of 0.15 over the BM25\nbaseline of 0.43. Our code is available on Github at\nhttps://github.com/dsgt-arc/checkthat-2025-swd/tree/main/subtask-4b.",
+    "code_links": [
+      "https://github.com/dsgt-arc/checkthat-2025-swd"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Unconditional Diffusion for Generative Sequential Recommendation",
+    "authors": "Yimeng Bai, Yang Zhang, Sihao Ding, Shaohui Ruan, Han Yao, Danhui Guan, Fuli Feng, Tat-Seng Chua",
+    "published": "2025-07-08",
+    "arxiv_id": "2507.06121v1",
+    "url": "http://arxiv.org/abs/2507.06121v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.06121v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Diffusion models, known for their generative ability to simulate data\ncreation through noise-adding and denoising processes, have emerged as a\npromising approach for building generative recommenders. To incorporate user\nhistory for personalization, existing methods typically adopt a conditional\ndiffusion framework, where the reverse denoising process of reconstructing\nitems from noise is modified to be conditioned on the user history. However,\nthis design may fail to fully utilize historical information, as it gets\ndistracted by the need to model the \"item $\\leftrightarrow$ noise\" translation.\nThis motivates us to reformulate the diffusion process for sequential\nrecommendation in an unconditional manner, treating user history (instead of\nnoise) as the endpoint of the forward diffusion process (i.e., the starting\npoint of the reverse process), rather than as a conditional input. This\nformulation allows for exclusive focus on modeling the \"item $\\leftrightarrow$\nhistory\" translation. To this end, we introduce Brownian Bridge Diffusion\nRecommendation (BBDRec). By leveraging a Brownian bridge process, BBDRec\nenforces a structured noise addition and denoising mechanism, ensuring that the\ntrajectories are constrained towards a specific endpoint -- user history,\nrather than noise. Extensive experiments demonstrate BBDRec's effectiveness in\nenhancing sequential recommendation performance. The source code is available\nat https://github.com/baiyimeng/BBDRec.",
+    "code_links": [
+      "https://github.com/baiyimeng/BBDRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Tile-Based ViT Inference with Visual-Cluster Priors for Zero-Shot Multi-Species Plant Identification",
+    "authors": "Murilo Gustineli, Anthony Miyaguchi, Adrian Cheung, Divyansh Khattak",
+    "published": "2025-07-08",
+    "arxiv_id": "2507.06093v1",
+    "url": "http://arxiv.org/abs/2507.06093v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.06093v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "We describe DS@GT's second-place solution to the PlantCLEF 2025 challenge on\nmulti-species plant identification in vegetation quadrat images. Our pipeline\ncombines (i) a fine-tuned Vision Transformer ViTD2PC24All for patch-level\ninference, (ii) a 4x4 tiling strategy that aligns patch size with the network's\n518x518 receptive field, and (iii) domain-prior adaptation through PaCMAP +\nK-Means visual clustering and geolocation filtering. Tile predictions are\naggregated by majority vote and re-weighted with cluster-specific Bayesian\npriors, yielding a macro-averaged F1 of 0.348 (private leaderboard) while\nrequiring no additional training. All code, configuration files, and\nreproducibility scripts are publicly available at\nhttps://github.com/dsgt-arc/plantclef-2025.",
+    "code_links": [
+      "https://github.com/dsgt-arc/plantclef-2025"
+    ],
+    "comment": null
+  },
+  {
+    "title": "When Transformers Meet Recommenders: Integrating Self-Attentive Sequential Recommendation with Fine-Tuned LLMs",
+    "authors": "Kechen Liu",
+    "published": "2025-07-08",
+    "arxiv_id": "2507.05733v1",
+    "url": "http://arxiv.org/abs/2507.05733v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.05733v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Self-Attentive Sequential Recommendation (SASRec) effectively captures\nlong-term user preferences by applying attention mechanisms to historical\ninteractions. Concurrently, the rise of Large Language Models (LLMs) has\nmotivated research into LLM-based recommendation, which leverages their\npowerful generalization and language understanding capabilities. However, LLMs\noften lack the domain-specific knowledge and collaborative signals essential\nfor high-quality recommendations when relying solely on textual prompts. To\naddress this limitation, this study proposes SASRecLLM, a novel framework that\nintegrates SASRec as a collaborative encoder with an LLM fine-tuned using\nLow-Rank Adaptation (LoRA). The components are connected via a mapping layer to\nalign their dimensional spaces, and three targeted training strategies are\ndesigned to optimize the hybrid architecture. Extensive experiments on multiple\ndatasets demonstrate that SASRecLLM achieves robust and consistent improvements\nover strong baselines in both cold-start and warm-start scenarios. This work\nadvances the field of LLM-based recommendation by presenting a modular and\neffective paradigm for fusing structured collaborative filtering with the\nsemantic power of fine-tuned LLMs. The implementation is available on GitHub:\nhttps://github.com/kechenkristin/RecLLM",
+    "code_links": [
+      "https://github.com/kechenkristin/RecLLM"
+    ],
+    "comment": null
+  },
+  {
+    "title": "TOPJoin: A Context-Aware Multi-Criteria Approach for Joinable Column Search",
+    "authors": "Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas",
+    "published": "2025-07-15",
+    "arxiv_id": "2507.11505v1",
+    "url": "http://arxiv.org/abs/2507.11505v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.11505v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "One of the major challenges in enterprise data analysis is the task of\nfinding joinable tables that are conceptually related and provide meaningful\ninsights. Traditionally, joinable tables have been discovered through a search\nfor similar columns, where two columns are considered similar syntactically if\nthere is a set overlap or they are considered similar semantically if either\nthe column embeddings or value embeddings are closer in the embedding space.\nHowever, for enterprise data lakes, column similarity is not sufficient to\nidentify joinable columns and tables. The context of the query column is\nimportant. Hence, in this work, we first define context-aware column\njoinability. Then we propose a multi-criteria approach, called TOPJoin, for\njoinable column search. We evaluate TOPJoin against existing join search\nbaselines over one academic and one real-world join search benchmark. Through\nexperiments, we find that TOPJoin performs better on both benchmarks than the\nbaselines.",
+    "code_links": [
+      "https://github.com/IBM/ContextAwareJoin"
+    ],
+    "comment": "VLDB 2025 Workshop: Tabular Data Analysis (TaDA); The source code,\n  data, and/or other artifacts have been made available at\n  https://github.com/IBM/ContextAwareJoin"
+  }
+]
