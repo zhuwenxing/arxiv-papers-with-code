@@ -1,0 +1,295 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+Advancing Retrieval-Augmented Generation for Structured Enterprise and Internal Data,Chandana Cheerla,2025-07-16,2507.12425v1,http://arxiv.org/abs/2507.12425v1,http://arxiv.org/pdf/2507.12425v1,information_retrieval,cs.CL,"Organizations increasingly rely on proprietary enterprise data, including HR
+records, structured reports, and tabular documents, for critical
+decision-making. While Large Language Models (LLMs) have strong generative
+capabilities, they are limited by static pretraining, short context windows,
+and challenges in processing heterogeneous data formats. Conventional
+Retrieval-Augmented Generation (RAG) frameworks address some of these gaps but
+often struggle with structured and semi-structured data.
+  This work proposes an advanced RAG framework that combines hybrid retrieval
+strategies using dense embeddings (all-mpnet-base-v2) and BM25, enhanced by
+metadata-aware filtering with SpaCy NER and cross-encoder reranking. The
+framework applies semantic chunking to maintain textual coherence and retains
+tabular data structures to preserve row-column integrity. Quantized indexing
+optimizes retrieval efficiency, while human-in-the-loop feedback and
+conversation memory improve adaptability.
+  Experiments on enterprise datasets show notable improvements: Precision@5
+increased by 15 percent (90 versus 75), Recall@5 by 13 percent (87 versus 74),
+and Mean Reciprocal Rank by 16 percent (0.85 versus 0.69). Qualitative
+evaluations show higher scores in Faithfulness (4.6 versus 3.0), Completeness
+(4.2 versus 2.5), and Relevance (4.5 versus 3.2) on a 5-point Likert scale.
+These results demonstrate the framework's effectiveness in delivering accurate,
+comprehensive, and contextually relevant responses for enterprise tasks. Future
+work includes extending to multimodal data and integrating agent-based
+retrieval. The source code will be released at
+https://github.com/CheerlaChandana/Enterprise-Chatbot",https://github.com/CheerlaChandana/Enterprise-Chatbot,
+DyG-RAG: Dynamic Graph Retrieval-Augmented Generation with Event-Centric Reasoning,"Qingyun Sun, Jiaqi Yuan, Shan He, Xiao Guan, Haonan Yuan, Xingcheng Fu, Jianxin Li, Philip S. Yu",2025-07-16,2507.13396v1,http://arxiv.org/abs/2507.13396v1,http://arxiv.org/pdf/2507.13396v1,information_retrieval,cs.IR,"Graph Retrieval-Augmented Generation has emerged as a powerful paradigm for
+grounding large language models with external structured knowledge. However,
+existing Graph RAG methods struggle with temporal reasoning, due to their
+inability to model the evolving structure and order of real-world events. In
+this work, we introduce DyG-RAG, a novel event-centric dynamic graph
+retrieval-augmented generation framework designed to capture and reason over
+temporal knowledge embedded in unstructured text. To eliminate temporal
+ambiguity in traditional retrieval units, DyG-RAG proposes Dynamic Event Units
+(DEUs) that explicitly encode both semantic content and precise temporal
+anchors, enabling accurate and interpretable time-aware retrieval. To capture
+temporal and causal dependencies across events, DyG-RAG constructs an event
+graph by linking DEUs that share entities and occur close in time, supporting
+efficient and meaningful multi-hop reasoning. To ensure temporally consistent
+generation, DyG-RAG introduces an event timeline retrieval pipeline that
+retrieves event sequences via time-aware traversal, and proposes a Time
+Chain-of-Thought strategy for temporally grounded answer generation. This
+unified pipeline enables DyG-RAG to retrieve coherent, temporally ordered event
+sequences and to answer complex, time-sensitive queries that standard RAG
+systems cannot resolve. Extensive experiments on temporal QA benchmarks
+demonstrate that DyG-RAG significantly improves the accuracy and recall of
+three typical types of temporal reasoning questions, paving the way for more
+faithful and temporal-aware generation. DyG-RAG is available at
+https://github.com/RingBDStack/DyG-RAG.",https://github.com/RingBDStack/DyG-RAG,
+Non-parametric Graph Convolution for Re-ranking in Recommendation Systems,"Zhongyu Ouyang, Mingxuan Ju, Soroush Vosoughi, Yanfang Ye",2025-07-14,2507.09969v1,http://arxiv.org/abs/2507.09969v1,http://arxiv.org/pdf/2507.09969v1,information_retrieval,cs.IR,"Graph knowledge has been proven effective in enhancing item rankings in
+recommender systems (RecSys), particularly during the retrieval stage. However,
+its application in the ranking stage, especially when richer contextual
+information in user-item interactions is available, remains underexplored. A
+major challenge lies in the substantial computational cost associated with
+repeatedly retrieving neighborhood information from billions of items stored in
+distributed systems. This resource-intensive requirement makes it difficult to
+scale graph-based methods in practical RecSys. To bridge this gap, we first
+demonstrate that incorporating graphs in the ranking stage improves ranking
+qualities. Notably, while the improvement is evident, we show that the
+substantial computational overheads entailed by graphs are prohibitively
+expensive for real-world recommendations. In light of this, we propose a
+non-parametric strategy that utilizes graph convolution for re-ranking only
+during test time. Our strategy circumvents the notorious computational
+overheads from graph convolution during training, and utilizes structural
+knowledge hidden in graphs on-the-fly during testing. It can be used as a
+plug-and-play module and easily employed to enhance the ranking ability of
+various ranking layers of a real-world RecSys with significantly reduced
+computational overhead. Through comprehensive experiments across four benchmark
+datasets with varying levels of sparsity, we demonstrate that our strategy
+yields noticeable improvements (i.e., 8.1% on average) during testing time with
+little to no additional computational overheads (i.e., 0.5 on average). Code:
+https://github.com/zyouyang/RecSys2025_NonParamGC.git",https://github.com/zyouyang/RecSys2025_NonParamGC,Accepted to RecSys2025 Main
+Generative Cognitive Diagnosis,"Jiatong Li, Qi Liu, Mengxiao Zhu",2025-07-13,2507.09831v1,http://arxiv.org/abs/2507.09831v1,http://arxiv.org/pdf/2507.09831v1,information_retrieval,cs.LG,"Cognitive diagnosis (CD) models latent cognitive states of human learners by
+analyzing their response patterns on diagnostic tests, serving as a crucial
+machine learning technique for educational assessment and evaluation.
+Traditional cognitive diagnosis models typically follow a transductive
+prediction paradigm that optimizes parameters to fit response scores and
+extract learner abilities. These approaches face significant limitations as
+they cannot perform instant diagnosis for new learners without computationally
+expensive retraining and produce diagnostic outputs with limited reliability.
+In this study, we introduces a novel generative diagnosis paradigm that
+fundamentally shifts CD from predictive to generative modeling, enabling
+inductive inference of cognitive states without parameter re-optimization. We
+propose two simple yet effective instantiations of this paradigm: Generative
+Item Response Theory (G-IRT) and Generative Neural Cognitive Diagnosis Model
+(G-NCDM), which achieve excellent performance improvements over traditional
+methods. The generative approach disentangles cognitive state inference from
+response prediction through a well-designed generation process that
+incorporates identifiability and monotonicity conditions. Extensive experiments
+on real-world datasets demonstrate the effectiveness of our methodology in
+addressing scalability and reliability challenges, especially $\times 100$
+speedup for the diagnosis of new learners. Our framework opens new avenues for
+cognitive diagnosis applications in artificial intelligence, particularly for
+intelligent model evaluation and intelligent education systems. The code is
+available at https://github.com/CSLiJT/Generative-CD.git.",https://github.com/CSLiJT/Generative-CD,"Preprint; 15 pages, 12 figures"
+Ambiguity-Aware and High-Order Relation Learning for Multi-Grained Image-Text Matching,"Junyu Chen, Yihua Gao, Mingyuan Ge, Mingyong Li",2025-07-12,2507.09256v1,http://arxiv.org/abs/2507.09256v1,http://arxiv.org/pdf/2507.09256v1,information_retrieval,cs.CV,"Image-text matching is crucial for bridging the semantic gap between computer
+vision and natural language processing. However, existing methods still face
+challenges in handling high-order associations and semantic ambiguities among
+similar instances. These ambiguities arise from subtle differences between soft
+positive samples (semantically similar but incorrectly labeled) and soft
+negative samples (locally matched but globally inconsistent), creating matching
+uncertainties. Furthermore, current methods fail to fully utilize the
+neighborhood relationships among semantically similar instances within training
+batches, limiting the model's ability to learn high-order shared knowledge.
+This paper proposes the Ambiguity-Aware and High-order Relation learning
+framework (AAHR) to address these issues. AAHR constructs a unified
+representation space through dynamic clustering prototype contrastive learning,
+effectively mitigating the soft positive sample problem. The framework
+introduces global and local feature extraction mechanisms and an adaptive
+aggregation network, significantly enhancing full-grained semantic
+understanding capabilities. Additionally, AAHR employs intra-modal and
+inter-modal correlation matrices to investigate neighborhood relationships
+among sample instances thoroughly. It incorporates GNN to enhance semantic
+interactions between instances. Furthermore, AAHR integrates momentum
+contrastive learning to expand the negative sample set. These combined
+strategies significantly improve the model's ability to discriminate between
+features. Experimental results demonstrate that AAHR outperforms existing
+state-of-the-art methods on Flickr30K, MSCOCO, and ECCV Caption datasets,
+considerably improving the accuracy and efficiency of image-text matching. The
+code and model checkpoints for this research are available at
+https://github.com/Image-Text-Matching/AAHR .",https://github.com/Image-Text-Matching/AAHR,"Accepted by the Knowledge-Based Systems(KBS), 2025"
+DS@GT at Touché: Large Language Models for Retrieval-Augmented Debate,"Anthony Miyaguchi, Conor Johnston, Aaryan Potdar",2025-07-12,2507.09090v1,http://arxiv.org/abs/2507.09090v1,http://arxiv.org/pdf/2507.09090v1,information_retrieval,cs.IR,"Large Language Models (LLMs) demonstrate strong conversational abilities. In
+this Working Paper, we study them in the context of debating in two ways: their
+ability to perform in a structured debate along with a dataset of arguments to
+use and their ability to evaluate utterances throughout the debate. We deploy
+six leading publicly available models from three providers for the
+Retrieval-Augmented Debate and Evaluation. The evaluation is performed by
+measuring four key metrics: Quality, Quantity, Manner, and Relation. Throughout
+this task, we found that although LLMs perform well in debates when given
+related arguments, they tend to be verbose in responses yet consistent in
+evaluation. The accompanying source code for this paper is located at
+https://github.com/dsgt-arc/touche-2025-rad.",https://github.com/dsgt-arc/touche-2025-rad,
+DS@GT at LongEval: Evaluating Temporal Performance in Web Search Systems and Topics with Two-Stage Retrieval,"Anthony Miyaguchi, Imran Afrulbasha, Aleksandar Pramov",2025-07-11,2507.08360v1,http://arxiv.org/abs/2507.08360v1,http://arxiv.org/pdf/2507.08360v1,information_retrieval,cs.IR,"Information Retrieval (IR) models are often trained on static datasets,
+making them vulnerable to performance degradation as web content evolves. The
+DS@GT competition team participated in the Longitudinal Evaluation of Model
+Performance (LongEval) lab at CLEF 2025, which evaluates IR systems across
+temporally distributed web snapshots. Our analysis of the Qwant web dataset
+includes exploratory data analysis with topic modeling over time. The two-phase
+retrieval system employs sparse keyword searches, utilizing query expansion and
+document reranking. Our best system achieves an average NDCG@10 of 0.296 across
+the entire training and test dataset, with an overall best score of 0.395 on
+2023-05. The accompanying source code for this paper is at
+https://github.com/dsgt-arc/longeval-2025",https://github.com/dsgt-arc/longeval-2025,
+Transfer Learning and Mixup for Fine-Grained Few-Shot Fungi Classification,"Jason Kahei Tam, Murilo Gustineli, Anthony Miyaguchi",2025-07-11,2507.08248v1,http://arxiv.org/abs/2507.08248v1,http://arxiv.org/pdf/2507.08248v1,information_retrieval,cs.CV,"Accurate identification of fungi species presents a unique challenge in
+computer vision due to fine-grained inter-species variation and high
+intra-species variation. This paper presents our approach for the FungiCLEF
+2025 competition, which focuses on few-shot fine-grained visual categorization
+(FGVC) using the FungiTastic Few-Shot dataset. Our team (DS@GT) experimented
+with multiple vision transformer models, data augmentation, weighted sampling,
+and incorporating textual information. We also explored generative AI models
+for zero-shot classification using structured prompting but found them to
+significantly underperform relative to vision-based models. Our final model
+outperformed both competition baselines and highlighted the effectiveness of
+domain specific pretraining and balanced sampling strategies. Our approach
+ranked 35/74 on the private test set in post-completion evaluation, this
+suggests additional work can be done on metadata selection and domain-adapted
+multi-modal learning. Our code is available at
+https://github.com/dsgt-arc/fungiclef-2025.",https://github.com/dsgt-arc/fungiclef-2025,
+DTECT: Dynamic Topic Explorer & Context Tracker,"Suman Adhya, Debarshi Kumar Sanyal",2025-07-10,2507.07910v2,http://arxiv.org/abs/2507.07910v2,http://arxiv.org/pdf/2507.07910v2,information_retrieval,cs.CL,"The explosive growth of textual data over time presents a significant
+challenge in uncovering evolving themes and trends. Existing dynamic topic
+modeling techniques, while powerful, often exist in fragmented pipelines that
+lack robust support for interpretation and user-friendly exploration. We
+introduce DTECT (Dynamic Topic Explorer & Context Tracker), an end-to-end
+system that bridges the gap between raw textual data and meaningful temporal
+insights. DTECT provides a unified workflow that supports data preprocessing,
+multiple model architectures, and dedicated evaluation metrics to analyze the
+topic quality of temporal topic models. It significantly enhances
+interpretability by introducing LLM-driven automatic topic labeling, trend
+analysis via temporally salient words, interactive visualizations with
+document-level summarization, and a natural language chat interface for
+intuitive data querying. By integrating these features into a single, cohesive
+platform, DTECT empowers users to more effectively track and understand
+thematic dynamics. DTECT is open-source and available at
+https://github.com/AdhyaSuman/DTECT.",https://github.com/AdhyaSuman/DTECT,"Code: https://github.com/AdhyaSuman/DTECT | Demo:
+  https://huggingface.co/spaces/AdhyaSuman/DTECT | Video:
+  https://youtu.be/B8nNfxFoJAU"
+Boosting Parameter Efficiency in LLM-Based Recommendation through Sophisticated Pruning,"Shanle Zheng, Keqin Bao, Jizhi Zhang, Yang Zhang, Fuli Feng, Xiangnan He",2025-07-09,2507.07064v1,http://arxiv.org/abs/2507.07064v1,http://arxiv.org/pdf/2507.07064v1,information_retrieval,cs.IR,"LLM-based recommender systems have made significant progress; however, the
+deployment cost associated with the large parameter volume of LLMs still
+hinders their real-world applications. This work explores parameter pruning to
+improve parameter efficiency while maintaining recommendation quality, thereby
+enabling easier deployment. Unlike existing approaches that focus primarily on
+inter-layer redundancy, we uncover intra-layer redundancy within components
+such as self-attention and MLP modules. Building on this analysis, we propose a
+more fine-grained pruning approach that integrates both intra-layer and
+layer-wise pruning. Specifically, we introduce a three-stage pruning strategy
+that progressively prunes parameters at different levels and parts of the
+model, moving from intra-layer to layer-wise pruning, or from width to depth.
+Each stage also includes a performance restoration step using distillation
+techniques, helping to strike a balance between performance and parameter
+efficiency. Empirical results demonstrate the effectiveness of our approach:
+across three datasets, our models achieve an average of 88% of the original
+model's performance while pruning more than 95% of the non-embedding
+parameters. This underscores the potential of our method to significantly
+reduce resource requirements without greatly compromising recommendation
+quality. Our code will be available at: https://github.com/zheng-sl/PruneRec",https://github.com/zheng-sl/PruneRec,
+CDC: Causal Domain Clustering for Multi-Domain Recommendation,"Huishi Luo, Yiqing Wu, Yiwen Chen, Fuzhen Zhuang, Deqing Wang",2025-07-09,2507.06877v1,http://arxiv.org/abs/2507.06877v1,http://arxiv.org/pdf/2507.06877v1,information_retrieval,cs.IR,"Multi-domain recommendation leverages domain-general knowledge to improve
+recommendations across several domains. However, as platforms expand to dozens
+or hundreds of scenarios, training all domains in a unified model leads to
+performance degradation due to significant inter-domain differences. Existing
+domain grouping methods, based on business logic or data similarities, often
+fail to capture the true transfer relationships required for optimal grouping.
+To effectively cluster domains, we propose Causal Domain Clustering (CDC). CDC
+models domain transfer patterns within a large number of domains using two
+distinct effects: the Isolated Domain Affinity Matrix for modeling
+non-interactive domain transfers, and the Hybrid Domain Affinity Matrix for
+considering dynamic domain synergy or interference under joint training. To
+integrate these two transfer effects, we introduce causal discovery to
+calculate a cohesion-based coefficient that adaptively balances their
+contributions. A Co-Optimized Dynamic Clustering algorithm iteratively
+optimizes target domain clustering and source domain selection for training.
+CDC significantly enhances performance across over 50 domains on public
+datasets and in industrial settings, achieving a 4.9% increase in online eCPM.
+Code is available at
+https://github.com/Chrissie-Law/Causal-Domain-Clustering-for-Multi-Domain-Recommendation",https://github.com/Chrissie-Law/Causal-Domain-Clustering-for-Multi-Domain-Recommendation,Accepted at SIGIR 2025
+Shifting from Ranking to Set Selection for Retrieval Augmented Generation,"Dahyun Lee, Yongrae Jo, Haeju Park, Moontae Lee",2025-07-09,2507.06838v2,http://arxiv.org/abs/2507.06838v2,http://arxiv.org/pdf/2507.06838v2,information_retrieval,cs.CL,"Retrieval in Retrieval-Augmented Generation(RAG) must ensure that retrieved
+passages are not only individually relevant but also collectively form a
+comprehensive set. Existing approaches primarily rerank top-k passages based on
+their individual relevance, often failing to meet the information needs of
+complex queries in multi-hop question answering. In this work, we propose a
+set-wise passage selection approach and introduce SETR, which explicitly
+identifies the information requirements of a query through Chain-of-Thought
+reasoning and selects an optimal set of passages that collectively satisfy
+those requirements. Experiments on multi-hop RAG benchmarks show that SETR
+outperforms both proprietary LLM-based rerankers and open-source baselines in
+terms of answer correctness and retrieval quality, providing an effective and
+efficient alternative to traditional rerankers in RAG systems. The code is
+available at https://github.com/LGAI-Research/SetR",https://github.com/LGAI-Research/SetR,Accepted to ACL 2025 main (Oral Presentation)
+Temporal Information Retrieval via Time-Specifier Model Merging,"SeungYoon Han, Taeho Hwang, Sukmin Cho, Soyeong Jeong, Hoyun Song, Huije Lee, Jong C. Park",2025-07-09,2507.06782v1,http://arxiv.org/abs/2507.06782v1,http://arxiv.org/pdf/2507.06782v1,information_retrieval,cs.IR,"The rapid expansion of digital information and knowledge across structured
+and unstructured sources has heightened the importance of Information Retrieval
+(IR). While dense retrieval methods have substantially improved semantic
+matching for general queries, they consistently underperform on queries with
+explicit temporal constraints--often those containing numerical expressions and
+time specifiers such as ``in 2015.'' Existing approaches to Temporal
+Information Retrieval (TIR) improve temporal reasoning but often suffer from
+catastrophic forgetting, leading to reduced performance on non-temporal
+queries. To address this, we propose Time-Specifier Model Merging (TSM), a
+novel method that enhances temporal retrieval while preserving accuracy on
+non-temporal queries. TSM trains specialized retrievers for individual time
+specifiers and merges them in to a unified model, enabling precise handling of
+temporal constraints without compromising non-temporal retrieval. Extensive
+experiments on both temporal and non-temporal datasets demonstrate that TSM
+significantly improves performance on temporally constrained queries while
+maintaining strong results on non-temporal queries, consistently outperforming
+other baseline methods. Our code is available at
+https://github.com/seungyoonee/TSM .",https://github.com/seungyoonee/TSM,
+MS-DPPs: Multi-Source Determinantal Point Processes for Contextual Diversity Refinement of Composite Attributes in Text to Image Retrieval,"Naoya Sogi, Takashi Shibata, Makoto Terao, Masanori Suganuma, Takayuki Okatani",2025-07-09,2507.06654v1,http://arxiv.org/abs/2507.06654v1,http://arxiv.org/pdf/2507.06654v1,information_retrieval,cs.CV,"Result diversification (RD) is a crucial technique in Text-to-Image Retrieval
+for enhancing the efficiency of a practical application. Conventional methods
+focus solely on increasing the diversity metric of image appearances. However,
+the diversity metric and its desired value vary depending on the application,
+which limits the applications of RD. This paper proposes a novel task called
+CDR-CA (Contextual Diversity Refinement of Composite Attributes). CDR-CA aims
+to refine the diversities of multiple attributes, according to the
+application's context. To address this task, we propose Multi-Source DPPs, a
+simple yet strong baseline that extends the Determinantal Point Process (DPP)
+to multi-sources. We model MS-DPP as a single DPP model with a unified
+similarity matrix based on a manifold representation. We also introduce Tangent
+Normalization to reflect contexts. Extensive experiments demonstrate the
+effectiveness of the proposed method. Our code is publicly available at
+https://github.com/NEC-N-SOGI/msdpp.",https://github.com/NEC-N-SOGI/msdpp,IJCAI 2025. Code: https://github.com/NEC-N-SOGI/msdpp
+Graph-Structured Data Analysis of Component Failure in Autonomous Cargo Ships Based on Feature Fusion,"Zizhao Zhang, Tianxiang Zhao, Yu Sun, Liping Sun, Jichuan Kang",2025-07-18,2507.13721v1,http://arxiv.org/abs/2507.13721v1,http://arxiv.org/pdf/2507.13721v1,databases,cs.LG,"To address the challenges posed by cascading reactions caused by component
+failures in autonomous cargo ships (ACS) and the uncertainties in emergency
+decision-making, this paper proposes a novel hybrid feature fusion framework
+for constructing a graph-structured dataset of failure modes. By employing an
+improved cuckoo search algorithm (HN-CSA), the literature retrieval efficiency
+is significantly enhanced, achieving improvements of 7.1% and 3.4% compared to
+the NSGA-II and CSA search algorithms, respectively. A hierarchical feature
+fusion framework is constructed, using Word2Vec encoding to encode
+subsystem/component features, BERT-KPCA to process failure modes/reasons, and
+Sentence-BERT to quantify the semantic association between failure impact and
+emergency decision-making. The dataset covers 12 systems, 1,262 failure modes,
+and 6,150 propagation paths. Validation results show that the GATE-GNN model
+achieves a classification accuracy of 0.735, comparable to existing benchmarks.
+Additionally, a silhouette coefficient of 0.641 indicates that the features are
+highly distinguishable. In the label prediction results, the Shore-based
+Meteorological Service System achieved an F1 score of 0.93, demonstrating high
+prediction accuracy. This paper not only provides a solid foundation for
+failure analysis in autonomous cargo ships but also offers reliable support for
+fault diagnosis, risk assessment, and intelligent decision-making systems. The
+link to the dataset is
+https://github.com/wojiufukele/Graph-Structured-about-CSA.",https://github.com/wojiufukele/Graph-Structured-about-CSA,
+TOPJoin: A Context-Aware Multi-Criteria Approach for Joinable Column Search,"Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas",2025-07-15,2507.11505v1,http://arxiv.org/abs/2507.11505v1,http://arxiv.org/pdf/2507.11505v1,databases,cs.DB,"One of the major challenges in enterprise data analysis is the task of
+finding joinable tables that are conceptually related and provide meaningful
+insights. Traditionally, joinable tables have been discovered through a search
+for similar columns, where two columns are considered similar syntactically if
+there is a set overlap or they are considered similar semantically if either
+the column embeddings or value embeddings are closer in the embedding space.
+However, for enterprise data lakes, column similarity is not sufficient to
+identify joinable columns and tables. The context of the query column is
+important. Hence, in this work, we first define context-aware column
+joinability. Then we propose a multi-criteria approach, called TOPJoin, for
+joinable column search. We evaluate TOPJoin against existing join search
+baselines over one academic and one real-world join search benchmark. Through
+experiments, we find that TOPJoin performs better on both benchmarks than the
+baselines.",https://github.com/IBM/ContextAwareJoin,"VLDB 2025 Workshop: Tabular Data Analysis (TaDA); The source code,
+  data, and/or other artifacts have been made available at
+  https://github.com/IBM/ContextAwareJoin"
