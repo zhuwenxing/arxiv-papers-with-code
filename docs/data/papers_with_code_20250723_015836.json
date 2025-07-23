@@ -1,0 +1,197 @@
+[
+  {
+    "title": "Hierarchical Graph Information Bottleneck for Multi-Behavior Recommendation",
+    "authors": "Hengyu Zhang, Chunxu Shen, Xiangguo Sun, Jie Tan, Yanchao Tan, Yu Rong, Hong Cheng, Lingling Yi",
+    "published": "2025-07-21",
+    "arxiv_id": "2507.15395v1",
+    "url": "http://arxiv.org/abs/2507.15395v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.15395v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In real-world recommendation scenarios, users typically engage with platforms\nthrough multiple types of behavioral interactions. Multi-behavior\nrecommendation algorithms aim to leverage various auxiliary user behaviors to\nenhance prediction for target behaviors of primary interest (e.g., buy),\nthereby overcoming performance limitations caused by data sparsity in target\nbehavior records. Current state-of-the-art approaches typically employ\nhierarchical design following either cascading (e.g.,\nview$\\rightarrow$cart$\\rightarrow$buy) or parallel\n(unified$\\rightarrow$behavior$\\rightarrow$specific components) paradigms, to\ncapture behavioral relationships. However, these methods still face two\ncritical challenges: (1) severe distribution disparities across behaviors, and\n(2) negative transfer effects caused by noise in auxiliary behaviors. In this\npaper, we propose a novel model-agnostic Hierarchical Graph Information\nBottleneck (HGIB) framework for multi-behavior recommendation to effectively\naddress these challenges. Following information bottleneck principles, our\nframework optimizes the learning of compact yet sufficient representations that\npreserve essential information for target behavior prediction while eliminating\ntask-irrelevant redundancies. To further mitigate interaction noise, we\nintroduce a Graph Refinement Encoder (GRE) that dynamically prunes redundant\nedges through learnable edge dropout mechanisms. We conduct comprehensive\nexperiments on three real-world public datasets, which demonstrate the superior\neffectiveness of our framework. Beyond these widely used datasets in the\nacademic community, we further expand our evaluation on several real industrial\nscenarios and conduct an online A/B testing, showing again a significant\nimprovement in multi-behavior recommendations. The source code of our proposed\nHGIB is available at https://github.com/zhy99426/HGIB.",
+    "code_links": [
+      "https://github.com/zhy99426/HGIB"
+    ],
+    "comment": "Accepted by RecSys2025"
+  },
+  {
+    "title": "SPAR: Scholar Paper Retrieval with LLM-based Agents for Enhanced Academic Search",
+    "authors": "Xiaofeng Shi, Yuduo Li, Qian Kou, Longbin Yu, Jinxin Xie, Hua Zhou",
+    "published": "2025-07-21",
+    "arxiv_id": "2507.15245v1",
+    "url": "http://arxiv.org/abs/2507.15245v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.15245v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recent advances in large language models (LLMs) have opened new opportunities\nfor academic literature retrieval. However, existing systems often rely on\nrigid pipelines and exhibit limited reasoning capabilities. We introduce SPAR,\na multi-agent framework that incorporates RefChain-based query decomposition\nand query evolution to enable more flexible and effective search. To facilitate\nsystematic evaluation, we also construct SPARBench, a challenging benchmark\nwith expert-annotated relevance labels. Experimental results demonstrate that\nSPAR substantially outperforms strong baselines, achieving up to +56% F1 on\nAutoScholar and +23% F1 on SPARBench over the best-performing baseline.\nTogether, SPAR and SPARBench provide a scalable, interpretable, and\nhigh-performing foundation for advancing research in scholarly retrieval. Code\nand data will be available at: https://github.com/xiaofengShi/SPAR",
+    "code_links": [
+      "https://github.com/xiaofengShi/SPAR"
+    ],
+    "comment": null
+  },
+  {
+    "title": "U-MARVEL: Unveiling Key Factors for Universal Multimodal Retrieval via Embedding Learning with MLLMs",
+    "authors": "Xiaojie Li, Chu Li, Shi-Zhe Chen, Xi Chen",
+    "published": "2025-07-20",
+    "arxiv_id": "2507.14902v1",
+    "url": "http://arxiv.org/abs/2507.14902v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.14902v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Universal multimodal retrieval (UMR), which aims to address complex retrieval\ntasks where both queries and candidates span diverse modalities, has been\nsignificantly advanced by the emergence of MLLMs. While state-of-the-art\nMLLM-based methods in the literature predominantly adopt contrastive learning\nprinciples, they often differ in their specific training recipes. Despite their\nsuccess, the mechanisms underlying their retrieval capabilities remain largely\nunexplored, potentially resulting in suboptimal performance and limited\ngeneralization ability. To address these issues, we present a comprehensive\nstudy aimed at uncovering the key factors that drive effective embedding\nlearning for UMR using MLLMs. We begin by implementing a general MLLM-based\nembedding learning pipeline, and systematically analyze the primary\ncontributors to high-performing universal retrieval systems. Based on this, we\nexplore various aspects of the details in embedding generation and training\nstrategies, including progressive transition, hard negative mining and\nre-ranker distillation. Notably, our findings reveal that often-overlooked\nfactors can have a substantial impact on model performance. Building on these\ndiscoveries, we introduce a unified framework termed U-MARVEL\n(\\textbf{U}niversal \\textbf{M}ultimod\\textbf{A}l \\textbf{R}etrie\\textbf{V}al\nvia \\textbf{E}mbedding \\textbf{L}earning), which outperforms state-of-the-art\ncompetitors on the M-BEIR benchmark by a large margin in supervised settings,\nand also exihibits strong zero-shot performance on several tasks such as\ncomposed image retrieval and text-to-video retrieval. These results underscore\nthe generalization potential of our framework across various embedding-based\nretrieval tasks. Code is available at https://github.com/chaxjli/U-MARVEL",
+    "code_links": [
+      "https://github.com/chaxjli/U-MARVEL"
+    ],
+    "comment": "Technical Report (in progress)"
+  },
+  {
+    "title": "Advancing Retrieval-Augmented Generation for Structured Enterprise and Internal Data",
+    "authors": "Chandana Cheerla",
+    "published": "2025-07-16",
+    "arxiv_id": "2507.12425v1",
+    "url": "http://arxiv.org/abs/2507.12425v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.12425v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Organizations increasingly rely on proprietary enterprise data, including HR\nrecords, structured reports, and tabular documents, for critical\ndecision-making. While Large Language Models (LLMs) have strong generative\ncapabilities, they are limited by static pretraining, short context windows,\nand challenges in processing heterogeneous data formats. Conventional\nRetrieval-Augmented Generation (RAG) frameworks address some of these gaps but\noften struggle with structured and semi-structured data.\n  This work proposes an advanced RAG framework that combines hybrid retrieval\nstrategies using dense embeddings (all-mpnet-base-v2) and BM25, enhanced by\nmetadata-aware filtering with SpaCy NER and cross-encoder reranking. The\nframework applies semantic chunking to maintain textual coherence and retains\ntabular data structures to preserve row-column integrity. Quantized indexing\noptimizes retrieval efficiency, while human-in-the-loop feedback and\nconversation memory improve adaptability.\n  Experiments on enterprise datasets show notable improvements: Precision@5\nincreased by 15 percent (90 versus 75), Recall@5 by 13 percent (87 versus 74),\nand Mean Reciprocal Rank by 16 percent (0.85 versus 0.69). Qualitative\nevaluations show higher scores in Faithfulness (4.6 versus 3.0), Completeness\n(4.2 versus 2.5), and Relevance (4.5 versus 3.2) on a 5-point Likert scale.\nThese results demonstrate the framework's effectiveness in delivering accurate,\ncomprehensive, and contextually relevant responses for enterprise tasks. Future\nwork includes extending to multimodal data and integrating agent-based\nretrieval. The source code will be released at\nhttps://github.com/CheerlaChandana/Enterprise-Chatbot",
+    "code_links": [
+      "https://github.com/CheerlaChandana/Enterprise-Chatbot"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DyG-RAG: Dynamic Graph Retrieval-Augmented Generation with Event-Centric Reasoning",
+    "authors": "Qingyun Sun, Jiaqi Yuan, Shan He, Xiao Guan, Haonan Yuan, Xingcheng Fu, Jianxin Li, Philip S. Yu",
+    "published": "2025-07-16",
+    "arxiv_id": "2507.13396v1",
+    "url": "http://arxiv.org/abs/2507.13396v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.13396v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Graph Retrieval-Augmented Generation has emerged as a powerful paradigm for\ngrounding large language models with external structured knowledge. However,\nexisting Graph RAG methods struggle with temporal reasoning, due to their\ninability to model the evolving structure and order of real-world events. In\nthis work, we introduce DyG-RAG, a novel event-centric dynamic graph\nretrieval-augmented generation framework designed to capture and reason over\ntemporal knowledge embedded in unstructured text. To eliminate temporal\nambiguity in traditional retrieval units, DyG-RAG proposes Dynamic Event Units\n(DEUs) that explicitly encode both semantic content and precise temporal\nanchors, enabling accurate and interpretable time-aware retrieval. To capture\ntemporal and causal dependencies across events, DyG-RAG constructs an event\ngraph by linking DEUs that share entities and occur close in time, supporting\nefficient and meaningful multi-hop reasoning. To ensure temporally consistent\ngeneration, DyG-RAG introduces an event timeline retrieval pipeline that\nretrieves event sequences via time-aware traversal, and proposes a Time\nChain-of-Thought strategy for temporally grounded answer generation. This\nunified pipeline enables DyG-RAG to retrieve coherent, temporally ordered event\nsequences and to answer complex, time-sensitive queries that standard RAG\nsystems cannot resolve. Extensive experiments on temporal QA benchmarks\ndemonstrate that DyG-RAG significantly improves the accuracy and recall of\nthree typical types of temporal reasoning questions, paving the way for more\nfaithful and temporal-aware generation. DyG-RAG is available at\nhttps://github.com/RingBDStack/DyG-RAG.",
+    "code_links": [
+      "https://github.com/RingBDStack/DyG-RAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Non-parametric Graph Convolution for Re-ranking in Recommendation Systems",
+    "authors": "Zhongyu Ouyang, Mingxuan Ju, Soroush Vosoughi, Yanfang Ye",
+    "published": "2025-07-14",
+    "arxiv_id": "2507.09969v1",
+    "url": "http://arxiv.org/abs/2507.09969v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.09969v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Graph knowledge has been proven effective in enhancing item rankings in\nrecommender systems (RecSys), particularly during the retrieval stage. However,\nits application in the ranking stage, especially when richer contextual\ninformation in user-item interactions is available, remains underexplored. A\nmajor challenge lies in the substantial computational cost associated with\nrepeatedly retrieving neighborhood information from billions of items stored in\ndistributed systems. This resource-intensive requirement makes it difficult to\nscale graph-based methods in practical RecSys. To bridge this gap, we first\ndemonstrate that incorporating graphs in the ranking stage improves ranking\nqualities. Notably, while the improvement is evident, we show that the\nsubstantial computational overheads entailed by graphs are prohibitively\nexpensive for real-world recommendations. In light of this, we propose a\nnon-parametric strategy that utilizes graph convolution for re-ranking only\nduring test time. Our strategy circumvents the notorious computational\noverheads from graph convolution during training, and utilizes structural\nknowledge hidden in graphs on-the-fly during testing. It can be used as a\nplug-and-play module and easily employed to enhance the ranking ability of\nvarious ranking layers of a real-world RecSys with significantly reduced\ncomputational overhead. Through comprehensive experiments across four benchmark\ndatasets with varying levels of sparsity, we demonstrate that our strategy\nyields noticeable improvements (i.e., 8.1% on average) during testing time with\nlittle to no additional computational overheads (i.e., 0.5 on average). Code:\nhttps://github.com/zyouyang/RecSys2025_NonParamGC.git",
+    "code_links": [
+      "https://github.com/zyouyang/RecSys2025_NonParamGC"
+    ],
+    "comment": "Accepted to RecSys2025 Main"
+  },
+  {
+    "title": "Generative Cognitive Diagnosis",
+    "authors": "Jiatong Li, Qi Liu, Mengxiao Zhu",
+    "published": "2025-07-13",
+    "arxiv_id": "2507.09831v1",
+    "url": "http://arxiv.org/abs/2507.09831v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.09831v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Cognitive diagnosis (CD) models latent cognitive states of human learners by\nanalyzing their response patterns on diagnostic tests, serving as a crucial\nmachine learning technique for educational assessment and evaluation.\nTraditional cognitive diagnosis models typically follow a transductive\nprediction paradigm that optimizes parameters to fit response scores and\nextract learner abilities. These approaches face significant limitations as\nthey cannot perform instant diagnosis for new learners without computationally\nexpensive retraining and produce diagnostic outputs with limited reliability.\nIn this study, we introduces a novel generative diagnosis paradigm that\nfundamentally shifts CD from predictive to generative modeling, enabling\ninductive inference of cognitive states without parameter re-optimization. We\npropose two simple yet effective instantiations of this paradigm: Generative\nItem Response Theory (G-IRT) and Generative Neural Cognitive Diagnosis Model\n(G-NCDM), which achieve excellent performance improvements over traditional\nmethods. The generative approach disentangles cognitive state inference from\nresponse prediction through a well-designed generation process that\nincorporates identifiability and monotonicity conditions. Extensive experiments\non real-world datasets demonstrate the effectiveness of our methodology in\naddressing scalability and reliability challenges, especially $\\times 100$\nspeedup for the diagnosis of new learners. Our framework opens new avenues for\ncognitive diagnosis applications in artificial intelligence, particularly for\nintelligent model evaluation and intelligent education systems. The code is\navailable at https://github.com/CSLiJT/Generative-CD.git.",
+    "code_links": [
+      "https://github.com/CSLiJT/Generative-CD"
+    ],
+    "comment": "Preprint; 15 pages, 12 figures"
+  },
+  {
+    "title": "Ambiguity-Aware and High-Order Relation Learning for Multi-Grained Image-Text Matching",
+    "authors": "Junyu Chen, Yihua Gao, Mingyuan Ge, Mingyong Li",
+    "published": "2025-07-12",
+    "arxiv_id": "2507.09256v1",
+    "url": "http://arxiv.org/abs/2507.09256v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.09256v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Image-text matching is crucial for bridging the semantic gap between computer\nvision and natural language processing. However, existing methods still face\nchallenges in handling high-order associations and semantic ambiguities among\nsimilar instances. These ambiguities arise from subtle differences between soft\npositive samples (semantically similar but incorrectly labeled) and soft\nnegative samples (locally matched but globally inconsistent), creating matching\nuncertainties. Furthermore, current methods fail to fully utilize the\nneighborhood relationships among semantically similar instances within training\nbatches, limiting the model's ability to learn high-order shared knowledge.\nThis paper proposes the Ambiguity-Aware and High-order Relation learning\nframework (AAHR) to address these issues. AAHR constructs a unified\nrepresentation space through dynamic clustering prototype contrastive learning,\neffectively mitigating the soft positive sample problem. The framework\nintroduces global and local feature extraction mechanisms and an adaptive\naggregation network, significantly enhancing full-grained semantic\nunderstanding capabilities. Additionally, AAHR employs intra-modal and\ninter-modal correlation matrices to investigate neighborhood relationships\namong sample instances thoroughly. It incorporates GNN to enhance semantic\ninteractions between instances. Furthermore, AAHR integrates momentum\ncontrastive learning to expand the negative sample set. These combined\nstrategies significantly improve the model's ability to discriminate between\nfeatures. Experimental results demonstrate that AAHR outperforms existing\nstate-of-the-art methods on Flickr30K, MSCOCO, and ECCV Caption datasets,\nconsiderably improving the accuracy and efficiency of image-text matching. The\ncode and model checkpoints for this research are available at\nhttps://github.com/Image-Text-Matching/AAHR .",
+    "code_links": [
+      "https://github.com/Image-Text-Matching/AAHR"
+    ],
+    "comment": "Accepted by the Knowledge-Based Systems(KBS), 2025"
+  },
+  {
+    "title": "DS@GT at Touché: Large Language Models for Retrieval-Augmented Debate",
+    "authors": "Anthony Miyaguchi, Conor Johnston, Aaryan Potdar",
+    "published": "2025-07-12",
+    "arxiv_id": "2507.09090v1",
+    "url": "http://arxiv.org/abs/2507.09090v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.09090v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models (LLMs) demonstrate strong conversational abilities. In\nthis Working Paper, we study them in the context of debating in two ways: their\nability to perform in a structured debate along with a dataset of arguments to\nuse and their ability to evaluate utterances throughout the debate. We deploy\nsix leading publicly available models from three providers for the\nRetrieval-Augmented Debate and Evaluation. The evaluation is performed by\nmeasuring four key metrics: Quality, Quantity, Manner, and Relation. Throughout\nthis task, we found that although LLMs perform well in debates when given\nrelated arguments, they tend to be verbose in responses yet consistent in\nevaluation. The accompanying source code for this paper is located at\nhttps://github.com/dsgt-arc/touche-2025-rad.",
+    "code_links": [
+      "https://github.com/dsgt-arc/touche-2025-rad"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DS@GT at LongEval: Evaluating Temporal Performance in Web Search Systems and Topics with Two-Stage Retrieval",
+    "authors": "Anthony Miyaguchi, Imran Afrulbasha, Aleksandar Pramov",
+    "published": "2025-07-11",
+    "arxiv_id": "2507.08360v1",
+    "url": "http://arxiv.org/abs/2507.08360v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.08360v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Information Retrieval (IR) models are often trained on static datasets,\nmaking them vulnerable to performance degradation as web content evolves. The\nDS@GT competition team participated in the Longitudinal Evaluation of Model\nPerformance (LongEval) lab at CLEF 2025, which evaluates IR systems across\ntemporally distributed web snapshots. Our analysis of the Qwant web dataset\nincludes exploratory data analysis with topic modeling over time. The two-phase\nretrieval system employs sparse keyword searches, utilizing query expansion and\ndocument reranking. Our best system achieves an average NDCG@10 of 0.296 across\nthe entire training and test dataset, with an overall best score of 0.395 on\n2023-05. The accompanying source code for this paper is at\nhttps://github.com/dsgt-arc/longeval-2025",
+    "code_links": [
+      "https://github.com/dsgt-arc/longeval-2025"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Transfer Learning and Mixup for Fine-Grained Few-Shot Fungi Classification",
+    "authors": "Jason Kahei Tam, Murilo Gustineli, Anthony Miyaguchi",
+    "published": "2025-07-11",
+    "arxiv_id": "2507.08248v1",
+    "url": "http://arxiv.org/abs/2507.08248v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.08248v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Accurate identification of fungi species presents a unique challenge in\ncomputer vision due to fine-grained inter-species variation and high\nintra-species variation. This paper presents our approach for the FungiCLEF\n2025 competition, which focuses on few-shot fine-grained visual categorization\n(FGVC) using the FungiTastic Few-Shot dataset. Our team (DS@GT) experimented\nwith multiple vision transformer models, data augmentation, weighted sampling,\nand incorporating textual information. We also explored generative AI models\nfor zero-shot classification using structured prompting but found them to\nsignificantly underperform relative to vision-based models. Our final model\noutperformed both competition baselines and highlighted the effectiveness of\ndomain specific pretraining and balanced sampling strategies. Our approach\nranked 35/74 on the private test set in post-completion evaluation, this\nsuggests additional work can be done on metadata selection and domain-adapted\nmulti-modal learning. Our code is available at\nhttps://github.com/dsgt-arc/fungiclef-2025.",
+    "code_links": [
+      "https://github.com/dsgt-arc/fungiclef-2025"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Graph-Structured Data Analysis of Component Failure in Autonomous Cargo Ships Based on Feature Fusion",
+    "authors": "Zizhao Zhang, Tianxiang Zhao, Yu Sun, Liping Sun, Jichuan Kang",
+    "published": "2025-07-18",
+    "arxiv_id": "2507.13721v1",
+    "url": "http://arxiv.org/abs/2507.13721v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.13721v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "To address the challenges posed by cascading reactions caused by component\nfailures in autonomous cargo ships (ACS) and the uncertainties in emergency\ndecision-making, this paper proposes a novel hybrid feature fusion framework\nfor constructing a graph-structured dataset of failure modes. By employing an\nimproved cuckoo search algorithm (HN-CSA), the literature retrieval efficiency\nis significantly enhanced, achieving improvements of 7.1% and 3.4% compared to\nthe NSGA-II and CSA search algorithms, respectively. A hierarchical feature\nfusion framework is constructed, using Word2Vec encoding to encode\nsubsystem/component features, BERT-KPCA to process failure modes/reasons, and\nSentence-BERT to quantify the semantic association between failure impact and\nemergency decision-making. The dataset covers 12 systems, 1,262 failure modes,\nand 6,150 propagation paths. Validation results show that the GATE-GNN model\nachieves a classification accuracy of 0.735, comparable to existing benchmarks.\nAdditionally, a silhouette coefficient of 0.641 indicates that the features are\nhighly distinguishable. In the label prediction results, the Shore-based\nMeteorological Service System achieved an F1 score of 0.93, demonstrating high\nprediction accuracy. This paper not only provides a solid foundation for\nfailure analysis in autonomous cargo ships but also offers reliable support for\nfault diagnosis, risk assessment, and intelligent decision-making systems. The\nlink to the dataset is\nhttps://github.com/wojiufukele/Graph-Structured-about-CSA.",
+    "code_links": [
+      "https://github.com/wojiufukele/Graph-Structured-about-CSA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "TOPJoin: A Context-Aware Multi-Criteria Approach for Joinable Column Search",
+    "authors": "Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas",
+    "published": "2025-07-15",
+    "arxiv_id": "2507.11505v1",
+    "url": "http://arxiv.org/abs/2507.11505v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.11505v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "One of the major challenges in enterprise data analysis is the task of\nfinding joinable tables that are conceptually related and provide meaningful\ninsights. Traditionally, joinable tables have been discovered through a search\nfor similar columns, where two columns are considered similar syntactically if\nthere is a set overlap or they are considered similar semantically if either\nthe column embeddings or value embeddings are closer in the embedding space.\nHowever, for enterprise data lakes, column similarity is not sufficient to\nidentify joinable columns and tables. The context of the query column is\nimportant. Hence, in this work, we first define context-aware column\njoinability. Then we propose a multi-criteria approach, called TOPJoin, for\njoinable column search. We evaluate TOPJoin against existing join search\nbaselines over one academic and one real-world join search benchmark. Through\nexperiments, we find that TOPJoin performs better on both benchmarks than the\nbaselines.",
+    "code_links": [
+      "https://github.com/IBM/ContextAwareJoin"
+    ],
+    "comment": "VLDB 2025 Workshop: Tabular Data Analysis (TaDA); The source code,\n  data, and/or other artifacts have been made available at\n  https://github.com/IBM/ContextAwareJoin"
+  }
+]
