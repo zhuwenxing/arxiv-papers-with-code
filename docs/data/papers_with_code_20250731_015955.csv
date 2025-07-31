@@ -1,0 +1,388 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+StructText: A Synthetic Table-to-Text Approach for Benchmark Generation with Multi-Dimensional Evaluation,"Satyananda Kashyap, Sola Shirai, Nandana Mihindukulasooriya, Horst Samulowitz",2025-07-28,2507.21340v1,http://arxiv.org/abs/2507.21340v1,http://arxiv.org/pdf/2507.21340v1,information_retrieval,cs.CL,"Extracting structured information from text, such as key-value pairs that
+could augment tabular data, is quite useful in many enterprise use cases.
+Although large language models (LLMs) have enabled numerous automated pipelines
+for converting natural language into structured formats, there is still a lack
+of benchmarks for evaluating their extraction quality, especially in specific
+domains or focused documents specific to a given organization. Building such
+benchmarks by manual annotations is labour-intensive and limits the size and
+scalability of the benchmarks. In this work, we present StructText, an
+end-to-end framework for automatically generating high-fidelity benchmarks for
+key-value extraction from text using existing tabular data. It uses available
+tabular data as structured ground truth, and follows a two-stage
+``plan-then-execute'' pipeline to synthetically generate corresponding
+natural-language text. To ensure alignment between text and structured source,
+we introduce a multi-dimensional evaluation strategy that combines (a)
+LLM-based judgments on factuality, hallucination, and coherence and (b)
+objective extraction metrics measuring numeric and temporal accuracy. We
+evaluated the proposed method on 71,539 examples across 49 datasets. Results
+reveal that while LLMs achieve strong factual accuracy and avoid hallucination,
+they struggle with narrative coherence in producing extractable text. Notably,
+models presume numerical and temporal information with high fidelity yet this
+information becomes embedded in narratives that resist automated extraction. We
+release a framework, including datasets, evaluation tools, and baseline
+extraction systems, to support continued research.",https://github.com/ibm/struct-text,"Data available:
+  https://huggingface.co/datasets/ibm-research/struct-text and code available
+  at: https://github.com/ibm/struct-text"
+ZSE-Cap: A Zero-Shot Ensemble for Image Retrieval and Prompt-Guided Captioning,"Duc-Tai Dinh, Duc Anh Khoa Dinh",2025-07-28,2507.20564v1,http://arxiv.org/abs/2507.20564v1,http://arxiv.org/pdf/2507.20564v1,information_retrieval,cs.CL,"We present ZSE-Cap (Zero-Shot Ensemble for Captioning), our 4th place system
+in Event-Enriched Image Analysis (EVENTA) shared task on article-grounded image
+retrieval and captioning. Our zero-shot approach requires no finetuning on the
+competition's data. For retrieval, we ensemble similarity scores from CLIP,
+SigLIP, and DINOv2. For captioning, we leverage a carefully engineered prompt
+to guide the Gemma 3 model, enabling it to link high-level events from the
+article to the visual content in the image. Our system achieved a final score
+of 0.42002, securing a top-4 position on the private test set, demonstrating
+the effectiveness of combining foundation models through ensembling and
+prompting. Our code is available at https://github.com/ductai05/ZSE-Cap.",https://github.com/ductai05/ZSE-Cap,
+Multi-Stage Verification-Centric Framework for Mitigating Hallucination in Multi-Modal RAG,"Baiyu Chen, Wilson Wongso, Xiaoqian Hu, Yue Tan, Flora Salim",2025-07-27,2507.20136v1,http://arxiv.org/abs/2507.20136v1,http://arxiv.org/pdf/2507.20136v1,information_retrieval,cs.CL,"This paper presents the technical solution developed by team CRUISE for the
+KDD Cup 2025 Meta Comprehensive RAG Benchmark for Multi-modal, Multi-turn
+(CRAG-MM) challenge. The challenge aims to address a critical limitation of
+modern Vision Language Models (VLMs): their propensity to hallucinate,
+especially when faced with egocentric imagery, long-tail entities, and complex,
+multi-hop questions. This issue is particularly problematic in real-world
+applications where users pose fact-seeking queries that demand high factual
+accuracy across diverse modalities. To tackle this, we propose a robust,
+multi-stage framework that prioritizes factual accuracy and truthfulness over
+completeness. Our solution integrates a lightweight query router for
+efficiency, a query-aware retrieval and summarization pipeline, a dual-pathways
+generation and a post-hoc verification. This conservative strategy is designed
+to minimize hallucinations, which incur a severe penalty in the competition's
+scoring metric. Our approach achieved 3rd place in Task 1, demonstrating the
+effectiveness of prioritizing answer reliability in complex multi-modal RAG
+systems. Our implementation is available at
+https://github.com/Breezelled/KDD-Cup-2025-Meta-CRAG-MM .",https://github.com/Breezelled/KDD-Cup-2025-Meta-CRAG-MM,KDD Cup 2025 Meta CRAG-MM Challenge
+Injecting External Knowledge into the Reasoning Process Enhances Retrieval-Augmented Generation,"Minghao Tang, Shiyu Ni, Jiafeng Guo, Keping Bi",2025-07-25,2507.19333v1,http://arxiv.org/abs/2507.19333v1,http://arxiv.org/pdf/2507.19333v1,information_retrieval,cs.IR,"Retrieval-augmented generation (RAG) has been widely adopted to augment large
+language models (LLMs) with external knowledge for knowledge-intensive tasks.
+However, its effectiveness is often undermined by the presence of noisy (i.e.,
+low-quality) retrieved passages. Enhancing LLMs' robustness to such noise is
+critical for improving the reliability of RAG systems. Recent advances have
+equipped LLMs with strong reasoning and self-reflection capabilities, allowing
+them to identify and correct errors in their reasoning process. Inspired by
+this ability, we propose Passage Injection-a simple yet effective method that
+explicitly incorporates retrieved passages into LLMs' reasoning process, aiming
+to enhance the model's ability to recognize and resist noisy passages. We
+validate Passage Injection under general RAG settings using BM25 as the
+retriever. Experiments on four reasoning-enhanced LLMs across four factual QA
+datasets demonstrate that Passage Injection significantly improves overall RAG
+performance. Further analysis on two noisy retrieval settings-random noise,
+where the model is provided irrelevant passages, and counterfactual noise,
+where it is given misleading passages-shows that Passage Injection consistently
+improves robustness. Controlled experiments confirm that Passage Injection can
+also effectively leverage helpful passages. These findings suggest that
+incorporating passages in LLMs' reasoning process is a promising direction for
+building more robust RAG systems. The code can be found
+\href{here}{https://github.com/mh-tang/Passage-Injection}.",https://github.com/mh-tang/Passage-Injection,
+Use as Directed? A Comparison of Software Tools Intended to Check Rigor and Transparency of Published Work,"Peter Eckmann, Adrian Barnett, Alexandra Bannach-Brown, Elisa Pilar Bascunan Atria, Guillaume Cabanac, Louise Delwen Owen Franzen, Małgorzata Anna Gazda, Kaitlyn Hair, James Howison, Halil Kilicoglu, Cyril Labbe, Sarah McCann, Vladislav Nachev, Martijn Roelandse, Maia Salholz-Hillel, Robert Schulz, Gerben ter Riet, Colby Vorland, Anita Bandrowski, Tracey Weissgerber",2025-07-23,2507.17991v1,http://arxiv.org/abs/2507.17991v1,http://arxiv.org/pdf/2507.17991v1,information_retrieval,cs.SE,"The causes of the reproducibility crisis include lack of standardization and
+transparency in scientific reporting. Checklists such as ARRIVE and CONSORT
+seek to improve transparency, but they are not always followed by authors and
+peer review often fails to identify missing items. To address these issues,
+there are several automated tools that have been designed to check different
+rigor criteria. We have conducted a broad comparison of 11 automated tools
+across 9 different rigor criteria from the ScreenIT group. We found some
+criteria, including detecting open data, where the combination of tools showed
+a clear winner, a tool which performed much better than other tools. In other
+cases, including detection of inclusion and exclusion criteria, the combination
+of tools exceeded the performance of any one tool. We also identified key areas
+where tool developers should focus their effort to make their tool maximally
+useful. We conclude with a set of insights and recommendations for stakeholders
+in the development of rigor and transparency detection tools. The code and data
+for the study is available at https://github.com/PeterEckmann1/tool-comparison.",https://github.com/PeterEckmann1/tool-comparison,
+Leave No One Behind: Fairness-Aware Cross-Domain Recommender Systems for Non-Overlapping Users,"Weixin Chen, Yuhan Zhao, Li Chen, Weike Pan",2025-07-23,2507.17749v1,http://arxiv.org/abs/2507.17749v1,http://arxiv.org/pdf/2507.17749v1,information_retrieval,cs.IR,"Cross-domain recommendation (CDR) methods predominantly leverage overlapping
+users to transfer knowledge from a source domain to a target domain. However,
+through empirical studies, we uncover a critical bias inherent in these
+approaches: while overlapping users experience significant enhancements in
+recommendation quality, non-overlapping users benefit minimally and even face
+performance degradation. This unfairness may erode user trust, and,
+consequently, negatively impact business engagement and revenue. To address
+this issue, we propose a novel solution that generates virtual source-domain
+users for non-overlapping target-domain users. Our method utilizes a dual
+attention mechanism to discern similarities between overlapping and
+non-overlapping users, thereby synthesizing realistic virtual user embeddings.
+We further introduce a limiter component that ensures the generated virtual
+users align with real-data distributions while preserving each user's unique
+characteristics. Notably, our method is model-agnostic and can be seamlessly
+integrated into any CDR model. Comprehensive experiments conducted on three
+public datasets with five CDR baselines demonstrate that our method effectively
+mitigates the CDR non-overlapping user bias, without loss of overall accuracy.
+Our code is publicly available at https://github.com/WeixinChen98/VUG.",https://github.com/WeixinChen98/VUG,Accepted by RecSys 2025
+BGM-HAN: A Hierarchical Attention Network for Accurate and Fair Decision Assessment on Semi-Structured Profiles,"Junhua Liu, Roy Ka-Wei Lee, Kwan Hui Lim",2025-07-23,2507.17472v1,http://arxiv.org/abs/2507.17472v1,http://arxiv.org/pdf/2507.17472v1,information_retrieval,cs.LG,"Human decision-making in high-stakes domains often relies on expertise and
+heuristics, but is vulnerable to hard-to-detect cognitive biases that threaten
+fairness and long-term outcomes. This work presents a novel approach to
+enhancing complex decision-making workflows through the integration of
+hierarchical learning alongside various enhancements. Focusing on university
+admissions as a representative high-stakes domain, we propose BGM-HAN, an
+enhanced Byte-Pair Encoded, Gated Multi-head Hierarchical Attention Network,
+designed to effectively model semi-structured applicant data. BGM-HAN captures
+multi-level representations that are crucial for nuanced assessment, improving
+both interpretability and predictive performance. Experimental results on real
+admissions data demonstrate that our proposed model significantly outperforms
+both state-of-the-art baselines from traditional machine learning to large
+language models, offering a promising framework for augmenting decision-making
+in domains where structure, context, and fairness matter. Source code is
+available at: https://github.com/junhua/bgm-han.",https://github.com/junhua/bgm-han,Accepted at ASONAM 2025
+HLFormer: Enhancing Partially Relevant Video Retrieval with Hyperbolic Learning,"Jun Li, Jinpeng Wang, Chaolei Tan, Niu Lian, Long Chen, Yaowei Wang, Min Zhang, Shu-Tao Xia, Bin Chen",2025-07-23,2507.17402v2,http://arxiv.org/abs/2507.17402v2,http://arxiv.org/pdf/2507.17402v2,information_retrieval,cs.CV,"Partially Relevant Video Retrieval (PRVR) addresses the critical challenge of
+matching untrimmed videos with text queries describing only partial content.
+Existing methods suffer from geometric distortion in Euclidean space that
+sometimes misrepresents the intrinsic hierarchical structure of videos and
+overlooks certain hierarchical semantics, ultimately leading to suboptimal
+temporal modeling. To address this issue, we propose the first hyperbolic
+modeling framework for PRVR, namely HLFormer, which leverages hyperbolic space
+learning to compensate for the suboptimal hierarchical modeling capabilities of
+Euclidean space. Specifically, HLFormer integrates the Lorentz Attention Block
+and Euclidean Attention Block to encode video embeddings in hybrid spaces,
+using the Mean-Guided Adaptive Interaction Module to dynamically fuse features.
+Additionally, we introduce a Partial Order Preservation Loss to enforce ""text <
+video"" hierarchy through Lorentzian cone constraints. This approach further
+enhances cross-modal matching by reinforcing partial relevance between video
+content and text queries. Extensive experiments show that HLFormer outperforms
+state-of-the-art methods. Code is released at
+https://github.com/lijun2005/ICCV25-HLFormer.",https://github.com/lijun2005/ICCV25-HLFormer,"Accepted by ICCV'25. 13 pages, 6 figures, 4 tables"
+EndoFinder: Online Lesion Retrieval for Explainable Colorectal Polyp Diagnosis Leveraging Latent Scene Representations,"Ruijie Yang, Yan Zhu, Peiyao Fu, Yizhe Zhang, Zhihua Wang, Quanlin Li, Pinghong Zhou, Xian Yang, Shuo Wang",2025-07-23,2507.17323v1,http://arxiv.org/abs/2507.17323v1,http://arxiv.org/pdf/2507.17323v1,information_retrieval,cs.IR,"Colorectal cancer (CRC) remains a leading cause of cancer-related mortality,
+underscoring the importance of timely polyp detection and diagnosis. While deep
+learning models have improved optical-assisted diagnostics, they often demand
+extensive labeled datasets and yield ""black-box"" outputs with limited
+interpretability. In this paper, we propose EndoFinder, an online polyp
+retrieval framework that leverages multi-view scene representations for
+explainable and scalable CRC diagnosis. First, we develop a Polyp-aware Image
+Encoder by combining contrastive learning and a reconstruction task, guided by
+polyp segmentation masks. This self-supervised approach captures robust
+features without relying on large-scale annotated data. Next, we treat each
+polyp as a three-dimensional ""scene"" and introduce a Scene Representation
+Transformer, which fuses multiple views of the polyp into a single latent
+representation. By discretizing this representation through a hashing layer,
+EndoFinder enables real-time retrieval from a compiled database of historical
+polyp cases, where diagnostic information serves as interpretable references
+for new queries. We evaluate EndoFinder on both public and newly collected
+polyp datasets for re-identification and pathology classification. Results show
+that EndoFinder outperforms existing methods in accuracy while providing
+transparent, retrieval-based insights for clinical decision-making. By
+contributing a novel dataset and a scalable, explainable framework, our work
+addresses key challenges in polyp diagnosis and offers a promising direction
+for more efficient AI-driven colonoscopy workflows. The source code is
+available at https://github.com/ku262/EndoFinder-Scene.",https://github.com/ku262/EndoFinder-Scene,
+RAVine: Reality-Aligned Evaluation for Agentic Search,"Yilong Xu, Xiang Long, Zhi Zheng, Jinhua Gao",2025-07-22,2507.16725v1,http://arxiv.org/abs/2507.16725v1,http://arxiv.org/pdf/2507.16725v1,information_retrieval,cs.CL,"Agentic search, as a more autonomous and adaptive paradigm of retrieval
+augmentation, is driving the evolution of intelligent search systems. However,
+existing evaluation frameworks fail to align well with the goals of agentic
+search. First, the complex queries commonly used in current benchmarks often
+deviate from realistic user search scenarios. Second, prior approaches tend to
+introduce noise when extracting ground truth for end-to-end evaluations,
+leading to distorted assessments at a fine-grained level. Third, most current
+frameworks focus solely on the quality of final answers, neglecting the
+evaluation of the iterative process inherent to agentic search. To address
+these limitations, we propose RAVine -- a Reality-Aligned eValuation framework
+for agentic LLMs with search. RAVine targets multi-point queries and long-form
+answers that better reflect user intents, and introduces an attributable ground
+truth construction strategy to enhance the accuracy of fine-grained evaluation.
+Moreover, RAVine examines model's interaction with search tools throughout the
+iterative process, and accounts for factors of efficiency. We benchmark a
+series of models using RAVine and derive several insights, which we hope will
+contribute to advancing the development of agentic search systems. The code and
+datasets are available at https://github.com/SwordFaith/RAVine.",https://github.com/SwordFaith/RAVine,
+Knowledge-aware Diffusion-Enhanced Multimedia Recommendation,"Xian Mo, Fei Liu, Rui Tang, Jintao, Gao, Hao Liu",2025-07-22,2507.16396v1,http://arxiv.org/abs/2507.16396v1,http://arxiv.org/pdf/2507.16396v1,information_retrieval,cs.MM,"Multimedia recommendations aim to use rich multimedia content to enhance
+historical user-item interaction information, which can not only indicate the
+content relatedness among items but also reveal finer-grained preferences of
+users. In this paper, we propose a Knowledge-aware Diffusion-Enhanced
+architecture using contrastive learning paradigms (KDiffE) for multimedia
+recommendations. Specifically, we first utilize original user-item graphs to
+build an attention-aware matrix into graph neural networks, which can learn the
+importance between users and items for main view construction. The
+attention-aware matrix is constructed by adopting a random walk with a restart
+strategy, which can preserve the importance between users and items to generate
+aggregation of attention-aware node features. Then, we propose a guided
+diffusion model to generate strongly task-relevant knowledge graphs with less
+noise for constructing a knowledge-aware contrastive view, which utilizes user
+embeddings with an edge connected to an item to guide the generation of
+strongly task-relevant knowledge graphs for enhancing the item's semantic
+information. We perform comprehensive experiments on three multimedia datasets
+that reveal the effectiveness of our KDiffE and its components on various
+state-of-the-art methods. Our source codes are available
+https://github.com/1453216158/KDiffE.",https://github.com/1453216158/KDiffE,
+Time to Split: Exploring Data Splitting Strategies for Offline Evaluation of Sequential Recommenders,"Danil Gusak, Anna Volodkevich, Anton Klenitskiy, Alexey Vasilev, Evgeny Frolov",2025-07-22,2507.16289v1,http://arxiv.org/abs/2507.16289v1,http://arxiv.org/pdf/2507.16289v1,information_retrieval,cs.IR,"Modern sequential recommender systems, ranging from lightweight
+transformer-based variants to large language models, have become increasingly
+prominent in academia and industry due to their strong performance in the
+next-item prediction task. Yet common evaluation protocols for sequential
+recommendations remain insufficiently developed: they often fail to reflect the
+corresponding recommendation task accurately, or are not aligned with
+real-world scenarios.
+  Although the widely used leave-one-out split matches next-item prediction, it
+permits the overlap between training and test periods, which leads to temporal
+leakage and unrealistically long test horizon, limiting real-world relevance.
+Global temporal splitting addresses these issues by evaluating on distinct
+future periods. However, its applications to sequential recommendations remain
+loosely defined, particularly in terms of selecting target interactions and
+constructing a validation subset that provides necessary consistency between
+validation and test metrics.
+  In this paper, we demonstrate that evaluation outcomes can vary significantly
+across splitting strategies, influencing model rankings and practical
+deployment decisions. To improve reproducibility in both academic and
+industrial settings, we systematically compare different splitting strategies
+for sequential recommendations across multiple datasets and established
+baselines. Our findings show that prevalent splits, such as leave-one-out, may
+be insufficiently aligned with more realistic evaluation strategies. Code:
+https://github.com/monkey0head/time-to-split",https://github.com/monkey0head/time-to-split,"Accepted for ACM RecSys 2025. Author's version. The final published
+  version will be available at the ACM Digital Library"
+Hierarchical Graph Information Bottleneck for Multi-Behavior Recommendation,"Hengyu Zhang, Chunxu Shen, Xiangguo Sun, Jie Tan, Yanchao Tan, Yu Rong, Hong Cheng, Lingling Yi",2025-07-21,2507.15395v1,http://arxiv.org/abs/2507.15395v1,http://arxiv.org/pdf/2507.15395v1,information_retrieval,cs.IR,"In real-world recommendation scenarios, users typically engage with platforms
+through multiple types of behavioral interactions. Multi-behavior
+recommendation algorithms aim to leverage various auxiliary user behaviors to
+enhance prediction for target behaviors of primary interest (e.g., buy),
+thereby overcoming performance limitations caused by data sparsity in target
+behavior records. Current state-of-the-art approaches typically employ
+hierarchical design following either cascading (e.g.,
+view$\rightarrow$cart$\rightarrow$buy) or parallel
+(unified$\rightarrow$behavior$\rightarrow$specific components) paradigms, to
+capture behavioral relationships. However, these methods still face two
+critical challenges: (1) severe distribution disparities across behaviors, and
+(2) negative transfer effects caused by noise in auxiliary behaviors. In this
+paper, we propose a novel model-agnostic Hierarchical Graph Information
+Bottleneck (HGIB) framework for multi-behavior recommendation to effectively
+address these challenges. Following information bottleneck principles, our
+framework optimizes the learning of compact yet sufficient representations that
+preserve essential information for target behavior prediction while eliminating
+task-irrelevant redundancies. To further mitigate interaction noise, we
+introduce a Graph Refinement Encoder (GRE) that dynamically prunes redundant
+edges through learnable edge dropout mechanisms. We conduct comprehensive
+experiments on three real-world public datasets, which demonstrate the superior
+effectiveness of our framework. Beyond these widely used datasets in the
+academic community, we further expand our evaluation on several real industrial
+scenarios and conduct an online A/B testing, showing again a significant
+improvement in multi-behavior recommendations. The source code of our proposed
+HGIB is available at https://github.com/zhy99426/HGIB.",https://github.com/zhy99426/HGIB,Accepted by RecSys2025
+SPAR: Scholar Paper Retrieval with LLM-based Agents for Enhanced Academic Search,"Xiaofeng Shi, Yuduo Li, Qian Kou, Longbin Yu, Jinxin Xie, Hua Zhou",2025-07-21,2507.15245v1,http://arxiv.org/abs/2507.15245v1,http://arxiv.org/pdf/2507.15245v1,information_retrieval,cs.IR,"Recent advances in large language models (LLMs) have opened new opportunities
+for academic literature retrieval. However, existing systems often rely on
+rigid pipelines and exhibit limited reasoning capabilities. We introduce SPAR,
+a multi-agent framework that incorporates RefChain-based query decomposition
+and query evolution to enable more flexible and effective search. To facilitate
+systematic evaluation, we also construct SPARBench, a challenging benchmark
+with expert-annotated relevance labels. Experimental results demonstrate that
+SPAR substantially outperforms strong baselines, achieving up to +56% F1 on
+AutoScholar and +23% F1 on SPARBench over the best-performing baseline.
+Together, SPAR and SPARBench provide a scalable, interpretable, and
+high-performing foundation for advancing research in scholarly retrieval. Code
+and data will be available at: https://github.com/xiaofengShi/SPAR",https://github.com/xiaofengShi/SPAR,
+U-MARVEL: Unveiling Key Factors for Universal Multimodal Retrieval via Embedding Learning with MLLMs,"Xiaojie Li, Chu Li, Shi-Zhe Chen, Xi Chen",2025-07-20,2507.14902v1,http://arxiv.org/abs/2507.14902v1,http://arxiv.org/pdf/2507.14902v1,information_retrieval,cs.IR,"Universal multimodal retrieval (UMR), which aims to address complex retrieval
+tasks where both queries and candidates span diverse modalities, has been
+significantly advanced by the emergence of MLLMs. While state-of-the-art
+MLLM-based methods in the literature predominantly adopt contrastive learning
+principles, they often differ in their specific training recipes. Despite their
+success, the mechanisms underlying their retrieval capabilities remain largely
+unexplored, potentially resulting in suboptimal performance and limited
+generalization ability. To address these issues, we present a comprehensive
+study aimed at uncovering the key factors that drive effective embedding
+learning for UMR using MLLMs. We begin by implementing a general MLLM-based
+embedding learning pipeline, and systematically analyze the primary
+contributors to high-performing universal retrieval systems. Based on this, we
+explore various aspects of the details in embedding generation and training
+strategies, including progressive transition, hard negative mining and
+re-ranker distillation. Notably, our findings reveal that often-overlooked
+factors can have a substantial impact on model performance. Building on these
+discoveries, we introduce a unified framework termed U-MARVEL
+(\textbf{U}niversal \textbf{M}ultimod\textbf{A}l \textbf{R}etrie\textbf{V}al
+via \textbf{E}mbedding \textbf{L}earning), which outperforms state-of-the-art
+competitors on the M-BEIR benchmark by a large margin in supervised settings,
+and also exihibits strong zero-shot performance on several tasks such as
+composed image retrieval and text-to-video retrieval. These results underscore
+the generalization potential of our framework across various embedding-based
+retrieval tasks. Code is available at https://github.com/chaxjli/U-MARVEL",https://github.com/chaxjli/U-MARVEL,Technical Report (in progress)
+RATE: An LLM-Powered Retrieval Augmented Generation Technology-Extraction Pipeline,"Karan Mirhosseini, Arya Aftab, Alireza Sheikh",2025-07-19,2507.21125v1,http://arxiv.org/abs/2507.21125v1,http://arxiv.org/pdf/2507.21125v1,information_retrieval,cs.IR,"In an era of radical technology transformations, technology maps play a
+crucial role in enhancing decision making. These maps heavily rely on automated
+methods of technology extraction. This paper introduces Retrieval Augmented
+Technology Extraction (RATE), a Large Language Model (LLM) based pipeline for
+automated technology extraction from scientific literature. RATE combines
+Retrieval Augmented Generation (RAG) with multi-definition LLM-based
+validation. This hybrid method results in high recall in candidate generation
+alongside with high precision in candidate filtering. While the pipeline is
+designed to be general and widely applicable, we demonstrate its use on 678
+research articles focused on Brain-Computer Interfaces (BCIs) and Extended
+Reality (XR) as a case study. Consequently, The validated technology terms by
+RATE were mapped into a co-occurrence network, revealing thematic clusters and
+structural features of the research landscape. For the purpose of evaluation, a
+gold standard dataset of technologies in 70 selected random articles had been
+curated by the experts. In addition, a technology extraction model based on
+Bidirectional Encoder Representations of Transformers (BERT) was used as a
+comparative method. RATE achieved F1-score of 91.27%, Significantly
+outperforming BERT with F1-score of 53.73%. Our findings highlight the promise
+of definition-driven LLM methods for technology extraction and mapping. They
+also offer new insights into emerging trends within the BCI-XR field. The
+source code is available https://github.com/AryaAftab/RATE",https://github.com/AryaAftab/RATE,"9 pages, 4 figures, 1 table"
+StructText: A Synthetic Table-to-Text Approach for Benchmark Generation with Multi-Dimensional Evaluation,"Satyananda Kashyap, Sola Shirai, Nandana Mihindukulasooriya, Horst Samulowitz",2025-07-28,2507.21340v1,http://arxiv.org/abs/2507.21340v1,http://arxiv.org/pdf/2507.21340v1,databases,cs.CL,"Extracting structured information from text, such as key-value pairs that
+could augment tabular data, is quite useful in many enterprise use cases.
+Although large language models (LLMs) have enabled numerous automated pipelines
+for converting natural language into structured formats, there is still a lack
+of benchmarks for evaluating their extraction quality, especially in specific
+domains or focused documents specific to a given organization. Building such
+benchmarks by manual annotations is labour-intensive and limits the size and
+scalability of the benchmarks. In this work, we present StructText, an
+end-to-end framework for automatically generating high-fidelity benchmarks for
+key-value extraction from text using existing tabular data. It uses available
+tabular data as structured ground truth, and follows a two-stage
+``plan-then-execute'' pipeline to synthetically generate corresponding
+natural-language text. To ensure alignment between text and structured source,
+we introduce a multi-dimensional evaluation strategy that combines (a)
+LLM-based judgments on factuality, hallucination, and coherence and (b)
+objective extraction metrics measuring numeric and temporal accuracy. We
+evaluated the proposed method on 71,539 examples across 49 datasets. Results
+reveal that while LLMs achieve strong factual accuracy and avoid hallucination,
+they struggle with narrative coherence in producing extractable text. Notably,
+models presume numerical and temporal information with high fidelity yet this
+information becomes embedded in narratives that resist automated extraction. We
+release a framework, including datasets, evaluation tools, and baseline
+extraction systems, to support continued research.",https://github.com/ibm/struct-text,"Data available:
+  https://huggingface.co/datasets/ibm-research/struct-text and code available
+  at: https://github.com/ibm/struct-text"
+MH-GIN: Multi-scale Heterogeneous Graph-based Imputation Network for AIS Data (Extended Version),"Hengyu Liu, Tianyi Li, Yuqiang He, Kristian Torp, Yushuai Li, Christian S. Jensen",2025-07-27,2507.20362v1,http://arxiv.org/abs/2507.20362v1,http://arxiv.org/pdf/2507.20362v1,databases,cs.LG,"Location-tracking data from the Automatic Identification System, much of
+which is publicly available, plays a key role in a range of maritime safety and
+monitoring applications. However, the data suffers from missing values that
+hamper downstream applications. Imputing the missing values is challenging
+because the values of different heterogeneous attributes are updated at diverse
+rates, resulting in the occurrence of multi-scale dependencies among
+attributes. Existing imputation methods that assume similar update rates across
+attributes are unable to capture and exploit such dependencies, limiting their
+imputation accuracy. We propose MH-GIN, a Multi-scale Heterogeneous Graph-based
+Imputation Network that aims improve imputation accuracy by capturing
+multi-scale dependencies. Specifically, MH-GIN first extracts multi-scale
+temporal features for each attribute while preserving their intrinsic
+heterogeneous characteristics. Then, it constructs a multi-scale heterogeneous
+graph to explicitly model dependencies between heterogeneous attributes to
+enable more accurate imputation of missing values through graph propagation.
+Experimental results on two real-world datasets find that MH-GIN is capable of
+an average 57% reduction in imputation errors compared to state-of-the-art
+methods, while maintaining computational efficiency. The source code and
+implementation details of MH-GIN are publicly available
+https://github.com/hyLiu1994/MH-GIN.",https://github.com/hyLiu1994/MH-GIN,"18 pages, 4 figures"
+Graph-Structured Data Analysis of Component Failure in Autonomous Cargo Ships Based on Feature Fusion,"Zizhao Zhang, Tianxiang Zhao, Yu Sun, Liping Sun, Jichuan Kang",2025-07-18,2507.13721v1,http://arxiv.org/abs/2507.13721v1,http://arxiv.org/pdf/2507.13721v1,databases,cs.LG,"To address the challenges posed by cascading reactions caused by component
+failures in autonomous cargo ships (ACS) and the uncertainties in emergency
+decision-making, this paper proposes a novel hybrid feature fusion framework
+for constructing a graph-structured dataset of failure modes. By employing an
+improved cuckoo search algorithm (HN-CSA), the literature retrieval efficiency
+is significantly enhanced, achieving improvements of 7.1% and 3.4% compared to
+the NSGA-II and CSA search algorithms, respectively. A hierarchical feature
+fusion framework is constructed, using Word2Vec encoding to encode
+subsystem/component features, BERT-KPCA to process failure modes/reasons, and
+Sentence-BERT to quantify the semantic association between failure impact and
+emergency decision-making. The dataset covers 12 systems, 1,262 failure modes,
+and 6,150 propagation paths. Validation results show that the GATE-GNN model
+achieves a classification accuracy of 0.735, comparable to existing benchmarks.
+Additionally, a silhouette coefficient of 0.641 indicates that the features are
+highly distinguishable. In the label prediction results, the Shore-based
+Meteorological Service System achieved an F1 score of 0.93, demonstrating high
+prediction accuracy. This paper not only provides a solid foundation for
+failure analysis in autonomous cargo ships but also offers reliable support for
+fault diagnosis, risk assessment, and intelligent decision-making systems. The
+link to the dataset is
+https://github.com/wojiufukele/Graph-Structured-about-CSA.",https://github.com/wojiufukele/Graph-Structured-about-CSA,
+TOPJoin: A Context-Aware Multi-Criteria Approach for Joinable Column Search,"Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas",2025-07-15,2507.11505v1,http://arxiv.org/abs/2507.11505v1,http://arxiv.org/pdf/2507.11505v1,databases,cs.DB,"One of the major challenges in enterprise data analysis is the task of
+finding joinable tables that are conceptually related and provide meaningful
+insights. Traditionally, joinable tables have been discovered through a search
+for similar columns, where two columns are considered similar syntactically if
+there is a set overlap or they are considered similar semantically if either
+the column embeddings or value embeddings are closer in the embedding space.
+However, for enterprise data lakes, column similarity is not sufficient to
+identify joinable columns and tables. The context of the query column is
+important. Hence, in this work, we first define context-aware column
+joinability. Then we propose a multi-criteria approach, called TOPJoin, for
+joinable column search. We evaluate TOPJoin against existing join search
+baselines over one academic and one real-world join search benchmark. Through
+experiments, we find that TOPJoin performs better on both benchmarks than the
+baselines.",https://github.com/IBM/ContextAwareJoin,"VLDB 2025 Workshop: Tabular Data Analysis (TaDA); The source code,
+  data, and/or other artifacts have been made available at
+  https://github.com/IBM/ContextAwareJoin"
