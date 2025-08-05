@@ -1,0 +1,272 @@
+[
+  {
+    "title": "MetaAgent: Toward Self-Evolving Agent via Tool Meta-Learning",
+    "authors": "Hongjin Qian, Zheng Liu",
+    "published": "2025-08-01",
+    "arxiv_id": "2508.00271v1",
+    "url": "http://arxiv.org/abs/2508.00271v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.00271v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "In this work, we propose MetaAgent, an agentic paradigm inspired by the\nprinciple of learning-by-doing, where expertise is developed through hands-on\npractice and continual self-improvement. MetaAgent starts with a minimal\nworkflow, equipped only with basic reasoning and adaptive help-seeking\nabilities. When a knowledge gap is encountered, MetaAgent generates natural\nlanguage help requests, which are routed to the most suitable external tool by\na dedicated tool router. As MetaAgent solves tasks, it continually conducts\nself-reflection and answer verification, distilling actionable experience into\nconcise texts that are dynamically incorporated into future task contexts.\nBesides, MetaAgent autonomously builds in-house tools and a persistent\nknowledge base by organizing its tool-use history, further enhancing its\nability to retrieve and integrate relevant information We term this continual,\ndata-driven process as \\textit{meta tool learning}, through which MetaAgent\nincrementally refines its reasoning and tool-use strategies, without changing\nmodel parameters or requiring further post-training. Evaluated on challenging\nknowledge discovery benchmarks, including GAIA, WebWalkerQA, and BrowseCamp,\nMetaAgent consistently outperforms workflow-based baselines and matches or\nexceeds end-to-end trained agents, demonstrating the promise of self-evolving\nagentic systems for robust, general-purpose knowledge discovery. We provide our\nsource codes in https://github.com/qhjqhj00/MetaAgent.",
+    "code_links": [
+      "https://github.com/qhjqhj00/MetaAgent"
+    ],
+    "comment": "Technical Report, 14 pages"
+  },
+  {
+    "title": "Melody-Lyrics Matching with Contrastive Alignment Loss",
+    "authors": "Changhong Wang, Michel Olvera, Gaël Richard",
+    "published": "2025-07-31",
+    "arxiv_id": "2508.00123v1",
+    "url": "http://arxiv.org/abs/2508.00123v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.00123v1",
+    "category": "information_retrieval",
+    "primary_category": "eess.AS",
+    "abstract": "The connection between music and lyrics is far beyond semantic bonds.\nConceptual pairs in the two modalities such as rhythm and rhyme, note duration\nand syllabic stress, and structure correspondence, raise a compelling yet\nseldom-explored direction in the field of music information retrieval. In this\npaper, we present melody-lyrics matching (MLM), a new task which retrieves\npotential lyrics for a given symbolic melody from text sources. Rather than\ngenerating lyrics from scratch, MLM essentially exploits the relationships\nbetween melody and lyrics. We propose a self-supervised representation learning\nframework with contrastive alignment loss for melody and lyrics. This has the\npotential to leverage the abundance of existing songs with paired melody and\nlyrics. No alignment annotations are required. Additionally, we introduce\nsylphone, a novel representation for lyrics at syllable-level activated by\nphoneme identity and vowel stress. We demonstrate that our method can match\nmelody with coherent and singable lyrics with empirical results and intuitive\nexamples. We open source code and provide matching examples on the companion\nwebpage: https://github.com/changhongw/mlm.",
+    "code_links": [
+      "https://github.com/changhongw/mlm"
+    ],
+    "comment": "10 pages, 7 figures, 3 tables. This work has been submitted to the\n  IEEE for possible publication"
+  },
+  {
+    "title": "Personalized Education with Ranking Alignment Recommendation",
+    "authors": "Haipeng Liu, Yuxuan Liu, Ting Long",
+    "published": "2025-07-31",
+    "arxiv_id": "2507.23664v1",
+    "url": "http://arxiv.org/abs/2507.23664v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.23664v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Personalized question recommendation aims to guide individual students\nthrough questions to enhance their mastery of learning targets. Most previous\nmethods model this task as a Markov Decision Process and use reinforcement\nlearning to solve, but they struggle with efficient exploration, failing to\nidentify the best questions for each student during training. To address this,\nwe propose Ranking Alignment Recommendation (RAR), which incorporates\ncollaborative ideas into the exploration mechanism, enabling more efficient\nexploration within limited training episodes. Experiments show that RAR\neffectively improves recommendation performance, and our framework can be\napplied to any RL-based question recommender. Our code is available in\nhttps://github.com/wuming29/RAR.git.",
+    "code_links": [
+      "https://github.com/wuming29/RAR"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Not Just What, But When: Integrating Irregular Intervals to LLM for Sequential Recommendation",
+    "authors": "Wei-Wei Du, Takuma Udagawa, Kei Tateno",
+    "published": "2025-07-31",
+    "arxiv_id": "2507.23209v1",
+    "url": "http://arxiv.org/abs/2507.23209v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.23209v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Time intervals between purchasing items are a crucial factor in sequential\nrecommendation tasks, whereas existing approaches focus on item sequences and\noften overlook by assuming the intervals between items are static. However,\ndynamic intervals serve as a dimension that describes user profiling on not\nonly the history within a user but also different users with the same item\nhistory. In this work, we propose IntervalLLM, a novel framework that\nintegrates interval information into LLM and incorporates the novel\ninterval-infused attention to jointly consider information of items and\nintervals. Furthermore, unlike prior studies that address the cold-start\nscenario only from the perspectives of users and items, we introduce a new\nviewpoint: the interval perspective to serve as an additional metric for\nevaluating recommendation methods on the warm and cold scenarios. Extensive\nexperiments on 3 benchmarks with both traditional- and LLM-based baselines\ndemonstrate that our IntervalLLM achieves not only 4.4% improvements in average\nbut also the best-performing warm and cold scenarios across all users, items,\nand the proposed interval perspectives. In addition, we observe that the cold\nscenario from the interval perspective experiences the most significant\nperformance drop among all recommendation methods. This finding underscores the\nnecessity of further research on interval-based cold challenges and our\nintegration of interval information in the realm of sequential recommendation\ntasks. Our code is available here:\nhttps://github.com/sony/ds-research-code/tree/master/recsys25-IntervalLLM.",
+    "code_links": [
+      "https://github.com/sony/ds-research-code"
+    ],
+    "comment": "Accepted by RecSys 2025 short paper track"
+  },
+  {
+    "title": "Generative Recommendation with Semantic IDs: A Practitioner's Handbook",
+    "authors": "Clark Mingxuan Ju, Liam Collins, Leonardo Neves, Bhuvesh Kumar, Louis Yufeng Wang, Tong Zhao, Neil Shah",
+    "published": "2025-07-29",
+    "arxiv_id": "2507.22224v1",
+    "url": "http://arxiv.org/abs/2507.22224v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.22224v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation (GR) has gained increasing attention for its\npromising performance compared to traditional models. A key factor contributing\nto the success of GR is the semantic ID (SID), which converts continuous\nsemantic representations (e.g., from large language models) into discrete ID\nsequences. This enables GR models with SIDs to both incorporate semantic\ninformation and learn collaborative filtering signals, while retaining the\nbenefits of discrete decoding. However, varied modeling techniques,\nhyper-parameters, and experimental setups in existing literature make direct\ncomparisons between GR proposals challenging. Furthermore, the absence of an\nopen-source, unified framework hinders systematic benchmarking and extension,\nslowing model iteration. To address this challenge, our work introduces and\nopen-sources a framework for Generative Recommendation with semantic ID, namely\nGRID, specifically designed for modularity to facilitate easy component\nswapping and accelerate idea iteration. Using GRID, we systematically\nexperiment with and ablate different components of GR models with SIDs on\npublic benchmarks. Our comprehensive experiments with GRID reveal that many\noverlooked architectural components in GR models with SIDs substantially impact\nperformance. This offers both novel insights and validates the utility of an\nopen-source platform for robust benchmarking and GR research advancement. GRID\nis open-sourced at https://github.com/snap-research/GRID.",
+    "code_links": [
+      "https://github.com/snap-research/GRID"
+    ],
+    "comment": null
+  },
+  {
+    "title": "StructText: A Synthetic Table-to-Text Approach for Benchmark Generation with Multi-Dimensional Evaluation",
+    "authors": "Satyananda Kashyap, Sola Shirai, Nandana Mihindukulasooriya, Horst Samulowitz",
+    "published": "2025-07-28",
+    "arxiv_id": "2507.21340v1",
+    "url": "http://arxiv.org/abs/2507.21340v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.21340v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Extracting structured information from text, such as key-value pairs that\ncould augment tabular data, is quite useful in many enterprise use cases.\nAlthough large language models (LLMs) have enabled numerous automated pipelines\nfor converting natural language into structured formats, there is still a lack\nof benchmarks for evaluating their extraction quality, especially in specific\ndomains or focused documents specific to a given organization. Building such\nbenchmarks by manual annotations is labour-intensive and limits the size and\nscalability of the benchmarks. In this work, we present StructText, an\nend-to-end framework for automatically generating high-fidelity benchmarks for\nkey-value extraction from text using existing tabular data. It uses available\ntabular data as structured ground truth, and follows a two-stage\n``plan-then-execute'' pipeline to synthetically generate corresponding\nnatural-language text. To ensure alignment between text and structured source,\nwe introduce a multi-dimensional evaluation strategy that combines (a)\nLLM-based judgments on factuality, hallucination, and coherence and (b)\nobjective extraction metrics measuring numeric and temporal accuracy. We\nevaluated the proposed method on 71,539 examples across 49 datasets. Results\nreveal that while LLMs achieve strong factual accuracy and avoid hallucination,\nthey struggle with narrative coherence in producing extractable text. Notably,\nmodels presume numerical and temporal information with high fidelity yet this\ninformation becomes embedded in narratives that resist automated extraction. We\nrelease a framework, including datasets, evaluation tools, and baseline\nextraction systems, to support continued research.",
+    "code_links": [
+      "https://github.com/ibm/struct-text"
+    ],
+    "comment": "Data available:\n  https://huggingface.co/datasets/ibm-research/struct-text and code available\n  at: https://github.com/ibm/struct-text"
+  },
+  {
+    "title": "ZSE-Cap: A Zero-Shot Ensemble for Image Retrieval and Prompt-Guided Captioning",
+    "authors": "Duc-Tai Dinh, Duc Anh Khoa Dinh",
+    "published": "2025-07-28",
+    "arxiv_id": "2507.20564v1",
+    "url": "http://arxiv.org/abs/2507.20564v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.20564v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "We present ZSE-Cap (Zero-Shot Ensemble for Captioning), our 4th place system\nin Event-Enriched Image Analysis (EVENTA) shared task on article-grounded image\nretrieval and captioning. Our zero-shot approach requires no finetuning on the\ncompetition's data. For retrieval, we ensemble similarity scores from CLIP,\nSigLIP, and DINOv2. For captioning, we leverage a carefully engineered prompt\nto guide the Gemma 3 model, enabling it to link high-level events from the\narticle to the visual content in the image. Our system achieved a final score\nof 0.42002, securing a top-4 position on the private test set, demonstrating\nthe effectiveness of combining foundation models through ensembling and\nprompting. Our code is available at https://github.com/ductai05/ZSE-Cap.",
+    "code_links": [
+      "https://github.com/ductai05/ZSE-Cap"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Multi-Stage Verification-Centric Framework for Mitigating Hallucination in Multi-Modal RAG",
+    "authors": "Baiyu Chen, Wilson Wongso, Xiaoqian Hu, Yue Tan, Flora Salim",
+    "published": "2025-07-27",
+    "arxiv_id": "2507.20136v1",
+    "url": "http://arxiv.org/abs/2507.20136v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.20136v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "This paper presents the technical solution developed by team CRUISE for the\nKDD Cup 2025 Meta Comprehensive RAG Benchmark for Multi-modal, Multi-turn\n(CRAG-MM) challenge. The challenge aims to address a critical limitation of\nmodern Vision Language Models (VLMs): their propensity to hallucinate,\nespecially when faced with egocentric imagery, long-tail entities, and complex,\nmulti-hop questions. This issue is particularly problematic in real-world\napplications where users pose fact-seeking queries that demand high factual\naccuracy across diverse modalities. To tackle this, we propose a robust,\nmulti-stage framework that prioritizes factual accuracy and truthfulness over\ncompleteness. Our solution integrates a lightweight query router for\nefficiency, a query-aware retrieval and summarization pipeline, a dual-pathways\ngeneration and a post-hoc verification. This conservative strategy is designed\nto minimize hallucinations, which incur a severe penalty in the competition's\nscoring metric. Our approach achieved 3rd place in Task 1, demonstrating the\neffectiveness of prioritizing answer reliability in complex multi-modal RAG\nsystems. Our implementation is available at\nhttps://github.com/Breezelled/KDD-Cup-2025-Meta-CRAG-MM .",
+    "code_links": [
+      "https://github.com/Breezelled/KDD-Cup-2025-Meta-CRAG-MM"
+    ],
+    "comment": "KDD Cup 2025 Meta CRAG-MM Challenge"
+  },
+  {
+    "title": "Injecting External Knowledge into the Reasoning Process Enhances Retrieval-Augmented Generation",
+    "authors": "Minghao Tang, Shiyu Ni, Jiafeng Guo, Keping Bi",
+    "published": "2025-07-25",
+    "arxiv_id": "2507.19333v1",
+    "url": "http://arxiv.org/abs/2507.19333v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.19333v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval-augmented generation (RAG) has been widely adopted to augment large\nlanguage models (LLMs) with external knowledge for knowledge-intensive tasks.\nHowever, its effectiveness is often undermined by the presence of noisy (i.e.,\nlow-quality) retrieved passages. Enhancing LLMs' robustness to such noise is\ncritical for improving the reliability of RAG systems. Recent advances have\nequipped LLMs with strong reasoning and self-reflection capabilities, allowing\nthem to identify and correct errors in their reasoning process. Inspired by\nthis ability, we propose Passage Injection-a simple yet effective method that\nexplicitly incorporates retrieved passages into LLMs' reasoning process, aiming\nto enhance the model's ability to recognize and resist noisy passages. We\nvalidate Passage Injection under general RAG settings using BM25 as the\nretriever. Experiments on four reasoning-enhanced LLMs across four factual QA\ndatasets demonstrate that Passage Injection significantly improves overall RAG\nperformance. Further analysis on two noisy retrieval settings-random noise,\nwhere the model is provided irrelevant passages, and counterfactual noise,\nwhere it is given misleading passages-shows that Passage Injection consistently\nimproves robustness. Controlled experiments confirm that Passage Injection can\nalso effectively leverage helpful passages. These findings suggest that\nincorporating passages in LLMs' reasoning process is a promising direction for\nbuilding more robust RAG systems. The code can be found\n\\href{here}{https://github.com/mh-tang/Passage-Injection}.",
+    "code_links": [
+      "https://github.com/mh-tang/Passage-Injection"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Use as Directed? A Comparison of Software Tools Intended to Check Rigor and Transparency of Published Work",
+    "authors": "Peter Eckmann, Adrian Barnett, Alexandra Bannach-Brown, Elisa Pilar Bascunan Atria, Guillaume Cabanac, Louise Delwen Owen Franzen, Małgorzata Anna Gazda, Kaitlyn Hair, James Howison, Halil Kilicoglu, Cyril Labbe, Sarah McCann, Vladislav Nachev, Martijn Roelandse, Maia Salholz-Hillel, Robert Schulz, Gerben ter Riet, Colby Vorland, Anita Bandrowski, Tracey Weissgerber",
+    "published": "2025-07-23",
+    "arxiv_id": "2507.17991v1",
+    "url": "http://arxiv.org/abs/2507.17991v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.17991v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.SE",
+    "abstract": "The causes of the reproducibility crisis include lack of standardization and\ntransparency in scientific reporting. Checklists such as ARRIVE and CONSORT\nseek to improve transparency, but they are not always followed by authors and\npeer review often fails to identify missing items. To address these issues,\nthere are several automated tools that have been designed to check different\nrigor criteria. We have conducted a broad comparison of 11 automated tools\nacross 9 different rigor criteria from the ScreenIT group. We found some\ncriteria, including detecting open data, where the combination of tools showed\na clear winner, a tool which performed much better than other tools. In other\ncases, including detection of inclusion and exclusion criteria, the combination\nof tools exceeded the performance of any one tool. We also identified key areas\nwhere tool developers should focus their effort to make their tool maximally\nuseful. We conclude with a set of insights and recommendations for stakeholders\nin the development of rigor and transparency detection tools. The code and data\nfor the study is available at https://github.com/PeterEckmann1/tool-comparison.",
+    "code_links": [
+      "https://github.com/PeterEckmann1/tool-comparison"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Leave No One Behind: Fairness-Aware Cross-Domain Recommender Systems for Non-Overlapping Users",
+    "authors": "Weixin Chen, Yuhan Zhao, Li Chen, Weike Pan",
+    "published": "2025-07-23",
+    "arxiv_id": "2507.17749v1",
+    "url": "http://arxiv.org/abs/2507.17749v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.17749v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Cross-domain recommendation (CDR) methods predominantly leverage overlapping\nusers to transfer knowledge from a source domain to a target domain. However,\nthrough empirical studies, we uncover a critical bias inherent in these\napproaches: while overlapping users experience significant enhancements in\nrecommendation quality, non-overlapping users benefit minimally and even face\nperformance degradation. This unfairness may erode user trust, and,\nconsequently, negatively impact business engagement and revenue. To address\nthis issue, we propose a novel solution that generates virtual source-domain\nusers for non-overlapping target-domain users. Our method utilizes a dual\nattention mechanism to discern similarities between overlapping and\nnon-overlapping users, thereby synthesizing realistic virtual user embeddings.\nWe further introduce a limiter component that ensures the generated virtual\nusers align with real-data distributions while preserving each user's unique\ncharacteristics. Notably, our method is model-agnostic and can be seamlessly\nintegrated into any CDR model. Comprehensive experiments conducted on three\npublic datasets with five CDR baselines demonstrate that our method effectively\nmitigates the CDR non-overlapping user bias, without loss of overall accuracy.\nOur code is publicly available at https://github.com/WeixinChen98/VUG.",
+    "code_links": [
+      "https://github.com/WeixinChen98/VUG"
+    ],
+    "comment": "Accepted by RecSys 2025"
+  },
+  {
+    "title": "BGM-HAN: A Hierarchical Attention Network for Accurate and Fair Decision Assessment on Semi-Structured Profiles",
+    "authors": "Junhua Liu, Roy Ka-Wei Lee, Kwan Hui Lim",
+    "published": "2025-07-23",
+    "arxiv_id": "2507.17472v1",
+    "url": "http://arxiv.org/abs/2507.17472v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.17472v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Human decision-making in high-stakes domains often relies on expertise and\nheuristics, but is vulnerable to hard-to-detect cognitive biases that threaten\nfairness and long-term outcomes. This work presents a novel approach to\nenhancing complex decision-making workflows through the integration of\nhierarchical learning alongside various enhancements. Focusing on university\nadmissions as a representative high-stakes domain, we propose BGM-HAN, an\nenhanced Byte-Pair Encoded, Gated Multi-head Hierarchical Attention Network,\ndesigned to effectively model semi-structured applicant data. BGM-HAN captures\nmulti-level representations that are crucial for nuanced assessment, improving\nboth interpretability and predictive performance. Experimental results on real\nadmissions data demonstrate that our proposed model significantly outperforms\nboth state-of-the-art baselines from traditional machine learning to large\nlanguage models, offering a promising framework for augmenting decision-making\nin domains where structure, context, and fairness matter. Source code is\navailable at: https://github.com/junhua/bgm-han.",
+    "code_links": [
+      "https://github.com/junhua/bgm-han"
+    ],
+    "comment": "Accepted at ASONAM 2025"
+  },
+  {
+    "title": "HLFormer: Enhancing Partially Relevant Video Retrieval with Hyperbolic Learning",
+    "authors": "Jun Li, Jinpeng Wang, Chaolei Tan, Niu Lian, Long Chen, Yaowei Wang, Min Zhang, Shu-Tao Xia, Bin Chen",
+    "published": "2025-07-23",
+    "arxiv_id": "2507.17402v2",
+    "url": "http://arxiv.org/abs/2507.17402v2",
+    "pdf_url": "http://arxiv.org/pdf/2507.17402v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Partially Relevant Video Retrieval (PRVR) addresses the critical challenge of\nmatching untrimmed videos with text queries describing only partial content.\nExisting methods suffer from geometric distortion in Euclidean space that\nsometimes misrepresents the intrinsic hierarchical structure of videos and\noverlooks certain hierarchical semantics, ultimately leading to suboptimal\ntemporal modeling. To address this issue, we propose the first hyperbolic\nmodeling framework for PRVR, namely HLFormer, which leverages hyperbolic space\nlearning to compensate for the suboptimal hierarchical modeling capabilities of\nEuclidean space. Specifically, HLFormer integrates the Lorentz Attention Block\nand Euclidean Attention Block to encode video embeddings in hybrid spaces,\nusing the Mean-Guided Adaptive Interaction Module to dynamically fuse features.\nAdditionally, we introduce a Partial Order Preservation Loss to enforce \"text <\nvideo\" hierarchy through Lorentzian cone constraints. This approach further\nenhances cross-modal matching by reinforcing partial relevance between video\ncontent and text queries. Extensive experiments show that HLFormer outperforms\nstate-of-the-art methods. Code is released at\nhttps://github.com/lijun2005/ICCV25-HLFormer.",
+    "code_links": [
+      "https://github.com/lijun2005/ICCV25-HLFormer"
+    ],
+    "comment": "Accepted by ICCV'25. 13 pages, 6 figures, 4 tables"
+  },
+  {
+    "title": "EndoFinder: Online Lesion Retrieval for Explainable Colorectal Polyp Diagnosis Leveraging Latent Scene Representations",
+    "authors": "Ruijie Yang, Yan Zhu, Peiyao Fu, Yizhe Zhang, Zhihua Wang, Quanlin Li, Pinghong Zhou, Xian Yang, Shuo Wang",
+    "published": "2025-07-23",
+    "arxiv_id": "2507.17323v1",
+    "url": "http://arxiv.org/abs/2507.17323v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.17323v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Colorectal cancer (CRC) remains a leading cause of cancer-related mortality,\nunderscoring the importance of timely polyp detection and diagnosis. While deep\nlearning models have improved optical-assisted diagnostics, they often demand\nextensive labeled datasets and yield \"black-box\" outputs with limited\ninterpretability. In this paper, we propose EndoFinder, an online polyp\nretrieval framework that leverages multi-view scene representations for\nexplainable and scalable CRC diagnosis. First, we develop a Polyp-aware Image\nEncoder by combining contrastive learning and a reconstruction task, guided by\npolyp segmentation masks. This self-supervised approach captures robust\nfeatures without relying on large-scale annotated data. Next, we treat each\npolyp as a three-dimensional \"scene\" and introduce a Scene Representation\nTransformer, which fuses multiple views of the polyp into a single latent\nrepresentation. By discretizing this representation through a hashing layer,\nEndoFinder enables real-time retrieval from a compiled database of historical\npolyp cases, where diagnostic information serves as interpretable references\nfor new queries. We evaluate EndoFinder on both public and newly collected\npolyp datasets for re-identification and pathology classification. Results show\nthat EndoFinder outperforms existing methods in accuracy while providing\ntransparent, retrieval-based insights for clinical decision-making. By\ncontributing a novel dataset and a scalable, explainable framework, our work\naddresses key challenges in polyp diagnosis and offers a promising direction\nfor more efficient AI-driven colonoscopy workflows. The source code is\navailable at https://github.com/ku262/EndoFinder-Scene.",
+    "code_links": [
+      "https://github.com/ku262/EndoFinder-Scene"
+    ],
+    "comment": null
+  },
+  {
+    "title": "StructText: A Synthetic Table-to-Text Approach for Benchmark Generation with Multi-Dimensional Evaluation",
+    "authors": "Satyananda Kashyap, Sola Shirai, Nandana Mihindukulasooriya, Horst Samulowitz",
+    "published": "2025-07-28",
+    "arxiv_id": "2507.21340v1",
+    "url": "http://arxiv.org/abs/2507.21340v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.21340v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Extracting structured information from text, such as key-value pairs that\ncould augment tabular data, is quite useful in many enterprise use cases.\nAlthough large language models (LLMs) have enabled numerous automated pipelines\nfor converting natural language into structured formats, there is still a lack\nof benchmarks for evaluating their extraction quality, especially in specific\ndomains or focused documents specific to a given organization. Building such\nbenchmarks by manual annotations is labour-intensive and limits the size and\nscalability of the benchmarks. In this work, we present StructText, an\nend-to-end framework for automatically generating high-fidelity benchmarks for\nkey-value extraction from text using existing tabular data. It uses available\ntabular data as structured ground truth, and follows a two-stage\n``plan-then-execute'' pipeline to synthetically generate corresponding\nnatural-language text. To ensure alignment between text and structured source,\nwe introduce a multi-dimensional evaluation strategy that combines (a)\nLLM-based judgments on factuality, hallucination, and coherence and (b)\nobjective extraction metrics measuring numeric and temporal accuracy. We\nevaluated the proposed method on 71,539 examples across 49 datasets. Results\nreveal that while LLMs achieve strong factual accuracy and avoid hallucination,\nthey struggle with narrative coherence in producing extractable text. Notably,\nmodels presume numerical and temporal information with high fidelity yet this\ninformation becomes embedded in narratives that resist automated extraction. We\nrelease a framework, including datasets, evaluation tools, and baseline\nextraction systems, to support continued research.",
+    "code_links": [
+      "https://github.com/ibm/struct-text"
+    ],
+    "comment": "Data available:\n  https://huggingface.co/datasets/ibm-research/struct-text and code available\n  at: https://github.com/ibm/struct-text"
+  },
+  {
+    "title": "MH-GIN: Multi-scale Heterogeneous Graph-based Imputation Network for AIS Data (Extended Version)",
+    "authors": "Hengyu Liu, Tianyi Li, Yuqiang He, Kristian Torp, Yushuai Li, Christian S. Jensen",
+    "published": "2025-07-27",
+    "arxiv_id": "2507.20362v1",
+    "url": "http://arxiv.org/abs/2507.20362v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.20362v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Location-tracking data from the Automatic Identification System, much of\nwhich is publicly available, plays a key role in a range of maritime safety and\nmonitoring applications. However, the data suffers from missing values that\nhamper downstream applications. Imputing the missing values is challenging\nbecause the values of different heterogeneous attributes are updated at diverse\nrates, resulting in the occurrence of multi-scale dependencies among\nattributes. Existing imputation methods that assume similar update rates across\nattributes are unable to capture and exploit such dependencies, limiting their\nimputation accuracy. We propose MH-GIN, a Multi-scale Heterogeneous Graph-based\nImputation Network that aims improve imputation accuracy by capturing\nmulti-scale dependencies. Specifically, MH-GIN first extracts multi-scale\ntemporal features for each attribute while preserving their intrinsic\nheterogeneous characteristics. Then, it constructs a multi-scale heterogeneous\ngraph to explicitly model dependencies between heterogeneous attributes to\nenable more accurate imputation of missing values through graph propagation.\nExperimental results on two real-world datasets find that MH-GIN is capable of\nan average 57% reduction in imputation errors compared to state-of-the-art\nmethods, while maintaining computational efficiency. The source code and\nimplementation details of MH-GIN are publicly available\nhttps://github.com/hyLiu1994/MH-GIN.",
+    "code_links": [
+      "https://github.com/hyLiu1994/MH-GIN"
+    ],
+    "comment": "18 pages, 4 figures"
+  },
+  {
+    "title": "Graph-Structured Data Analysis of Component Failure in Autonomous Cargo Ships Based on Feature Fusion",
+    "authors": "Zizhao Zhang, Tianxiang Zhao, Yu Sun, Liping Sun, Jichuan Kang",
+    "published": "2025-07-18",
+    "arxiv_id": "2507.13721v1",
+    "url": "http://arxiv.org/abs/2507.13721v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.13721v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "To address the challenges posed by cascading reactions caused by component\nfailures in autonomous cargo ships (ACS) and the uncertainties in emergency\ndecision-making, this paper proposes a novel hybrid feature fusion framework\nfor constructing a graph-structured dataset of failure modes. By employing an\nimproved cuckoo search algorithm (HN-CSA), the literature retrieval efficiency\nis significantly enhanced, achieving improvements of 7.1% and 3.4% compared to\nthe NSGA-II and CSA search algorithms, respectively. A hierarchical feature\nfusion framework is constructed, using Word2Vec encoding to encode\nsubsystem/component features, BERT-KPCA to process failure modes/reasons, and\nSentence-BERT to quantify the semantic association between failure impact and\nemergency decision-making. The dataset covers 12 systems, 1,262 failure modes,\nand 6,150 propagation paths. Validation results show that the GATE-GNN model\nachieves a classification accuracy of 0.735, comparable to existing benchmarks.\nAdditionally, a silhouette coefficient of 0.641 indicates that the features are\nhighly distinguishable. In the label prediction results, the Shore-based\nMeteorological Service System achieved an F1 score of 0.93, demonstrating high\nprediction accuracy. This paper not only provides a solid foundation for\nfailure analysis in autonomous cargo ships but also offers reliable support for\nfault diagnosis, risk assessment, and intelligent decision-making systems. The\nlink to the dataset is\nhttps://github.com/wojiufukele/Graph-Structured-about-CSA.",
+    "code_links": [
+      "https://github.com/wojiufukele/Graph-Structured-about-CSA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "TOPJoin: A Context-Aware Multi-Criteria Approach for Joinable Column Search",
+    "authors": "Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas",
+    "published": "2025-07-15",
+    "arxiv_id": "2507.11505v1",
+    "url": "http://arxiv.org/abs/2507.11505v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.11505v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "One of the major challenges in enterprise data analysis is the task of\nfinding joinable tables that are conceptually related and provide meaningful\ninsights. Traditionally, joinable tables have been discovered through a search\nfor similar columns, where two columns are considered similar syntactically if\nthere is a set overlap or they are considered similar semantically if either\nthe column embeddings or value embeddings are closer in the embedding space.\nHowever, for enterprise data lakes, column similarity is not sufficient to\nidentify joinable columns and tables. The context of the query column is\nimportant. Hence, in this work, we first define context-aware column\njoinability. Then we propose a multi-criteria approach, called TOPJoin, for\njoinable column search. We evaluate TOPJoin against existing join search\nbaselines over one academic and one real-world join search benchmark. Through\nexperiments, we find that TOPJoin performs better on both benchmarks than the\nbaselines.",
+    "code_links": [
+      "https://github.com/IBM/ContextAwareJoin"
+    ],
+    "comment": "VLDB 2025 Workshop: Tabular Data Analysis (TaDA); The source code,\n  data, and/or other artifacts have been made available at\n  https://github.com/IBM/ContextAwareJoin"
+  }
+]
