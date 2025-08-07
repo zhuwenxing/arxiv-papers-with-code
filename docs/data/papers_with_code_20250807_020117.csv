@@ -1,0 +1,426 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+MultiRAG: A Knowledge-guided Framework for Mitigating Hallucination in Multi-source Retrieval Augmented Generation,"Wenlong Wu, Haofen Wang, Bohan Li, Peixuan Huang, Xinzhe Zhao, Lei Liang",2025-08-05,2508.03553v1,http://arxiv.org/abs/2508.03553v1,http://arxiv.org/pdf/2508.03553v1,information_retrieval,cs.IR,"Retrieval Augmented Generation (RAG) has emerged as a promising solution to
+address hallucination issues in Large Language Models (LLMs). However, the
+integration of multiple retrieval sources, while potentially more informative,
+introduces new challenges that can paradoxically exacerbate hallucination
+problems. These challenges manifest primarily in two aspects: the sparse
+distribution of multi-source data that hinders the capture of logical
+relationships and the inherent inconsistencies among different sources that
+lead to information conflicts. To address these challenges, we propose
+MultiRAG, a novel framework designed to mitigate hallucination in multi-source
+retrieval-augmented generation through knowledge-guided approaches. Our
+framework introduces two key innovations: (1) a knowledge construction module
+that employs multi-source line graphs to efficiently aggregate logical
+relationships across different knowledge sources, effectively addressing the
+sparse data distribution issue; and (2) a sophisticated retrieval module that
+implements a multi-level confidence calculation mechanism, performing both
+graph-level and node-level assessments to identify and eliminate unreliable
+information nodes, thereby reducing hallucinations caused by inter-source
+inconsistencies. Extensive experiments on four multi-domain query datasets and
+two multi-hop QA datasets demonstrate that MultiRAG significantly enhances the
+reliability and efficiency of knowledge retrieval in complex multi-source
+scenarios. \textcolor{blue}{Our code is available in
+https://github.com/wuwenlong123/MultiRAG.",https://github.com/wuwenlong123/MultiRAG,Accepted by ICDE 2025 Research Paper
+fact check AI at SemEval-2025 Task 7: Multilingual and Crosslingual Fact-checked Claim Retrieval,Pranshu Rastogi,2025-08-05,2508.03475v1,http://arxiv.org/abs/2508.03475v1,http://arxiv.org/pdf/2508.03475v1,information_retrieval,cs.CL,"SemEval-2025 Task 7: Multilingual and Crosslingual Fact-Checked Claim
+Retrieval is approached as a Learning-to-Rank task using a bi-encoder model
+fine-tuned from a pre-trained transformer optimized for sentence similarity.
+Training used both the source languages and their English translations for
+multilingual retrieval and only English translations for cross-lingual
+retrieval. Using lightweight models with fewer than 500M parameters and
+training on Kaggle T4 GPUs, the method achieved 92% Success@10 in multilingual
+and 80% Success@10 in 5th in crosslingual and 10th in multilingual tracks.",https://github.com/pranshurastogi29/SemEval-2025-ACL-Multi-and-Crosslingual-Retrieval-using-Bi-encoders,"7 pages, 6 tables. Code available at
+  https://github.com/pranshurastogi29/SemEval-2025-ACL-Multi-and-Crosslingual-Retrieval-using-Bi-encoders"
+Hubness Reduction with Dual Bank Sinkhorn Normalization for Cross-Modal Retrieval,"Zhengxin Pan, Haishuai Wang, Fangyu Wu, Peng Zhang, Jiajun Bu",2025-08-04,2508.02538v1,http://arxiv.org/abs/2508.02538v1,http://arxiv.org/pdf/2508.02538v1,information_retrieval,cs.IR,"The past decade has witnessed rapid advancements in cross-modal retrieval,
+with significant progress made in accurately measuring the similarity between
+cross-modal pairs. However, the persistent hubness problem, a phenomenon where
+a small number of targets frequently appear as nearest neighbors to numerous
+queries, continues to hinder the precision of similarity measurements. Despite
+several proposed methods to reduce hubness, their underlying mechanisms remain
+poorly understood. To bridge this gap, we analyze the widely-adopted Inverted
+Softmax approach and demonstrate its effectiveness in balancing target
+probabilities during retrieval. Building on these insights, we propose a
+probability-balancing framework for more effective hubness reduction. We
+contend that balancing target probabilities alone is inadequate and, therefore,
+extend the framework to balance both query and target probabilities by
+introducing Sinkhorn Normalization (SN). Notably, we extend SN to scenarios
+where the true query distribution is unknown, showing that current methods,
+which rely solely on a query bank to estimate target hubness, produce
+suboptimal results due to a significant distributional gap between the query
+bank and targets. To mitigate this issue, we introduce Dual Bank Sinkhorn
+Normalization (DBSN), incorporating a corresponding target bank alongside the
+query bank to narrow this distributional gap. Our comprehensive evaluation
+across various cross-modal retrieval tasks, including image-text retrieval,
+video-text retrieval, and audio-text retrieval, demonstrates consistent
+performance improvements, validating the effectiveness of both SN and DBSN. All
+codes are publicly available at https://github.com/ppanzx/DBSN.",https://github.com/ppanzx/DBSN,ACMMM 2025
+Beyond Chunks and Graphs: Retrieval-Augmented Generation through Triplet-Driven Thinking,"Shengbo Gong, Xianfeng Tang, Carl Yang, Wei jin",2025-08-04,2508.02435v1,http://arxiv.org/abs/2508.02435v1,http://arxiv.org/pdf/2508.02435v1,information_retrieval,cs.IR,"Retrieval-augmented generation (RAG) is critical for reducing hallucinations
+and incorporating external knowledge into Large Language Models (LLMs).
+However, advanced RAG systems face a trade-off between performance and
+efficiency. Multi-round RAG approaches achieve strong reasoning but incur
+excessive LLM calls and token costs, while Graph RAG methods suffer from
+computationally expensive, error-prone graph construction and retrieval
+redundancy. To address these challenges, we propose T$^2$RAG, a novel framework
+that operates on a simple, graph-free knowledge base of atomic triplets.
+T$^2$RAG leverages an LLM to decompose questions into searchable triplets with
+placeholders, which it then iteratively resolves by retrieving evidence from
+the triplet database. Empirical results show that T$^2$RAG significantly
+outperforms state-of-the-art multi-round and Graph RAG methods, achieving an
+average performance gain of up to 11\% across six datasets while reducing
+retrieval costs by up to 45\%. Our code is available at
+https://github.com/rockcor/T2RAG",https://github.com/rockcor/T2RAG,19 pages
+Uni-Layout: Integrating Human Feedback in Unified Layout Generation and Evaluation,"Shuo Lu, Yanyin Chen, Wei Feng, Jiahao Fan, Fengheng Li, Zheng Zhang, Jingjing Lv, Junjie Shen, Ching Law, Jian Liang",2025-08-04,2508.02374v1,http://arxiv.org/abs/2508.02374v1,http://arxiv.org/pdf/2508.02374v1,information_retrieval,cs.CV,"Layout generation plays a crucial role in enhancing both user experience and
+design efficiency. However, current approaches suffer from task-specific
+generation capabilities and perceptually misaligned evaluation metrics, leading
+to limited applicability and ineffective measurement. In this paper, we propose
+\textit{Uni-Layout}, a novel framework that achieves unified generation,
+human-mimicking evaluation and alignment between the two. For universal
+generation, we incorporate various layout tasks into a single taxonomy and
+develop a unified generator that handles background or element contents
+constrained tasks via natural language prompts. To introduce human feedback for
+the effective evaluation of layouts, we build \textit{Layout-HF100k}, the first
+large-scale human feedback dataset with 100,000 expertly annotated layouts.
+Based on \textit{Layout-HF100k}, we introduce a human-mimicking evaluator that
+integrates visual and geometric information, employing a Chain-of-Thought
+mechanism to conduct qualitative assessments alongside a confidence estimation
+module to yield quantitative measurements. For better alignment between the
+generator and the evaluator, we integrate them into a cohesive system by
+adopting Dynamic-Margin Preference Optimization (DMPO), which dynamically
+adjusts margins based on preference strength to better align with human
+judgments. Extensive experiments show that \textit{Uni-Layout} significantly
+outperforms both task-specific and general-purpose methods. Our code is
+publicly available at https://github.com/JD-GenX/Uni-Layout.",https://github.com/JD-GenX/Uni-Layout,Accepted to ACM MM 2025
+I2CR: Intra- and Inter-modal Collaborative Reflections for Multimodal Entity Linking,"Ziyan Liu, Junwen Li, Kaiwen Li, Tong Ruan, Chao Wang, Xinyan He, Zongyu Wang, Xuezhi Cao, Jingping Liu",2025-08-04,2508.02243v1,http://arxiv.org/abs/2508.02243v1,http://arxiv.org/pdf/2508.02243v1,information_retrieval,cs.CV,"Multimodal entity linking plays a crucial role in a wide range of
+applications. Recent advances in large language model-based methods have become
+the dominant paradigm for this task, effectively leveraging both textual and
+visual modalities to enhance performance. Despite their success, these methods
+still face two challenges, including unnecessary incorporation of image data in
+certain scenarios and the reliance only on a one-time extraction of visual
+features, which can undermine their effectiveness and accuracy. To address
+these challenges, we propose a novel LLM-based framework for the multimodal
+entity linking task, called Intra- and Inter-modal Collaborative Reflections.
+This framework prioritizes leveraging text information to address the task.
+When text alone is insufficient to link the correct entity through intra- and
+inter-modality evaluations, it employs a multi-round iterative strategy that
+integrates key visual clues from various aspects of the image to support
+reasoning and enhance matching accuracy. Extensive experiments on three widely
+used public datasets demonstrate that our framework consistently outperforms
+current state-of-the-art methods in the task, achieving improvements of 3.2%,
+5.1%, and 1.6%, respectively. Our code is available at
+https://github.com/ziyan-xiaoyu/I2CR/.",https://github.com/ziyan-xiaoyu/I2CR,"10 pages, 6 figures, accepted by ACMMM 2025"
+CM$^3$: Calibrating Multimodal Recommendation,"Xin Zhou, Yongjie Wang, Zhiqi Shen",2025-08-02,2508.01226v1,http://arxiv.org/abs/2508.01226v1,http://arxiv.org/pdf/2508.01226v1,information_retrieval,cs.IR,"Alignment and uniformity are fundamental principles within the domain of
+contrastive learning. In recommender systems, prior work has established that
+optimizing the Bayesian Personalized Ranking (BPR) loss contributes to the
+objectives of alignment and uniformity. Specifically, alignment aims to draw
+together the representations of interacting users and items, while uniformity
+mandates a uniform distribution of user and item embeddings across a unit
+hypersphere. This study revisits the alignment and uniformity properties within
+the context of multimodal recommender systems, revealing a proclivity among
+extant models to prioritize uniformity to the detriment of alignment. Our
+hypothesis challenges the conventional assumption of equitable item treatment
+through a uniformity loss, proposing a more nuanced approach wherein items with
+similar multimodal attributes converge toward proximal representations within
+the hyperspheric manifold. Specifically, we leverage the inherent similarity
+between items' multimodal data to calibrate their uniformity distribution,
+thereby inducing a more pronounced repulsive force between dissimilar entities
+within the embedding space. A theoretical analysis elucidates the relationship
+between this calibrated uniformity loss and the conventional uniformity
+function. Moreover, to enhance the fusion of multimodal features, we introduce
+a Spherical B\'ezier method designed to integrate an arbitrary number of
+modalities while ensuring that the resulting fused features are constrained to
+the same hyperspherical manifold. Empirical evaluations conducted on five
+real-world datasets substantiate the superiority of our approach over competing
+baselines. We also shown that the proposed methods can achieve up to a 5.4%
+increase in NDCG@20 performance via the integration of MLLM-extracted features.
+Source code is available at: https://github.com/enoche/CM3.",https://github.com/enoche/CM3,Working Paper: https://github.com/enoche/CM3
+DBAIOps: A Reasoning LLM-Enhanced Database Operation and Maintenance System using Knowledge Graphs,"Wei Zhou, Peng Sun, Xuanhe Zhou, Qianglei Zang, Ji Xu, Tieying Zhang, Guoliang Li, Fan Wu",2025-08-02,2508.01136v1,http://arxiv.org/abs/2508.01136v1,http://arxiv.org/pdf/2508.01136v1,information_retrieval,cs.DB,"The operation and maintenance (O&M) of database systems is critical to
+ensuring system availability and performance, typically requiring expert
+experience (e.g., identifying metric-to-anomaly relations) for effective
+diagnosis and recovery. However, existing automatic database O&M methods,
+including commercial products, cannot effectively utilize expert experience. On
+the one hand, rule-based methods only support basic O&M tasks (e.g.,
+metric-based anomaly detection), which are mostly numerical equations and
+cannot effectively incorporate literal O&M experience (e.g., troubleshooting
+guidance in manuals). On the other hand, LLM-based methods, which retrieve
+fragmented information (e.g., standard documents + RAG), often generate
+inaccurate or generic results. To address these limitations, we present
+DBAIOps, a novel hybrid database O&M system that combines reasoning LLMs with
+knowledge graphs to achieve DBA-style diagnosis. First, DBAIOps introduces a
+heterogeneous graph model for representing the diagnosis experience, and
+proposes a semi-automatic graph construction algorithm to build that graph from
+thousands of documents. Second, DBAIOps develops a collection of (800+)
+reusable anomaly models that identify both directly alerted metrics and
+implicitly correlated experience and metrics. Third, for each anomaly, DBAIOps
+proposes a two-stage graph evolution mechanism to explore relevant diagnosis
+paths and identify missing relations automatically. It then leverages a
+reasoning LLM (e.g., DeepSeek-R1) to infer root causes and generate clear
+diagnosis reports for both DBAs and common users. Our evaluation over four
+mainstream database systems (Oracle, MySQL, PostgreSQL, and DM8) demonstrates
+that DBAIOps outperforms state-of-the-art baselines, 34.85% and 47.22% higher
+in root cause and human evaluation accuracy, respectively.",https://github.com/weAIDB/DBAIOps,"DBAIOps supports 25 database systems and has been deployed in 20
+  real-world scenarios, covering domains like finance, energy, and healthcare.
+  See website at: https://www.dbaiops.com; See code at:
+  https://github.com/weAIDB/DBAIOps/"
+MAO-ARAG: Multi-Agent Orchestration for Adaptive Retrieval-Augmented Generation,"Yiqun Chen, Erhan Zhang, Lingyong Yan, Shuaiqiang Wang, Jizhou Huang, Dawei Yin, Jiaxin Mao",2025-08-01,2508.01005v1,http://arxiv.org/abs/2508.01005v1,http://arxiv.org/pdf/2508.01005v1,information_retrieval,cs.CL,"In question-answering (QA) systems, Retrieval-Augmented Generation (RAG) has
+become pivotal in enhancing response accuracy and reducing hallucination
+issues. The architecture of RAG systems varies significantly, encompassing
+single-round RAG, iterative RAG, and reasoning RAG, each tailored to address
+different types of queries. Due to the varying complexity of real-world
+queries, a fixed RAG pipeline often struggles to balance performance and cost
+efficiency across different queries. To address this challenge, we propose an
+adaptive RAG framework called MAO-ARAG, which leverages multi-agent
+orchestration. Our adaptive RAG is conceived as a multi-turn framework.
+Specifically, we define multiple executor agents, representing typical RAG
+modules such as query reformulation agents, document selection agent, and
+generation agents. A planner agent intelligently selects and integrates the
+appropriate agents from these executors into a suitable workflow tailored for
+each query, striving for high-quality answers while maintaining reasonable
+costs. During each turn, the planner agent is trained using reinforcement
+learning, guided by an outcome-based reward (F1 score) and a cost-based
+penalty, continuously improving answer quality while keeping costs within a
+reasonable range. Experiments conducted on multiple QA datasets demonstrate
+that our approach, which dynamically plans workflows for each query, not only
+achieves high answer quality but also maintains both cost and latency within
+acceptable limits.The code of MAO-ARAG is on
+https://github.com/chenyiqun/Agentic-RAG.",https://github.com/chenyiqun/Agentic-RAG,
+MetaAgent: Toward Self-Evolving Agent via Tool Meta-Learning,"Hongjin Qian, Zheng Liu",2025-08-01,2508.00271v1,http://arxiv.org/abs/2508.00271v1,http://arxiv.org/pdf/2508.00271v1,information_retrieval,cs.AI,"In this work, we propose MetaAgent, an agentic paradigm inspired by the
+principle of learning-by-doing, where expertise is developed through hands-on
+practice and continual self-improvement. MetaAgent starts with a minimal
+workflow, equipped only with basic reasoning and adaptive help-seeking
+abilities. When a knowledge gap is encountered, MetaAgent generates natural
+language help requests, which are routed to the most suitable external tool by
+a dedicated tool router. As MetaAgent solves tasks, it continually conducts
+self-reflection and answer verification, distilling actionable experience into
+concise texts that are dynamically incorporated into future task contexts.
+Besides, MetaAgent autonomously builds in-house tools and a persistent
+knowledge base by organizing its tool-use history, further enhancing its
+ability to retrieve and integrate relevant information We term this continual,
+data-driven process as \textit{meta tool learning}, through which MetaAgent
+incrementally refines its reasoning and tool-use strategies, without changing
+model parameters or requiring further post-training. Evaluated on challenging
+knowledge discovery benchmarks, including GAIA, WebWalkerQA, and BrowseCamp,
+MetaAgent consistently outperforms workflow-based baselines and matches or
+exceeds end-to-end trained agents, demonstrating the promise of self-evolving
+agentic systems for robust, general-purpose knowledge discovery. We provide our
+source codes in https://github.com/qhjqhj00/MetaAgent.",https://github.com/qhjqhj00/MetaAgent,"Technical Report, 14 pages"
+Melody-Lyrics Matching with Contrastive Alignment Loss,"Changhong Wang, Michel Olvera, Gaël Richard",2025-07-31,2508.00123v1,http://arxiv.org/abs/2508.00123v1,http://arxiv.org/pdf/2508.00123v1,information_retrieval,eess.AS,"The connection between music and lyrics is far beyond semantic bonds.
+Conceptual pairs in the two modalities such as rhythm and rhyme, note duration
+and syllabic stress, and structure correspondence, raise a compelling yet
+seldom-explored direction in the field of music information retrieval. In this
+paper, we present melody-lyrics matching (MLM), a new task which retrieves
+potential lyrics for a given symbolic melody from text sources. Rather than
+generating lyrics from scratch, MLM essentially exploits the relationships
+between melody and lyrics. We propose a self-supervised representation learning
+framework with contrastive alignment loss for melody and lyrics. This has the
+potential to leverage the abundance of existing songs with paired melody and
+lyrics. No alignment annotations are required. Additionally, we introduce
+sylphone, a novel representation for lyrics at syllable-level activated by
+phoneme identity and vowel stress. We demonstrate that our method can match
+melody with coherent and singable lyrics with empirical results and intuitive
+examples. We open source code and provide matching examples on the companion
+webpage: https://github.com/changhongw/mlm.",https://github.com/changhongw/mlm,"10 pages, 7 figures, 3 tables. This work has been submitted to the
+  IEEE for possible publication"
+Personalized Education with Ranking Alignment Recommendation,"Haipeng Liu, Yuxuan Liu, Ting Long",2025-07-31,2507.23664v1,http://arxiv.org/abs/2507.23664v1,http://arxiv.org/pdf/2507.23664v1,information_retrieval,cs.AI,"Personalized question recommendation aims to guide individual students
+through questions to enhance their mastery of learning targets. Most previous
+methods model this task as a Markov Decision Process and use reinforcement
+learning to solve, but they struggle with efficient exploration, failing to
+identify the best questions for each student during training. To address this,
+we propose Ranking Alignment Recommendation (RAR), which incorporates
+collaborative ideas into the exploration mechanism, enabling more efficient
+exploration within limited training episodes. Experiments show that RAR
+effectively improves recommendation performance, and our framework can be
+applied to any RL-based question recommender. Our code is available in
+https://github.com/wuming29/RAR.git.",https://github.com/wuming29/RAR,
+"Not Just What, But When: Integrating Irregular Intervals to LLM for Sequential Recommendation","Wei-Wei Du, Takuma Udagawa, Kei Tateno",2025-07-31,2507.23209v1,http://arxiv.org/abs/2507.23209v1,http://arxiv.org/pdf/2507.23209v1,information_retrieval,cs.IR,"Time intervals between purchasing items are a crucial factor in sequential
+recommendation tasks, whereas existing approaches focus on item sequences and
+often overlook by assuming the intervals between items are static. However,
+dynamic intervals serve as a dimension that describes user profiling on not
+only the history within a user but also different users with the same item
+history. In this work, we propose IntervalLLM, a novel framework that
+integrates interval information into LLM and incorporates the novel
+interval-infused attention to jointly consider information of items and
+intervals. Furthermore, unlike prior studies that address the cold-start
+scenario only from the perspectives of users and items, we introduce a new
+viewpoint: the interval perspective to serve as an additional metric for
+evaluating recommendation methods on the warm and cold scenarios. Extensive
+experiments on 3 benchmarks with both traditional- and LLM-based baselines
+demonstrate that our IntervalLLM achieves not only 4.4% improvements in average
+but also the best-performing warm and cold scenarios across all users, items,
+and the proposed interval perspectives. In addition, we observe that the cold
+scenario from the interval perspective experiences the most significant
+performance drop among all recommendation methods. This finding underscores the
+necessity of further research on interval-based cold challenges and our
+integration of interval information in the realm of sequential recommendation
+tasks. Our code is available here:
+https://github.com/sony/ds-research-code/tree/master/recsys25-IntervalLLM.",https://github.com/sony/ds-research-code,Accepted by RecSys 2025 short paper track
+Generative Recommendation with Semantic IDs: A Practitioner's Handbook,"Clark Mingxuan Ju, Liam Collins, Leonardo Neves, Bhuvesh Kumar, Louis Yufeng Wang, Tong Zhao, Neil Shah",2025-07-29,2507.22224v1,http://arxiv.org/abs/2507.22224v1,http://arxiv.org/pdf/2507.22224v1,information_retrieval,cs.IR,"Generative recommendation (GR) has gained increasing attention for its
+promising performance compared to traditional models. A key factor contributing
+to the success of GR is the semantic ID (SID), which converts continuous
+semantic representations (e.g., from large language models) into discrete ID
+sequences. This enables GR models with SIDs to both incorporate semantic
+information and learn collaborative filtering signals, while retaining the
+benefits of discrete decoding. However, varied modeling techniques,
+hyper-parameters, and experimental setups in existing literature make direct
+comparisons between GR proposals challenging. Furthermore, the absence of an
+open-source, unified framework hinders systematic benchmarking and extension,
+slowing model iteration. To address this challenge, our work introduces and
+open-sources a framework for Generative Recommendation with semantic ID, namely
+GRID, specifically designed for modularity to facilitate easy component
+swapping and accelerate idea iteration. Using GRID, we systematically
+experiment with and ablate different components of GR models with SIDs on
+public benchmarks. Our comprehensive experiments with GRID reveal that many
+overlooked architectural components in GR models with SIDs substantially impact
+performance. This offers both novel insights and validates the utility of an
+open-source platform for robust benchmarking and GR research advancement. GRID
+is open-sourced at https://github.com/snap-research/GRID.",https://github.com/snap-research/GRID,
+StructText: A Synthetic Table-to-Text Approach for Benchmark Generation with Multi-Dimensional Evaluation,"Satyananda Kashyap, Sola Shirai, Nandana Mihindukulasooriya, Horst Samulowitz",2025-07-28,2507.21340v1,http://arxiv.org/abs/2507.21340v1,http://arxiv.org/pdf/2507.21340v1,information_retrieval,cs.CL,"Extracting structured information from text, such as key-value pairs that
+could augment tabular data, is quite useful in many enterprise use cases.
+Although large language models (LLMs) have enabled numerous automated pipelines
+for converting natural language into structured formats, there is still a lack
+of benchmarks for evaluating their extraction quality, especially in specific
+domains or focused documents specific to a given organization. Building such
+benchmarks by manual annotations is labour-intensive and limits the size and
+scalability of the benchmarks. In this work, we present StructText, an
+end-to-end framework for automatically generating high-fidelity benchmarks for
+key-value extraction from text using existing tabular data. It uses available
+tabular data as structured ground truth, and follows a two-stage
+``plan-then-execute'' pipeline to synthetically generate corresponding
+natural-language text. To ensure alignment between text and structured source,
+we introduce a multi-dimensional evaluation strategy that combines (a)
+LLM-based judgments on factuality, hallucination, and coherence and (b)
+objective extraction metrics measuring numeric and temporal accuracy. We
+evaluated the proposed method on 71,539 examples across 49 datasets. Results
+reveal that while LLMs achieve strong factual accuracy and avoid hallucination,
+they struggle with narrative coherence in producing extractable text. Notably,
+models presume numerical and temporal information with high fidelity yet this
+information becomes embedded in narratives that resist automated extraction. We
+release a framework, including datasets, evaluation tools, and baseline
+extraction systems, to support continued research.",https://github.com/ibm/struct-text,"Data available:
+  https://huggingface.co/datasets/ibm-research/struct-text and code available
+  at: https://github.com/ibm/struct-text"
+CRINN: Contrastive Reinforcement Learning for Approximate Nearest Neighbor Search,"Xiaoya Li, Xiaofei Sun, Albert Wang, Chris Shum, Jiwei Li",2025-08-04,2508.02091v1,http://arxiv.org/abs/2508.02091v1,http://arxiv.org/pdf/2508.02091v1,databases,cs.LG,"Approximate nearest-neighbor search (ANNS) algorithms have become
+increasingly critical for recent AI applications, particularly in
+retrieval-augmented generation (RAG) and agent-based LLM applications. In this
+paper, we present CRINN, a new paradigm for ANNS algorithms. CRINN treats ANNS
+optimization as a reinforcement learning problem where execution speed serves
+as the reward signal. This approach enables the automatic generation of
+progressively faster ANNS implementations while maintaining accuracy
+constraints. Our experimental evaluation demonstrates CRINN's effectiveness
+across six widely-used NNS benchmark datasets. When compared against
+state-of-the-art open-source ANNS algorithms, CRINN achieves best performance
+on three of them (GIST-960-Euclidean, MNIST-784-Euclidean, and
+GloVe-25-angular), and tied for first place on two of them (SIFT-128-Euclidean
+and GloVe-25-angular). The implications of CRINN's success reach well beyond
+ANNS optimization: It validates that LLMs augmented with reinforcement learning
+can function as an effective tool for automating sophisticated algorithmic
+optimizations that demand specialized knowledge and labor-intensive manual
+refinement.Code can be found at https://github.com/deepreinforce-ai/CRINN",https://github.com/deepreinforce-ai/CRINN,Preprint Version
+DBAIOps: A Reasoning LLM-Enhanced Database Operation and Maintenance System using Knowledge Graphs,"Wei Zhou, Peng Sun, Xuanhe Zhou, Qianglei Zang, Ji Xu, Tieying Zhang, Guoliang Li, Fan Wu",2025-08-02,2508.01136v1,http://arxiv.org/abs/2508.01136v1,http://arxiv.org/pdf/2508.01136v1,databases,cs.DB,"The operation and maintenance (O&M) of database systems is critical to
+ensuring system availability and performance, typically requiring expert
+experience (e.g., identifying metric-to-anomaly relations) for effective
+diagnosis and recovery. However, existing automatic database O&M methods,
+including commercial products, cannot effectively utilize expert experience. On
+the one hand, rule-based methods only support basic O&M tasks (e.g.,
+metric-based anomaly detection), which are mostly numerical equations and
+cannot effectively incorporate literal O&M experience (e.g., troubleshooting
+guidance in manuals). On the other hand, LLM-based methods, which retrieve
+fragmented information (e.g., standard documents + RAG), often generate
+inaccurate or generic results. To address these limitations, we present
+DBAIOps, a novel hybrid database O&M system that combines reasoning LLMs with
+knowledge graphs to achieve DBA-style diagnosis. First, DBAIOps introduces a
+heterogeneous graph model for representing the diagnosis experience, and
+proposes a semi-automatic graph construction algorithm to build that graph from
+thousands of documents. Second, DBAIOps develops a collection of (800+)
+reusable anomaly models that identify both directly alerted metrics and
+implicitly correlated experience and metrics. Third, for each anomaly, DBAIOps
+proposes a two-stage graph evolution mechanism to explore relevant diagnosis
+paths and identify missing relations automatically. It then leverages a
+reasoning LLM (e.g., DeepSeek-R1) to infer root causes and generate clear
+diagnosis reports for both DBAs and common users. Our evaluation over four
+mainstream database systems (Oracle, MySQL, PostgreSQL, and DM8) demonstrates
+that DBAIOps outperforms state-of-the-art baselines, 34.85% and 47.22% higher
+in root cause and human evaluation accuracy, respectively.",https://github.com/weAIDB/DBAIOps,"DBAIOps supports 25 database systems and has been deployed in 20
+  real-world scenarios, covering domains like finance, energy, and healthcare.
+  See website at: https://www.dbaiops.com; See code at:
+  https://github.com/weAIDB/DBAIOps/"
+StructText: A Synthetic Table-to-Text Approach for Benchmark Generation with Multi-Dimensional Evaluation,"Satyananda Kashyap, Sola Shirai, Nandana Mihindukulasooriya, Horst Samulowitz",2025-07-28,2507.21340v1,http://arxiv.org/abs/2507.21340v1,http://arxiv.org/pdf/2507.21340v1,databases,cs.CL,"Extracting structured information from text, such as key-value pairs that
+could augment tabular data, is quite useful in many enterprise use cases.
+Although large language models (LLMs) have enabled numerous automated pipelines
+for converting natural language into structured formats, there is still a lack
+of benchmarks for evaluating their extraction quality, especially in specific
+domains or focused documents specific to a given organization. Building such
+benchmarks by manual annotations is labour-intensive and limits the size and
+scalability of the benchmarks. In this work, we present StructText, an
+end-to-end framework for automatically generating high-fidelity benchmarks for
+key-value extraction from text using existing tabular data. It uses available
+tabular data as structured ground truth, and follows a two-stage
+``plan-then-execute'' pipeline to synthetically generate corresponding
+natural-language text. To ensure alignment between text and structured source,
+we introduce a multi-dimensional evaluation strategy that combines (a)
+LLM-based judgments on factuality, hallucination, and coherence and (b)
+objective extraction metrics measuring numeric and temporal accuracy. We
+evaluated the proposed method on 71,539 examples across 49 datasets. Results
+reveal that while LLMs achieve strong factual accuracy and avoid hallucination,
+they struggle with narrative coherence in producing extractable text. Notably,
+models presume numerical and temporal information with high fidelity yet this
+information becomes embedded in narratives that resist automated extraction. We
+release a framework, including datasets, evaluation tools, and baseline
+extraction systems, to support continued research.",https://github.com/ibm/struct-text,"Data available:
+  https://huggingface.co/datasets/ibm-research/struct-text and code available
+  at: https://github.com/ibm/struct-text"
+MH-GIN: Multi-scale Heterogeneous Graph-based Imputation Network for AIS Data (Extended Version),"Hengyu Liu, Tianyi Li, Yuqiang He, Kristian Torp, Yushuai Li, Christian S. Jensen",2025-07-27,2507.20362v1,http://arxiv.org/abs/2507.20362v1,http://arxiv.org/pdf/2507.20362v1,databases,cs.LG,"Location-tracking data from the Automatic Identification System, much of
+which is publicly available, plays a key role in a range of maritime safety and
+monitoring applications. However, the data suffers from missing values that
+hamper downstream applications. Imputing the missing values is challenging
+because the values of different heterogeneous attributes are updated at diverse
+rates, resulting in the occurrence of multi-scale dependencies among
+attributes. Existing imputation methods that assume similar update rates across
+attributes are unable to capture and exploit such dependencies, limiting their
+imputation accuracy. We propose MH-GIN, a Multi-scale Heterogeneous Graph-based
+Imputation Network that aims improve imputation accuracy by capturing
+multi-scale dependencies. Specifically, MH-GIN first extracts multi-scale
+temporal features for each attribute while preserving their intrinsic
+heterogeneous characteristics. Then, it constructs a multi-scale heterogeneous
+graph to explicitly model dependencies between heterogeneous attributes to
+enable more accurate imputation of missing values through graph propagation.
+Experimental results on two real-world datasets find that MH-GIN is capable of
+an average 57% reduction in imputation errors compared to state-of-the-art
+methods, while maintaining computational efficiency. The source code and
+implementation details of MH-GIN are publicly available
+https://github.com/hyLiu1994/MH-GIN.",https://github.com/hyLiu1994/MH-GIN,"18 pages, 4 figures"
+Graph-Structured Data Analysis of Component Failure in Autonomous Cargo Ships Based on Feature Fusion,"Zizhao Zhang, Tianxiang Zhao, Yu Sun, Liping Sun, Jichuan Kang",2025-07-18,2507.13721v1,http://arxiv.org/abs/2507.13721v1,http://arxiv.org/pdf/2507.13721v1,databases,cs.LG,"To address the challenges posed by cascading reactions caused by component
+failures in autonomous cargo ships (ACS) and the uncertainties in emergency
+decision-making, this paper proposes a novel hybrid feature fusion framework
+for constructing a graph-structured dataset of failure modes. By employing an
+improved cuckoo search algorithm (HN-CSA), the literature retrieval efficiency
+is significantly enhanced, achieving improvements of 7.1% and 3.4% compared to
+the NSGA-II and CSA search algorithms, respectively. A hierarchical feature
+fusion framework is constructed, using Word2Vec encoding to encode
+subsystem/component features, BERT-KPCA to process failure modes/reasons, and
+Sentence-BERT to quantify the semantic association between failure impact and
+emergency decision-making. The dataset covers 12 systems, 1,262 failure modes,
+and 6,150 propagation paths. Validation results show that the GATE-GNN model
+achieves a classification accuracy of 0.735, comparable to existing benchmarks.
+Additionally, a silhouette coefficient of 0.641 indicates that the features are
+highly distinguishable. In the label prediction results, the Shore-based
+Meteorological Service System achieved an F1 score of 0.93, demonstrating high
+prediction accuracy. This paper not only provides a solid foundation for
+failure analysis in autonomous cargo ships but also offers reliable support for
+fault diagnosis, risk assessment, and intelligent decision-making systems. The
+link to the dataset is
+https://github.com/wojiufukele/Graph-Structured-about-CSA.",https://github.com/wojiufukele/Graph-Structured-about-CSA,
+TOPJoin: A Context-Aware Multi-Criteria Approach for Joinable Column Search,"Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas",2025-07-15,2507.11505v1,http://arxiv.org/abs/2507.11505v1,http://arxiv.org/pdf/2507.11505v1,databases,cs.DB,"One of the major challenges in enterprise data analysis is the task of
+finding joinable tables that are conceptually related and provide meaningful
+insights. Traditionally, joinable tables have been discovered through a search
+for similar columns, where two columns are considered similar syntactically if
+there is a set overlap or they are considered similar semantically if either
+the column embeddings or value embeddings are closer in the embedding space.
+However, for enterprise data lakes, column similarity is not sufficient to
+identify joinable columns and tables. The context of the query column is
+important. Hence, in this work, we first define context-aware column
+joinability. Then we propose a multi-criteria approach, called TOPJoin, for
+joinable column search. We evaluate TOPJoin against existing join search
+baselines over one academic and one real-world join search benchmark. Through
+experiments, we find that TOPJoin performs better on both benchmarks than the
+baselines.",https://github.com/IBM/ContextAwareJoin,"VLDB 2025 Workshop: Tabular Data Analysis (TaDA); The source code,
+  data, and/or other artifacts have been made available at
+  https://github.com/IBM/ContextAwareJoin"
