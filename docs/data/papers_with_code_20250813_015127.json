@@ -1,0 +1,240 @@
+[
+  {
+    "title": "HierSearch: A Hierarchical Enterprise Deep Search Framework Integrating Local and Web Searches",
+    "authors": "Jiejun Tan, Zhicheng Dou, Yan Yu, Jiehan Cheng, Qiang Ju, Jian Xie, Ji-Rong Wen",
+    "published": "2025-08-11",
+    "arxiv_id": "2508.08088v1",
+    "url": "http://arxiv.org/abs/2508.08088v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.08088v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recently, large reasoning models have demonstrated strong mathematical and\ncoding abilities, and deep search leverages their reasoning capabilities in\nchallenging information retrieval tasks. Existing deep search works are\ngenerally limited to a single knowledge source, either local or the Web.\nHowever, enterprises often require private deep search systems that can\nleverage search tools over both local and the Web corpus. Simply training an\nagent equipped with multiple search tools using flat reinforcement learning\n(RL) is a straightforward idea, but it has problems such as low training data\nefficiency and poor mastery of complex tools. To address the above issue, we\npropose a hierarchical agentic deep search framework, HierSearch, trained with\nhierarchical RL. At the low level, a local deep search agent and a Web deep\nsearch agent are trained to retrieve evidence from their corresponding domains.\nAt the high level, a planner agent coordinates low-level agents and provides\nthe final answer. Moreover, to prevent direct answer copying and error\npropagation, we design a knowledge refiner that filters out hallucinations and\nirrelevant evidence returned by low-level agents. Experiments show that\nHierSearch achieves better performance compared to flat RL, and outperforms\nvarious deep search and multi-source retrieval-augmented generation baselines\nin six benchmarks across general, finance, and medical domains.",
+    "code_links": [
+      "https://github.com/plageon/HierSearch"
+    ],
+    "comment": "Code and datasets are available at\n  https://github.com/plageon/HierSearch"
+  },
+  {
+    "title": "Multi-modal Adaptive Mixture of Experts for Cold-start Recommendation",
+    "authors": "Van-Khang Nguyen, Duc-Hoang Pham, Huy-Son Nguyen, Cam-Van Thi Nguyen, Hoang-Quynh Le, Duc-Trong Le",
+    "published": "2025-08-11",
+    "arxiv_id": "2508.08042v1",
+    "url": "http://arxiv.org/abs/2508.08042v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.08042v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommendation systems have faced significant challenges in cold-start\nscenarios, where new items with a limited history of interaction need to be\neffectively recommended to users. Though multimodal data (e.g., images, text,\naudio, etc.) offer rich information to address this issue, existing approaches\noften employ simplistic integration methods such as concatenation, average\npooling, or fixed weighting schemes, which fail to capture the complex\nrelationships between modalities. Our study proposes a novel Mixture of Experts\n(MoE) framework for multimodal cold-start recommendation, named MAMEX, which\ndynamically leverages latent representation from different modalities. MAMEX\nutilizes modality-specific expert networks and introduces a learnable gating\nmechanism that adaptively weights the contribution of each modality based on\nits content characteristics. This approach enables MAMEX to emphasize the most\ninformative modalities for each item while maintaining robustness when certain\nmodalities are less relevant or missing. Extensive experiments on benchmark\ndatasets show that MAMEX outperforms state-of-the-art methods in cold-start\nscenarios, with superior accuracy and adaptability. For reproducibility, the\ncode has been made available on Github https://github.com/L2R-UET/MAMEX.",
+    "code_links": [
+      "https://github.com/L2R-UET/MAMEX"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Arce: Augmented Roberta with Contextualized Elucidations for Ner in Automated Rule Checking",
+    "authors": "Jian Chen, Jinbao Tian, Yankui Li, Zhou Li",
+    "published": "2025-08-10",
+    "arxiv_id": "2508.07286v1",
+    "url": "http://arxiv.org/abs/2508.07286v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.07286v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Accurate information extraction from specialized texts is a critical\nchallenge, particularly for named entity recognition (NER) in the architecture,\nengineering, and construction (AEC) domain to support automated rule checking\n(ARC). The performance of standard pre-trained models is often constrained by\nthe domain gap, as they struggle to interpret the specialized terminology and\ncomplex relational contexts inherent in AEC texts. Although this issue can be\nmitigated by further pre-training on large, human-curated domain corpora, as\nexemplified by methods like ARCBERT, this approach is both labor-intensive and\ncost-prohibitive. Consequently, leveraging large language models (LLMs) for\nautomated knowledge generation has emerged as a promising alternative. However,\nthe optimal strategy for generating knowledge that can genuinely enhance\nsmaller, efficient models remains an open question. To address this, we propose\nARCE (augmented RoBERTa with contextualized elucidations), a novel approach\nthat systematically explores and optimizes this generation process. ARCE\nemploys an LLM to first generate a corpus of simple, direct explanations, which\nwe term Cote, and then uses this corpus to incrementally pre-train a RoBERTa\nmodel prior to its fine-tuning on the downstream task. Our extensive\nexperiments show that ARCE establishes a new state-of-the-art on a benchmark\nAEC dataset, achieving a Macro-F1 score of 77.20%. This result also reveals a\nkey finding: simple, explanation-based knowledge proves surprisingly more\neffective than complex, role-based rationales for this task. The code is\npublicly available at:https://github.com/nxcc-lab/ARCE.",
+    "code_links": [
+      "https://github.com/nxcc-lab/ARCE"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability",
+    "authors": "Wenhan Liu, Xinyu Ma, Weiwei Sun, Yutao Zhu, Yuchen Li, Dawei Yin, Zhicheng Dou",
+    "published": "2025-08-09",
+    "arxiv_id": "2508.07050v1",
+    "url": "http://arxiv.org/abs/2508.07050v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.07050v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Model (LLM) based listwise ranking has shown superior\nperformance in many passage ranking tasks. With the development of Large\nReasoning Models, many studies have demonstrated that step-by-step reasoning\nduring test-time helps improve listwise ranking performance. However, due to\nthe scarcity of reasoning-intensive training data, existing rerankers perform\npoorly in many complex ranking scenarios and the ranking ability of\nreasoning-intensive rerankers remains largely underdeveloped. In this paper, we\nfirst propose an automated reasoning-intensive training data synthesis\nframework, which sources training queries and passages from diverse domains and\napplies DeepSeek-R1 to generate high-quality training labels. A\nself-consistency data filtering mechanism is designed to ensure the data\nquality. To empower the listwise reranker with strong reasoning ability, we\nfurther propose a two-stage post-training approach, which includes a cold-start\nsupervised fine-tuning (SFT) stage for reasoning pattern learning and a\nreinforcement learning (RL) stage for further ranking ability enhancement.\nDuring the RL stage, based on the nature of listwise ranking, we design a\nmulti-view ranking reward, which is more effective than a ranking metric-based\nreward. Extensive experiments demonstrate that our trained reasoning-intensive\nreranker \\textbf{ReasonRank} outperforms existing baselines significantly and\nalso achieves much lower latency than pointwise reranker Rank1. \\textbf{Through\nfurther experiments, our ReasonRank has achieved state-of-the-art (SOTA)\nperformance 40.6 on the BRIGHT\nleaderboard\\footnote{https://brightbenchmark.github.io/}.} Our codes are\navailable at https://github.com/8421BCD/ReasonRank.",
+    "code_links": [
+      "https://github.com/8421BCD/ReasonRank"
+    ],
+    "comment": "21 pages"
+  },
+  {
+    "title": "eSASRec: Enhancing Transformer-based Recommendations in a Modular Fashion",
+    "authors": "Daria Tikhonovich, Nikita Zelinskiy, Aleksandr V. Petrov, Mayya Spirina, Andrei Semenov, Andrey V. Savchenko, Sergei Kuliev",
+    "published": "2025-08-08",
+    "arxiv_id": "2508.06450v1",
+    "url": "http://arxiv.org/abs/2508.06450v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.06450v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Since their introduction, Transformer-based models, such as SASRec and\nBERT4Rec, have become common baselines for sequential recommendations,\nsurpassing earlier neural and non-neural methods. A number of following\npublications have shown that the effectiveness of these models can be improved\nby, for example, slightly updating the architecture of the Transformer layers,\nusing better training objectives, and employing improved loss functions.\nHowever, the additivity of these modular improvements has not been\nsystematically benchmarked - this is the gap we aim to close in this paper.\nThrough our experiments, we identify a very strong model that uses SASRec's\ntraining objective, LiGR Transformer layers, and Sampled Softmax Loss. We call\nthis combination eSASRec (Enhanced SASRec). While we primarily focus on\nrealistic, production-like evaluation, in our preliminarily study we find that\ncommon academic benchmarks show eSASRec to be 23% more effective compared to\nthe most recent state-of-the-art models, such as ActionPiece. In our main\nproduction-like benchmark, eSASRec resides on the Pareto frontier in terms of\nthe accuracy-coverage tradeoff (alongside the recent industrial models HSTU and\nFuXi. As the modifications compared to the original SASRec are relatively\nstraightforward and no extra features are needed (such as timestamps in HSTU),\nwe believe that eSASRec can be easily integrated into existing recommendation\npipelines and can can serve as a strong yet very simple baseline for emerging\ncomplicated algorithms. To facilitate this, we provide the open-source\nimplementations for our models and benchmarks in repository\nhttps://github.com/blondered/transformer_benchmark",
+    "code_links": [
+      "https://github.com/blondered/transformer_benchmark"
+    ],
+    "comment": "Accepted at ACM RecSys 2025"
+  },
+  {
+    "title": "Balancing Accuracy and Novelty with Sub-Item Popularity",
+    "authors": "Chiara Mallamaci, Aleksandr Vladimirovich Petrov, Alberto Carlo Maria Mancino, Vito Walter Anelli, Tommaso Di Noia, Craig Macdonald",
+    "published": "2025-08-07",
+    "arxiv_id": "2508.05198v1",
+    "url": "http://arxiv.org/abs/2508.05198v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.05198v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In the realm of music recommendation, sequential recommenders have shown\npromise in capturing the dynamic nature of music consumption. A key\ncharacteristic of this domain is repetitive listening, where users frequently\nreplay familiar tracks. To capture these repetition patterns, recent research\nhas introduced Personalised Popularity Scores (PPS), which quantify\nuser-specific preferences based on historical frequency. While PPS enhances\nrelevance in recommendation, it often reinforces already-known content,\nlimiting the system's ability to surface novel or serendipitous items - key\nelements for fostering long-term user engagement and satisfaction. To address\nthis limitation, we build upon RecJPQ, a Transformer-based framework initially\ndeveloped to improve scalability in large-item catalogues through sub-item\ndecomposition. We repurpose RecJPQ's sub-item architecture to model\npersonalised popularity at a finer granularity. This allows us to capture\nshared repetition patterns across sub-embeddings - latent structures not\naccessible through item-level popularity alone. We propose a novel integration\nof sub-ID-level personalised popularity within the RecJPQ framework, enabling\nexplicit control over the trade-off between accuracy and personalised novelty.\nOur sub-ID-level PPS method (sPPS) consistently outperforms item-level PPS by\nachieving significantly higher personalised novelty without compromising\nrecommendation accuracy. Code and experiments are publicly available at\nhttps://github.com/sisinflab/Sub-id-Popularity.",
+    "code_links": [
+      "https://github.com/sisinflab/Sub-id-Popularity"
+    ],
+    "comment": null
+  },
+  {
+    "title": "HiD-VAE: Interpretable Generative Recommendation via Hierarchical and Disentangled Semantic IDs",
+    "authors": "Dengzhao Fang, Jingtong Gao, Chengcheng Zhu, Yu Li, Xiangyu Zhao, Yi Chang",
+    "published": "2025-08-06",
+    "arxiv_id": "2508.04618v1",
+    "url": "http://arxiv.org/abs/2508.04618v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.04618v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems are indispensable for helping users navigate the immense\nitem catalogs of modern online platforms. Recently, generative recommendation\nhas emerged as a promising paradigm, unifying the conventional\nretrieve-and-rank pipeline into an end-to-end model capable of dynamic\ngeneration. However, existing generative methods are fundamentally constrained\nby their unsupervised tokenization, which generates semantic IDs suffering from\ntwo critical flaws: (1) they are semantically flat and uninterpretable, lacking\na coherent hierarchy, and (2) they are prone to representation entanglement\n(i.e., ``ID collisions''), which harms recommendation accuracy and diversity.\nTo overcome these limitations, we propose HiD-VAE, a novel framework that\nlearns hierarchically disentangled item representations through two core\ninnovations. First, HiD-VAE pioneers a hierarchically-supervised quantization\nprocess that aligns discrete codes with multi-level item tags, yielding more\nuniform and disentangled IDs. Crucially, the trained codebooks can predict\nhierarchical tags, providing a traceable and interpretable semantic path for\neach recommendation. Second, to combat representation entanglement, HiD-VAE\nincorporates a novel uniqueness loss that directly penalizes latent space\noverlap. This mechanism not only resolves the critical ID collision problem but\nalso promotes recommendation diversity by ensuring a more comprehensive\nutilization of the item representation space. These high-quality, disentangled\nIDs provide a powerful foundation for downstream generative models. Extensive\nexperiments on three public benchmarks validate HiD-VAE's superior performance\nagainst state-of-the-art methods. The code is available at\nhttps://anonymous.4open.science/r/HiD-VAE-84B2.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "Audio Does Matter: Importance-Aware Multi-Granularity Fusion for Video Moment Retrieval",
+    "authors": "Junan Lin, Daizong Liu, Xianke Chen, Xiaoye Qu, Xun Yang, Jixiang Zhu, Sanyuan Zhang, Jianfeng Dong",
+    "published": "2025-08-06",
+    "arxiv_id": "2508.04273v1",
+    "url": "http://arxiv.org/abs/2508.04273v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.04273v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Video Moment Retrieval (VMR) aims to retrieve a specific moment semantically\nrelated to the given query. To tackle this task, most existing VMR methods\nsolely focus on the visual and textual modalities while neglecting the\ncomplementary but important audio modality. Although a few recent works try to\ntackle the joint audio-vision-text reasoning, they treat all modalities equally\nand simply embed them without fine-grained interaction for moment retrieval.\nThese designs are counter-practical as: Not all audios are helpful for video\nmoment retrieval, and the audio of some videos may be complete noise or\nbackground sound that is meaningless to the moment determination. To this end,\nwe propose a novel Importance-aware Multi-Granularity fusion model (IMG), which\nlearns to dynamically and selectively aggregate the audio-vision-text contexts\nfor VMR. Specifically, after integrating the textual guidance with vision and\naudio separately, we first design a pseudo-label-supervised audio importance\npredictor that predicts the importance score of the audio, and accordingly\nassigns weights to mitigate the interference caused by noisy audio. Then, we\ndesign a multi-granularity audio fusion module that adaptively fuses audio and\nvisual modalities at local-, event-, and global-level, fully capturing their\ncomplementary contexts. We further propose a cross-modal knowledge distillation\nstrategy to address the challenge of missing audio modality during inference.\nTo evaluate our method, we further construct a new VMR dataset, i.e.,\nCharades-AudioMatter, where audio-related samples are manually selected and\nre-organized from the original Charades-STA to validate the model's capability\nin utilizing audio modality. Extensive experiments validate the effectiveness\nof our method, achieving state-of-the-art with audio-video fusion in VMR\nmethods. Our code is available at https://github.com/HuiGuanLab/IMG.",
+    "code_links": [
+      "https://github.com/HuiGuanLab/IMG"
+    ],
+    "comment": "Accepted to ACM MM 2025"
+  },
+  {
+    "title": "I$^3$-MRec: Invariant Learning with Information Bottleneck for Incomplete Modality Recommendation",
+    "authors": "Huilin Chen, Miaomiao Cai, Fan Liu, Zhiyong Cheng, Richang Hong, Meng Wang",
+    "published": "2025-08-06",
+    "arxiv_id": "2508.04247v1",
+    "url": "http://arxiv.org/abs/2508.04247v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.04247v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal recommender systems (MRS) improve recommendation performance by\nintegrating diverse semantic information from multiple modalities. However, the\nassumption of the availability of all modalities rarely holds in practice due\nto missing images, incomplete descriptions, or inconsistent user content. These\nchallenges significantly degrade the robustness and generalization capabilities\nof current models. To address these challenges, we introduce a novel method\ncalled \\textbf{I$^3$-MRec}, which uses \\textbf{I}nvariant learning with\n\\textbf{I}nformation bottleneck principle for \\textbf{I}ncomplete\n\\textbf{M}odality \\textbf{Rec}ommendation. To achieve robust performance in\nmissing modality scenarios, I$^3$-MRec enforces two pivotal properties: (i)\ncross-modal preference invariance, which ensures consistent user preference\nmodeling across varying modality environments, and (ii) compact yet effective\nmodality representation, which filters out task-irrelevant modality information\nwhile maximally preserving essential features relevant to recommendation. By\ntreating each modality as a distinct semantic environment, I$^3$-MRec employs\ninvariant risk minimization (IRM) to learn modality-specific item\nrepresentations. In parallel, a missing-aware fusion module grounded in the\nInformation Bottleneck (IB) principle extracts compact and effective item\nembeddings by suppressing modality noise and preserving core user preference\nsignals. Extensive experiments conducted on three real-world datasets\ndemonstrate that I$^3$-MRec consistently outperforms existing state-of-the-art\nMRS methods across various modality-missing scenarios, highlighting its\neffectiveness and robustness in practical applications. The code and processed\ndatasets are released at https://github.com/HuilinChenJN/I3-MRec.",
+    "code_links": [
+      "https://github.com/HuilinChenJN/I3-MRec"
+    ],
+    "comment": "ACM Multimedia 2025 Accepted"
+  },
+  {
+    "title": "Prototype-Driven Structure Synergy Network for Remote Sensing Images Segmentation",
+    "authors": "Junyi Wang, Jinjiang Li, Guodong Fan, Yakun Ju, Xiang Fang, Alex C. Kot",
+    "published": "2025-08-06",
+    "arxiv_id": "2508.04022v1",
+    "url": "http://arxiv.org/abs/2508.04022v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.04022v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "In the semantic segmentation of remote sensing images, acquiring complete\nground objects is critical for achieving precise analysis. However, this task\nis severely hindered by two major challenges: high intra-class variance and\nhigh inter-class similarity. Traditional methods often yield incomplete\nsegmentation results due to their inability to effectively unify class\nrepresentations and distinguish between similar features. Even emerging\nclass-guided approaches are limited by coarse class prototype representations\nand a neglect of target structural information.\n  Therefore, this paper proposes a Prototype-Driven Structure Synergy Network\n(PDSSNet). The design of this network is based on a core concept, a complete\nground object is jointly defined by its invariant class semantics and its\nvariant spatial structure. To implement this, we have designed three key\nmodules. First, the Adaptive Prototype Extraction Module (APEM) ensures\nsemantic accuracy from the source by encoding the ground truth to extract\nunbiased class prototypes. Subsequently, the designed Semantic-Structure\nCoordination Module (SSCM) follows a hierarchical semantics-first,\nstructure-second principle. This involves first establishing a global semantic\ncognition, then leveraging structural information to constrain and refine the\nsemantic representation, thereby ensuring the integrity of class information.\nFinally, the Channel Similarity Adjustment Module (CSAM) employs a dynamic\nstep-size adjustment mechanism to focus on discriminative features between\nclasses.\n  Extensive experiments demonstrate that PDSSNet outperforms state-of-the-art\nmethods. The source code is available at\nhttps://github.com/wangjunyi-1/PDSSNet.",
+    "code_links": [
+      "https://github.com/wangjunyi-1/PDSSNet"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MultiRAG: A Knowledge-guided Framework for Mitigating Hallucination in Multi-source Retrieval Augmented Generation",
+    "authors": "Wenlong Wu, Haofen Wang, Bohan Li, Peixuan Huang, Xinzhe Zhao, Lei Liang",
+    "published": "2025-08-05",
+    "arxiv_id": "2508.03553v1",
+    "url": "http://arxiv.org/abs/2508.03553v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.03553v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval Augmented Generation (RAG) has emerged as a promising solution to\naddress hallucination issues in Large Language Models (LLMs). However, the\nintegration of multiple retrieval sources, while potentially more informative,\nintroduces new challenges that can paradoxically exacerbate hallucination\nproblems. These challenges manifest primarily in two aspects: the sparse\ndistribution of multi-source data that hinders the capture of logical\nrelationships and the inherent inconsistencies among different sources that\nlead to information conflicts. To address these challenges, we propose\nMultiRAG, a novel framework designed to mitigate hallucination in multi-source\nretrieval-augmented generation through knowledge-guided approaches. Our\nframework introduces two key innovations: (1) a knowledge construction module\nthat employs multi-source line graphs to efficiently aggregate logical\nrelationships across different knowledge sources, effectively addressing the\nsparse data distribution issue; and (2) a sophisticated retrieval module that\nimplements a multi-level confidence calculation mechanism, performing both\ngraph-level and node-level assessments to identify and eliminate unreliable\ninformation nodes, thereby reducing hallucinations caused by inter-source\ninconsistencies. Extensive experiments on four multi-domain query datasets and\ntwo multi-hop QA datasets demonstrate that MultiRAG significantly enhances the\nreliability and efficiency of knowledge retrieval in complex multi-source\nscenarios. \\textcolor{blue}{Our code is available in\nhttps://github.com/wuwenlong123/MultiRAG.",
+    "code_links": [
+      "https://github.com/wuwenlong123/MultiRAG"
+    ],
+    "comment": "Accepted by ICDE 2025 Research Paper"
+  },
+  {
+    "title": "fact check AI at SemEval-2025 Task 7: Multilingual and Crosslingual Fact-checked Claim Retrieval",
+    "authors": "Pranshu Rastogi",
+    "published": "2025-08-05",
+    "arxiv_id": "2508.03475v1",
+    "url": "http://arxiv.org/abs/2508.03475v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.03475v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "SemEval-2025 Task 7: Multilingual and Crosslingual Fact-Checked Claim\nRetrieval is approached as a Learning-to-Rank task using a bi-encoder model\nfine-tuned from a pre-trained transformer optimized for sentence similarity.\nTraining used both the source languages and their English translations for\nmultilingual retrieval and only English translations for cross-lingual\nretrieval. Using lightweight models with fewer than 500M parameters and\ntraining on Kaggle T4 GPUs, the method achieved 92% Success@10 in multilingual\nand 80% Success@10 in 5th in crosslingual and 10th in multilingual tracks.",
+    "code_links": [
+      "https://github.com/pranshurastogi29/SemEval-2025-ACL-Multi-and-Crosslingual-Retrieval-using-Bi-encoders"
+    ],
+    "comment": "7 pages, 6 tables. Code available at\n  https://github.com/pranshurastogi29/SemEval-2025-ACL-Multi-and-Crosslingual-Retrieval-using-Bi-encoders"
+  },
+  {
+    "title": "CRINN: Contrastive Reinforcement Learning for Approximate Nearest Neighbor Search",
+    "authors": "Xiaoya Li, Xiaofei Sun, Albert Wang, Chris Shum, Jiwei Li",
+    "published": "2025-08-04",
+    "arxiv_id": "2508.02091v1",
+    "url": "http://arxiv.org/abs/2508.02091v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.02091v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Approximate nearest-neighbor search (ANNS) algorithms have become\nincreasingly critical for recent AI applications, particularly in\nretrieval-augmented generation (RAG) and agent-based LLM applications. In this\npaper, we present CRINN, a new paradigm for ANNS algorithms. CRINN treats ANNS\noptimization as a reinforcement learning problem where execution speed serves\nas the reward signal. This approach enables the automatic generation of\nprogressively faster ANNS implementations while maintaining accuracy\nconstraints. Our experimental evaluation demonstrates CRINN's effectiveness\nacross six widely-used NNS benchmark datasets. When compared against\nstate-of-the-art open-source ANNS algorithms, CRINN achieves best performance\non three of them (GIST-960-Euclidean, MNIST-784-Euclidean, and\nGloVe-25-angular), and tied for first place on two of them (SIFT-128-Euclidean\nand GloVe-25-angular). The implications of CRINN's success reach well beyond\nANNS optimization: It validates that LLMs augmented with reinforcement learning\ncan function as an effective tool for automating sophisticated algorithmic\noptimizations that demand specialized knowledge and labor-intensive manual\nrefinement.Code can be found at https://github.com/deepreinforce-ai/CRINN",
+    "code_links": [
+      "https://github.com/deepreinforce-ai/CRINN"
+    ],
+    "comment": "Preprint Version"
+  },
+  {
+    "title": "DBAIOps: A Reasoning LLM-Enhanced Database Operation and Maintenance System using Knowledge Graphs",
+    "authors": "Wei Zhou, Peng Sun, Xuanhe Zhou, Qianglei Zang, Ji Xu, Tieying Zhang, Guoliang Li, Fan Wu",
+    "published": "2025-08-02",
+    "arxiv_id": "2508.01136v1",
+    "url": "http://arxiv.org/abs/2508.01136v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.01136v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The operation and maintenance (O&M) of database systems is critical to\nensuring system availability and performance, typically requiring expert\nexperience (e.g., identifying metric-to-anomaly relations) for effective\ndiagnosis and recovery. However, existing automatic database O&M methods,\nincluding commercial products, cannot effectively utilize expert experience. On\nthe one hand, rule-based methods only support basic O&M tasks (e.g.,\nmetric-based anomaly detection), which are mostly numerical equations and\ncannot effectively incorporate literal O&M experience (e.g., troubleshooting\nguidance in manuals). On the other hand, LLM-based methods, which retrieve\nfragmented information (e.g., standard documents + RAG), often generate\ninaccurate or generic results. To address these limitations, we present\nDBAIOps, a novel hybrid database O&M system that combines reasoning LLMs with\nknowledge graphs to achieve DBA-style diagnosis. First, DBAIOps introduces a\nheterogeneous graph model for representing the diagnosis experience, and\nproposes a semi-automatic graph construction algorithm to build that graph from\nthousands of documents. Second, DBAIOps develops a collection of (800+)\nreusable anomaly models that identify both directly alerted metrics and\nimplicitly correlated experience and metrics. Third, for each anomaly, DBAIOps\nproposes a two-stage graph evolution mechanism to explore relevant diagnosis\npaths and identify missing relations automatically. It then leverages a\nreasoning LLM (e.g., DeepSeek-R1) to infer root causes and generate clear\ndiagnosis reports for both DBAs and common users. Our evaluation over four\nmainstream database systems (Oracle, MySQL, PostgreSQL, and DM8) demonstrates\nthat DBAIOps outperforms state-of-the-art baselines, 34.85% and 47.22% higher\nin root cause and human evaluation accuracy, respectively.",
+    "code_links": [
+      "https://github.com/weAIDB/DBAIOps"
+    ],
+    "comment": "DBAIOps supports 25 database systems and has been deployed in 20\n  real-world scenarios, covering domains like finance, energy, and healthcare.\n  See website at: https://www.dbaiops.com; See code at:\n  https://github.com/weAIDB/DBAIOps/"
+  },
+  {
+    "title": "StructText: A Synthetic Table-to-Text Approach for Benchmark Generation with Multi-Dimensional Evaluation",
+    "authors": "Satyananda Kashyap, Sola Shirai, Nandana Mihindukulasooriya, Horst Samulowitz",
+    "published": "2025-07-28",
+    "arxiv_id": "2507.21340v1",
+    "url": "http://arxiv.org/abs/2507.21340v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.21340v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Extracting structured information from text, such as key-value pairs that\ncould augment tabular data, is quite useful in many enterprise use cases.\nAlthough large language models (LLMs) have enabled numerous automated pipelines\nfor converting natural language into structured formats, there is still a lack\nof benchmarks for evaluating their extraction quality, especially in specific\ndomains or focused documents specific to a given organization. Building such\nbenchmarks by manual annotations is labour-intensive and limits the size and\nscalability of the benchmarks. In this work, we present StructText, an\nend-to-end framework for automatically generating high-fidelity benchmarks for\nkey-value extraction from text using existing tabular data. It uses available\ntabular data as structured ground truth, and follows a two-stage\n``plan-then-execute'' pipeline to synthetically generate corresponding\nnatural-language text. To ensure alignment between text and structured source,\nwe introduce a multi-dimensional evaluation strategy that combines (a)\nLLM-based judgments on factuality, hallucination, and coherence and (b)\nobjective extraction metrics measuring numeric and temporal accuracy. We\nevaluated the proposed method on 71,539 examples across 49 datasets. Results\nreveal that while LLMs achieve strong factual accuracy and avoid hallucination,\nthey struggle with narrative coherence in producing extractable text. Notably,\nmodels presume numerical and temporal information with high fidelity yet this\ninformation becomes embedded in narratives that resist automated extraction. We\nrelease a framework, including datasets, evaluation tools, and baseline\nextraction systems, to support continued research.",
+    "code_links": [
+      "https://github.com/ibm/struct-text"
+    ],
+    "comment": "Data available:\n  https://huggingface.co/datasets/ibm-research/struct-text and code available\n  at: https://github.com/ibm/struct-text"
+  },
+  {
+    "title": "MH-GIN: Multi-scale Heterogeneous Graph-based Imputation Network for AIS Data (Extended Version)",
+    "authors": "Hengyu Liu, Tianyi Li, Yuqiang He, Kristian Torp, Yushuai Li, Christian S. Jensen",
+    "published": "2025-07-27",
+    "arxiv_id": "2507.20362v1",
+    "url": "http://arxiv.org/abs/2507.20362v1",
+    "pdf_url": "http://arxiv.org/pdf/2507.20362v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Location-tracking data from the Automatic Identification System, much of\nwhich is publicly available, plays a key role in a range of maritime safety and\nmonitoring applications. However, the data suffers from missing values that\nhamper downstream applications. Imputing the missing values is challenging\nbecause the values of different heterogeneous attributes are updated at diverse\nrates, resulting in the occurrence of multi-scale dependencies among\nattributes. Existing imputation methods that assume similar update rates across\nattributes are unable to capture and exploit such dependencies, limiting their\nimputation accuracy. We propose MH-GIN, a Multi-scale Heterogeneous Graph-based\nImputation Network that aims improve imputation accuracy by capturing\nmulti-scale dependencies. Specifically, MH-GIN first extracts multi-scale\ntemporal features for each attribute while preserving their intrinsic\nheterogeneous characteristics. Then, it constructs a multi-scale heterogeneous\ngraph to explicitly model dependencies between heterogeneous attributes to\nenable more accurate imputation of missing values through graph propagation.\nExperimental results on two real-world datasets find that MH-GIN is capable of\nan average 57% reduction in imputation errors compared to state-of-the-art\nmethods, while maintaining computational efficiency. The source code and\nimplementation details of MH-GIN are publicly available\nhttps://github.com/hyLiu1994/MH-GIN.",
+    "code_links": [
+      "https://github.com/hyLiu1994/MH-GIN"
+    ],
+    "comment": "18 pages, 4 figures"
+  }
+]
