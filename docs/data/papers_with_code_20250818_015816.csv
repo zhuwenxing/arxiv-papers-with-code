@@ -1,0 +1,348 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+STEP: Stepwise Curriculum Learning for Context-Knowledge Fusion in Conversational Recommendation,"Zhenye Yang, Jinpeng Chen, Huan Li, Xiongnan Jin, Xuanyang Li, Junwei Zhang, Hongbo Gao, Kaimin Wei, Senzhang Wang",2025-08-14,2508.10669v1,http://arxiv.org/abs/2508.10669v1,http://arxiv.org/pdf/2508.10669v1,information_retrieval,cs.AI,"Conversational recommender systems (CRSs) aim to proactively capture user
+preferences through natural language dialogue and recommend high-quality items.
+To achieve this, CRS gathers user preferences via a dialog module and builds
+user profiles through a recommendation module to generate appropriate
+recommendations. However, existing CRS faces challenges in capturing the deep
+semantics of user preferences and dialogue context. In particular, the
+efficient integration of external knowledge graph (KG) information into
+dialogue generation and recommendation remains a pressing issue. Traditional
+approaches typically combine KG information directly with dialogue content,
+which often struggles with complex semantic relationships, resulting in
+recommendations that may not align with user expectations.
+  To address these challenges, we introduce STEP, a conversational recommender
+centered on pre-trained language models that combines curriculum-guided
+context-knowledge fusion with lightweight task-specific prompt tuning. At its
+heart, an F-Former progressively aligns the dialogue context with
+knowledge-graph entities through a three-stage curriculum, thus resolving
+fine-grained semantic mismatches. The fused representation is then injected
+into the frozen language model via two minimal yet adaptive prefix prompts: a
+conversation prefix that steers response generation toward user intent and a
+recommendation prefix that biases item ranking toward knowledge-consistent
+candidates. This dual-prompt scheme allows the model to share cross-task
+semantics while respecting the distinct objectives of dialogue and
+recommendation. Experimental results show that STEP outperforms mainstream
+methods in the precision of recommendation and dialogue quality in two public
+datasets.",https://github.com/Alex-bupt/STEP,"10 pages; 4 figures; 6 tables; code available at
+  https://github.com/Alex-bupt/STEP"
+FuXi-β: Towards a Lightweight and Fast Large-Scale Generative Recommendation Model,"Yufei Ye, Wei Guo, Hao Wang, Hong Zhu, Yuyang Ye, Yong Liu, Huifeng Guo, Ruiming Tang, Defu Lian, Enhong Chen",2025-08-14,2508.10615v1,http://arxiv.org/abs/2508.10615v1,http://arxiv.org/pdf/2508.10615v1,information_retrieval,cs.IR,"Scaling laws for autoregressive generative recommenders reveal potential for
+larger, more versatile systems but mean greater latency and training costs. To
+accelerate training and inference, we investigated the recent generative
+recommendation models HSTU and FuXi-$\alpha$, identifying two efficiency
+bottlenecks: the indexing operations in relative temporal attention bias and
+the computation of the query-key attention map. Additionally, we observed that
+relative attention bias in self-attention mechanisms can also serve as
+attention maps. Previous works like Synthesizer have shown that alternative
+forms of attention maps can achieve similar performance, naturally raising the
+question of whether some attention maps are redundant. Through empirical
+experiments, we discovered that using the query-key attention map might degrade
+the model's performance in recommendation tasks. To address these bottlenecks,
+we propose a new framework applicable to Transformer-like recommendation
+models. On one hand, we introduce Functional Relative Attention Bias, which
+avoids the time-consuming operations of the original relative attention bias,
+thereby accelerating the process. On the other hand, we remove the query-key
+attention map from the original self-attention layer and design a new
+Attention-Free Token Mixer module. Furthermore, by applying this framework to
+FuXi-$\alpha$, we introduce a new model, FuXi-$\beta$. Experiments across
+multiple datasets demonstrate that FuXi-$\beta$ outperforms previous
+state-of-the-art models and achieves significant acceleration compared to
+FuXi-$\alpha$, while also adhering to the scaling law. Notably, FuXi-$\beta$
+shows an improvement of 27% to 47% in the NDCG@10 metric on large-scale
+industrial datasets compared to FuXi-$\alpha$. Our code is available in a
+public repository: https://github.com/USTC-StarTeam/FuXi-beta",https://github.com/USTC-StarTeam/FuXi-beta,
+Multi-Label Plant Species Prediction with Metadata-Enhanced Multi-Head Vision Transformers,"Hanna Herasimchyk, Robin Labryga, Tomislav Prusina",2025-08-14,2508.10457v1,http://arxiv.org/abs/2508.10457v1,http://arxiv.org/pdf/2508.10457v1,information_retrieval,cs.CV,"We present a multi-head vision transformer approach for multi-label plant
+species prediction in vegetation plot images, addressing the PlantCLEF 2025
+challenge. The task involves training models on single-species plant images
+while testing on multi-species quadrat images, creating a drastic domain shift.
+Our methodology leverages a pre-trained DINOv2 Vision Transformer Base
+(ViT-B/14) backbone with multiple classification heads for species, genus, and
+family prediction, utilizing taxonomic hierarchies. Key contributions include
+multi-scale tiling to capture plants at different scales, dynamic threshold
+optimization based on mean prediction length, and ensemble strategies through
+bagging and Hydra model architectures. The approach incorporates various
+inference techniques including image cropping to remove non-plant artifacts,
+top-n filtering for prediction constraints, and logit thresholding strategies.
+Experiments were conducted on approximately 1.4 million training images
+covering 7,806 plant species. Results demonstrate strong performance, making
+our submission 3rd best on the private leaderboard. Our code is available at
+https://github.com/geranium12/plant-clef-2025/tree/v1.0.0.",https://github.com/geranium12/plant-clef-2025,"Accepted for publication at: LifeCLEF Lab at CLEF 2025 Working Notes,
+  2025, Madrid, Spain"
+TFRank: Think-Free Reasoning Enables Practical Pointwise LLM Ranking,"Yongqi Fan, Xiaoyang Chen, Dezhi Ye, Jie Liu, Haijin Liang, Jin Ma, Ben He, Yingfei Sun, Tong Ruan",2025-08-13,2508.09539v1,http://arxiv.org/abs/2508.09539v1,http://arxiv.org/pdf/2508.09539v1,information_retrieval,cs.IR,"Reasoning-intensive ranking models built on Large Language Models (LLMs) have
+made notable progress, but existing approaches often rely on large-scale LLMs
+and explicit Chain-of-Thought (CoT) reasoning, resulting in high computational
+cost and latency that limit real-world use. To address this, we propose
+\textbf{TFRank}, an efficient pointwise reasoning ranker based on small-scale
+LLMs. To improve ranking performance, TFRank effectively integrates CoT data,
+fine-grained score supervision, and multi-task training. Furthermore, it
+achieves an efficient ``\textbf{T}hink-\textbf{F}ree"" reasoning capability by
+employing a ``think-mode switch'' and pointwise format constraints.
+Specifically, this allows the model to leverage explicit reasoning during
+training while delivering precise relevance scores for complex queries at
+inference without generating any reasoning chains. Experiments show that TFRank
+(e.g., 1.7B) achieves performance comparable to models with four times more
+parameters on the BRIGHT benchmark, and demonstrates strong competitiveness on
+the BEIR benchmark. Further analysis shows that TFRank achieves an effective
+balance between performance and efficiency, providing a practical solution for
+integrating advanced reasoning into real-world systems. Our code and data are
+released in the repository: https://github.com/JOHNNY-fans/TFRank.",https://github.com/JOHNNY-fans/TFRank,
+A Signer-Invariant Conformer and Multi-Scale Fusion Transformer for Continuous Sign Language Recognition,"Md Rezwanul Haque, Md. Milon Islam, S M Taslim Uddin Raju, Fakhri Karray",2025-08-12,2508.09372v1,http://arxiv.org/abs/2508.09372v1,http://arxiv.org/pdf/2508.09372v1,information_retrieval,cs.CV,"Continuous Sign Language Recognition (CSLR) faces multiple challenges,
+including significant inter-signer variability and poor generalization to novel
+sentence structures. Traditional solutions frequently fail to handle these
+issues efficiently. For overcoming these constraints, we propose a
+dual-architecture framework. For the Signer-Independent (SI) challenge, we
+propose a Signer-Invariant Conformer that combines convolutions with multi-head
+self-attention to learn robust, signer-agnostic representations from pose-based
+skeletal keypoints. For the Unseen-Sentences (US) task, we designed a
+Multi-Scale Fusion Transformer with a novel dual-path temporal encoder that
+captures both fine-grained posture dynamics, enabling the model's ability to
+comprehend novel grammatical compositions. Experiments on the challenging
+Isharah-1000 dataset establish a new standard for both CSLR benchmarks. The
+proposed conformer architecture achieves a Word Error Rate (WER) of 13.07% on
+the SI challenge, a reduction of 13.53% from the state-of-the-art. On the US
+task, the transformer model scores a WER of 47.78%, surpassing previous work.
+In the SignEval 2025 CSLR challenge, our team placed 2nd in the US task and 4th
+in the SI task, demonstrating the performance of these models. The findings
+validate our key hypothesis: that developing task-specific networks designed
+for the particular challenges of CSLR leads to considerable performance
+improvements and establishes a new baseline for further research. The source
+code is available at: https://github.com/rezwanh001/MSLR-Pose86K-CSLR-Isharah.",https://github.com/rezwanh001/MSLR-Pose86K-CSLR-Isharah,"Accepted for the IEEE/CVF International Conference on Computer Vision
+  (ICCV), Honolulu, Hawaii, USA. 1st MSLR Workshop 2025"
+HierSearch: A Hierarchical Enterprise Deep Search Framework Integrating Local and Web Searches,"Jiejun Tan, Zhicheng Dou, Yan Yu, Jiehan Cheng, Qiang Ju, Jian Xie, Ji-Rong Wen",2025-08-11,2508.08088v1,http://arxiv.org/abs/2508.08088v1,http://arxiv.org/pdf/2508.08088v1,information_retrieval,cs.IR,"Recently, large reasoning models have demonstrated strong mathematical and
+coding abilities, and deep search leverages their reasoning capabilities in
+challenging information retrieval tasks. Existing deep search works are
+generally limited to a single knowledge source, either local or the Web.
+However, enterprises often require private deep search systems that can
+leverage search tools over both local and the Web corpus. Simply training an
+agent equipped with multiple search tools using flat reinforcement learning
+(RL) is a straightforward idea, but it has problems such as low training data
+efficiency and poor mastery of complex tools. To address the above issue, we
+propose a hierarchical agentic deep search framework, HierSearch, trained with
+hierarchical RL. At the low level, a local deep search agent and a Web deep
+search agent are trained to retrieve evidence from their corresponding domains.
+At the high level, a planner agent coordinates low-level agents and provides
+the final answer. Moreover, to prevent direct answer copying and error
+propagation, we design a knowledge refiner that filters out hallucinations and
+irrelevant evidence returned by low-level agents. Experiments show that
+HierSearch achieves better performance compared to flat RL, and outperforms
+various deep search and multi-source retrieval-augmented generation baselines
+in six benchmarks across general, finance, and medical domains.",https://github.com/plageon/HierSearch,"Code and datasets are available at
+  https://github.com/plageon/HierSearch"
+Multi-modal Adaptive Mixture of Experts for Cold-start Recommendation,"Van-Khang Nguyen, Duc-Hoang Pham, Huy-Son Nguyen, Cam-Van Thi Nguyen, Hoang-Quynh Le, Duc-Trong Le",2025-08-11,2508.08042v1,http://arxiv.org/abs/2508.08042v1,http://arxiv.org/pdf/2508.08042v1,information_retrieval,cs.IR,"Recommendation systems have faced significant challenges in cold-start
+scenarios, where new items with a limited history of interaction need to be
+effectively recommended to users. Though multimodal data (e.g., images, text,
+audio, etc.) offer rich information to address this issue, existing approaches
+often employ simplistic integration methods such as concatenation, average
+pooling, or fixed weighting schemes, which fail to capture the complex
+relationships between modalities. Our study proposes a novel Mixture of Experts
+(MoE) framework for multimodal cold-start recommendation, named MAMEX, which
+dynamically leverages latent representation from different modalities. MAMEX
+utilizes modality-specific expert networks and introduces a learnable gating
+mechanism that adaptively weights the contribution of each modality based on
+its content characteristics. This approach enables MAMEX to emphasize the most
+informative modalities for each item while maintaining robustness when certain
+modalities are less relevant or missing. Extensive experiments on benchmark
+datasets show that MAMEX outperforms state-of-the-art methods in cold-start
+scenarios, with superior accuracy and adaptability. For reproducibility, the
+code has been made available on Github https://github.com/L2R-UET/MAMEX.",https://github.com/L2R-UET/MAMEX,
+Arce: Augmented Roberta with Contextualized Elucidations for Ner in Automated Rule Checking,"Jian Chen, Jinbao Tian, Yankui Li, Zhou Li",2025-08-10,2508.07286v1,http://arxiv.org/abs/2508.07286v1,http://arxiv.org/pdf/2508.07286v1,information_retrieval,cs.CL,"Accurate information extraction from specialized texts is a critical
+challenge, particularly for named entity recognition (NER) in the architecture,
+engineering, and construction (AEC) domain to support automated rule checking
+(ARC). The performance of standard pre-trained models is often constrained by
+the domain gap, as they struggle to interpret the specialized terminology and
+complex relational contexts inherent in AEC texts. Although this issue can be
+mitigated by further pre-training on large, human-curated domain corpora, as
+exemplified by methods like ARCBERT, this approach is both labor-intensive and
+cost-prohibitive. Consequently, leveraging large language models (LLMs) for
+automated knowledge generation has emerged as a promising alternative. However,
+the optimal strategy for generating knowledge that can genuinely enhance
+smaller, efficient models remains an open question. To address this, we propose
+ARCE (augmented RoBERTa with contextualized elucidations), a novel approach
+that systematically explores and optimizes this generation process. ARCE
+employs an LLM to first generate a corpus of simple, direct explanations, which
+we term Cote, and then uses this corpus to incrementally pre-train a RoBERTa
+model prior to its fine-tuning on the downstream task. Our extensive
+experiments show that ARCE establishes a new state-of-the-art on a benchmark
+AEC dataset, achieving a Macro-F1 score of 77.20%. This result also reveals a
+key finding: simple, explanation-based knowledge proves surprisingly more
+effective than complex, role-based rationales for this task. The code is
+publicly available at:https://github.com/nxcc-lab/ARCE.",https://github.com/nxcc-lab/ARCE,
+ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability,"Wenhan Liu, Xinyu Ma, Weiwei Sun, Yutao Zhu, Yuchen Li, Dawei Yin, Zhicheng Dou",2025-08-09,2508.07050v1,http://arxiv.org/abs/2508.07050v1,http://arxiv.org/pdf/2508.07050v1,information_retrieval,cs.IR,"Large Language Model (LLM) based listwise ranking has shown superior
+performance in many passage ranking tasks. With the development of Large
+Reasoning Models, many studies have demonstrated that step-by-step reasoning
+during test-time helps improve listwise ranking performance. However, due to
+the scarcity of reasoning-intensive training data, existing rerankers perform
+poorly in many complex ranking scenarios and the ranking ability of
+reasoning-intensive rerankers remains largely underdeveloped. In this paper, we
+first propose an automated reasoning-intensive training data synthesis
+framework, which sources training queries and passages from diverse domains and
+applies DeepSeek-R1 to generate high-quality training labels. A
+self-consistency data filtering mechanism is designed to ensure the data
+quality. To empower the listwise reranker with strong reasoning ability, we
+further propose a two-stage post-training approach, which includes a cold-start
+supervised fine-tuning (SFT) stage for reasoning pattern learning and a
+reinforcement learning (RL) stage for further ranking ability enhancement.
+During the RL stage, based on the nature of listwise ranking, we design a
+multi-view ranking reward, which is more effective than a ranking metric-based
+reward. Extensive experiments demonstrate that our trained reasoning-intensive
+reranker \textbf{ReasonRank} outperforms existing baselines significantly and
+also achieves much lower latency than pointwise reranker Rank1. \textbf{Through
+further experiments, our ReasonRank has achieved state-of-the-art (SOTA)
+performance 40.6 on the BRIGHT
+leaderboard\footnote{https://brightbenchmark.github.io/}.} Our codes are
+available at https://github.com/8421BCD/ReasonRank.",https://github.com/8421BCD/ReasonRank,21 pages
+eSASRec: Enhancing Transformer-based Recommendations in a Modular Fashion,"Daria Tikhonovich, Nikita Zelinskiy, Aleksandr V. Petrov, Mayya Spirina, Andrei Semenov, Andrey V. Savchenko, Sergei Kuliev",2025-08-08,2508.06450v1,http://arxiv.org/abs/2508.06450v1,http://arxiv.org/pdf/2508.06450v1,information_retrieval,cs.IR,"Since their introduction, Transformer-based models, such as SASRec and
+BERT4Rec, have become common baselines for sequential recommendations,
+surpassing earlier neural and non-neural methods. A number of following
+publications have shown that the effectiveness of these models can be improved
+by, for example, slightly updating the architecture of the Transformer layers,
+using better training objectives, and employing improved loss functions.
+However, the additivity of these modular improvements has not been
+systematically benchmarked - this is the gap we aim to close in this paper.
+Through our experiments, we identify a very strong model that uses SASRec's
+training objective, LiGR Transformer layers, and Sampled Softmax Loss. We call
+this combination eSASRec (Enhanced SASRec). While we primarily focus on
+realistic, production-like evaluation, in our preliminarily study we find that
+common academic benchmarks show eSASRec to be 23% more effective compared to
+the most recent state-of-the-art models, such as ActionPiece. In our main
+production-like benchmark, eSASRec resides on the Pareto frontier in terms of
+the accuracy-coverage tradeoff (alongside the recent industrial models HSTU and
+FuXi. As the modifications compared to the original SASRec are relatively
+straightforward and no extra features are needed (such as timestamps in HSTU),
+we believe that eSASRec can be easily integrated into existing recommendation
+pipelines and can can serve as a strong yet very simple baseline for emerging
+complicated algorithms. To facilitate this, we provide the open-source
+implementations for our models and benchmarks in repository
+https://github.com/blondered/transformer_benchmark",https://github.com/blondered/transformer_benchmark,Accepted at ACM RecSys 2025
+Balancing Accuracy and Novelty with Sub-Item Popularity,"Chiara Mallamaci, Aleksandr Vladimirovich Petrov, Alberto Carlo Maria Mancino, Vito Walter Anelli, Tommaso Di Noia, Craig Macdonald",2025-08-07,2508.05198v1,http://arxiv.org/abs/2508.05198v1,http://arxiv.org/pdf/2508.05198v1,information_retrieval,cs.IR,"In the realm of music recommendation, sequential recommenders have shown
+promise in capturing the dynamic nature of music consumption. A key
+characteristic of this domain is repetitive listening, where users frequently
+replay familiar tracks. To capture these repetition patterns, recent research
+has introduced Personalised Popularity Scores (PPS), which quantify
+user-specific preferences based on historical frequency. While PPS enhances
+relevance in recommendation, it often reinforces already-known content,
+limiting the system's ability to surface novel or serendipitous items - key
+elements for fostering long-term user engagement and satisfaction. To address
+this limitation, we build upon RecJPQ, a Transformer-based framework initially
+developed to improve scalability in large-item catalogues through sub-item
+decomposition. We repurpose RecJPQ's sub-item architecture to model
+personalised popularity at a finer granularity. This allows us to capture
+shared repetition patterns across sub-embeddings - latent structures not
+accessible through item-level popularity alone. We propose a novel integration
+of sub-ID-level personalised popularity within the RecJPQ framework, enabling
+explicit control over the trade-off between accuracy and personalised novelty.
+Our sub-ID-level PPS method (sPPS) consistently outperforms item-level PPS by
+achieving significantly higher personalised novelty without compromising
+recommendation accuracy. Code and experiments are publicly available at
+https://github.com/sisinflab/Sub-id-Popularity.",https://github.com/sisinflab/Sub-id-Popularity,
+"Synthesize, Retrieve, and Propagate: A Unified Predictive Modeling Framework for Relational Databases","Ning Li, Kounianhua Du, Han Zhang, Quan Gan, Minjie Wang, David Wipf, Weinan Zhang",2025-08-10,2508.08327v1,http://arxiv.org/abs/2508.08327v1,http://arxiv.org/pdf/2508.08327v1,databases,cs.DB,"Relational databases (RDBs) have become the industry standard for storing
+massive and heterogeneous data. However, despite the widespread use of RDBs
+across various fields, the inherent structure of relational databases hinders
+their ability to benefit from flourishing deep learning methods. Previous
+research has primarily focused on exploiting the unary dependency among
+multiple tables in a relational database using the primary key - foreign key
+relationships, either joining multiple tables into a single table or
+constructing a graph among them, which leaves the implicit composite relations
+among different tables and a substantial potential of improvement for
+predictive modeling unexplored. In this paper, we propose SRP, a unified
+predictive modeling framework that synthesizes features using the unary
+dependency, retrieves related information to capture the composite dependency,
+and propagates messages across a constructed graph to learn adjacent patterns
+for prediction on relation databases. By introducing a new retrieval mechanism
+into RDB, SRP is designed to fully capture both the unary and the composite
+dependencies within a relational database, thereby enhancing the receptive
+field of tabular data prediction. In addition, we conduct a comprehensive
+analysis on the components of SRP, offering a nuanced understanding of model
+behaviors and practical guidelines for future applications. Extensive
+experiments on five real-world datasets demonstrate the effectiveness of SRP
+and its potential applicability in industrial scenarios. The code is released
+at https://github.com/NingLi670/SRP.",https://github.com/NingLi670/SRP,
+CRINN: Contrastive Reinforcement Learning for Approximate Nearest Neighbor Search,"Xiaoya Li, Xiaofei Sun, Albert Wang, Chris Shum, Jiwei Li",2025-08-04,2508.02091v1,http://arxiv.org/abs/2508.02091v1,http://arxiv.org/pdf/2508.02091v1,databases,cs.LG,"Approximate nearest-neighbor search (ANNS) algorithms have become
+increasingly critical for recent AI applications, particularly in
+retrieval-augmented generation (RAG) and agent-based LLM applications. In this
+paper, we present CRINN, a new paradigm for ANNS algorithms. CRINN treats ANNS
+optimization as a reinforcement learning problem where execution speed serves
+as the reward signal. This approach enables the automatic generation of
+progressively faster ANNS implementations while maintaining accuracy
+constraints. Our experimental evaluation demonstrates CRINN's effectiveness
+across six widely-used NNS benchmark datasets. When compared against
+state-of-the-art open-source ANNS algorithms, CRINN achieves best performance
+on three of them (GIST-960-Euclidean, MNIST-784-Euclidean, and
+GloVe-25-angular), and tied for first place on two of them (SIFT-128-Euclidean
+and GloVe-25-angular). The implications of CRINN's success reach well beyond
+ANNS optimization: It validates that LLMs augmented with reinforcement learning
+can function as an effective tool for automating sophisticated algorithmic
+optimizations that demand specialized knowledge and labor-intensive manual
+refinement.Code can be found at https://github.com/deepreinforce-ai/CRINN",https://github.com/deepreinforce-ai/CRINN,Preprint Version
+DBAIOps: A Reasoning LLM-Enhanced Database Operation and Maintenance System using Knowledge Graphs,"Wei Zhou, Peng Sun, Xuanhe Zhou, Qianglei Zang, Ji Xu, Tieying Zhang, Guoliang Li, Fan Wu",2025-08-02,2508.01136v1,http://arxiv.org/abs/2508.01136v1,http://arxiv.org/pdf/2508.01136v1,databases,cs.DB,"The operation and maintenance (O&M) of database systems is critical to
+ensuring system availability and performance, typically requiring expert
+experience (e.g., identifying metric-to-anomaly relations) for effective
+diagnosis and recovery. However, existing automatic database O&M methods,
+including commercial products, cannot effectively utilize expert experience. On
+the one hand, rule-based methods only support basic O&M tasks (e.g.,
+metric-based anomaly detection), which are mostly numerical equations and
+cannot effectively incorporate literal O&M experience (e.g., troubleshooting
+guidance in manuals). On the other hand, LLM-based methods, which retrieve
+fragmented information (e.g., standard documents + RAG), often generate
+inaccurate or generic results. To address these limitations, we present
+DBAIOps, a novel hybrid database O&M system that combines reasoning LLMs with
+knowledge graphs to achieve DBA-style diagnosis. First, DBAIOps introduces a
+heterogeneous graph model for representing the diagnosis experience, and
+proposes a semi-automatic graph construction algorithm to build that graph from
+thousands of documents. Second, DBAIOps develops a collection of (800+)
+reusable anomaly models that identify both directly alerted metrics and
+implicitly correlated experience and metrics. Third, for each anomaly, DBAIOps
+proposes a two-stage graph evolution mechanism to explore relevant diagnosis
+paths and identify missing relations automatically. It then leverages a
+reasoning LLM (e.g., DeepSeek-R1) to infer root causes and generate clear
+diagnosis reports for both DBAs and common users. Our evaluation over four
+mainstream database systems (Oracle, MySQL, PostgreSQL, and DM8) demonstrates
+that DBAIOps outperforms state-of-the-art baselines, 34.85% and 47.22% higher
+in root cause and human evaluation accuracy, respectively.",https://github.com/weAIDB/DBAIOps,"DBAIOps supports 25 database systems and has been deployed in 20
+  real-world scenarios, covering domains like finance, energy, and healthcare.
+  See website at: https://www.dbaiops.com; See code at:
+  https://github.com/weAIDB/DBAIOps/"
+StructText: A Synthetic Table-to-Text Approach for Benchmark Generation with Multi-Dimensional Evaluation,"Satyananda Kashyap, Sola Shirai, Nandana Mihindukulasooriya, Horst Samulowitz",2025-07-28,2507.21340v1,http://arxiv.org/abs/2507.21340v1,http://arxiv.org/pdf/2507.21340v1,databases,cs.CL,"Extracting structured information from text, such as key-value pairs that
+could augment tabular data, is quite useful in many enterprise use cases.
+Although large language models (LLMs) have enabled numerous automated pipelines
+for converting natural language into structured formats, there is still a lack
+of benchmarks for evaluating their extraction quality, especially in specific
+domains or focused documents specific to a given organization. Building such
+benchmarks by manual annotations is labour-intensive and limits the size and
+scalability of the benchmarks. In this work, we present StructText, an
+end-to-end framework for automatically generating high-fidelity benchmarks for
+key-value extraction from text using existing tabular data. It uses available
+tabular data as structured ground truth, and follows a two-stage
+``plan-then-execute'' pipeline to synthetically generate corresponding
+natural-language text. To ensure alignment between text and structured source,
+we introduce a multi-dimensional evaluation strategy that combines (a)
+LLM-based judgments on factuality, hallucination, and coherence and (b)
+objective extraction metrics measuring numeric and temporal accuracy. We
+evaluated the proposed method on 71,539 examples across 49 datasets. Results
+reveal that while LLMs achieve strong factual accuracy and avoid hallucination,
+they struggle with narrative coherence in producing extractable text. Notably,
+models presume numerical and temporal information with high fidelity yet this
+information becomes embedded in narratives that resist automated extraction. We
+release a framework, including datasets, evaluation tools, and baseline
+extraction systems, to support continued research.",https://github.com/ibm/struct-text,"Data available:
+  https://huggingface.co/datasets/ibm-research/struct-text and code available
+  at: https://github.com/ibm/struct-text"
+MH-GIN: Multi-scale Heterogeneous Graph-based Imputation Network for AIS Data (Extended Version),"Hengyu Liu, Tianyi Li, Yuqiang He, Kristian Torp, Yushuai Li, Christian S. Jensen",2025-07-27,2507.20362v1,http://arxiv.org/abs/2507.20362v1,http://arxiv.org/pdf/2507.20362v1,databases,cs.LG,"Location-tracking data from the Automatic Identification System, much of
+which is publicly available, plays a key role in a range of maritime safety and
+monitoring applications. However, the data suffers from missing values that
+hamper downstream applications. Imputing the missing values is challenging
+because the values of different heterogeneous attributes are updated at diverse
+rates, resulting in the occurrence of multi-scale dependencies among
+attributes. Existing imputation methods that assume similar update rates across
+attributes are unable to capture and exploit such dependencies, limiting their
+imputation accuracy. We propose MH-GIN, a Multi-scale Heterogeneous Graph-based
+Imputation Network that aims improve imputation accuracy by capturing
+multi-scale dependencies. Specifically, MH-GIN first extracts multi-scale
+temporal features for each attribute while preserving their intrinsic
+heterogeneous characteristics. Then, it constructs a multi-scale heterogeneous
+graph to explicitly model dependencies between heterogeneous attributes to
+enable more accurate imputation of missing values through graph propagation.
+Experimental results on two real-world datasets find that MH-GIN is capable of
+an average 57% reduction in imputation errors compared to state-of-the-art
+methods, while maintaining computational efficiency. The source code and
+implementation details of MH-GIN are publicly available
+https://github.com/hyLiu1994/MH-GIN.",https://github.com/hyLiu1994/MH-GIN,"18 pages, 4 figures"
