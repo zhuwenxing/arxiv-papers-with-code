@@ -1,0 +1,475 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+Benchmarking Computer Science Survey Generation,"Weihang Su, Anzhe Xie, Qingyao Ai, Jianming Long, Jiaxin Mao, Ziyi Ye, Yiqun Liu",2025-08-21,2508.15658v1,http://arxiv.org/abs/2508.15658v1,http://arxiv.org/pdf/2508.15658v1,information_retrieval,cs.CL,"Scientific survey articles play a vital role in summarizing research
+progress, yet their manual creation is becoming increasingly infeasible due to
+the rapid growth of academic literature. While large language models (LLMs)
+offer promising capabilities for automating this process, progress in this area
+is hindered by the absence of standardized benchmarks and evaluation protocols.
+To address this gap, we introduce SurGE (Survey Generation Evaluation), a new
+benchmark for evaluating scientific survey generation in the computer science
+domain. SurGE consists of (1) a collection of test instances, each including a
+topic description, an expert-written survey, and its full set of cited
+references, and (2) a large-scale academic corpus of over one million papers
+that serves as the retrieval pool. In addition, we propose an automated
+evaluation framework that measures generated surveys across four dimensions:
+information coverage, referencing accuracy, structural organization, and
+content quality. Our evaluation of diverse LLM-based approaches shows that
+survey generation remains highly challenging, even for advanced self-reflection
+frameworks. These findings highlight the complexity of the task and the
+necessity for continued research. We have open-sourced all the code, data, and
+models at: https://github.com/oneal2000/SurGE",https://github.com/oneal2000/SurGE,
+Exploring Scaling Laws of CTR Model for Online Performance Improvement,"Weijiang Lai, Beihong Jin, Jiongyan Zhang, Yiyuan Zheng, Jian Dong, Jia Cheng, Jun Lei, Xingxing Wang",2025-08-21,2508.15326v1,http://arxiv.org/abs/2508.15326v1,http://arxiv.org/pdf/2508.15326v1,information_retrieval,cs.IR,"CTR models play a vital role in improving user experience and boosting
+business revenue in many online personalized services. However, current CTR
+models generally encounter bottlenecks in performance improvement. Inspired by
+the scaling law phenomenon of LLMs, we propose a new paradigm for improving CTR
+predictions: first, constructing a CTR model with accuracy scalable to the
+model grade and data size, and then distilling the knowledge implied in this
+model into its lightweight model that can serve online users. To put it into
+practice, we construct a CTR model named SUAN (Stacked Unified Attention
+Network). In SUAN, we propose the UAB as a behavior sequence encoder. A single
+UAB unifies the modeling of the sequential and non-sequential features and also
+measures the importance of each user behavior feature from multiple
+perspectives. Stacked UABs elevate the configuration to a high grade, paving
+the way for performance improvement. In order to benefit from the high
+performance of the high-grade SUAN and avoid the disadvantage of its long
+inference time, we modify the SUAN with sparse self-attention and parallel
+inference strategies to form LightSUAN, and then adopt online distillation to
+train the low-grade LightSUAN, taking a high-grade SUAN as a teacher. The
+distilled LightSUAN has superior performance but the same inference time as the
+LightSUAN, making it well-suited for online deployment. Experimental results
+show that SUAN performs exceptionally well and holds the scaling laws spanning
+three orders of magnitude in model grade and data size, and the distilled
+LightSUAN outperforms the SUAN configured with one grade higher. More
+importantly, the distilled LightSUAN has been integrated into an online
+service, increasing the CTR by 2.81% and CPM by 1.69% while keeping the average
+inference time acceptable. Our source code is available at
+https://github.com/laiweijiang/SUAN.",https://github.com/laiweijiang/SUAN,
+Modeling Long-term User Behaviors with Diffusion-driven Multi-interest Network for CTR Prediction,"Weijiang Lai, Beihong Jin, Yapeng Zhang, Yiyuan Zheng, Rui Zhao, Jian Dong, Jun Lei, Xingxing Wang",2025-08-21,2508.15311v1,http://arxiv.org/abs/2508.15311v1,http://arxiv.org/pdf/2508.15311v1,information_retrieval,cs.IR,"CTR (Click-Through Rate) prediction, crucial for recommender systems and
+online advertising, etc., has been confirmed to benefit from modeling long-term
+user behaviors. Nonetheless, the vast number of behaviors and complexity of
+noise interference pose challenges to prediction efficiency and effectiveness.
+Recent solutions have evolved from single-stage models to two-stage models.
+However, current two-stage models often filter out significant information,
+resulting in an inability to capture diverse user interests and build the
+complete latent space of user interests. Inspired by multi-interest and
+generative modeling, we propose DiffuMIN (Diffusion-driven Multi-Interest
+Network) to model long-term user behaviors and thoroughly explore the user
+interest space. Specifically, we propose a target-oriented multi-interest
+extraction method that begins by orthogonally decomposing the target to obtain
+interest channels. This is followed by modeling the relationships between
+interest channels and user behaviors to disentangle and extract multiple user
+interests. We then adopt a diffusion module guided by contextual interests and
+interest channels, which anchor users' personalized and target-oriented
+interest types, enabling the generation of augmented interests that align with
+the latent spaces of user interests, thereby further exploring restricted
+interest space. Finally, we leverage contrastive learning to ensure that the
+generated augmented interests align with users' genuine preferences. Extensive
+offline experiments are conducted on two public datasets and one industrial
+dataset, yielding results that demonstrate the superiority of DiffuMIN.
+Moreover, DiffuMIN increased CTR by 1.52% and CPM by 1.10% in online A/B
+testing. Our source code is available at
+https://github.com/laiweijiang/DiffuMIN.",https://github.com/laiweijiang/DiffuMIN,
+SurveyGen-I: Consistent Scientific Survey Generation with Evolving Plans and Memory-Guided Writing,"Jing Chen, Zhiheng Yang, Yixian Shen, Jie Liu, Adam Belloum, Chrysa Papagainni, Paola Grosso",2025-08-20,2508.14317v1,http://arxiv.org/abs/2508.14317v1,http://arxiv.org/pdf/2508.14317v1,information_retrieval,cs.CL,"Survey papers play a critical role in scientific communication by
+consolidating progress across a field. Recent advances in Large Language Models
+(LLMs) offer a promising solution by automating key steps in the
+survey-generation pipeline, such as retrieval, structuring, and summarization.
+However, existing LLM-based approaches often struggle with maintaining
+coherence across long, multi-section surveys and providing comprehensive
+citation coverage. To address these limitations, we introduce SurveyGen-I, an
+automatic survey generation framework that combines coarse-to-fine retrieval,
+adaptive planning, and memory-guided generation. SurveyGen-I first performs
+survey-level retrieval to construct the initial outline and writing plan, and
+then dynamically refines both during generation through a memory mechanism that
+stores previously written content and terminology, ensuring coherence across
+subsections. When the system detects insufficient context, it triggers
+fine-grained subsection-level retrieval. During generation, SurveyGen-I
+leverages this memory mechanism to maintain coherence across subsections.
+Experiments across four scientific domains demonstrate that SurveyGen-I
+consistently outperforms previous works in content quality, consistency, and
+citation coverage.",https://github.com/SurveyGens/SurveyGen-I,"The code is available at https://github.com/SurveyGens/SurveyGen-I ,
+  20 pages, 16 figures"
+RewardRank: Optimizing True Learning-to-Rank Utility,"Gaurav Bhatt, Kiran Koshy Thekumparampil, Tanmay Gangwani, Tesi Xiao, Leonid Sigal",2025-08-19,2508.14180v1,http://arxiv.org/abs/2508.14180v1,http://arxiv.org/pdf/2508.14180v1,information_retrieval,cs.IR,"Traditional ranking systems rely on proxy loss functions that assume
+simplistic user behavior, such as users preferring a rank list where items are
+sorted by hand-crafted relevance. However, real-world user interactions are
+influenced by complex behavioral biases, including position bias, brand
+affinity, decoy effects, and similarity aversion, which these objectives fail
+to capture. As a result, models trained on such losses often misalign with
+actual user utility, such as the probability of any click or purchase across
+the ranked list. In this work, we propose a data-driven framework for modeling
+user behavior through counterfactual reward learning. Our method, RewardRank,
+first trains a deep utility model to estimate user engagement for entire item
+permutations using logged data. Then, a ranking policy is optimized to maximize
+predicted utility via differentiable soft permutation operators, enabling
+end-to-end training over the space of factual and counterfactual rankings. To
+address the challenge of evaluation without ground-truth for unseen
+permutations, we introduce two automated protocols: (i) $\textit{KD-Eval}$,
+using a position-aware oracle for counterfactual reward estimation, and (ii)
+$\textit{LLM-Eval}$, which simulates user preferences via large language
+models. Experiments on large-scale benchmarks, including Baidu-ULTR and the
+Amazon KDD Cup datasets, demonstrate that our approach consistently outperforms
+strong baselines, highlighting the effectiveness of modeling user behavior
+dynamics for utility-optimized ranking. Our code is available at:
+https://github.com/GauravBh1010tt/RewardRank",https://github.com/GauravBh1010tt/RewardRank,
+InPars+: Supercharging Synthetic Data Generation for Information Retrieval Systems,"Matey Krastev, Miklos Hamar, Danilo Toapanta, Jesse Brouwers, Yibin Lei",2025-08-19,2508.13930v1,http://arxiv.org/abs/2508.13930v1,http://arxiv.org/pdf/2508.13930v1,information_retrieval,cs.IR,"This work revisits and extends synthetic query generation pipelines for
+Neural Information Retrieval (NIR) by leveraging the InPars Toolkit, a
+reproducible, end-to-end framework for generating training data using large
+language models (LLMs). We first assess the reproducibility of the original
+InPars, InPars-V2, and Promptagator pipelines on the SciFact benchmark and
+validate their effectiveness using open-source reranker and generator models.
+Building on this foundation, we introduce two key extensions to the pipeline:
+(1) fine-tuning a query generator LLM via Contrastive Preference Optimization
+(CPO) to improve the signal quality in generated queries, and (2) replacing
+static prompt templates with dynamic, Chain-of-Thought (CoT) optimized prompts
+using the DSPy framework. Our results show that both extensions reduce the need
+for aggressive filtering while improving retrieval performance. All code,
+models, and synthetic datasets are publicly released to support further
+research at: \href{https://github.com/danilotpnta/IR2-project}{this https URL}.",https://github.com/danilotpnta/IR2-project,
+UniECS: Unified Multimodal E-Commerce Search Framework with Gated Cross-modal Fusion,"Zihan Liang, Yufei Ma, ZhiPeng Qian, Huangyu Dai, Zihan Wang, Ben Chen, Chenyi Lei, Yuqing Ding, Han Li",2025-08-19,2508.13843v1,http://arxiv.org/abs/2508.13843v1,http://arxiv.org/pdf/2508.13843v1,information_retrieval,cs.IR,"Current e-commerce multimodal retrieval systems face two key limitations:
+they optimize for specific tasks with fixed modality pairings, and lack
+comprehensive benchmarks for evaluating unified retrieval approaches. To
+address these challenges, we introduce UniECS, a unified multimodal e-commerce
+search framework that handles all retrieval scenarios across image, text, and
+their combinations. Our work makes three key contributions. First, we propose a
+flexible architecture with a novel gated multimodal encoder that uses adaptive
+fusion mechanisms. This encoder integrates different modality representations
+while handling missing modalities. Second, we develop a comprehensive training
+strategy to optimize learning. It combines cross-modal alignment loss (CMAL),
+cohesive local alignment loss (CLAL), intra-modal contrastive loss (IMCL), and
+adaptive loss weighting. Third, we create M-BEER, a carefully curated
+multimodal benchmark containing 50K product pairs for e-commerce search
+evaluation. Extensive experiments demonstrate that UniECS consistently
+outperforms existing methods across four e-commerce benchmarks with fine-tuning
+or zero-shot evaluation. On our M-BEER bench, UniECS achieves substantial
+improvements in cross-modal tasks (up to 28\% gain in R@10 for text-to-image
+retrieval) while maintaining parameter efficiency (0.2B parameters) compared to
+larger models like GME-Qwen2VL (2B) and MM-Embed (8B). Furthermore, we deploy
+UniECS in the e-commerce search platform of Kuaishou Inc. across two search
+scenarios, achieving notable improvements in Click-Through Rate (+2.74\%) and
+Revenue (+8.33\%). The comprehensive evaluation demonstrates the effectiveness
+of our approach in both experimental and real-world settings. Corresponding
+codes, models and datasets will be made publicly available at
+https://github.com/qzp2018/UniECS.",https://github.com/qzp2018/UniECS,Accepted at CIKM2025 as a long paper
+Refining Contrastive Learning and Homography Relations for Multi-Modal Recommendation,"Shouxing Ma, Yawen Zeng, Shiqing Wu, Guandong Xu",2025-08-19,2508.13745v1,http://arxiv.org/abs/2508.13745v1,http://arxiv.org/pdf/2508.13745v1,information_retrieval,cs.IR,"Multi-modal recommender system focuses on utilizing rich modal information (
+i.e., images and textual descriptions) of items to improve recommendation
+performance. The current methods have achieved remarkable success with the
+powerful structure modeling capability of graph neural networks. However, these
+methods are often hindered by sparse data in real-world scenarios. Although
+contrastive learning and homography ( i.e., homogeneous graphs) are employed to
+address the data sparsity challenge, existing methods still suffer two main
+limitations: 1) Simple multi-modal feature contrasts fail to produce effective
+representations, causing noisy modal-shared features and loss of valuable
+information in modal-unique features; 2) The lack of exploration of the
+homograph relations between user interests and item co-occurrence results in
+incomplete mining of user-item interplay.
+  To address the above limitations, we propose a novel framework for
+\textbf{R}\textbf{E}fining multi-mod\textbf{A}l cont\textbf{R}astive learning
+and ho\textbf{M}ography relations (\textbf{REARM}). Specifically, we complement
+multi-modal contrastive learning by employing meta-network and orthogonal
+constraint strategies, which filter out noise in modal-shared features and
+retain recommendation-relevant information in modal-unique features. To mine
+homogeneous relationships effectively, we integrate a newly constructed user
+interest graph and an item co-occurrence graph with the existing user
+co-occurrence and item semantic graphs for graph learning. The extensive
+experiments on three real-world datasets demonstrate the superiority of REARM
+to various state-of-the-art baselines. Our visualization further shows an
+improvement made by REARM in distinguishing between modal-shared and
+modal-unique features. Code is available
+\href{https://github.com/MrShouxingMa/REARM}{here}.",https://github.com/MrShouxingMa/REARM,This paper has been accepted as a full paper at ACM MM 2025
+MUFFIN: Mixture of User-Adaptive Frequency Filtering for Sequential Recommendation,"Ilwoong Baek, Mincheol Yoon, Seongmin Park, Jongwuk Lee",2025-08-19,2508.13670v1,http://arxiv.org/abs/2508.13670v1,http://arxiv.org/pdf/2508.13670v1,information_retrieval,cs.IR,"Sequential recommendation (SR) aims to predict users' subsequent interactions
+by modeling their sequential behaviors. Recent studies have explored frequency
+domain analysis, which effectively models periodic patterns in user sequences.
+However, existing frequency-domain SR models still face two major drawbacks:
+(i) limited frequency band coverage, often missing critical behavioral patterns
+in a specific frequency range, and (ii) lack of personalized frequency
+filtering, as they apply an identical filter for all users regardless of their
+distinct frequency characteristics. To address these challenges, we propose a
+novel frequency-domain model, Mixture of User-adaptive Frequency FIlteriNg
+(MUFFIN), operating through two complementary modules. (i) The global filtering
+module (GFM) handles the entire frequency spectrum to capture comprehensive
+behavioral patterns. (ii) The local filtering module (LFM) selectively
+emphasizes important frequency bands without excluding information from other
+ranges. (iii) In both modules, the user-adaptive filter (UAF) is adopted to
+generate user-specific frequency filters tailored to individual unique
+characteristics. Finally, by aggregating both modules, MUFFIN captures diverse
+user behavioral patterns across the full frequency spectrum. Extensive
+experiments show that MUFFIN consistently outperforms state-of-the-art
+frequency-domain SR models over five benchmark datasets. The source code is
+available at https://github.com/ilwoong100/MUFFIN.",https://github.com/ilwoong100/MUFFIN,Accepted by CIKM 2025
+Heterogeneous Influence Maximization in User Recommendation,"Hongru Hou, Jiachen Sun, Wenqing Lin, Wendong Bi, Xiangrong Wang, Deqing Yang",2025-08-19,2508.13517v1,http://arxiv.org/abs/2508.13517v1,http://arxiv.org/pdf/2508.13517v1,information_retrieval,cs.IR,"User recommendation systems enhance user engagement by encouraging users to
+act as inviters to interact with other users (invitees), potentially fostering
+information propagation. Conventional recommendation methods typically focus on
+modeling interaction willingness. Influence-Maximization (IM) methods focus on
+identifying a set of users to maximize the information propagation. However,
+existing methods face two significant challenges. First, recommendation methods
+fail to unleash the candidates' spread capability. Second, IM methods fail to
+account for the willingness to interact. To solve these issues, we propose two
+models named HeteroIR and HeteroIM. HeteroIR provides an intuitive solution to
+unleash the dissemination potential of user recommendation systems. HeteroIM
+fills the gap between the IM method and the recommendation task, improving
+interaction willingness and maximizing spread coverage. The HeteroIR introduces
+a two-stage framework to estimate the spread profits. The HeteroIM
+incrementally selects the most influential invitee to recommend and rerank
+based on the number of reverse reachable (RR) sets containing inviters and
+invitees. RR set denotes a set of nodes that can reach a target via
+propagation. Extensive experiments show that HeteroIR and HeteroIM
+significantly outperform the state-of-the-art baselines with the p-value <
+0.05. Furthermore, we have deployed HeteroIR and HeteroIM in Tencent's online
+gaming platforms and gained an 8.5\% and 10\% improvement in the online A/B
+test, respectively. Implementation codes are available at
+https://github.com/socialalgo/HIM.",https://github.com/socialalgo/HIM,Accepted in CIKM 2025
+LLM-Enhanced Linear Autoencoders for Recommendation,"Jaewan Moon, Seongmin Park, Jongwuk Lee",2025-08-19,2508.13500v1,http://arxiv.org/abs/2508.13500v1,http://arxiv.org/pdf/2508.13500v1,information_retrieval,cs.IR,"Large language models (LLMs) have been widely adopted to enrich the semantic
+representation of textual item information in recommender systems. However,
+existing linear autoencoders (LAEs) that incorporate textual information rely
+on sparse word co-occurrence patterns, limiting their ability to capture rich
+textual semantics. To address this, we propose L3AE, the first integration of
+LLMs into the LAE framework. L3AE effectively integrates the heterogeneous
+knowledge of textual semantics and user-item interactions through a two-phase
+optimization strategy. (i) L3AE first constructs a semantic item-to-item
+correlation matrix from LLM-derived item representations. (ii) It then learns
+an item-to-item weight matrix from collaborative signals while distilling
+semantic item correlations as regularization. Notably, each phase of L3AE is
+optimized through closed-form solutions, ensuring global optimality and
+computational efficiency. Extensive experiments demonstrate that L3AE
+consistently outperforms state-of-the-art LLM-enhanced models on three
+benchmark datasets, achieving gains of 27.6% in Recall@20 and 39.3% in NDCG@20.
+The source code is available at https://github.com/jaewan7599/L3AE_CIKM2025.",https://github.com/jaewan7599/L3AE_CIKM2025,Accepted by CIKM 2025
+CASPER: Concept-integrated Sparse Representation for Scientific Retrieval,"Lam Thanh Do, Linh Van Nguyen, David Fu, Kevin Chen-Chuan Chang",2025-08-18,2508.13394v1,http://arxiv.org/abs/2508.13394v1,http://arxiv.org/pdf/2508.13394v1,information_retrieval,cs.IR,"The exponential growth of scientific literature has made it increasingly
+difficult for researchers to keep up with the literature. In an attempt to
+alleviate this problem, we propose CASPER, a sparse retrieval model for
+scientific search that utilizes tokens and keyphrases as representation units
+(i.e. dimensions in the sparse embedding space), enabling it to represent
+queries and documents with research concepts and match them at both granular
+and conceptual levels. To overcome the lack of suitable training data, we
+propose mining training data by leveraging scholarly references (i.e. signals
+that capture how research concepts of papers are expressed in different
+settings), including titles, citation contexts, author-assigned keyphrases, and
+co-citations. CASPER outperforms strong dense and sparse retrieval baselines on
+eight scientific retrieval benchmarks. Moreover, we demonstrate that through
+simple post-processing, CASPER can be effectively used for the keyphrase
+generation tasks, achieving competitive performance with the established
+CopyRNN while producing more diverse keyphrases and being nearly four times
+faster.",https://github.com/louisdo/CASPER,11 Pages. Code: https://github.com/louisdo/CASPER
+Explicit v.s. Implicit Memory: Exploring Multi-hop Complex Reasoning Over Personalized Information,"Zeyu Zhang, Yang Zhang, Haoran Tan, Rui Li, Xu Chen",2025-08-18,2508.13250v1,http://arxiv.org/abs/2508.13250v1,http://arxiv.org/pdf/2508.13250v1,information_retrieval,cs.AI,"In large language model-based agents, memory serves as a critical capability
+for achieving personalization by storing and utilizing users' information.
+Although some previous studies have adopted memory to implement user
+personalization, they typically focus on preference alignment and simple
+question-answering. However, in the real world, complex tasks often require
+multi-hop reasoning on a large amount of user information, which poses
+significant challenges for current memory approaches. To address this
+limitation, we propose the multi-hop personalized reasoning task to explore how
+different memory mechanisms perform in multi-hop reasoning over personalized
+information. We explicitly define this task and construct a dataset along with
+a unified evaluation framework. Then, we implement various explicit and
+implicit memory methods and conduct comprehensive experiments. We evaluate
+their performance on this task from multiple perspectives and analyze their
+strengths and weaknesses. Besides, we explore hybrid approaches that combine
+both paradigms and propose the HybridMem method to address their limitations.
+We demonstrate the effectiveness of our proposed model through extensive
+experiments. To benefit the research community, we release this project at
+https://github.com/nuster1128/MPR.",https://github.com/nuster1128/MPR,"15 pages, 13 figures, 3 tables"
+Multi-Granularity Distribution Modeling for Video Watch Time Prediction via Exponential-Gaussian Mixture Network,"Xu Zhao, Ruibo Ma, Jiaqi Chen, Weiqi Zhao, Ping Yang, Yao Hu",2025-08-18,2508.12665v1,http://arxiv.org/abs/2508.12665v1,http://arxiv.org/pdf/2508.12665v1,information_retrieval,cs.IR,"Accurate watch time prediction is crucial for enhancing user engagement in
+streaming short-video platforms, although it is challenged by complex
+distribution characteristics across multi-granularity levels. Through
+systematic analysis of real-world industrial data, we uncover two critical
+challenges in watch time prediction from a distribution aspect: (1)
+coarse-grained skewness induced by a significant concentration of quick-skips1,
+(2) fine-grained diversity arising from various user-video interaction
+patterns. Consequently, we assume that the watch time follows the
+Exponential-Gaussian Mixture (EGM) distribution, where the exponential and
+Gaussian components respectively characterize the skewness and diversity.
+Accordingly, an Exponential-Gaussian Mixture Network (EGMN) is proposed for the
+parameterization of EGM distribution, which consists of two key modules: a
+hidden representation encoder and a mixture parameter generator. We conducted
+extensive offline experiments on public datasets and online A/B tests on the
+industrial short-video feeding scenario of Xiaohongshu App to validate the
+superiority of EGMN compared with existing state-of-the-art methods.
+Remarkably, comprehensive experimental results have proven that EGMN exhibits
+excellent distribution fitting ability across coarse-to-fine-grained levels. We
+open source related code on Github: https://github.com/BestActionNow/EGMN.",https://github.com/BestActionNow/EGMN,Accepted as oral full paper by RecSys'2025 conference
+PaperRegister: Boosting Flexible-grained Paper Search via Hierarchical Register Indexing,"Zhuoqun Li, Xuanang Chen, Hongyu Lin, Yaojie Lu, Xianpei Han, Le Sun",2025-08-14,2508.11116v1,http://arxiv.org/abs/2508.11116v1,http://arxiv.org/pdf/2508.11116v1,information_retrieval,cs.IR,"Paper search is an important activity for researchers, typically involving
+using a query with description of a topic to find relevant papers. As research
+deepens, paper search requirements may become more flexible, sometimes
+involving specific details such as module configuration rather than being
+limited to coarse-grained topics. However, previous paper search systems are
+unable to meet these flexible-grained requirements, as these systems mainly
+collect paper abstracts to construct index of corpus, which lack detailed
+information to support retrieval by finer-grained queries. In this work, we
+propose PaperRegister, consisted of offline hierarchical indexing and online
+adaptive retrieval, transforming traditional abstract-based index into
+hierarchical index tree for paper search, thereby supporting queries at
+flexible granularity. Experiments on paper search tasks across a range of
+granularity demonstrate that PaperRegister achieves the state-of-the-art
+performance, and particularly excels in fine-grained scenarios, highlighting
+the good potential as an effective solution for flexible-grained paper search
+in real-world applications. Code for this work is in
+https://github.com/Li-Z-Q/PaperRegister.",https://github.com/Li-Z-Q/PaperRegister,
+STEP: Stepwise Curriculum Learning for Context-Knowledge Fusion in Conversational Recommendation,"Zhenye Yang, Jinpeng Chen, Huan Li, Xiongnan Jin, Xuanyang Li, Junwei Zhang, Hongbo Gao, Kaimin Wei, Senzhang Wang",2025-08-14,2508.10669v1,http://arxiv.org/abs/2508.10669v1,http://arxiv.org/pdf/2508.10669v1,information_retrieval,cs.AI,"Conversational recommender systems (CRSs) aim to proactively capture user
+preferences through natural language dialogue and recommend high-quality items.
+To achieve this, CRS gathers user preferences via a dialog module and builds
+user profiles through a recommendation module to generate appropriate
+recommendations. However, existing CRS faces challenges in capturing the deep
+semantics of user preferences and dialogue context. In particular, the
+efficient integration of external knowledge graph (KG) information into
+dialogue generation and recommendation remains a pressing issue. Traditional
+approaches typically combine KG information directly with dialogue content,
+which often struggles with complex semantic relationships, resulting in
+recommendations that may not align with user expectations.
+  To address these challenges, we introduce STEP, a conversational recommender
+centered on pre-trained language models that combines curriculum-guided
+context-knowledge fusion with lightweight task-specific prompt tuning. At its
+heart, an F-Former progressively aligns the dialogue context with
+knowledge-graph entities through a three-stage curriculum, thus resolving
+fine-grained semantic mismatches. The fused representation is then injected
+into the frozen language model via two minimal yet adaptive prefix prompts: a
+conversation prefix that steers response generation toward user intent and a
+recommendation prefix that biases item ranking toward knowledge-consistent
+candidates. This dual-prompt scheme allows the model to share cross-task
+semantics while respecting the distinct objectives of dialogue and
+recommendation. Experimental results show that STEP outperforms mainstream
+methods in the precision of recommendation and dialogue quality in two public
+datasets.",https://github.com/Alex-bupt/STEP,"10 pages; 4 figures; 6 tables; code available at
+  https://github.com/Alex-bupt/STEP"
+FuXi-β: Towards a Lightweight and Fast Large-Scale Generative Recommendation Model,"Yufei Ye, Wei Guo, Hao Wang, Hong Zhu, Yuyang Ye, Yong Liu, Huifeng Guo, Ruiming Tang, Defu Lian, Enhong Chen",2025-08-14,2508.10615v1,http://arxiv.org/abs/2508.10615v1,http://arxiv.org/pdf/2508.10615v1,information_retrieval,cs.IR,"Scaling laws for autoregressive generative recommenders reveal potential for
+larger, more versatile systems but mean greater latency and training costs. To
+accelerate training and inference, we investigated the recent generative
+recommendation models HSTU and FuXi-$\alpha$, identifying two efficiency
+bottlenecks: the indexing operations in relative temporal attention bias and
+the computation of the query-key attention map. Additionally, we observed that
+relative attention bias in self-attention mechanisms can also serve as
+attention maps. Previous works like Synthesizer have shown that alternative
+forms of attention maps can achieve similar performance, naturally raising the
+question of whether some attention maps are redundant. Through empirical
+experiments, we discovered that using the query-key attention map might degrade
+the model's performance in recommendation tasks. To address these bottlenecks,
+we propose a new framework applicable to Transformer-like recommendation
+models. On one hand, we introduce Functional Relative Attention Bias, which
+avoids the time-consuming operations of the original relative attention bias,
+thereby accelerating the process. On the other hand, we remove the query-key
+attention map from the original self-attention layer and design a new
+Attention-Free Token Mixer module. Furthermore, by applying this framework to
+FuXi-$\alpha$, we introduce a new model, FuXi-$\beta$. Experiments across
+multiple datasets demonstrate that FuXi-$\beta$ outperforms previous
+state-of-the-art models and achieves significant acceleration compared to
+FuXi-$\alpha$, while also adhering to the scaling law. Notably, FuXi-$\beta$
+shows an improvement of 27% to 47% in the NDCG@10 metric on large-scale
+industrial datasets compared to FuXi-$\alpha$. Our code is available in a
+public repository: https://github.com/USTC-StarTeam/FuXi-beta",https://github.com/USTC-StarTeam/FuXi-beta,
+Multi-Label Plant Species Prediction with Metadata-Enhanced Multi-Head Vision Transformers,"Hanna Herasimchyk, Robin Labryga, Tomislav Prusina",2025-08-14,2508.10457v1,http://arxiv.org/abs/2508.10457v1,http://arxiv.org/pdf/2508.10457v1,information_retrieval,cs.CV,"We present a multi-head vision transformer approach for multi-label plant
+species prediction in vegetation plot images, addressing the PlantCLEF 2025
+challenge. The task involves training models on single-species plant images
+while testing on multi-species quadrat images, creating a drastic domain shift.
+Our methodology leverages a pre-trained DINOv2 Vision Transformer Base
+(ViT-B/14) backbone with multiple classification heads for species, genus, and
+family prediction, utilizing taxonomic hierarchies. Key contributions include
+multi-scale tiling to capture plants at different scales, dynamic threshold
+optimization based on mean prediction length, and ensemble strategies through
+bagging and Hydra model architectures. The approach incorporates various
+inference techniques including image cropping to remove non-plant artifacts,
+top-n filtering for prediction constraints, and logit thresholding strategies.
+Experiments were conducted on approximately 1.4 million training images
+covering 7,806 plant species. Results demonstrate strong performance, making
+our submission 3rd best on the private leaderboard. Our code is available at
+https://github.com/geranium12/plant-clef-2025/tree/v1.0.0.",https://github.com/geranium12/plant-clef-2025,"Accepted for publication at: LifeCLEF Lab at CLEF 2025 Working Notes,
+  2025, Madrid, Spain"
+AmbiSQL: Interactive Ambiguity Detection and Resolution for Text-to-SQL,"Zhongjun Ding, Yin Lin, Tianjing Zeng",2025-08-21,2508.15276v1,http://arxiv.org/abs/2508.15276v1,http://arxiv.org/pdf/2508.15276v1,databases,cs.DB,"Text-to-SQL systems translate natural language questions into SQL queries,
+providing substantial value for non-expert users. While large language models
+(LLMs) show promising results for this task, they remain error-prone. Query
+ambiguity has been recognized as a major obstacle for LLM-based Text-to-SQL
+systems, leading to misinterpretation of user intent and inaccurate SQL
+generation. We demonstrate AmbiSQL, an interactive system that automatically
+detects query ambiguities and guides users through intuitive multiple-choice
+questions to clarify their intent. Our approach introduces a fine-grained
+ambiguity taxonomy for identifying ambiguities that affect database element
+mapping and LLM reasoning, then incorporates user feedback to rewrite ambiguous
+questions. Evaluation on an ambiguous query dataset shows that AmbiSQL achieves
+87.2% precision in ambiguity detection and improves SQL exact match accuracy by
+50% when integrated with Text-to-SQL systems. Our demonstration showcases the
+significant performance gains and highlights the system's practical usability.
+Code repo and demonstration are available at:
+https://github.com/JustinzjDing/AmbiSQL.",https://github.com/JustinzjDing/AmbiSQL,
+Cold-RL: Learning Cache Eviction with Offline Reinforcement Learning for NGINX,"Aayush Gupta, Arpit Bhayani",2025-08-17,2508.12485v1,http://arxiv.org/abs/2508.12485v1,http://arxiv.org/pdf/2508.12485v1,databases,cs.LG,"Web proxies such as NGINX commonly rely on least-recently-used (LRU)
+eviction, which is size agnostic and can thrash under periodic bursts and mixed
+object sizes. We introduce Cold-RL, a learned eviction policy for NGINX that
+replaces LRU's forced-expire path with a dueling Deep Q-Network served by an
+ONNX sidecar within a strict microsecond budget. On each eviction, Cold-RL
+samples the K least-recently-used objects, extracts six lightweight features
+(age, size, hit count, inter-arrival time, remaining TTL, and last origin RTT),
+and requests a bitmask of victims; a hard timeout of 500 microseconds triggers
+immediate fallback to native LRU. Policies are trained offline by replaying
+NGINX access logs through a cache simulator with a simple reward: a retained
+object earns one point if it is hit again before TTL expiry. We compare against
+LRU, LFU, size-based, adaptive LRU, and a hybrid baseline on two adversarial
+workloads. With a 25 MB cache, Cold-RL raises hit ratio from 0.1436 to 0.3538,
+a 146 percent improvement over the best classical baseline; at 100 MB, from
+0.7530 to 0.8675, a 15 percent gain; and at 400 MB it matches classical methods
+(about 0.918). Inference adds less than 2 percent CPU overhead and keeps 95th
+percentile eviction latency within budget. To our knowledge, this is the first
+reinforcement learning eviction policy integrated into NGINX with strict SLOs.",https://github.com/ayushgupta4897/DRL-Cache,"8 pages, 4 figures (system architecture, eviction path, training
+  pipeline, and DQN algorithm), 2 tables. Code available at
+  https://github.com/ayushgupta4897/DRL-Cache"
+"Synthesize, Retrieve, and Propagate: A Unified Predictive Modeling Framework for Relational Databases","Ning Li, Kounianhua Du, Han Zhang, Quan Gan, Minjie Wang, David Wipf, Weinan Zhang",2025-08-10,2508.08327v1,http://arxiv.org/abs/2508.08327v1,http://arxiv.org/pdf/2508.08327v1,databases,cs.DB,"Relational databases (RDBs) have become the industry standard for storing
+massive and heterogeneous data. However, despite the widespread use of RDBs
+across various fields, the inherent structure of relational databases hinders
+their ability to benefit from flourishing deep learning methods. Previous
+research has primarily focused on exploiting the unary dependency among
+multiple tables in a relational database using the primary key - foreign key
+relationships, either joining multiple tables into a single table or
+constructing a graph among them, which leaves the implicit composite relations
+among different tables and a substantial potential of improvement for
+predictive modeling unexplored. In this paper, we propose SRP, a unified
+predictive modeling framework that synthesizes features using the unary
+dependency, retrieves related information to capture the composite dependency,
+and propagates messages across a constructed graph to learn adjacent patterns
+for prediction on relation databases. By introducing a new retrieval mechanism
+into RDB, SRP is designed to fully capture both the unary and the composite
+dependencies within a relational database, thereby enhancing the receptive
+field of tabular data prediction. In addition, we conduct a comprehensive
+analysis on the components of SRP, offering a nuanced understanding of model
+behaviors and practical guidelines for future applications. Extensive
+experiments on five real-world datasets demonstrate the effectiveness of SRP
+and its potential applicability in industrial scenarios. The code is released
+at https://github.com/NingLi670/SRP.",https://github.com/NingLi670/SRP,
+CRINN: Contrastive Reinforcement Learning for Approximate Nearest Neighbor Search,"Xiaoya Li, Xiaofei Sun, Albert Wang, Chris Shum, Jiwei Li",2025-08-04,2508.02091v2,http://arxiv.org/abs/2508.02091v2,http://arxiv.org/pdf/2508.02091v2,databases,cs.LG,"Approximate nearest-neighbor search (ANNS) algorithms have become
+increasingly critical for recent AI applications, particularly in
+retrieval-augmented generation (RAG) and agent-based LLM applications. In this
+paper, we present CRINN, a new paradigm for ANNS algorithms. CRINN treats ANNS
+optimization as a reinforcement learning problem where execution speed serves
+as the reward signal. This approach enables the automatic generation of
+progressively faster ANNS implementations while maintaining accuracy
+constraints. Our experimental evaluation demonstrates CRINN's effectiveness
+across six widely-used NNS benchmark datasets. When compared against
+state-of-the-art open-source ANNS algorithms, CRINN achieves best performance
+on three of them (GIST-960-Euclidean, MNIST-784-Euclidean, and
+GloVe-25-angular), and tied for first place on two of them (SIFT-128-Euclidean
+and GloVe-25-angular). The implications of CRINN's success reach well beyond
+ANNS optimization: It validates that LLMs augmented with reinforcement learning
+can function as an effective tool for automating sophisticated algorithmic
+optimizations that demand specialized knowledge and labor-intensive manual
+refinement. Code can be found at https://github.com/deepreinforce-ai/CRINN",https://github.com/deepreinforce-ai/CRINN,Preprint Version
+DBAIOps: A Reasoning LLM-Enhanced Database Operation and Maintenance System using Knowledge Graphs,"Wei Zhou, Peng Sun, Xuanhe Zhou, Qianglei Zang, Ji Xu, Tieying Zhang, Guoliang Li, Fan Wu",2025-08-02,2508.01136v1,http://arxiv.org/abs/2508.01136v1,http://arxiv.org/pdf/2508.01136v1,databases,cs.DB,"The operation and maintenance (O&M) of database systems is critical to
+ensuring system availability and performance, typically requiring expert
+experience (e.g., identifying metric-to-anomaly relations) for effective
+diagnosis and recovery. However, existing automatic database O&M methods,
+including commercial products, cannot effectively utilize expert experience. On
+the one hand, rule-based methods only support basic O&M tasks (e.g.,
+metric-based anomaly detection), which are mostly numerical equations and
+cannot effectively incorporate literal O&M experience (e.g., troubleshooting
+guidance in manuals). On the other hand, LLM-based methods, which retrieve
+fragmented information (e.g., standard documents + RAG), often generate
+inaccurate or generic results. To address these limitations, we present
+DBAIOps, a novel hybrid database O&M system that combines reasoning LLMs with
+knowledge graphs to achieve DBA-style diagnosis. First, DBAIOps introduces a
+heterogeneous graph model for representing the diagnosis experience, and
+proposes a semi-automatic graph construction algorithm to build that graph from
+thousands of documents. Second, DBAIOps develops a collection of (800+)
+reusable anomaly models that identify both directly alerted metrics and
+implicitly correlated experience and metrics. Third, for each anomaly, DBAIOps
+proposes a two-stage graph evolution mechanism to explore relevant diagnosis
+paths and identify missing relations automatically. It then leverages a
+reasoning LLM (e.g., DeepSeek-R1) to infer root causes and generate clear
+diagnosis reports for both DBAs and common users. Our evaluation over four
+mainstream database systems (Oracle, MySQL, PostgreSQL, and DM8) demonstrates
+that DBAIOps outperforms state-of-the-art baselines, 34.85% and 47.22% higher
+in root cause and human evaluation accuracy, respectively.",https://github.com/weAIDB/DBAIOps,"DBAIOps supports 25 database systems and has been deployed in 20
+  real-world scenarios, covering domains like finance, energy, and healthcare.
+  See website at: https://www.dbaiops.com; See code at:
+  https://github.com/weAIDB/DBAIOps/"
