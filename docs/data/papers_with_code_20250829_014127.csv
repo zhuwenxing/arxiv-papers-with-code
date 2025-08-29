@@ -1,0 +1,471 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+Refining Text Generation for Realistic Conversational Recommendation via Direct Preference Optimization,"Manato Tajiri, Michimasa Inaba",2025-08-27,2508.19918v2,http://arxiv.org/abs/2508.19918v2,http://arxiv.org/pdf/2508.19918v2,information_retrieval,cs.IR,"Conversational Recommender Systems (CRSs) aim to elicit user preferences via
+natural dialogue to provide suitable item recommendations. However, current
+CRSs often deviate from realistic human interactions by rapidly recommending
+items in brief sessions. This work addresses this gap by leveraging Large
+Language Models (LLMs) to generate dialogue summaries from dialogue history and
+item recommendation information from item description. This approach enables
+the extraction of both explicit user statements and implicit preferences
+inferred from the dialogue context. We introduce a method using Direct
+Preference Optimization (DPO) to ensure dialogue summary and item
+recommendation information are rich in information crucial for effective
+recommendations. Experiments on two public datasets validate our method's
+effectiveness in fostering more natural and realistic conversational
+recommendation processes.Our implementation is publicly available at:
+https://github.com/UEC-InabaLab/Refining-LLM-Text",https://github.com/UEC-InabaLab/Refining-LLM-Text,Accepted to EMNLP 2025 Main Conference
+Uncovering the Bigger Picture: Comprehensive Event Understanding Via Diverse News Retrieval,"Yixuan Tang, Yuanyuan Shi, Yiqun Sun, Anthony Kum Hoe Tung",2025-08-27,2508.19758v1,http://arxiv.org/abs/2508.19758v1,http://arxiv.org/pdf/2508.19758v1,information_retrieval,cs.CL,"Access to diverse perspectives is essential for understanding real-world
+events, yet most news retrieval systems prioritize textual relevance, leading
+to redundant results and limited viewpoint exposure. We propose NEWSCOPE, a
+two-stage framework for diverse news retrieval that enhances event coverage by
+explicitly modeling semantic variation at the sentence level. The first stage
+retrieves topically relevant content using dense retrieval, while the second
+stage applies sentence-level clustering and diversity-aware re-ranking to
+surface complementary information. To evaluate retrieval diversity, we
+introduce three interpretable metrics, namely Average Pairwise Distance,
+Positive Cluster Coverage, and Information Density Ratio, and construct two
+paragraph-level benchmarks: LocalNews and DSGlobal. Experiments show that
+NEWSCOPE consistently outperforms strong baselines, achieving significantly
+higher diversity without compromising relevance. Our results demonstrate the
+effectiveness of fine-grained, interpretable modeling in mitigating redundancy
+and promoting comprehensive event understanding. The data and code are
+available at https://github.com/tangyixuan/NEWSCOPE.",https://github.com/tangyixuan/NEWSCOPE,Accepted by EMNLP 2025
+Inference Gap in Domain Expertise and Machine Intelligence in Named Entity Recognition: Creation of and Insights from a Substance Use-related Dataset,"Sumon Kanti Dey, Jeanne M. Powell, Azra Ismail, Jeanmarie Perrone, Abeed Sarker",2025-08-26,2508.19467v1,http://arxiv.org/abs/2508.19467v1,http://arxiv.org/pdf/2508.19467v1,information_retrieval,cs.CL,"Nonmedical opioid use is an urgent public health challenge, with far-reaching
+clinical and social consequences that are often underreported in traditional
+healthcare settings. Social media platforms, where individuals candidly share
+first-person experiences, offer a valuable yet underutilized source of insight
+into these impacts. In this study, we present a named entity recognition (NER)
+framework to extract two categories of self-reported consequences from social
+media narratives related to opioid use: ClinicalImpacts (e.g., withdrawal,
+depression) and SocialImpacts (e.g., job loss). To support this task, we
+introduce RedditImpacts 2.0, a high-quality dataset with refined annotation
+guidelines and a focus on first-person disclosures, addressing key limitations
+of prior work. We evaluate both fine-tuned encoder-based models and
+state-of-the-art large language models (LLMs) under zero- and few-shot
+in-context learning settings. Our fine-tuned DeBERTa-large model achieves a
+relaxed token-level F1 of 0.61 [95% CI: 0.43-0.62], consistently outperforming
+LLMs in precision, span accuracy, and adherence to task-specific guidelines.
+Furthermore, we show that strong NER performance can be achieved with
+substantially less labeled data, emphasizing the feasibility of deploying
+robust models in resource-limited settings. Our findings underscore the value
+of domain-specific fine-tuning for clinical NLP tasks and contribute to the
+responsible development of AI tools that may enhance addiction surveillance,
+improve interpretability, and support real-world healthcare decision-making.
+The best performing model, however, still significantly underperforms compared
+to inter-expert agreement (Cohen's kappa: 0.81), demonstrating that a gap
+persists between expert intelligence and current state-of-the-art NER/AI
+capabilities for tasks requiring deep domain knowledge.",https://github.com/SumonKantiDey/Reddit_Impacts_NER,Dataset and code: https://github.com/SumonKantiDey/Reddit_Impacts_NER
+ST-Raptor: LLM-Powered Semi-Structured Table Question Answering,"Zirui Tang, Boyu Niu, Xuanhe Zhou, Boxiu Li, Wei Zhou, Jiannan Wang, Guoliang Li, Xinyi Zhang, Fan Wu",2025-08-25,2508.18190v2,http://arxiv.org/abs/2508.18190v2,http://arxiv.org/pdf/2508.18190v2,information_retrieval,cs.AI,"Semi-structured tables, widely used in real-world applications (e.g.,
+financial reports, medical records, transactional orders), often involve
+flexible and complex layouts (e.g., hierarchical headers and merged cells).
+These tables generally rely on human analysts to interpret table layouts and
+answer relevant natural language questions, which is costly and inefficient. To
+automate the procedure, existing methods face significant challenges. First,
+methods like NL2SQL require converting semi-structured tables into structured
+ones, which often causes substantial information loss. Second, methods like
+NL2Code and multi-modal LLM QA struggle to understand the complex layouts of
+semi-structured tables and cannot accurately answer corresponding questions. To
+this end, we propose ST-Raptor, a tree-based framework for semi-structured
+table question answering using large language models. First, we introduce the
+Hierarchical Orthogonal Tree (HO-Tree), a structural model that captures
+complex semi-structured table layouts, along with an effective algorithm for
+constructing the tree. Second, we define a set of basic tree operations to
+guide LLMs in executing common QA tasks. Given a user question, ST-Raptor
+decomposes it into simpler sub-questions, generates corresponding tree
+operation pipelines, and conducts operation-table alignment for accurate
+pipeline execution. Third, we incorporate a two-stage verification mechanism:
+forward validation checks the correctness of execution steps, while backward
+validation evaluates answer reliability by reconstructing queries from
+predicted answers. To benchmark the performance, we present SSTQA, a dataset of
+764 questions over 102 real-world semi-structured tables. Experiments show that
+ST-Raptor outperforms nine baselines by up to 20% in answer accuracy. The code
+is available at https://github.com/weAIDB/ST-Raptor.",https://github.com/weAIDB/ST-Raptor,"Extension of our SIGMOD 2026 paper. Please refer to source code
+  available at: https://github.com/weAIDB/ST-Raptor"
+Mirroring Users: Towards Building Preference-aligned User Simulator with User Feedback in Recommendation,"Tianjun Wei, Huizhong Guo, Yingpeng Du, Zhu Sun, Chen Huang, Dongxia Wang, Jie Zhang",2025-08-25,2508.18142v1,http://arxiv.org/abs/2508.18142v1,http://arxiv.org/pdf/2508.18142v1,information_retrieval,cs.HC,"User simulation is increasingly vital to develop and evaluate recommender
+systems (RSs). While Large Language Models (LLMs) offer promising avenues to
+simulate user behavior, they often struggle with the absence of specific domain
+alignment required for RSs and the efficiency demands of large-scale
+simulation. A vast yet underutilized resource for enhancing this alignment is
+the extensive user feedback inherent in RSs. However, directly leveraging such
+feedback presents two significant challenges. First, user feedback in RSs is
+often ambiguous and noisy, which negatively impacts effective preference
+alignment. Second, the massive volume of feedback largely hinders the
+efficiency of preference alignment, necessitating an efficient filtering
+mechanism to identify more informative samples. To overcome these hurdles, we
+introduce a novel data construction framework that leverages user feedback in
+RSs with advanced LLM capabilities to generate high-quality simulation data.
+Our framework unfolds in two key phases: (1) employing LLMs to generate
+cognitive decision-making processes on constructed simulation samples, reducing
+ambiguity in raw user feedback; (2) data distillation based on uncertainty
+estimation and behavior sampling to filter challenging yet denoised simulation
+samples. Accordingly, we fine-tune lightweight LLMs, as user simulators, using
+such high-quality dataset with corresponding decision-making processes.
+Extensive experiments verify that our framework significantly boosts the
+alignment with human preferences and in-domain reasoning capabilities of
+fine-tuned LLMs, and provides more insightful and interpretable signals when
+interacting with RSs. We believe our work will advance the RS community and
+offer valuable insights for broader human-centric AI research.",https://github.com/UserMirrorer/UserMirrorer,Github: https://github.com/UserMirrorer/UserMirrorer
+HLLM-Creator: Hierarchical LLM-based Personalized Creative Generation,"Junyi Chen, Lu Chi, Siliang Xu, Shiwei Ran, Bingyue Peng, Zehuan Yuan",2025-08-25,2508.18118v1,http://arxiv.org/abs/2508.18118v1,http://arxiv.org/pdf/2508.18118v1,information_retrieval,cs.IR,"AI-generated content technologies are widely used in content creation.
+However, current AIGC systems rely heavily on creators' inspiration, rarely
+generating truly user-personalized content. In real-world applications such as
+online advertising, a single product may have multiple selling points, with
+different users focusing on different features. This underscores the
+significant value of personalized, user-centric creative generation. Effective
+personalized content generation faces two main challenges: (1) accurately
+modeling user interests and integrating them into the content generation
+process while adhering to factual constraints, and (2) ensuring high efficiency
+and scalability to handle the massive user base in industrial scenarios.
+Additionally, the scarcity of personalized creative data in practice
+complicates model training, making data construction another key hurdle. We
+propose HLLM-Creator, a hierarchical LLM framework for efficient user interest
+modeling and personalized content generation. During inference, a combination
+of user clustering and a user-ad-matching-prediction based pruning strategy is
+employed to significantly enhance generation efficiency and reduce
+computational overhead, making the approach suitable for large-scale
+deployment. Moreover, we design a data construction pipeline based on
+chain-of-thought reasoning, which generates high-quality, user-specific
+creative titles and ensures factual consistency despite limited personalized
+data. This pipeline serves as a critical foundation for the effectiveness of
+our model. Extensive experiments on personalized title generation for Douyin
+Search Ads show the effectiveness of HLLM-Creator. Online A/B test shows a
+0.476% increase on Adss, paving the way for more effective and efficient
+personalized generation in industrial scenarios. Codes for academic dataset are
+available at https://github.com/bytedance/HLLM.",https://github.com/bytedance/HLLM,
+LexSemBridge: Fine-Grained Dense Representation Enhancement through Token-Aware Embedding Augmentation,"Shaoxiong Zhan, Hai Lin, Hongming Tan, Xiaodong Cai, Hai-Tao Zheng, Xin Su, Zifei Shan, Ruitong Liu, Hong-Gee Kim",2025-08-25,2508.17858v1,http://arxiv.org/abs/2508.17858v1,http://arxiv.org/pdf/2508.17858v1,information_retrieval,cs.IR,"As queries in retrieval-augmented generation (RAG) pipelines powered by large
+language models (LLMs) become increasingly complex and diverse, dense retrieval
+models have demonstrated strong performance in semantic matching. Nevertheless,
+they often struggle with fine-grained retrieval tasks, where precise keyword
+alignment and span-level localization are required, even in cases with high
+lexical overlap that would intuitively suggest easier retrieval. To
+systematically evaluate this limitation, we introduce two targeted tasks,
+keyword retrieval and part-of-passage retrieval, designed to simulate practical
+fine-grained scenarios. Motivated by these observations, we propose
+LexSemBridge, a unified framework that enhances dense query representations
+through fine-grained, input-aware vector modulation. LexSemBridge constructs
+latent enhancement vectors from input tokens using three paradigms: Statistical
+(SLR), Learned (LLR), and Contextual (CLR), and integrates them with dense
+embeddings via element-wise interaction. Theoretically, we show that this
+modulation preserves the semantic direction while selectively amplifying
+discriminative dimensions. LexSemBridge operates as a plug-in without modifying
+the backbone encoder and naturally extends to both text and vision modalities.
+Extensive experiments across semantic and fine-grained retrieval tasks validate
+the effectiveness and generality of our approach. All code and models are
+publicly available at https://github.com/Jasaxion/LexSemBridge/",https://github.com/Jasaxion/LexSemBridge,
+DeAR: Dual-Stage Document Reranking with Reasoning Agents via LLM Distillation,"Abdelrahman Abdallah, Jamshid Mozafari, Bhawna Piryani, Adam Jatowt",2025-08-23,2508.16998v1,http://arxiv.org/abs/2508.16998v1,http://arxiv.org/pdf/2508.16998v1,information_retrieval,cs.CL,"Large Language Models (LLMs) have transformed listwise document reranking by
+enabling global reasoning over candidate sets, yet single models often struggle
+to balance fine-grained relevance scoring with holistic cross-document
+analysis. We propose \textbf{De}ep\textbf{A}gent\textbf{R}ank (\textbf{\DeAR}),
+an open-source framework that decouples these tasks through a dual-stage
+approach, achieving superior accuracy and interpretability. In \emph{Stage 1},
+we distill token-level relevance signals from a frozen 13B LLaMA teacher into a
+compact \{3, 8\}B student model using a hybrid of cross-entropy, RankNet, and
+KL divergence losses, ensuring robust pointwise scoring. In \emph{Stage 2}, we
+attach a second LoRA adapter and fine-tune on 20K GPT-4o-generated
+chain-of-thought permutations, enabling listwise reasoning with
+natural-language justifications. Evaluated on TREC-DL19/20, eight BEIR
+datasets, and NovelEval-2306, \DeAR surpasses open-source baselines by +5.1
+nDCG@5 on DL20 and achieves 90.97 nDCG@10 on NovelEval, outperforming GPT-4 by
++3.09. Without fine-tuning on Wikipedia, DeAR also excels in open-domain QA,
+achieving 54.29 Top-1 accuracy on Natural Questions, surpassing baselines like
+MonoT5, UPR, and RankGPT. Ablations confirm that dual-loss distillation ensures
+stable calibration, making \DeAR a highly effective and interpretable solution
+for modern reranking systems.\footnote{Dataset and code available at
+https://github.com/DataScienceUIBK/DeAR-Reranking.}.",https://github.com/DataScienceUIBK/DeAR-Reranking,Accept at EMNLP Findings 2025
+How Good are LLM-based Rerankers? An Empirical Analysis of State-of-the-Art Reranking Models,"Abdelrahman Abdallah, Bhawna Piryani, Jamshid Mozafari, Mohammed Ali, Adam Jatowt",2025-08-22,2508.16757v1,http://arxiv.org/abs/2508.16757v1,http://arxiv.org/pdf/2508.16757v1,information_retrieval,cs.CL,"In this work, we present a systematic and comprehensive empirical evaluation
+of state-of-the-art reranking methods, encompassing large language model
+(LLM)-based, lightweight contextual, and zero-shot approaches, with respect to
+their performance in information retrieval tasks. We evaluate in total 22
+methods, including 40 variants (depending on used LLM) across several
+established benchmarks, including TREC DL19, DL20, and BEIR, as well as a novel
+dataset designed to test queries unseen by pretrained models. Our primary goal
+is to determine, through controlled and fair comparisons, whether a performance
+disparity exists between LLM-based rerankers and their lightweight
+counterparts, particularly on novel queries, and to elucidate the underlying
+causes of any observed differences. To disentangle confounding factors, we
+analyze the effects of training data overlap, model architecture, and
+computational efficiency on reranking performance. Our findings indicate that
+while LLM-based rerankers demonstrate superior performance on familiar queries,
+their generalization ability to novel queries varies, with lightweight models
+offering comparable efficiency. We further identify that the novelty of queries
+significantly impacts reranking effectiveness, highlighting limitations in
+existing approaches.
+https://github.com/DataScienceUIBK/llm-reranking-generalization-study",https://github.com/DataScienceUIBK/llm-reranking-generalization-study,EMNLP Findings 2025
+ORCA: Mitigating Over-Reliance for Multi-Task Dwell Time Prediction with Causal Decoupling,"Huishi Luo, Fuzhen Zhuang, Yongchun Zhu, Yiqing Wu, Bo Kang, Ruobing Xie, Feng Xia, Deqing Wang, Jin Dong",2025-08-22,2508.16573v1,http://arxiv.org/abs/2508.16573v1,http://arxiv.org/pdf/2508.16573v1,information_retrieval,cs.IR,"Dwell time (DT) is a critical post-click metric for evaluating user
+preference in recommender systems, complementing the traditional click-through
+rate (CTR). Although multi-task learning is widely adopted to jointly optimize
+DT and CTR, we observe that multi-task models systematically collapse their DT
+predictions to the shortest and longest bins, under-predicting the moderate
+durations. We attribute this moderate-duration bin under-representation to
+over-reliance on the CTR-DT spurious correlation, and propose ORCA to address
+it with causal-decoupling. Specifically, ORCA explicitly models and subtracts
+CTR's negative transfer while preserving its positive transfer. We further
+introduce (i) feature-level counterfactual intervention, and (ii) a
+task-interaction module with instance inverse-weighting, weakening CTR-mediated
+effect and restoring direct DT semantics. ORCA is model-agnostic and easy to
+deploy. Experiments show an average 10.6% lift in DT metrics without harming
+CTR. Code is available at
+https://github.com/Chrissie-Law/ORCA-Mitigating-Over-Reliance-for-Multi-Task-Dwell-Time-Prediction-with-Causal-Decoupling.",https://github.com/Chrissie-Law/ORCA-Mitigating-Over-Reliance-for-Multi-Task-Dwell-Time-Prediction-with-Causal-Decoupling,Accepted as a short paper at CIKM 2025
+OPERA: A Reinforcement Learning--Enhanced Orchestrated Planner-Executor Architecture for Reasoning-Oriented Multi-Hop Retrieval,"Yu Liu, Yanbing Liu, Fangfang Yuan, Cong Cao, Youbang Sun, Kun Peng, WeiZhuo Chen, Jianjun Li, Zhiyuan Ma",2025-08-22,2508.16438v1,http://arxiv.org/abs/2508.16438v1,http://arxiv.org/pdf/2508.16438v1,information_retrieval,cs.IR,"Recent advances in large language models (LLMs) and dense retrievers have
+driven significant progress in retrieval-augmented generation (RAG). However,
+existing approaches face significant challenges in complex reasoning-oriented
+multi-hop retrieval tasks: 1) Ineffective reasoning-oriented planning: Prior
+methods struggle to generate robust multi-step plans for complex queries, as
+rule-based decomposers perform poorly on out-of-template questions. 2)
+Suboptimal reasoning-driven retrieval: Related methods employ limited query
+reformulation, leading to iterative retrieval loops that often fail to locate
+golden documents. 3) Insufficient reasoning-guided filtering: Prevailing
+methods lack the fine-grained reasoning to effectively filter salient
+information from noisy results, hindering utilization of retrieved knowledge.
+Fundamentally, these limitations all stem from the weak coupling between
+retrieval and reasoning in current RAG architectures. We introduce the
+Orchestrated Planner-Executor Reasoning Architecture (OPERA), a novel
+reasoning-driven retrieval framework. OPERA's Goal Planning Module (GPM)
+decomposes questions into sub-goals, which are executed by a Reason-Execute
+Module (REM) with specialized components for precise reasoning and effective
+retrieval. To train OPERA, we propose Multi-Agents Progressive Group Relative
+Policy Optimization (MAPGRPO), a novel variant of GRPO. Experiments on complex
+multi-hop benchmarks show OPERA's superior performance, validating both the
+MAPGRPO method and OPERA's design. Code is available at
+https://github.com/Ameame1/OPERA.",https://github.com/Ameame1/OPERA,
+Attribute Filtering in Approximate Nearest Neighbor Search: An In-depth Experimental Study,"Mocheng Li, Xiao Yan, Baotong Lu, Yue Zhang, James Cheng, Chenhao Ma",2025-08-22,2508.16263v1,http://arxiv.org/abs/2508.16263v1,http://arxiv.org/pdf/2508.16263v1,information_retrieval,cs.DB,"With the growing integration of structured and unstructured data, new methods
+have emerged for performing similarity searches on vectors while honoring
+structured attribute constraints, i.e., a process known as Filtering
+Approximate Nearest Neighbor (Filtering ANN) search. Since many of these
+algorithms have only appeared in recent years and are designed to work with a
+variety of base indexing methods and filtering strategies, there is a pressing
+need for a unified analysis that identifies their core techniques and enables
+meaningful comparisons.
+  In this work, we present a unified Filtering ANN search interface that
+encompasses the latest algorithms and evaluate them extensively from multiple
+perspectives. First, we propose a comprehensive taxonomy of existing Filtering
+ANN algorithms based on attribute types and filtering strategies. Next, we
+analyze their key components, i.e., index structures, pruning strategies, and
+entry point selection, to elucidate design differences and tradeoffs. We then
+conduct a broad experimental evaluation on 10 algorithms and 12 methods across
+4 datasets (each with up to 10 million items), incorporating both synthetic and
+real attributes and covering selectivity levels from 0.1% to 100%. Finally, an
+in-depth component analysis reveals the influence of pruning, entry point
+selection, and edge filtering costs on overall performance. Based on our
+findings, we summarize the strengths and limitations of each approach, provide
+practical guidelines for selecting appropriate methods, and suggest promising
+directions for future research. Our code is available at:
+https://github.com/lmccccc/FANNBench.",https://github.com/lmccccc/FANNBench,"15 pages, 15 figures, Accepted at SIGMOD 2026"
+Benchmarking Computer Science Survey Generation,"Weihang Su, Anzhe Xie, Qingyao Ai, Jianming Long, Jiaxin Mao, Ziyi Ye, Yiqun Liu",2025-08-21,2508.15658v1,http://arxiv.org/abs/2508.15658v1,http://arxiv.org/pdf/2508.15658v1,information_retrieval,cs.CL,"Scientific survey articles play a vital role in summarizing research
+progress, yet their manual creation is becoming increasingly infeasible due to
+the rapid growth of academic literature. While large language models (LLMs)
+offer promising capabilities for automating this process, progress in this area
+is hindered by the absence of standardized benchmarks and evaluation protocols.
+To address this gap, we introduce SurGE (Survey Generation Evaluation), a new
+benchmark for evaluating scientific survey generation in the computer science
+domain. SurGE consists of (1) a collection of test instances, each including a
+topic description, an expert-written survey, and its full set of cited
+references, and (2) a large-scale academic corpus of over one million papers
+that serves as the retrieval pool. In addition, we propose an automated
+evaluation framework that measures generated surveys across four dimensions:
+information coverage, referencing accuracy, structural organization, and
+content quality. Our evaluation of diverse LLM-based approaches shows that
+survey generation remains highly challenging, even for advanced self-reflection
+frameworks. These findings highlight the complexity of the task and the
+necessity for continued research. We have open-sourced all the code, data, and
+models at: https://github.com/oneal2000/SurGE",https://github.com/oneal2000/SurGE,
+Exploring Scaling Laws of CTR Model for Online Performance Improvement,"Weijiang Lai, Beihong Jin, Jiongyan Zhang, Yiyuan Zheng, Jian Dong, Jia Cheng, Jun Lei, Xingxing Wang",2025-08-21,2508.15326v1,http://arxiv.org/abs/2508.15326v1,http://arxiv.org/pdf/2508.15326v1,information_retrieval,cs.IR,"CTR models play a vital role in improving user experience and boosting
+business revenue in many online personalized services. However, current CTR
+models generally encounter bottlenecks in performance improvement. Inspired by
+the scaling law phenomenon of LLMs, we propose a new paradigm for improving CTR
+predictions: first, constructing a CTR model with accuracy scalable to the
+model grade and data size, and then distilling the knowledge implied in this
+model into its lightweight model that can serve online users. To put it into
+practice, we construct a CTR model named SUAN (Stacked Unified Attention
+Network). In SUAN, we propose the UAB as a behavior sequence encoder. A single
+UAB unifies the modeling of the sequential and non-sequential features and also
+measures the importance of each user behavior feature from multiple
+perspectives. Stacked UABs elevate the configuration to a high grade, paving
+the way for performance improvement. In order to benefit from the high
+performance of the high-grade SUAN and avoid the disadvantage of its long
+inference time, we modify the SUAN with sparse self-attention and parallel
+inference strategies to form LightSUAN, and then adopt online distillation to
+train the low-grade LightSUAN, taking a high-grade SUAN as a teacher. The
+distilled LightSUAN has superior performance but the same inference time as the
+LightSUAN, making it well-suited for online deployment. Experimental results
+show that SUAN performs exceptionally well and holds the scaling laws spanning
+three orders of magnitude in model grade and data size, and the distilled
+LightSUAN outperforms the SUAN configured with one grade higher. More
+importantly, the distilled LightSUAN has been integrated into an online
+service, increasing the CTR by 2.81% and CPM by 1.69% while keeping the average
+inference time acceptable. Our source code is available at
+https://github.com/laiweijiang/SUAN.",https://github.com/laiweijiang/SUAN,
+Modeling Long-term User Behaviors with Diffusion-driven Multi-interest Network for CTR Prediction,"Weijiang Lai, Beihong Jin, Yapeng Zhang, Yiyuan Zheng, Rui Zhao, Jian Dong, Jun Lei, Xingxing Wang",2025-08-21,2508.15311v1,http://arxiv.org/abs/2508.15311v1,http://arxiv.org/pdf/2508.15311v1,information_retrieval,cs.IR,"CTR (Click-Through Rate) prediction, crucial for recommender systems and
+online advertising, etc., has been confirmed to benefit from modeling long-term
+user behaviors. Nonetheless, the vast number of behaviors and complexity of
+noise interference pose challenges to prediction efficiency and effectiveness.
+Recent solutions have evolved from single-stage models to two-stage models.
+However, current two-stage models often filter out significant information,
+resulting in an inability to capture diverse user interests and build the
+complete latent space of user interests. Inspired by multi-interest and
+generative modeling, we propose DiffuMIN (Diffusion-driven Multi-Interest
+Network) to model long-term user behaviors and thoroughly explore the user
+interest space. Specifically, we propose a target-oriented multi-interest
+extraction method that begins by orthogonally decomposing the target to obtain
+interest channels. This is followed by modeling the relationships between
+interest channels and user behaviors to disentangle and extract multiple user
+interests. We then adopt a diffusion module guided by contextual interests and
+interest channels, which anchor users' personalized and target-oriented
+interest types, enabling the generation of augmented interests that align with
+the latent spaces of user interests, thereby further exploring restricted
+interest space. Finally, we leverage contrastive learning to ensure that the
+generated augmented interests align with users' genuine preferences. Extensive
+offline experiments are conducted on two public datasets and one industrial
+dataset, yielding results that demonstrate the superiority of DiffuMIN.
+Moreover, DiffuMIN increased CTR by 1.52% and CPM by 1.10% in online A/B
+testing. Our source code is available at
+https://github.com/laiweijiang/DiffuMIN.",https://github.com/laiweijiang/DiffuMIN,
+ST-Raptor: LLM-Powered Semi-Structured Table Question Answering,"Zirui Tang, Boyu Niu, Xuanhe Zhou, Boxiu Li, Wei Zhou, Jiannan Wang, Guoliang Li, Xinyi Zhang, Fan Wu",2025-08-25,2508.18190v2,http://arxiv.org/abs/2508.18190v2,http://arxiv.org/pdf/2508.18190v2,databases,cs.AI,"Semi-structured tables, widely used in real-world applications (e.g.,
+financial reports, medical records, transactional orders), often involve
+flexible and complex layouts (e.g., hierarchical headers and merged cells).
+These tables generally rely on human analysts to interpret table layouts and
+answer relevant natural language questions, which is costly and inefficient. To
+automate the procedure, existing methods face significant challenges. First,
+methods like NL2SQL require converting semi-structured tables into structured
+ones, which often causes substantial information loss. Second, methods like
+NL2Code and multi-modal LLM QA struggle to understand the complex layouts of
+semi-structured tables and cannot accurately answer corresponding questions. To
+this end, we propose ST-Raptor, a tree-based framework for semi-structured
+table question answering using large language models. First, we introduce the
+Hierarchical Orthogonal Tree (HO-Tree), a structural model that captures
+complex semi-structured table layouts, along with an effective algorithm for
+constructing the tree. Second, we define a set of basic tree operations to
+guide LLMs in executing common QA tasks. Given a user question, ST-Raptor
+decomposes it into simpler sub-questions, generates corresponding tree
+operation pipelines, and conducts operation-table alignment for accurate
+pipeline execution. Third, we incorporate a two-stage verification mechanism:
+forward validation checks the correctness of execution steps, while backward
+validation evaluates answer reliability by reconstructing queries from
+predicted answers. To benchmark the performance, we present SSTQA, a dataset of
+764 questions over 102 real-world semi-structured tables. Experiments show that
+ST-Raptor outperforms nine baselines by up to 20% in answer accuracy. The code
+is available at https://github.com/weAIDB/ST-Raptor.",https://github.com/weAIDB/ST-Raptor,"Extension of our SIGMOD 2026 paper. Please refer to source code
+  available at: https://github.com/weAIDB/ST-Raptor"
+PGTuner: An Efficient Framework for Automatic and Transferable Configuration Tuning of Proximity Graphs,"Hao Duan, Yitong Song, Bin Yao, Anqi Liang",2025-08-25,2508.17886v1,http://arxiv.org/abs/2508.17886v1,http://arxiv.org/pdf/2508.17886v1,databases,cs.DB,"Approximate Nearest Neighbor Search (ANNS) plays a crucial role in many key
+areas. Proximity graphs (PGs) are the leading method for ANNS, offering the
+best balance between query efficiency and accuracy. However, their performance
+heavily depends on various construction and query parameters, which are
+difficult to optimize due to their complex inter-dependencies. Given that users
+often prioritize specific accuracy levels, efficiently identifying the optimal
+PG configurations to meet these targets is essential. Although some studies
+have explored automatic configuration tuning for PGs, they are limited by
+inefficiencies and suboptimal results. These issues stem from the need to
+construct numerous PGs for searching and re-tuning from scratch whenever the
+dataset changes, as well as the failure to capture the complex dependencies
+between configurations, query performance, and tuning objectives.
+  To address these challenges, we propose PGTuner, an efficient framework for
+automatic PG configuration tuning leveraging pre-training knowledge and model
+transfer techniques. PGTuner improves efficiency through a pre-trained query
+performance prediction (QPP) model, eliminating the need to build multiple PGs.
+It also features a deep reinforcement learning-based parameter configuration
+recommendation (PCR) model to recommend optimal configurations for specific
+datasets and accuracy targets. Additionally, PGTuner incorporates
+out-of-distribution detection and deep active learning for efficient tuning in
+dynamic scenarios and transferring to new datasets. Extensive experiments
+demonstrate that PGTuner can stably achieve the top-level tuning effect across
+different datasets while significantly improving tuning efficiency by up to
+14.69X, with a 14.64X boost in dynamic scenarios. The code and data for PGTuner
+are available online at https://github.com/hao-duan/PGTuner.",https://github.com/hao-duan/PGTuner,
+Attribute Filtering in Approximate Nearest Neighbor Search: An In-depth Experimental Study,"Mocheng Li, Xiao Yan, Baotong Lu, Yue Zhang, James Cheng, Chenhao Ma",2025-08-22,2508.16263v1,http://arxiv.org/abs/2508.16263v1,http://arxiv.org/pdf/2508.16263v1,databases,cs.DB,"With the growing integration of structured and unstructured data, new methods
+have emerged for performing similarity searches on vectors while honoring
+structured attribute constraints, i.e., a process known as Filtering
+Approximate Nearest Neighbor (Filtering ANN) search. Since many of these
+algorithms have only appeared in recent years and are designed to work with a
+variety of base indexing methods and filtering strategies, there is a pressing
+need for a unified analysis that identifies their core techniques and enables
+meaningful comparisons.
+  In this work, we present a unified Filtering ANN search interface that
+encompasses the latest algorithms and evaluate them extensively from multiple
+perspectives. First, we propose a comprehensive taxonomy of existing Filtering
+ANN algorithms based on attribute types and filtering strategies. Next, we
+analyze their key components, i.e., index structures, pruning strategies, and
+entry point selection, to elucidate design differences and tradeoffs. We then
+conduct a broad experimental evaluation on 10 algorithms and 12 methods across
+4 datasets (each with up to 10 million items), incorporating both synthetic and
+real attributes and covering selectivity levels from 0.1% to 100%. Finally, an
+in-depth component analysis reveals the influence of pruning, entry point
+selection, and edge filtering costs on overall performance. Based on our
+findings, we summarize the strengths and limitations of each approach, provide
+practical guidelines for selecting appropriate methods, and suggest promising
+directions for future research. Our code is available at:
+https://github.com/lmccccc/FANNBench.",https://github.com/lmccccc/FANNBench,"15 pages, 15 figures, Accepted at SIGMOD 2026"
+AmbiSQL: Interactive Ambiguity Detection and Resolution for Text-to-SQL,"Zhongjun Ding, Yin Lin, Tianjing Zeng",2025-08-21,2508.15276v1,http://arxiv.org/abs/2508.15276v1,http://arxiv.org/pdf/2508.15276v1,databases,cs.DB,"Text-to-SQL systems translate natural language questions into SQL queries,
+providing substantial value for non-expert users. While large language models
+(LLMs) show promising results for this task, they remain error-prone. Query
+ambiguity has been recognized as a major obstacle for LLM-based Text-to-SQL
+systems, leading to misinterpretation of user intent and inaccurate SQL
+generation. We demonstrate AmbiSQL, an interactive system that automatically
+detects query ambiguities and guides users through intuitive multiple-choice
+questions to clarify their intent. Our approach introduces a fine-grained
+ambiguity taxonomy for identifying ambiguities that affect database element
+mapping and LLM reasoning, then incorporates user feedback to rewrite ambiguous
+questions. Evaluation on an ambiguous query dataset shows that AmbiSQL achieves
+87.2% precision in ambiguity detection and improves SQL exact match accuracy by
+50% when integrated with Text-to-SQL systems. Our demonstration showcases the
+significant performance gains and highlights the system's practical usability.
+Code repo and demonstration are available at:
+https://github.com/JustinzjDing/AmbiSQL.",https://github.com/JustinzjDing/AmbiSQL,
+Cold-RL: Learning Cache Eviction with Offline Reinforcement Learning for NGINX,"Aayush Gupta, Arpit Bhayani",2025-08-17,2508.12485v1,http://arxiv.org/abs/2508.12485v1,http://arxiv.org/pdf/2508.12485v1,databases,cs.LG,"Web proxies such as NGINX commonly rely on least-recently-used (LRU)
+eviction, which is size agnostic and can thrash under periodic bursts and mixed
+object sizes. We introduce Cold-RL, a learned eviction policy for NGINX that
+replaces LRU's forced-expire path with a dueling Deep Q-Network served by an
+ONNX sidecar within a strict microsecond budget. On each eviction, Cold-RL
+samples the K least-recently-used objects, extracts six lightweight features
+(age, size, hit count, inter-arrival time, remaining TTL, and last origin RTT),
+and requests a bitmask of victims; a hard timeout of 500 microseconds triggers
+immediate fallback to native LRU. Policies are trained offline by replaying
+NGINX access logs through a cache simulator with a simple reward: a retained
+object earns one point if it is hit again before TTL expiry. We compare against
+LRU, LFU, size-based, adaptive LRU, and a hybrid baseline on two adversarial
+workloads. With a 25 MB cache, Cold-RL raises hit ratio from 0.1436 to 0.3538,
+a 146 percent improvement over the best classical baseline; at 100 MB, from
+0.7530 to 0.8675, a 15 percent gain; and at 400 MB it matches classical methods
+(about 0.918). Inference adds less than 2 percent CPU overhead and keeps 95th
+percentile eviction latency within budget. To our knowledge, this is the first
+reinforcement learning eviction policy integrated into NGINX with strict SLOs.",https://github.com/ayushgupta4897/DRL-Cache,"8 pages, 4 figures (system architecture, eviction path, training
+  pipeline, and DQN algorithm), 2 tables. Code available at
+  https://github.com/ayushgupta4897/DRL-Cache"
+Chain-of-Query: Unleashing the Power of LLMs in SQL-Aided Table Understanding via Multi-Agent Collaboration,"Songyuan Sui, Hongyi Liu, Serena Liu, Li Li, Soo-Hyun Choi, Rui Chen, Xia Hu",2025-08-14,2508.15809v1,http://arxiv.org/abs/2508.15809v1,http://arxiv.org/pdf/2508.15809v1,databases,cs.CL,"Table understanding requires structured, multi-step reasoning. Large Language
+Models (LLMs) struggle with it due to the structural complexity of tabular
+data. Recently, multi-agent frameworks for SQL generation have shown promise in
+tackling the challenges of understanding tabular data, but existing approaches
+often suffer from limitations such as the inability to comprehend table
+structure for reliable SQL generation, error propagation that results in
+invalid queries, and over-reliance on execution correctness. To address these
+issues, we propose Chain-of-Query (CoQ), a novel multi-agent framework for
+SQL-aided table understanding. CoQ adopts natural-language-style
+representations of table schemas to abstract away structural noise and enhance
+understanding. It employs a clause-by-clause SQL generation strategy to improve
+query quality and introduces a hybrid reasoning division that separates
+SQL-based mechanical reasoning from LLM-based logical inference, thereby
+reducing reliance on execution outcomes. Experiments with four models (both
+closed- and open-source) across five widely used benchmarks show that
+Chain-of-Query significantly improves accuracy from 61.11% to 74.77% and
+reduces the invalid SQL rate from 9.48% to 3.34%, demonstrating its superior
+effectiveness in table understanding. The code is available at
+https://github.com/SongyuanSui/ChainofQuery.",https://github.com/SongyuanSui/ChainofQuery,"9 pages main content, 24 pages total including appendix, 6 figures"
+"Synthesize, Retrieve, and Propagate: A Unified Predictive Modeling Framework for Relational Databases","Ning Li, Kounianhua Du, Han Zhang, Quan Gan, Minjie Wang, David Wipf, Weinan Zhang",2025-08-10,2508.08327v1,http://arxiv.org/abs/2508.08327v1,http://arxiv.org/pdf/2508.08327v1,databases,cs.DB,"Relational databases (RDBs) have become the industry standard for storing
+massive and heterogeneous data. However, despite the widespread use of RDBs
+across various fields, the inherent structure of relational databases hinders
+their ability to benefit from flourishing deep learning methods. Previous
+research has primarily focused on exploiting the unary dependency among
+multiple tables in a relational database using the primary key - foreign key
+relationships, either joining multiple tables into a single table or
+constructing a graph among them, which leaves the implicit composite relations
+among different tables and a substantial potential of improvement for
+predictive modeling unexplored. In this paper, we propose SRP, a unified
+predictive modeling framework that synthesizes features using the unary
+dependency, retrieves related information to capture the composite dependency,
+and propagates messages across a constructed graph to learn adjacent patterns
+for prediction on relation databases. By introducing a new retrieval mechanism
+into RDB, SRP is designed to fully capture both the unary and the composite
+dependencies within a relational database, thereby enhancing the receptive
+field of tabular data prediction. In addition, we conduct a comprehensive
+analysis on the components of SRP, offering a nuanced understanding of model
+behaviors and practical guidelines for future applications. Extensive
+experiments on five real-world datasets demonstrate the effectiveness of SRP
+and its potential applicability in industrial scenarios. The code is released
+at https://github.com/NingLi670/SRP.",https://github.com/NingLi670/SRP,
