@@ -1,0 +1,302 @@
+[
+  {
+    "title": "SciNLP: A Domain-Specific Benchmark for Full-Text Scientific Entity and Relation Extraction in NLP",
+    "authors": "Decheng Duan, Yingyi Zhang, Jitong Peng, Chengzhi Zhang",
+    "published": "2025-09-09",
+    "arxiv_id": "2509.07801v2",
+    "url": "http://arxiv.org/abs/2509.07801v2",
+    "pdf_url": "http://arxiv.org/pdf/2509.07801v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Structured information extraction from scientific literature is crucial for\ncapturing core concepts and emerging trends in specialized fields. While\nexisting datasets aid model development, most focus on specific publication\nsections due to domain complexity and the high cost of annotating scientific\ntexts. To address this limitation, we introduce SciNLP - a specialized\nbenchmark for full-text entity and relation extraction in the Natural Language\nProcessing (NLP) domain. The dataset comprises 60 manually annotated full-text\nNLP publications, covering 7,072 entities and 1,826 relations. Compared to\nexisting research, SciNLP is the first dataset providing full-text annotations\nof entities and their relationships in the NLP domain. To validate the\neffectiveness of SciNLP, we conducted comparative experiments with similar\ndatasets and evaluated the performance of state-of-the-art supervised models on\nthis dataset. Results reveal varying extraction capabilities of existing models\nacross academic texts of different lengths. Cross-comparisons with existing\ndatasets show that SciNLP achieves significant performance improvements on\ncertain baseline models. Using models trained on SciNLP, we implemented\nautomatic construction of a fine-grained knowledge graph for the NLP domain.\nOur KG has an average node degree of 3.2 per entity, indicating rich semantic\ntopological information that enhances downstream applications. The dataset is\npublicly available at https://github.com/AKADDC/SciNLP.",
+    "code_links": [
+      "https://github.com/AKADDC/SciNLP"
+    ],
+    "comment": "EMNLP 2025 Main"
+  },
+  {
+    "title": "Multi-view-guided Passage Reranking with Large Language Models",
+    "authors": "Jeongwoo Na, Jun Kwon, Eunseong Choi, Jongwuk Lee",
+    "published": "2025-09-09",
+    "arxiv_id": "2509.07485v1",
+    "url": "http://arxiv.org/abs/2509.07485v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.07485v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recent advances in large language models (LLMs) have shown impressive\nperformance in passage reranking tasks. Despite their success, LLM-based\nmethods still face challenges in efficiency and sensitivity to external biases.\n(1) Existing models rely mostly on autoregressive generation and sliding window\nstrategies to rank passages, which incur heavy computational overhead as the\nnumber of passages increases. (2) External biases, such as position or\nselection bias, hinder the model's ability to accurately represent passages and\nincrease input-order sensitivity. To address these limitations, we introduce a\nnovel passage reranking model, called Multi-View-guided Passage Reranking\n(MVP). MVP is a non-generative LLM-based reranking method that encodes\nquery-passage information into diverse view embeddings without being influenced\nby external biases. For each view, it combines query-aware passage embeddings\nto produce a distinct anchor vector, which is then used to directly compute\nrelevance scores in a single decoding step. In addition, it employs an\northogonal loss to make the views more distinctive. Extensive experiments\ndemonstrate that MVP, with just 220M parameters, matches the performance of\nmuch larger 7B-scale fine-tuned models while achieving a 100x reduction in\ninference latency. Notably, the 3B-parameter variant of MVP achieves\nstate-of-the-art performance on both in-domain and out-of-domain benchmarks.\nThe source code is available at: https://github.com/bulbna/MVP",
+    "code_links": [
+      "https://github.com/bulbna/MVP"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MoLoRAG: Bootstrapping Document Understanding via Multi-modal Logic-aware Retrieval",
+    "authors": "Xixi Wu, Yanchao Tan, Nan Hou, Ruiyang Zhang, Hong Cheng",
+    "published": "2025-09-06",
+    "arxiv_id": "2509.07666v1",
+    "url": "http://arxiv.org/abs/2509.07666v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.07666v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Document Understanding is a foundational AI capability with broad\napplications, and Document Question Answering (DocQA) is a key evaluation task.\nTraditional methods convert the document into text for processing by Large\nLanguage Models (LLMs), but this process strips away critical multi-modal\ninformation like figures. While Large Vision-Language Models (LVLMs) address\nthis limitation, their constrained input size makes multi-page document\ncomprehension infeasible. Retrieval-augmented generation (RAG) methods mitigate\nthis by selecting relevant pages, but they rely solely on semantic relevance,\nignoring logical connections between pages and the query, which is essential\nfor reasoning.\n  To this end, we propose MoLoRAG, a logic-aware retrieval framework for\nmulti-modal, multi-page document understanding. By constructing a page graph\nthat captures contextual relationships between pages, a lightweight VLM\nperforms graph traversal to retrieve relevant pages, including those with\nlogical connections often overlooked. This approach combines semantic and\nlogical relevance to deliver more accurate retrieval. After retrieval, the\ntop-$K$ pages are fed into arbitrary LVLMs for question answering. To enhance\nflexibility, MoLoRAG offers two variants: a training-free solution for easy\ndeployment and a fine-tuned version to improve logical relevance checking.\nExperiments on four DocQA datasets demonstrate average improvements of 9.68% in\naccuracy over LVLM direct inference and 7.44% in retrieval precision over\nbaselines. Codes and datasets are released at\nhttps://github.com/WxxShirley/MoLoRAG.",
+    "code_links": [
+      "https://github.com/WxxShirley/MoLoRAG"
+    ],
+    "comment": "EMNLP Main 2025"
+  },
+  {
+    "title": "REMOTE: A Unified Multimodal Relation Extraction Framework with Multilevel Optimal Transport and Mixture-of-Experts",
+    "authors": "Xinkui Lin, Yongxiu Xu, Minghao Tang, Shilong Zhang, Hongbo Xu, Hao Xu, Yubin Wang",
+    "published": "2025-09-05",
+    "arxiv_id": "2509.04844v1",
+    "url": "http://arxiv.org/abs/2509.04844v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.04844v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.MM",
+    "abstract": "Multimodal relation extraction (MRE) is a crucial task in the fields of\nKnowledge Graph and Multimedia, playing a pivotal role in multimodal knowledge\ngraph construction. However, existing methods are typically limited to\nextracting a single type of relational triplet, which restricts their ability\nto extract triplets beyond the specified types. Directly combining these\nmethods fails to capture dynamic cross-modal interactions and introduces\nsignificant computational redundancy. Therefore, we propose a novel\n\\textit{unified multimodal Relation Extraction framework with Multilevel\nOptimal Transport and mixture-of-Experts}, termed REMOTE, which can\nsimultaneously extract intra-modal and inter-modal relations between textual\nentities and visual objects. To dynamically select optimal interaction features\nfor different types of relational triplets, we introduce mixture-of-experts\nmechanism, ensuring the most relevant modality information is utilized.\nAdditionally, considering that the inherent property of multilayer sequential\nencoding in existing encoders often leads to the loss of low-level information,\nwe adopt a multilevel optimal transport fusion module to preserve low-level\nfeatures while maintaining multilayer encoding, yielding more expressive\nrepresentations. Correspondingly, we also create a Unified Multimodal Relation\nExtraction (UMRE) dataset to evaluate the effectiveness of our framework,\nencompassing diverse cases where the head and tail entities can originate from\neither text or image. Extensive experiments show that REMOTE effectively\nextracts various types of relational triplets and achieves state-of-the-art\nperformanc on almost all metrics across two other public MRE datasets. We\nrelease our resources at https://github.com/Nikol-coder/REMOTE.",
+    "code_links": [
+      "https://github.com/Nikol-coder/REMOTE"
+    ],
+    "comment": "ACM MM 2025"
+  },
+  {
+    "title": "Delta Activations: A Representation for Finetuned Large Language Models",
+    "authors": "Zhiqiu Xu, Amish Sethi, Mayur Naik, Ser-Nam Lim",
+    "published": "2025-09-04",
+    "arxiv_id": "2509.04442v1",
+    "url": "http://arxiv.org/abs/2509.04442v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.04442v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "The success of powerful open source Large Language Models (LLMs) has enabled\nthe community to create a vast collection of post-trained models adapted to\nspecific tasks and domains. However, navigating and understanding these models\nremains challenging due to inconsistent metadata and unstructured repositories.\nWe introduce Delta Activations, a method to represent finetuned models as\nvector embeddings by measuring shifts in their internal activations relative to\na base model. This representation allows for effective clustering by domain and\ntask, revealing structure in the model landscape. Delta Activations also\ndemonstrate desirable properties: it is robust across finetuning settings and\nexhibits an additive property when finetuning datasets are mixed. In addition,\nwe show that Delta Activations can embed tasks via few-shot finetuning, and\nfurther explore its use for model selection and merging. We hope Delta\nActivations can facilitate the practice of reusing publicly available models.\nCode is available at https://github.com/OscarXZQ/delta_activations.",
+    "code_links": [
+      "https://github.com/OscarXZQ/delta_activations"
+    ],
+    "comment": null
+  },
+  {
+    "title": "NER Retriever: Zero-Shot Named Entity Retrieval with Type-Aware Embeddings",
+    "authors": "Or Shachar, Uri Katz, Yoav Goldberg, Oren Glickman",
+    "published": "2025-09-04",
+    "arxiv_id": "2509.04011v1",
+    "url": "http://arxiv.org/abs/2509.04011v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.04011v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "We present NER Retriever, a zero-shot retrieval framework for ad-hoc Named\nEntity Retrieval, a variant of Named Entity Recognition (NER), where the types\nof interest are not provided in advance, and a user-defined type description is\nused to retrieve documents mentioning entities of that type. Instead of relying\non fixed schemas or fine-tuned models, our method builds on internal\nrepresentations of large language models (LLMs) to embed both entity mentions\nand user-provided open-ended type descriptions into a shared semantic space. We\nshow that internal representations, specifically the value vectors from\nmid-layer transformer blocks, encode fine-grained type information more\neffectively than commonly used top-layer embeddings. To refine these\nrepresentations, we train a lightweight contrastive projection network that\naligns type-compatible entities while separating unrelated types. The resulting\nentity embeddings are compact, type-aware, and well-suited for nearest-neighbor\nsearch. Evaluated on three benchmarks, NER Retriever significantly outperforms\nboth lexical and dense sentence-level retrieval baselines. Our findings provide\nempirical support for representation selection within LLMs and demonstrate a\npractical solution for scalable, schema-free entity retrieval. The NER\nRetriever Codebase is publicly available at\nhttps://github.com/ShacharOr100/ner_retriever",
+    "code_links": [
+      "https://github.com/ShacharOr100/ner_retriever"
+    ],
+    "comment": "Findings of EMNLP 2025"
+  },
+  {
+    "title": "Evaluating the Robustness of Retrieval-Augmented Generation to Adversarial Evidence in the Health Domain",
+    "authors": "Shakiba Amirshahi, Amin Bigdeli, Charles L. A. Clarke, Amira Ghenai",
+    "published": "2025-09-04",
+    "arxiv_id": "2509.03787v1",
+    "url": "http://arxiv.org/abs/2509.03787v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.03787v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval augmented generation (RAG) systems provide a method for factually\ngrounding the responses of a Large Language Model (LLM) by providing retrieved\nevidence, or context, as support. Guided by this context, RAG systems can\nreduce hallucinations and expand the ability of LLMs to accurately answer\nquestions outside the scope of their training data. Unfortunately, this design\nintroduces a critical vulnerability: LLMs may absorb and reproduce\nmisinformation present in retrieved evidence. This problem is magnified if\nretrieved evidence contains adversarial material explicitly intended to\npromulgate misinformation. This paper presents a systematic evaluation of RAG\nrobustness in the health domain and examines alignment between model outputs\nand ground-truth answers. We focus on the health domain due to the potential\nfor harm caused by incorrect responses, as well as the availability of\nevidence-based ground truth for many common health-related questions. We\nconduct controlled experiments using common health questions, varying both the\ntype and composition of the retrieved documents (helpful, harmful, and\nadversarial) as well as the framing of the question by the user (consistent,\nneutral, and inconsistent). Our findings reveal that adversarial documents\nsubstantially degrade alignment, but robustness can be preserved when helpful\nevidence is also present in the retrieval pool. These findings offer actionable\ninsights for designing safer RAG systems in high-stakes domains by highlighting\nthe need for retrieval safeguards. To enable reproducibility and facilitate\nfuture research, all experimental results are publicly available in our github\nrepository.\n  https://github.com/shakibaam/RAG_ROBUSTNESS_EVAL",
+    "code_links": [
+      "https://github.com/shakibaam/RAG_ROBUSTNESS_EVAL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Upcycling Candidate Tokens of Large Language Models for Query Expansion",
+    "authors": "Jinseok Kim, Sukmin Cho, Soyeong Jeong, Sangyeop Kim, Sungzoon Cho",
+    "published": "2025-09-02",
+    "arxiv_id": "2509.02377v1",
+    "url": "http://arxiv.org/abs/2509.02377v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.02377v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Query Expansion (QE) improves retrieval performance by enriching queries with\nrelated terms. Recently, Large Language Models (LLMs) have been used for QE,\nbut existing methods face a trade-off: generating diverse terms boosts\nperformance but increases computational cost. To address this challenge, we\npropose Candidate Token Query Expansion (CTQE), which extracts diverse and\nrelevant terms from a single LLM decoding pass by leveraging unselected\ncandidate tokens. These tokens, though not part of the final output, are\nconditioned on the full query and capture useful information. By aggregating\nthem, CTQE achieves both relevance and diversity without extra inference,\nreducing overhead and latency. Experiments show that CTQE delivers strong\nretrieval performance with significantly lower cost, outperforming or\ncomparable to more expensive methods. Code is available at:\nhttps://github.com/bluejeans8/CTQE",
+    "code_links": [
+      "https://github.com/bluejeans8/CTQE"
+    ],
+    "comment": "CIKM 2025"
+  },
+  {
+    "title": "Abex-rat: Synergizing Abstractive Augmentation and Adversarial Training for Classification of Occupational Accident Reports",
+    "authors": "Jian Chen, Jiabao Dou, Jinbao Tian, Yunqi Xu, Zhou Li",
+    "published": "2025-09-02",
+    "arxiv_id": "2509.02072v2",
+    "url": "http://arxiv.org/abs/2509.02072v2",
+    "pdf_url": "http://arxiv.org/pdf/2509.02072v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "The automatic classification of occupational accident reports is a critical\nresearch area for enhancing workplace safety and enabling large-scale risk\nanalysis. However, the severe class imbalance inherent in these real-world\ndatasets often compromises the performance of analytical models, particularly\nfor rare but severe incident types, hindering the development of reliable\nautomated systems. To address this challenge, we propose ABEX-RAT, a novel and\nefficient framework that synergizes generative data augmentation with robust\nadversarial training. Our approach first employs a twostep\nabstractive-expansive (ABEX) pipeline, which leverages a large language model\nto distill core incident semantics and then uses a generative model to create\ndiverse, highquality synthetic samples for underrepresented classes.\nSubsequently, a lightweight classifier is trained on the augmented data using a\ncomputationally efficient random adversarial training (RAT) protocol, which\nstochastically applies perturbations to enhance model generalization and\nrobustness without significant overhead. Experimental results on the public\nOSHA dataset demonstrate that our method achieves new state-of-the-art\nperformance, reaching a macro-F1 score of 90.32% and significantly\noutperforming previous SOTA and fine-tuned large model baselines. Our work\nvalidates that this synergistic strategy is a highly effective and efficient\nalternative to brute-force fine-tuning for specialized, imbalanced\nclassification tasks. The code is publicly available\nat:https://github.com/nxcc-lab/ABEX-RAT.",
+    "code_links": [
+      "https://github.com/nxcc-lab/ABEX-RAT"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Empowering Large Language Model for Sequential Recommendation via Multimodal Embeddings and Semantic IDs",
+    "authors": "Yuhao Wang, Junwei Pan, Xinhang Li, Maolin Wang, Yuan Wang, Yue Liu, Dapeng Liu, Jie Jiang, Xiangyu Zhao",
+    "published": "2025-09-02",
+    "arxiv_id": "2509.02017v1",
+    "url": "http://arxiv.org/abs/2509.02017v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.02017v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential recommendation (SR) aims to capture users' dynamic interests and\nsequential patterns based on their historical interactions. Recently, the\npowerful capabilities of large language models (LLMs) have driven their\nadoption in SR. However, we identify two critical challenges in existing\nLLM-based SR methods: 1) embedding collapse when incorporating pre-trained\ncollaborative embeddings and 2) catastrophic forgetting of quantized embeddings\nwhen utilizing semantic IDs. These issues dampen the model scalability and lead\nto suboptimal recommendation performance. Therefore, based on LLMs like\nLlama3-8B-instruct, we introduce a novel SR framework named MME-SID, which\nintegrates multimodal embeddings and quantized embeddings to mitigate embedding\ncollapse. Additionally, we propose a Multimodal Residual Quantized Variational\nAutoencoder (MM-RQ-VAE) with maximum mean discrepancy as the reconstruction\nloss and contrastive learning for alignment, which effectively preserve\nintra-modal distance information and capture inter-modal correlations,\nrespectively. To further alleviate catastrophic forgetting, we initialize the\nmodel with the trained multimodal code embeddings. Finally, we fine-tune the\nLLM efficiently using LoRA in a multimodal frequency-aware fusion manner.\nExtensive experiments on three public datasets validate the superior\nperformance of MME-SID thanks to its capability to mitigate embedding collapse\nand catastrophic forgetting. The implementation code and datasets are publicly\navailable for reproduction:\nhttps://github.com/Applied-Machine-Learning-Lab/MME-SID.",
+    "code_links": [
+      "https://github.com/Applied-Machine-Learning-Lab/MME-SID"
+    ],
+    "comment": "CIKM 2025 Full Research Paper"
+  },
+  {
+    "title": "MARS: Modality-Aligned Retrieval for Sequence Augmented CTR Prediction",
+    "authors": "Yutian Xiao, Shukuan Wang, Binhao Wang, Zhao Zhang, Yanze Zhang, Shanqi Liu, Chao Feng, Xiang Li, Fuzhen Zhuang",
+    "published": "2025-09-01",
+    "arxiv_id": "2509.01184v1",
+    "url": "http://arxiv.org/abs/2509.01184v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.01184v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Click-through rate (CTR) prediction serves as a cornerstone of recommender\nsystems. Despite the strong performance of current CTR models based on user\nbehavior modeling, they are still severely limited by interaction sparsity,\nespecially in low-active user scenarios. To address this issue, data\naugmentation of user behavior is a promising research direction. However,\nexisting data augmentation methods heavily rely on collaborative signals while\noverlooking the rich multimodal features of items, leading to insufficient\nmodeling of low-active users.\n  To alleviate this problem, we propose a novel framework \\textbf{MARS}\n(\\textbf{M}odality-\\textbf{A}ligned \\textbf{R}etrieval for \\textbf{S}equence\nAugmented CTR Prediction). MARS utilizes a Stein kernel-based approach to align\ntext and image features into a unified and unbiased semantic space to construct\nmultimodal user embeddings. Subsequently, each low-active user's behavior\nsequence is augmented by retrieving, filtering, and concentrating the most\nsimilar behavior sequence of high-active users via multimodal user embeddings.\nValidated by extensive offline experiments and online A/B tests, our framework\nMARS consistently outperforms state-of-the-art baselines and achieves\nsubstantial growth on core business metrics within\nKuaishou~\\footnote{https://www.kuaishou.com/}. Consequently, MARS has been\nsuccessfully deployed, serving the main traffic for hundreds of millions of\nusers. To ensure reproducibility, we provide anonymous access to the\nimplementation code~\\footnote{https://github.com/wangshukuan/MARS}.",
+    "code_links": [
+      "https://github.com/wangshukuan/MARS"
+    ],
+    "comment": null
+  },
+  {
+    "title": "BALM-TSF: Balanced Multimodal Alignment for LLM-Based Time Series Forecasting",
+    "authors": "Shiqiao Zhou, Holger Schöner, Huanbo Lyu, Edouard Fouché, Shuo Wang",
+    "published": "2025-08-30",
+    "arxiv_id": "2509.00622v1",
+    "url": "http://arxiv.org/abs/2509.00622v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.00622v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Time series forecasting is a long-standing and highly challenging research\ntopic. Recently, driven by the rise of large language models (LLMs), research\nhas increasingly shifted from purely time series methods toward harnessing\ntextual modalities to enhance forecasting performance. However, the vast\ndiscrepancy between text and temporal data often leads current multimodal\narchitectures to over-emphasise one modality while neglecting the other,\nresulting in information loss that harms forecasting performance. To address\nthis modality imbalance, we introduce BALM-TSF (Balanced Multimodal Alignment\nfor LLM-Based Time Series Forecasting), a lightweight time series forecasting\nframework that maintains balance between the two modalities. Specifically, raw\ntime series are processed by the time series encoder, while descriptive\nstatistics of raw time series are fed to an LLM with learnable prompt,\nproducing compact textual embeddings. To ensure balanced cross-modal context\nalignment of time series and textual embeddings, a simple yet effective scaling\nstrategy combined with a contrastive objective then maps these textual\nembeddings into the latent space of the time series embeddings. Finally, the\naligned textual semantic embeddings and time series embeddings are together\nintegrated for forecasting. Extensive experiments on standard benchmarks show\nthat, with minimal trainable parameters, BALM-TSF achieves state-of-the-art\nperformance in both long-term and few-shot forecasting, confirming its ability\nto harness complementary information from text and time series. Code is\navailable at https://github.com/ShiqiaoZhou/BALM-TSF.",
+    "code_links": [
+      "https://github.com/ShiqiaoZhou/BALM-TSF"
+    ],
+    "comment": null
+  },
+  {
+    "title": "How to Make Museums More Interactive? Case Study of Artistic Chatbot",
+    "authors": "Filip J. Kucia, Bartosz Grabek, Szymon D. Trochimiak, Anna Wróblewska",
+    "published": "2025-08-30",
+    "arxiv_id": "2509.00572v1",
+    "url": "http://arxiv.org/abs/2509.00572v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.00572v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.HC",
+    "abstract": "Conversational agents powered by Large Language Models (LLMs) are\nincreasingly utilized in educational settings, in particular in individual\nclosed digital environments, yet their potential adoption in the physical\nlearning environments like cultural heritage sites, museums, and art galleries\nremains relatively unexplored. In this study, we present Artistic Chatbot, a\nvoice-to-voice RAG-powered chat system to support informal learning and enhance\nvisitor engagement during a live art exhibition celebrating the 15th\nanniversary of the Faculty of Media Art at the Warsaw Academy of Fine Arts,\nPoland. The question answering (QA) chatbot responded to free-form spoken\nquestions in Polish using the context retrieved from a curated, domain-specific\nknowledge base consisting of 226 documents provided by the organizers,\nincluding faculty information, art magazines, books, and journals. We describe\nthe key aspects of the system architecture and user interaction design, as well\nas discuss the practical challenges associated with deploying chatbots at\npublic cultural sites. Our findings, based on interaction analysis, demonstrate\nthat chatbots such as Artistic Chatbot effectively maintain responses grounded\nin exhibition content (60\\% of responses directly relevant), even when faced\nwith unpredictable queries outside the target domain, showing their potential\nfor increasing interactivity in public cultural sites.\n  GitHub project page: https://github.com/cinekucia/artistic-chatbot-cikm2025",
+    "code_links": [
+      "https://github.com/cinekucia/artistic-chatbot-cikm2025"
+    ],
+    "comment": "7 pages, 3 figures"
+  },
+  {
+    "title": "Tiga: Accelerating Geo-Distributed Transactions with Synchronized Clocks [Technical Report]",
+    "authors": "Jinkun Geng, Shuai Mu, Anirudh Sivaraman, Balaji Prabhakar",
+    "published": "2025-09-06",
+    "arxiv_id": "2509.05759v1",
+    "url": "http://arxiv.org/abs/2509.05759v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.05759v1",
+    "category": "databases",
+    "primary_category": "cs.NI",
+    "abstract": "This paper presents Tiga, a new design for geo-replicated and scalable\ntransactional databases such as Google Spanner. Tiga aims to commit\ntransactions within 1 wide-area roundtrip time, or 1 WRTT, for a wide range of\nscenarios, while maintaining high throughput with minimal computational\noverhead. Tiga consolidates concurrency control and consensus, completing both\nstrictly serializable execution and consistent replication in a single round.\nIt uses synchronized clocks to proactively order transactions by assigning each\na future timestamp at submission. In most cases, transactions arrive at servers\nbefore their future timestamps and are serialized according to the designated\ntimestamp, requiring 1 WRTT to commit. In rare cases, transactions are delayed\nand proactive ordering fails, in which case Tiga falls back to a slow path,\ncommitting in 1.5--2 WRTTs. Compared to state-of-the-art solutions, Tiga can\ncommit more transactions at 1-WRTT latency, and incurs much less throughput\noverhead. Evaluation results show that Tiga outperforms all baselines,\nachieving 1.3--7.2$\\times$ higher throughput and 1.4--4.6$\\times$ lower\nlatency. Tiga is open-sourced at\nhttps://github.com/New-Consensus-Concurrency-Control/Tiga.",
+    "code_links": [
+      "https://github.com/New-Consensus-Concurrency-Control/Tiga"
+    ],
+    "comment": "This is the technical report for our paper accepted by The 31st\n  Symposium on Operating Systems Principles (SOSP'25)"
+  },
+  {
+    "title": "Schema Inference for Tabular Data Repositories Using Large Language Models",
+    "authors": "Zhenyu Wu, Jiaoyan Chen, Norman W. Paton",
+    "published": "2025-09-04",
+    "arxiv_id": "2509.04632v1",
+    "url": "http://arxiv.org/abs/2509.04632v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.04632v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Minimally curated tabular data often contain representational inconsistencies\nacross heterogeneous sources, and are accompanied by sparse metadata. Working\nwith such data is intimidating. While prior work has advanced dataset discovery\nand exploration, schema inference remains difficult when metadata are limited.\nWe present SI-LLM (Schema Inference using Large Language Models), which infers\na concise conceptual schema for tabular data using only column headers and cell\nvalues. The inferred schema comprises hierarchical entity types, attributes,\nand inter-type relationships. In extensive evaluation on two datasets from web\ntables and open data, SI-LLM achieves promising end-to-end results, as well as\nbetter or comparable results to state-of-the-art methods at each step. All\nsource code, full prompts, and datasets of SI-LLM are available at\nhttps://github.com/PierreWoL/SILLM.",
+    "code_links": [
+      "https://github.com/PierreWoL/SILLM"
+    ],
+    "comment": null
+  },
+  {
+    "title": "CRouting: Reducing Expensive Distance Calls in Graph-Based Approximate Nearest Neighbor Search",
+    "authors": "Zhenxin Li, Shuibing He, Jiahao Guo, Xuechen Zhang, Xian-He Sun, Gang Chen",
+    "published": "2025-08-30",
+    "arxiv_id": "2509.00365v1",
+    "url": "http://arxiv.org/abs/2509.00365v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.00365v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Approximate nearest neighbor search (ANNS) is a crucial problem in\ninformation retrieval and AI applications. Recently, there has been a surge of\ninterest in graph-based ANNS algorithms due to their superior efficiency and\naccuracy. However, the repeated computation of distances in high-dimensional\nspaces constitutes the primary time cost of graph-based methods. To accelerate\nthe search, we propose a novel routing strategy named CRouting, which bypasses\nunnecessary distance computations by exploiting the angle distributions of\nhigh-dimensional vectors. CRouting is designed as a plugin to optimize existing\ngraph-based search with minimal code modifications. Our experiments show that\nCRouting reduces the number of distance computations by up to 41.5% and boosts\nqueries per second by up to 1.48$\\times$ on two predominant graph indexes, HNSW\nand NSG. Code is publicly available at https://github.com/ISCS-ZJU/CRouting.",
+    "code_links": [
+      "https://github.com/ISCS-ZJU/CRouting"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ST-Raptor: LLM-Powered Semi-Structured Table Question Answering",
+    "authors": "Zirui Tang, Boyu Niu, Xuanhe Zhou, Boxiu Li, Wei Zhou, Jiannan Wang, Guoliang Li, Xinyi Zhang, Fan Wu",
+    "published": "2025-08-25",
+    "arxiv_id": "2508.18190v3",
+    "url": "http://arxiv.org/abs/2508.18190v3",
+    "pdf_url": "http://arxiv.org/pdf/2508.18190v3",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Semi-structured tables, widely used in real-world applications (e.g.,\nfinancial reports, medical records, transactional orders), often involve\nflexible and complex layouts (e.g., hierarchical headers and merged cells).\nThese tables generally rely on human analysts to interpret table layouts and\nanswer relevant natural language questions, which is costly and inefficient. To\nautomate the procedure, existing methods face significant challenges. First,\nmethods like NL2SQL require converting semi-structured tables into structured\nones, which often causes substantial information loss. Second, methods like\nNL2Code and multi-modal LLM QA struggle to understand the complex layouts of\nsemi-structured tables and cannot accurately answer corresponding questions. To\nthis end, we propose ST-Raptor, a tree-based framework for semi-structured\ntable question answering using large language models. First, we introduce the\nHierarchical Orthogonal Tree (HO-Tree), a structural model that captures\ncomplex semi-structured table layouts, along with an effective algorithm for\nconstructing the tree. Second, we define a set of basic tree operations to\nguide LLMs in executing common QA tasks. Given a user question, ST-Raptor\ndecomposes it into simpler sub-questions, generates corresponding tree\noperation pipelines, and conducts operation-table alignment for accurate\npipeline execution. Third, we incorporate a two-stage verification mechanism:\nforward validation checks the correctness of execution steps, while backward\nvalidation evaluates answer reliability by reconstructing queries from\npredicted answers. To benchmark the performance, we present SSTQA, a dataset of\n764 questions over 102 real-world semi-structured tables. Experiments show that\nST-Raptor outperforms nine baselines by up to 20% in answer accuracy. The code\nis available at https://github.com/weAIDB/ST-Raptor.",
+    "code_links": [
+      "https://github.com/weAIDB/ST-Raptor"
+    ],
+    "comment": "Extension of our SIGMOD 2026 paper. Please refer to source code\n  available at: https://github.com/weAIDB/ST-Raptor"
+  },
+  {
+    "title": "PGTuner: An Efficient Framework for Automatic and Transferable Configuration Tuning of Proximity Graphs",
+    "authors": "Hao Duan, Yitong Song, Bin Yao, Anqi Liang",
+    "published": "2025-08-25",
+    "arxiv_id": "2508.17886v1",
+    "url": "http://arxiv.org/abs/2508.17886v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.17886v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Approximate Nearest Neighbor Search (ANNS) plays a crucial role in many key\nareas. Proximity graphs (PGs) are the leading method for ANNS, offering the\nbest balance between query efficiency and accuracy. However, their performance\nheavily depends on various construction and query parameters, which are\ndifficult to optimize due to their complex inter-dependencies. Given that users\noften prioritize specific accuracy levels, efficiently identifying the optimal\nPG configurations to meet these targets is essential. Although some studies\nhave explored automatic configuration tuning for PGs, they are limited by\ninefficiencies and suboptimal results. These issues stem from the need to\nconstruct numerous PGs for searching and re-tuning from scratch whenever the\ndataset changes, as well as the failure to capture the complex dependencies\nbetween configurations, query performance, and tuning objectives.\n  To address these challenges, we propose PGTuner, an efficient framework for\nautomatic PG configuration tuning leveraging pre-training knowledge and model\ntransfer techniques. PGTuner improves efficiency through a pre-trained query\nperformance prediction (QPP) model, eliminating the need to build multiple PGs.\nIt also features a deep reinforcement learning-based parameter configuration\nrecommendation (PCR) model to recommend optimal configurations for specific\ndatasets and accuracy targets. Additionally, PGTuner incorporates\nout-of-distribution detection and deep active learning for efficient tuning in\ndynamic scenarios and transferring to new datasets. Extensive experiments\ndemonstrate that PGTuner can stably achieve the top-level tuning effect across\ndifferent datasets while significantly improving tuning efficiency by up to\n14.69X, with a 14.64X boost in dynamic scenarios. The code and data for PGTuner\nare available online at https://github.com/hao-duan/PGTuner.",
+    "code_links": [
+      "https://github.com/hao-duan/PGTuner"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Attribute Filtering in Approximate Nearest Neighbor Search: An In-depth Experimental Study",
+    "authors": "Mocheng Li, Xiao Yan, Baotong Lu, Yue Zhang, James Cheng, Chenhao Ma",
+    "published": "2025-08-22",
+    "arxiv_id": "2508.16263v1",
+    "url": "http://arxiv.org/abs/2508.16263v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.16263v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "With the growing integration of structured and unstructured data, new methods\nhave emerged for performing similarity searches on vectors while honoring\nstructured attribute constraints, i.e., a process known as Filtering\nApproximate Nearest Neighbor (Filtering ANN) search. Since many of these\nalgorithms have only appeared in recent years and are designed to work with a\nvariety of base indexing methods and filtering strategies, there is a pressing\nneed for a unified analysis that identifies their core techniques and enables\nmeaningful comparisons.\n  In this work, we present a unified Filtering ANN search interface that\nencompasses the latest algorithms and evaluate them extensively from multiple\nperspectives. First, we propose a comprehensive taxonomy of existing Filtering\nANN algorithms based on attribute types and filtering strategies. Next, we\nanalyze their key components, i.e., index structures, pruning strategies, and\nentry point selection, to elucidate design differences and tradeoffs. We then\nconduct a broad experimental evaluation on 10 algorithms and 12 methods across\n4 datasets (each with up to 10 million items), incorporating both synthetic and\nreal attributes and covering selectivity levels from 0.1% to 100%. Finally, an\nin-depth component analysis reveals the influence of pruning, entry point\nselection, and edge filtering costs on overall performance. Based on our\nfindings, we summarize the strengths and limitations of each approach, provide\npractical guidelines for selecting appropriate methods, and suggest promising\ndirections for future research. Our code is available at:\nhttps://github.com/lmccccc/FANNBench.",
+    "code_links": [
+      "https://github.com/lmccccc/FANNBench"
+    ],
+    "comment": "15 pages, 15 figures, Accepted at SIGMOD 2026"
+  },
+  {
+    "title": "AmbiSQL: Interactive Ambiguity Detection and Resolution for Text-to-SQL",
+    "authors": "Zhongjun Ding, Yin Lin, Tianjing Zeng",
+    "published": "2025-08-21",
+    "arxiv_id": "2508.15276v1",
+    "url": "http://arxiv.org/abs/2508.15276v1",
+    "pdf_url": "http://arxiv.org/pdf/2508.15276v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text-to-SQL systems translate natural language questions into SQL queries,\nproviding substantial value for non-expert users. While large language models\n(LLMs) show promising results for this task, they remain error-prone. Query\nambiguity has been recognized as a major obstacle for LLM-based Text-to-SQL\nsystems, leading to misinterpretation of user intent and inaccurate SQL\ngeneration. We demonstrate AmbiSQL, an interactive system that automatically\ndetects query ambiguities and guides users through intuitive multiple-choice\nquestions to clarify their intent. Our approach introduces a fine-grained\nambiguity taxonomy for identifying ambiguities that affect database element\nmapping and LLM reasoning, then incorporates user feedback to rewrite ambiguous\nquestions. Evaluation on an ambiguous query dataset shows that AmbiSQL achieves\n87.2% precision in ambiguity detection and improves SQL exact match accuracy by\n50% when integrated with Text-to-SQL systems. Our demonstration showcases the\nsignificant performance gains and highlights the system's practical usability.\nCode repo and demonstration are available at:\nhttps://github.com/JustinzjDing/AmbiSQL.",
+    "code_links": [
+      "https://github.com/JustinzjDing/AmbiSQL"
+    ],
+    "comment": null
+  }
+]
