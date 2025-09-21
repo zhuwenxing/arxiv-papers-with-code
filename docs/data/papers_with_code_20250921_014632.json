@@ -1,0 +1,257 @@
+[
+  {
+    "title": "Music4All A+A: A Multimodal Dataset for Music Information Retrieval Tasks",
+    "authors": "Jonas Geiger, Marta Moscati, Shah Nawaz, Markus Schedl",
+    "published": "2025-09-18",
+    "arxiv_id": "2509.14891v1",
+    "url": "http://arxiv.org/abs/2509.14891v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.14891v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.MM",
+    "abstract": "Music is characterized by aspects related to different modalities, such as\nthe audio signal, the lyrics, or the music video clips. This has motivated the\ndevelopment of multimodal datasets and methods for Music Information Retrieval\n(MIR) tasks such as genre classification or autotagging. Music can be described\nat different levels of granularity, for instance defining genres at the level\nof artists or music albums. However, most datasets for multimodal MIR neglect\nthis aspect and provide data at the level of individual music tracks. We aim to\nfill this gap by providing Music4All Artist and Album (Music4All A+A), a\ndataset for multimodal MIR tasks based on music artists and albums. Music4All\nA+A is built on top of the Music4All-Onion dataset, an existing track-level\ndataset for MIR tasks. Music4All A+A provides metadata, genre labels, image\nrepresentations, and textual descriptors for 6,741 artists and 19,511 albums.\nFurthermore, since Music4All A+A is built on top of Music4All-Onion, it allows\naccess to other multimodal data at the track level, including user--item\ninteraction data. This renders Music4All A+A suitable for a broad range of MIR\ntasks, including multimodal music recommendation, at several levels of\ngranularity. To showcase the use of Music4All A+A, we carry out experiments on\nmultimodal genre classification of artists and albums, including an analysis in\nmissing-modality scenarios, and a quantitative comparison with genre\nclassification in the movie domain. Our experiments show that images are more\ninformative for classifying the genres of artists and albums, and that several\nmultimodal models for genre classification struggle in generalizing across\ndomains. We provide the code to reproduce our experiments at\nhttps://github.com/hcai-mms/Music4All-A-A, the dataset is linked in the\nrepository and provided open-source under a CC BY-NC-SA 4.0 license.",
+    "code_links": [
+      "https://github.com/hcai-mms/Music4All-A-A"
+    ],
+    "comment": "7 pages, 6 tables, IEEE International Conference on Content-Based\n  Multimedia Indexing (IEEE CBMI)"
+  },
+  {
+    "title": "Chain-of-Thought Re-ranking for Image Retrieval Tasks",
+    "authors": "Shangrong Wu, Yanghong Zhou, Yang Chen, Feng Zhang, P. Y. Mok",
+    "published": "2025-09-18",
+    "arxiv_id": "2509.14746v1",
+    "url": "http://arxiv.org/abs/2509.14746v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.14746v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Image retrieval remains a fundamental yet challenging problem in computer\nvision. While recent advances in Multimodal Large Language Models (MLLMs) have\ndemonstrated strong reasoning capabilities, existing methods typically employ\nthem only for evaluation, without involving them directly in the ranking\nprocess. As a result, their rich multimodal reasoning abilities remain\nunderutilized, leading to suboptimal performance. In this paper, we propose a\nnovel Chain-of-Thought Re-Ranking (CoTRR) method to address this issue.\nSpecifically, we design a listwise ranking prompt that enables MLLM to directly\nparticipate in re-ranking candidate images. This ranking process is grounded in\nan image evaluation prompt, which assesses how well each candidate aligns with\nusers query. By allowing MLLM to perform listwise reasoning, our method\nsupports global comparison, consistent reasoning, and interpretable\ndecision-making - all of which are essential for accurate image retrieval. To\nenable structured and fine-grained analysis, we further introduce a query\ndeconstruction prompt, which breaks down the original query into multiple\nsemantic components. Extensive experiments on five datasets demonstrate the\neffectiveness of our CoTRR method, which achieves state-of-the-art performance\nacross three image retrieval tasks, including text-to-image retrieval (TIR),\ncomposed image retrieval (CIR) and chat-based image retrieval (Chat-IR). Our\ncode is available at https://github.com/freshfish15/CoTRR .",
+    "code_links": [
+      "https://github.com/freshfish15/CoTRR"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Enhancing Time Awareness in Generative Recommendation",
+    "authors": "Sunkyung Lee, Seongmin Park, Jonghyo Kim, Mincheol Yoon, Jongwuk Lee",
+    "published": "2025-09-17",
+    "arxiv_id": "2509.13957v1",
+    "url": "http://arxiv.org/abs/2509.13957v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.13957v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation has emerged as a promising paradigm that formulates\nthe recommendations into a text-to-text generation task, harnessing the vast\nknowledge of large language models. However, existing studies focus on\nconsidering the sequential order of items and neglect to handle the temporal\ndynamics across items, which can imply evolving user preferences. To address\nthis limitation, we propose a novel model, Generative Recommender Using Time\nawareness (GRUT), effectively capturing hidden user preferences via various\ntemporal signals. We first introduce Time-aware Prompting, consisting of two\nkey contexts. The user-level temporal context models personalized temporal\npatterns across timestamps and time intervals, while the item-level transition\ncontext provides transition patterns across users. We also devise Trend-aware\nInference, a training-free method that enhances rankings by incorporating trend\ninformation about items with generation likelihood. Extensive experiments\ndemonstrate that GRUT outperforms state-of-the-art models, with gains of up to\n15.4% and 14.3% in Recall@5 and NDCG@5 across four benchmark datasets. The\nsource code is available at https://github.com/skleee/GRUT.",
+    "code_links": [
+      "https://github.com/skleee/GRUT"
+    ],
+    "comment": "EMNLP 2025 (Findings)"
+  },
+  {
+    "title": "Combating Biomedical Misinformation through Multi-modal Claim Detection and Evidence-based Verification",
+    "authors": "Mariano Barone, Antonio Romano, Giuseppe Riccio, Marco Postiglione, Vincenzo Moscato",
+    "published": "2025-09-17",
+    "arxiv_id": "2509.13888v1",
+    "url": "http://arxiv.org/abs/2509.13888v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.13888v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Misinformation in healthcare, from vaccine hesitancy to unproven treatments,\nposes risks to public health and trust in medical systems. While machine\nlearning and natural language processing have advanced automated fact-checking,\nvalidating biomedical claims remains uniquely challenging due to complex\nterminology, the need for domain expertise, and the critical importance of\ngrounding in scientific evidence. We introduce CER (Combining Evidence and\nReasoning), a novel framework for biomedical fact-checking that integrates\nscientific evidence retrieval, reasoning via large language models, and\nsupervised veracity prediction. By integrating the text-generation capabilities\nof large language models with advanced retrieval techniques for high-quality\nbiomedical scientific evidence, CER effectively mitigates the risk of\nhallucinations, ensuring that generated outputs are grounded in verifiable,\nevidence-based sources. Evaluations on expert-annotated datasets (HealthFC,\nBioASQ-7b, SciFact) demonstrate state-of-the-art performance and promising\ncross-dataset generalization. Code and data are released for transparency and\nreproducibility: https://github.com/PRAISELab-PicusLab/CER",
+    "code_links": [
+      "https://github.com/PRAISELab-PicusLab/CER"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Combining Evidence and Reasoning for Biomedical Fact-Checking",
+    "authors": "Mariano Barone, Antonio Romano, Giuseppe Riccio, Marco Postiglione, Vincenzo Moscato",
+    "published": "2025-09-17",
+    "arxiv_id": "2509.13879v1",
+    "url": "http://arxiv.org/abs/2509.13879v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.13879v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Misinformation in healthcare, from vaccine hesitancy to unproven treatments,\nposes risks to public health and trust in medical systems. While machine\nlearning and natural language processing have advanced automated fact-checking,\nvalidating biomedical claims remains uniquely challenging due to complex\nterminology, the need for domain expertise, and the critical importance of\ngrounding in scientific evidence. We introduce CER (Combining Evidence and\nReasoning), a novel framework for biomedical fact-checking that integrates\nscientific evidence retrieval, reasoning via large language models, and\nsupervised veracity prediction. By integrating the text-generation capabilities\nof large language models with advanced retrieval techniques for high-quality\nbiomedical scientific evidence, CER effectively mitigates the risk of\nhallucinations, ensuring that generated outputs are grounded in verifiable,\nevidence-based sources. Evaluations on expert-annotated datasets (HealthFC,\nBioASQ-7b, SciFact) demonstrate state-of-the-art performance and promising\ncross-dataset generalization. Code and data are released for transparency and\nreproducibility: https: //github.com/PRAISELab-PicusLab/CER.",
+    "code_links": [
+      "https://github.com/PRAISELab-PicusLab/CER"
+    ],
+    "comment": "Proceedings of the 48th International ACM SIGIR Conference on\n  Research and Development in Information Retrieval, 2025"
+  },
+  {
+    "title": "Automated Generation of Research Workflows from Academic Papers: A Full-text Mining Framework",
+    "authors": "Heng Zhang, Chengzhi Zhang",
+    "published": "2025-09-16",
+    "arxiv_id": "2509.12955v1",
+    "url": "http://arxiv.org/abs/2509.12955v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.12955v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "The automated generation of research workflows is essential for improving the\nreproducibility of research and accelerating the paradigm of \"AI for Science\".\nHowever, existing methods typically extract merely fragmented procedural\ncomponents and thus fail to capture complete research workflows. To address\nthis gap, we propose an end-to-end framework that generates comprehensive,\nstructured research workflows by mining full-text academic papers. As a case\nstudy in the Natural Language Processing (NLP) domain, our paragraph-centric\napproach first employs Positive-Unlabeled (PU) Learning with SciBERT to\nidentify workflow-descriptive paragraphs, achieving an F1-score of 0.9772.\nSubsequently, we utilize Flan-T5 with prompt learning to generate workflow\nphrases from these paragraphs, yielding ROUGE-1, ROUGE-2, and ROUGE-L scores of\n0.4543, 0.2877, and 0.4427, respectively. These phrases are then systematically\ncategorized into data preparation, data processing, and data analysis stages\nusing ChatGPT with few-shot learning, achieving a classification precision of\n0.958. By mapping categorized phrases to their document locations in the\ndocuments, we finally generate readable visual flowcharts of the entire\nresearch workflows. This approach facilitates the analysis of workflows derived\nfrom an NLP corpus and reveals key methodological shifts over the past two\ndecades, including the increasing emphasis on data analysis and the transition\nfrom feature engineering to ablation studies. Our work offers a validated\ntechnical framework for automated workflow generation, along with a novel,\nprocess-oriented perspective for the empirical investigation of evolving\nscientific paradigms. Source code and data are available at:\nhttps://github.com/ZH-heng/research_workflow.",
+    "code_links": [
+      "https://github.com/ZH-heng/research_workflow"
+    ],
+    "comment": null
+  },
+  {
+    "title": "SPARK: Adaptive Low-Rank Knowledge Graph Modeling in Hybrid Geometric Spaces for Recommendation",
+    "authors": "Binhao Wang, Yutian Xiao, Maolin Wang, Zhiqi Li, Tianshuo Wei, Ruocheng Guo, Xiangyu Zhao",
+    "published": "2025-09-14",
+    "arxiv_id": "2509.11094v1",
+    "url": "http://arxiv.org/abs/2509.11094v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.11094v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Knowledge Graphs (KGs) enhance recommender systems but face challenges from\ninherent noise, sparsity, and Euclidean geometry's inadequacy for complex\nrelational structures, critically impairing representation learning, especially\nfor long-tail entities. Existing methods also often lack adaptive multi-source\nsignal fusion tailored to item popularity. This paper introduces SPARK, a novel\nmulti-stage framework systematically tackling these issues. SPARK first employs\nTucker low-rank decomposition to denoise KGs and generate robust entity\nrepresentations. Subsequently, an SVD-initialized hybrid geometric GNN\nconcurrently learns representations in Euclidean and Hyperbolic spaces; the\nlatter is strategically leveraged for its aptitude in modeling hierarchical\nstructures, effectively capturing semantic features of sparse, long-tail items.\nA core contribution is an item popularity-aware adaptive fusion strategy that\ndynamically weights signals from collaborative filtering, refined KG\nembeddings, and diverse geometric spaces for precise modeling of both\nmainstream and long-tail items. Finally, contrastive learning aligns these\nmulti-source representations. Extensive experiments demonstrate SPARK's\nsignificant superiority over state-of-the-art methods, particularly in\nimproving long-tail item recommendation, offering a robust, principled approach\nto knowledge-enhanced recommendation. Implementation code is available at\nhttps://github.com/Applied-Machine-Learning-Lab/SPARK.",
+    "code_links": [
+      "https://github.com/Applied-Machine-Learning-Lab/SPARK"
+    ],
+    "comment": "Accepted by CIKM' 25"
+  },
+  {
+    "title": "Retrieval-Augmented Generation for Reliable Interpretation of Radio Regulations",
+    "authors": "Zakaria El Kassimi, Fares Fourati, Mohamed-Slim Alouini",
+    "published": "2025-09-11",
+    "arxiv_id": "2509.09651v1",
+    "url": "http://arxiv.org/abs/2509.09651v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.09651v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "We study question answering in the domain of radio regulations, a legally\nsensitive and high-stakes area. We propose a telecom-specific\nRetrieval-Augmented Generation (RAG) pipeline and introduce, to our knowledge,\nthe first multiple-choice evaluation set for this domain, constructed from\nauthoritative sources using automated filtering and human validation. To assess\nretrieval quality, we define a domain-specific retrieval metric, under which\nour retriever achieves approximately 97% accuracy. Beyond retrieval, our\napproach consistently improves generation accuracy across all tested models. In\nparticular, while naively inserting documents without structured retrieval\nyields only marginal gains for GPT-4o (less than 1%), applying our pipeline\nresults in nearly a 12% relative improvement. These findings demonstrate that\ncarefully targeted grounding provides a simple yet strong baseline and an\neffective domain-specific solution for regulatory question answering. All code\nand evaluation scripts, along with our derived question-answer dataset, are\navailable at https://github.com/Zakaria010/Radio-RAG.",
+    "code_links": [
+      "https://github.com/Zakaria010/Radio-RAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Modality Alignment with Multi-scale Bilateral Attention for Multimodal Recommendation",
+    "authors": "Kelin Ren, Chan-Yang Ju, Dong-Ho Lee",
+    "published": "2025-09-11",
+    "arxiv_id": "2509.09114v1",
+    "url": "http://arxiv.org/abs/2509.09114v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.09114v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal recommendation systems are increasingly becoming foundational\ntechnologies for e-commerce and content platforms, enabling personalized\nservices by jointly modeling users' historical behaviors and the multimodal\nfeatures of items (e.g., visual and textual). However, most existing methods\nrely on either static fusion strategies or graph-based local interaction\nmodeling, facing two critical limitations: (1) insufficient ability to model\nfine-grained cross-modal associations, leading to suboptimal fusion quality;\nand (2) a lack of global distribution-level consistency, causing\nrepresentational bias. To address these, we propose MambaRec, a novel framework\nthat integrates local feature alignment and global distribution regularization\nvia attention-guided learning. At its core, we introduce the Dilated Refinement\nAttention Module (DREAM), which uses multi-scale dilated convolutions with\nchannel-wise and spatial attention to align fine-grained semantic patterns\nbetween visual and textual modalities. This module captures hierarchical\nrelationships and context-aware associations, improving cross-modal semantic\nmodeling. Additionally, we apply Maximum Mean Discrepancy (MMD) and contrastive\nloss functions to constrain global modality alignment, enhancing semantic\nconsistency. This dual regularization reduces mode-specific deviations and\nboosts robustness. To improve scalability, MambaRec employs a dimensionality\nreduction strategy to lower the computational cost of high-dimensional\nmultimodal features. Extensive experiments on real-world e-commerce datasets\nshow that MambaRec outperforms existing methods in fusion quality,\ngeneralization, and efficiency. Our code has been made publicly available at\nhttps://github.com/rkl71/MambaRec.",
+    "code_links": [
+      "https://github.com/rkl71/MambaRec"
+    ],
+    "comment": "Accepted by CIKM 2025"
+  },
+  {
+    "title": "SciNLP: A Domain-Specific Benchmark for Full-Text Scientific Entity and Relation Extraction in NLP",
+    "authors": "Decheng Duan, Yingyi Zhang, Jitong Peng, Chengzhi Zhang",
+    "published": "2025-09-09",
+    "arxiv_id": "2509.07801v2",
+    "url": "http://arxiv.org/abs/2509.07801v2",
+    "pdf_url": "http://arxiv.org/pdf/2509.07801v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Structured information extraction from scientific literature is crucial for\ncapturing core concepts and emerging trends in specialized fields. While\nexisting datasets aid model development, most focus on specific publication\nsections due to domain complexity and the high cost of annotating scientific\ntexts. To address this limitation, we introduce SciNLP - a specialized\nbenchmark for full-text entity and relation extraction in the Natural Language\nProcessing (NLP) domain. The dataset comprises 60 manually annotated full-text\nNLP publications, covering 7,072 entities and 1,826 relations. Compared to\nexisting research, SciNLP is the first dataset providing full-text annotations\nof entities and their relationships in the NLP domain. To validate the\neffectiveness of SciNLP, we conducted comparative experiments with similar\ndatasets and evaluated the performance of state-of-the-art supervised models on\nthis dataset. Results reveal varying extraction capabilities of existing models\nacross academic texts of different lengths. Cross-comparisons with existing\ndatasets show that SciNLP achieves significant performance improvements on\ncertain baseline models. Using models trained on SciNLP, we implemented\nautomatic construction of a fine-grained knowledge graph for the NLP domain.\nOur KG has an average node degree of 3.2 per entity, indicating rich semantic\ntopological information that enhances downstream applications. The dataset is\npublicly available at https://github.com/AKADDC/SciNLP.",
+    "code_links": [
+      "https://github.com/AKADDC/SciNLP"
+    ],
+    "comment": "EMNLP 2025 Main"
+  },
+  {
+    "title": "Multi-view-guided Passage Reranking with Large Language Models",
+    "authors": "Jeongwoo Na, Jun Kwon, Eunseong Choi, Jongwuk Lee",
+    "published": "2025-09-09",
+    "arxiv_id": "2509.07485v1",
+    "url": "http://arxiv.org/abs/2509.07485v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.07485v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recent advances in large language models (LLMs) have shown impressive\nperformance in passage reranking tasks. Despite their success, LLM-based\nmethods still face challenges in efficiency and sensitivity to external biases.\n(1) Existing models rely mostly on autoregressive generation and sliding window\nstrategies to rank passages, which incur heavy computational overhead as the\nnumber of passages increases. (2) External biases, such as position or\nselection bias, hinder the model's ability to accurately represent passages and\nincrease input-order sensitivity. To address these limitations, we introduce a\nnovel passage reranking model, called Multi-View-guided Passage Reranking\n(MVP). MVP is a non-generative LLM-based reranking method that encodes\nquery-passage information into diverse view embeddings without being influenced\nby external biases. For each view, it combines query-aware passage embeddings\nto produce a distinct anchor vector, which is then used to directly compute\nrelevance scores in a single decoding step. In addition, it employs an\northogonal loss to make the views more distinctive. Extensive experiments\ndemonstrate that MVP, with just 220M parameters, matches the performance of\nmuch larger 7B-scale fine-tuned models while achieving a 100x reduction in\ninference latency. Notably, the 3B-parameter variant of MVP achieves\nstate-of-the-art performance on both in-domain and out-of-domain benchmarks.\nThe source code is available at: https://github.com/bulbna/MVP",
+    "code_links": [
+      "https://github.com/bulbna/MVP"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ORQ: Complex Analytics on Private Data with Strong Security Guarantees",
+    "authors": "Eli Baum, Sam Buxbaum, Nitin Mathai, Muhammad Faisal, Vasiliki Kalavri, Mayank Varia, John Liagouris",
+    "published": "2025-09-13",
+    "arxiv_id": "2509.10793v1",
+    "url": "http://arxiv.org/abs/2509.10793v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.10793v1",
+    "category": "databases",
+    "primary_category": "cs.CR",
+    "abstract": "We present ORQ, a system that enables collaborative analysis of large private\ndatasets using cryptographically secure multi-party computation (MPC). ORQ\nprotects data against semi-honest or malicious parties and can efficiently\nevaluate relational queries with multi-way joins and aggregations that have\nbeen considered notoriously expensive under MPC. To do so, ORQ eliminates the\nquadratic cost of secure joins by leveraging the fact that, in practice, the\nstructure of many real queries allows us to join records and apply the\naggregations \"on the fly\" while keeping the result size bounded. On the system\nside, ORQ contributes generic oblivious operators, a data-parallel vectorized\nquery engine, a communication layer that amortizes MPC network costs, and a\ndataflow API for expressing relational analytics -- all built from the ground\nup.\n  We evaluate ORQ in LAN and WAN deployments on a diverse set of workloads,\nincluding complex queries with multiple joins and custom aggregations. When\ncompared to state-of-the-art solutions, ORQ significantly reduces MPC execution\ntimes and can process one order of magnitude larger datasets. For our most\nchallenging workload, the full TPC-H benchmark, we report results entirely\nunder MPC with Scale Factor 10 -- a scale that had previously been achieved\nonly with information leakage or the use of trusted third parties.",
+    "code_links": [
+      "https://github.com/CASP-Systems-BU/orq"
+    ],
+    "comment": "14 pages, plus Appendix. To appear at SOSP 2025. Code published at\n  https://github.com/CASP-Systems-BU/orq"
+  },
+  {
+    "title": "A Comparative Analysis of Identifier Schemes: UUIDv4, UUIDv7, and ULID for Distributed Systems",
+    "authors": "Nima Karimian Kakolaki",
+    "published": "2025-09-10",
+    "arxiv_id": "2509.08969v1",
+    "url": "http://arxiv.org/abs/2509.08969v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.08969v1",
+    "category": "databases",
+    "primary_category": "cs.DC",
+    "abstract": "Distributed systems require robust, scalable identifier schemes to ensure\ndata uniqueness and efficient indexing across multiple nodes. This paper\npresents a comprehensive analysis of the evolution of distributed identifiers,\ncomparing traditional auto-increment keys with UUIDv4, UUIDv7, and ULIDs. We\ncombine mathematical calculation of collision probabilities with empirical\nexperiments measuring generation speed and network transmission overhead in a\nsimulated distributed environment. Results demonstrate that ULIDs significantly\noutperform UUIDv4 and UUIDv7, reducing network overhead by 83.7% and increasing\ngeneration speed by 97.32%. statistical analysis further shows ULIDs offer a\n98.42% lower collision risk compared to UUIDv7, while maintaining negligible\ncollision probabilities even at high generation rates. These findings highlight\nULIDs as an optimal choice for high-performance distributed systems, providing\nefficient, time-ordered, and lexicographically sortable identifiers suitable\nfor scalable applications. All source code, datasets, and analysis scripts\nutilized in this research are publicly available in our dedicated repository at\nhttps://github.com/nimakarimiank/uids-comparison. This repository contains\ncomprehensive documentation of the experimental setup, including configuration\nfiles for the distributed environment, producer and consumer implementations,\nand message broker integration. Additionally, it provides the data scripts and\ndatasets. Researchers and practitioners are encouraged to explore the\nrepository for full reproducibility of the experiments and to facilitate\nfurther investigation or extension of the presented work.",
+    "code_links": [
+      "https://github.com/nimakarimiank/uids-comparison"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Tiga: Accelerating Geo-Distributed Transactions with Synchronized Clocks [Technical Report]",
+    "authors": "Jinkun Geng, Shuai Mu, Anirudh Sivaraman, Balaji Prabhakar",
+    "published": "2025-09-06",
+    "arxiv_id": "2509.05759v1",
+    "url": "http://arxiv.org/abs/2509.05759v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.05759v1",
+    "category": "databases",
+    "primary_category": "cs.NI",
+    "abstract": "This paper presents Tiga, a new design for geo-replicated and scalable\ntransactional databases such as Google Spanner. Tiga aims to commit\ntransactions within 1 wide-area roundtrip time, or 1 WRTT, for a wide range of\nscenarios, while maintaining high throughput with minimal computational\noverhead. Tiga consolidates concurrency control and consensus, completing both\nstrictly serializable execution and consistent replication in a single round.\nIt uses synchronized clocks to proactively order transactions by assigning each\na future timestamp at submission. In most cases, transactions arrive at servers\nbefore their future timestamps and are serialized according to the designated\ntimestamp, requiring 1 WRTT to commit. In rare cases, transactions are delayed\nand proactive ordering fails, in which case Tiga falls back to a slow path,\ncommitting in 1.5--2 WRTTs. Compared to state-of-the-art solutions, Tiga can\ncommit more transactions at 1-WRTT latency, and incurs much less throughput\noverhead. Evaluation results show that Tiga outperforms all baselines,\nachieving 1.3--7.2$\\times$ higher throughput and 1.4--4.6$\\times$ lower\nlatency. Tiga is open-sourced at\nhttps://github.com/New-Consensus-Concurrency-Control/Tiga.",
+    "code_links": [
+      "https://github.com/New-Consensus-Concurrency-Control/Tiga"
+    ],
+    "comment": "This is the technical report for our paper accepted by The 31st\n  Symposium on Operating Systems Principles (SOSP'25)"
+  },
+  {
+    "title": "Schema Inference for Tabular Data Repositories Using Large Language Models",
+    "authors": "Zhenyu Wu, Jiaoyan Chen, Norman W. Paton",
+    "published": "2025-09-04",
+    "arxiv_id": "2509.04632v1",
+    "url": "http://arxiv.org/abs/2509.04632v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.04632v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Minimally curated tabular data often contain representational inconsistencies\nacross heterogeneous sources, and are accompanied by sparse metadata. Working\nwith such data is intimidating. While prior work has advanced dataset discovery\nand exploration, schema inference remains difficult when metadata are limited.\nWe present SI-LLM (Schema Inference using Large Language Models), which infers\na concise conceptual schema for tabular data using only column headers and cell\nvalues. The inferred schema comprises hierarchical entity types, attributes,\nand inter-type relationships. In extensive evaluation on two datasets from web\ntables and open data, SI-LLM achieves promising end-to-end results, as well as\nbetter or comparable results to state-of-the-art methods at each step. All\nsource code, full prompts, and datasets of SI-LLM are available at\nhttps://github.com/PierreWoL/SILLM.",
+    "code_links": [
+      "https://github.com/PierreWoL/SILLM"
+    ],
+    "comment": null
+  },
+  {
+    "title": "CRouting: Reducing Expensive Distance Calls in Graph-Based Approximate Nearest Neighbor Search",
+    "authors": "Zhenxin Li, Shuibing He, Jiahao Guo, Xuechen Zhang, Xian-He Sun, Gang Chen",
+    "published": "2025-08-30",
+    "arxiv_id": "2509.00365v1",
+    "url": "http://arxiv.org/abs/2509.00365v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.00365v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Approximate nearest neighbor search (ANNS) is a crucial problem in\ninformation retrieval and AI applications. Recently, there has been a surge of\ninterest in graph-based ANNS algorithms due to their superior efficiency and\naccuracy. However, the repeated computation of distances in high-dimensional\nspaces constitutes the primary time cost of graph-based methods. To accelerate\nthe search, we propose a novel routing strategy named CRouting, which bypasses\nunnecessary distance computations by exploiting the angle distributions of\nhigh-dimensional vectors. CRouting is designed as a plugin to optimize existing\ngraph-based search with minimal code modifications. Our experiments show that\nCRouting reduces the number of distance computations by up to 41.5% and boosts\nqueries per second by up to 1.48$\\times$ on two predominant graph indexes, HNSW\nand NSG. Code is publicly available at https://github.com/ISCS-ZJU/CRouting.",
+    "code_links": [
+      "https://github.com/ISCS-ZJU/CRouting"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ST-Raptor: LLM-Powered Semi-Structured Table Question Answering",
+    "authors": "Zirui Tang, Boyu Niu, Xuanhe Zhou, Boxiu Li, Wei Zhou, Jiannan Wang, Guoliang Li, Xinyi Zhang, Fan Wu",
+    "published": "2025-08-25",
+    "arxiv_id": "2508.18190v3",
+    "url": "http://arxiv.org/abs/2508.18190v3",
+    "pdf_url": "http://arxiv.org/pdf/2508.18190v3",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Semi-structured tables, widely used in real-world applications (e.g.,\nfinancial reports, medical records, transactional orders), often involve\nflexible and complex layouts (e.g., hierarchical headers and merged cells).\nThese tables generally rely on human analysts to interpret table layouts and\nanswer relevant natural language questions, which is costly and inefficient. To\nautomate the procedure, existing methods face significant challenges. First,\nmethods like NL2SQL require converting semi-structured tables into structured\nones, which often causes substantial information loss. Second, methods like\nNL2Code and multi-modal LLM QA struggle to understand the complex layouts of\nsemi-structured tables and cannot accurately answer corresponding questions. To\nthis end, we propose ST-Raptor, a tree-based framework for semi-structured\ntable question answering using large language models. First, we introduce the\nHierarchical Orthogonal Tree (HO-Tree), a structural model that captures\ncomplex semi-structured table layouts, along with an effective algorithm for\nconstructing the tree. Second, we define a set of basic tree operations to\nguide LLMs in executing common QA tasks. Given a user question, ST-Raptor\ndecomposes it into simpler sub-questions, generates corresponding tree\noperation pipelines, and conducts operation-table alignment for accurate\npipeline execution. Third, we incorporate a two-stage verification mechanism:\nforward validation checks the correctness of execution steps, while backward\nvalidation evaluates answer reliability by reconstructing queries from\npredicted answers. To benchmark the performance, we present SSTQA, a dataset of\n764 questions over 102 real-world semi-structured tables. Experiments show that\nST-Raptor outperforms nine baselines by up to 20% in answer accuracy. The code\nis available at https://github.com/weAIDB/ST-Raptor.",
+    "code_links": [
+      "https://github.com/weAIDB/ST-Raptor"
+    ],
+    "comment": "Extension of our SIGMOD 2026 paper. Please refer to source code\n  available at: https://github.com/weAIDB/ST-Raptor"
+  }
+]
