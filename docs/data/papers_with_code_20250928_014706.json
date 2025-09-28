@@ -1,0 +1,330 @@
+[
+  {
+    "title": "Rejuvenating Cross-Entropy Loss in Knowledge Distillation for Recommender Systems",
+    "authors": "Zhangchi Zhu, Wei Zhang",
+    "published": "2025-09-25",
+    "arxiv_id": "2509.20989v1",
+    "url": "http://arxiv.org/abs/2509.20989v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.20989v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "This paper analyzes Cross-Entropy (CE) loss in knowledge distillation (KD)\nfor recommender systems. KD for recommender systems targets at distilling\nrankings, especially among items most likely to be preferred, and can only be\ncomputed on a small subset of items. Considering these features, we reveal the\nconnection between CE loss and NDCG in the field of KD. We prove that when\nperforming KD on an item subset, minimizing CE loss maximizes the lower bound\nof NDCG, only if an assumption of closure is satisfied. It requires that the\nitem subset consists of the student's top items. However, this contradicts our\ngoal of distilling rankings of the teacher's top items. We empirically\ndemonstrate the vast gap between these two kinds of top items. To bridge the\ngap between our goal and theoretical support, we propose Rejuvenated\nCross-Entropy for Knowledge Distillation (RCE-KD). It splits the top items\ngiven by the teacher into two subsets based on whether they are highly ranked\nby the student. For the subset that defies the condition, a sampling strategy\nis devised to use teacher-student collaboration to approximate our assumption\nof closure. We also combine the losses on the two subsets adaptively. Extensive\nexperiments demonstrate the effectiveness of our method. Our code is available\nat https://anonymous.4open.science/r/RCE-KD.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "FORGE: Forming Semantic Identifiers for Generative Retrieval in Industrial Datasets",
+    "authors": "Kairui Fu, Tao Zhang, Shuwen Xiao, Ziyang Wang, Xinming Zhang, Chenchi Zhang, Yuliang Yan, Junjun Zheng, Yu Li, Zhihong Chen, Jian Wu, Xiangheng Kong, Shengyu Zhang, Kun Kuang, Yuning Jiang, Bo Zheng",
+    "published": "2025-09-25",
+    "arxiv_id": "2509.20904v1",
+    "url": "http://arxiv.org/abs/2509.20904v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.20904v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Semantic identifiers (SIDs) have gained increasing attention in generative\nretrieval (GR) due to their meaningful semantic discriminability. However,\ncurrent research on SIDs faces three main challenges: (1) the absence of\nlarge-scale public datasets with multimodal features, (2) limited investigation\ninto optimization strategies for SID generation, which typically rely on costly\nGR training for evaluation, and (3) slow online convergence in industrial\ndeployment. To address these challenges, we propose FORGE, a comprehensive\nbenchmark for FOrming semantic identifieR in Generative rEtrieval with\nindustrial datasets. Specifically, FORGE is equipped with a dataset comprising\n14 billion user interactions and multimodal features of 250 million items\nsampled from Taobao, one of the biggest e-commerce platforms in China.\nLeveraging this dataset, FORGE explores several optimizations to enhance the\nSID construction and validates their effectiveness via offline experiments\nacross different settings and tasks. Further online analysis conducted on our\nplatform, which serves over 300 million users daily, reveals a 0.35% increase\nin transaction count, highlighting the practical impact of our method.\nRegarding the expensive SID validation accompanied by the full training of GRs,\nwe propose two novel metrics of SID that correlate positively with\nrecommendation performance, enabling convenient evaluations without any GR\ntraining. For real-world applications, FORGE introduces an offline pretraining\nschema that reduces online convergence by half. The code and data are available\nat https://github.com/selous123/al_sid.",
+    "code_links": [
+      "https://github.com/selous123/al_sid"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DELM: a Python toolkit for Data Extraction with Language Models",
+    "authors": "Eric Fithian, Kirill Skobelev",
+    "published": "2025-09-24",
+    "arxiv_id": "2509.20617v1",
+    "url": "http://arxiv.org/abs/2509.20617v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.20617v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models (LLMs) have become powerful tools for annotating\nunstructured data. However, most existing workflows rely on ad hoc scripts,\nmaking reproducibility, robustness, and systematic evaluation difficult. To\naddress these challenges, we introduce DELM (Data Extraction with Language\nModels), an open-source Python toolkit designed for rapid experimental\niteration of LLM-based data extraction pipelines and for quantifying the\ntrade-offs between them. DELM minimizes boilerplate code and offers a modular\nframework with structured outputs, built-in validation, flexible data-loading\nand scoring strategies, and efficient batch processing. It also includes robust\nsupport for working with LLM APIs, featuring retry logic, result caching,\ndetailed cost tracking, and comprehensive configuration management. We showcase\nDELM's capabilities through two case studies: one featuring a novel prompt\noptimization algorithm, and another illustrating how DELM quantifies trade-offs\nbetween cost and coverage when selecting keywords to decide which paragraphs to\npass to an LLM. DELM is available at\n\\href{https://github.com/Center-for-Applied-AI/delm}{\\texttt{github.com/Center-for-Applied-AI/delm}}.",
+    "code_links": [
+      "https://github.com/Center-for-Applied-AI/delm"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Documentation Retrieval Improves Planning Language Generation",
+    "authors": "Renxiang Wang, Li Zhang",
+    "published": "2025-09-24",
+    "arxiv_id": "2509.19931v1",
+    "url": "http://arxiv.org/abs/2509.19931v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.19931v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Certain strong LLMs have shown promise for zero-shot formal planning by\ngenerating planning languages like PDDL. Yet, performance of most open-source\nmodels under 50B parameters has been reported to be close to zero due to the\nlow-resource nature of these languages. We significantly improve their\nperformance via a series of lightweight pipelines that integrates documentation\nretrieval with modular code generation and error refinement. With models like\nLlama-4-Maverick, our best pipeline improves plan correctness from 0\\% to over\n80\\% on the common BlocksWorld domain. However, while syntactic errors are\nsubstantially reduced, semantic errors persist in more challenging domains,\nrevealing fundamental limitations in current models' reasoning\ncapabilities.\\footnote{Our code and data can be found at\nhttps://github.com/Nangxxxxx/PDDL-RAG",
+    "code_links": [
+      "https://github.com/Nangxxxxx/PDDL-RAG"
+    ],
+    "comment": "12 pages, 14 figures, 1 table"
+  },
+  {
+    "title": "HiCoLoRA: Addressing Context-Prompt Misalignment via Hierarchical Collaborative LoRA for Zero-Shot DST",
+    "authors": "Shuyu Zhang, Yifan Wei, Xinru Wang, Yanmin Zhu, Yangfan He, Yixuan Weng, Bin Li",
+    "published": "2025-09-24",
+    "arxiv_id": "2509.19742v1",
+    "url": "http://arxiv.org/abs/2509.19742v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.19742v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Zero-shot Dialog State Tracking (zs-DST) is essential for enabling\nTask-Oriented Dialog Systems (TODs) to generalize to new domains without costly\ndata annotation. A central challenge lies in the semantic misalignment between\ndynamic dialog contexts and static prompts, leading to inflexible cross-layer\ncoordination, domain interference, and catastrophic forgetting. To tackle this,\nwe propose Hierarchical Collaborative Low-Rank Adaptation (HiCoLoRA), a\nframework that enhances zero-shot slot inference through robust prompt\nalignment. It features a hierarchical LoRA architecture for dynamic\nlayer-specific processing (combining lower-layer heuristic grouping and\nhigher-layer full interaction), integrates Spectral Joint Domain-Slot\nClustering to identify transferable associations (feeding an Adaptive Linear\nFusion Mechanism), and employs Semantic-Enhanced SVD Initialization\n(SemSVD-Init) to preserve pre-trained knowledge. Experiments on multi-domain\ndatasets MultiWOZ and SGD show that HiCoLoRA outperforms baselines, achieving\nSOTA in zs-DST. Code is available at https://github.com/carsonz/HiCoLoRA.",
+    "code_links": [
+      "https://github.com/carsonz/HiCoLoRA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DyBBT: Dynamic Balance via Bandit inspired Targeting for Dialog Policy with Cognitive Dual-Systems",
+    "authors": "Shuyu Zhang, Yifan Wei, Jialuo Yuan, Xinru Wang, Yanmin Zhu, Bin Li",
+    "published": "2025-09-24",
+    "arxiv_id": "2509.19695v1",
+    "url": "http://arxiv.org/abs/2509.19695v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.19695v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Task oriented dialog systems often rely on static exploration strategies that\ndo not adapt to dynamic dialog contexts, leading to inefficient exploration and\nsuboptimal performance. We propose DyBBT, a novel dialog policy learning\nframework that formalizes the exploration challenge through a structured\ncognitive state space capturing dialog progression, user uncertainty, and slot\ndependency. DyBBT proposes a bandit inspired meta-controller that dynamically\nswitches between a fast intuitive inference (System 1) and a slow deliberative\nreasoner (System 2) based on real-time cognitive states and visitation counts.\nExtensive experiments on single- and multi-domain benchmarks show that DyBBT\nachieves state-of-the-art performance in success rate, efficiency, and\ngeneralization, with human evaluations confirming its decisions are well\naligned with expert judgment. Code is available at\nhttps://github.com/carsonz/DyBBT.",
+    "code_links": [
+      "https://github.com/carsonz/DyBBT"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Are Smaller Open-Weight LLMs Closing the Gap to Proprietary Models for Biomedical Question Answering?",
+    "authors": "Damian Stachura, Joanna Konieczna, Artur Nowak",
+    "published": "2025-09-23",
+    "arxiv_id": "2509.18843v1",
+    "url": "http://arxiv.org/abs/2509.18843v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.18843v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Open-weight versions of large language models (LLMs) are rapidly advancing,\nwith state-of-the-art models like DeepSeek-V3 now performing comparably to\nproprietary LLMs. This progression raises the question of whether small\nopen-weight LLMs are capable of effectively replacing larger closed-source\nmodels. We are particularly interested in the context of biomedical\nquestion-answering, a domain we explored by participating in Task 13B Phase B\nof the BioASQ challenge. In this work, we compare several open-weight models\nagainst top-performing systems such as GPT-4o, GPT-4.1, Claude 3.5 Sonnet, and\nClaude 3.7 Sonnet. To enhance question answering capabilities, we use various\ntechniques including retrieving the most relevant snippets based on embedding\ndistance, in-context learning, and structured outputs. For certain submissions,\nwe utilize ensemble approaches to leverage the diverse outputs generated by\ndifferent models for exact-answer questions. Our results demonstrate that\nopen-weight LLMs are comparable to proprietary ones. In some instances,\nopen-weight LLMs even surpassed their closed counterparts, particularly when\nensembling strategies were applied. All code is publicly available at\nhttps://github.com/evidenceprime/BioASQ-13b.",
+    "code_links": [
+      "https://github.com/evidenceprime/BioASQ-13b"
+    ],
+    "comment": "CLEF 2025 Working Notes, 9-12 September 2025, Madrid, Spain"
+  },
+  {
+    "title": "Single-Branch Network Architectures to Close the Modality Gap in Multimodal Recommendation",
+    "authors": "Christian Ganhör, Marta Moscati, Anna Hausberger, Shah Nawaz, Markus Schedl",
+    "published": "2025-09-23",
+    "arxiv_id": "2509.18807v1",
+    "url": "http://arxiv.org/abs/2509.18807v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.18807v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Traditional recommender systems rely on collaborative filtering, using past\nuser-item interactions to help users discover new items in a vast collection.\nIn cold start, i.e., when interaction histories of users or items are not\navailable, content-based recommender systems use side information instead.\nHybrid recommender systems (HRSs) often employ multimodal learning to combine\ncollaborative and side information, which we jointly refer to as modalities.\nThough HRSs can provide recommendations when some modalities are missing, their\nquality degrades. In this work, we utilize single-branch neural networks\nequipped with weight sharing, modality sampling, and contrastive loss to\nprovide accurate recommendations even in missing modality scenarios by\nnarrowing the modality gap. We compare these networks with multi-branch\nalternatives and conduct extensive experiments on three datasets. Six\naccuracy-based and four beyond-accuracy-based metrics help assess the\nrecommendation quality for the different training paradigms and their\nhyperparameters in warm-start and missing modality scenarios. We quantitatively\nand qualitatively study the effects of these different aspects on bridging the\nmodality gap. Our results show that single-branch networks achieve competitive\nperformance in warm-start scenarios and are significantly better in missing\nmodality settings. Moreover, our approach leads to closer proximity of an\nitem's modalities in the embedding space. Our full experimental setup is\navailable at https://github.com/hcai-mms/single-branch-networks.",
+    "code_links": [
+      "https://github.com/hcai-mms/single-branch-networks"
+    ],
+    "comment": "Accepted by ACM Transactions on Recommender Systems (TORS)"
+  },
+  {
+    "title": "The Ranking Blind Spot: Decision Hijacking in LLM-based Text Ranking",
+    "authors": "Yaoyao Qian, Yifan Zeng, Yuchao Jiang, Chelsi Jain, Huazheng Wang",
+    "published": "2025-09-23",
+    "arxiv_id": "2509.18575v1",
+    "url": "http://arxiv.org/abs/2509.18575v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.18575v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models (LLMs) have demonstrated strong performance in\ninformation retrieval tasks like passage ranking. Our research examines how\ninstruction-following capabilities in LLMs interact with multi-document\ncomparison tasks, identifying what we term the \"Ranking Blind Spot\", a\ncharacteristic of LLM decision processes during comparative evaluation. We\nanalyze how this ranking blind spot affects LLM evaluation systems through two\napproaches: Decision Objective Hijacking, which alters the evaluation goal in\npairwise ranking systems, and Decision Criteria Hijacking, which modifies\nrelevance standards across ranking schemes. These approaches demonstrate how\ncontent providers could potentially influence LLM-based ranking systems to\naffect document positioning. These attacks aim to force the LLM ranker to\nprefer a specific passage and rank it at the top. Malicious content providers\ncan exploit this weakness, which helps them gain additional exposure by\nattacking the ranker. In our experiment, We empirically show that the proposed\nattacks are effective in various LLMs and can be generalized to multiple\nranking schemes. We apply these attack to realistic examples to show their\neffectiveness. We also found stronger LLMs are more vulnerable to these\nattacks. Our code is available at:\nhttps://github.com/blindspotorg/RankingBlindSpot",
+    "code_links": [
+      "https://github.com/blindspotorg/RankingBlindSpot"
+    ],
+    "comment": "Accepted by EMNLP 2025"
+  },
+  {
+    "title": "RALLM-POI: Retrieval-Augmented LLM for Zero-shot Next POI Recommendation with Geographical Reranking",
+    "authors": "Kunrong Li, Kwan Hui Lim",
+    "published": "2025-09-21",
+    "arxiv_id": "2509.17066v1",
+    "url": "http://arxiv.org/abs/2509.17066v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.17066v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Next point-of-interest (POI) recommendation predicts a user's next\ndestination from historical movements. Traditional models require intensive\ntraining, while LLMs offer flexible and generalizable zero-shot solutions but\noften generate generic or geographically irrelevant results due to missing\ntrajectory and spatial context. To address these issues, we propose RALLM-POI,\na framework that couples LLMs with retrieval-augmented generation and\nself-rectification. We first propose a Historical Trajectory Retriever (HTR)\nthat retrieves relevant past trajectories to serve as contextual references,\nwhich are then reranked by a Geographical Distance Reranker (GDR) for\nprioritizing spatially relevant trajectories. Lastly, an Agentic LLM Rectifier\n(ALR) is designed to refine outputs through self-reflection. Without additional\ntraining, RALLM-POI achieves substantial accuracy gains across three real-world\nFoursquare datasets, outperforming both conventional and LLM-based baselines.\nCode is released at https://github.com/LKRcrocodile/RALLM-POI.",
+    "code_links": [
+      "https://github.com/LKRcrocodile/RALLM-POI"
+    ],
+    "comment": "PRICAI 2025"
+  },
+  {
+    "title": "CodeRAG: Finding Relevant and Necessary Knowledge for Retrieval-Augmented Repository-Level Code Completion",
+    "authors": "Sheng Zhang, Yifan Ding, Shuquan Lian, Shun Song, Hui Li",
+    "published": "2025-09-19",
+    "arxiv_id": "2509.16112v1",
+    "url": "http://arxiv.org/abs/2509.16112v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.16112v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Repository-level code completion automatically predicts the unfinished code\nbased on the broader information from the repository. Recent strides in Code\nLarge Language Models (code LLMs) have spurred the development of\nrepository-level code completion methods, yielding promising results.\nNevertheless, they suffer from issues such as inappropriate query construction,\nsingle-path code retrieval, and misalignment between code retriever and code\nLLM. To address these problems, we introduce CodeRAG, a framework tailored to\nidentify relevant and necessary knowledge for retrieval-augmented\nrepository-level code completion. Its core components include log probability\nguided query construction, multi-path code retrieval, and preference-aligned\nBestFit reranking. Extensive experiments on benchmarks ReccEval and CCEval\ndemonstrate that CodeRAG significantly and consistently outperforms\nstate-of-the-art methods. The implementation of CodeRAG is available at\nhttps://github.com/KDEGroup/CodeRAG.",
+    "code_links": [
+      "https://github.com/KDEGroup/CodeRAG"
+    ],
+    "comment": "EMNLP 2025"
+  },
+  {
+    "title": "Music4All A+A: A Multimodal Dataset for Music Information Retrieval Tasks",
+    "authors": "Jonas Geiger, Marta Moscati, Shah Nawaz, Markus Schedl",
+    "published": "2025-09-18",
+    "arxiv_id": "2509.14891v1",
+    "url": "http://arxiv.org/abs/2509.14891v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.14891v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.MM",
+    "abstract": "Music is characterized by aspects related to different modalities, such as\nthe audio signal, the lyrics, or the music video clips. This has motivated the\ndevelopment of multimodal datasets and methods for Music Information Retrieval\n(MIR) tasks such as genre classification or autotagging. Music can be described\nat different levels of granularity, for instance defining genres at the level\nof artists or music albums. However, most datasets for multimodal MIR neglect\nthis aspect and provide data at the level of individual music tracks. We aim to\nfill this gap by providing Music4All Artist and Album (Music4All A+A), a\ndataset for multimodal MIR tasks based on music artists and albums. Music4All\nA+A is built on top of the Music4All-Onion dataset, an existing track-level\ndataset for MIR tasks. Music4All A+A provides metadata, genre labels, image\nrepresentations, and textual descriptors for 6,741 artists and 19,511 albums.\nFurthermore, since Music4All A+A is built on top of Music4All-Onion, it allows\naccess to other multimodal data at the track level, including user--item\ninteraction data. This renders Music4All A+A suitable for a broad range of MIR\ntasks, including multimodal music recommendation, at several levels of\ngranularity. To showcase the use of Music4All A+A, we carry out experiments on\nmultimodal genre classification of artists and albums, including an analysis in\nmissing-modality scenarios, and a quantitative comparison with genre\nclassification in the movie domain. Our experiments show that images are more\ninformative for classifying the genres of artists and albums, and that several\nmultimodal models for genre classification struggle in generalizing across\ndomains. We provide the code to reproduce our experiments at\nhttps://github.com/hcai-mms/Music4All-A-A, the dataset is linked in the\nrepository and provided open-source under a CC BY-NC-SA 4.0 license.",
+    "code_links": [
+      "https://github.com/hcai-mms/Music4All-A-A"
+    ],
+    "comment": "7 pages, 6 tables, IEEE International Conference on Content-Based\n  Multimedia Indexing (IEEE CBMI)"
+  },
+  {
+    "title": "Chain-of-Thought Re-ranking for Image Retrieval Tasks",
+    "authors": "Shangrong Wu, Yanghong Zhou, Yang Chen, Feng Zhang, P. Y. Mok",
+    "published": "2025-09-18",
+    "arxiv_id": "2509.14746v1",
+    "url": "http://arxiv.org/abs/2509.14746v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.14746v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Image retrieval remains a fundamental yet challenging problem in computer\nvision. While recent advances in Multimodal Large Language Models (MLLMs) have\ndemonstrated strong reasoning capabilities, existing methods typically employ\nthem only for evaluation, without involving them directly in the ranking\nprocess. As a result, their rich multimodal reasoning abilities remain\nunderutilized, leading to suboptimal performance. In this paper, we propose a\nnovel Chain-of-Thought Re-Ranking (CoTRR) method to address this issue.\nSpecifically, we design a listwise ranking prompt that enables MLLM to directly\nparticipate in re-ranking candidate images. This ranking process is grounded in\nan image evaluation prompt, which assesses how well each candidate aligns with\nusers query. By allowing MLLM to perform listwise reasoning, our method\nsupports global comparison, consistent reasoning, and interpretable\ndecision-making - all of which are essential for accurate image retrieval. To\nenable structured and fine-grained analysis, we further introduce a query\ndeconstruction prompt, which breaks down the original query into multiple\nsemantic components. Extensive experiments on five datasets demonstrate the\neffectiveness of our CoTRR method, which achieves state-of-the-art performance\nacross three image retrieval tasks, including text-to-image retrieval (TIR),\ncomposed image retrieval (CIR) and chat-based image retrieval (Chat-IR). Our\ncode is available at https://github.com/freshfish15/CoTRR .",
+    "code_links": [
+      "https://github.com/freshfish15/CoTRR"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Enhancing Time Awareness in Generative Recommendation",
+    "authors": "Sunkyung Lee, Seongmin Park, Jonghyo Kim, Mincheol Yoon, Jongwuk Lee",
+    "published": "2025-09-17",
+    "arxiv_id": "2509.13957v1",
+    "url": "http://arxiv.org/abs/2509.13957v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.13957v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation has emerged as a promising paradigm that formulates\nthe recommendations into a text-to-text generation task, harnessing the vast\nknowledge of large language models. However, existing studies focus on\nconsidering the sequential order of items and neglect to handle the temporal\ndynamics across items, which can imply evolving user preferences. To address\nthis limitation, we propose a novel model, Generative Recommender Using Time\nawareness (GRUT), effectively capturing hidden user preferences via various\ntemporal signals. We first introduce Time-aware Prompting, consisting of two\nkey contexts. The user-level temporal context models personalized temporal\npatterns across timestamps and time intervals, while the item-level transition\ncontext provides transition patterns across users. We also devise Trend-aware\nInference, a training-free method that enhances rankings by incorporating trend\ninformation about items with generation likelihood. Extensive experiments\ndemonstrate that GRUT outperforms state-of-the-art models, with gains of up to\n15.4% and 14.3% in Recall@5 and NDCG@5 across four benchmark datasets. The\nsource code is available at https://github.com/skleee/GRUT.",
+    "code_links": [
+      "https://github.com/skleee/GRUT"
+    ],
+    "comment": "EMNLP 2025 (Findings)"
+  },
+  {
+    "title": "Combating Biomedical Misinformation through Multi-modal Claim Detection and Evidence-based Verification",
+    "authors": "Mariano Barone, Antonio Romano, Giuseppe Riccio, Marco Postiglione, Vincenzo Moscato",
+    "published": "2025-09-17",
+    "arxiv_id": "2509.13888v1",
+    "url": "http://arxiv.org/abs/2509.13888v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.13888v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Misinformation in healthcare, from vaccine hesitancy to unproven treatments,\nposes risks to public health and trust in medical systems. While machine\nlearning and natural language processing have advanced automated fact-checking,\nvalidating biomedical claims remains uniquely challenging due to complex\nterminology, the need for domain expertise, and the critical importance of\ngrounding in scientific evidence. We introduce CER (Combining Evidence and\nReasoning), a novel framework for biomedical fact-checking that integrates\nscientific evidence retrieval, reasoning via large language models, and\nsupervised veracity prediction. By integrating the text-generation capabilities\nof large language models with advanced retrieval techniques for high-quality\nbiomedical scientific evidence, CER effectively mitigates the risk of\nhallucinations, ensuring that generated outputs are grounded in verifiable,\nevidence-based sources. Evaluations on expert-annotated datasets (HealthFC,\nBioASQ-7b, SciFact) demonstrate state-of-the-art performance and promising\ncross-dataset generalization. Code and data are released for transparency and\nreproducibility: https://github.com/PRAISELab-PicusLab/CER",
+    "code_links": [
+      "https://github.com/PRAISELab-PicusLab/CER"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Combining Evidence and Reasoning for Biomedical Fact-Checking",
+    "authors": "Mariano Barone, Antonio Romano, Giuseppe Riccio, Marco Postiglione, Vincenzo Moscato",
+    "published": "2025-09-17",
+    "arxiv_id": "2509.13879v1",
+    "url": "http://arxiv.org/abs/2509.13879v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.13879v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Misinformation in healthcare, from vaccine hesitancy to unproven treatments,\nposes risks to public health and trust in medical systems. While machine\nlearning and natural language processing have advanced automated fact-checking,\nvalidating biomedical claims remains uniquely challenging due to complex\nterminology, the need for domain expertise, and the critical importance of\ngrounding in scientific evidence. We introduce CER (Combining Evidence and\nReasoning), a novel framework for biomedical fact-checking that integrates\nscientific evidence retrieval, reasoning via large language models, and\nsupervised veracity prediction. By integrating the text-generation capabilities\nof large language models with advanced retrieval techniques for high-quality\nbiomedical scientific evidence, CER effectively mitigates the risk of\nhallucinations, ensuring that generated outputs are grounded in verifiable,\nevidence-based sources. Evaluations on expert-annotated datasets (HealthFC,\nBioASQ-7b, SciFact) demonstrate state-of-the-art performance and promising\ncross-dataset generalization. Code and data are released for transparency and\nreproducibility: https: //github.com/PRAISELab-PicusLab/CER.",
+    "code_links": [
+      "https://github.com/PRAISELab-PicusLab/CER"
+    ],
+    "comment": "Proceedings of the 48th International ACM SIGIR Conference on\n  Research and Development in Information Retrieval, 2025"
+  },
+  {
+    "title": "Play by the Type Rules: Inferring Constraints for LLM Functions in Declarative Programs",
+    "authors": "Parker Glenn, Alfy Samuel, Daben Liu",
+    "published": "2025-09-24",
+    "arxiv_id": "2509.20208v1",
+    "url": "http://arxiv.org/abs/2509.20208v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.20208v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Integrating LLM powered operators in declarative query languages allows for\nthe combination of cheap and interpretable functions with powerful,\ngeneralizable language model reasoning. However, in order to benefit from the\noptimized execution of a database query language like SQL, generated outputs\nmust align with the rules enforced by both type checkers and database contents.\nCurrent approaches address this challenge with orchestrations consisting of\nmany LLM-based post-processing calls to ensure alignment between generated\noutputs and database values, introducing performance bottlenecks. We perform a\nstudy on the ability of various sized open-source language models to both parse\nand execute functions within a query language based on SQL, showing that small\nlanguage models can excel as function executors over hybrid data sources. Then,\nwe propose an efficient solution to enforce the well-typedness of LLM\nfunctions, demonstrating 7% accuracy improvement on a multi-hop question\nanswering dataset with 53% improvement in latency over comparable solutions. We\nmake our implementation available at https://github.com/parkervg/blendsql",
+    "code_links": [
+      "https://github.com/parkervg/blendsql"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ORQ: Complex Analytics on Private Data with Strong Security Guarantees",
+    "authors": "Eli Baum, Sam Buxbaum, Nitin Mathai, Muhammad Faisal, Vasiliki Kalavri, Mayank Varia, John Liagouris",
+    "published": "2025-09-13",
+    "arxiv_id": "2509.10793v1",
+    "url": "http://arxiv.org/abs/2509.10793v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.10793v1",
+    "category": "databases",
+    "primary_category": "cs.CR",
+    "abstract": "We present ORQ, a system that enables collaborative analysis of large private\ndatasets using cryptographically secure multi-party computation (MPC). ORQ\nprotects data against semi-honest or malicious parties and can efficiently\nevaluate relational queries with multi-way joins and aggregations that have\nbeen considered notoriously expensive under MPC. To do so, ORQ eliminates the\nquadratic cost of secure joins by leveraging the fact that, in practice, the\nstructure of many real queries allows us to join records and apply the\naggregations \"on the fly\" while keeping the result size bounded. On the system\nside, ORQ contributes generic oblivious operators, a data-parallel vectorized\nquery engine, a communication layer that amortizes MPC network costs, and a\ndataflow API for expressing relational analytics -- all built from the ground\nup.\n  We evaluate ORQ in LAN and WAN deployments on a diverse set of workloads,\nincluding complex queries with multiple joins and custom aggregations. When\ncompared to state-of-the-art solutions, ORQ significantly reduces MPC execution\ntimes and can process one order of magnitude larger datasets. For our most\nchallenging workload, the full TPC-H benchmark, we report results entirely\nunder MPC with Scale Factor 10 -- a scale that had previously been achieved\nonly with information leakage or the use of trusted third parties.",
+    "code_links": [
+      "https://github.com/CASP-Systems-BU/orq"
+    ],
+    "comment": "14 pages, plus Appendix. To appear at SOSP 2025. Code published at\n  https://github.com/CASP-Systems-BU/orq"
+  },
+  {
+    "title": "A Comparative Analysis of Identifier Schemes: UUIDv4, UUIDv7, and ULID for Distributed Systems",
+    "authors": "Nima Karimian Kakolaki",
+    "published": "2025-09-10",
+    "arxiv_id": "2509.08969v1",
+    "url": "http://arxiv.org/abs/2509.08969v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.08969v1",
+    "category": "databases",
+    "primary_category": "cs.DC",
+    "abstract": "Distributed systems require robust, scalable identifier schemes to ensure\ndata uniqueness and efficient indexing across multiple nodes. This paper\npresents a comprehensive analysis of the evolution of distributed identifiers,\ncomparing traditional auto-increment keys with UUIDv4, UUIDv7, and ULIDs. We\ncombine mathematical calculation of collision probabilities with empirical\nexperiments measuring generation speed and network transmission overhead in a\nsimulated distributed environment. Results demonstrate that ULIDs significantly\noutperform UUIDv4 and UUIDv7, reducing network overhead by 83.7% and increasing\ngeneration speed by 97.32%. statistical analysis further shows ULIDs offer a\n98.42% lower collision risk compared to UUIDv7, while maintaining negligible\ncollision probabilities even at high generation rates. These findings highlight\nULIDs as an optimal choice for high-performance distributed systems, providing\nefficient, time-ordered, and lexicographically sortable identifiers suitable\nfor scalable applications. All source code, datasets, and analysis scripts\nutilized in this research are publicly available in our dedicated repository at\nhttps://github.com/nimakarimiank/uids-comparison. This repository contains\ncomprehensive documentation of the experimental setup, including configuration\nfiles for the distributed environment, producer and consumer implementations,\nand message broker integration. Additionally, it provides the data scripts and\ndatasets. Researchers and practitioners are encouraged to explore the\nrepository for full reproducibility of the experiments and to facilitate\nfurther investigation or extension of the presented work.",
+    "code_links": [
+      "https://github.com/nimakarimiank/uids-comparison"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Tiga: Accelerating Geo-Distributed Transactions with Synchronized Clocks [Technical Report]",
+    "authors": "Jinkun Geng, Shuai Mu, Anirudh Sivaraman, Balaji Prabhakar",
+    "published": "2025-09-06",
+    "arxiv_id": "2509.05759v1",
+    "url": "http://arxiv.org/abs/2509.05759v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.05759v1",
+    "category": "databases",
+    "primary_category": "cs.NI",
+    "abstract": "This paper presents Tiga, a new design for geo-replicated and scalable\ntransactional databases such as Google Spanner. Tiga aims to commit\ntransactions within 1 wide-area roundtrip time, or 1 WRTT, for a wide range of\nscenarios, while maintaining high throughput with minimal computational\noverhead. Tiga consolidates concurrency control and consensus, completing both\nstrictly serializable execution and consistent replication in a single round.\nIt uses synchronized clocks to proactively order transactions by assigning each\na future timestamp at submission. In most cases, transactions arrive at servers\nbefore their future timestamps and are serialized according to the designated\ntimestamp, requiring 1 WRTT to commit. In rare cases, transactions are delayed\nand proactive ordering fails, in which case Tiga falls back to a slow path,\ncommitting in 1.5--2 WRTTs. Compared to state-of-the-art solutions, Tiga can\ncommit more transactions at 1-WRTT latency, and incurs much less throughput\noverhead. Evaluation results show that Tiga outperforms all baselines,\nachieving 1.3--7.2$\\times$ higher throughput and 1.4--4.6$\\times$ lower\nlatency. Tiga is open-sourced at\nhttps://github.com/New-Consensus-Concurrency-Control/Tiga.",
+    "code_links": [
+      "https://github.com/New-Consensus-Concurrency-Control/Tiga"
+    ],
+    "comment": "This is the technical report for our paper accepted by The 31st\n  Symposium on Operating Systems Principles (SOSP'25)"
+  },
+  {
+    "title": "Schema Inference for Tabular Data Repositories Using Large Language Models",
+    "authors": "Zhenyu Wu, Jiaoyan Chen, Norman W. Paton",
+    "published": "2025-09-04",
+    "arxiv_id": "2509.04632v1",
+    "url": "http://arxiv.org/abs/2509.04632v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.04632v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Minimally curated tabular data often contain representational inconsistencies\nacross heterogeneous sources, and are accompanied by sparse metadata. Working\nwith such data is intimidating. While prior work has advanced dataset discovery\nand exploration, schema inference remains difficult when metadata are limited.\nWe present SI-LLM (Schema Inference using Large Language Models), which infers\na concise conceptual schema for tabular data using only column headers and cell\nvalues. The inferred schema comprises hierarchical entity types, attributes,\nand inter-type relationships. In extensive evaluation on two datasets from web\ntables and open data, SI-LLM achieves promising end-to-end results, as well as\nbetter or comparable results to state-of-the-art methods at each step. All\nsource code, full prompts, and datasets of SI-LLM are available at\nhttps://github.com/PierreWoL/SILLM.",
+    "code_links": [
+      "https://github.com/PierreWoL/SILLM"
+    ],
+    "comment": null
+  },
+  {
+    "title": "CRouting: Reducing Expensive Distance Calls in Graph-Based Approximate Nearest Neighbor Search",
+    "authors": "Zhenxin Li, Shuibing He, Jiahao Guo, Xuechen Zhang, Xian-He Sun, Gang Chen",
+    "published": "2025-08-30",
+    "arxiv_id": "2509.00365v1",
+    "url": "http://arxiv.org/abs/2509.00365v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.00365v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Approximate nearest neighbor search (ANNS) is a crucial problem in\ninformation retrieval and AI applications. Recently, there has been a surge of\ninterest in graph-based ANNS algorithms due to their superior efficiency and\naccuracy. However, the repeated computation of distances in high-dimensional\nspaces constitutes the primary time cost of graph-based methods. To accelerate\nthe search, we propose a novel routing strategy named CRouting, which bypasses\nunnecessary distance computations by exploiting the angle distributions of\nhigh-dimensional vectors. CRouting is designed as a plugin to optimize existing\ngraph-based search with minimal code modifications. Our experiments show that\nCRouting reduces the number of distance computations by up to 41.5% and boosts\nqueries per second by up to 1.48$\\times$ on two predominant graph indexes, HNSW\nand NSG. Code is publicly available at https://github.com/ISCS-ZJU/CRouting.",
+    "code_links": [
+      "https://github.com/ISCS-ZJU/CRouting"
+    ],
+    "comment": null
+  }
+]
