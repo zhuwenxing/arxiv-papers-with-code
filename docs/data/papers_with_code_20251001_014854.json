@@ -1,0 +1,315 @@
+[
+  {
+    "title": "Multilingual Text-to-SQL: Benchmarking the Limits of Language Models with Collaborative Language Agents",
+    "authors": "Khanh Trinh Pham, Thu Huong Nguyen, Jun Jo, Quoc Viet Hung Nguyen, Thanh Tam Nguyen",
+    "published": "2025-09-29",
+    "arxiv_id": "2509.24405v1",
+    "url": "http://arxiv.org/abs/2509.24405v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.24405v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Text-to-SQL enables natural access to databases, yet most benchmarks are\nEnglish-only, limiting multilingual progress. We introduce MultiSpider 2.0,\nextending Spider 2.0 to eight languages (English, German, French, Spanish,\nPortuguese, Japanese, Chinese, Vietnamese). It preserves Spider 2.0's\nstructural difficulty while adding linguistic and dialectal variability,\ndemanding deeper reasoning for complex SQL. On this benchmark, state-of-the-art\nLLMs (such as DeepSeek-R1 and OpenAI o1) reach only 4\\% execution accuracy when\nrelying on intrinsic reasoning, versus 60\\% on MultiSpider 1.0. Therefore, we\nprovide a collaboration-driven language agents baseline that iteratively\nrefines queries, improving accuracy to 15\\%. These results reveal a substantial\nmultilingual gap and motivate methods that are robust across languages and\nready for real-world enterprise deployment. Our benchmark is available at\nhttps://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL.",
+    "code_links": [
+      "https://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "AceSearcher: Bootstrapping Reasoning and Search for LLMs via Reinforced Self-Play",
+    "authors": "Ran Xu, Yuchen Zhuang, Zihan Dong, Jonathan Wang, Yue Yu, Joyce C. Ho, Linjun Zhang, Haoyu Wang, Wenqi Shi, Carl Yang",
+    "published": "2025-09-29",
+    "arxiv_id": "2509.24193v1",
+    "url": "http://arxiv.org/abs/2509.24193v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.24193v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Search-augmented LLMs often struggle with complex reasoning tasks due to\nineffective multi-hop retrieval and limited reasoning ability. We propose\nAceSearcher, a cooperative self-play framework that trains a single large\nlanguage model (LLM) to alternate between two roles: a decomposer that breaks\ndown complex queries and a solver that integrates retrieved contexts for answer\ngeneration. AceSearcher couples supervised fine-tuning on a diverse mixture of\nsearch, reasoning, and decomposition tasks with reinforcement fine-tuning\noptimized for final answer accuracy, eliminating the need for intermediate\nannotations. Extensive experiments on three reasoning-intensive tasks across 10\ndatasets show that AceSearcher outperforms state-of-the-art baselines,\nachieving an average exact match improvement of 7.6%. Remarkably, on\ndocument-level finance reasoning tasks, AceSearcher-32B matches the performance\nof the DeepSeek-V3 model using less than 5% of its parameters. Even at smaller\nscales (1.5B and 8B), AceSearcher often surpasses existing search-augmented\nLLMs with up to 9x more parameters, highlighting its exceptional efficiency and\neffectiveness in tackling complex reasoning tasks. Our code will be published\nat https://github.com/ritaranx/AceSearcher and\nhttps://huggingface.co/AceSearcher.",
+    "code_links": [
+      "https://github.com/ritaranx/AceSearcher"
+    ],
+    "comment": "Accepted to NeurIPS 2025 (Spotlight)"
+  },
+  {
+    "title": "GBSK: Skeleton Clustering via Granular-ball Computing and Multi-Sampling for Large-Scale Data",
+    "authors": "Yewang Chen, Junfeng Li, Shuyin Xia, Qinghong Lai, Xinbo Gao, Guoyin Wang, Dongdong Cheng, Yi Liu, Yi Wang",
+    "published": "2025-09-28",
+    "arxiv_id": "2509.23742v1",
+    "url": "http://arxiv.org/abs/2509.23742v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.23742v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "To effectively handle clustering task for large-scale datasets, we propose a\nnovel scalable skeleton clustering algorithm, namely GBSK, which leverages the\ngranular-ball technique to capture the underlying structure of data. By\nmulti-sampling the dataset and constructing multi-grained granular-balls, GBSK\nprogressively uncovers a statistical \"skeleton\" -- a spatial abstraction that\napproximates the essential structure and distribution of the original data.\nThis strategy enables GBSK to dramatically reduce computational overhead while\nmaintaining high clustering accuracy. In addition, we introduce an adaptive\nversion, AGBSK, with simplified parameter settings to enhance usability and\nfacilitate deployment in real-world scenarios. Extensive experiments conducted\non standard computing hardware demonstrate that GBSK achieves high efficiency\nand strong clustering performance on large-scale datasets, including one with\nup to 100 million instances across 256 dimensions. Our implementation and\nexperimental results are available at: https://github.com/XFastDataLab/GBSK/.",
+    "code_links": [
+      "https://github.com/XFastDataLab/GBSK"
+    ],
+    "comment": null
+  },
+  {
+    "title": "PARROT: A Benchmark for Evaluating LLMs in Cross-System SQL Translation",
+    "authors": "Wei Zhou, Guoliang Li, Haoyu Wang, Yuxing Han, Xufei Wu, Fan Wu, Xuanhe Zhou",
+    "published": "2025-09-27",
+    "arxiv_id": "2509.23338v1",
+    "url": "http://arxiv.org/abs/2509.23338v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.23338v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DB",
+    "abstract": "Large language models (LLMS) have shown increasing effectiveness in\nText-to-SQL tasks. However, another closely related problem, Cross-System SQL\nTranslation (a.k.a., SQL-to-SQL), which adapts a query written for one database\nsystem (e.g., MySQL) into its equivalent one for another system (e.g.,\nClickHouse), is of great practical importance but remains underexplored.\nExisting SQL benchmarks are not well-suited for SQL-to-SQL evaluation, which\n(1) focus on a limited set of database systems (often just SQLite) and (2)\ncannot capture many system-specific SQL dialects (e.g., customized functions,\ndata types, and syntax rules). Thus, in this paper, we introduce PARROT, a\nPractical And Realistic BenchmaRk for CrOss-System SQL Translation. PARROT\ncomprises 598 translation pairs from 38 open-source benchmarks and real-world\nbusiness services, specifically prepared to challenge system-specific SQL\nunderstanding (e.g., LLMS achieve lower than 38.53% accuracy on average). We\nalso provide multiple benchmark variants, including PARROT-Diverse with 28,003\ntranslations (for extensive syntax testing) and PARROT-Simple with 5,306\nrepresentative samples (for focused stress testing), covering 22\nproduction-grade database systems. To promote future research, we release a\npublic leaderboard and source code at: https://code4db.github.io/parrot-bench/.",
+    "code_links": [
+      "https://github.com/weAIDB/PARROT"
+    ],
+    "comment": "To appear in NeurIPS 2025. Welcome your submission to challenge our\n  leaderboard at: https://code4db.github.io/parrot-bench/. Also visit our code\n  repository at: https://github.com/weAIDB/PARROT"
+  },
+  {
+    "title": "Rejuvenating Cross-Entropy Loss in Knowledge Distillation for Recommender Systems",
+    "authors": "Zhangchi Zhu, Wei Zhang",
+    "published": "2025-09-25",
+    "arxiv_id": "2509.20989v1",
+    "url": "http://arxiv.org/abs/2509.20989v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.20989v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "This paper analyzes Cross-Entropy (CE) loss in knowledge distillation (KD)\nfor recommender systems. KD for recommender systems targets at distilling\nrankings, especially among items most likely to be preferred, and can only be\ncomputed on a small subset of items. Considering these features, we reveal the\nconnection between CE loss and NDCG in the field of KD. We prove that when\nperforming KD on an item subset, minimizing CE loss maximizes the lower bound\nof NDCG, only if an assumption of closure is satisfied. It requires that the\nitem subset consists of the student's top items. However, this contradicts our\ngoal of distilling rankings of the teacher's top items. We empirically\ndemonstrate the vast gap between these two kinds of top items. To bridge the\ngap between our goal and theoretical support, we propose Rejuvenated\nCross-Entropy for Knowledge Distillation (RCE-KD). It splits the top items\ngiven by the teacher into two subsets based on whether they are highly ranked\nby the student. For the subset that defies the condition, a sampling strategy\nis devised to use teacher-student collaboration to approximate our assumption\nof closure. We also combine the losses on the two subsets adaptively. Extensive\nexperiments demonstrate the effectiveness of our method. Our code is available\nat https://anonymous.4open.science/r/RCE-KD.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "FORGE: Forming Semantic Identifiers for Generative Retrieval in Industrial Datasets",
+    "authors": "Kairui Fu, Tao Zhang, Shuwen Xiao, Ziyang Wang, Xinming Zhang, Chenchi Zhang, Yuliang Yan, Junjun Zheng, Yu Li, Zhihong Chen, Jian Wu, Xiangheng Kong, Shengyu Zhang, Kun Kuang, Yuning Jiang, Bo Zheng",
+    "published": "2025-09-25",
+    "arxiv_id": "2509.20904v2",
+    "url": "http://arxiv.org/abs/2509.20904v2",
+    "pdf_url": "http://arxiv.org/pdf/2509.20904v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Semantic identifiers (SIDs) have gained increasing attention in generative\nretrieval (GR) due to their meaningful semantic discriminability. However,\ncurrent research on SIDs faces three main challenges: (1) the absence of\nlarge-scale public datasets with multimodal features, (2) limited investigation\ninto optimization strategies for SID generation, which typically rely on costly\nGR training for evaluation, and (3) slow online convergence in industrial\ndeployment. To address these challenges, we propose FORGE, a comprehensive\nbenchmark for FOrming semantic identifieR in Generative rEtrieval with\nindustrial datasets. Specifically, FORGE is equipped with a dataset comprising\n14 billion user interactions and multimodal features of 250 million items\nsampled from Taobao, one of the biggest e-commerce platforms in China.\nLeveraging this dataset, FORGE explores several optimizations to enhance the\nSID construction and validates their effectiveness via offline experiments\nacross different settings and tasks. Further online analysis conducted on the\n\"Guess You Like\" section of Taobao's homepage shows a 0.35% increase in\ntransaction count, highlighting the practical impact of our method. Regarding\nthe expensive SID validation accompanied by the full training of GRs, we\npropose two novel metrics of SID that correlate positively with recommendation\nperformance, enabling convenient evaluations without any GR training. For\nreal-world applications, FORGE introduces an offline pretraining schema that\nreduces online convergence by half. The code and data are available at\nhttps://github.com/selous123/al_sid.",
+    "code_links": [
+      "https://github.com/selous123/al_sid"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DELM: a Python toolkit for Data Extraction with Language Models",
+    "authors": "Eric Fithian, Kirill Skobelev",
+    "published": "2025-09-24",
+    "arxiv_id": "2509.20617v1",
+    "url": "http://arxiv.org/abs/2509.20617v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.20617v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models (LLMs) have become powerful tools for annotating\nunstructured data. However, most existing workflows rely on ad hoc scripts,\nmaking reproducibility, robustness, and systematic evaluation difficult. To\naddress these challenges, we introduce DELM (Data Extraction with Language\nModels), an open-source Python toolkit designed for rapid experimental\niteration of LLM-based data extraction pipelines and for quantifying the\ntrade-offs between them. DELM minimizes boilerplate code and offers a modular\nframework with structured outputs, built-in validation, flexible data-loading\nand scoring strategies, and efficient batch processing. It also includes robust\nsupport for working with LLM APIs, featuring retry logic, result caching,\ndetailed cost tracking, and comprehensive configuration management. We showcase\nDELM's capabilities through two case studies: one featuring a novel prompt\noptimization algorithm, and another illustrating how DELM quantifies trade-offs\nbetween cost and coverage when selecting keywords to decide which paragraphs to\npass to an LLM. DELM is available at\n\\href{https://github.com/Center-for-Applied-AI/delm}{\\texttt{github.com/Center-for-Applied-AI/delm}}.",
+    "code_links": [
+      "https://github.com/Center-for-Applied-AI/delm"
+    ],
+    "comment": null
+  },
+  {
+    "title": "HiCoLoRA: Addressing Context-Prompt Misalignment via Hierarchical Collaborative LoRA for Zero-Shot DST",
+    "authors": "Shuyu Zhang, Yifan Wei, Xinru Wang, Yanmin Zhu, Yangfan He, Yixuan Weng, Bin Li",
+    "published": "2025-09-24",
+    "arxiv_id": "2509.19742v2",
+    "url": "http://arxiv.org/abs/2509.19742v2",
+    "pdf_url": "http://arxiv.org/pdf/2509.19742v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Zero-shot Dialog State Tracking (zs-DST) is essential for enabling\nTask-Oriented Dialog Systems (TODs) to generalize to new domains without costly\ndata annotation. A central challenge lies in the semantic misalignment between\ndynamic dialog contexts and static prompts, leading to inflexible cross-layer\ncoordination, domain interference, and catastrophic forgetting. To tackle this,\nwe propose Hierarchical Collaborative Low-Rank Adaptation (HiCoLoRA), a\nframework that enhances zero-shot slot inference through robust prompt\nalignment. It features a hierarchical LoRA architecture for dynamic\nlayer-specific processing (combining lower-layer heuristic grouping and\nhigher-layer full interaction), integrates Spectral Joint Domain-Slot\nClustering to identify transferable associations (feeding an Adaptive Linear\nFusion Mechanism), and employs Semantic-Enhanced SVD Initialization\n(SemSVD-Init) to preserve pre-trained knowledge. Experiments on multi-domain\ndatasets MultiWOZ and SGD show that HiCoLoRA outperforms baselines, achieving\nSOTA in zs-DST. Code is available at https://github.com/carsonz/HiCoLoRA.",
+    "code_links": [
+      "https://github.com/carsonz/HiCoLoRA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DyBBT: Dynamic Balance via Bandit inspired Targeting for Dialog Policy with Cognitive Dual-Systems",
+    "authors": "Shuyu Zhang, Yifan Wei, Jialuo Yuan, Xinru Wang, Yanmin Zhu, Bin Li",
+    "published": "2025-09-24",
+    "arxiv_id": "2509.19695v1",
+    "url": "http://arxiv.org/abs/2509.19695v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.19695v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Task oriented dialog systems often rely on static exploration strategies that\ndo not adapt to dynamic dialog contexts, leading to inefficient exploration and\nsuboptimal performance. We propose DyBBT, a novel dialog policy learning\nframework that formalizes the exploration challenge through a structured\ncognitive state space capturing dialog progression, user uncertainty, and slot\ndependency. DyBBT proposes a bandit inspired meta-controller that dynamically\nswitches between a fast intuitive inference (System 1) and a slow deliberative\nreasoner (System 2) based on real-time cognitive states and visitation counts.\nExtensive experiments on single- and multi-domain benchmarks show that DyBBT\nachieves state-of-the-art performance in success rate, efficiency, and\ngeneralization, with human evaluations confirming its decisions are well\naligned with expert judgment. Code is available at\nhttps://github.com/carsonz/DyBBT.",
+    "code_links": [
+      "https://github.com/carsonz/DyBBT"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Are Smaller Open-Weight LLMs Closing the Gap to Proprietary Models for Biomedical Question Answering?",
+    "authors": "Damian Stachura, Joanna Konieczna, Artur Nowak",
+    "published": "2025-09-23",
+    "arxiv_id": "2509.18843v1",
+    "url": "http://arxiv.org/abs/2509.18843v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.18843v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Open-weight versions of large language models (LLMs) are rapidly advancing,\nwith state-of-the-art models like DeepSeek-V3 now performing comparably to\nproprietary LLMs. This progression raises the question of whether small\nopen-weight LLMs are capable of effectively replacing larger closed-source\nmodels. We are particularly interested in the context of biomedical\nquestion-answering, a domain we explored by participating in Task 13B Phase B\nof the BioASQ challenge. In this work, we compare several open-weight models\nagainst top-performing systems such as GPT-4o, GPT-4.1, Claude 3.5 Sonnet, and\nClaude 3.7 Sonnet. To enhance question answering capabilities, we use various\ntechniques including retrieving the most relevant snippets based on embedding\ndistance, in-context learning, and structured outputs. For certain submissions,\nwe utilize ensemble approaches to leverage the diverse outputs generated by\ndifferent models for exact-answer questions. Our results demonstrate that\nopen-weight LLMs are comparable to proprietary ones. In some instances,\nopen-weight LLMs even surpassed their closed counterparts, particularly when\nensembling strategies were applied. All code is publicly available at\nhttps://github.com/evidenceprime/BioASQ-13b.",
+    "code_links": [
+      "https://github.com/evidenceprime/BioASQ-13b"
+    ],
+    "comment": "CLEF 2025 Working Notes, 9-12 September 2025, Madrid, Spain"
+  },
+  {
+    "title": "Single-Branch Network Architectures to Close the Modality Gap in Multimodal Recommendation",
+    "authors": "Christian Ganhör, Marta Moscati, Anna Hausberger, Shah Nawaz, Markus Schedl",
+    "published": "2025-09-23",
+    "arxiv_id": "2509.18807v1",
+    "url": "http://arxiv.org/abs/2509.18807v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.18807v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Traditional recommender systems rely on collaborative filtering, using past\nuser-item interactions to help users discover new items in a vast collection.\nIn cold start, i.e., when interaction histories of users or items are not\navailable, content-based recommender systems use side information instead.\nHybrid recommender systems (HRSs) often employ multimodal learning to combine\ncollaborative and side information, which we jointly refer to as modalities.\nThough HRSs can provide recommendations when some modalities are missing, their\nquality degrades. In this work, we utilize single-branch neural networks\nequipped with weight sharing, modality sampling, and contrastive loss to\nprovide accurate recommendations even in missing modality scenarios by\nnarrowing the modality gap. We compare these networks with multi-branch\nalternatives and conduct extensive experiments on three datasets. Six\naccuracy-based and four beyond-accuracy-based metrics help assess the\nrecommendation quality for the different training paradigms and their\nhyperparameters in warm-start and missing modality scenarios. We quantitatively\nand qualitatively study the effects of these different aspects on bridging the\nmodality gap. Our results show that single-branch networks achieve competitive\nperformance in warm-start scenarios and are significantly better in missing\nmodality settings. Moreover, our approach leads to closer proximity of an\nitem's modalities in the embedding space. Our full experimental setup is\navailable at https://github.com/hcai-mms/single-branch-networks.",
+    "code_links": [
+      "https://github.com/hcai-mms/single-branch-networks"
+    ],
+    "comment": "Accepted by ACM Transactions on Recommender Systems (TORS)"
+  },
+  {
+    "title": "The Ranking Blind Spot: Decision Hijacking in LLM-based Text Ranking",
+    "authors": "Yaoyao Qian, Yifan Zeng, Yuchao Jiang, Chelsi Jain, Huazheng Wang",
+    "published": "2025-09-23",
+    "arxiv_id": "2509.18575v1",
+    "url": "http://arxiv.org/abs/2509.18575v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.18575v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models (LLMs) have demonstrated strong performance in\ninformation retrieval tasks like passage ranking. Our research examines how\ninstruction-following capabilities in LLMs interact with multi-document\ncomparison tasks, identifying what we term the \"Ranking Blind Spot\", a\ncharacteristic of LLM decision processes during comparative evaluation. We\nanalyze how this ranking blind spot affects LLM evaluation systems through two\napproaches: Decision Objective Hijacking, which alters the evaluation goal in\npairwise ranking systems, and Decision Criteria Hijacking, which modifies\nrelevance standards across ranking schemes. These approaches demonstrate how\ncontent providers could potentially influence LLM-based ranking systems to\naffect document positioning. These attacks aim to force the LLM ranker to\nprefer a specific passage and rank it at the top. Malicious content providers\ncan exploit this weakness, which helps them gain additional exposure by\nattacking the ranker. In our experiment, We empirically show that the proposed\nattacks are effective in various LLMs and can be generalized to multiple\nranking schemes. We apply these attack to realistic examples to show their\neffectiveness. We also found stronger LLMs are more vulnerable to these\nattacks. Our code is available at:\nhttps://github.com/blindspotorg/RankingBlindSpot",
+    "code_links": [
+      "https://github.com/blindspotorg/RankingBlindSpot"
+    ],
+    "comment": "Accepted by EMNLP 2025"
+  },
+  {
+    "title": "ReGeS: Reciprocal Retrieval-Generation Synergy for Conversational Recommender Systems",
+    "authors": "Dayu Yang, Hui Fang",
+    "published": "2025-09-22",
+    "arxiv_id": "2509.21371v1",
+    "url": "http://arxiv.org/abs/2509.21371v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.21371v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Connecting conversation with external domain knowledge is vital for\nconversational recommender systems (CRS) to correctly understand user\npreferences. However, existing solutions either require domain-specific\nengineering, which limits flexibility, or rely solely on large language models,\nwhich increases the risk of hallucination. While Retrieval-Augmented Generation\n(RAG) holds promise, its naive use in CRS is hindered by noisy dialogues that\nweaken retrieval and by overlooked nuances among similar items. We propose\nReGeS, a reciprocal Retrieval-Generation Synergy framework that unifies\ngeneration-augmented retrieval to distill informative user intent from\nconversations and retrieval-augmented generation to differentiate subtle item\nfeatures. This synergy obviates the need for extra annotations, reduces\nhallucinations, and simplifies continuous updates. Experiments on multiple CRS\nbenchmarks show that ReGeS achieves state-of-the-art performance in\nrecommendation accuracy, demonstrating the effectiveness of reciprocal synergy\nfor knowledge-intensive CRS tasks.",
+    "code_links": [
+      "https://github.com/dayuyang1999/ReGeS"
+    ],
+    "comment": "Accepted by WISE 2025: 26th International Web Information Systems\n  Engineering conference. Our code is publicly available at the link:\n  https://github.com/dayuyang1999/ReGeS"
+  },
+  {
+    "title": "RALLM-POI: Retrieval-Augmented LLM for Zero-shot Next POI Recommendation with Geographical Reranking",
+    "authors": "Kunrong Li, Kwan Hui Lim",
+    "published": "2025-09-21",
+    "arxiv_id": "2509.17066v1",
+    "url": "http://arxiv.org/abs/2509.17066v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.17066v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Next point-of-interest (POI) recommendation predicts a user's next\ndestination from historical movements. Traditional models require intensive\ntraining, while LLMs offer flexible and generalizable zero-shot solutions but\noften generate generic or geographically irrelevant results due to missing\ntrajectory and spatial context. To address these issues, we propose RALLM-POI,\na framework that couples LLMs with retrieval-augmented generation and\nself-rectification. We first propose a Historical Trajectory Retriever (HTR)\nthat retrieves relevant past trajectories to serve as contextual references,\nwhich are then reranked by a Geographical Distance Reranker (GDR) for\nprioritizing spatially relevant trajectories. Lastly, an Agentic LLM Rectifier\n(ALR) is designed to refine outputs through self-reflection. Without additional\ntraining, RALLM-POI achieves substantial accuracy gains across three real-world\nFoursquare datasets, outperforming both conventional and LLM-based baselines.\nCode is released at https://github.com/LKRcrocodile/RALLM-POI.",
+    "code_links": [
+      "https://github.com/LKRcrocodile/RALLM-POI"
+    ],
+    "comment": "PRICAI 2025"
+  },
+  {
+    "title": "Multilingual Text-to-SQL: Benchmarking the Limits of Language Models with Collaborative Language Agents",
+    "authors": "Khanh Trinh Pham, Thu Huong Nguyen, Jun Jo, Quoc Viet Hung Nguyen, Thanh Tam Nguyen",
+    "published": "2025-09-29",
+    "arxiv_id": "2509.24405v1",
+    "url": "http://arxiv.org/abs/2509.24405v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.24405v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Text-to-SQL enables natural access to databases, yet most benchmarks are\nEnglish-only, limiting multilingual progress. We introduce MultiSpider 2.0,\nextending Spider 2.0 to eight languages (English, German, French, Spanish,\nPortuguese, Japanese, Chinese, Vietnamese). It preserves Spider 2.0's\nstructural difficulty while adding linguistic and dialectal variability,\ndemanding deeper reasoning for complex SQL. On this benchmark, state-of-the-art\nLLMs (such as DeepSeek-R1 and OpenAI o1) reach only 4\\% execution accuracy when\nrelying on intrinsic reasoning, versus 60\\% on MultiSpider 1.0. Therefore, we\nprovide a collaboration-driven language agents baseline that iteratively\nrefines queries, improving accuracy to 15\\%. These results reveal a substantial\nmultilingual gap and motivate methods that are robust across languages and\nready for real-world enterprise deployment. Our benchmark is available at\nhttps://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL.",
+    "code_links": [
+      "https://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "PARROT: A Benchmark for Evaluating LLMs in Cross-System SQL Translation",
+    "authors": "Wei Zhou, Guoliang Li, Haoyu Wang, Yuxing Han, Xufei Wu, Fan Wu, Xuanhe Zhou",
+    "published": "2025-09-27",
+    "arxiv_id": "2509.23338v1",
+    "url": "http://arxiv.org/abs/2509.23338v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.23338v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Large language models (LLMS) have shown increasing effectiveness in\nText-to-SQL tasks. However, another closely related problem, Cross-System SQL\nTranslation (a.k.a., SQL-to-SQL), which adapts a query written for one database\nsystem (e.g., MySQL) into its equivalent one for another system (e.g.,\nClickHouse), is of great practical importance but remains underexplored.\nExisting SQL benchmarks are not well-suited for SQL-to-SQL evaluation, which\n(1) focus on a limited set of database systems (often just SQLite) and (2)\ncannot capture many system-specific SQL dialects (e.g., customized functions,\ndata types, and syntax rules). Thus, in this paper, we introduce PARROT, a\nPractical And Realistic BenchmaRk for CrOss-System SQL Translation. PARROT\ncomprises 598 translation pairs from 38 open-source benchmarks and real-world\nbusiness services, specifically prepared to challenge system-specific SQL\nunderstanding (e.g., LLMS achieve lower than 38.53% accuracy on average). We\nalso provide multiple benchmark variants, including PARROT-Diverse with 28,003\ntranslations (for extensive syntax testing) and PARROT-Simple with 5,306\nrepresentative samples (for focused stress testing), covering 22\nproduction-grade database systems. To promote future research, we release a\npublic leaderboard and source code at: https://code4db.github.io/parrot-bench/.",
+    "code_links": [
+      "https://github.com/weAIDB/PARROT"
+    ],
+    "comment": "To appear in NeurIPS 2025. Welcome your submission to challenge our\n  leaderboard at: https://code4db.github.io/parrot-bench/. Also visit our code\n  repository at: https://github.com/weAIDB/PARROT"
+  },
+  {
+    "title": "Play by the Type Rules: Inferring Constraints for LLM Functions in Declarative Programs",
+    "authors": "Parker Glenn, Alfy Samuel, Daben Liu",
+    "published": "2025-09-24",
+    "arxiv_id": "2509.20208v1",
+    "url": "http://arxiv.org/abs/2509.20208v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.20208v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Integrating LLM powered operators in declarative query languages allows for\nthe combination of cheap and interpretable functions with powerful,\ngeneralizable language model reasoning. However, in order to benefit from the\noptimized execution of a database query language like SQL, generated outputs\nmust align with the rules enforced by both type checkers and database contents.\nCurrent approaches address this challenge with orchestrations consisting of\nmany LLM-based post-processing calls to ensure alignment between generated\noutputs and database values, introducing performance bottlenecks. We perform a\nstudy on the ability of various sized open-source language models to both parse\nand execute functions within a query language based on SQL, showing that small\nlanguage models can excel as function executors over hybrid data sources. Then,\nwe propose an efficient solution to enforce the well-typedness of LLM\nfunctions, demonstrating 7% accuracy improvement on a multi-hop question\nanswering dataset with 53% improvement in latency over comparable solutions. We\nmake our implementation available at https://github.com/parkervg/blendsql",
+    "code_links": [
+      "https://github.com/parkervg/blendsql"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ORQ: Complex Analytics on Private Data with Strong Security Guarantees",
+    "authors": "Eli Baum, Sam Buxbaum, Nitin Mathai, Muhammad Faisal, Vasiliki Kalavri, Mayank Varia, John Liagouris",
+    "published": "2025-09-13",
+    "arxiv_id": "2509.10793v1",
+    "url": "http://arxiv.org/abs/2509.10793v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.10793v1",
+    "category": "databases",
+    "primary_category": "cs.CR",
+    "abstract": "We present ORQ, a system that enables collaborative analysis of large private\ndatasets using cryptographically secure multi-party computation (MPC). ORQ\nprotects data against semi-honest or malicious parties and can efficiently\nevaluate relational queries with multi-way joins and aggregations that have\nbeen considered notoriously expensive under MPC. To do so, ORQ eliminates the\nquadratic cost of secure joins by leveraging the fact that, in practice, the\nstructure of many real queries allows us to join records and apply the\naggregations \"on the fly\" while keeping the result size bounded. On the system\nside, ORQ contributes generic oblivious operators, a data-parallel vectorized\nquery engine, a communication layer that amortizes MPC network costs, and a\ndataflow API for expressing relational analytics -- all built from the ground\nup.\n  We evaluate ORQ in LAN and WAN deployments on a diverse set of workloads,\nincluding complex queries with multiple joins and custom aggregations. When\ncompared to state-of-the-art solutions, ORQ significantly reduces MPC execution\ntimes and can process one order of magnitude larger datasets. For our most\nchallenging workload, the full TPC-H benchmark, we report results entirely\nunder MPC with Scale Factor 10 -- a scale that had previously been achieved\nonly with information leakage or the use of trusted third parties.",
+    "code_links": [
+      "https://github.com/CASP-Systems-BU/orq"
+    ],
+    "comment": "14 pages, plus Appendix. To appear at SOSP 2025. Code published at\n  https://github.com/CASP-Systems-BU/orq"
+  },
+  {
+    "title": "A Comparative Analysis of Identifier Schemes: UUIDv4, UUIDv7, and ULID for Distributed Systems",
+    "authors": "Nima Karimian Kakolaki",
+    "published": "2025-09-10",
+    "arxiv_id": "2509.08969v1",
+    "url": "http://arxiv.org/abs/2509.08969v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.08969v1",
+    "category": "databases",
+    "primary_category": "cs.DC",
+    "abstract": "Distributed systems require robust, scalable identifier schemes to ensure\ndata uniqueness and efficient indexing across multiple nodes. This paper\npresents a comprehensive analysis of the evolution of distributed identifiers,\ncomparing traditional auto-increment keys with UUIDv4, UUIDv7, and ULIDs. We\ncombine mathematical calculation of collision probabilities with empirical\nexperiments measuring generation speed and network transmission overhead in a\nsimulated distributed environment. Results demonstrate that ULIDs significantly\noutperform UUIDv4 and UUIDv7, reducing network overhead by 83.7% and increasing\ngeneration speed by 97.32%. statistical analysis further shows ULIDs offer a\n98.42% lower collision risk compared to UUIDv7, while maintaining negligible\ncollision probabilities even at high generation rates. These findings highlight\nULIDs as an optimal choice for high-performance distributed systems, providing\nefficient, time-ordered, and lexicographically sortable identifiers suitable\nfor scalable applications. All source code, datasets, and analysis scripts\nutilized in this research are publicly available in our dedicated repository at\nhttps://github.com/nimakarimiank/uids-comparison. This repository contains\ncomprehensive documentation of the experimental setup, including configuration\nfiles for the distributed environment, producer and consumer implementations,\nand message broker integration. Additionally, it provides the data scripts and\ndatasets. Researchers and practitioners are encouraged to explore the\nrepository for full reproducibility of the experiments and to facilitate\nfurther investigation or extension of the presented work.",
+    "code_links": [
+      "https://github.com/nimakarimiank/uids-comparison"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Tiga: Accelerating Geo-Distributed Transactions with Synchronized Clocks [Technical Report]",
+    "authors": "Jinkun Geng, Shuai Mu, Anirudh Sivaraman, Balaji Prabhakar",
+    "published": "2025-09-06",
+    "arxiv_id": "2509.05759v1",
+    "url": "http://arxiv.org/abs/2509.05759v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.05759v1",
+    "category": "databases",
+    "primary_category": "cs.NI",
+    "abstract": "This paper presents Tiga, a new design for geo-replicated and scalable\ntransactional databases such as Google Spanner. Tiga aims to commit\ntransactions within 1 wide-area roundtrip time, or 1 WRTT, for a wide range of\nscenarios, while maintaining high throughput with minimal computational\noverhead. Tiga consolidates concurrency control and consensus, completing both\nstrictly serializable execution and consistent replication in a single round.\nIt uses synchronized clocks to proactively order transactions by assigning each\na future timestamp at submission. In most cases, transactions arrive at servers\nbefore their future timestamps and are serialized according to the designated\ntimestamp, requiring 1 WRTT to commit. In rare cases, transactions are delayed\nand proactive ordering fails, in which case Tiga falls back to a slow path,\ncommitting in 1.5--2 WRTTs. Compared to state-of-the-art solutions, Tiga can\ncommit more transactions at 1-WRTT latency, and incurs much less throughput\noverhead. Evaluation results show that Tiga outperforms all baselines,\nachieving 1.3--7.2$\\times$ higher throughput and 1.4--4.6$\\times$ lower\nlatency. Tiga is open-sourced at\nhttps://github.com/New-Consensus-Concurrency-Control/Tiga.",
+    "code_links": [
+      "https://github.com/New-Consensus-Concurrency-Control/Tiga"
+    ],
+    "comment": "This is the technical report for our paper accepted by The 31st\n  Symposium on Operating Systems Principles (SOSP'25)"
+  },
+  {
+    "title": "Schema Inference for Tabular Data Repositories Using Large Language Models",
+    "authors": "Zhenyu Wu, Jiaoyan Chen, Norman W. Paton",
+    "published": "2025-09-04",
+    "arxiv_id": "2509.04632v1",
+    "url": "http://arxiv.org/abs/2509.04632v1",
+    "pdf_url": "http://arxiv.org/pdf/2509.04632v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Minimally curated tabular data often contain representational inconsistencies\nacross heterogeneous sources, and are accompanied by sparse metadata. Working\nwith such data is intimidating. While prior work has advanced dataset discovery\nand exploration, schema inference remains difficult when metadata are limited.\nWe present SI-LLM (Schema Inference using Large Language Models), which infers\na concise conceptual schema for tabular data using only column headers and cell\nvalues. The inferred schema comprises hierarchical entity types, attributes,\nand inter-type relationships. In extensive evaluation on two datasets from web\ntables and open data, SI-LLM achieves promising end-to-end results, as well as\nbetter or comparable results to state-of-the-art methods at each step. All\nsource code, full prompts, and datasets of SI-LLM are available at\nhttps://github.com/PierreWoL/SILLM.",
+    "code_links": [
+      "https://github.com/PierreWoL/SILLM"
+    ],
+    "comment": null
+  }
+]
