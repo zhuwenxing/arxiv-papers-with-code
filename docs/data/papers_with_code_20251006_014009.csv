@@ -1,0 +1,371 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+Which Programming Language and Model Work Best With LLM-as-a-Judge For Code Retrieval?,"Lucas Roberts, Denisa Roberts",2025-09-30,2510.00324v1,http://arxiv.org/abs/2510.00324v1,http://arxiv.org/pdf/2510.00324v1,information_retrieval,cs.SE,"Code search is an important information retrieval application. Benefits of
+better code search include faster new developer on-boarding, reduced software
+maintenance, and ease of understanding for large repositories. Despite
+improvements in search algorithms and search benchmarks, the domain of code
+search has lagged behind. One reason is the high cost of human annotation for
+code queries and answers. While humans may annotate search results in general
+text QA systems, code annotations require specialized knowledge of a
+programming language (PL), as well as domain specific software engineering
+knowledge. In this work we study the use of Large Language Models (LLMs) to
+retrieve code at the level of functions and to generate annotations for code
+search results. We compare the impact of the retriever representation (sparse
+vs. semantic), programming language, and LLM by comparing human annotations
+across several popular languages (C, Java, Javascript, Go, and Python). We
+focus on repositories that implement common data structures likely to be
+implemented in any PLs. For the same human annotations, we compare several
+LLM-as-a-Judge models to evaluate programming language and other affinities
+between LLMs. We find that the chosen retriever and PL exhibit affinities that
+can be leveraged to improve alignment of human and AI relevance determinations,
+with significant performance implications. We also find differences in
+representation (sparse vs. semantic) across PLs that impact alignment of human
+and AI relevance determinations. We propose using transpilers to bootstrap
+scalable code search benchmark datasets in other PLs and in a case study
+demonstrate that human-AI relevance agreement rates largely match the (worst
+case) human-human agreement under study. The application code used in this work
+is available at \href{https://github.com/rlucas7/code-searcher/}{this github
+repo}.",https://github.com/rlucas7/code-searcher,Accepted as a full paper at SIGIR-AP 2025
+MR$^2$-Bench: Going Beyond Matching to Reasoning in Multimodal Retrieval,"Junjie Zhou, Ze Liu, Lei Xiong, Jin-Ge Yao, Yueze Wang, Shitao Xiao, Fenfen Lin, Miguel Hu Chen, Zhicheng Dou, Siqi Bao, Defu Lian, Yongping Xiong, Zheng Liu",2025-09-30,2509.26378v1,http://arxiv.org/abs/2509.26378v1,http://arxiv.org/pdf/2509.26378v1,information_retrieval,cs.IR,"Multimodal retrieval is becoming a crucial component of modern AI
+applications, yet its evaluation lags behind the demands of more realistic and
+challenging scenarios. Existing benchmarks primarily probe surface-level
+semantic correspondence (e.g., object-text matching) while failing to assess
+the deeper reasoning required to capture complex relationships between visual
+and textual information. To address this gap, we introduce MR$^2$-Bench, a
+reasoning-intensive benchmark for multimodal retrieval. MR$^2$-Bench presents
+the following critical values: 1) all tasks are reasoning-driven, going beyond
+shallow matching to effectively assess models' capacity for logical, spatial,
+and causal inference; 2) it features diverse multimodal data, such as natural
+images, diagrams, and visual puzzles, enabling comprehensive evaluation across
+content types; 3) it supports complex queries and documents containing multiple
+images and covers diverse retrieval scenarios, more accurately reflecting
+real-world applications. Our benchmark contains 1,309 curated queries, derived
+either from manual collection and annotation or from selective consolidation of
+public datasets. Despite achieving strong results on existing benchmarks,
+current state-of-the-art models still struggle on MR$^2$-Bench: for example,
+the leading Seed1.6-Embedding model attains a Recall@1 of 77.78 on MMEB, but
+only 9.91 on MR$^2$-Bench. This substantial performance gap highlights both the
+increased challenge posed by our benchmark and the pressing need for further
+advances in reasoning-intensive multimodal retrieval. The dataset and
+evaluation code will be made publicly available at
+https://github.com/VectorSpaceLab/MR2-Bench.",https://github.com/VectorSpaceLab/MR2-Bench,
+Multilingual Text-to-SQL: Benchmarking the Limits of Language Models with Collaborative Language Agents,"Khanh Trinh Pham, Thu Huong Nguyen, Jun Jo, Quoc Viet Hung Nguyen, Thanh Tam Nguyen",2025-09-29,2509.24405v1,http://arxiv.org/abs/2509.24405v1,http://arxiv.org/pdf/2509.24405v1,information_retrieval,cs.CL,"Text-to-SQL enables natural access to databases, yet most benchmarks are
+English-only, limiting multilingual progress. We introduce MultiSpider 2.0,
+extending Spider 2.0 to eight languages (English, German, French, Spanish,
+Portuguese, Japanese, Chinese, Vietnamese). It preserves Spider 2.0's
+structural difficulty while adding linguistic and dialectal variability,
+demanding deeper reasoning for complex SQL. On this benchmark, state-of-the-art
+LLMs (such as DeepSeek-R1 and OpenAI o1) reach only 4\% execution accuracy when
+relying on intrinsic reasoning, versus 60\% on MultiSpider 1.0. Therefore, we
+provide a collaboration-driven language agents baseline that iteratively
+refines queries, improving accuracy to 15\%. These results reveal a substantial
+multilingual gap and motivate methods that are robust across languages and
+ready for real-world enterprise deployment. Our benchmark is available at
+https://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL.",https://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL,
+AceSearcher: Bootstrapping Reasoning and Search for LLMs via Reinforced Self-Play,"Ran Xu, Yuchen Zhuang, Zihan Dong, Jonathan Wang, Yue Yu, Joyce C. Ho, Linjun Zhang, Haoyu Wang, Wenqi Shi, Carl Yang",2025-09-29,2509.24193v1,http://arxiv.org/abs/2509.24193v1,http://arxiv.org/pdf/2509.24193v1,information_retrieval,cs.CL,"Search-augmented LLMs often struggle with complex reasoning tasks due to
+ineffective multi-hop retrieval and limited reasoning ability. We propose
+AceSearcher, a cooperative self-play framework that trains a single large
+language model (LLM) to alternate between two roles: a decomposer that breaks
+down complex queries and a solver that integrates retrieved contexts for answer
+generation. AceSearcher couples supervised fine-tuning on a diverse mixture of
+search, reasoning, and decomposition tasks with reinforcement fine-tuning
+optimized for final answer accuracy, eliminating the need for intermediate
+annotations. Extensive experiments on three reasoning-intensive tasks across 10
+datasets show that AceSearcher outperforms state-of-the-art baselines,
+achieving an average exact match improvement of 7.6%. Remarkably, on
+document-level finance reasoning tasks, AceSearcher-32B matches the performance
+of the DeepSeek-V3 model using less than 5% of its parameters. Even at smaller
+scales (1.5B and 8B), AceSearcher often surpasses existing search-augmented
+LLMs with up to 9x more parameters, highlighting its exceptional efficiency and
+effectiveness in tackling complex reasoning tasks. Our code will be published
+at https://github.com/ritaranx/AceSearcher and
+https://huggingface.co/AceSearcher.",https://github.com/ritaranx/AceSearcher,Accepted to NeurIPS 2025 (Spotlight)
+GBSK: Skeleton Clustering via Granular-ball Computing and Multi-Sampling for Large-Scale Data,"Yewang Chen, Junfeng Li, Shuyin Xia, Qinghong Lai, Xinbo Gao, Guoyin Wang, Dongdong Cheng, Yi Liu, Yi Wang",2025-09-28,2509.23742v1,http://arxiv.org/abs/2509.23742v1,http://arxiv.org/pdf/2509.23742v1,information_retrieval,cs.LG,"To effectively handle clustering task for large-scale datasets, we propose a
+novel scalable skeleton clustering algorithm, namely GBSK, which leverages the
+granular-ball technique to capture the underlying structure of data. By
+multi-sampling the dataset and constructing multi-grained granular-balls, GBSK
+progressively uncovers a statistical ""skeleton"" -- a spatial abstraction that
+approximates the essential structure and distribution of the original data.
+This strategy enables GBSK to dramatically reduce computational overhead while
+maintaining high clustering accuracy. In addition, we introduce an adaptive
+version, AGBSK, with simplified parameter settings to enhance usability and
+facilitate deployment in real-world scenarios. Extensive experiments conducted
+on standard computing hardware demonstrate that GBSK achieves high efficiency
+and strong clustering performance on large-scale datasets, including one with
+up to 100 million instances across 256 dimensions. Our implementation and
+experimental results are available at: https://github.com/XFastDataLab/GBSK/.",https://github.com/XFastDataLab/GBSK,
+PARROT: A Benchmark for Evaluating LLMs in Cross-System SQL Translation,"Wei Zhou, Guoliang Li, Haoyu Wang, Yuxing Han, Xufei Wu, Fan Wu, Xuanhe Zhou",2025-09-27,2509.23338v1,http://arxiv.org/abs/2509.23338v1,http://arxiv.org/pdf/2509.23338v1,information_retrieval,cs.DB,"Large language models (LLMS) have shown increasing effectiveness in
+Text-to-SQL tasks. However, another closely related problem, Cross-System SQL
+Translation (a.k.a., SQL-to-SQL), which adapts a query written for one database
+system (e.g., MySQL) into its equivalent one for another system (e.g.,
+ClickHouse), is of great practical importance but remains underexplored.
+Existing SQL benchmarks are not well-suited for SQL-to-SQL evaluation, which
+(1) focus on a limited set of database systems (often just SQLite) and (2)
+cannot capture many system-specific SQL dialects (e.g., customized functions,
+data types, and syntax rules). Thus, in this paper, we introduce PARROT, a
+Practical And Realistic BenchmaRk for CrOss-System SQL Translation. PARROT
+comprises 598 translation pairs from 38 open-source benchmarks and real-world
+business services, specifically prepared to challenge system-specific SQL
+understanding (e.g., LLMS achieve lower than 38.53% accuracy on average). We
+also provide multiple benchmark variants, including PARROT-Diverse with 28,003
+translations (for extensive syntax testing) and PARROT-Simple with 5,306
+representative samples (for focused stress testing), covering 22
+production-grade database systems. To promote future research, we release a
+public leaderboard and source code at: https://code4db.github.io/parrot-bench/.",https://github.com/weAIDB/PARROT,"To appear in NeurIPS 2025. Welcome your submission to challenge our
+  leaderboard at: https://code4db.github.io/parrot-bench/. Also visit our code
+  repository at: https://github.com/weAIDB/PARROT"
+AutoPK: Leveraging LLMs and a Hybrid Similarity Metric for Advanced Retrieval of Pharmacokinetic Data from Complex Tables and Documents,"Hossein Sholehrasa, Amirhossein Ghanaatian, Doina Caragea, Lisa A. Tell, Jim E. Riviere, Majid Jaberi-Douraki",2025-09-26,2510.00039v1,http://arxiv.org/abs/2510.00039v1,http://arxiv.org/pdf/2510.00039v1,information_retrieval,cs.DB,"Pharmacokinetics (PK) plays a critical role in drug development and
+regulatory decision-making for human and veterinary medicine, directly
+affecting public health through drug safety and efficacy assessments. However,
+PK data are often embedded in complex, heterogeneous tables with variable
+structures and inconsistent terminologies, posing significant challenges for
+automated PK data retrieval and standardization. AutoPK, a novel two-stage
+framework for accurate and scalable extraction of PK data from complex
+scientific tables. In the first stage, AutoPK identifies and extracts PK
+parameter variants using large language models (LLMs), a hybrid similarity
+metric, and LLM-based validation. The second stage filters relevant rows,
+converts the table into a key-value text format, and uses an LLM to reconstruct
+a standardized table. Evaluated on a real-world dataset of 605 PK tables,
+including captions and footnotes, AutoPK shows significant improvements in
+precision and recall over direct LLM baselines. For instance, AutoPK with LLaMA
+3.1-70B achieved an F1-score of 0.92 on half-life and 0.91 on clearance
+parameters, outperforming direct use of LLaMA 3.1-70B by margins of 0.10 and
+0.21, respectively. Smaller models such as Gemma 3-27B and Phi 3-12B with
+AutoPK achieved 2-7 fold F1 gains over their direct use, with Gemma's
+hallucination rates reduced from 60-95% down to 8-14%. Notably, AutoPK enabled
+open-source models like Gemma 3-27B to outperform commercial systems such as
+GPT-4o Mini on several PK parameters. AutoPK enables scalable and
+high-confidence PK data extraction, making it well-suited for critical
+applications in veterinary pharmacology, drug safety monitoring, and public
+health decision-making, while addressing heterogeneous table structures and
+terminology and demonstrating generalizability across key PK parameters. Code
+and data: https://github.com/hosseinsholehrasa/AutoPK",https://github.com/hosseinsholehrasa/AutoPK,Accepted at the 2025 IEEE 37th ICTAI
+Rejuvenating Cross-Entropy Loss in Knowledge Distillation for Recommender Systems,"Zhangchi Zhu, Wei Zhang",2025-09-25,2509.20989v1,http://arxiv.org/abs/2509.20989v1,http://arxiv.org/pdf/2509.20989v1,information_retrieval,cs.IR,"This paper analyzes Cross-Entropy (CE) loss in knowledge distillation (KD)
+for recommender systems. KD for recommender systems targets at distilling
+rankings, especially among items most likely to be preferred, and can only be
+computed on a small subset of items. Considering these features, we reveal the
+connection between CE loss and NDCG in the field of KD. We prove that when
+performing KD on an item subset, minimizing CE loss maximizes the lower bound
+of NDCG, only if an assumption of closure is satisfied. It requires that the
+item subset consists of the student's top items. However, this contradicts our
+goal of distilling rankings of the teacher's top items. We empirically
+demonstrate the vast gap between these two kinds of top items. To bridge the
+gap between our goal and theoretical support, we propose Rejuvenated
+Cross-Entropy for Knowledge Distillation (RCE-KD). It splits the top items
+given by the teacher into two subsets based on whether they are highly ranked
+by the student. For the subset that defies the condition, a sampling strategy
+is devised to use teacher-student collaboration to approximate our assumption
+of closure. We also combine the losses on the two subsets adaptively. Extensive
+experiments demonstrate the effectiveness of our method. Our code is available
+at https://anonymous.4open.science/r/RCE-KD.",,
+FORGE: Forming Semantic Identifiers for Generative Retrieval in Industrial Datasets,"Kairui Fu, Tao Zhang, Shuwen Xiao, Ziyang Wang, Xinming Zhang, Chenchi Zhang, Yuliang Yan, Junjun Zheng, Yu Li, Zhihong Chen, Jian Wu, Xiangheng Kong, Shengyu Zhang, Kun Kuang, Yuning Jiang, Bo Zheng",2025-09-25,2509.20904v2,http://arxiv.org/abs/2509.20904v2,http://arxiv.org/pdf/2509.20904v2,information_retrieval,cs.IR,"Semantic identifiers (SIDs) have gained increasing attention in generative
+retrieval (GR) due to their meaningful semantic discriminability. However,
+current research on SIDs faces three main challenges: (1) the absence of
+large-scale public datasets with multimodal features, (2) limited investigation
+into optimization strategies for SID generation, which typically rely on costly
+GR training for evaluation, and (3) slow online convergence in industrial
+deployment. To address these challenges, we propose FORGE, a comprehensive
+benchmark for FOrming semantic identifieR in Generative rEtrieval with
+industrial datasets. Specifically, FORGE is equipped with a dataset comprising
+14 billion user interactions and multimodal features of 250 million items
+sampled from Taobao, one of the biggest e-commerce platforms in China.
+Leveraging this dataset, FORGE explores several optimizations to enhance the
+SID construction and validates their effectiveness via offline experiments
+across different settings and tasks. Further online analysis conducted on the
+""Guess You Like"" section of Taobao's homepage shows a 0.35% increase in
+transaction count, highlighting the practical impact of our method. Regarding
+the expensive SID validation accompanied by the full training of GRs, we
+propose two novel metrics of SID that correlate positively with recommendation
+performance, enabling convenient evaluations without any GR training. For
+real-world applications, FORGE introduces an offline pretraining schema that
+reduces online convergence by half. The code and data are available at
+https://github.com/selous123/al_sid.",https://github.com/selous123/al_sid,
+DELM: a Python toolkit for Data Extraction with Language Models,"Eric Fithian, Kirill Skobelev",2025-09-24,2509.20617v1,http://arxiv.org/abs/2509.20617v1,http://arxiv.org/pdf/2509.20617v1,information_retrieval,cs.IR,"Large Language Models (LLMs) have become powerful tools for annotating
+unstructured data. However, most existing workflows rely on ad hoc scripts,
+making reproducibility, robustness, and systematic evaluation difficult. To
+address these challenges, we introduce DELM (Data Extraction with Language
+Models), an open-source Python toolkit designed for rapid experimental
+iteration of LLM-based data extraction pipelines and for quantifying the
+trade-offs between them. DELM minimizes boilerplate code and offers a modular
+framework with structured outputs, built-in validation, flexible data-loading
+and scoring strategies, and efficient batch processing. It also includes robust
+support for working with LLM APIs, featuring retry logic, result caching,
+detailed cost tracking, and comprehensive configuration management. We showcase
+DELM's capabilities through two case studies: one featuring a novel prompt
+optimization algorithm, and another illustrating how DELM quantifies trade-offs
+between cost and coverage when selecting keywords to decide which paragraphs to
+pass to an LLM. DELM is available at
+\href{https://github.com/Center-for-Applied-AI/delm}{\texttt{github.com/Center-for-Applied-AI/delm}}.",https://github.com/Center-for-Applied-AI/delm,
+EMR-AGENT: Automating Cohort and Feature Extraction from EMR Databases,"Kwanhyung Lee, Sungsoo Hong, Joonhyung Park, Jeonghyeop Lim, Juhwan Choi, Donghwee Yoon, Eunho Yang",2025-10-01,2510.00549v2,http://arxiv.org/abs/2510.00549v2,http://arxiv.org/pdf/2510.00549v2,databases,cs.DB,"Machine learning models for clinical prediction rely on structured data
+extracted from Electronic Medical Records (EMRs), yet this process remains
+dominated by hardcoded, database-specific pipelines for cohort definition,
+feature selection, and code mapping. These manual efforts limit scalability,
+reproducibility, and cross-institutional generalization. To address this, we
+introduce EMR-AGENT (Automated Generalized Extraction and Navigation Tool), an
+agent-based framework that replaces manual rule writing with dynamic, language
+model-driven interaction to extract and standardize structured clinical data.
+Our framework automates cohort selection, feature extraction, and code mapping
+through interactive querying of databases. Our modular agents iteratively
+observe query results and reason over schema and documentation, using SQL not
+just for data retrieval but also as a tool for database observation and
+decision making. This eliminates the need for hand-crafted, schema-specific
+logic. To enable rigorous evaluation, we develop a benchmarking codebase for
+three EMR databases (MIMIC-III, eICU, SICdb), including both seen and unseen
+schema settings. Our results demonstrate strong performance and generalization
+across these databases, highlighting the feasibility of automating a process
+previously thought to require expert-driven design. The code will be released
+publicly at https://github.com/AITRICS/EMR-AGENT/tree/main. For a
+demonstration, please visit our anonymous demo page:
+https://anonymoususer-max600.github.io/EMR_AGENT/",https://github.com/AITRICS/EMR-AGENT,currently under submission to ICLR 2026
+Graph2Region: Efficient Graph Similarity Learning with Structure and Scale Restoration,"Zhouyang Liu, Yixin Chen, Ning Liu, Jiezhong He, Dongsheng Li",2025-10-01,2510.00394v1,http://arxiv.org/abs/2510.00394v1,http://arxiv.org/pdf/2510.00394v1,databases,cs.LG,"Graph similarity is critical in graph-related tasks such as graph retrieval,
+where metrics like maximum common subgraph (MCS) and graph edit distance (GED)
+are commonly used. However, exact computations of these metrics are known to be
+NP-Hard. Recent neural network-based approaches approximate the similarity
+score in embedding spaces to alleviate the computational burden, but they
+either involve expensive pairwise node comparisons or fail to effectively
+utilize structural and scale information of graphs. To tackle these issues, we
+propose a novel geometric-based graph embedding method called Graph2Region
+(G2R). G2R represents nodes as closed regions and recovers their adjacency
+patterns within graphs in the embedding space. By incorporating the node
+features and adjacency patterns of graphs, G2R summarizes graph regions, i.e.,
+graph embeddings, where the shape captures the underlying graph structures and
+the volume reflects the graph size. Consequently, the overlap between graph
+regions can serve as an approximation of MCS, signifying similar node regions
+and adjacency patterns. We further analyze the relationship between MCS and GED
+and propose using disjoint parts as a proxy for GED similarity. This analysis
+enables concurrent computation of MCS and GED, incorporating local and global
+structural information. Experimental evaluation highlights G2R's competitive
+performance in graph similarity computation. It achieves up to a 60.0\%
+relative accuracy improvement over state-of-the-art methods in MCS similarity
+learning, while maintaining efficiency in both training and inference.
+Moreover, G2R showcases remarkable capability in predicting both MCS and GED
+similarities simultaneously, providing a holistic assessment of graph
+similarity. Code available at https://github.com/liuzhouyang/Graph2Region.",https://github.com/liuzhouyang/Graph2Region,Accepted by IEEE Transactions on Knowledge and Data Engineering
+"ActorDB: A Unified Database Model Integrating Single-Writer Actors, Incremental View Maintenance, and Zero-Trust Messaging",Jun Kawasaki,2025-09-29,2509.25285v1,http://arxiv.org/abs/2509.25285v1,http://arxiv.org/pdf/2509.25285v1,databases,cs.DB,"This paper presents ActorDB ( Dekigoto ) , a novel database architecture that
+tightly integrates a single-writer actor model for writes, Incremental View
+Maintenance (IVM), and a zero-trust security model as a core component. The
+primary contribution of this work is the unification of these powerful but
+complex concepts into a single, cohesive system designed to reduce
+architectural complexity for developers of modern, data-intensive applications.
+We argue that by providing these capabilities out-of-the-box, ActorDB can offer
+a more robust, secure, and developer-friendly platform compared to solutions
+that require manual integration of separate systems for actor persistence,
+stream processing, and security. We present the core architecture, discuss the
+critical trade-offs in its design, and define the performance criteria for a
+Minimum Viable Product (MVP) to validate our approach.",https://github.com/com-junkawasaki/dekigoto,"7 pages, 1 table, 1 figures. Code and data available at
+  https://github.com/com-junkawasaki/dekigoto"
+Multilingual Text-to-SQL: Benchmarking the Limits of Language Models with Collaborative Language Agents,"Khanh Trinh Pham, Thu Huong Nguyen, Jun Jo, Quoc Viet Hung Nguyen, Thanh Tam Nguyen",2025-09-29,2509.24405v1,http://arxiv.org/abs/2509.24405v1,http://arxiv.org/pdf/2509.24405v1,databases,cs.CL,"Text-to-SQL enables natural access to databases, yet most benchmarks are
+English-only, limiting multilingual progress. We introduce MultiSpider 2.0,
+extending Spider 2.0 to eight languages (English, German, French, Spanish,
+Portuguese, Japanese, Chinese, Vietnamese). It preserves Spider 2.0's
+structural difficulty while adding linguistic and dialectal variability,
+demanding deeper reasoning for complex SQL. On this benchmark, state-of-the-art
+LLMs (such as DeepSeek-R1 and OpenAI o1) reach only 4\% execution accuracy when
+relying on intrinsic reasoning, versus 60\% on MultiSpider 1.0. Therefore, we
+provide a collaboration-driven language agents baseline that iteratively
+refines queries, improving accuracy to 15\%. These results reveal a substantial
+multilingual gap and motivate methods that are robust across languages and
+ready for real-world enterprise deployment. Our benchmark is available at
+https://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL.",https://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL,
+PARROT: A Benchmark for Evaluating LLMs in Cross-System SQL Translation,"Wei Zhou, Guoliang Li, Haoyu Wang, Yuxing Han, Xufei Wu, Fan Wu, Xuanhe Zhou",2025-09-27,2509.23338v1,http://arxiv.org/abs/2509.23338v1,http://arxiv.org/pdf/2509.23338v1,databases,cs.DB,"Large language models (LLMS) have shown increasing effectiveness in
+Text-to-SQL tasks. However, another closely related problem, Cross-System SQL
+Translation (a.k.a., SQL-to-SQL), which adapts a query written for one database
+system (e.g., MySQL) into its equivalent one for another system (e.g.,
+ClickHouse), is of great practical importance but remains underexplored.
+Existing SQL benchmarks are not well-suited for SQL-to-SQL evaluation, which
+(1) focus on a limited set of database systems (often just SQLite) and (2)
+cannot capture many system-specific SQL dialects (e.g., customized functions,
+data types, and syntax rules). Thus, in this paper, we introduce PARROT, a
+Practical And Realistic BenchmaRk for CrOss-System SQL Translation. PARROT
+comprises 598 translation pairs from 38 open-source benchmarks and real-world
+business services, specifically prepared to challenge system-specific SQL
+understanding (e.g., LLMS achieve lower than 38.53% accuracy on average). We
+also provide multiple benchmark variants, including PARROT-Diverse with 28,003
+translations (for extensive syntax testing) and PARROT-Simple with 5,306
+representative samples (for focused stress testing), covering 22
+production-grade database systems. To promote future research, we release a
+public leaderboard and source code at: https://code4db.github.io/parrot-bench/.",https://github.com/weAIDB/PARROT,"To appear in NeurIPS 2025. Welcome your submission to challenge our
+  leaderboard at: https://code4db.github.io/parrot-bench/. Also visit our code
+  repository at: https://github.com/weAIDB/PARROT"
+AutoPK: Leveraging LLMs and a Hybrid Similarity Metric for Advanced Retrieval of Pharmacokinetic Data from Complex Tables and Documents,"Hossein Sholehrasa, Amirhossein Ghanaatian, Doina Caragea, Lisa A. Tell, Jim E. Riviere, Majid Jaberi-Douraki",2025-09-26,2510.00039v1,http://arxiv.org/abs/2510.00039v1,http://arxiv.org/pdf/2510.00039v1,databases,cs.DB,"Pharmacokinetics (PK) plays a critical role in drug development and
+regulatory decision-making for human and veterinary medicine, directly
+affecting public health through drug safety and efficacy assessments. However,
+PK data are often embedded in complex, heterogeneous tables with variable
+structures and inconsistent terminologies, posing significant challenges for
+automated PK data retrieval and standardization. AutoPK, a novel two-stage
+framework for accurate and scalable extraction of PK data from complex
+scientific tables. In the first stage, AutoPK identifies and extracts PK
+parameter variants using large language models (LLMs), a hybrid similarity
+metric, and LLM-based validation. The second stage filters relevant rows,
+converts the table into a key-value text format, and uses an LLM to reconstruct
+a standardized table. Evaluated on a real-world dataset of 605 PK tables,
+including captions and footnotes, AutoPK shows significant improvements in
+precision and recall over direct LLM baselines. For instance, AutoPK with LLaMA
+3.1-70B achieved an F1-score of 0.92 on half-life and 0.91 on clearance
+parameters, outperforming direct use of LLaMA 3.1-70B by margins of 0.10 and
+0.21, respectively. Smaller models such as Gemma 3-27B and Phi 3-12B with
+AutoPK achieved 2-7 fold F1 gains over their direct use, with Gemma's
+hallucination rates reduced from 60-95% down to 8-14%. Notably, AutoPK enabled
+open-source models like Gemma 3-27B to outperform commercial systems such as
+GPT-4o Mini on several PK parameters. AutoPK enables scalable and
+high-confidence PK data extraction, making it well-suited for critical
+applications in veterinary pharmacology, drug safety monitoring, and public
+health decision-making, while addressing heterogeneous table structures and
+terminology and demonstrating generalizability across key PK parameters. Code
+and data: https://github.com/hosseinsholehrasa/AutoPK",https://github.com/hosseinsholehrasa/AutoPK,Accepted at the 2025 IEEE 37th ICTAI
+Play by the Type Rules: Inferring Constraints for LLM Functions in Declarative Programs,"Parker Glenn, Alfy Samuel, Daben Liu",2025-09-24,2509.20208v1,http://arxiv.org/abs/2509.20208v1,http://arxiv.org/pdf/2509.20208v1,databases,cs.CL,"Integrating LLM powered operators in declarative query languages allows for
+the combination of cheap and interpretable functions with powerful,
+generalizable language model reasoning. However, in order to benefit from the
+optimized execution of a database query language like SQL, generated outputs
+must align with the rules enforced by both type checkers and database contents.
+Current approaches address this challenge with orchestrations consisting of
+many LLM-based post-processing calls to ensure alignment between generated
+outputs and database values, introducing performance bottlenecks. We perform a
+study on the ability of various sized open-source language models to both parse
+and execute functions within a query language based on SQL, showing that small
+language models can excel as function executors over hybrid data sources. Then,
+we propose an efficient solution to enforce the well-typedness of LLM
+functions, demonstrating 7% accuracy improvement on a multi-hop question
+answering dataset with 53% improvement in latency over comparable solutions. We
+make our implementation available at https://github.com/parkervg/blendsql",https://github.com/parkervg/blendsql,
+ORQ: Complex Analytics on Private Data with Strong Security Guarantees,"Eli Baum, Sam Buxbaum, Nitin Mathai, Muhammad Faisal, Vasiliki Kalavri, Mayank Varia, John Liagouris",2025-09-13,2509.10793v1,http://arxiv.org/abs/2509.10793v1,http://arxiv.org/pdf/2509.10793v1,databases,cs.CR,"We present ORQ, a system that enables collaborative analysis of large private
+datasets using cryptographically secure multi-party computation (MPC). ORQ
+protects data against semi-honest or malicious parties and can efficiently
+evaluate relational queries with multi-way joins and aggregations that have
+been considered notoriously expensive under MPC. To do so, ORQ eliminates the
+quadratic cost of secure joins by leveraging the fact that, in practice, the
+structure of many real queries allows us to join records and apply the
+aggregations ""on the fly"" while keeping the result size bounded. On the system
+side, ORQ contributes generic oblivious operators, a data-parallel vectorized
+query engine, a communication layer that amortizes MPC network costs, and a
+dataflow API for expressing relational analytics -- all built from the ground
+up.
+  We evaluate ORQ in LAN and WAN deployments on a diverse set of workloads,
+including complex queries with multiple joins and custom aggregations. When
+compared to state-of-the-art solutions, ORQ significantly reduces MPC execution
+times and can process one order of magnitude larger datasets. For our most
+challenging workload, the full TPC-H benchmark, we report results entirely
+under MPC with Scale Factor 10 -- a scale that had previously been achieved
+only with information leakage or the use of trusted third parties.",https://github.com/CASP-Systems-BU/orq,"14 pages, plus Appendix. To appear at SOSP 2025. Code published at
+  https://github.com/CASP-Systems-BU/orq"
+"A Comparative Analysis of Identifier Schemes: UUIDv4, UUIDv7, and ULID for Distributed Systems",Nima Karimian Kakolaki,2025-09-10,2509.08969v1,http://arxiv.org/abs/2509.08969v1,http://arxiv.org/pdf/2509.08969v1,databases,cs.DC,"Distributed systems require robust, scalable identifier schemes to ensure
+data uniqueness and efficient indexing across multiple nodes. This paper
+presents a comprehensive analysis of the evolution of distributed identifiers,
+comparing traditional auto-increment keys with UUIDv4, UUIDv7, and ULIDs. We
+combine mathematical calculation of collision probabilities with empirical
+experiments measuring generation speed and network transmission overhead in a
+simulated distributed environment. Results demonstrate that ULIDs significantly
+outperform UUIDv4 and UUIDv7, reducing network overhead by 83.7% and increasing
+generation speed by 97.32%. statistical analysis further shows ULIDs offer a
+98.42% lower collision risk compared to UUIDv7, while maintaining negligible
+collision probabilities even at high generation rates. These findings highlight
+ULIDs as an optimal choice for high-performance distributed systems, providing
+efficient, time-ordered, and lexicographically sortable identifiers suitable
+for scalable applications. All source code, datasets, and analysis scripts
+utilized in this research are publicly available in our dedicated repository at
+https://github.com/nimakarimiank/uids-comparison. This repository contains
+comprehensive documentation of the experimental setup, including configuration
+files for the distributed environment, producer and consumer implementations,
+and message broker integration. Additionally, it provides the data scripts and
+datasets. Researchers and practitioners are encouraged to explore the
+repository for full reproducibility of the experiments and to facilitate
+further investigation or extension of the presented work.",https://github.com/nimakarimiank/uids-comparison,
