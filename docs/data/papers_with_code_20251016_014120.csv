@@ -1,0 +1,393 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+Leveraging Language Semantics for Collaborative Filtering with TextGCN and TextGCN-MLP: Zero-Shot vs In-Domain Performance,"Andrei Chernov, Haroon Wahab, Oleg Novitskij",2025-10-14,2510.12461v1,http://arxiv.org/abs/2510.12461v1,http://arxiv.org/pdf/2510.12461v1,information_retrieval,cs.IR,"In recent years, various approaches have been proposed to leverage large
+language models (LLMs) for incorporating textual information about items into
+recommender systems. Existing methods primarily focus on either fine-tuning
+LLMs to generate recommendations or integrating LLM-based embeddings into
+downstream models. In this work, we follow the latter direction and propose
+\textbf{TextGCN}, which applies parameter-free graph convolution layers
+directly over LLM-based item-title embeddings, instead of learning ID-based
+embeddings as in traditional methods. By combining language semantics with
+graph message passing, this architecture achieves state-of-the-art zero-shot
+performance, significantly outperforming prior approaches. Furthermore, we
+introduce \textbf{TextGCN-MLP}, which extends TextGCN with a trainable
+multilayer perceptron trained using a contrastive loss, achieving
+state-of-the-art in-domain performance on recommendation benchmarks. However,
+the zero-shot performance of TextGCN-MLP remains lower than that of TextGCN,
+highlighting the trade-off between in-domain specialization and zero-shot
+generalization. We release our code on github at
+\href{https://github.com/ChernovAndrey/TFCE}{github.com/ChernovAndrey/TFCE}.",https://github.com/ChernovAndrey/TFCE,
+What Generative Search Engines Like and How to Optimize Web Content Cooperatively,"Yujiang Wu, Shanshan Zhong, Yubin Kim, Chenyan Xiong",2025-10-13,2510.11438v1,http://arxiv.org/abs/2510.11438v1,http://arxiv.org/pdf/2510.11438v1,information_retrieval,cs.IR,"By employing large language models (LLMs) to retrieve documents and generate
+natural language responses, Generative Engines, such as Google AI overview and
+ChatGPT, provide significantly enhanced user experiences and have rapidly
+become the new form of search. Their rapid adoption also drives the needs of
+Generative Engine Optimization (GEO), as content providers are eager to gain
+more traction from them. In this paper, we introduce AutoGEO, a framework to
+automatically learn generative engine preferences when using retrieved contents
+for response generation, and rewrite web contents for more such traction.
+AutoGEO first prompts frontier LLMs to explain generative engine preferences
+and extract meaningful preference rules from these explanations. Then it uses
+preference rules as context engineering for AutoGEO$_\text{API}$, a
+prompt-based GEO system, and as rule-based rewards to train
+AutoGEO$_\text{Mini}$, a cost-effective GEO model. Experiments on the standard
+GEO-Bench and two newly constructed benchmarks using real user queries
+demonstrate the effectiveness of AutoGEO in enhancing content traction while
+preserving search utility. Analyses confirm the learned rules' robustness and
+abilities to capture unique preferences in variant domains, and AutoGEO
+systems' ability to embed them in content optimization. The code is released at
+https://github.com/cxcscmu/AutoGEO.",https://github.com/cxcscmu/AutoGEO,
+"VeritasFi: An Adaptable, Multi-tiered RAG Framework for Multi-modal Financial Question Answering","Zhenghan Tai, Hanwei Wu, Qingchen Hu, Jijun Chi, Hailin He, Lei Ding, Tung Sum Thomas Kwok, Bohuai Xiao, Yuchen Hua, Suyuchen Wang, Peng Lu, Muzhi Li, Yihong Wu, Liheng Ma, Jerry Huang, Jiayi Zhang, Gonghao Zhang, Chaolong Jiang, Jingrui Tian, Sicheng Lyu, Zeyu Li, Boyu Han, Fengran Mo, Xinyue Yu, Yufei Cui, Ling Zhou, Xinyu Wang",2025-10-12,2510.10828v1,http://arxiv.org/abs/2510.10828v1,http://arxiv.org/pdf/2510.10828v1,information_retrieval,cs.IR,"Retrieval-Augmented Generation (RAG) is becoming increasingly essential for
+Question Answering (QA) in the financial sector, where accurate and
+contextually grounded insights from complex public disclosures are crucial.
+However, existing financial RAG systems face two significant challenges: (1)
+they struggle to process heterogeneous data formats, such as text, tables, and
+figures; and (2) they encounter difficulties in balancing general-domain
+applicability with company-specific adaptation. To overcome these challenges,
+we present VeritasFi, an innovative hybrid RAG framework that incorporates a
+multi-modal preprocessing pipeline alongside a cutting-edge two-stage training
+strategy for its re-ranking component. VeritasFi enhances financial QA through
+three key innovations: (1) A multi-modal preprocessing pipeline that seamlessly
+transforms heterogeneous data into a coherent, machine-readable format. (2) A
+tripartite hybrid retrieval engine that operates in parallel, combining deep
+multi-path retrieval over a semantically indexed document corpus, real-time
+data acquisition through tool utilization, and an expert-curated memory bank
+for high-frequency questions, ensuring comprehensive scope, accuracy, and
+efficiency. (3) A two-stage training strategy for the document re-ranker, which
+initially constructs a general, domain-specific model using anonymized data,
+followed by rapid fine-tuning on company-specific data for targeted
+applications. By integrating our proposed designs, VeritasFi presents a
+groundbreaking framework that greatly enhances the adaptability and robustness
+of financial RAG systems, providing a scalable solution for both general-domain
+and company-specific QA tasks. Code accompanying this work is available at
+https://github.com/simplew4y/VeritasFi.git.",https://github.com/simplew4y/VeritasFi,
+Multi-Granularity Sequence Denoising with Weakly Supervised Signal for Sequential Recommendation,"Liang Li, Zhou Yang, Xiaofei Zhu",2025-10-12,2510.10564v1,http://arxiv.org/abs/2510.10564v1,http://arxiv.org/pdf/2510.10564v1,information_retrieval,cs.IR,"Sequential recommendation aims to predict the next item based on user
+interests in historical interaction sequences. Historical interaction sequences
+often contain irrelevant noisy items, which significantly hinders the
+performance of recommendation systems. Existing research employs unsupervised
+methods that indirectly identify item-granularity irrelevant noise by
+predicting the ground truth item. Since these methods lack explicit noise
+labels, they are prone to misidentify users' interested items as noise.
+Additionally, while these methods focus on removing item-granularity noise
+driven by the ground truth item, they overlook interest-granularity noise,
+limiting their ability to perform broader denoising based on user interests. To
+address these issues, we propose Multi-Granularity Sequence Denoising with
+Weakly Supervised Signal for Sequential Recommendation(MGSD-WSS). MGSD-WSS
+first introduces the Multiple Gaussian Kernel Perceptron module to map the
+original and enhance sequence into a common representation space and utilizes
+weakly supervised signals to accurately identify noisy items in the historical
+interaction sequence. Subsequently, it employs the item-granularity denoising
+module with noise-weighted contrastive learning to obtain denoised item
+representations. Then, it extracts target interest representations from the
+ground truth item and applies noise-weighted contrastive learning to obtain
+denoised interest representations. Finally, based on the denoised item and
+interest representations, MGSD-WSS predicts the next item. Extensive
+experiments on five datasets demonstrate that the proposed method significantly
+outperforms state-of-the-art sequence recommendation and denoising models. Our
+code is available at https://github.com/lalunex/MGSD-WSS.",https://github.com/lalunex/MGSD-WSS,
+Hierarchical Semantic RL: Tackling the Problem of Dynamic Action Space for RL-based Recommendations,"Minmao Wang, Xingchen Liu, Shijie Yi, Likang Wu, Hongke Zhao, Fei Pan, Qingpeng Cai, Peng Jiang",2025-10-10,2510.09167v1,http://arxiv.org/abs/2510.09167v1,http://arxiv.org/pdf/2510.09167v1,information_retrieval,cs.IR,"Recommender Systems (RS) are fundamental to modern online services. While
+most existing approaches optimize for short-term engagement, recent work has
+begun to explore reinforcement learning (RL) to model long-term user value.
+However, these efforts face significant challenges due to the vast, dynamic
+action spaces inherent in recommendation, which hinder stable policy learning.
+To resolve this bottleneck, we introduce Hierarchical Semantic RL (HSRL), which
+reframes RL-based recommendation over a fixed Semantic Action Space (SAS). HSRL
+encodes items as Semantic IDs (SIDs) for policy learning, and maps SIDs back to
+their original items via a fixed, invertible lookup during execution. To align
+decision-making with SID generation, the Hierarchical Policy Network (HPN)
+operates in a coarse-to-fine manner, employing hierarchical residual state
+modeling to refine each level's context from the previous level's residual,
+thereby stabilizing training and reducing representation-decision mismatch. In
+parallel, a Multi-level Critic (MLC) provides token-level value estimates,
+enabling fine-grained credit assignment. Across public benchmarks and a
+large-scale production dataset from a leading Chinese short-video advertising
+platform, HSRL consistently surpasses state-of-the-art baselines. In online
+deployment over a seven-day A/B testing, it delivers an 18.421% CVR lift with
+only a 1.251% increase in cost, supporting HSRL as a scalable paradigm for
+RL-based recommendation. Our code is released at
+https://github.com/MinmaoWang/HSRL.",https://github.com/MinmaoWang/HSRL,
+Generative Data Augmentation in Graph Contrastive Learning for Recommendation,"Yansong Wang, Qihui Lin, Junjie Huang, Tao Jia",2025-10-10,2510.09129v1,http://arxiv.org/abs/2510.09129v1,http://arxiv.org/pdf/2510.09129v1,information_retrieval,cs.IR,"Recommendation systems have become indispensable in various online platforms,
+from e-commerce to streaming services. A fundamental challenge in this domain
+is learning effective embeddings from sparse user-item interactions. While
+contrastive learning has recently emerged as a promising solution to this
+issue, generating augmented views for contrastive learning through most
+existing random data augmentation methods often leads to the alteration of
+original semantic information. In this paper, we propose a novel framework,
+GDA4Rec (Generative Data Augmentation in graph contrastive learning for
+Recommendation) to generate high-quality augmented views and provide robust
+self-supervised signals. Specifically, we employ a noise generation module that
+leverages deep generative models to approximate the distribution of original
+data for data augmentation. Additionally, GDA4Rec further extracts an item
+complement matrix to characterize the latent correlations between items and
+provide additional self-supervised signals. Lastly, a joint objective that
+integrates recommendation, data augmentation and contrastive learning is used
+to enforce the model to learn more effective and informative embeddings.
+Extensive experiments are conducted on three public datasets to demonstrate the
+superiority of the model. The code is available at:
+https://github.com/MrYansong/GDA4Rec.",https://github.com/MrYansong/GDA4Rec,"The 34th ACM International Conference on Information and Knowledge
+  Management"
+Personalize Before Retrieve: LLM-based Personalized Query Expansion for User-Centric Retrieval,"Yingyi Zhang, Pengyue Jia, Derong Xu, Yi Wen, Xianneng Li, Yichao Wang, Wenlin Zhang, Xiaopeng Li, Weinan Gan, Huifeng Guo, Yong Liu, Xiangyu Zhao",2025-10-10,2510.08935v1,http://arxiv.org/abs/2510.08935v1,http://arxiv.org/pdf/2510.08935v1,information_retrieval,cs.IR,"Retrieval-Augmented Generation (RAG) critically depends on effective query
+expansion to retrieve relevant information. However, existing expansion methods
+adopt uniform strategies that overlook user-specific semantics, ignoring
+individual expression styles, preferences, and historical context. In practice,
+identical queries in text can express vastly different intentions across users.
+This representational rigidity limits the ability of current RAG systems to
+generalize effectively in personalized settings. Specifically, we identify two
+core challenges for personalization: 1) user expression styles are inherently
+diverse, making it difficult for standard expansions to preserve personalized
+intent. 2) user corpora induce heterogeneous semantic structures-varying in
+topical focus and lexical organization-which hinders the effective anchoring of
+expanded queries within the user's corpora space. To address these challenges,
+we propose Personalize Before Retrieve (PBR), a framework that incorporates
+user-specific signals into query expansion prior to retrieval. PBR consists of
+two components: P-PRF, which generates stylistically aligned pseudo feedback
+using user history for simulating user expression style, and P-Anchor, which
+performs graph-based structure alignment over user corpora to capture its
+structure. Together, they produce personalized query representations tailored
+for retrieval. Experiments on two personalized benchmarks show that PBR
+consistently outperforms strong baselines, with up to 10% gains on PersonaBench
+across retrievers. Our findings demonstrate the value of modeling
+personalization before retrieval to close the semantic gap in user-adaptive RAG
+systems. Our code is available at https://github.com/Zhang-Yingyi/PBR-code.",https://github.com/Zhang-Yingyi/PBR-code,
+Haystack Engineering: Context Engineering for Heterogeneous and Agentic Long-Context Evaluation,"Mufei Li, Dongqi Fu, Limei Wang, Si Zhang, Hanqing Zeng, Kaan Sancak, Ruizhong Qiu, Haoyu Wang, Xiaoxin He, Xavier Bresson, Yinglong Xia, Chonglin Sun, Pan Li",2025-10-08,2510.07414v2,http://arxiv.org/abs/2510.07414v2,http://arxiv.org/pdf/2510.07414v2,information_retrieval,cs.CL,"Modern long-context large language models (LLMs) perform well on synthetic
+""needle-in-a-haystack"" (NIAH) benchmarks, but such tests overlook how noisy
+contexts arise from biased retrieval and agentic workflows. We argue that
+haystack engineering is necessary to construct noisy long contexts that
+faithfully capture key real-world factors -- distraction from heterogeneous
+biased retrievers and cascading errors in agentic workflows -- to test models'
+long-context robustness. We instantiate it through HaystackCraft, a new NIAH
+benchmark built on the full English Wikipedia hyperlink network with multi-hop
+questions. HaystackCraft evaluates how heterogeneous retrieval strategies
+(e.g., sparse, dense, hybrid, and graph-based) affect distractor composition,
+haystack ordering, and downstream LLM performance. HaystackCraft further
+extends NIAH to dynamic, LLM-dependent settings that simulate agentic
+operations, where models refine queries, reflect on their past reasonings, and
+decide when to stop. Experiments with 15 long-context models show that (1)
+while stronger dense retrievers can introduce more challenging distractors,
+graph-based reranking simultaneously improves retrieval effectiveness and
+mitigates more harmful distractors; (2) in agentic tests, even advanced models
+like Gemini 2.5 Pro and GPT-5 suffer cascading failures from self-generated
+distractors or struggle to perform early stops. These results highlight
+persistent challenges in agentic long-context reasoning and establish
+HaystackCraft as a valuable testbed for future progress.",https://github.com/Graph-COM/HaystackCraft,Code available at https://github.com/Graph-COM/HaystackCraft
+M3Retrieve: Benchmarking Multimodal Retrieval for Medicine,"Arkadeep Acharya, Akash Ghosh, Pradeepika Verma, Kitsuchart Pasupa, Sriparna Saha, Priti Singh",2025-10-08,2510.06888v1,http://arxiv.org/abs/2510.06888v1,http://arxiv.org/pdf/2510.06888v1,information_retrieval,cs.IR,"With the increasing use of RetrievalAugmented Generation (RAG), strong
+retrieval models have become more important than ever. In healthcare,
+multimodal retrieval models that combine information from both text and images
+offer major advantages for many downstream tasks such as question answering,
+cross-modal retrieval, and multimodal summarization, since medical data often
+includes both formats. However, there is currently no standard benchmark to
+evaluate how well these models perform in medical settings. To address this
+gap, we introduce M3Retrieve, a Multimodal Medical Retrieval Benchmark.
+M3Retrieve, spans 5 domains,16 medical fields, and 4 distinct tasks, with over
+1.2 Million text documents and 164K multimodal queries, all collected under
+approved licenses. We evaluate leading multimodal retrieval models on this
+benchmark to explore the challenges specific to different medical specialities
+and to understand their impact on retrieval performance. By releasing
+M3Retrieve, we aim to enable systematic evaluation, foster model innovation,
+and accelerate research toward building more capable and reliable multimodal
+retrieval systems for medical applications. The dataset and the baselines code
+are available in this github page https://github.com/AkashGhosh/M3Retrieve.",https://github.com/AkashGhosh/M3Retrieve,EMNLP Mains 2025
+Are LLMs Reliable Rankers? Rank Manipulation via Two-Stage Token Optimization,"Tiancheng Xing, Jerry Li, Yixuan Du, Xiyang Hu",2025-10-08,2510.06732v1,http://arxiv.org/abs/2510.06732v1,http://arxiv.org/pdf/2510.06732v1,information_retrieval,cs.CL,"Large language models (LLMs) are increasingly used as rerankers in
+information retrieval, yet their ranking behavior can be steered by small,
+natural-sounding prompts. To expose this vulnerability, we present Rank
+Anything First (RAF), a two-stage token optimization method that crafts concise
+textual perturbations to consistently promote a target item in LLM-generated
+rankings while remaining hard to detect. Stage 1 uses Greedy Coordinate
+Gradient to shortlist candidate tokens at the current position by combining the
+gradient of the rank-target with a readability score; Stage 2 evaluates those
+candidates under exact ranking and readability losses using an entropy-based
+dynamic weighting scheme, and selects a token via temperature-controlled
+sampling. RAF generates ranking-promoting prompts token-by-token, guided by
+dual objectives: maximizing ranking effectiveness and preserving linguistic
+naturalness. Experiments across multiple LLMs show that RAF significantly
+boosts the rank of target items using naturalistic language, with greater
+robustness than existing methods in both promoting target items and maintaining
+naturalness. These findings underscore a critical security implication:
+LLM-based reranking is inherently susceptible to adversarial manipulation,
+raising new challenges for the trustworthiness and robustness of modern
+retrieval systems. Our code is available at: https://github.com/glad-lab/RAF.",https://github.com/glad-lab/RAF,"10 pages, 3 figures"
+Regular Expression Indexing for Log Analysis. Extended Version,"Ling Zhang, Shaleen Deep, Jignesh M. Patel, Karthikeyan Sankaralingam",2025-10-11,2510.10348v1,http://arxiv.org/abs/2510.10348v1,http://arxiv.org/pdf/2510.10348v1,databases,cs.DB,"In this paper, we present the design and architecture of REI, a novel system
+for indexing log data for regular expression queries. Our main contribution is
+an $n$-gram-based indexing strategy and an efficient storage mechanism that
+results in a speedup of up to 14x compared to state-of-the-art regex processing
+engines that do not use indexing, using only 2.1% of extra space. We perform a
+detailed study that analyzes the space usage of the index and the improvement
+in workload execution time, uncovering interesting insights. Specifically, we
+show that even an optimized implementation of strategies such as inverted
+indexing, which are widely used in text processing libraries, may lead to
+suboptimal performance for regex indexing on log analysis tasks. Overall, the
+REI approach presented in this paper provides a significant boost when
+evaluating regular expression queries on log data. REI is also modular and can
+work with existing regular expression packages, making it easy to deploy in a
+variety of settings. The code of REI is available at
+https://github.com/mush-zhang/REI-Regular-Expression-Indexing.",https://github.com/mush-zhang/REI-Regular-Expression-Indexing,
+Efficient Mining of Low-Utility Sequential Patterns,"Jian Zhu, Zhidong Lin, Wensheng Gan, Ruichu Cai, Zhifeng Hao, Philip S. Yu",2025-10-11,2510.10243v1,http://arxiv.org/abs/2510.10243v1,http://arxiv.org/pdf/2510.10243v1,databases,cs.DB,"Discovering valuable insights from rich data is a crucial task for
+exploratory data analysis. Sequential pattern mining (SPM) has found widespread
+applications across various domains. In recent years, low-utility sequential
+pattern mining (LUSPM) has shown strong potential in applications such as
+intrusion detection and genomic sequence analysis. However, existing research
+in utility-based SPM focuses on high-utility sequential patterns, and the
+definitions and strategies used in high-utility SPM cannot be directly applied
+to LUSPM. Moreover, no algorithms have yet been developed specifically for
+mining low-utility sequential patterns. To address these problems, we formalize
+the LUSPM problem, redefine sequence utility, and introduce a compact data
+structure called the sequence-utility chain to efficiently record utility
+information. Furthermore, we propose three novel algorithm--LUSPM_b, LUSPM_s,
+and LUSPM_e--to discover the complete set of low-utility sequential patterns.
+LUSPM_b serves as an exhaustive baseline, while LUSPM_s and LUSPM_e build upon
+it, generating subsequences through shrinkage and extension operations,
+respectively. In addition, we introduce the maximal non-mutually contained
+sequence set and incorporate multiple pruning strategies, which significantly
+reduce redundant operations in both LUSPM_s and LUSPM_e. Finally, extensive
+experimental results demonstrate that both LUSPM_s and LUSPM_e substantially
+outperform LUSPM_b and exhibit excellent scalability. Notably, LUSPM_e achieves
+superior efficiency, requiring less runtime and memory consumption than
+LUSPM_s. Our code is available at https://github.com/Zhidong-Lin/LUSPM.",https://github.com/Zhidong-Lin/LUSPM,"Preprint, 4 tables, 9 figures"
+Knowledge Graph-Guided Multi-Agent Distillation for Reliable Industrial Question Answering with Datasets,"Jiqun Pan, Zhenke Duan, Jiani Tu, Anzhi Cheng, Yanqing Wang",2025-10-03,2510.06240v1,http://arxiv.org/abs/2510.06240v1,http://arxiv.org/pdf/2510.06240v1,databases,cs.CL,"Industrial question-answering (QA) systems require higher safety and
+reliability than general-purpose dialogue models, as errors in high-risk
+scenarios such as equipment fault diagnosis can have severe consequences.
+Although multi-agent large language models enhance reasoning depth, they suffer
+from uncontrolled iterations and unverifiable outputs, and conventional
+distillation methods struggle to transfer collaborative reasoning capabilities
+to lightweight, deployable student models. To address these challenges, we
+propose Knowledge Graph-guided Multi-Agent System Distillation (KG-MASD). Our
+approach formulates distillation as a Markov Decision Process and incorporates
+a knowledge graph as a verifiable structured prior to enrich state
+representation and ensure convergence. By integrating collaborative reasoning
+with knowledge grounding, KG-MASD generates high-confidence instruction-tuning
+data and jointly distills reasoning depth and verifiability into compact
+student models suitable for edge deployment. Experiments on an industrial QA
+dataset show that KG-MASD improves accuracy by 2.4 per cent to 20.1 per cent
+over baselines and significantly enhances reliability, enabling trustworthy AI
+deployment in safety-critical industrial scenarios. Code and data are available
+at https://github.com/erwinmsmith/KG-MAD/.",https://github.com/erwinmsmith/KG-MAD,"41 pages, 12 figures, 6 tables"
+EMR-AGENT: Automating Cohort and Feature Extraction from EMR Databases,"Kwanhyung Lee, Sungsoo Hong, Joonhyung Park, Jeonghyeop Lim, Juhwan Choi, Donghwee Yoon, Eunho Yang",2025-10-01,2510.00549v2,http://arxiv.org/abs/2510.00549v2,http://arxiv.org/pdf/2510.00549v2,databases,cs.DB,"Machine learning models for clinical prediction rely on structured data
+extracted from Electronic Medical Records (EMRs), yet this process remains
+dominated by hardcoded, database-specific pipelines for cohort definition,
+feature selection, and code mapping. These manual efforts limit scalability,
+reproducibility, and cross-institutional generalization. To address this, we
+introduce EMR-AGENT (Automated Generalized Extraction and Navigation Tool), an
+agent-based framework that replaces manual rule writing with dynamic, language
+model-driven interaction to extract and standardize structured clinical data.
+Our framework automates cohort selection, feature extraction, and code mapping
+through interactive querying of databases. Our modular agents iteratively
+observe query results and reason over schema and documentation, using SQL not
+just for data retrieval but also as a tool for database observation and
+decision making. This eliminates the need for hand-crafted, schema-specific
+logic. To enable rigorous evaluation, we develop a benchmarking codebase for
+three EMR databases (MIMIC-III, eICU, SICdb), including both seen and unseen
+schema settings. Our results demonstrate strong performance and generalization
+across these databases, highlighting the feasibility of automating a process
+previously thought to require expert-driven design. The code will be released
+publicly at https://github.com/AITRICS/EMR-AGENT/tree/main. For a
+demonstration, please visit our anonymous demo page:
+https://anonymoususer-max600.github.io/EMR_AGENT/",https://github.com/AITRICS/EMR-AGENT,currently under submission to ICLR 2026
+Graph2Region: Efficient Graph Similarity Learning with Structure and Scale Restoration,"Zhouyang Liu, Yixin Chen, Ning Liu, Jiezhong He, Dongsheng Li",2025-10-01,2510.00394v1,http://arxiv.org/abs/2510.00394v1,http://arxiv.org/pdf/2510.00394v1,databases,cs.LG,"Graph similarity is critical in graph-related tasks such as graph retrieval,
+where metrics like maximum common subgraph (MCS) and graph edit distance (GED)
+are commonly used. However, exact computations of these metrics are known to be
+NP-Hard. Recent neural network-based approaches approximate the similarity
+score in embedding spaces to alleviate the computational burden, but they
+either involve expensive pairwise node comparisons or fail to effectively
+utilize structural and scale information of graphs. To tackle these issues, we
+propose a novel geometric-based graph embedding method called Graph2Region
+(G2R). G2R represents nodes as closed regions and recovers their adjacency
+patterns within graphs in the embedding space. By incorporating the node
+features and adjacency patterns of graphs, G2R summarizes graph regions, i.e.,
+graph embeddings, where the shape captures the underlying graph structures and
+the volume reflects the graph size. Consequently, the overlap between graph
+regions can serve as an approximation of MCS, signifying similar node regions
+and adjacency patterns. We further analyze the relationship between MCS and GED
+and propose using disjoint parts as a proxy for GED similarity. This analysis
+enables concurrent computation of MCS and GED, incorporating local and global
+structural information. Experimental evaluation highlights G2R's competitive
+performance in graph similarity computation. It achieves up to a 60.0\%
+relative accuracy improvement over state-of-the-art methods in MCS similarity
+learning, while maintaining efficiency in both training and inference.
+Moreover, G2R showcases remarkable capability in predicting both MCS and GED
+similarities simultaneously, providing a holistic assessment of graph
+similarity. Code available at https://github.com/liuzhouyang/Graph2Region.",https://github.com/liuzhouyang/Graph2Region,Accepted by IEEE Transactions on Knowledge and Data Engineering
+"ActorDB: A Unified Database Model Integrating Single-Writer Actors, Incremental View Maintenance, and Zero-Trust Messaging",Jun Kawasaki,2025-09-29,2509.25285v1,http://arxiv.org/abs/2509.25285v1,http://arxiv.org/pdf/2509.25285v1,databases,cs.DB,"This paper presents ActorDB ( Dekigoto ) , a novel database architecture that
+tightly integrates a single-writer actor model for writes, Incremental View
+Maintenance (IVM), and a zero-trust security model as a core component. The
+primary contribution of this work is the unification of these powerful but
+complex concepts into a single, cohesive system designed to reduce
+architectural complexity for developers of modern, data-intensive applications.
+We argue that by providing these capabilities out-of-the-box, ActorDB can offer
+a more robust, secure, and developer-friendly platform compared to solutions
+that require manual integration of separate systems for actor persistence,
+stream processing, and security. We present the core architecture, discuss the
+critical trade-offs in its design, and define the performance criteria for a
+Minimum Viable Product (MVP) to validate our approach.",https://github.com/com-junkawasaki/dekigoto,"7 pages, 1 table, 1 figures. Code and data available at
+  https://github.com/com-junkawasaki/dekigoto"
+Multilingual Text-to-SQL: Benchmarking the Limits of Language Models with Collaborative Language Agents,"Khanh Trinh Pham, Thu Huong Nguyen, Jun Jo, Quoc Viet Hung Nguyen, Thanh Tam Nguyen",2025-09-29,2509.24405v1,http://arxiv.org/abs/2509.24405v1,http://arxiv.org/pdf/2509.24405v1,databases,cs.CL,"Text-to-SQL enables natural access to databases, yet most benchmarks are
+English-only, limiting multilingual progress. We introduce MultiSpider 2.0,
+extending Spider 2.0 to eight languages (English, German, French, Spanish,
+Portuguese, Japanese, Chinese, Vietnamese). It preserves Spider 2.0's
+structural difficulty while adding linguistic and dialectal variability,
+demanding deeper reasoning for complex SQL. On this benchmark, state-of-the-art
+LLMs (such as DeepSeek-R1 and OpenAI o1) reach only 4\% execution accuracy when
+relying on intrinsic reasoning, versus 60\% on MultiSpider 1.0. Therefore, we
+provide a collaboration-driven language agents baseline that iteratively
+refines queries, improving accuracy to 15\%. These results reveal a substantial
+multilingual gap and motivate methods that are robust across languages and
+ready for real-world enterprise deployment. Our benchmark is available at
+https://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL.",https://github.com/phkhanhtrinh23/Multilingual_Text_to_SQL,
+PARROT: A Benchmark for Evaluating LLMs in Cross-System SQL Translation,"Wei Zhou, Guoliang Li, Haoyu Wang, Yuxing Han, Xufei Wu, Fan Wu, Xuanhe Zhou",2025-09-27,2509.23338v1,http://arxiv.org/abs/2509.23338v1,http://arxiv.org/pdf/2509.23338v1,databases,cs.DB,"Large language models (LLMS) have shown increasing effectiveness in
+Text-to-SQL tasks. However, another closely related problem, Cross-System SQL
+Translation (a.k.a., SQL-to-SQL), which adapts a query written for one database
+system (e.g., MySQL) into its equivalent one for another system (e.g.,
+ClickHouse), is of great practical importance but remains underexplored.
+Existing SQL benchmarks are not well-suited for SQL-to-SQL evaluation, which
+(1) focus on a limited set of database systems (often just SQLite) and (2)
+cannot capture many system-specific SQL dialects (e.g., customized functions,
+data types, and syntax rules). Thus, in this paper, we introduce PARROT, a
+Practical And Realistic BenchmaRk for CrOss-System SQL Translation. PARROT
+comprises 598 translation pairs from 38 open-source benchmarks and real-world
+business services, specifically prepared to challenge system-specific SQL
+understanding (e.g., LLMS achieve lower than 38.53% accuracy on average). We
+also provide multiple benchmark variants, including PARROT-Diverse with 28,003
+translations (for extensive syntax testing) and PARROT-Simple with 5,306
+representative samples (for focused stress testing), covering 22
+production-grade database systems. To promote future research, we release a
+public leaderboard and source code at: https://code4db.github.io/parrot-bench/.",https://github.com/weAIDB/PARROT,"To appear in NeurIPS 2025. Welcome your submission to challenge our
+  leaderboard at: https://code4db.github.io/parrot-bench/. Also visit our code
+  repository at: https://github.com/weAIDB/PARROT"
+AutoPK: Leveraging LLMs and a Hybrid Similarity Metric for Advanced Retrieval of Pharmacokinetic Data from Complex Tables and Documents,"Hossein Sholehrasa, Amirhossein Ghanaatian, Doina Caragea, Lisa A. Tell, Jim E. Riviere, Majid Jaberi-Douraki",2025-09-26,2510.00039v1,http://arxiv.org/abs/2510.00039v1,http://arxiv.org/pdf/2510.00039v1,databases,cs.DB,"Pharmacokinetics (PK) plays a critical role in drug development and
+regulatory decision-making for human and veterinary medicine, directly
+affecting public health through drug safety and efficacy assessments. However,
+PK data are often embedded in complex, heterogeneous tables with variable
+structures and inconsistent terminologies, posing significant challenges for
+automated PK data retrieval and standardization. AutoPK, a novel two-stage
+framework for accurate and scalable extraction of PK data from complex
+scientific tables. In the first stage, AutoPK identifies and extracts PK
+parameter variants using large language models (LLMs), a hybrid similarity
+metric, and LLM-based validation. The second stage filters relevant rows,
+converts the table into a key-value text format, and uses an LLM to reconstruct
+a standardized table. Evaluated on a real-world dataset of 605 PK tables,
+including captions and footnotes, AutoPK shows significant improvements in
+precision and recall over direct LLM baselines. For instance, AutoPK with LLaMA
+3.1-70B achieved an F1-score of 0.92 on half-life and 0.91 on clearance
+parameters, outperforming direct use of LLaMA 3.1-70B by margins of 0.10 and
+0.21, respectively. Smaller models such as Gemma 3-27B and Phi 3-12B with
+AutoPK achieved 2-7 fold F1 gains over their direct use, with Gemma's
+hallucination rates reduced from 60-95% down to 8-14%. Notably, AutoPK enabled
+open-source models like Gemma 3-27B to outperform commercial systems such as
+GPT-4o Mini on several PK parameters. AutoPK enables scalable and
+high-confidence PK data extraction, making it well-suited for critical
+applications in veterinary pharmacology, drug safety monitoring, and public
+health decision-making, while addressing heterogeneous table structures and
+terminology and demonstrating generalizability across key PK parameters. Code
+and data: https://github.com/hosseinsholehrasa/AutoPK",https://github.com/hosseinsholehrasa/AutoPK,Accepted at the 2025 IEEE 37th ICTAI
+Play by the Type Rules: Inferring Constraints for LLM Functions in Declarative Programs,"Parker Glenn, Alfy Samuel, Daben Liu",2025-09-24,2509.20208v1,http://arxiv.org/abs/2509.20208v1,http://arxiv.org/pdf/2509.20208v1,databases,cs.CL,"Integrating LLM powered operators in declarative query languages allows for
+the combination of cheap and interpretable functions with powerful,
+generalizable language model reasoning. However, in order to benefit from the
+optimized execution of a database query language like SQL, generated outputs
+must align with the rules enforced by both type checkers and database contents.
+Current approaches address this challenge with orchestrations consisting of
+many LLM-based post-processing calls to ensure alignment between generated
+outputs and database values, introducing performance bottlenecks. We perform a
+study on the ability of various sized open-source language models to both parse
+and execute functions within a query language based on SQL, showing that small
+language models can excel as function executors over hybrid data sources. Then,
+we propose an efficient solution to enforce the well-typedness of LLM
+functions, demonstrating 7% accuracy improvement on a multi-hop question
+answering dataset with 53% improvement in latency over comparable solutions. We
+make our implementation available at https://github.com/parkervg/blendsql",https://github.com/parkervg/blendsql,
