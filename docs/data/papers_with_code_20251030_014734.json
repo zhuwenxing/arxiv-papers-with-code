@@ -1,0 +1,257 @@
+[
+  {
+    "title": "PatenTEB: A Comprehensive Benchmark and Model Family for Patent Text Embedding",
+    "authors": "Iliass Ayaou, Denis Cavallucci",
+    "published": "2025-10-25",
+    "arxiv_id": "2510.22264v1",
+    "url": "http://arxiv.org/abs/2510.22264v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.22264v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Patent text embeddings enable prior art search, technology landscaping, and\npatent analysis, yet existing benchmarks inadequately capture patent-specific\nchallenges. We introduce PatenTEB, a comprehensive benchmark comprising 15\ntasks across retrieval, classification, paraphrase, and clustering, with 2.06\nmillion examples. PatenTEB employs domain-stratified splits, domain specific\nhard negative mining, and systematic coverage of asymmetric\nfragment-to-document matching scenarios absent from general embedding\nbenchmarks. We develop the patembed model family through multi-task training,\nspanning 67M to 344M parameters with context lengths up to 4096 tokens.\nExternal validation shows strong generalization: patembed-base achieves\nstate-of-the-art on MTEB BigPatentClustering.v2 (0.494 V-measure vs. 0.445\nprevious best), while patembed-large achieves 0.377 NDCG@100 on DAPFAM.\nSystematic ablations reveal that multi-task training improves external\ngeneralization despite minor benchmark costs, and that domain-pretrained\ninitialization provides consistent advantages across task families. All\nresources will be made available at https://github.com/iliass-y/patenteb.\nKeywords: patent retrieval, sentence embeddings, multi-task learning,\nasymmetric retrieval, benchmark evaluation, contrastive learning.",
+    "code_links": [
+      "https://github.com/iliass-y/patenteb"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Hybrid-Vector Retrieval for Visually Rich Documents: Combining Single-Vector Efficiency and Multi-Vector Accuracy",
+    "authors": "Juyeon Kim, Geon Lee, Dongwon Choi, Taeuk Kim, Kijung Shin",
+    "published": "2025-10-25",
+    "arxiv_id": "2510.22215v1",
+    "url": "http://arxiv.org/abs/2510.22215v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.22215v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval over visually rich documents is essential for tasks such as legal\ndiscovery, scientific search, and enterprise knowledge management. Existing\napproaches fall into two paradigms: single-vector retrieval, which is efficient\nbut coarse, and multi-vector retrieval, which is accurate but computationally\nexpensive. To address this trade-off, we propose HEAVEN, a two-stage\nhybrid-vector framework. In the first stage, HEAVEN efficiently retrieves\ncandidate pages using a single-vector method over Visually-Summarized Pages\n(VS-Pages), which assemble representative visual layouts from multiple pages.\nIn the second stage, it reranks candidates with a multi-vector method while\nfiltering query tokens by linguistic importance to reduce redundant\ncomputations. To evaluate retrieval systems under realistic conditions, we also\nintroduce ViMDOC, the first benchmark for visually rich, multi-document, and\nlong-document retrieval. Across four benchmarks, HEAVEN attains 99.87% of the\nRecall@1 performance of multi-vector models on average while reducing per-query\ncomputation by 99.82%, achieving efficiency and accuracy. Our code and datasets\nare available at: https://github.com/juyeonnn/HEAVEN",
+    "code_links": [
+      "https://github.com/juyeonnn/HEAVEN"
+    ],
+    "comment": null
+  },
+  {
+    "title": "A Benchmark for Open-Domain Numerical Fact-Checking Enhanced by Claim Decomposition",
+    "authors": "V Venktesh, Deepali Prabhu, Avishek Anand",
+    "published": "2025-10-24",
+    "arxiv_id": "2510.22055v1",
+    "url": "http://arxiv.org/abs/2510.22055v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.22055v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Fact-checking numerical claims is critical as the presence of numbers provide\nmirage of veracity despite being fake potentially causing catastrophic impacts\non society. The prior works in automatic fact verification do not primarily\nfocus on natural numerical claims. A typical human fact-checker first retrieves\nrelevant evidence addressing the different numerical aspects of the claim and\nthen reasons about them to predict the veracity of the claim. Hence, the search\nprocess of a human fact-checker is a crucial skill that forms the foundation of\nthe verification process. Emulating a real-world setting is essential to aid in\nthe development of automated methods that encompass such skills. However,\nexisting benchmarks employ heuristic claim decomposition approaches augmented\nwith weakly supervised web search to collect evidences for verifying claims.\nThis sometimes results in less relevant evidences and noisy sources with\ntemporal leakage rendering a less realistic retrieval setting for claim\nverification. Hence, we introduce QuanTemp++: a dataset consisting of natural\nnumerical claims, an open domain corpus, with the corresponding relevant\nevidence for each claim. The evidences are collected through a claim\ndecomposition process approximately emulating the approach of human\nfact-checker and veracity labels ensuring there is no temporal leakage. Given\nthis dataset, we also characterize the retrieval performance of key claim\ndecomposition paradigms. Finally, we observe their effect on the outcome of the\nverification pipeline and draw insights. The code for data pipeline along with\nlink to data can be found at https://github.com/VenkteshV/QuanTemp_Plus",
+    "code_links": [
+      "https://github.com/VenkteshV/QuanTemp_Plus"
+    ],
+    "comment": "16 pages"
+  },
+  {
+    "title": "DeepAgent: A General Reasoning Agent with Scalable Toolsets",
+    "authors": "Xiaoxi Li, Wenxiang Jiao, Jiarui Jin, Guanting Dong, Jiajie Jin, Yinuo Wang, Hao Wang, Yutao Zhu, Ji-Rong Wen, Yuan Lu, Zhicheng Dou",
+    "published": "2025-10-24",
+    "arxiv_id": "2510.21618v1",
+    "url": "http://arxiv.org/abs/2510.21618v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.21618v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Large reasoning models have demonstrated strong problem-solving abilities,\nyet real-world tasks often require external tools and long-horizon\ninteractions. Existing agent frameworks typically follow predefined workflows,\nwhich limit autonomous and global task completion. In this paper, we introduce\nDeepAgent, an end-to-end deep reasoning agent that performs autonomous\nthinking, tool discovery, and action execution within a single, coherent\nreasoning process. To address the challenges of long-horizon interactions,\nparticularly the context length explosion from multiple tool calls and the\naccumulation of interaction history, we introduce an autonomous memory folding\nmechanism that compresses past interactions into structured episodic, working,\nand tool memories, reducing error accumulation while preserving critical\ninformation. To teach general-purpose tool use efficiently and stably, we\ndevelop an end-to-end reinforcement learning strategy, namely ToolPO, that\nleverages LLM-simulated APIs and applies tool-call advantage attribution to\nassign fine-grained credit to the tool invocation tokens. Extensive experiments\non eight benchmarks, including general tool-use tasks (ToolBench, API-Bank,\nTMDB, Spotify, ToolHop) and downstream applications (ALFWorld, WebShop, GAIA,\nHLE), demonstrate that DeepAgent consistently outperforms baselines across both\nlabeled-tool and open-set tool retrieval scenarios. This work takes a step\ntoward more general and capable agents for real-world applications. The code\nand demo are available at https://github.com/RUC-NLPIR/DeepAgent.",
+    "code_links": [
+      "https://github.com/RUC-NLPIR/DeepAgent"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Pctx: Tokenizing Personalized Context for Generative Recommendation",
+    "authors": "Qiyong Zhong, Jiajie Su, Yunshan Ma, Julian McAuley, Yupeng Hou",
+    "published": "2025-10-24",
+    "arxiv_id": "2510.21276v1",
+    "url": "http://arxiv.org/abs/2510.21276v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.21276v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation (GR) models tokenize each action into a few\ndiscrete tokens (called semantic IDs) and autoregressively generate the next\ntokens as predictions, showing advantages such as memory efficiency,\nscalability, and the potential to unify retrieval and ranking. Despite these\nbenefits, existing tokenization methods are static and non-personalized. They\ntypically derive semantic IDs solely from item features, assuming a universal\nitem similarity that overlooks user-specific perspectives. However, under the\nautoregressive paradigm, semantic IDs with the same prefixes always receive\nsimilar probabilities, so a single fixed mapping implicitly enforces a\nuniversal item similarity standard across all users. In practice, the same item\nmay be interpreted differently depending on user intentions and preferences. To\naddress this issue, we propose a personalized context-aware tokenizer that\nincorporates a user's historical interactions when generating semantic IDs.\nThis design allows the same item to be tokenized into different semantic IDs\nunder different user contexts, enabling GR models to capture multiple\ninterpretive standards and produce more personalized predictions. Experiments\non three public datasets demonstrate up to 11.44% improvement in NDCG@10 over\nnon-personalized action tokenization baselines. Our code is available at\nhttps://github.com/YoungZ365/Pctx.",
+    "code_links": [
+      "https://github.com/YoungZ365/Pctx"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Rank-GRPO: Training LLM-based Conversational Recommender Systems with Reinforcement Learning",
+    "authors": "Yaochen Zhu, Harald Steck, Dawen Liang, Yinhan He, Vito Ostuni, Jundong Li, Nathan Kallus",
+    "published": "2025-10-23",
+    "arxiv_id": "2510.20150v2",
+    "url": "http://arxiv.org/abs/2510.20150v2",
+    "pdf_url": "http://arxiv.org/pdf/2510.20150v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large language models (LLMs) are reshaping the recommender system paradigm by\nenabling users to express preferences and receive recommendations through\nconversations. Yet, aligning LLMs to the recommendation task remains\nchallenging: pretrained LLMs often generate out-of-catalog items, violate\nrequired output formats, and their ranking quality degrades sharply toward the\nend of the generated list. To this end, we propose ConvRec-R1, a two-stage\nframework for end-to-end training of LLM-based conversational recommender\nsystems. In Stage 1, we construct a behavioral-cloning dataset with a\nRemap-Reflect-Adjust pipeline, which produces high-quality, catalog-grounded\ndemonstrations from powerful blackbox LLMs to warm-start the RL training. In\nStage 2, we propose Rank-GRPO, a principled extension of group relative policy\noptimization (GRPO) tailored to tasks with rank-style outputs. Rank-GRPO treats\neach rank in the recommendation list as the unit instead of token (too\nfine-grained) or sequence (too coarse), redefining rewards to remove non-causal\ncredit assignment and introducing a rank-level importance ratio based on the\ngeometric mean of rank-wise token probabilities to stabilize policy updates.\nExperiments on the public Reddit-v2 dataset show that ConvRec-R1 converges\nfaster and achieves higher Recall and NDCG than GRPO-style baselines. Code and\ndatasets are released at https://github.com/yaochenzhu/Rank-GRPO.",
+    "code_links": [
+      "https://github.com/yaochenzhu/Rank-GRPO"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DiffGRM: Diffusion-based Generative Recommendation Model",
+    "authors": "Zhao Liu, Yichen Zhu, Yiqing Yang, Guoping Tang, Rui Huang, Qiang Luo, Xiao Lv, Ruiming Tang, Kun Gai, Guorui Zhou",
+    "published": "2025-10-21",
+    "arxiv_id": "2510.21805v1",
+    "url": "http://arxiv.org/abs/2510.21805v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.21805v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation (GR) is an emerging paradigm that represents each\nitem via a tokenizer as an n-digit semantic ID (SID) and predicts the next item\nby autoregressively generating its SID conditioned on the user's history.\nHowever, two structural properties of SIDs make ARMs ill-suited. First,\nintra-item consistency: the n digits jointly specify one item, yet the\nleft-to-right causality trains each digit only under its prefix and blocks\nbidirectional cross-digit evidence, collapsing supervision to a single causal\npath. Second, inter-digit heterogeneity: digits differ in semantic granularity\nand predictability, while the uniform next-token objective assigns equal weight\nto all digits, overtraining easy digits and undertraining hard digits. To\naddress these two issues, we propose DiffGRM, a diffusion-based GR model that\nreplaces the autoregressive decoder with a masked discrete diffusion model\n(MDM), thereby enabling bidirectional context and any-order parallel generation\nof SID digits for recommendation. Specifically, we tailor DiffGRM in three\naspects: (1) tokenization with Parallel Semantic Encoding (PSE) to decouple\ndigits and balance per-digit information; (2) training with On-policy Coherent\nNoising (OCN) that prioritizes uncertain digits via coherent masking to\nconcentrate supervision on high-value signals; and (3) inference with\nConfidence-guided Parallel Denoising (CPD) that fills higher-confidence digits\nfirst and generates diverse Top-K candidates. Experiments show consistent gains\nover strong generative and discriminative recommendation baselines on multiple\ndatasets, improving NDCG@10 by 6.9%-15.5%. Code is available at\nhttps://github.com/liuzhao09/DiffGRM.",
+    "code_links": [
+      "https://github.com/liuzhao09/DiffGRM"
+    ],
+    "comment": "13 pages, 5 figures"
+  },
+  {
+    "title": "Evaluating Joinable Column Discovery Approaches for Context-Aware Search",
+    "authors": "Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas",
+    "published": "2025-10-28",
+    "arxiv_id": "2510.24599v1",
+    "url": "http://arxiv.org/abs/2510.24599v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.24599v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Joinable Column Discovery is a critical challenge in automating enterprise\ndata analysis. While existing approaches focus on syntactic overlap and\nsemantic similarity, there remains limited understanding of which methods\nperform best for different data characteristics and how multiple criteria\ninfluence discovery effectiveness. We present a comprehensive experimental\nevaluation of joinable column discovery methods across diverse scenarios. Our\nstudy compares syntactic and semantic techniques on seven benchmarks covering\nrelational databases and data lakes. We analyze six key criteria -- unique\nvalues, intersection size, join size, reverse join size, value semantics, and\nmetadata semantics -- and examine how combining them through ensemble ranking\naffects performance. Our analysis reveals differences in method behavior across\ndata contexts and highlights the benefits of integrating multiple criteria for\nrobust join discovery. We provide empirical evidence on when each criterion\nmatters, compare pre-trained embedding models for semantic joins, and offer\npractical guidelines for selecting suitable methods based on dataset\ncharacteristics. Our findings show that metadata and value semantics are\ncrucial for data lakes, size-based criteria play a stronger role in relational\ndatabases, and ensemble approaches consistently outperform single-criterion\nmethods.",
+    "code_links": [
+      "https://github.com/IBM/ContextAwareJoin"
+    ],
+    "comment": "This is an Experiments and Analysis paper. The source code, data,\n  and/or other artifacts have been made available at\n  https://github.com/IBM/ContextAwareJoin"
+  },
+  {
+    "title": "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?",
+    "authors": "Yizhang Zhu, Liangwei Wang, Chenyu Yang, Xiaotian Lin, Boyan Li, Wei Zhou, Xinyu Liu, Zhangyang Peng, Tianqi Luo, Yu Li, Chengliang Chai, Chong Chen, Shimin Di, Ju Fan, Ji Sun, Nan Tang, Fugee Tsung, Jiannan Wang, Chenglin Wu, Yanwei Xu, Shaolei Zhang, Yong Zhang, Xuanhe Zhou, Guoliang Li, Yuyu Luo",
+    "published": "2025-10-27",
+    "arxiv_id": "2510.23587v1",
+    "url": "http://arxiv.org/abs/2510.23587v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.23587v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The rapid advancement of large language models (LLMs) has spurred the\nemergence of data agents--autonomous systems designed to orchestrate Data + AI\necosystems for tackling complex data-related tasks. However, the term \"data\nagent\" currently suffers from terminological ambiguity and inconsistent\nadoption, conflating simple query responders with sophisticated autonomous\narchitectures. This terminological ambiguity fosters mismatched user\nexpectations, accountability challenges, and barriers to industry growth.\nInspired by the SAE J3016 standard for driving automation, this survey\nintroduces the first systematic hierarchical taxonomy for data agents,\ncomprising six levels that delineate and trace progressive shifts in autonomy,\nfrom manual operations (L0) to a vision of generative, fully autonomous data\nagents (L5), thereby clarifying capability boundaries and responsibility\nallocation. Through this lens, we offer a structured review of existing\nresearch arranged by increasing autonomy, encompassing specialized data agents\nfor data management, preparation, and analysis, alongside emerging efforts\ntoward versatile, comprehensive systems with enhanced autonomy. We further\nanalyze critical evolutionary leaps and technical gaps for advancing data\nagents, especially the ongoing L2-to-L3 transition, where data agents evolve\nfrom procedural execution to autonomous orchestration. Finally, we conclude\nwith a forward-looking roadmap, envisioning the advent of proactive, generative\ndata agents.",
+    "code_links": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "comment": "Please refer to our paper list and companion materials at:\n  https://github.com/HKUSTDial/awesome-data-agents"
+  },
+  {
+    "title": "DynaQuery: A Self-Adapting Framework for Querying Structured and Multimodal Data",
+    "authors": "Aymane Hassini",
+    "published": "2025-10-20",
+    "arxiv_id": "2510.18029v1",
+    "url": "http://arxiv.org/abs/2510.18029v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.18029v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The rise of Large Language Models (LLMs) has accelerated the long-standing\ngoal of enabling natural language querying over complex, hybrid databases. Yet,\nthis ambition exposes a dual challenge: reasoning jointly over structured,\nmulti-relational schemas and the semantic content of linked unstructured\nassets. To overcome this, we present DynaQuery - a unified, self-adapting\nframework that serves as a practical blueprint for next-generation \"Unbound\nDatabases.\" At the heart of DynaQuery lies the Schema Introspection and Linking\nEngine (SILE), a novel systems primitive that elevates schema linking to a\nfirst-class query planning phase. We conduct a rigorous, multi-benchmark\nempirical evaluation of this structure-aware architecture against the prevalent\nunstructured Retrieval-Augmented Generation (RAG) paradigm. Our results\ndemonstrate that the unstructured retrieval paradigm is architecturally\nsusceptible to catastrophic contextual failures, such as SCHEMA_HALLUCINATION,\nleading to unreliable query generation. In contrast, our SILE-based design\nestablishes a substantially more robust foundation, nearly eliminating this\nfailure mode. Moreover, end-to-end validation on a complex, newly curated\nbenchmark uncovers a key generalization principle: the transition from pure\nschema-awareness to holistic semantics-awareness. Taken together, our findings\nprovide a validated architectural basis for developing natural language\ndatabase interfaces that are robust, adaptable, and predictably consistent.",
+    "code_links": [
+      "https://github.com/aymanehassini/DynaQuery"
+    ],
+    "comment": "15 pages, 2 figures, 10 tables. Source code and experimental\n  artifacts are available at: https://github.com/aymanehassini/DynaQuery . The\n  'DynaQuery-Eval-5K' benchmark, introduced in this work, is also publicly\n  available at:\n  https://www.kaggle.com/datasets/aymanehassini/dynaquery-eval-5k-benchmark"
+  },
+  {
+    "title": "DeepAnalyze: Agentic Large Language Models for Autonomous Data Science",
+    "authors": "Shaolei Zhang, Ju Fan, Meihao Fan, Guoliang Li, Xiaoyong Du",
+    "published": "2025-10-19",
+    "arxiv_id": "2510.16872v1",
+    "url": "http://arxiv.org/abs/2510.16872v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.16872v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Autonomous data science, from raw data sources to analyst-grade deep research\nreports, has been a long-standing challenge, and is now becoming feasible with\nthe emergence of powerful large language models (LLMs). Recent workflow-based\ndata agents have shown promising results on specific data tasks but remain\nfundamentally limited in achieving fully autonomous data science due to their\nreliance on predefined workflows. In this paper, we introduce DeepAnalyze-8B,\nthe first agentic LLM designed for autonomous data science, capable of\nautomatically completing the end-toend pipeline from data sources to\nanalyst-grade deep research reports. To tackle high-complexity data science\ntasks, we propose a curriculum-based agentic training paradigm that emulates\nthe learning trajectory of human data scientists, enabling LLMs to\nprogressively acquire and integrate multiple capabilities in real-world\nenvironments. We also introduce a data-grounded trajectory synthesis framework\nthat constructs high-quality training data. Through agentic training,\nDeepAnalyze learns to perform a broad spectrum of data tasks, ranging from data\nquestion answering and specialized analytical tasks to open-ended data\nresearch. Experiments demonstrate that, with only 8B parameters, DeepAnalyze\noutperforms previous workflow-based agents built on most advanced proprietary\nLLMs. The model, code, and training data of DeepAnalyze are open-sourced,\npaving the way toward autonomous data science.",
+    "code_links": [
+      "https://github.com/ruc-datalab/DeepAnalyze"
+    ],
+    "comment": "Code: https://github.com/ruc-datalab/DeepAnalyze Model:\n  https://huggingface.co/RUC-DataLab/DeepAnalyze-8B"
+  },
+  {
+    "title": "BenchPress: A Human-in-the-Loop Annotation System for Rapid Text-to-SQL Benchmark Curation",
+    "authors": "Fabian Wenz, Omar Bouattour, Devin Yang, Justin Choi, Cecil Gregg, Nesime Tatbul, Çağatay Demiralp",
+    "published": "2025-10-11",
+    "arxiv_id": "2510.13853v1",
+    "url": "http://arxiv.org/abs/2510.13853v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.13853v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models (LLMs) have been successfully applied to many tasks,\nincluding text-to-SQL generation. However, much of this work has focused on\npublicly available datasets, such as Fiben, Spider, and Bird. Our earlier work\nshowed that LLMs are much less effective in querying large private enterprise\ndata warehouses and released Beaver, the first private enterprise text-to-SQL\nbenchmark. To create Beaver, we leveraged SQL logs, which are often readily\navailable. However, manually annotating these logs to identify which natural\nlanguage questions they answer is a daunting task. Asking database\nadministrators, who are highly trained experts, to take on additional work to\nconstruct and validate corresponding natural language utterances is not only\nchallenging but also quite costly. To address this challenge, we introduce\nBenchPress, a human-in-the-loop system designed to accelerate the creation of\ndomain-specific text-to-SQL benchmarks. Given a SQL query, BenchPress uses\nretrieval-augmented generation (RAG) and LLMs to propose multiple natural\nlanguage descriptions. Human experts then select, rank, or edit these drafts to\nensure accuracy and domain alignment. We evaluated BenchPress on annotated\nenterprise SQL logs, demonstrating that LLM-assisted annotation drastically\nreduces the time and effort required to create high-quality benchmarks. Our\nresults show that combining human verification with LLM-generated suggestions\nenhances annotation accuracy, benchmark reliability, and model evaluation\nrobustness. By streamlining the creation of custom benchmarks, BenchPress\noffers researchers and practitioners a mechanism for assessing text-to-SQL\nmodels on a given domain-specific workload. BenchPress is freely available via\nour public GitHub repository at\nhttps://github.com/fabian-wenz/enterprise-txt2sql and is also accessible on our\nwebsite at http://dsg-mcgraw.csail.mit.edu:5000.",
+    "code_links": [
+      "https://github.com/fabian-wenz/enterprise-txt2sql"
+    ],
+    "comment": "CIDR'26"
+  },
+  {
+    "title": "Regular Expression Indexing for Log Analysis. Extended Version",
+    "authors": "Ling Zhang, Shaleen Deep, Jignesh M. Patel, Karthikeyan Sankaralingam",
+    "published": "2025-10-11",
+    "arxiv_id": "2510.10348v1",
+    "url": "http://arxiv.org/abs/2510.10348v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.10348v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "In this paper, we present the design and architecture of REI, a novel system\nfor indexing log data for regular expression queries. Our main contribution is\nan $n$-gram-based indexing strategy and an efficient storage mechanism that\nresults in a speedup of up to 14x compared to state-of-the-art regex processing\nengines that do not use indexing, using only 2.1% of extra space. We perform a\ndetailed study that analyzes the space usage of the index and the improvement\nin workload execution time, uncovering interesting insights. Specifically, we\nshow that even an optimized implementation of strategies such as inverted\nindexing, which are widely used in text processing libraries, may lead to\nsuboptimal performance for regex indexing on log analysis tasks. Overall, the\nREI approach presented in this paper provides a significant boost when\nevaluating regular expression queries on log data. REI is also modular and can\nwork with existing regular expression packages, making it easy to deploy in a\nvariety of settings. The code of REI is available at\nhttps://github.com/mush-zhang/REI-Regular-Expression-Indexing.",
+    "code_links": [
+      "https://github.com/mush-zhang/REI-Regular-Expression-Indexing"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Efficient Mining of Low-Utility Sequential Patterns",
+    "authors": "Jian Zhu, Zhidong Lin, Wensheng Gan, Ruichu Cai, Zhifeng Hao, Philip S. Yu",
+    "published": "2025-10-11",
+    "arxiv_id": "2510.10243v1",
+    "url": "http://arxiv.org/abs/2510.10243v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.10243v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Discovering valuable insights from rich data is a crucial task for\nexploratory data analysis. Sequential pattern mining (SPM) has found widespread\napplications across various domains. In recent years, low-utility sequential\npattern mining (LUSPM) has shown strong potential in applications such as\nintrusion detection and genomic sequence analysis. However, existing research\nin utility-based SPM focuses on high-utility sequential patterns, and the\ndefinitions and strategies used in high-utility SPM cannot be directly applied\nto LUSPM. Moreover, no algorithms have yet been developed specifically for\nmining low-utility sequential patterns. To address these problems, we formalize\nthe LUSPM problem, redefine sequence utility, and introduce a compact data\nstructure called the sequence-utility chain to efficiently record utility\ninformation. Furthermore, we propose three novel algorithm--LUSPM_b, LUSPM_s,\nand LUSPM_e--to discover the complete set of low-utility sequential patterns.\nLUSPM_b serves as an exhaustive baseline, while LUSPM_s and LUSPM_e build upon\nit, generating subsequences through shrinkage and extension operations,\nrespectively. In addition, we introduce the maximal non-mutually contained\nsequence set and incorporate multiple pruning strategies, which significantly\nreduce redundant operations in both LUSPM_s and LUSPM_e. Finally, extensive\nexperimental results demonstrate that both LUSPM_s and LUSPM_e substantially\noutperform LUSPM_b and exhibit excellent scalability. Notably, LUSPM_e achieves\nsuperior efficiency, requiring less runtime and memory consumption than\nLUSPM_s. Our code is available at https://github.com/Zhidong-Lin/LUSPM.",
+    "code_links": [
+      "https://github.com/Zhidong-Lin/LUSPM"
+    ],
+    "comment": "Preprint, 4 tables, 9 figures"
+  },
+  {
+    "title": "Knowledge Graph-Guided Multi-Agent Distillation for Reliable Industrial Question Answering with Datasets",
+    "authors": "Jiqun Pan, Zhenke Duan, Jiani Tu, Anzhi Cheng, Yanqing Wang",
+    "published": "2025-10-03",
+    "arxiv_id": "2510.06240v1",
+    "url": "http://arxiv.org/abs/2510.06240v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.06240v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Industrial question-answering (QA) systems require higher safety and\nreliability than general-purpose dialogue models, as errors in high-risk\nscenarios such as equipment fault diagnosis can have severe consequences.\nAlthough multi-agent large language models enhance reasoning depth, they suffer\nfrom uncontrolled iterations and unverifiable outputs, and conventional\ndistillation methods struggle to transfer collaborative reasoning capabilities\nto lightweight, deployable student models. To address these challenges, we\npropose Knowledge Graph-guided Multi-Agent System Distillation (KG-MASD). Our\napproach formulates distillation as a Markov Decision Process and incorporates\na knowledge graph as a verifiable structured prior to enrich state\nrepresentation and ensure convergence. By integrating collaborative reasoning\nwith knowledge grounding, KG-MASD generates high-confidence instruction-tuning\ndata and jointly distills reasoning depth and verifiability into compact\nstudent models suitable for edge deployment. Experiments on an industrial QA\ndataset show that KG-MASD improves accuracy by 2.4 per cent to 20.1 per cent\nover baselines and significantly enhances reliability, enabling trustworthy AI\ndeployment in safety-critical industrial scenarios. Code and data are available\nat https://github.com/erwinmsmith/KG-MAD/.",
+    "code_links": [
+      "https://github.com/erwinmsmith/KG-MAD"
+    ],
+    "comment": "41 pages, 12 figures, 6 tables"
+  },
+  {
+    "title": "EMR-AGENT: Automating Cohort and Feature Extraction from EMR Databases",
+    "authors": "Kwanhyung Lee, Sungsoo Hong, Joonhyung Park, Jeonghyeop Lim, Juhwan Choi, Donghwee Yoon, Eunho Yang",
+    "published": "2025-10-01",
+    "arxiv_id": "2510.00549v2",
+    "url": "http://arxiv.org/abs/2510.00549v2",
+    "pdf_url": "http://arxiv.org/pdf/2510.00549v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Machine learning models for clinical prediction rely on structured data\nextracted from Electronic Medical Records (EMRs), yet this process remains\ndominated by hardcoded, database-specific pipelines for cohort definition,\nfeature selection, and code mapping. These manual efforts limit scalability,\nreproducibility, and cross-institutional generalization. To address this, we\nintroduce EMR-AGENT (Automated Generalized Extraction and Navigation Tool), an\nagent-based framework that replaces manual rule writing with dynamic, language\nmodel-driven interaction to extract and standardize structured clinical data.\nOur framework automates cohort selection, feature extraction, and code mapping\nthrough interactive querying of databases. Our modular agents iteratively\nobserve query results and reason over schema and documentation, using SQL not\njust for data retrieval but also as a tool for database observation and\ndecision making. This eliminates the need for hand-crafted, schema-specific\nlogic. To enable rigorous evaluation, we develop a benchmarking codebase for\nthree EMR databases (MIMIC-III, eICU, SICdb), including both seen and unseen\nschema settings. Our results demonstrate strong performance and generalization\nacross these databases, highlighting the feasibility of automating a process\npreviously thought to require expert-driven design. The code will be released\npublicly at https://github.com/AITRICS/EMR-AGENT/tree/main. For a\ndemonstration, please visit our anonymous demo page:\nhttps://anonymoususer-max600.github.io/EMR_AGENT/",
+    "code_links": [
+      "https://github.com/AITRICS/EMR-AGENT"
+    ],
+    "comment": "currently under submission to ICLR 2026"
+  },
+  {
+    "title": "Graph2Region: Efficient Graph Similarity Learning with Structure and Scale Restoration",
+    "authors": "Zhouyang Liu, Yixin Chen, Ning Liu, Jiezhong He, Dongsheng Li",
+    "published": "2025-10-01",
+    "arxiv_id": "2510.00394v1",
+    "url": "http://arxiv.org/abs/2510.00394v1",
+    "pdf_url": "http://arxiv.org/pdf/2510.00394v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Graph similarity is critical in graph-related tasks such as graph retrieval,\nwhere metrics like maximum common subgraph (MCS) and graph edit distance (GED)\nare commonly used. However, exact computations of these metrics are known to be\nNP-Hard. Recent neural network-based approaches approximate the similarity\nscore in embedding spaces to alleviate the computational burden, but they\neither involve expensive pairwise node comparisons or fail to effectively\nutilize structural and scale information of graphs. To tackle these issues, we\npropose a novel geometric-based graph embedding method called Graph2Region\n(G2R). G2R represents nodes as closed regions and recovers their adjacency\npatterns within graphs in the embedding space. By incorporating the node\nfeatures and adjacency patterns of graphs, G2R summarizes graph regions, i.e.,\ngraph embeddings, where the shape captures the underlying graph structures and\nthe volume reflects the graph size. Consequently, the overlap between graph\nregions can serve as an approximation of MCS, signifying similar node regions\nand adjacency patterns. We further analyze the relationship between MCS and GED\nand propose using disjoint parts as a proxy for GED similarity. This analysis\nenables concurrent computation of MCS and GED, incorporating local and global\nstructural information. Experimental evaluation highlights G2R's competitive\nperformance in graph similarity computation. It achieves up to a 60.0\\%\nrelative accuracy improvement over state-of-the-art methods in MCS similarity\nlearning, while maintaining efficiency in both training and inference.\nMoreover, G2R showcases remarkable capability in predicting both MCS and GED\nsimilarities simultaneously, providing a holistic assessment of graph\nsimilarity. Code available at https://github.com/liuzhouyang/Graph2Region.",
+    "code_links": [
+      "https://github.com/liuzhouyang/Graph2Region"
+    ],
+    "comment": "Accepted by IEEE Transactions on Knowledge and Data Engineering"
+  }
+]
