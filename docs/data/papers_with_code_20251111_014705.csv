@@ -1,0 +1,335 @@
+title,authors,published,arxiv_id,url,pdf_url,category,primary_category,abstract,code_links,comment
+TeaRAG: A Token-Efficient Agentic Retrieval-Augmented Generation Framework,"Chao Zhang, Yuhao Wang, Derong Xu, Haoxin Zhang, Yuanjie Lyu, Yuhao Chen, Shuochen Liu, Tong Xu, Xiangyu Zhao, Yan Gao, Yao Hu, Enhong Chen",2025-11-07,2511.05385v1,http://arxiv.org/abs/2511.05385v1,http://arxiv.org/pdf/2511.05385v1,information_retrieval,cs.IR,"Retrieval-Augmented Generation (RAG) utilizes external knowledge to augment
+Large Language Models' (LLMs) reliability. For flexibility, agentic RAG employs
+autonomous, multi-round retrieval and reasoning to resolve queries. Although
+recent agentic RAG has improved via reinforcement learning, they often incur
+substantial token overhead from search and reasoning processes. This trade-off
+prioritizes accuracy over efficiency. To address this issue, this work proposes
+TeaRAG, a token-efficient agentic RAG framework capable of compressing both
+retrieval content and reasoning steps. 1) First, the retrieved content is
+compressed by augmenting chunk-based semantic retrieval with a graph retrieval
+using concise triplets. A knowledge association graph is then built from
+semantic similarity and co-occurrence. Finally, Personalized PageRank is
+leveraged to highlight key knowledge within this graph, reducing the number of
+tokens per retrieval. 2) Besides, to reduce reasoning steps, Iterative
+Process-aware Direct Preference Optimization (IP-DPO) is proposed.
+Specifically, our reward function evaluates the knowledge sufficiency by a
+knowledge matching mechanism, while penalizing excessive reasoning steps. This
+design can produce high-quality preference-pair datasets, supporting iterative
+DPO to improve reasoning conciseness. Across six datasets, TeaRAG improves the
+average Exact Match by 4% and 2% while reducing output tokens by 61% and 59% on
+Llama3-8B-Instruct and Qwen2.5-14B-Instruct, respectively. Code is available at
+https://github.com/Applied-Machine-Learning-Lab/TeaRAG.",https://github.com/Applied-Machine-Learning-Lab/TeaRAG,32 pages
+On the Brittleness of CLIP Text Encoders,"Allie Tran, Luca Rossetto",2025-11-06,2511.04247v2,http://arxiv.org/abs/2511.04247v2,http://arxiv.org/pdf/2511.04247v2,information_retrieval,cs.MM,"Multimodal co-embedding models, especially CLIP, have advanced the state of
+the art in zero-shot classification and multimedia information retrieval in
+recent years by aligning images and text in a shared representation space.
+However, such modals trained on a contrastive alignment can lack stability
+towards small input perturbations. Especially when dealing with manually
+expressed queries, minor variations in the query can cause large differences in
+the ranking of the best-matching results. In this paper, we present a
+systematic analysis of the effect of multiple classes of non-semantic query
+perturbations in an multimedia information retrieval scenario. We evaluate a
+diverse set of lexical, syntactic, and semantic perturbations across multiple
+CLIP variants using the TRECVID Ad-Hoc Video Search queries and the V3C1 video
+collection. Across models, we find that syntactic and semantic perturbations
+drive the largest instabilities, while brittleness is concentrated in trivial
+surface edits such as punctuation and case. Our results highlight robustness as
+a critical dimension for evaluating vision-language models beyond benchmark
+accuracy.",https://github.com/allie-tran/clip-brittleness,"Accepted for publication at MMM'26. Analysis code can be found here:
+  https://github.com/allie-tran/clip-brittleness"
+CLAX: Fast and Flexible Neural Click Models in JAX,"Philipp Hager, Onno Zoeter, Maarten de Rijke",2025-11-05,2511.03620v1,http://arxiv.org/abs/2511.03620v1,http://arxiv.org/pdf/2511.03620v1,information_retrieval,cs.IR,"CLAX is a JAX-based library that implements classic click models using modern
+gradient-based optimization. While neural click models have emerged over the
+past decade, complex click models based on probabilistic graphical models
+(PGMs) have not systematically adopted gradient-based optimization, preventing
+practitioners from leveraging modern deep learning frameworks while preserving
+the interpretability of classic models. CLAX addresses this gap by replacing
+EM-based optimization with direct gradient-based optimization in a numerically
+stable manner. The framework's modular design enables the integration of any
+component, from embeddings and deep networks to custom modules, into classic
+click models for end-to-end optimization. We demonstrate CLAX's efficiency by
+running experiments on the full Baidu-ULTR dataset comprising over a billion
+user sessions in $\approx$ 2 hours on a single GPU, orders of magnitude faster
+than traditional EM approaches. CLAX implements ten classic click models,
+serving both industry practitioners seeking to understand user behavior and
+improve ranking performance at scale and researchers developing new click
+models. CLAX is available at: https://github.com/philipphager/clax",https://github.com/philipphager/clax,
+Vote-in-Context: Turning VLMs into Zero-Shot Rank Fusers,"Mohamed Eltahir, Ali Habibullah, Lama Ayash, Tanveer Hussain, Naeemullah Khan",2025-11-03,2511.01617v1,http://arxiv.org/abs/2511.01617v1,http://arxiv.org/pdf/2511.01617v1,information_retrieval,cs.CV,"In the retrieval domain, candidates' fusion from heterogeneous retrievers is
+a long-standing challenge, particularly for complex, multi-modal data such as
+videos. While typical fusion techniques are training-free, they rely solely on
+rank or score signals, disregarding candidates' representations. This work
+introduces Vote-in-Context (ViC), a generalized, training-free framework that
+re-thinks list-wise reranking and fusion as a zero-shot reasoning task for a
+Vision-Language Model (VLM). The core insight is to serialize both content
+evidence and retriever metadata directly within the VLM's prompt, allowing the
+model to adaptively weigh retriever consensus against visual-linguistic
+content. We demonstrate the generality of this framework by applying it to the
+challenging domain of cross-modal video retrieval. To this end, we introduce
+the S-Grid, a compact serialization map that represents each video as an image
+grid, optionally paired with subtitles to enable list-wise reasoning over video
+candidates. ViC is evaluated both as a single-list reranker, where it
+dramatically improves the precision of individual retrievers, and as an
+ensemble fuser, where it consistently outperforms strong baselines like
+CombSUM. Across video retrieval benchmarks including ActivityNet and VATEX, the
+framework establishes new state-of-the-art zero-shot retrieval performance,
+demonstrating its effectiveness in handling complex visual and temporal signals
+alongside text. In zero-shot settings, ViC achieves Recall@1 scores of 87.1%
+(t2v) / 89.0% (v2t) on MSR-VTT and 99.6% (v2t) on VATEX, representing massive
+gains of up to +40 Recall@1 over previous state-of-the-art baselines. We
+present ViC as a simple, reproducible, and highly effective recipe for turning
+modern VLMs into powerful zero-shot rerankers and fusers. Code and resources
+are publicly available at: https://github.com/mohammad2012191/ViC",https://github.com/mohammad2012191/ViC,
+LiCoMemory: Lightweight and Cognitive Agentic Memory for Efficient Long-Term Reasoning,"Zhengjun Huang, Zhoujin Tian, Qintian Guo, Fangyuan Zhang, Yingli Zhou, Di Jiang, Xiaofang Zhou",2025-11-03,2511.01448v1,http://arxiv.org/abs/2511.01448v1,http://arxiv.org/pdf/2511.01448v1,information_retrieval,cs.IR,"Large Language Model (LLM) agents exhibit remarkable conversational and
+reasoning capabilities but remain constrained by limited context windows and
+the lack of persistent memory. Recent efforts address these limitations via
+external memory architectures, often employing graph-based representations, yet
+most adopt flat, entangled structures that intertwine semantics with topology,
+leading to redundant representations, unstructured retrieval, and degraded
+efficiency and accuracy. To resolve these issues, we propose LiCoMemory, an
+end-to-end agentic memory framework for real-time updating and retrieval, which
+introduces CogniGraph, a lightweight hierarchical graph that utilizes entities
+and relations as semantic indexing layers, and employs temporal and
+hierarchy-aware search with integrated reranking for adaptive and coherent
+knowledge retrieval. Experiments on long-term dialogue benchmarks, LoCoMo and
+LongMemEval, show that LiCoMemory not only outperforms established baselines in
+temporal reasoning, multi-session consistency, and retrieval efficiency, but
+also notably reduces update latency. Our official code and data are available
+at https://github.com/EverM0re/LiCoMemory.",https://github.com/EverM0re/LiCoMemory,
+DRAMA: Unifying Data Retrieval and Analysis for Open-Domain Analytic Queries,"Chuxuan Hu, Maxwell Yang, James Weiland, Yeji Lim, Suhas Palawala, Daniel Kang",2025-10-31,2510.27238v1,http://arxiv.org/abs/2510.27238v1,http://arxiv.org/pdf/2510.27238v1,information_retrieval,cs.DB,"Manually conducting real-world data analyses is labor-intensive and
+inefficient. Despite numerous attempts to automate data science workflows, none
+of the existing paradigms or systems fully demonstrate all three key
+capabilities required to support them effectively: (1) open-domain data
+collection, (2) structured data transformation, and (3) analytic reasoning.
+  To overcome these limitations, we propose DRAMA, an end-to-end paradigm that
+answers users' analytic queries in natural language on large-scale open-domain
+data. DRAMA unifies data collection, transformation, and analysis as a single
+pipeline. To quantitatively evaluate system performance on tasks representative
+of DRAMA, we construct a benchmark, DRAMA-Bench, consisting of two categories
+of tasks: claim verification and question answering, each comprising 100
+instances. These tasks are derived from real-world applications that have
+gained significant public attention and require the retrieval and analysis of
+open-domain data. We develop DRAMA-Bot, a multi-agent system designed following
+DRAMA. It comprises a data retriever that collects and transforms data by
+coordinating the execution of sub-agents, and a data analyzer that performs
+structured reasoning over the retrieved data. We evaluate DRAMA-Bot on
+DRAMA-Bench together with five state-of-the-art baseline agents. DRAMA-Bot
+achieves 86.5% task accuracy at a cost of $0.05, outperforming all baselines
+with up to 6.9 times the accuracy and less than 1/6 of the cost. DRAMA is
+publicly available at https://github.com/uiuc-kang-lab/drama.",https://github.com/uiuc-kang-lab/drama,Accepted to SIGMOD 2026
+A Survey on Deep Text Hashing: Efficient Semantic Text Retrieval with Binary Representation,"Liyang He, Zhenya Huang, Cheng Yang, Rui Li, Zheng Zhang, Kai Zhang, Zhi Li, Qi Liu, Enhong Chen",2025-10-31,2510.27232v1,http://arxiv.org/abs/2510.27232v1,http://arxiv.org/pdf/2510.27232v1,information_retrieval,cs.IR,"With the rapid growth of textual content on the Internet, efficient
+large-scale semantic text retrieval has garnered increasing attention from both
+academia and industry. Text hashing, which projects original texts into compact
+binary hash codes, is a crucial method for this task. By using binary codes,
+the semantic similarity computation for text pairs is significantly accelerated
+via fast Hamming distance calculations, and storage costs are greatly reduced.
+With the advancement of deep learning, deep text hashing has demonstrated
+significant advantages over traditional, data-independent hashing techniques.
+By leveraging deep neural networks, these methods can learn compact and
+semantically rich binary representations directly from data, overcoming the
+performance limitations of earlier approaches. This survey investigates current
+deep text hashing methods by categorizing them based on their core components:
+semantic extraction, hash code quality preservation, and other key
+technologies. We then present a detailed evaluation schema with results on
+several popular datasets, followed by a discussion of practical applications
+and open-source tools for implementation. Finally, we conclude by discussing
+key challenges and future research directions, including the integration of
+deep text hashing with large language models to further advance the field. The
+project for this survey can be accessed at
+https://github.com/hly1998/DeepTextHashing.",https://github.com/hly1998/DeepTextHashing,
+ReaKase-8B: Legal Case Retrieval via Knowledge and Reasoning Representations with LLMs,"Yanran Tang, Ruihong Qiu, Xue Li, Zi Huang",2025-10-30,2510.26178v1,http://arxiv.org/abs/2510.26178v1,http://arxiv.org/pdf/2510.26178v1,information_retrieval,cs.IR,"Legal case retrieval (LCR) is a cornerstone of real-world legal decision
+making, as it enables practitioners to identify precedents for a given query
+case. Existing approaches mainly rely on traditional lexical models and
+pretrained language models to encode the texts of legal cases. Yet there are
+rich information in the relations among different legal entities as well as the
+crucial reasoning process that uncovers how legal facts and legal issues can
+lead to judicial decisions. Such relational reasoning process reflects the
+distinctive characteristics of each case that can distinguish one from another,
+mirroring the real-world judicial process. Naturally, incorporating such
+information into the precise case embedding could further enhance the accuracy
+of case retrieval. In this paper, a novel ReaKase-8B framework is proposed to
+leverage extracted legal facts, legal issues, legal relation triplets and legal
+reasoning for effective legal case retrieval. ReaKase-8B designs an in-context
+legal case representation learning paradigm with a fine-tuned large language
+model. Extensive experiments on two benchmark datasets from COLIEE 2022 and
+COLIEE 2023 demonstrate that our knowledge and reasoning augmented embeddings
+substantially improve retrieval performance over baseline models, highlighting
+the potential of integrating legal reasoning into legal case retrieval systems.
+The code has been released on https://github.com/yanran-tang/ReaKase-8B.",https://github.com/yanran-tang/ReaKase-8B,
+Alibaba International E-commerce Product Search Competition DcuRAGONs Team Technical Report,"Thang-Long Nguyen-Ho, Minh-Khoi Pham, Hoang-Bao Le",2025-10-29,2510.25428v1,http://arxiv.org/abs/2510.25428v1,http://arxiv.org/pdf/2510.25428v1,information_retrieval,cs.IR,"This report details our methodology and results developed for the
+Multilingual E-commerce Search Competition. The problem aims to recognize
+relevance between user queries versus product items in a multilingual context
+and improve recommendation performance on e-commerce platforms. Utilizing Large
+Language Models (LLMs) and their capabilities in other tasks, our data-centric
+method achieved the highest score compared to other solutions during the
+competition. Final leaderboard is publised at
+https://alibaba-international-cikm2025.github.io. The source code for our
+project is published at https://github.com/nhtlongcs/e-commerce-product-search.",https://github.com/nhtlongcs/e-commerce-product-search,"Alibaba International E-commerce Product Search Competition @ CIKM
+  2025"
+"BAPPA: Benchmarking Agents, Plans, and Pipelines for Automated Text-to-SQL Generation","Fahim Ahmed, Md Mubtasim Ahasan, Jahir Sadik Monon, Muntasir Wahed, M Ashraful Amin, A K M Mahbubur Rahman, Amin Ahsan Ali",2025-11-06,2511.04153v1,http://arxiv.org/abs/2511.04153v1,http://arxiv.org/pdf/2511.04153v1,databases,cs.CL,"Text-to-SQL systems provide a natural language interface that can enable even
+laymen to access information stored in databases. However, existing Large
+Language Models (LLM) struggle with SQL generation from natural instructions
+due to large schema sizes and complex reasoning. Prior work often focuses on
+complex, somewhat impractical pipelines using flagship models, while smaller,
+efficient models remain overlooked. In this work, we explore three multi-agent
+LLM pipelines, with systematic performance benchmarking across a range of small
+to large open-source models: (1) Multi-agent discussion pipeline, where agents
+iteratively critique and refine SQL queries, and a judge synthesizes the final
+answer; (2) Planner-Coder pipeline, where a thinking model planner generates
+stepwise SQL generation plans and a coder synthesizes queries; and (3)
+Coder-Aggregator pipeline, where multiple coders independently generate SQL
+queries, and a reasoning agent selects the best query. Experiments on the
+Bird-Bench Mini-Dev set reveal that Multi-Agent discussion can improve small
+model performance, with up to 10.6% increase in Execution Accuracy for
+Qwen2.5-7b-Instruct seen after three rounds of discussion. Among the pipelines,
+the LLM Reasoner-Coder pipeline yields the best results, with DeepSeek-R1-32B
+and QwQ-32B planners boosting Gemma 3 27B IT accuracy from 52.4% to the highest
+score of 56.4%. Codes are available at
+https://github.com/treeDweller98/bappa-sql.",https://github.com/treeDweller98/bappa-sql,
+Subtree Mode and Applications,"Jialong Zhou, Ben Bals, Matei Tinca, Ai Guan, Panagiotis Charalampopoulos, Grigorios Loukides, Solon P. Pissis",2025-11-03,2511.01376v1,http://arxiv.org/abs/2511.01376v1,http://arxiv.org/pdf/2511.01376v1,databases,cs.DS,"The mode of a collection of values (i.e., the most frequent value in the
+collection) is a key summary statistic. Finding the mode in a given range of an
+array of values is thus of great importance, and constructing a data structure
+to solve this problem is in fact the well-known Range Mode problem. In this
+work, we introduce the Subtree Mode (SM) problem, the analogous problem in a
+leaf-colored tree, where the task is to compute the most frequent color in the
+leaves of the subtree of a given node. SM is motivated by several applications
+in domains such as text analytics and biology, where the data are hierarchical
+and can thus be represented as a (leaf-colored) tree. Our central contribution
+is a time-optimal algorithm for SM that computes the answer for every node of
+an input $N$-node tree in $O(N)$ time. We further show how our solution can be
+adapted for node-colored trees, or for computing the $k$ most frequent colors,
+in the optimal $O(N)$ time, for any given $k=O(1)$. Moreover, we prove that a
+similarly fast solution for when the input is a sink-colored directed acyclic
+graph instead of a leaf-colored tree is highly unlikely. Our experiments on
+real datasets with trees of up to 7.3 billion nodes demonstrate that our
+algorithm is faster than baselines by at least one order of magnitude and much
+more space efficient. Last, we present case studies showing the effectiveness
+of our approach in pattern mining and sequence-to-database search applications.",https://github.com/JialongZhou666/subtree-mode-mining,"For reproduction, code available at
+  https://github.com/JialongZhou666/subtree-mode-mining"
+DRAMA: Unifying Data Retrieval and Analysis for Open-Domain Analytic Queries,"Chuxuan Hu, Maxwell Yang, James Weiland, Yeji Lim, Suhas Palawala, Daniel Kang",2025-10-31,2510.27238v1,http://arxiv.org/abs/2510.27238v1,http://arxiv.org/pdf/2510.27238v1,databases,cs.DB,"Manually conducting real-world data analyses is labor-intensive and
+inefficient. Despite numerous attempts to automate data science workflows, none
+of the existing paradigms or systems fully demonstrate all three key
+capabilities required to support them effectively: (1) open-domain data
+collection, (2) structured data transformation, and (3) analytic reasoning.
+  To overcome these limitations, we propose DRAMA, an end-to-end paradigm that
+answers users' analytic queries in natural language on large-scale open-domain
+data. DRAMA unifies data collection, transformation, and analysis as a single
+pipeline. To quantitatively evaluate system performance on tasks representative
+of DRAMA, we construct a benchmark, DRAMA-Bench, consisting of two categories
+of tasks: claim verification and question answering, each comprising 100
+instances. These tasks are derived from real-world applications that have
+gained significant public attention and require the retrieval and analysis of
+open-domain data. We develop DRAMA-Bot, a multi-agent system designed following
+DRAMA. It comprises a data retriever that collects and transforms data by
+coordinating the execution of sub-agents, and a data analyzer that performs
+structured reasoning over the retrieved data. We evaluate DRAMA-Bot on
+DRAMA-Bench together with five state-of-the-art baseline agents. DRAMA-Bot
+achieves 86.5% task accuracy at a cost of $0.05, outperforming all baselines
+with up to 6.9 times the accuracy and less than 1/6 of the cost. DRAMA is
+publicly available at https://github.com/uiuc-kang-lab/drama.",https://github.com/uiuc-kang-lab/drama,Accepted to SIGMOD 2026
+Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration,"Linzhuang Sun, Tianyu Guo, Hao Liang, Yuying Li, Qifeng Cai, Jingxuan Wei, Bihui Yu, Wentao Zhang, Bin Cui",2025-10-30,2510.26495v1,http://arxiv.org/abs/2510.26495v1,http://arxiv.org/pdf/2510.26495v1,databases,cs.DB,"Recent advances in Text-to-SQL have achieved strong results in static,
+single-turn tasks, where models generate SQL queries from natural language
+questions. However, these systems fall short in real-world interactive
+scenarios, where user intents evolve and queries must be refined over multiple
+turns. In applications such as finance and business analytics, users
+iteratively adjust query constraints or dimensions based on intermediate
+results. To evaluate such dynamic capabilities, we introduce DySQL-Bench, a
+benchmark assessing model performance under evolving user interactions. Unlike
+previous manually curated datasets, DySQL-Bench is built through an automated
+two-stage pipeline of task synthesis and verification. Structured tree
+representations derived from raw database tables guide LLM-based task
+generation, followed by interaction-oriented filtering and expert validation.
+Human evaluation confirms 100% correctness of the synthesized data. We further
+propose a multi-turn evaluation framework simulating realistic interactions
+among an LLM-simulated user, the model under test, and an executable database.
+The model must adapt its reasoning and SQL generation as user intents change.
+DySQL-Bench covers 13 domains across BIRD and Spider 2 databases, totaling
+1,072 tasks. Even GPT-4o attains only 58.34% overall accuracy and 23.81% on the
+Pass@5 metric, underscoring the benchmark's difficulty. All code and data are
+released at https://github.com/Aurora-slz/Real-World-SQL-Bench .",https://github.com/Aurora-slz/Real-World-SQL-Bench,
+Evaluating Joinable Column Discovery Approaches for Context-Aware Search,"Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas",2025-10-28,2510.24599v1,http://arxiv.org/abs/2510.24599v1,http://arxiv.org/pdf/2510.24599v1,databases,cs.DB,"Joinable Column Discovery is a critical challenge in automating enterprise
+data analysis. While existing approaches focus on syntactic overlap and
+semantic similarity, there remains limited understanding of which methods
+perform best for different data characteristics and how multiple criteria
+influence discovery effectiveness. We present a comprehensive experimental
+evaluation of joinable column discovery methods across diverse scenarios. Our
+study compares syntactic and semantic techniques on seven benchmarks covering
+relational databases and data lakes. We analyze six key criteria -- unique
+values, intersection size, join size, reverse join size, value semantics, and
+metadata semantics -- and examine how combining them through ensemble ranking
+affects performance. Our analysis reveals differences in method behavior across
+data contexts and highlights the benefits of integrating multiple criteria for
+robust join discovery. We provide empirical evidence on when each criterion
+matters, compare pre-trained embedding models for semantic joins, and offer
+practical guidelines for selecting suitable methods based on dataset
+characteristics. Our findings show that metadata and value semantics are
+crucial for data lakes, size-based criteria play a stronger role in relational
+databases, and ensemble approaches consistently outperform single-criterion
+methods.",https://github.com/IBM/ContextAwareJoin,"This is an Experiments and Analysis paper. The source code, data,
+  and/or other artifacts have been made available at
+  https://github.com/IBM/ContextAwareJoin"
+A Survey of Data Agents: Emerging Paradigm or Overstated Hype?,"Yizhang Zhu, Liangwei Wang, Chenyu Yang, Xiaotian Lin, Boyan Li, Wei Zhou, Xinyu Liu, Zhangyang Peng, Tianqi Luo, Yu Li, Chengliang Chai, Chong Chen, Shimin Di, Ju Fan, Ji Sun, Nan Tang, Fugee Tsung, Jiannan Wang, Chenglin Wu, Yanwei Xu, Shaolei Zhang, Yong Zhang, Xuanhe Zhou, Guoliang Li, Yuyu Luo",2025-10-27,2510.23587v1,http://arxiv.org/abs/2510.23587v1,http://arxiv.org/pdf/2510.23587v1,databases,cs.DB,"The rapid advancement of large language models (LLMs) has spurred the
+emergence of data agents--autonomous systems designed to orchestrate Data + AI
+ecosystems for tackling complex data-related tasks. However, the term ""data
+agent"" currently suffers from terminological ambiguity and inconsistent
+adoption, conflating simple query responders with sophisticated autonomous
+architectures. This terminological ambiguity fosters mismatched user
+expectations, accountability challenges, and barriers to industry growth.
+Inspired by the SAE J3016 standard for driving automation, this survey
+introduces the first systematic hierarchical taxonomy for data agents,
+comprising six levels that delineate and trace progressive shifts in autonomy,
+from manual operations (L0) to a vision of generative, fully autonomous data
+agents (L5), thereby clarifying capability boundaries and responsibility
+allocation. Through this lens, we offer a structured review of existing
+research arranged by increasing autonomy, encompassing specialized data agents
+for data management, preparation, and analysis, alongside emerging efforts
+toward versatile, comprehensive systems with enhanced autonomy. We further
+analyze critical evolutionary leaps and technical gaps for advancing data
+agents, especially the ongoing L2-to-L3 transition, where data agents evolve
+from procedural execution to autonomous orchestration. Finally, we conclude
+with a forward-looking roadmap, envisioning the advent of proactive, generative
+data agents.",https://github.com/HKUSTDial/awesome-data-agents,"Please refer to our paper list and companion materials at:
+  https://github.com/HKUSTDial/awesome-data-agents"
+DynaQuery: A Self-Adapting Framework for Querying Structured and Multimodal Data,Aymane Hassini,2025-10-20,2510.18029v1,http://arxiv.org/abs/2510.18029v1,http://arxiv.org/pdf/2510.18029v1,databases,cs.DB,"The rise of Large Language Models (LLMs) has accelerated the long-standing
+goal of enabling natural language querying over complex, hybrid databases. Yet,
+this ambition exposes a dual challenge: reasoning jointly over structured,
+multi-relational schemas and the semantic content of linked unstructured
+assets. To overcome this, we present DynaQuery - a unified, self-adapting
+framework that serves as a practical blueprint for next-generation ""Unbound
+Databases."" At the heart of DynaQuery lies the Schema Introspection and Linking
+Engine (SILE), a novel systems primitive that elevates schema linking to a
+first-class query planning phase. We conduct a rigorous, multi-benchmark
+empirical evaluation of this structure-aware architecture against the prevalent
+unstructured Retrieval-Augmented Generation (RAG) paradigm. Our results
+demonstrate that the unstructured retrieval paradigm is architecturally
+susceptible to catastrophic contextual failures, such as SCHEMA_HALLUCINATION,
+leading to unreliable query generation. In contrast, our SILE-based design
+establishes a substantially more robust foundation, nearly eliminating this
+failure mode. Moreover, end-to-end validation on a complex, newly curated
+benchmark uncovers a key generalization principle: the transition from pure
+schema-awareness to holistic semantics-awareness. Taken together, our findings
+provide a validated architectural basis for developing natural language
+database interfaces that are robust, adaptable, and predictably consistent.",https://github.com/aymanehassini/DynaQuery,"15 pages, 2 figures, 10 tables. Source code and experimental
+  artifacts are available at: https://github.com/aymanehassini/DynaQuery . The
+  'DynaQuery-Eval-5K' benchmark, introduced in this work, is also publicly
+  available at:
+  https://www.kaggle.com/datasets/aymanehassini/dynaquery-eval-5k-benchmark"
+DeepAnalyze: Agentic Large Language Models for Autonomous Data Science,"Shaolei Zhang, Ju Fan, Meihao Fan, Guoliang Li, Xiaoyong Du",2025-10-19,2510.16872v1,http://arxiv.org/abs/2510.16872v1,http://arxiv.org/pdf/2510.16872v1,databases,cs.AI,"Autonomous data science, from raw data sources to analyst-grade deep research
+reports, has been a long-standing challenge, and is now becoming feasible with
+the emergence of powerful large language models (LLMs). Recent workflow-based
+data agents have shown promising results on specific data tasks but remain
+fundamentally limited in achieving fully autonomous data science due to their
+reliance on predefined workflows. In this paper, we introduce DeepAnalyze-8B,
+the first agentic LLM designed for autonomous data science, capable of
+automatically completing the end-toend pipeline from data sources to
+analyst-grade deep research reports. To tackle high-complexity data science
+tasks, we propose a curriculum-based agentic training paradigm that emulates
+the learning trajectory of human data scientists, enabling LLMs to
+progressively acquire and integrate multiple capabilities in real-world
+environments. We also introduce a data-grounded trajectory synthesis framework
+that constructs high-quality training data. Through agentic training,
+DeepAnalyze learns to perform a broad spectrum of data tasks, ranging from data
+question answering and specialized analytical tasks to open-ended data
+research. Experiments demonstrate that, with only 8B parameters, DeepAnalyze
+outperforms previous workflow-based agents built on most advanced proprietary
+LLMs. The model, code, and training data of DeepAnalyze are open-sourced,
+paving the way toward autonomous data science.",https://github.com/ruc-datalab/DeepAnalyze,"Code: https://github.com/ruc-datalab/DeepAnalyze Model:
+  https://huggingface.co/RUC-DataLab/DeepAnalyze-8B"
