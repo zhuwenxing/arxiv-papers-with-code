@@ -1,0 +1,257 @@
+[
+  {
+    "title": "Sim4IA-Bench: A User Simulation Benchmark Suite for Next Query and Utterance Prediction",
+    "authors": "Andreas Konstantin Kruff, Christin Katharina Kreutz, Timo Breuer, Philipp Schaer, Krisztian Balog",
+    "published": "2025-11-12",
+    "arxiv_id": "2511.09329v1",
+    "url": "http://arxiv.org/abs/2511.09329v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.09329v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Validating user simulation is a difficult task due to the lack of established measures and benchmarks, which makes it challenging to assess whether a simulator accurately reflects real user behavior. As part of the Sim4IA Micro-Shared Task at the Sim4IA Workshop, SIGIR 2025, we present Sim4IA-Bench, a simulation benchmark suit for the prediction of the next queries and utterances, the first of its kind in the IR community. Our dataset as part of the suite comprises 160 real-world search sessions from the CORE search engine. For 70 of these sessions, up to 62 simulator runs are available, divided into Task A and Task B, in which different approaches predicted users next search queries or utterances. Sim4IA-Bench provides a basis for evaluating and comparing user simulation approaches and for developing new measures of simulator validity. Although modest in size, the suite represents the first publicly available benchmark that links real search sessions with simulated next-query predictions. In addition to serving as a testbed for next query prediction, it also enables exploratory studies on query reformulation behavior, intent drift, and interaction-aware retrieval evaluation. We also introduce a new measure for evaluating next-query predictions in this task. By making the suite publicly available, we aim to promote reproducible research and stimulate further work on realistic and explainable user simulation for information access: https://github.com/irgroup/Sim4IA-Bench.",
+    "code_links": [
+      "https://github.com/irgroup/Sim4IA-Bench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MARC: Multimodal and Multi-Task Agentic Retrieval-Augmented Generation for Cold-Start Recommender System",
+    "authors": "Seung Hwan Cho, Yujin Yang, Danik Baeck, Minjoo Kim, Young-Min Kim, Heejung Lee, Sangjin Park",
+    "published": "2025-11-11",
+    "arxiv_id": "2511.08181v1",
+    "url": "http://arxiv.org/abs/2511.08181v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.08181v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems (RS) are currently being studied to mitigate limitations during cold-start conditions by leveraging modality information or introducing Agent concepts based on the exceptional reasoning capabilities of Large Language Models (LLMs). Meanwhile, food and beverage recommender systems have traditionally used knowledge graph and ontology concepts due to the domain's unique data attributes and relationship characteristics. On this background, we propose MARC, a multimodal and multi-task cocktail recommender system based on Agentic Retrieval-Augmented Generation (RAG) utilizing graph database under cold-start conditions. The proposed system generates high-quality, contextually appropriate answers through two core processes: a task recognition router and a reflection process. The graph database was constructed by processing cocktail data from Kaggle, and its effectiveness was evaluated using 200 manually crafted questions. The evaluation used both LLM-as-a-judge and human evaluation to demonstrate that answers generated via the graph database outperformed those from a simple vector database in terms of quality. The code is available at https://github.com/diddbwls/cocktail_rec_agentrag",
+    "code_links": [
+      "https://github.com/diddbwls/cocktail_rec_agentrag"
+    ],
+    "comment": "13 pages, 2 figures, Accepted at RDGENAI at CIKM 2025 workshop"
+  },
+  {
+    "title": "A Decentralized Retrieval Augmented Generation System with Source Reliabilities Secured on Blockchain",
+    "authors": "Yining Lu, Wenyi Tang, Max Johnson, Taeho Jung, Meng Jiang",
+    "published": "2025-11-10",
+    "arxiv_id": "2511.07577v1",
+    "url": "http://arxiv.org/abs/2511.07577v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.07577v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CR",
+    "abstract": "Existing retrieval-augmented generation (RAG) systems typically use a centralized architecture, causing a high cost of data collection, integration, and management, as well as privacy concerns. There is a great need for a decentralized RAG system that enables foundation models to utilize information directly from data owners who maintain full control over their sources. However, decentralization brings a challenge: the numerous independent data sources vary significantly in reliability, which can diminish retrieval accuracy and response quality. To address this, our decentralized RAG system has a novel reliability scoring mechanism that dynamically evaluates each source based on the quality of responses it contributes to generate and prioritizes high-quality sources during retrieval. To ensure transparency and trust, the scoring process is securely managed through blockchain-based smart contracts, creating verifiable and tamper-proof reliability records without relying on a central authority. We evaluate our decentralized system with two Llama models (3B and 8B) in two simulated environments where six data sources have different levels of reliability. Our system achieves a +10.7\\% performance improvement over its centralized counterpart in the real world-like unreliable data environments. Notably, it approaches the upper-bound performance of centralized systems under ideally reliable data environments. The decentralized infrastructure enables secure and trustworthy scoring management, achieving approximately 56\\% marginal cost savings through batched update operations. Our code and system are open-sourced at github.com/yining610/Reliable-dRAG.",
+    "code_links": [
+      "https://github.com/yining610/Reliable-dRAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "CGLE: Class-label Graph Link Estimator for Link Prediction",
+    "authors": "Ankit Mazumder, Srikanta Bedathur",
+    "published": "2025-11-10",
+    "arxiv_id": "2511.06982v1",
+    "url": "http://arxiv.org/abs/2511.06982v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.06982v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.SI",
+    "abstract": "Link prediction is a pivotal task in graph mining with wide-ranging applications in social networks, recommendation systems, and knowledge graph completion. However, many leading Graph Neural Network (GNN) models often neglect the valuable semantic information aggregated at the class level. To address this limitation, this paper introduces CGLE (Class-label Graph Link Estimator), a novel framework designed to augment GNN-based link prediction models. CGLE operates by constructing a class-conditioned link probability matrix, where each entry represents the probability of a link forming between two node classes. This matrix is derived from either available ground-truth labels or from pseudo-labels obtained through clustering. The resulting class-based prior is then concatenated with the structural link embedding from a backbone GNN, and the combined representation is processed by a Multi-Layer Perceptron (MLP) for the final prediction. Crucially, CGLE's logic is encapsulated in an efficient preprocessing stage, leaving the computational complexity of the underlying GNN model unaffected. We validate our approach through extensive experiments on a broad suite of benchmark datasets, covering both homophilous and sparse heterophilous graphs. The results show that CGLE yields substantial performance gains over strong baselines such as NCN and NCNC, with improvements in HR@100 of over 10 percentage points on homophilous datasets like Pubmed and DBLP. On sparse heterophilous graphs, CGLE delivers an MRR improvement of over 4% on the Chameleon dataset. Our work underscores the efficacy of integrating global, data-driven semantic priors, presenting a compelling alternative to the pursuit of increasingly complex model architectures. Code to reproduce our findings is available at: https://github.com/data-iitd/cgle-icdm2025.",
+    "code_links": [
+      "https://github.com/data-iitd/cgle-icdm2025"
+    ],
+    "comment": "Paper accepted at the IEEE International Conference on Data Mining (ICDM 2025)"
+  },
+  {
+    "title": "Learning to Fast Unrank in Collaborative Filtering Recommendation",
+    "authors": "Junpeng Zhao, Lin Li, Ming Li, Amran Bhuiyan, Jimmy Huang",
+    "published": "2025-11-10",
+    "arxiv_id": "2511.06803v1",
+    "url": "http://arxiv.org/abs/2511.06803v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.06803v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Modern data-driven recommendation systems risk memorizing sensitive user behavioral patterns, raising privacy concerns. Existing recommendation unlearning methods, while capable of removing target data influence, suffer from inefficient unlearning speed and degraded performance, failing to meet real-time unlearning demands. Considering the ranking-oriented nature of recommendation systems, we present unranking, the process of reducing the ranking positions of target items while ensuring the formal guarantees of recommendation unlearning. To achieve efficient unranking, we propose Learning to Fast Unrank in Collaborative Filtering Recommendation (L2UnRank), which operates through three key stages: (a) identifying the influenced scope via interaction-based p-hop propagation, (b) computing structural and semantic influences for entities within this scope, and (c) performing efficient, ranking-aware parameter updates guided by influence information. Extensive experiments across multiple datasets and backbone models demonstrate L2UnRank's model-agnostic nature, achieving state-of-the-art unranking effectiveness and maintaining recommendation quality comparable to retraining, while also delivering a 50x speedup over existing methods. Codes are available at https://github.com/Juniper42/L2UnRank.",
+    "code_links": [
+      "https://github.com/Juniper42/L2UnRank"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Can LLM Annotations Replace User Clicks for Learning to Rank?",
+    "authors": "Lulu Yu, Keping Bi, Jiafeng Guo, Shihao Liu, Shuaiqiang Wang, Dawei Yin, Xueqi Cheng",
+    "published": "2025-11-10",
+    "arxiv_id": "2511.06635v1",
+    "url": "http://arxiv.org/abs/2511.06635v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.06635v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large-scale supervised data is essential for training modern ranking models, but obtaining high-quality human annotations is costly. Click data has been widely used as a low-cost alternative, and with recent advances in large language models (LLMs), LLM-based relevance annotation has emerged as another promising annotation. This paper investigates whether LLM annotations can replace click data for learning to rank (LTR) by conducting a comprehensive comparison across multiple dimensions. Experiments on both a public dataset, TianGong-ST, and an industrial dataset, Baidu-Click, show that click-supervised models perform better on high-frequency queries, while LLM annotation-supervised models are more effective on medium- and low-frequency queries. Further analysis shows that click-supervised models are better at capturing document-level signals such as authority or quality, while LLM annotation-supervised models are more effective at modeling semantic matching between queries and documents and at distinguishing relevant from non-relevant documents. Motivated by these observations, we explore two training strategies -- data scheduling and frequency-aware multi-objective learning -- that integrate both supervision signals. Both approaches enhance ranking performance across queries at all frequency levels, with the latter being more effective. Our code is available at https://github.com/Trustworthy-Information-Access/LLMAnn_Click.",
+    "code_links": [
+      "https://github.com/Trustworthy-Information-Access/LLMAnn_Click"
+    ],
+    "comment": "12 pages, 7 figures"
+  },
+  {
+    "title": "TabRAG: Tabular Document Retrieval via Structured Language Representations",
+    "authors": "Jacob Si, Mike Qu, Michelle Lee, Yingzhen Li",
+    "published": "2025-11-10",
+    "arxiv_id": "2511.06582v1",
+    "url": "http://arxiv.org/abs/2511.06582v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.06582v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Ingesting data for Retrieval-Augmented Generation (RAG) involves either fine-tuning the embedding model directly on the target corpus or parsing documents for embedding model encoding. The former, while accurate, incurs high computational hardware requirements, while the latter suffers from suboptimal performance when extracting tabular data. In this work, we address the latter by presenting TabRAG, a parsing-based RAG pipeline designed to tackle table-heavy documents via structured language representations. TabRAG outperforms existing popular parsing-based methods for generation and retrieval. Code is available at https://github.com/jacobyhsi/TabRAG.",
+    "code_links": [
+      "https://github.com/jacobyhsi/TabRAG"
+    ],
+    "comment": "NeurIPS 2025 AI4Tab"
+  },
+  {
+    "title": "TeaRAG: A Token-Efficient Agentic Retrieval-Augmented Generation Framework",
+    "authors": "Chao Zhang, Yuhao Wang, Derong Xu, Haoxin Zhang, Yuanjie Lyu, Yuhao Chen, Shuochen Liu, Tong Xu, Xiangyu Zhao, Yan Gao, Yao Hu, Enhong Chen",
+    "published": "2025-11-07",
+    "arxiv_id": "2511.05385v1",
+    "url": "http://arxiv.org/abs/2511.05385v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.05385v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval-Augmented Generation (RAG) utilizes external knowledge to augment Large Language Models' (LLMs) reliability. For flexibility, agentic RAG employs autonomous, multi-round retrieval and reasoning to resolve queries. Although recent agentic RAG has improved via reinforcement learning, they often incur substantial token overhead from search and reasoning processes. This trade-off prioritizes accuracy over efficiency. To address this issue, this work proposes TeaRAG, a token-efficient agentic RAG framework capable of compressing both retrieval content and reasoning steps. 1) First, the retrieved content is compressed by augmenting chunk-based semantic retrieval with a graph retrieval using concise triplets. A knowledge association graph is then built from semantic similarity and co-occurrence. Finally, Personalized PageRank is leveraged to highlight key knowledge within this graph, reducing the number of tokens per retrieval. 2) Besides, to reduce reasoning steps, Iterative Process-aware Direct Preference Optimization (IP-DPO) is proposed. Specifically, our reward function evaluates the knowledge sufficiency by a knowledge matching mechanism, while penalizing excessive reasoning steps. This design can produce high-quality preference-pair datasets, supporting iterative DPO to improve reasoning conciseness. Across six datasets, TeaRAG improves the average Exact Match by 4% and 2% while reducing output tokens by 61% and 59% on Llama3-8B-Instruct and Qwen2.5-14B-Instruct, respectively. Code is available at https://github.com/Applied-Machine-Learning-Lab/TeaRAG.",
+    "code_links": [
+      "https://github.com/Applied-Machine-Learning-Lab/TeaRAG"
+    ],
+    "comment": "32 pages"
+  },
+  {
+    "title": "On the Brittleness of CLIP Text Encoders",
+    "authors": "Allie Tran, Luca Rossetto",
+    "published": "2025-11-06",
+    "arxiv_id": "2511.04247v2",
+    "url": "http://arxiv.org/abs/2511.04247v2",
+    "pdf_url": "https://arxiv.org/pdf/2511.04247v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.MM",
+    "abstract": "Multimodal co-embedding models, especially CLIP, have advanced the state of the art in zero-shot classification and multimedia information retrieval in recent years by aligning images and text in a shared representation space. However, such modals trained on a contrastive alignment can lack stability towards small input perturbations. Especially when dealing with manually expressed queries, minor variations in the query can cause large differences in the ranking of the best-matching results. In this paper, we present a systematic analysis of the effect of multiple classes of non-semantic query perturbations in an multimedia information retrieval scenario. We evaluate a diverse set of lexical, syntactic, and semantic perturbations across multiple CLIP variants using the TRECVID Ad-Hoc Video Search queries and the V3C1 video collection. Across models, we find that syntactic and semantic perturbations drive the largest instabilities, while brittleness is concentrated in trivial surface edits such as punctuation and case. Our results highlight robustness as a critical dimension for evaluating vision-language models beyond benchmark accuracy.",
+    "code_links": [
+      "https://github.com/allie-tran/clip-brittleness"
+    ],
+    "comment": "Accepted for publication at MMM'26. Analysis code can be found here: https://github.com/allie-tran/clip-brittleness"
+  },
+  {
+    "title": "CLAX: Fast and Flexible Neural Click Models in JAX",
+    "authors": "Philipp Hager, Onno Zoeter, Maarten de Rijke",
+    "published": "2025-11-05",
+    "arxiv_id": "2511.03620v1",
+    "url": "http://arxiv.org/abs/2511.03620v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.03620v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "CLAX is a JAX-based library that implements classic click models using modern gradient-based optimization. While neural click models have emerged over the past decade, complex click models based on probabilistic graphical models (PGMs) have not systematically adopted gradient-based optimization, preventing practitioners from leveraging modern deep learning frameworks while preserving the interpretability of classic models. CLAX addresses this gap by replacing EM-based optimization with direct gradient-based optimization in a numerically stable manner. The framework's modular design enables the integration of any component, from embeddings and deep networks to custom modules, into classic click models for end-to-end optimization. We demonstrate CLAX's efficiency by running experiments on the full Baidu-ULTR dataset comprising over a billion user sessions in $\\approx$ 2 hours on a single GPU, orders of magnitude faster than traditional EM approaches. CLAX implements ten classic click models, serving both industry practitioners seeking to understand user behavior and improve ranking performance at scale and researchers developing new click models. CLAX is available at: https://github.com/philipphager/clax",
+    "code_links": [
+      "https://github.com/philipphager/clax"
+    ],
+    "comment": null
+  },
+  {
+    "title": "BAPPA: Benchmarking Agents, Plans, and Pipelines for Automated Text-to-SQL Generation",
+    "authors": "Fahim Ahmed, Md Mubtasim Ahasan, Jahir Sadik Monon, Muntasir Wahed, M Ashraful Amin, A K M Mahbubur Rahman, Amin Ahsan Ali",
+    "published": "2025-11-06",
+    "arxiv_id": "2511.04153v1",
+    "url": "http://arxiv.org/abs/2511.04153v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.04153v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Text-to-SQL systems provide a natural language interface that can enable even laymen to access information stored in databases. However, existing Large Language Models (LLM) struggle with SQL generation from natural instructions due to large schema sizes and complex reasoning. Prior work often focuses on complex, somewhat impractical pipelines using flagship models, while smaller, efficient models remain overlooked. In this work, we explore three multi-agent LLM pipelines, with systematic performance benchmarking across a range of small to large open-source models: (1) Multi-agent discussion pipeline, where agents iteratively critique and refine SQL queries, and a judge synthesizes the final answer; (2) Planner-Coder pipeline, where a thinking model planner generates stepwise SQL generation plans and a coder synthesizes queries; and (3) Coder-Aggregator pipeline, where multiple coders independently generate SQL queries, and a reasoning agent selects the best query. Experiments on the Bird-Bench Mini-Dev set reveal that Multi-Agent discussion can improve small model performance, with up to 10.6% increase in Execution Accuracy for Qwen2.5-7b-Instruct seen after three rounds of discussion. Among the pipelines, the LLM Reasoner-Coder pipeline yields the best results, with DeepSeek-R1-32B and QwQ-32B planners boosting Gemma 3 27B IT accuracy from 52.4% to the highest score of 56.4%. Codes are available at https://github.com/treeDweller98/bappa-sql.",
+    "code_links": [
+      "https://github.com/treeDweller98/bappa-sql"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Subtree Mode and Applications",
+    "authors": "Jialong Zhou, Ben Bals, Matei Tinca, Ai Guan, Panagiotis Charalampopoulos, Grigorios Loukides, Solon P. Pissis",
+    "published": "2025-11-03",
+    "arxiv_id": "2511.01376v1",
+    "url": "http://arxiv.org/abs/2511.01376v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.01376v1",
+    "category": "databases",
+    "primary_category": "cs.DS",
+    "abstract": "The mode of a collection of values (i.e., the most frequent value in the collection) is a key summary statistic. Finding the mode in a given range of an array of values is thus of great importance, and constructing a data structure to solve this problem is in fact the well-known Range Mode problem. In this work, we introduce the Subtree Mode (SM) problem, the analogous problem in a leaf-colored tree, where the task is to compute the most frequent color in the leaves of the subtree of a given node. SM is motivated by several applications in domains such as text analytics and biology, where the data are hierarchical and can thus be represented as a (leaf-colored) tree. Our central contribution is a time-optimal algorithm for SM that computes the answer for every node of an input $N$-node tree in $O(N)$ time. We further show how our solution can be adapted for node-colored trees, or for computing the $k$ most frequent colors, in the optimal $O(N)$ time, for any given $k=O(1)$. Moreover, we prove that a similarly fast solution for when the input is a sink-colored directed acyclic graph instead of a leaf-colored tree is highly unlikely. Our experiments on real datasets with trees of up to 7.3 billion nodes demonstrate that our algorithm is faster than baselines by at least one order of magnitude and much more space efficient. Last, we present case studies showing the effectiveness of our approach in pattern mining and sequence-to-database search applications.",
+    "code_links": [
+      "https://github.com/JialongZhou666/subtree-mode-mining"
+    ],
+    "comment": "For reproduction, code available at https://github.com/JialongZhou666/subtree-mode-mining"
+  },
+  {
+    "title": "DRAMA: Unifying Data Retrieval and Analysis for Open-Domain Analytic Queries",
+    "authors": "Chuxuan Hu, Maxwell Yang, James Weiland, Yeji Lim, Suhas Palawala, Daniel Kang",
+    "published": "2025-10-31",
+    "arxiv_id": "2510.27238v1",
+    "url": "http://arxiv.org/abs/2510.27238v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.27238v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Manually conducting real-world data analyses is labor-intensive and inefficient. Despite numerous attempts to automate data science workflows, none of the existing paradigms or systems fully demonstrate all three key capabilities required to support them effectively: (1) open-domain data collection, (2) structured data transformation, and (3) analytic reasoning.\n  To overcome these limitations, we propose DRAMA, an end-to-end paradigm that answers users' analytic queries in natural language on large-scale open-domain data. DRAMA unifies data collection, transformation, and analysis as a single pipeline. To quantitatively evaluate system performance on tasks representative of DRAMA, we construct a benchmark, DRAMA-Bench, consisting of two categories of tasks: claim verification and question answering, each comprising 100 instances. These tasks are derived from real-world applications that have gained significant public attention and require the retrieval and analysis of open-domain data. We develop DRAMA-Bot, a multi-agent system designed following DRAMA. It comprises a data retriever that collects and transforms data by coordinating the execution of sub-agents, and a data analyzer that performs structured reasoning over the retrieved data. We evaluate DRAMA-Bot on DRAMA-Bench together with five state-of-the-art baseline agents. DRAMA-Bot achieves 86.5% task accuracy at a cost of $0.05, outperforming all baselines with up to 6.9 times the accuracy and less than 1/6 of the cost. DRAMA is publicly available at https://github.com/uiuc-kang-lab/drama.",
+    "code_links": [
+      "https://github.com/uiuc-kang-lab/drama"
+    ],
+    "comment": "Accepted to SIGMOD 2026"
+  },
+  {
+    "title": "Rethinking Text-to-SQL: Dynamic Multi-turn SQL Interaction for Real-world Database Exploration",
+    "authors": "Linzhuang Sun, Tianyu Guo, Hao Liang, Yuying Li, Qifeng Cai, Jingxuan Wei, Bihui Yu, Wentao Zhang, Bin Cui",
+    "published": "2025-10-30",
+    "arxiv_id": "2510.26495v2",
+    "url": "http://arxiv.org/abs/2510.26495v2",
+    "pdf_url": "https://arxiv.org/pdf/2510.26495v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Recent advances in Text-to-SQL have achieved strong results in static, single-turn tasks, where models generate SQL queries from natural language questions. However, these systems fall short in real-world interactive scenarios, where user intents evolve and queries must be refined over multiple turns. In applications such as finance and business analytics, users iteratively adjust query constraints or dimensions based on intermediate results. To evaluate such dynamic capabilities, we introduce DySQL-Bench, a benchmark assessing model performance under evolving user interactions. Unlike previous manually curated datasets, DySQL-Bench is built through an automated two-stage pipeline of task synthesis and verification. Structured tree representations derived from raw database tables guide LLM-based task generation, followed by interaction-oriented filtering and expert validation. Human evaluation confirms 100% correctness of the synthesized data. We further propose a multi-turn evaluation framework simulating realistic interactions among an LLM-simulated user, the model under test, and an executable database. The model must adapt its reasoning and SQL generation as user intents change. DySQL-Bench covers 13 domains across BIRD and Spider 2 databases, totaling 1,072 tasks. Even GPT-4o attains only 58.34% overall accuracy and 23.81% on the Pass@5 metric, underscoring the benchmark's difficulty. All code and data are released at https://github.com/Aurora-slz/Real-World-SQL-Bench .",
+    "code_links": [
+      "https://github.com/Aurora-slz/Real-World-SQL-Bench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Future of AI Models: A Computational perspective on Model collapse",
+    "authors": "Trivikram Satharasi, S Sitharama Iyengar",
+    "published": "2025-10-29",
+    "arxiv_id": "2511.05535v1",
+    "url": "http://arxiv.org/abs/2511.05535v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.05535v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Artificial Intelligence, especially Large Language Models (LLMs), has transformed domains such as software engineering, journalism, creative writing, academia, and media (Naveed et al. 2025; arXiv:2307.06435). Diffusion models like Stable Diffusion generate high-quality images and videos from text. Evidence shows rapid expansion: 74.2% of newly published webpages now contain AI-generated material (Ryan Law 2025), 30-40% of the active web corpus is synthetic (Spennemann 2025; arXiv:2504.08755), 52% of U.S. adults use LLMs for writing, coding, or research (Staff 2025), and audits find AI involvement in 18% of financial complaints and 24% of press releases (Liang et al. 2025). The underlying neural architectures, including Transformers (Vaswani et al. 2023; arXiv:1706.03762), RNNs, LSTMs, GANs, and diffusion networks, depend on large, diverse, human-authored datasets (Shi & Iyengar 2019). As synthetic content dominates, recursive training risks eroding linguistic and semantic diversity, producing Model Collapse (Shumailov et al. 2024; arXiv:2307.15043; Dohmatob et al. 2024; arXiv:2402.07712). This study quantifies and forecasts collapse onset by examining year-wise semantic similarity in English-language Wikipedia (filtered Common Crawl) from 2013 to 2025 using Transformer embeddings and cosine similarity metrics. Results reveal a steady rise in similarity before public LLM adoption, likely driven by early RNN/LSTM translation and text-normalization pipelines, though modest due to a smaller scale. Observed fluctuations reflect irreducible linguistic diversity, variable corpus size across years, finite sampling error, and an exponential rise in similarity after the public adoption of LLM models. These findings provide a data-driven estimate of when recursive AI contamination may significantly threaten data richness and model generalization.",
+    "code_links": [
+      "https://github.com/t-satharasi/AI-Modal-Collapse-Code-for-Reproduction"
+    ],
+    "comment": "Submitted to Springer Nature. Code Available at https://github.com/t-satharasi/AI-Modal-Collapse-Code-for-Reproduction.git"
+  },
+  {
+    "title": "Evaluating Joinable Column Discovery Approaches for Context-Aware Search",
+    "authors": "Harsha Kokel, Aamod Khatiwada, Tejaswini Pedapati, Haritha Ananthakrishnan, Oktie Hassanzadeh, Horst Samulowitz, Kavitha Srinivas",
+    "published": "2025-10-28",
+    "arxiv_id": "2510.24599v1",
+    "url": "http://arxiv.org/abs/2510.24599v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.24599v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Joinable Column Discovery is a critical challenge in automating enterprise data analysis. While existing approaches focus on syntactic overlap and semantic similarity, there remains limited understanding of which methods perform best for different data characteristics and how multiple criteria influence discovery effectiveness. We present a comprehensive experimental evaluation of joinable column discovery methods across diverse scenarios. Our study compares syntactic and semantic techniques on seven benchmarks covering relational databases and data lakes. We analyze six key criteria -- unique values, intersection size, join size, reverse join size, value semantics, and metadata semantics -- and examine how combining them through ensemble ranking affects performance. Our analysis reveals differences in method behavior across data contexts and highlights the benefits of integrating multiple criteria for robust join discovery. We provide empirical evidence on when each criterion matters, compare pre-trained embedding models for semantic joins, and offer practical guidelines for selecting suitable methods based on dataset characteristics. Our findings show that metadata and value semantics are crucial for data lakes, size-based criteria play a stronger role in relational databases, and ensemble approaches consistently outperform single-criterion methods.",
+    "code_links": [
+      "https://github.com/IBM/ContextAwareJoin"
+    ],
+    "comment": "This is an Experiments and Analysis paper. The source code, data, and/or other artifacts have been made available at https://github.com/IBM/ContextAwareJoin"
+  },
+  {
+    "title": "A Survey of Data Agents: Emerging Paradigm or Overstated Hype?",
+    "authors": "Yizhang Zhu, Liangwei Wang, Chenyu Yang, Xiaotian Lin, Boyan Li, Wei Zhou, Xinyu Liu, Zhangyang Peng, Tianqi Luo, Yu Li, Chengliang Chai, Chong Chen, Shimin Di, Ju Fan, Ji Sun, Nan Tang, Fugee Tsung, Jiannan Wang, Chenglin Wu, Yanwei Xu, Shaolei Zhang, Yong Zhang, Xuanhe Zhou, Guoliang Li, Yuyu Luo",
+    "published": "2025-10-27",
+    "arxiv_id": "2510.23587v1",
+    "url": "http://arxiv.org/abs/2510.23587v1",
+    "pdf_url": "https://arxiv.org/pdf/2510.23587v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The rapid advancement of large language models (LLMs) has spurred the emergence of data agents--autonomous systems designed to orchestrate Data + AI ecosystems for tackling complex data-related tasks. However, the term \"data agent\" currently suffers from terminological ambiguity and inconsistent adoption, conflating simple query responders with sophisticated autonomous architectures. This terminological ambiguity fosters mismatched user expectations, accountability challenges, and barriers to industry growth. Inspired by the SAE J3016 standard for driving automation, this survey introduces the first systematic hierarchical taxonomy for data agents, comprising six levels that delineate and trace progressive shifts in autonomy, from manual operations (L0) to a vision of generative, fully autonomous data agents (L5), thereby clarifying capability boundaries and responsibility allocation. Through this lens, we offer a structured review of existing research arranged by increasing autonomy, encompassing specialized data agents for data management, preparation, and analysis, alongside emerging efforts toward versatile, comprehensive systems with enhanced autonomy. We further analyze critical evolutionary leaps and technical gaps for advancing data agents, especially the ongoing L2-to-L3 transition, where data agents evolve from procedural execution to autonomous orchestration. Finally, we conclude with a forward-looking roadmap, envisioning the advent of proactive, generative data agents.",
+    "code_links": [
+      "https://github.com/HKUSTDial/awesome-data-agents"
+    ],
+    "comment": "Please refer to our paper list and companion materials at: https://github.com/HKUSTDial/awesome-data-agents"
+  }
+]
