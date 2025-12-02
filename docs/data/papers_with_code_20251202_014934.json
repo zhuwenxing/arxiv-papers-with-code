@@ -1,0 +1,195 @@
+[
+  {
+    "title": "CoFiRec: Coarse-to-Fine Tokenization for Generative Recommendation",
+    "authors": "Tianxin Wei, Xuying Ning, Xuxing Chen, Ruizhong Qiu, Yupeng Hou, Yan Xie, Shuang Yang, Zhigang Hua, Jingrui He",
+    "published": "2025-11-27",
+    "arxiv_id": "2511.22707v1",
+    "url": "http://arxiv.org/abs/2511.22707v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.22707v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In web environments, user preferences are often refined progressively as users move from browsing broad categories to exploring specific items. However, existing generative recommenders overlook this natural refinement process. Generative recommendation formulates next-item prediction as autoregressive generation over tokenized user histories, where each item is represented as a sequence of discrete tokens. Prior models typically fuse heterogeneous attributes such as ID, category, title, and description into a single embedding before quantization, which flattens the inherent semantic hierarchy of items and fails to capture the gradual evolution of user intent during web interactions. To address this limitation, we propose CoFiRec, a novel generative recommendation framework that explicitly incorporates the Coarse-to-Fine nature of item semantics into the tokenization process. Instead of compressing all attributes into a single latent space, CoFiRec decomposes item information into multiple semantic levels, ranging from high-level categories to detailed descriptions and collaborative filtering signals. Based on this design, we introduce the CoFiRec Tokenizer, which tokenizes each level independently while preserving structural order. During autoregressive decoding, the language model is instructed to generate item tokens from coarse to fine, progressively modeling user intent from general interests to specific item-level interests. Experiments across multiple public benchmarks and backbones demonstrate that CoFiRec outperforms existing methods, offering a new perspective for generative recommendation. Theoretically, we prove that structured tokenization leads to lower dissimilarity between generated and ground truth items, supporting its effectiveness in generative recommendation. Our code is available at https://github.com/YennNing/CoFiRec.",
+    "code_links": [
+      "https://github.com/YennNing/CoFiRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "SciPostGen: Bridging the Gap between Scientific Papers and Poster Layouts",
+    "authors": "Shun Inadumi, Shohei Tanaka, Tosho Hirasawa, Atsushi Hashimoto, Koichiro Yoshino, Yoshitaka Ushiku",
+    "published": "2025-11-27",
+    "arxiv_id": "2511.22490v1",
+    "url": "http://arxiv.org/abs/2511.22490v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.22490v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "As the number of scientific papers continues to grow, there is a demand for approaches that can effectively convey research findings, with posters serving as a key medium for presenting paper contents. Poster layouts determine how effectively research is communicated and understood, highlighting their growing importance. In particular, a gap remains in understanding how papers correspond to the layouts that present them, which calls for datasets with paired annotations at scale. To bridge this gap, we introduce SciPostGen, a large-scale dataset for understanding and generating poster layouts from scientific papers. Our analyses based on SciPostGen show that paper structures are associated with the number of layout elements in posters. Based on this insight, we explore a framework, Retrieval-Augmented Poster Layout Generation, which retrieves layouts consistent with a given paper and uses them as guidance for layout generation. We conducted experiments under two conditions: with and without layout constraints typically specified by poster creators. The results show that the retriever estimates layouts aligned with paper structures, and our framework generates layouts that also satisfy given constraints.",
+    "code_links": [
+      "https://github.com/omron-sinicx/scipostgen_dataset_construction"
+    ],
+    "comment": "Dataset: https://huggingface.co/datasets/omron-sinicx/scipostgen, Code: https://github.com/omron-sinicx/scipostgen_dataset_construction"
+  },
+  {
+    "title": "E-GEO: A Testbed for Generative Engine Optimization in E-Commerce",
+    "authors": "Puneet S. Bagga, Vivek F. Farias, Tamar Korkotashvili, Tianyi Peng, Yuhang Wu",
+    "published": "2025-11-25",
+    "arxiv_id": "2511.20867v1",
+    "url": "http://arxiv.org/abs/2511.20867v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.20867v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "With the rise of large language models (LLMs), generative engines are becoming powerful alternatives to traditional search, reshaping retrieval tasks. In e-commerce, for instance, conversational shopping agents now guide consumers to relevant products. This shift has created the need for generative engine optimization (GEO)--improving content visibility and relevance for generative engines. Yet despite its growing importance, current GEO practices are ad hoc, and their impacts remain poorly understood, especially in e-commerce. We address this gap by introducing E-GEO, the first benchmark built specifically for e-commerce GEO. E-GEO contains over 7,000 realistic, multi-sentence consumer product queries paired with relevant listings, capturing rich intent, constraints, preferences, and shopping contexts that existing datasets largely miss. Using this benchmark, we conduct the first large-scale empirical study of e-commerce GEO, evaluating 15 common rewriting heuristics and comparing their empirical performance. To move beyond heuristics, we further formulate GEO as a tractable optimization problem and develop a lightweight iterative prompt-optimization algorithm that can significantly outperform these baselines. Surprisingly, the optimized prompts reveal a stable, domain-agnostic pattern--suggesting the existence of a \"universally effective\" GEO strategy. Our data and code are publicly available at https://github.com/psbagga17/E-GEO.",
+    "code_links": [
+      "https://github.com/psbagga17/E-GEO"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Kleinkram: Open Robotic Data Management",
+    "authors": "Cyrill Püntener, Johann Schwabe, Dominique Garmier, Jonas Frey, Marco Hutter",
+    "published": "2025-11-25",
+    "arxiv_id": "2511.20492v1",
+    "url": "http://arxiv.org/abs/2511.20492v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.20492v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.RO",
+    "abstract": "We introduce Kleinkram, a free and open-source system designed to solve the challenge of managing massive, unstructured robotic datasets. Designed as a modular, on-premises cloud solution, Kleinkram enables scalable storage, indexing, and sharing of datasets, ranging from individual experiments to large-scale research collections. Kleinkram natively integrates with standard formats such as ROS bags and MCAP and utilises S3-compatible storage for flexibility. Beyond storage, Kleinkram features an integrated \"Action Runner\" that executes customizable Docker-based workflows for data validation, curation, and benchmarking. Kleinkram has successfully managed over 30 TB of data from diverse robotic systems, streamlining the research lifecycle through a modern web interface and a robust Command Line Interface (CLI).",
+    "code_links": [
+      "https://github.com/leggedrobotics/kleinkram"
+    ],
+    "comment": "for associated source code, see https://github.com/leggedrobotics/kleinkram"
+  },
+  {
+    "title": "Enhancing Sequential Recommendation with World Knowledge from Large Language Models",
+    "authors": "Tianjie Dai, Xu Chen, Yunmeng Shu, Jinsong Lan, Xiaoyong Zhu, Jiangchao Yao, Bo Zheng",
+    "published": "2025-11-25",
+    "arxiv_id": "2511.20177v1",
+    "url": "http://arxiv.org/abs/2511.20177v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.20177v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential Recommendation System~(SRS) has become pivotal in modern society, which predicts subsequent actions based on the user's historical behavior. However, traditional collaborative filtering-based sequential recommendation models often lead to suboptimal performance due to the limited information of their collaborative signals. With the rapid development of LLMs, an increasing number of works have incorporated LLMs' world knowledge into sequential recommendation. Although they achieve considerable gains, these approaches typically assume the correctness of LLM-generated results and remain susceptible to noise induced by LLM hallucinations. To overcome these limitations, we propose GRASP (Generation Augmented Retrieval with Holistic Attention for Sequential Prediction), a flexible framework that integrates generation augmented retrieval for descriptive synthesis and similarity retrieval, and holistic attention enhancement which employs multi-level attention to effectively employ LLM's world knowledge even with hallucinations and better capture users' dynamic interests. The retrieved similar users/items serve as auxiliary contextual information for the later holistic attention enhancement module, effectively mitigating the noisy guidance of supervision-based methods. Comprehensive evaluations on two public benchmarks and one industrial dataset reveal that GRASP consistently achieves state-of-the-art performance when integrated with diverse backbones. The code is available at: https://anonymous.4open.science/r/GRASP-SRS.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "Fidelity-Aware Recommendation Explanations via Stochastic Path Integration",
+    "authors": "Oren Barkan, Yahlly Schein, Yehonatan Elisha, Veronika Bogina, Mikhail Baklanov, Noam Koenigstein",
+    "published": "2025-11-22",
+    "arxiv_id": "2511.18047v1",
+    "url": "http://arxiv.org/abs/2511.18047v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.18047v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Explanation fidelity, which measures how accurately an explanation reflects a model's true reasoning, remains critically underexplored in recommender systems. We introduce SPINRec (Stochastic Path Integration for Neural Recommender Explanations), a model-agnostic approach that adapts path-integration techniques to the sparse and implicit nature of recommendation data. To overcome the limitations of prior methods, SPINRec employs stochastic baseline sampling: instead of integrating from a fixed or unrealistic baseline, it samples multiple plausible user profiles from the empirical data distribution and selects the most faithful attribution path. This design captures the influence of both observed and unobserved interactions, yielding more stable and personalized explanations. We conduct the most comprehensive fidelity evaluation to date across three models (MF, VAE, NCF), three datasets (ML1M, Yahoo! Music, Pinterest), and a suite of counterfactual metrics, including AUC-based perturbation curves and fixed-length diagnostics. SPINRec consistently outperforms all baselines, establishing a new benchmark for faithful explainability in recommendation. Code and evaluation tools are publicly available at https://github.com/DeltaLabTLV/SPINRec.",
+    "code_links": [
+      "https://github.com/DeltaLabTLV/SPINRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Extracting Interaction-Aware Monosemantic Concepts in Recommender Systems",
+    "authors": "Dor Arviv, Yehonatan Elisha, Oren Barkan, Noam Koenigstein",
+    "published": "2025-11-22",
+    "arxiv_id": "2511.18024v1",
+    "url": "http://arxiv.org/abs/2511.18024v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.18024v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "We present a method for extracting \\emph{monosemantic} neurons, defined as latent dimensions that align with coherent and interpretable concepts, from user and item embeddings in recommender systems. Our approach employs a Sparse Autoencoder (SAE) to reveal semantic structure within pretrained representations. In contrast to work on language models, monosemanticity in recommendation must preserve the interactions between separate user and item embeddings. To achieve this, we introduce a \\emph{prediction aware} training objective that backpropagates through a frozen recommender and aligns the learned latent structure with the model's user-item affinity predictions. The resulting neurons capture properties such as genre, popularity, and temporal trends, and support post hoc control operations including targeted filtering and content promotion without modifying the base model. Our method generalizes across different recommendation models and datasets, providing a practical tool for interpretable and controllable personalization. Code and evaluation resources are available at https://github.com/DeltaLabTLV/Monosemanticity4Rec.",
+    "code_links": [
+      "https://github.com/DeltaLabTLV/Monosemanticity4Rec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "RASTP: Representation-Aware Semantic Token Pruning for Generative Recommendation with Semantic Identifiers",
+    "authors": "Tianyu Zhan, Kairui Fu, Zheqi Lv, Shengyu Zhang",
+    "published": "2025-11-21",
+    "arxiv_id": "2511.16943v1",
+    "url": "http://arxiv.org/abs/2511.16943v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.16943v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation systems typically leverage Semantic Identifiers (SIDs), which represent each item as a sequence of tokens that encode semantic information. However, representing item ID with multiple SIDs significantly increases input sequence length, which is a major determinant of computational complexity and memory consumption. While existing efforts primarily focus on optimizing attention computation and KV cache, we propose RASTP (Representation-Aware Semantic Token Pruning), which directly prunes less informative tokens in the input sequence. Specifically, RASTP evaluates token importance by combining semantic saliency, measured via representation magnitude, and attention centrality, derived from cumulative attention weights. Since RASTP dynamically prunes low-information or irrelevant semantic tokens, experiments on three real-world Amazon datasets show that RASTP reduces training time by 26.7\\%, while maintaining or slightly improving recommendation performance. The code has been open-sourced at https://github.com/Yuzt-zju/RASTP.",
+    "code_links": [
+      "https://github.com/Yuzt-zju/RASTP"
+    ],
+    "comment": "4 pages"
+  },
+  {
+    "title": "QueryGym: A Toolkit for Reproducible LLM-Based Query Reformulation",
+    "authors": "Amin Bigdeli, Radin Hamidi Rad, Mert Incesu, Negar Arabzadeh, Charles L. A. Clarke, Ebrahim Bagheri",
+    "published": "2025-11-20",
+    "arxiv_id": "2511.15996v1",
+    "url": "http://arxiv.org/abs/2511.15996v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.15996v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "We present QueryGym, a lightweight, extensible Python toolkit that supports large language model (LLM)-based query reformulation. This is an important tool development since recent work on llm-based query reformulation has shown notable increase in retrieval effectiveness. However, while different authors have sporadically shared the implementation of their methods, there is no unified toolkit that provides a consistent implementation of such methods, which hinders fair comparison, rapid experimentation, consistent benchmarking and reliable deployment. QueryGym addresses this gap by providing a unified framework for implementing, executing, and comparing llm-based reformulation methods. The toolkit offers: (1) a Python API for applying diverse LLM-based methods, (2) a retrieval-agnostic interface supporting integration with backends such as Pyserini and PyTerrier, (3) a centralized prompt management system with versioning and metadata tracking, (4) built-in support for benchmarks like BEIR and MS MARCO, and (5) a completely open-source extensible implementation available to all researchers. QueryGym is publicly available at https://github.com/radinhamidi/QueryGym.",
+    "code_links": [
+      "https://github.com/radinhamidi/QueryGym"
+    ],
+    "comment": "4 pages"
+  },
+  {
+    "title": "Beyond GeneGPT: A Multi-Agent Architecture with Open-Source LLMs for Enhanced Genomic Question Answering",
+    "authors": "Haodong Chen, Guido Zuccon, Teerapong Leelanupab",
+    "published": "2025-11-19",
+    "arxiv_id": "2511.15061v1",
+    "url": "http://arxiv.org/abs/2511.15061v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.15061v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Genomic question answering often requires complex reasoning and integration across diverse biomedical sources. GeneGPT addressed this challenge by combining domain-specific APIs with OpenAI's code-davinci-002 large language model to enable natural language interaction with genomic databases. However, its reliance on a proprietary model limits scalability, increases operational costs, and raises concerns about data privacy and generalization.\n  In this work, we revisit and reproduce GeneGPT in a pilot study using open source models, including Llama 3.1, Qwen2.5, and Qwen2.5 Coder, within a monolithic architecture; this allows us to identify the limitations of this approach. Building on this foundation, we then develop OpenBioLLM, a modular multi-agent framework that extends GeneGPT by introducing agent specialization for tool routing, query generation, and response validation. This enables coordinated reasoning and role-based task execution.\n  OpenBioLLM matches or outperforms GeneGPT on over 90% of the benchmark tasks, achieving average scores of 0.849 on Gene-Turing and 0.830 on GeneHop, while using smaller open-source models without additional fine-tuning or tool-specific pretraining. OpenBioLLM's modular multi-agent design reduces latency by 40-50% across benchmark tasks, significantly improving efficiency without compromising model capability. The results of our comprehensive evaluation highlight the potential of open-source multi-agent systems for genomic question answering. Code and resources are available at https://github.com/ielab/OpenBioLLM.",
+    "code_links": [
+      "https://github.com/ielab/OpenBioLLM"
+    ],
+    "comment": "This paper has been accepted to SIGIR-AP 2025"
+  },
+  {
+    "title": "Skeletons Matter: Dynamic Data Augmentation for Text-to-Query",
+    "authors": "Yuchen Ji, Bo Xu, Jie Shi, Jiaqing Liang, Deqing Yang, Yu Mao, Hai Chen, Yanghua Xiao",
+    "published": "2025-11-24",
+    "arxiv_id": "2511.18934v1",
+    "url": "http://arxiv.org/abs/2511.18934v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.18934v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "The task of translating natural language questions into query languages has long been a central focus in semantic parsing. Recent advancements in Large Language Models (LLMs) have significantly accelerated progress in this field. However, existing studies typically focus on a single query language, resulting in methods with limited generalizability across different languages. In this paper, we formally define the Text-to-Query task paradigm, unifying semantic parsing tasks across various query languages. We identify query skeletons as a shared optimization target of Text-to-Query tasks, and propose a general dynamic data augmentation framework that explicitly diagnoses model-specific weaknesses in handling these skeletons to synthesize targeted training data. Experiments on four Text-to-Query benchmarks demonstrate that our method achieves state-of-the-art performance using only a small amount of synthesized data, highlighting the efficiency and generality of our approach and laying a solid foundation for unified research on Text-to-Query tasks. We release our code at https://github.com/jjjycaptain/Skeletron.",
+    "code_links": [
+      "https://github.com/jjjycaptain/Skeletron"
+    ],
+    "comment": "Accepted at EMNLP 2025"
+  },
+  {
+    "title": "RAGPulse: An Open-Source RAG Workload Trace to Optimize RAG Serving Systems",
+    "authors": "Zhengchao Wang, Yitao Hu, Jianing Ye, Zhuxuan Chang, Jiazheng Yu, Youpeng Deng, Keqiu Li",
+    "published": "2025-11-17",
+    "arxiv_id": "2511.12979v1",
+    "url": "http://arxiv.org/abs/2511.12979v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.12979v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Retrieval-Augmented Generation (RAG) is a critical paradigm for building reliable, knowledge-intensive Large Language Model (LLM) applications. However, the multi-stage pipeline (retrieve, generate) and unique workload characteristics (e.g., knowledge dependency) of RAG systems pose significant challenges for serving performance optimization. Existing generic LLM inference traces fail to capture these RAG-specific dynamics, creating a significant performance gap between academic research and real-world deployment. To bridge this gap, this paper introduces RAGPulse, an open-source RAG workload trace dataset. This dataset was collected from an university-wide Q&A system serving that has served more than 40,000 students and faculties since April 2024. We detail RAGPulse's system architecture, its privacy-preserving hash-based data format, and provide an in-depth statistical analysis. Our analysis reveals that real-world RAG workloads exhibit significant temporal locality and a highly skewed hot document access pattern. RAGPulse provides a high-fidelity foundation for researchers to develop and validate novel optimization strategies for RAG systems, such as content-aware batching and retrieval caching, ultimately enhancing the efficiency and reliability of RAG services. The code is available at https://github.com/flashserve/RAGPulse.",
+    "code_links": [
+      "https://github.com/flashserve/RAGPulse"
+    ],
+    "comment": null
+  },
+  {
+    "title": "BAPPA: Benchmarking Agents, Plans, and Pipelines for Automated Text-to-SQL Generation",
+    "authors": "Fahim Ahmed, Md Mubtasim Ahasan, Jahir Sadik Monon, Muntasir Wahed, M Ashraful Amin, A K M Mahbubur Rahman, Amin Ahsan Ali",
+    "published": "2025-11-06",
+    "arxiv_id": "2511.04153v1",
+    "url": "http://arxiv.org/abs/2511.04153v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.04153v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Text-to-SQL systems provide a natural language interface that can enable even laymen to access information stored in databases. However, existing Large Language Models (LLM) struggle with SQL generation from natural instructions due to large schema sizes and complex reasoning. Prior work often focuses on complex, somewhat impractical pipelines using flagship models, while smaller, efficient models remain overlooked. In this work, we explore three multi-agent LLM pipelines, with systematic performance benchmarking across a range of small to large open-source models: (1) Multi-agent discussion pipeline, where agents iteratively critique and refine SQL queries, and a judge synthesizes the final answer; (2) Planner-Coder pipeline, where a thinking model planner generates stepwise SQL generation plans and a coder synthesizes queries; and (3) Coder-Aggregator pipeline, where multiple coders independently generate SQL queries, and a reasoning agent selects the best query. Experiments on the Bird-Bench Mini-Dev set reveal that Multi-Agent discussion can improve small model performance, with up to 10.6% increase in Execution Accuracy for Qwen2.5-7b-Instruct seen after three rounds of discussion. Among the pipelines, the LLM Reasoner-Coder pipeline yields the best results, with DeepSeek-R1-32B and QwQ-32B planners boosting Gemma 3 27B IT accuracy from 52.4% to the highest score of 56.4%. Codes are available at https://github.com/treeDweller98/bappa-sql.",
+    "code_links": [
+      "https://github.com/treeDweller98/bappa-sql"
+    ],
+    "comment": null
+  }
+]
