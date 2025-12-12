@@ -1,0 +1,210 @@
+[
+  {
+    "title": "Structural and Disentangled Adaptation of Large Vision Language Models for Multimodal Recommendation",
+    "authors": "Zhongtao Rao, Peilin Zhou, Dading Chong, Zhiwei Chen, Shoujin Wang, Nan Tang",
+    "published": "2025-12-07",
+    "arxiv_id": "2512.06883v1",
+    "url": "http://arxiv.org/abs/2512.06883v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.06883v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal recommendation enhances accuracy by leveraging visual and textual signals, and its success largely depends on learning high-quality cross-modal representations. Recent advances in Large Vision-Language Models (LVLMs) offer unified multimodal representation learning, making them a promising backbone. However, applying LVLMs to recommendation remains challenging due to (i) representation misalignment, where domain gaps between item data and general pre-training lead to unaligned embedding spaces, and (ii) gradient conflicts during fine-tuning, where shared adapters cause interference and a lack of discriminative power. To address this, we propose SDA, a lightweight framework for Structural and Disentangled Adaptation, which integrates two components: Cross-Modal Structural Alignment (CMSA) and Modality-Disentangled Adaptation. CMSA aligns embeddings using intra-modal structures as a soft teacher, while MoDA mitigates gradient conflicts via expertized, gated low-rank paths to disentangle gradient flows. Experiments on three public Amazon datasets show SDA integrates seamlessly with existing multimodal and sequential recommenders, yielding average gains of 6.15% in Hit@10 and 8.64% in NDCG@10. It also achieves up to 12.83% and 18.70% gains on long-tail items with minimal inference overhead. Our code and full experimental results are available at https://github.com/RaoZhongtao/SDA.",
+    "code_links": [
+      "https://github.com/RaoZhongtao/SDA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Sift or Get Off the PoC: Applying Information Retrieval to Vulnerability Research with SiftRank",
+    "authors": "Caleb Gross",
+    "published": "2025-12-05",
+    "arxiv_id": "2512.06155v1",
+    "url": "http://arxiv.org/abs/2512.06155v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.06155v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CR",
+    "abstract": "Security research is fundamentally a problem of resource constraint and consequent prioritization. There is simply too much attack surface and too little time and energy to spend analyzing it all. The most effective security researchers are often those who are most skilled at intuitively deciding which part of an expansive attack surface to investigate. We demonstrate that this problem of selecting the most promising option from among many possibilities can be reframed as an information retrieval problem, and solved using document ranking techniques with LLMs performing the heavy lifting as general-purpose rankers. We present SiftRank, a ranking algorithm achieving O(n) complexity through three key mechanisms: listwise ranking using an LLM to order documents in small batches of approximately 10 items at a time; inflection-based convergence detection that adaptively terminates ranking when score distributions have stabilized; and iterative refinement that progressively focuses ranking effort on the most relevant documents. Unlike existing reranking approaches that require a separate first-stage retrieval step to narrow datasets to approximately 100 candidates, SiftRank operates directly on thousands of items, with each document evaluated across multiple randomized batches to mitigate inconsistent judgments by an LLM. We demonstrate practical effectiveness on N-day vulnerability analysis, successfully identifying a vulnerability-fixing function among 2,197 changed functions in a stripped binary firmware patch within 99 seconds at an inference cost of $0.82. Our approach enables scalable security prioritization for problems that are generally constrained by manual analysis, requiring only standard LLM API access without specialized infrastructure, embedding, or domain-specific fine-tuning. An open-source implementation of SiftRank may be found at https://github.com/noperator/siftrank.",
+    "code_links": [
+      "https://github.com/noperator/siftrank"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Algorithms for Boolean Matrix Factorization using Integer Programming and Heuristics",
+    "authors": "Christos Kolomvakis, Thomas Bobille, Arnaud Vandaele, Nicolas Gillis",
+    "published": "2025-12-03",
+    "arxiv_id": "2512.03807v2",
+    "url": "http://arxiv.org/abs/2512.03807v2",
+    "pdf_url": "https://arxiv.org/pdf/2512.03807v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Boolean matrix factorization (BMF) approximates a given binary input matrix as the product of two smaller binary factors. Unlike binary matrix factorization based on standard arithmetic, BMF employs the Boolean OR and AND operations for the matrix product, which improves interpretability and reduces the approximation error. It is also used in role mining and computer vision. In this paper, we first propose algorithms for BMF that perform alternating optimization (AO) of the factor matrices, where each subproblem is solved via integer programming (IP). We then design different approaches to further enhance AO-based algorithms by selecting an optimal subset of rank-one factors from multiple runs. To address the scalability limits of IP-based methods, we introduce new greedy and local-search heuristics. We also construct a new C++ data structure for Boolean vectors and matrices that is significantly faster than existing ones and is of independent interest, allowing our heuristics to scale to large datasets. We illustrate the performance of all our proposed methods and compare them with the state of the art on various real datasets, both with and without missing data, including applications in topic modeling and imaging.",
+    "code_links": [],
+    "comment": "24 pages, 12 tables, 3 figures, 2 typos corrected in v2, code and data available from https://gitlab.com/ckolomvakis/boolean-matrix-factorization-ip-and-heuristics"
+  },
+  {
+    "title": "Towards Unification of Hallucination Detection and Fact Verification for Large Language Models",
+    "authors": "Weihang Su, Jianming Long, Changyue Wang, Shiyu Lin, Jingyan Xu, Ziyi Ye, Qingyao Ai, Yiqun Liu",
+    "published": "2025-12-02",
+    "arxiv_id": "2512.02772v1",
+    "url": "http://arxiv.org/abs/2512.02772v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.02772v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large Language Models (LLMs) frequently exhibit hallucinations, generating content that appears fluent and coherent but is factually incorrect. Such errors undermine trust and hinder their adoption in real-world applications. To address this challenge, two distinct research paradigms have emerged: model-centric Hallucination Detection (HD) and text-centric Fact Verification (FV). Despite sharing the same goal, these paradigms have evolved in isolation, using distinct assumptions, datasets, and evaluation protocols. This separation has created a research schism that hinders their collective progress. In this work, we take a decisive step toward bridging this divide. We introduce UniFact, a unified evaluation framework that enables direct, instance-level comparison between FV and HD by dynamically generating model outputs and corresponding factuality labels. Through large-scale experiments across multiple LLM families and detection methods, we reveal three key findings: (1) No paradigm is universally superior; (2) HD and FV capture complementary facets of factual errors; and (3) hybrid approaches that integrate both methods consistently achieve state-of-the-art performance. Beyond benchmarking, we provide the first in-depth analysis of why FV and HD diverged, as well as empirical evidence supporting the need for their unification. The comprehensive experimental results call for a new, integrated research agenda toward unifying Hallucination Detection and Fact Verification in LLMs.\n  We have open-sourced all the code, data, and baseline implementation at: https://github.com/oneal2000/UniFact/",
+    "code_links": [
+      "https://github.com/oneal2000/UniFact"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Spatially-Grounded Document Retrieval via Patch-to-Region Relevance Propagation",
+    "authors": "Agathoklis Georgiou",
+    "published": "2025-12-02",
+    "arxiv_id": "2512.02660v1",
+    "url": "http://arxiv.org/abs/2512.02660v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.02660v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Vision-language models (VLMs) like ColPali achieve state-of-the-art document retrieval by embedding pages as images and computing fine-grained similarity between query tokens and visual patches. However, they return entire pages rather than specific regions, limiting utility for retrieval-augmented generation (RAG) where precise context is paramount. Conversely, OCR-based systems extract structured text with bounding box coordinates but lack semantic grounding for relevance assessment. We propose a hybrid architecture that unifies these paradigms: using ColPali's patch-level similarity scores as spatial relevance filters over OCR-extracted regions. We formalize the coordinate mapping between vision transformer patch grids and OCR bounding boxes, introduce intersection metrics for relevance propagation, and establish theoretical bounds on retrieval precision. Our approach operates at inference time without additional training. We release Snappy, an open-source implementation demonstrating practical applicability, with empirical evaluation ongoing.",
+    "code_links": [
+      "https://github.com/athrael-soju/Snappy"
+    ],
+    "comment": "13 pages, 1 figure, 2 tables. Open-source implementation available at https://github.com/athrael-soju/Snappy"
+  },
+  {
+    "title": "Towards Contextual Sensitive Data Detection",
+    "authors": "Liang Telkamp, Madelon Hulsebos",
+    "published": "2025-12-02",
+    "arxiv_id": "2512.04120v1",
+    "url": "http://arxiv.org/abs/2512.04120v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.04120v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CR",
+    "abstract": "The emergence of open data portals necessitates more attention to protecting sensitive data before datasets get published and exchanged. While an abundance of methods for suppressing sensitive data exist, the conceptualization of sensitive data and methods to detect it, focus particularly on personal data that, if disclosed, may be harmful or violate privacy. We observe the need for refining and broadening our definitions of sensitive data, and argue that the sensitivity of data depends on its context. Based on this definition, we introduce two mechanisms for contextual sensitive data detection that consider the broader context of a dataset at hand. First, we introduce type contextualization, which first detects the semantic type of particular data values, then considers the overall context of the data values within the dataset or document. Second, we introduce domain contextualization which determines sensitivity of a given dataset in the broader context based on the retrieval of relevant rules from documents that specify data sensitivity (e.g., data topic and geographic origin). Experiments with these mechanisms, assisted by large language models (LLMs), confirm that: 1) type-contextualization significantly reduces the number of false positives for type-based sensitive data detection and reaches a recall of 94% compared to 63% with commercial tools, and 2) domain-contextualization leveraging sensitivity rule retrieval is effective for context-grounded sensitive data detection in non-standard data domains such as humanitarian datasets. Evaluation with humanitarian data experts also reveals that context-grounded LLM explanations provide useful guidance in manual data auditing processes, improving consistency. We open-source mechanisms and annotated datasets for contextual sensitive data detection at https://github.com/trl-lab/sensitive-data-detection.",
+    "code_links": [
+      "https://github.com/trl-lab/sensitive-data-detection"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Toward a benchmark for CTR prediction in online advertising: datasets, evaluation protocols and perspectives",
+    "authors": "Shan Gao, Yanwu Yang",
+    "published": "2025-12-01",
+    "arxiv_id": "2512.01179v1",
+    "url": "http://arxiv.org/abs/2512.01179v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.01179v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "This research designs a unified architecture of CTR prediction benchmark (Bench-CTR) platform that offers flexible interfaces with datasets and components of a wide range of CTR prediction models. Moreover, we construct a comprehensive system of evaluation protocols encompassing real-world and synthetic datasets, a taxonomy of metrics, standardized procedures and experimental guidelines for calibrating the performance of CTR prediction models. Furthermore, we implement the proposed benchmark platform and conduct a comparative study to evaluate a wide range of state-of-the-art models from traditional multivariate statistical to modern large language model (LLM)-based approaches on three public datasets and two synthetic datasets. Experimental results reveal that, (1) high-order models largely outperform low-order models, though such advantage varies in terms of metrics and on different datasets; (2) LLM-based models demonstrate a remarkable data efficiency, i.e., achieving the comparable performance to other models while using only 2% of the training data; (3) the performance of CTR prediction models has achieved significant improvements from 2015 to 2016, then reached a stage with slow progress, which is consistent across various datasets. This benchmark is expected to facilitate model development and evaluation and enhance practitioners' understanding of the underlying mechanisms of models in the area of CTR prediction. Code is available at https://github.com/NuriaNinja/Bench-CTR.",
+    "code_links": [
+      "https://github.com/NuriaNinja/Bench-CTR"
+    ],
+    "comment": "64 pages, 8 figures, 11 tables"
+  },
+  {
+    "title": "CoFiRec: Coarse-to-Fine Tokenization for Generative Recommendation",
+    "authors": "Tianxin Wei, Xuying Ning, Xuxing Chen, Ruizhong Qiu, Yupeng Hou, Yan Xie, Shuang Yang, Zhigang Hua, Jingrui He",
+    "published": "2025-11-27",
+    "arxiv_id": "2511.22707v1",
+    "url": "http://arxiv.org/abs/2511.22707v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.22707v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In web environments, user preferences are often refined progressively as users move from browsing broad categories to exploring specific items. However, existing generative recommenders overlook this natural refinement process. Generative recommendation formulates next-item prediction as autoregressive generation over tokenized user histories, where each item is represented as a sequence of discrete tokens. Prior models typically fuse heterogeneous attributes such as ID, category, title, and description into a single embedding before quantization, which flattens the inherent semantic hierarchy of items and fails to capture the gradual evolution of user intent during web interactions. To address this limitation, we propose CoFiRec, a novel generative recommendation framework that explicitly incorporates the Coarse-to-Fine nature of item semantics into the tokenization process. Instead of compressing all attributes into a single latent space, CoFiRec decomposes item information into multiple semantic levels, ranging from high-level categories to detailed descriptions and collaborative filtering signals. Based on this design, we introduce the CoFiRec Tokenizer, which tokenizes each level independently while preserving structural order. During autoregressive decoding, the language model is instructed to generate item tokens from coarse to fine, progressively modeling user intent from general interests to specific item-level interests. Experiments across multiple public benchmarks and backbones demonstrate that CoFiRec outperforms existing methods, offering a new perspective for generative recommendation. Theoretically, we prove that structured tokenization leads to lower dissimilarity between generated and ground truth items, supporting its effectiveness in generative recommendation. Our code is available at https://github.com/YennNing/CoFiRec.",
+    "code_links": [
+      "https://github.com/YennNing/CoFiRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "SciPostGen: Bridging the Gap between Scientific Papers and Poster Layouts",
+    "authors": "Shun Inadumi, Shohei Tanaka, Tosho Hirasawa, Atsushi Hashimoto, Koichiro Yoshino, Yoshitaka Ushiku",
+    "published": "2025-11-27",
+    "arxiv_id": "2511.22490v1",
+    "url": "http://arxiv.org/abs/2511.22490v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.22490v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "As the number of scientific papers continues to grow, there is a demand for approaches that can effectively convey research findings, with posters serving as a key medium for presenting paper contents. Poster layouts determine how effectively research is communicated and understood, highlighting their growing importance. In particular, a gap remains in understanding how papers correspond to the layouts that present them, which calls for datasets with paired annotations at scale. To bridge this gap, we introduce SciPostGen, a large-scale dataset for understanding and generating poster layouts from scientific papers. Our analyses based on SciPostGen show that paper structures are associated with the number of layout elements in posters. Based on this insight, we explore a framework, Retrieval-Augmented Poster Layout Generation, which retrieves layouts consistent with a given paper and uses them as guidance for layout generation. We conducted experiments under two conditions: with and without layout constraints typically specified by poster creators. The results show that the retriever estimates layouts aligned with paper structures, and our framework generates layouts that also satisfy given constraints.",
+    "code_links": [
+      "https://github.com/omron-sinicx/scipostgen_dataset_construction"
+    ],
+    "comment": "Dataset: https://huggingface.co/datasets/omron-sinicx/scipostgen, Code: https://github.com/omron-sinicx/scipostgen_dataset_construction"
+  },
+  {
+    "title": "E-GEO: A Testbed for Generative Engine Optimization in E-Commerce",
+    "authors": "Puneet S. Bagga, Vivek F. Farias, Tamar Korkotashvili, Tianyi Peng, Yuhang Wu",
+    "published": "2025-11-25",
+    "arxiv_id": "2511.20867v1",
+    "url": "http://arxiv.org/abs/2511.20867v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.20867v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "With the rise of large language models (LLMs), generative engines are becoming powerful alternatives to traditional search, reshaping retrieval tasks. In e-commerce, for instance, conversational shopping agents now guide consumers to relevant products. This shift has created the need for generative engine optimization (GEO)--improving content visibility and relevance for generative engines. Yet despite its growing importance, current GEO practices are ad hoc, and their impacts remain poorly understood, especially in e-commerce. We address this gap by introducing E-GEO, the first benchmark built specifically for e-commerce GEO. E-GEO contains over 7,000 realistic, multi-sentence consumer product queries paired with relevant listings, capturing rich intent, constraints, preferences, and shopping contexts that existing datasets largely miss. Using this benchmark, we conduct the first large-scale empirical study of e-commerce GEO, evaluating 15 common rewriting heuristics and comparing their empirical performance. To move beyond heuristics, we further formulate GEO as a tractable optimization problem and develop a lightweight iterative prompt-optimization algorithm that can significantly outperform these baselines. Surprisingly, the optimized prompts reveal a stable, domain-agnostic pattern--suggesting the existence of a \"universally effective\" GEO strategy. Our data and code are publicly available at https://github.com/psbagga17/E-GEO.",
+    "code_links": [
+      "https://github.com/psbagga17/E-GEO"
+    ],
+    "comment": null
+  },
+  {
+    "title": "NeurIDA: Dynamic Modeling for Effective In-Database Analytics",
+    "authors": "Lingze Zeng, Naili Xing, Shaofeng Cai, Peng Lu, Gang Chen, Jian Pei, Beng Chin Ooi",
+    "published": "2025-12-09",
+    "arxiv_id": "2512.08483v1",
+    "url": "http://arxiv.org/abs/2512.08483v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.08483v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Relational Database Management Systems (RDBMS) manage complex, interrelated data and support a broad spectrum of analytical tasks. With the growing demand for predictive analytics, the deep integration of machine learning (ML) into RDBMS has become critical. However, a fundamental challenge hinders this evolution: conventional ML models are static and task-specific, whereas RDBMS environments are dynamic and must support diverse analytical queries. Each analytical task entails constructing a bespoke pipeline from scratch, which incurs significant development overhead and hence limits wide adoption of ML in analytics.\n  We present NeurIDA, an autonomous end-to-end system for in-database analytics that dynamically \"tweaks\" the best available base model to better serve a given analytical task. In particular, we propose a novel paradigm of dynamic in-database modeling to pre-train a composable base model architecture over the relational data. Upon receiving a task, NeurIDA formulates the task and data profile to dynamically select and configure relevant components from the pool of base models and shared model components for prediction. For friendly user experience, NeurIDA supports natural language queries; it interprets user intent to construct structured task profiles, and generates analytical reports with dedicated LLM agents. By design, NeurIDA enables ease-of-use and yet effective and efficient in-database AI analytics. Extensive experiment study shows that NeurIDA consistently delivers up to 12% improvement in AUC-ROC and 25% relative reduction in MAE across ten tasks on five real-world datasets. The source code is available at https://github.com/Zrealshadow/NeurIDA",
+    "code_links": [
+      "https://github.com/Zrealshadow/NeurIDA"
+    ],
+    "comment": "13 pages"
+  },
+  {
+    "title": "Parajudica: An RDF-Based Reasoner and Metamodel for Multi-Framework Context-Dependent Data Compliance Assessments",
+    "authors": "Luc Moreau, Alfred Rossi, Sophie Stalla-Bourdillon",
+    "published": "2025-12-05",
+    "arxiv_id": "2512.05453v1",
+    "url": "http://arxiv.org/abs/2512.05453v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.05453v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Motivated by the challenges of implementing policy-based data access control (PBAC) under multiple simultaneously applicable compliance frameworks, we present Parajudica, an open, modular, and extensible RDF/SPARQL-based rule system for evaluating context-dependent data compliance status. We demonstrate the utility of this resource and accompanying metamodel through application to existing legal frameworks and industry standards, offering insights for comparative framework analysis. Applications include compliance policy enforcement, compliance monitoring, data discovery, and risk assessment.",
+    "code_links": [
+      "https://github.com/alfredr/parajudica"
+    ],
+    "comment": "17 pages, 8 figures. Code and examples available at https://github.com/alfredr/parajudica"
+  },
+  {
+    "title": "Towards Contextual Sensitive Data Detection",
+    "authors": "Liang Telkamp, Madelon Hulsebos",
+    "published": "2025-12-02",
+    "arxiv_id": "2512.04120v1",
+    "url": "http://arxiv.org/abs/2512.04120v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.04120v1",
+    "category": "databases",
+    "primary_category": "cs.CR",
+    "abstract": "The emergence of open data portals necessitates more attention to protecting sensitive data before datasets get published and exchanged. While an abundance of methods for suppressing sensitive data exist, the conceptualization of sensitive data and methods to detect it, focus particularly on personal data that, if disclosed, may be harmful or violate privacy. We observe the need for refining and broadening our definitions of sensitive data, and argue that the sensitivity of data depends on its context. Based on this definition, we introduce two mechanisms for contextual sensitive data detection that consider the broader context of a dataset at hand. First, we introduce type contextualization, which first detects the semantic type of particular data values, then considers the overall context of the data values within the dataset or document. Second, we introduce domain contextualization which determines sensitivity of a given dataset in the broader context based on the retrieval of relevant rules from documents that specify data sensitivity (e.g., data topic and geographic origin). Experiments with these mechanisms, assisted by large language models (LLMs), confirm that: 1) type-contextualization significantly reduces the number of false positives for type-based sensitive data detection and reaches a recall of 94% compared to 63% with commercial tools, and 2) domain-contextualization leveraging sensitivity rule retrieval is effective for context-grounded sensitive data detection in non-standard data domains such as humanitarian datasets. Evaluation with humanitarian data experts also reveals that context-grounded LLM explanations provide useful guidance in manual data auditing processes, improving consistency. We open-source mechanisms and annotated datasets for contextual sensitive data detection at https://github.com/trl-lab/sensitive-data-detection.",
+    "code_links": [
+      "https://github.com/trl-lab/sensitive-data-detection"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Skeletons Matter: Dynamic Data Augmentation for Text-to-Query",
+    "authors": "Yuchen Ji, Bo Xu, Jie Shi, Jiaqing Liang, Deqing Yang, Yu Mao, Hai Chen, Yanghua Xiao",
+    "published": "2025-11-24",
+    "arxiv_id": "2511.18934v1",
+    "url": "http://arxiv.org/abs/2511.18934v1",
+    "pdf_url": "https://arxiv.org/pdf/2511.18934v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "The task of translating natural language questions into query languages has long been a central focus in semantic parsing. Recent advancements in Large Language Models (LLMs) have significantly accelerated progress in this field. However, existing studies typically focus on a single query language, resulting in methods with limited generalizability across different languages. In this paper, we formally define the Text-to-Query task paradigm, unifying semantic parsing tasks across various query languages. We identify query skeletons as a shared optimization target of Text-to-Query tasks, and propose a general dynamic data augmentation framework that explicitly diagnoses model-specific weaknesses in handling these skeletons to synthesize targeted training data. Experiments on four Text-to-Query benchmarks demonstrate that our method achieves state-of-the-art performance using only a small amount of synthesized data, highlighting the efficiency and generality of our approach and laying a solid foundation for unified research on Text-to-Query tasks. We release our code at https://github.com/jjjycaptain/Skeletron.",
+    "code_links": [
+      "https://github.com/jjjycaptain/Skeletron"
+    ],
+    "comment": "Accepted at EMNLP 2025"
+  }
+]
