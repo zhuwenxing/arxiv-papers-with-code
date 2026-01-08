@@ -1,0 +1,242 @@
+[
+  {
+    "title": "Ahead of the Spread: Agent-Driven Virtual Propagation for Early Fake News Detection",
+    "authors": "Bincheng Gu, Min Gao, Junliang Yu, Zongwei Wang, Zhiyi Liu, Kai Shu, Hongyu Zhang",
+    "published": "2026-01-06",
+    "arxiv_id": "2601.02750v1",
+    "url": "http://arxiv.org/abs/2601.02750v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.02750v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Early detection of fake news is critical for mitigating its rapid dissemination on social media, which can severely undermine public trust and social stability. Recent advancements show that incorporating propagation dynamics can significantly enhance detection performance compared to previous content-only approaches. However, this remains challenging at early stages due to the absence of observable propagation signals. To address this limitation, we propose AVOID, an \\underline{a}gent-driven \\underline{v}irtual pr\\underline{o}pagat\\underline{i}on for early fake news \\underline{d}etection. AVOID reformulates early detection as a new paradigm of evidence generation, where propagation signals are actively simulated rather than passively observed. Leveraging LLM-powered agents with differentiated roles and data-driven personas, AVOID realistically constructs early-stage diffusion behaviors without requiring real propagation data. The resulting virtual trajectories provide complementary social evidence that enriches content-based detection, while a denoising-guided fusion strategy aligns simulated propagation with content semantics. Extensive experiments on benchmark datasets demonstrate that AVOID consistently outperforms state-of-the-art baselines, highlighting the effectiveness and practical value of virtual propagation augmentation for early fake news detection. The code and data are available at https://github.com/Ironychen/AVOID.",
+    "code_links": [
+      "https://github.com/Ironychen/AVOID"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MergeRec: Model Merging for Data-Isolated Cross-Domain Sequential Recommendation",
+    "authors": "Hyunsoo Kim, Jaewan Moon, Seongmin Park, Jongwuk Lee",
+    "published": "2026-01-05",
+    "arxiv_id": "2601.01753v1",
+    "url": "http://arxiv.org/abs/2601.01753v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.01753v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Modern recommender systems trained on domain-specific data often struggle to generalize across multiple domains. Cross-domain sequential recommendation has emerged as a promising research direction to address this challenge; however, existing approaches face fundamental limitations, such as reliance on overlapping users or items across domains, or unrealistic assumptions that ignore privacy constraints. In this work, we propose a new framework, MergeRec, based on model merging under a new and realistic problem setting termed data-isolated cross-domain sequential recommendation, where raw user interaction data cannot be shared across domains. MergeRec consists of three key components: (1) merging initialization, (2) pseudo-user data construction, and (3) collaborative merging optimization. First, we initialize a merged model using training-free merging techniques. Next, we construct pseudo-user data by treating each item as a virtual sequence in each domain, enabling the synthesis of meaningful training samples without relying on real user interactions. Finally, we optimize domain-specific merging weights through a joint objective that combines a recommendation loss, which encourages the merged model to identify relevant items, and a distillation loss, which transfers collaborative filtering signals from the fine-tuned source models. Extensive experiments demonstrate that MergeRec not only preserves the strengths of the original models but also significantly enhances generalizability to unseen domains. Compared to conventional model merging methods, MergeRec consistently achieves superior performance, with average improvements of up to 17.21% in Recall@10, highlighting the potential of model merging as a scalable and effective approach for building universal recommender systems. The source code is available at https://github.com/DIALLab-SKKU/MergeRec.",
+    "code_links": [
+      "https://github.com/DIALLab-SKKU/MergeRec"
+    ],
+    "comment": "Accepted by KDD 2026"
+  },
+  {
+    "title": "Time-Aware Adaptive Side Information Fusion for Sequential Recommendation",
+    "authors": "Jie Luo, Wenyu Zhang, Xinming Zhang, Yuan Fang",
+    "published": "2025-12-30",
+    "arxiv_id": "2512.24246v1",
+    "url": "http://arxiv.org/abs/2512.24246v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.24246v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Incorporating item-side information, such as category and brand, into sequential recommendation is a well-established and effective approach for improving performance. However, despite significant advancements, current models are generally limited by three key challenges: they often overlook the fine-grained temporal dynamics inherent in timestamps, exhibit vulnerability to noise in user interaction sequences, and rely on computationally expensive fusion architectures. To systematically address these challenges, we propose the Time-Aware Adaptive Side Information Fusion (TASIF) framework. TASIF integrates three synergistic components: (1) a simple, plug-and-play time span partitioning mechanism to capture global temporal patterns; (2) an adaptive frequency filter that leverages a learnable gate to denoise feature sequences adaptively, thereby providing higher-quality inputs for subsequent fusion modules; and (3) an efficient adaptive side information fusion layer, this layer employs a \"guide-not-mix\" architecture, where attributes guide the attention mechanism without being mixed into the content-representing item embeddings, ensuring deep interaction while ensuring computational efficiency. Extensive experiments on four public datasets demonstrate that TASIF significantly outperforms state-of-the-art baselines while maintaining excellent efficiency in training. Our source code is available at https://github.com/jluo00/TASIF.",
+    "code_links": [
+      "https://github.com/jluo00/TASIF"
+    ],
+    "comment": "10 pages. Accepted by WSDM'26"
+  },
+  {
+    "title": "AutoPP: Towards Automated Product Poster Generation and Optimization",
+    "authors": "Jiahao Fan, Yuxin Qin, Wei Feng, Yanyin Chen, Yaoyu Li, Ao Ma, Yixiu Li, Li Zhuang, Haoyi Bian, Zheng Zhang, Jingjing Lv, Junjie Shen, Ching Law",
+    "published": "2025-12-26",
+    "arxiv_id": "2512.21921v1",
+    "url": "http://arxiv.org/abs/2512.21921v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.21921v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Product posters blend striking visuals with informative text to highlight the product and capture customer attention. However, crafting appealing posters and manually optimizing them based on online performance is laborious and resource-consuming. To address this, we introduce AutoPP, an automated pipeline for product poster generation and optimization that eliminates the need for human intervention. Specifically, the generator, relying solely on basic product information, first uses a unified design module to integrate the three key elements of a poster (background, text, and layout) into a cohesive output. Then, an element rendering module encodes these elements into condition tokens, efficiently and controllably generating the product poster. Based on the generated poster, the optimizer enhances its Click-Through Rate (CTR) by leveraging online feedback. It systematically replaces elements to gather fine-grained CTR comparisons and utilizes Isolated Direct Preference Optimization (IDPO) to attribute CTR gains to isolated elements. Our work is supported by AutoPP1M, the largest dataset specifically designed for product poster generation and optimization, which contains one million high-quality posters and feedback collected from over one million users. Experiments demonstrate that AutoPP achieves state-of-the-art results in both offline and online settings. Our code and dataset are publicly available at: https://github.com/JD-GenX/AutoPP",
+    "code_links": [
+      "https://github.com/JD-GenX/AutoPP"
+    ],
+    "comment": "Accepted to AAAI 2026"
+  },
+  {
+    "title": "KG20C & KG20C-QA: Scholarly Knowledge Graph Benchmarks for Link Prediction and Question Answering",
+    "authors": "Hung-Nghiep Tran, Atsuhiro Takasu",
+    "published": "2025-12-25",
+    "arxiv_id": "2512.21799v2",
+    "url": "http://arxiv.org/abs/2512.21799v2",
+    "pdf_url": "https://arxiv.org/pdf/2512.21799v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In this paper, we present KG20C and KG20C-QA, two curated datasets for advancing question answering (QA) research on scholarly data. KG20C is a high-quality scholarly knowledge graph constructed from the Microsoft Academic Graph through targeted selection of venues, quality-based filtering, and schema definition. Although KG20C has been available online in non-peer-reviewed sources such as GitHub repository, this paper provides the first formal, peer-reviewed description of the dataset, including clear documentation of its construction and specifications. KG20C-QA is built upon KG20C to support QA tasks on scholarly data. We define a set of QA templates that convert graph triples into natural language question--answer pairs, producing a benchmark that can be used both with graph-based models such as knowledge graph embeddings and with text-based models such as large language models. We benchmark standard knowledge graph embedding methods on KG20C-QA, analyze performance across relation types, and provide reproducible evaluation protocols. By officially releasing these datasets with thorough documentation, we aim to contribute a reusable, extensible resource for the research community, enabling future work in QA, reasoning, and knowledge-driven applications in the scholarly domain. The full datasets will be released at https://github.com/tranhungnghiep/KG20C/ upon paper publication.",
+    "code_links": [
+      "https://github.com/tranhungnghiep/KG20C"
+    ],
+    "comment": "extracted and extended from author's PhD thesis, \"Multi-Relational Embedding for Knowledge Graph Representation and Analysis\""
+  },
+  {
+    "title": "CogCanvas: Verbatim-Grounded Artifact Extraction for Long LLM Conversations",
+    "authors": "Tao An",
+    "published": "2025-12-23",
+    "arxiv_id": "2601.00821v2",
+    "url": "http://arxiv.org/abs/2601.00821v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.00821v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Conversation summarization loses nuanced details: when asked about coding preferences after 40 turns, summarization recalls \"use type hints\" but drops the critical constraint \"everywhere\" (19.0% exact match vs. 93.0% for our approach).\n  We present CogCanvas, a training-free framework inspired by how teams use whiteboards to anchor shared memory. Rather than compressing conversation history, CogCanvas extracts verbatim-grounded artifacts (decisions, facts, reminders) and retrieves them via temporal-aware graph.\n  On the LoCoMo benchmark (all 10 conversations from the ACL 2024 release), CogCanvas achieves the highest overall accuracy among training-free methods (32.4%), outperforming RAG (24.6%) by +7.8pp, with decisive advantages on complex reasoning tasks: +20.6pp on temporal reasoning (32.7% vs. 12.1% RAG) and +1.1pp on multi-hop questions (41.7% vs. 40.6% RAG). CogCanvas also leads on single-hop retrieval (26.6% vs. 24.6% RAG). Ablation studies reveal that BGE reranking contributes +7.7pp, making it the largest contributor to CogCanvas's performance.\n  While heavily-optimized approaches achieve higher absolute scores through dedicated training (EverMemOS: ~92%), our training-free approach provides practitioners with an immediately-deployable alternative that significantly outperforms standard baselines. Code and data: https://github.com/tao-hpu/cog-canvas",
+    "code_links": [
+      "https://github.com/tao-hpu/cog-canvas"
+    ],
+    "comment": "15 pages, 5 figures. Submitted to ACL Rolling Review January 2026"
+  },
+  {
+    "title": "Octopus: A Lightweight Entity-Aware System for Multi-Table Data Discovery and Cell-Level Retrieval",
+    "authors": "Wen-Zhi Li, Sainyam Galhotra",
+    "published": "2026-01-05",
+    "arxiv_id": "2601.02304v1",
+    "url": "http://arxiv.org/abs/2601.02304v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.02304v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Tabular data constitute a dominant form of information in modern data lakes and repositories, yet discovering the relevant tables to answer user questions remains challenging. Existing data discovery systems assume that each question can be answered by a single table and often rely on resource-intensive offline preprocessing, such as model training or large-scale content indexing. In practice, however, many questions require information spread across multiple tables -- either independently or through joins -- and users often seek specific cell values rather than entire tables. In this paper, we present Octopus, a lightweight, entity-aware, and training-free system for multi-table data discovery and cell-level value retrieval. Instead of embedding entire questions, Octopus identifies fine-grained entities (column mentions and value mentions) from natural-language queries using an LLM parser. It then matches these entities to table headers through a compact embedding index and scans table contents directly for value occurrences, eliminating the need for heavy content indexing or costly offline stages. The resulting fine-grained alignment not only improves table retrieval accuracy but also facilitates efficient downstream NL2SQL execution by reducing token usage and redundant LLM calls. To evaluate Octopus, we introduce a new benchmark covering both table- and cell-level discovery under multi-table settings, including five datasets for independent discovery and two for join-based discovery. Experimental results show that Octopus consistently outperforms existing systems while achieving substantially lower computational and token costs. Code is available at https://github.com/wenzhilics/octopus.",
+    "code_links": [
+      "https://github.com/wenzhilics/octopus"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Accelerating Storage-Based Training for Graph Neural Networks",
+    "authors": "Myung-Hwan Jang, Jeong-Min Park, Yunyong Ko, Sang-Wook Kim",
+    "published": "2026-01-04",
+    "arxiv_id": "2601.01473v2",
+    "url": "http://arxiv.org/abs/2601.01473v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.01473v2",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Graph neural networks (GNNs) have achieved breakthroughs in various real-world downstream tasks due to their powerful expressiveness. As the scale of real-world graphs has been continuously growing, a storage-based approach to GNN training has been studied, which leverages external storage (e.g., NVMe SSDs) to handle such web-scale graphs on a single machine. Although such storage-based GNN training methods have shown promising potential in large-scale GNN training, we observed that they suffer from a severe bottleneck in data preparation since they overlook a critical challenge: how to handle a large number of small storage I/Os. To address the challenge, in this paper, we propose a novel storage-based GNN training framework, named AGNES, that employs a method of block-wise storage I/O processing to fully utilize the I/O bandwidth of high-performance storage devices. Moreover, to further enhance the efficiency of each storage I/O, AGNES employs a simple yet effective strategy, hyperbatch-based processing based on the characteristics of real-world graphs. Comprehensive experiments on five real-world graphs reveal that AGNES consistently outperforms four state-of-the-art methods, by up to 4.1X faster than the best competitor. Our code is available at https://github.com/Bigdasgit/agnes-kdd26.",
+    "code_links": [
+      "https://github.com/Bigdasgit/agnes-kdd26"
+    ],
+    "comment": "10 pages, 12 figures, 2 tables, ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD) 2026"
+  },
+  {
+    "title": "RadixGraph: A Fast, Space-Optimized Data Structure for Dynamic Graph Storage (Extended Version)",
+    "authors": "Haoxuan Xie, Junfeng Liu, Siqiang Luo, Kai Wang",
+    "published": "2026-01-04",
+    "arxiv_id": "2601.01444v1",
+    "url": "http://arxiv.org/abs/2601.01444v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.01444v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Dynamic graphs model many real-world applications, and as their sizes grow, efficiently storing and updating them becomes critical. We present RadixGraph, a fast and memory-efficient data structure for dynamic graph storage. RadixGraph features a carefully designed radix-tree-based vertex index that strikes an optimal trade-off between query efficiency and space among all pointer-array-based radix trees. For edge storage, it employs a hybrid snapshot-log architecture that enables amortized $O(1)$ update time. RadixGraph supports millions of concurrent updates per second while maintaining competitive performance for graph analytics. Experimental results show that RadixGraph outperforms the most performant baseline by up to $16.27\\times$ across various datasets in ingesting graph updates, and reduces memory usage by an average of $40.1\\%$. RadixGraph is open-source at https://github.com/ForwardStar/RadixGraph.",
+    "code_links": [
+      "https://github.com/ForwardStar/RadixGraph"
+    ],
+    "comment": "Accepted by SIGMOD 2026"
+  },
+  {
+    "title": "Exploring the Heterogeneity of Tabular Data: A Diversity-aware Data Generator via LLMs",
+    "authors": "Yafeng Tang, Xiaoou Ding, Jianzhuo Du, Zishuo Yan, Zhuang Ma, Zheng Liang, Zekai Qian, Hongzhi Wang",
+    "published": "2025-12-26",
+    "arxiv_id": "2512.21915v1",
+    "url": "http://arxiv.org/abs/2512.21915v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.21915v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Tabular data generation has become increasingly essential for enabling robust machine learning applications, which require large-scale, high-quality data. Existing solutions leverage generative models to learn original data distributions. However, real-world data are naturally heterogeneous with diverse distributions, making it challenging to obtain a universally good model for diverse data generation. To address this limitation, we introduce Diversity-Aware Tabular data gEnerator (DATE), a framework that (i) prepares high-quality and distributionally distinct examples for in-context learning by effectively partitioning the original heterogeneous data into multiple diverse subsets; (ii) harnesses Large Language Models (LLMs) to explore the diversity of the partitioned distribution with decision tree reasoning as feedback, generating high-quality labeled data for each subset. However, the massive generated data inherently involves a trade-off between diversity and quality. To integrate this issue, existing solutions greedily select the validation-best data. However, we prove that the selection in heterogeneous settings does not possess the greedy-choice property, and design a Multi-Arm Bandit-based sampling algorithm that balances the diversity and quality of generated data. Extensive experiments on tabular classification and regression benchmarks demonstrate that DATE consistently outperforms state-of-the-art GAN-based and LLM-based methods. On average, DATE achieves a 23.75% reduction in error rate with just 100 generated data. Empirically, we demonstrate that data generated by DATE can improve the accuracy of Direct Preference Optimization (DPO) and enhance the reasoning capability of LLMs on the target data. Code is available at https://github.com/windblow32/DATE.",
+    "code_links": [
+      "https://github.com/windblow32/DATE"
+    ],
+    "comment": "This manuscript has been submitted to IEEE Transactions on Knowledge and Data Engineering (TKDE) for peer review"
+  },
+  {
+    "title": "Valori: A Deterministic Memory Substrate for AI Systems",
+    "authors": "Varshith Gudur",
+    "published": "2025-12-25",
+    "arxiv_id": "2512.22280v1",
+    "url": "http://arxiv.org/abs/2512.22280v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.22280v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Modern AI systems rely on vector embeddings stored and searched using floating-point arithmetic. While effective for approximate similarity search, this design introduces fundamental non-determinism: identical models, inputs, and code can produce different memory states and retrieval results across hardware architectures (e.g., x86 vs. ARM). This prevents replayability and safe deployment, leading to silent data divergence that prevents post-hoc verification and compromises audit trails in regulated sectors. We present Valori, a deterministic AI memory substrate that replaces floating-point memory operations with fixed-point arithmetic (Q16.16) and models memory as a replayable state machine. Valori guarantees bit-identical memory states, snapshots, and search results across platforms. We demonstrate that non-determinism arises before indexing or retrieval and show how Valori enforces determinism at the memory boundary. Our results suggest that deterministic memory is a necessary primitive for trustworthy AI systems. The reference implementation is open-source and available at https://github.com/varshith-Git/Valori-Kernel (archived at https://zenodo.org/records/18022660).",
+    "code_links": [
+      "https://github.com/varshith-Git/Valori-Kernel"
+    ],
+    "comment": "7 pages, 1 figure. systems paper with empirical evaluation and determinism validation experiments. Code available at https://github.com/varshith-Git/Valori-Kernel"
+  },
+  {
+    "title": "A Multi-agent Text2SQL Framework using Small Language Models and Execution Feedback",
+    "authors": "Thanh Dat Hoang, Thanh Trung Huynh, Matthias Weidlich, Thanh Tam Nguyen, Tong Chen, Hongzhi Yin, Quoc Viet Hung Nguyen",
+    "published": "2025-12-21",
+    "arxiv_id": "2512.18622v1",
+    "url": "http://arxiv.org/abs/2512.18622v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.18622v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text2SQL, the task of generating SQL queries from natural language text, is a critical challenge in data engineering. Recently, Large Language Models (LLMs) have demonstrated superior performance for this task due to their advanced comprehension and generation capabilities. However, privacy and cost considerations prevent companies from using Text2SQL solutions based on external LLMs offered as a service. Rather, small LLMs (SLMs) that are openly available and can hosted in-house are adopted. These SLMs, in turn, lack the generalization capabilities of larger LLMs, which impairs their effectiveness for complex tasks such as Text2SQL. To address these limitations, we propose MATS, a novel Text2SQL framework designed specifically for SLMs. MATS uses a multi-agent mechanism that assigns specialized roles to auxiliary agents, reducing individual workloads and fostering interaction. A training scheme based on reinforcement learning aligns these agents using feedback obtained during execution, thereby maintaining competitive performance despite a limited LLM size. Evaluation results using on benchmark datasets show that MATS, deployed on a single- GPU server, yields accuracy that are on-par with large-scale LLMs when using significantly fewer parameters. Our source code and data are available at https://github.com/thanhdath/mats-sql.",
+    "code_links": [
+      "https://github.com/thanhdath/mats-sql"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ModelTables: A Corpus of Tables about Models",
+    "authors": "Zhengyuan Dong, Victor Zhong, Renée J. Miller",
+    "published": "2025-12-18",
+    "arxiv_id": "2512.16106v1",
+    "url": "http://arxiv.org/abs/2512.16106v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.16106v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "We present ModelTables, a benchmark of tables in Model Lakes that captures the structured semantics of performance and configuration tables often overlooked by text only retrieval. The corpus is built from Hugging Face model cards, GitHub READMEs, and referenced papers, linking each table to its surrounding model and publication context. Compared with open data lake tables, model tables are smaller yet exhibit denser inter table relationships, reflecting tightly coupled model and benchmark evolution. The current release covers over 60K models and 90K tables. To evaluate model and table relatedness, we construct a multi source ground truth using three complementary signals: (1) paper citation links, (2) explicit model card links and inheritance, and (3) shared training datasets. We present one extensive empirical use case for the benchmark which is table search. We compare canonical Data Lake search operators (unionable, joinable, keyword) and Information Retrieval baselines (dense, sparse, hybrid retrieval) on this benchmark. Union based semantic table retrieval attains 54.8 % P@1 overall (54.6 % on citation, 31.3 % on inheritance, 30.6 % on shared dataset signals); table based dense retrieval reaches 66.5 % P@1, and metadata hybrid retrieval achieves 54.1 %. This evaluation indicates clear room for developing better table search methods. By releasing ModelTables and its creation protocol, we provide the first large scale benchmark of structured data describing AI model. Our use case of table discovery in Model Lakes, provides intuition and evidence for developing more accurate semantic retrieval, structured comparison, and principled organization of structured model knowledge. Source code, data, and other artifacts have been made available at https://github.com/RJMillerLab/ModelTables.",
+    "code_links": [
+      "https://github.com/RJMillerLab/ModelTables"
+    ],
+    "comment": "14 pages, 8 figures and 8 tables"
+  },
+  {
+    "title": "Scaling Text2SQL via LLM-efficient Schema Filtering with Functional Dependency Graph Rerankers",
+    "authors": "Thanh Dat Hoang, Thanh Tam Nguyen, Thanh Trung Huynh, Hongzhi Yin, Quoc Viet Hung Nguyen",
+    "published": "2025-12-18",
+    "arxiv_id": "2512.16083v1",
+    "url": "http://arxiv.org/abs/2512.16083v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.16083v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Most modern Text2SQL systems prompt large language models (LLMs) with entire schemas -- mostly column information -- alongside the user's question. While effective on small databases, this approach fails on real-world schemas that exceed LLM context limits, even for commercial models. The recent Spider 2.0 benchmark exemplifies this with hundreds of tables and tens of thousands of columns, where existing systems often break. Current mitigations either rely on costly multi-step prompting pipelines or filter columns by ranking them against user's question independently, ignoring inter-column structure. To scale existing systems, we introduce \\toolname, an open-source, LLM-efficient schema filtering framework that compacts Text2SQL prompts by (i) ranking columns with a query-aware LLM encoder enriched with values and metadata, (ii) reranking inter-connected columns via a lightweight graph transformer over functional dependencies, and (iii) selecting a connectivity-preserving sub-schema with a Steiner-tree heuristic. Experiments on real datasets show that \\toolname achieves near-perfect recall and higher precision than CodeS, SchemaExP, Qwen rerankers, and embedding retrievers, while maintaining sub-second median latency and scaling to schemas with 23,000+ columns. Our source code is available at https://github.com/thanhdath/grast-sql.",
+    "code_links": [
+      "https://github.com/thanhdath/grast-sql"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Asia Cup 2025: A Structured T20 Match-Level Dataset and Exploratory Analysis for Cricket Analytics",
+    "authors": "Kousar Raza, Faizan Ali",
+    "published": "2025-12-17",
+    "arxiv_id": "2512.19740v1",
+    "url": "http://arxiv.org/abs/2512.19740v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.19740v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "This paper presents a structured and comprehensive dataset corresponding to the 2025 Asia Cup T20 cricket tournament, designed to facilitate data-driven research in sports analytics. The dataset comprises records from all 19 matches of the tournament and includes 61 variables covering team scores, wickets, powerplay statistics, boundary counts, toss decisions, venues, and player-specific highlights. To demonstrate its analytical value, we conduct an exploratory data analysis focusing on team performance indicators, boundary distributions, and scoring patterns. The dataset is publicly released through Zenodo under a CC-BY 4.0 license to support reproducibility and further research in cricket analytics, predictive modeling, and strategic decision-making. This work contributes an open, machine-readable benchmark dataset for advancing cricket analytics research.",
+    "code_links": [
+      "https://github.com/kousarraza/AsiaCup2025"
+    ],
+    "comment": "Dataset available via Zenodo:{https://doi.org/10.5281/zenodo.17228056}. Source code and analysis scripts are publicly available at : https://github.com/kousarraza/AsiaCup2025"
+  },
+  {
+    "title": "NeurIDA: Dynamic Modeling for Effective In-Database Analytics",
+    "authors": "Lingze Zeng, Naili Xing, Shaofeng Cai, Peng Lu, Gang Chen, Jian Pei, Beng Chin Ooi",
+    "published": "2025-12-09",
+    "arxiv_id": "2512.08483v3",
+    "url": "http://arxiv.org/abs/2512.08483v3",
+    "pdf_url": "https://arxiv.org/pdf/2512.08483v3",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Relational Database Management Systems (RDBMS) manage complex, interrelated data and support a broad spectrum of analytical tasks. With the growing demand for predictive analytics, the deep integration of machine learning (ML) into RDBMS has become critical. However, a fundamental challenge hinders this evolution: conventional ML models are static and task-specific, whereas RDBMS environments are dynamic and must support diverse analytical queries. Each analytical task entails constructing a bespoke pipeline from scratch, which incurs significant development overhead and hence limits wide adoption of ML in analytics.\n  We present NeurIDA, an autonomous end-to-end system for in-database analytics that dynamically \"tweaks\" the best available base model to better serve a given analytical task. In particular, we propose a novel paradigm of dynamic in-database modeling to pre-train a composable base model architecture over the relational data. Upon receiving a task, NeurIDA formulates the task and data profile to dynamically select and configure relevant components from the pool of base models and shared model components for prediction. For friendly user experience, NeurIDA supports natural language queries; it interprets user intent to construct structured task profiles, and generates analytical reports with dedicated LLM agents. By design, NeurIDA enables ease-of-use and yet effective and efficient in-database AI analytics. Extensive experiment study shows that NeurIDA consistently delivers up to 12% improvement in AUC-ROC and 25% relative reduction in MAE across ten tasks on five real-world datasets. The source code is available at https://github.com/Zrealshadow/NeurIDA",
+    "code_links": [
+      "https://github.com/Zrealshadow/NeurIDA"
+    ],
+    "comment": "14 pages"
+  }
+]
