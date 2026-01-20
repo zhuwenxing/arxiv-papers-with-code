@@ -1,0 +1,422 @@
+[
+  {
+    "title": "PRISM: Personalized Recommendation via Information Synergy Module",
+    "authors": "Xinyi Zhang, Yutong Li, Peijie Sun, Letian Sha, Zhongxuan Han",
+    "published": "2026-01-16",
+    "arxiv_id": "2601.10944v1",
+    "url": "http://arxiv.org/abs/2601.10944v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.10944v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal sequential recommendation (MSR) leverages diverse item modalities to improve recommendation accuracy, while achieving effective and adaptive fusion remains challenging. Existing MSR models often overlook synergistic information that emerges only through modality combinations. Moreover, they typically assume a fixed importance for different modality interactions across users. To address these limitations, we propose \\textbf{P}ersonalized \\textbf{R}ecommend-ation via \\textbf{I}nformation \\textbf{S}ynergy \\textbf{M}odule (PRISM), a plug-and-play framework for sequential recommendation (SR). PRISM explicitly decomposes multimodal information into unique, redundant, and synergistic components through an Interaction Expert Layer and dynamically weights them via an Adaptive Fusion Layer guided by user preferences. This information-theoretic design enables fine-grained disentanglement and personalized fusion of multimodal signals. Extensive experiments on four datasets and three SR backbones demonstrate its effectiveness and versatility. The code is available at https://github.com/YutongLi2024/PRISM.",
+    "code_links": [
+      "https://github.com/YutongLi2024/PRISM"
+    ],
+    "comment": "Accepted as a Full Paper at WWW 2026"
+  },
+  {
+    "title": "Tail-Aware Data Augmentation for Long-Tail Sequential Recommendation",
+    "authors": "Yizhou Dang, Zhifu Wei, Minhan Huang, Lianbo Ma, Jianzhe Zhao, Guibing Guo, Xingwei Wang",
+    "published": "2026-01-16",
+    "arxiv_id": "2601.10933v1",
+    "url": "http://arxiv.org/abs/2601.10933v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.10933v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential recommendation (SR) learns user preferences based on their historical interaction sequences and provides personalized suggestions. In real-world scenarios, most users can only interact with a handful of items, while the majority of items are seldom consumed. This pervasive long-tail challenge limits the model's ability to learn user preferences. Despite previous efforts to enrich tail items/users with knowledge from head parts or improve tail learning through additional contextual information, they still face the following issues: 1) They struggle to improve the situation where interactions of tail users/items are scarce, leading to incomplete preferences learning for the tail parts. 2) Existing methods often degrade overall or head parts performance when improving accuracy for tail users/items, thereby harming the user experience. We propose Tail-Aware Data Augmentation (TADA) for long-tail sequential recommendation, which enhances the interaction frequency for tail items/users while maintaining head performance, thereby promoting the model's learning capabilities for the tail. Specifically, we first capture the co-occurrence and correlation among low-popularity items by a linear model. Building upon this, we design two tail-aware augmentation operators, T-Substitute and T-Insert. The former replaces the head item with a relevant item, while the latter utilizes co-occurrence relationships to extend the original sequence by incorporating both head and tail items. The augmented and original sequences are mixed at the representation level to preserve preference knowledge. We further extend the mix operation across different tail-user sequences and augmented sequences to generate richer augmented samples, thereby improving tail performance. Comprehensive experiments demonstrate the superiority of our method. The codes are provided at https://github.com/KingGugu/TADA.",
+    "code_links": [
+      "https://github.com/KingGugu/TADA"
+    ],
+    "comment": "Accepted by WWW 2026"
+  },
+  {
+    "title": "RoutIR: Fast Serving of Retrieval Pipelines for Retrieval-Augmented Generation",
+    "authors": "Eugene Yang, Andrew Yates, Dawn Lawrie, James Mayfield, Trevor Adriaanse",
+    "published": "2026-01-15",
+    "arxiv_id": "2601.10644v1",
+    "url": "http://arxiv.org/abs/2601.10644v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.10644v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval models are key components of Retrieval-Augmented Generation (RAG) systems, which generate search queries, process the documents returned, and generate a response. RAG systems are often dynamic and may involve multiple rounds of retrieval. While many state-of-the-art retrieval methods are available through academic IR platforms, these platforms are typically designed for the Cranfield paradigm in which all queries are known up front and can be batch processed offline. This simplification accelerates research but leaves state-of-the-art retrieval models unable to support downstream applications that require online services, such as arbitrary dynamic RAG pipelines that involve looping, feedback, or even self-organizing agents. In this work, we introduce RoutIR, a Python package that provides a simple and efficient HTTP API that wraps arbitrary retrieval methods, including first stage retrieval, reranking, query expansion, and result fusion. By providing a minimal JSON configuration file specifying the retrieval models to serve, RoutIR can be used to construct and query retrieval pipelines on-the-fly using any permutation of available models (e.g., fusing the results of several first-stage retrieval methods followed by reranking). The API automatically performs asynchronous query batching and caches results by default. While many state-of-the-art retrieval methods are already supported by the package, RoutIR is also easily expandable by implementing the Engine abstract class. The package is open-sourced and publicly available on GitHub: http://github.com/hltcoe/routir.",
+    "code_links": [
+      "https://github.com/hltcoe/routir"
+    ],
+    "comment": "17 pages, 1 figure"
+  },
+  {
+    "title": "iTIMO: An LLM-empowered Synthesis Dataset for Travel Itinerary Modification",
+    "authors": "Zhuoxuan Huang, Yunshan Ma, Hongyu Zhang, Hua Ma, Zhu Sun",
+    "published": "2026-01-15",
+    "arxiv_id": "2601.10609v1",
+    "url": "http://arxiv.org/abs/2601.10609v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.10609v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Addressing itinerary modification is crucial for enhancing the travel experience as it is a frequent requirement during traveling. However, existing research mainly focuses on fixed itinerary planning, leaving modification underexplored. To bridge this gap, we formally define the itinerary modification task and introduce iTIMO, a dataset specifically tailored for this purpose. We identify the lack of {\\itshape need-to-modify} itinerary data as the critical bottleneck hindering research on this task and propose a general pipeline to overcome it. This pipeline frames the generation of such data as an intent-driven perturbation task. It instructs large language models to perturb real world itineraries using three atomic editing operations: REPLACE, ADD, and DELETE. Each perturbation is grounded in three intents, including disruptions of popularity, spatial distance, and category diversity. Furthermore, a hybrid evaluation metric is designed to ensure perturbation effectiveness. We conduct comprehensive experiments on iTIMO, revealing the limitations of current LLMs and lead to several valuable directions for future research. Dataset and corresponding code are available at https://github.com/zelo2/iTIMO.",
+    "code_links": [
+      "https://github.com/zelo2/iTIMO"
+    ],
+    "comment": null
+  },
+  {
+    "title": "AWED-FiNER: Agents, Web applications, and Expert Detectors for Fine-grained Named Entity Recognition across 36 Languages for 6.6 Billion Speakers",
+    "authors": "Prachuryya Kaushik, Ashish Anand",
+    "published": "2026-01-15",
+    "arxiv_id": "2601.10161v1",
+    "url": "http://arxiv.org/abs/2601.10161v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.10161v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "We introduce AWED-FiNER, an open-source ecosystem designed to bridge the gap in Fine-grained Named Entity Recognition (FgNER) for 36 global languages spoken by more than 6.6 billion people. While Large Language Models (LLMs) dominate general Natural Language Processing (NLP) tasks, they often struggle with low-resource languages and fine-grained NLP tasks. AWED-FiNER provides a collection of agentic toolkits, web applications, and several state-of-the-art expert models that provides FgNER solutions across 36 languages. The agentic tools enable to route multilingual text to specialized expert models and fetch FgNER annotations within seconds. The web-based platforms provide ready-to-use FgNER annotation service for non-technical users. Moreover, the collection of language specific extremely small sized open-source state-of-the-art expert models facilitate offline deployment in resource contraint scenerios including edge devices. AWED-FiNER covers languages spoken by over 6.6 billion people, including a specific focus on vulnerable languages such as Bodo, Manipuri, Bishnupriya, and Mizo. The resources can be accessed here: Agentic Tool (https://github.com/PrachuryyaKaushik/AWED-FiNER), Web Application (https://hf.co/spaces/prachuryyaIITG/AWED-FiNER), and 49 Expert Detector Models (https://hf.co/collections/prachuryyaIITG/awed-finer).",
+    "code_links": [
+      "https://github.com/PrachuryyaKaushik/AWED-FiNER"
+    ],
+    "comment": "Submitted to ACL'26 System Demonstration"
+  },
+  {
+    "title": "Efficient Content-based Recommendation Model Training via Noise-aware Coreset Selection",
+    "authors": "Hung Vinh Tran, Tong Chen, Hechuan Wen, Quoc Viet Hung Nguyen, Bin Cui, Hongzhi Yin",
+    "published": "2026-01-15",
+    "arxiv_id": "2601.10067v1",
+    "url": "http://arxiv.org/abs/2601.10067v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.10067v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Content-based recommendation systems (CRSs) utilize content features to predict user-item interactions, serving as essential tools for helping users navigate information-rich web services. However, ensuring the effectiveness of CRSs requires large-scale and even continuous model training to accommodate diverse user preferences, resulting in significant computational costs and resource demands. A promising approach to this challenge is coreset selection, which identifies a small but representative subset of data samples that preserves model quality while reducing training overhead. Yet, the selected coreset is vulnerable to the pervasive noise in user-item interactions, particularly when it is minimally sized. To this end, we propose Noise-aware Coreset Selection (NaCS), a specialized framework for CRSs. NaCS constructs coresets through submodular optimization based on training gradients, while simultaneously correcting noisy labels using a progressively trained model. Meanwhile, we refine the selected coreset by filtering out low-confidence samples through uncertainty quantification, thereby avoid training with unreliable interactions. Through extensive experiments, we show that NaCS produces higher-quality coresets for CRSs while achieving better efficiency than existing coreset selection techniques. Notably, NaCS recovers 93-95\\% of full-dataset training performance using merely 1\\% of the training data. The source code is available at \\href{https://github.com/chenxing1999/nacs}{https://github.com/chenxing1999/nacs}.",
+    "code_links": [
+      "https://github.com/chenxing1999/nacs"
+    ],
+    "comment": "WebConf 2026"
+  },
+  {
+    "title": "MM-BRIGHT: A Multi-Task Multimodal Benchmark for Reasoning-Intensive Retrieval",
+    "authors": "Abdelrahman Abdallah, Mohamed Darwish Mounis, Mahmoud Abdalla, Mahmoud SalahEldin Kasem, Mostafa Farouk Senussi, Mohamed Mahmoud, Mohammed Ali, Adam Jatowt, Hyun-Soo Kang",
+    "published": "2026-01-14",
+    "arxiv_id": "2601.09562v2",
+    "url": "http://arxiv.org/abs/2601.09562v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.09562v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Existing retrieval benchmarks primarily consist of text-based queries where keyword or semantic matching is usually sufficient. Many real-world queries contain multimodal elements, particularly, images such as diagrams, charts, and screenshots that require intensive reasoning to identify relevant documents. To address this gap, we introduce MM-BRIGHT, the first multimodal benchmark for reasoning-intensive retrieval. Our dataset consists of 2,803 real-world queries spanning 29 diverse technical domains, with four tasks of increasing complexity: text-to-text, multimodal-to-text, multimodal-to-image, and multimodal-to-multimodal retrieval. Extensive evaluation reveals that state-of-the-art models struggle across all tasks: BM25 achieves only 8.5 nDCG@10 on text-only retrieval, while the best multimodal model Nomic-Vision reaches just 27.6 nDCG@10 on multimodal-to-text retrieval actually underperforming the best text-only model (DiVeR: 32.2). These results highlight substantial headroom and position MM-BRIGHT as a testbed for next-generation retrieval models that better integrate visual reasoning. Our code and data are available at https://github.com/mm-bright/MM-BRIGHT. See also our official website: https://mm-bright.github.io/.",
+    "code_links": [
+      "https://github.com/mm-bright/MM-BRIGHT"
+    ],
+    "comment": null
+  },
+  {
+    "title": "TEMPO: A Realistic Multi-Domain Benchmark for Temporal Reasoning-Intensive Retrieval",
+    "authors": "Abdelrahman Abdallah, Mohammed Ali, Muhammad Abdul-Mageed, Adam Jatowt",
+    "published": "2026-01-14",
+    "arxiv_id": "2601.09523v1",
+    "url": "http://arxiv.org/abs/2601.09523v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.09523v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Existing temporal QA benchmarks focus on simple fact-seeking queries from news corpora, while reasoning-intensive retrieval benchmarks lack temporal grounding. However, real-world information needs often require reasoning about temporal evolution and synthesizing evidence across time periods. We introduce TEMPO, the first benchmark combining temporal reasoning with reasoning-intensive retrieval across 13 domains. TEMPO features: (1) 1,730 complex queries requiring deep temporal reasoning such as tracking changes, identifying trends, or comparing cross-period evidence; (2) step-wise retrieval planning with 3,976 decomposed steps and gold documents mapped to each step for multi-hop evaluation; and (3) novel temporal metrics including Temporal Coverage@k and Temporal Precision@k measuring whether results span required time periods. Evaluation of 12 retrieval systems reveals substantial challenges: the best model (DiVeR) achieves only 32.0 NDCG@10 and 71.4\\% Temporal Coverage@10, demonstrating difficulty in retrieving temporally complete evidence. We believe TEMPO provides a challenging benchmark for improving temporal reasoning in retrieval and RAG systems. Our code and data are available at https://github.com/tempo-bench/Tempo. See also our official website: https://tempo-bench.github.io/.",
+    "code_links": [
+      "https://github.com/tempo-bench/Tempo"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Bridging Semantic Understanding and Popularity Bias with LLMs",
+    "authors": "Renqiang Luo, Dong Zhang, Yupeng Gao, Wen Shi, Mingliang Hou, Jiaying Liu, Zhe Wang, Shuo Yu",
+    "published": "2026-01-14",
+    "arxiv_id": "2601.09478v2",
+    "url": "http://arxiv.org/abs/2601.09478v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.09478v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Semantic understanding of popularity bias is a crucial yet underexplored challenge in recommender systems, where popular items are often favored at the expense of niche content. Most existing debiasing methods treat the semantic understanding of popularity bias as a matter of diversity enhancement or long-tail coverage, neglecting the deeper semantic layer that embodies the causal origins of the bias itself. Consequently, such shallow interpretations limit both their debiasing effectiveness and recommendation accuracy. In this paper, we propose FairLRM, a novel framework that bridges the gap in the semantic understanding of popularity bias with Recommendation via Large Language Model (RecLLM). FairLRM decomposes popularity bias into item-side and user-side components, using structured instruction-based prompts to enhance the model's comprehension of both global item distributions and individual user preferences. Unlike traditional methods that rely on surface-level features such as \"diversity\" or \"debiasing\", FairLRM improves the model's ability to semantically interpret and address the underlying bias. Through empirical evaluation, we show that FairLRM significantly enhances both fairness and recommendation accuracy, providing a more semantically aware and trustworthy approach to enhance the semantic understanding of popularity bias. The implementation is available at https://github.com/LuoRenqiang/FairLRM.",
+    "code_links": [
+      "https://github.com/LuoRenqiang/FairLRM"
+    ],
+    "comment": "10 pages, 4 figs, WWW 2026 accepted"
+  },
+  {
+    "title": "A Deep Dive into OpenStreetMap Research Since its Inception (2008-2024): Contributors, Topics, and Future Trends",
+    "authors": "Yao Sun, Liqiu Meng, Andres Camero, Stefan Auer, Xiao Xiang Zhu",
+    "published": "2026-01-14",
+    "arxiv_id": "2601.09338v1",
+    "url": "http://arxiv.org/abs/2601.09338v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.09338v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DL",
+    "abstract": "OpenStreetMap (OSM) has transitioned from a pioneering volunteered geographic information (VGI) project into a global, multi-disciplinary research nexus. This study presents a bibliometric and systematic analysis of the OSM research landscape, examining its development trajectory and key driving forces. By evaluating 1,926 publications from the Web of Science (WoS) Core Collection and 782 State of the Map (SotM) presentations up to June 2024, we quantify publication growth, collaboration patterns, and thematic evolution. Results demonstrate simultaneous consolidation and diversification within the field. While a stable core of contributors continues to anchor OSM research, themes have shifted from initial concerns over data production and quality toward advanced analytical and applied uses. Comparative analysis of OSM-related research in WoS and SotM reveals distinct but complementary agendas between scholars and the OSM community. Building on these findings, we identify six emerging research directions and discuss how evolving partnerships among academia, the OSM community, and industry are poised to shape the future of OSM research. This study establishes a structured reference for understanding the state of OSM studies and offers strategic pathways for navigating its future trajectory.The data and code are available at https://github.com/ya0-sun/OSMbib.",
+    "code_links": [
+      "https://github.com/ya0-sun/OSMbib"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Why not Collaborative Filtering in Dual View? Bridging Sparse and Dense Models",
+    "authors": "Hanze Guo, Jianxun Lian, Xiao Zhou",
+    "published": "2026-01-14",
+    "arxiv_id": "2601.09286v1",
+    "url": "http://arxiv.org/abs/2601.09286v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.09286v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Collaborative Filtering (CF) remains the cornerstone of modern recommender systems, with dense embedding--based methods dominating current practice. However, these approaches suffer from a critical limitation: our theoretical analysis reveals a fundamental signal-to-noise ratio (SNR) ceiling when modeling unpopular items, where parameter-based dense models experience diminishing SNR under severe data sparsity. To overcome this bottleneck, we propose SaD (Sparse and Dense), a unified framework that integrates the semantic expressiveness of dense embeddings with the structural reliability of sparse interaction patterns. We theoretically show that aligning these dual views yields a strictly superior global SNR. Concretely, SaD introduces a lightweight bidirectional alignment mechanism: the dense view enriches the sparse view by injecting semantic correlations, while the sparse view regularizes the dense model through explicit structural signals. Extensive experiments demonstrate that, under this dual-view alignment, even a simple matrix factorization--style dense model can achieve state-of-the-art performance. Moreover, SaD is plug-and-play and can be seamlessly applied to a wide range of existing recommender models, highlighting the enduring power of collaborative filtering when leveraged from dual perspectives. Further evaluations on real-world benchmarks show that SaD consistently outperforms strong baselines, ranking first on the BarsMatch leaderboard. The code is publicly available at https://github.com/harris26-G/SaD.",
+    "code_links": [
+      "https://github.com/harris26-G/SaD"
+    ],
+    "comment": "25 pages, 6 figures"
+  },
+  {
+    "title": "MemRec: Collaborative Memory-Augmented Agentic Recommender System",
+    "authors": "Weixin Chen, Yuhan Zhao, Jingyuan Huang, Zihe Ye, Clark Mingxuan Ju, Tong Zhao, Neil Shah, Li Chen, Yongfeng Zhang",
+    "published": "2026-01-13",
+    "arxiv_id": "2601.08816v1",
+    "url": "http://arxiv.org/abs/2601.08816v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.08816v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "The evolution of recommender systems has shifted preference storage from rating matrices and dense embeddings to semantic memory in the agentic era. Yet existing agents rely on isolated memory, overlooking crucial collaborative signals. Bridging this gap is hindered by the dual challenges of distilling vast graph contexts without overwhelming reasoning agents with cognitive load, and evolving the collaborative memory efficiently without incurring prohibitive computational costs. To address this, we propose MemRec, a framework that architecturally decouples reasoning from memory management to enable efficient collaborative augmentation. MemRec introduces a dedicated, cost-effective LM_Mem to manage a dynamic collaborative memory graph, serving synthesized, high-signal context to a downstream LLM_Rec. The framework operates via a practical pipeline featuring efficient retrieval and cost-effective asynchronous graph propagation that evolves memory in the background. Extensive experiments on four benchmarks demonstrate that MemRec achieves state-of-the-art performance. Furthermore, architectural analysis confirms its flexibility, establishing a new Pareto frontier that balances reasoning quality, cost, and privacy through support for diverse deployments, including local open-source models. Code:https://github.com/rutgerswiselab/memrec and Homepage: https://memrec.weixinchen.com",
+    "code_links": [
+      "https://github.com/rutgerswiselab/memrec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "RMBRec: Robust Multi-Behavior Recommendation towards Target Behaviors",
+    "authors": "Miaomiao Cai, Zhijie Zhang, Junfeng Fang, Zhiyong Cheng, Xiang Wang, Meng Wang",
+    "published": "2026-01-13",
+    "arxiv_id": "2601.08705v2",
+    "url": "http://arxiv.org/abs/2601.08705v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.08705v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multi-behavior recommendation faces a critical challenge in practice: auxiliary behaviors (e.g., clicks, carts) are often noisy, weakly correlated, or semantically misaligned with the target behavior (e.g., purchase), which leads to biased preference learning and suboptimal performance. While existing methods attempt to fuse these heterogeneous signals, they inherently lack a principled mechanism to ensure robustness against such behavioral inconsistency.\n  In this work, we propose Robust Multi-Behavior Recommendation towards Target Behaviors (RMBRec), a robust multi-behavior recommendation framework grounded in an information-theoretic robustness principle. We interpret robustness as a joint process of maximizing predictive information while minimizing its variance across heterogeneous behavioral environments. Under this perspective, the Representation Robustness Module (RRM) enhances local semantic consistency by maximizing the mutual information between users' auxiliary and target representations, whereas the Optimization Robustness Module (ORM) enforces global stability by minimizing the variance of predictive risks across behaviors, which is an efficient approximation to invariant risk minimization. This local-global collaboration bridges representation purification and optimization invariance in a theoretically coherent way. Extensive experiments on three real-world datasets demonstrate that RMBRec not only outperforms state-of-the-art methods in accuracy but also maintains remarkable stability under various noise perturbations. For reproducibility, our code is available at https://github.com/miaomiao-cai2/RMBRec/.",
+    "code_links": [
+      "https://github.com/miaomiao-cai2/RMBRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "GraphFusionSBR: Denoising Multi-Channel Graphs for Session-Based Recommendation",
+    "authors": "Jia-Xin He, Hung-Hsuan Chen",
+    "published": "2026-01-13",
+    "arxiv_id": "2601.08497v1",
+    "url": "http://arxiv.org/abs/2601.08497v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.08497v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Session-based recommendation systems must capture implicit user intents from sessions. However, existing models suffer from issues such as item interaction dominance and noisy sessions. We propose a multi-channel recommendation model, including a knowledge graph channel, a session hypergraph channel, and a session line graph channel, to capture information from multiple sources. Our model adaptively removes redundant edges in the knowledge graph channel to reduce noise. Knowledge graph representations cooperate with hypergraph representations for prediction to alleviate item dominance. We also generate in-session attention for denoising. Finally, we maximize mutual information between the hypergraph and line graph channels as an auxiliary task. Experiments demonstrate that our method enhances the accuracy of various recommendations, including e-commerce and multimedia recommendations. We release the code on GitHub for reproducibility.\\footnote{https://github.com/hohehohe0509/DSR-HK}",
+    "code_links": [
+      "https://github.com/hohehohe0509/DSR-HK"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MemoBrain: Executive Memory as an Agentic Brain for Reasoning",
+    "authors": "Hongjin Qian, Zhao Cao, Zheng Liu",
+    "published": "2026-01-12",
+    "arxiv_id": "2601.08079v1",
+    "url": "http://arxiv.org/abs/2601.08079v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.08079v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Complex reasoning in tool-augmented agent frameworks is inherently long-horizon, causing reasoning traces and transient tool artifacts to accumulate and strain the bounded working context of large language models. Without explicit memory mechanisms, such accumulation disrupts logical continuity and undermines task alignment. This positions memory not as an auxiliary efficiency concern, but as a core component for sustaining coherent, goal-directed reasoning over long horizons.\n  We propose MemoBrain, an executive memory model for tool-augmented agents that constructs a dependency-aware memory over reasoning steps, capturing salient intermediate states and their logical relations. Operating as a co-pilot alongside the reasoning agent, MemoBrain organizes reasoning progress without blocking execution and actively manages the working context. Specifically, it prunes invalid steps, folds completed sub-trajectories, and preserves a compact, high-salience reasoning backbone under a fixed context budget. Together, these mechanisms enable explicit cognitive control over reasoning trajectories rather than passive context accumulation.\n  We evaluate MemoBrain on challenging long-horizon benchmarks, including GAIA, WebWalker, and BrowseComp-Plus, demonstrating consistent improvements over strong baselines.",
+    "code_links": [
+      "https://github.com/qhjqhj00/MemoBrain"
+    ],
+    "comment": "Our codes are in https://github.com/qhjqhj00/MemoBrain"
+  },
+  {
+    "title": "AptaFind: A lightweight local interface for automated aptamer curation from scientific literature",
+    "authors": "Geoffrey Taghon",
+    "published": "2026-01-12",
+    "arxiv_id": "2601.07684v1",
+    "url": "http://arxiv.org/abs/2601.07684v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.07684v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Aptamer researchers face a literature landscape scattered across publications, supplements, and databases, with each search consuming hours that could be spent at the bench. AptaFind transforms this navigation problem through a three-tier intelligence architecture that recognizes research mining is a spectrum, not a binary success or failure. The system delivers direct sequence extraction when possible, curated research leads when extraction fails, and exhaustive literature discovery for additional confidence. By combining local language models for semantic understanding with deterministic algorithms for reliability, AptaFind operates without cloud dependencies or subscription barriers. Validation across 300 University of Texas Aptamer Database targets demonstrates 84 % with some literature found, 84 % with curated research leads, and 79 % with a direct sequence extraction, at a laptop-compute rate of over 900 targets an hour. The platform proves that even when direct sequence extraction fails, automation can still deliver the actionable intelligence researchers need by rapidly narrowing the search to high quality references.",
+    "code_links": [
+      "https://github.com/usnistgov/aptafind"
+    ],
+    "comment": "for associated source code, see https://github.com/usnistgov/aptafind"
+  },
+  {
+    "title": "FinCARDS: Card-Based Analyst Reranking for Financial Document Question Answering",
+    "authors": "Yixi Zhou, Fan Zhang, Yu Chen, Haipeng Zhang, Preslav Nakov, Zhuohan Xie",
+    "published": "2026-01-11",
+    "arxiv_id": "2601.06992v1",
+    "url": "http://arxiv.org/abs/2601.06992v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06992v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Financial question answering (QA) over long corporate filings requires evidence to satisfy strict constraints on entities, financial metrics, fiscal periods, and numeric values. However, existing LLM-based rerankers primarily optimize semantic relevance, leading to unstable rankings and opaque decisions on long documents. We propose FinCards, a structured reranking framework that reframes financial evidence selection as constraint satisfaction under a finance-aware schema. FinCards represents filing chunks and questions using aligned schema fields (entities, metrics, periods, and numeric spans), enabling deterministic field-level matching. Evidence is selected via a multi-stage tournament reranking with stability-aware aggregation, producing auditable decision traces. Across two corporate filing QA benchmarks, FinCards substantially improves early-rank retrieval over both lexical and LLM-based reranking baselines, while reducing ranking variance, without requiring model fine-tuning or unpredictable inference budgets. Our code is available at https://github.com/XanderZhou2022/FINCARDS.",
+    "code_links": [
+      "https://github.com/XanderZhou2022/FINCARDS"
+    ],
+    "comment": "15 pages, including figures and tables"
+  },
+  {
+    "title": "EmbeddingRWKV: State-Centric Retrieval with Reusable States",
+    "authors": "Haowen Hou, Jie Yang",
+    "published": "2026-01-10",
+    "arxiv_id": "2601.07861v1",
+    "url": "http://arxiv.org/abs/2601.07861v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.07861v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Current Retrieval-Augmented Generation (RAG) systems typically employ a traditional two-stage pipeline: an embedding model for initial retrieval followed by a reranker for refinement. However, this paradigm suffers from significant inefficiency due to the lack of shared information between stages, leading to substantial redundant computation. To address this limitation, we propose \\textbf{State-Centric Retrieval}, a unified retrieval paradigm that utilizes \"states\" as a bridge to connect embedding models and rerankers. First, we perform state representation learning by fine-tuning an RWKV-based LLM, transforming it into \\textbf{EmbeddingRWKV}, a unified model that serves as both an embedding model and a state backbone for extracting compact, reusable states. Building upon these reusable states, we further design a state-based reranker to fully leverage precomputed information. During reranking, the model processes only query tokens, decoupling inference cost from document length and yielding a 5.4$\\times$--44.8$\\times$ speedup. Furthermore, we observe that retaining all intermediate layer states is unnecessary; with a uniform layer selection strategy, our model maintains 98.62\\% of full-model performance using only 25\\% of the layers. Extensive experiments demonstrate that State-Centric Retrieval achieves high-quality retrieval and reranking results while significantly enhancing overall system efficiency. Code is available at \\href{https://github.com/howard-hou/EmbeddingRWKV}{our GitHub repository}.",
+    "code_links": [
+      "https://github.com/howard-hou/EmbeddingRWKV"
+    ],
+    "comment": "23 pages, 3 figures, 6 tables"
+  },
+  {
+    "title": "Multi-Disciplinary Dataset Discovery from Citation-Verified Literature Contexts",
+    "authors": "Zhiyin Tan, Changxu Duan",
+    "published": "2026-01-08",
+    "arxiv_id": "2601.05099v1",
+    "url": "http://arxiv.org/abs/2601.05099v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.05099v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DL",
+    "abstract": "Identifying suitable datasets for a research question remains challenging because existing dataset search engines rely heavily on metadata quality and keyword overlap, which often fail to capture the semantic intent of scientific investigation. We introduce a literature-driven framework that discovers datasets from citation contexts in scientific papers, enabling retrieval grounded in actual research use rather than metadata availability. Our approach combines large-scale citation-context extraction, schema-guided dataset recognition with Large Language Models, and provenance-preserving entity resolution. We evaluate the system on eight survey-derived computer science queries and find that it achieves substantially higher recall than Google Dataset Search and DataCite Commons, with normalized recall ranging from an average of 47.47% to a highest value of 81.82%. Beyond recovering gold-standard datasets, the method also surfaces additional datasets not documented in the surveys. Expert assessments across five top-level Fields of Science indicate that a substantial portion of the additional datasets are considered high utility, and some are regarded as novel for the specific topics chosen by the experts. These findings establish citation-context mining as an effective and generalizable paradigm for dataset discovery, particularly in settings where datasets lack sufficient or reliable metadata. To support reproducibility and future extensions, we release our code, evaluation datasets, and results on GitHub (https://github.com/Fireblossom/citation-context-dataset-discovery).",
+    "code_links": [
+      "https://github.com/Fireblossom/citation-context-dataset-discovery"
+    ],
+    "comment": "Accepted at the 25th ACM/IEEE Joint Conference on Digital Libraries (JCDL 2025)"
+  },
+  {
+    "title": "Pervasive Annotation Errors Break Text-to-SQL Benchmarks and Leaderboards",
+    "authors": "Tengjun Jin, Yoojin Choi, Yuxuan Zhu, Daniel Kang",
+    "published": "2026-01-13",
+    "arxiv_id": "2601.08778v2",
+    "url": "http://arxiv.org/abs/2601.08778v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.08778v2",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Researchers have proposed many text-to-SQL techniques to streamline data analytics and accelerate the development of database-driven applications. To compare these techniques and select the best one for deployment, the community depends on public benchmarks and their leaderboards. Since these benchmarks heavily rely on human annotations during question construction and answer evaluation, the validity of the annotations is crucial.\n  In this paper, we conduct an empirical study that (i) benchmarks annotation error rates for two widely used text-to-SQL benchmarks, BIRD and Spider 2.0-Snow, and (ii) corrects a subset of the BIRD development (Dev) set to measure the impact of annotation errors on text-to-SQL agent performance and leaderboard rankings. Through expert analysis, we show that BIRD Mini-Dev and Spider 2.0-Snow have error rates of 52.8% and 62.8%, respectively. We re-evaluate all 16 open-source agents from the BIRD leaderboard on both the original and the corrected BIRD Dev subsets. We show that performance changes range from -7% to 31% (in relative terms) and rank changes range from $-9$ to $+9$ positions. We further assess whether these impacts generalize to the full BIRD Dev set. We find that the rankings of agents on the uncorrected subset correlate strongly with those on the full Dev set (Spearman's $r_s$=0.85, $p$=3.26e-5), whereas they correlate weakly with those on the corrected subset (Spearman's $r_s$=0.32, $p$=0.23). These findings show that annotation errors can significantly distort reported performance and rankings, potentially misguiding research directions or deployment choices. Our code and data are available at https://github.com/uiuc-kang-lab/text_to_sql_benchmarks.",
+    "code_links": [
+      "https://github.com/uiuc-kang-lab/text_to_sql_benchmarks"
+    ],
+    "comment": "18 pages, 14 figures, 9 tables"
+  },
+  {
+    "title": "VISTA: Knowledge-Driven Interpretable Vessel Trajectory Imputation via Large Language Models",
+    "authors": "Hengyu Liu, Tianyi Li, Haoyu Wang, Kristian Torp, Tiancheng Zhang, Yushuai Li, Christian S. Jensen",
+    "published": "2026-01-11",
+    "arxiv_id": "2601.06940v1",
+    "url": "http://arxiv.org/abs/2601.06940v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06940v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The Automatic Identification System provides critical information for maritime navigation and safety, yet its trajectories are often incomplete due to signal loss or deliberate tampering. Existing imputation methods emphasize trajectory recovery, paying limited attention to interpretability and failing to provide underlying knowledge that benefits downstream tasks such as anomaly detection and route planning. We propose knowledge-driven interpretable vessel trajectory imputation (VISTA), the first trajectory imputation framework that offers interpretability while simultaneously providing underlying knowledge to support downstream analysis. Specifically, we first define underlying knowledge as a combination of Structured Data-derived Knowledge (SDK) distilled from AIS data and Implicit LLM Knowledge acquired from large-scale Internet corpora. Second, to manage and leverage the SDK effectively at scale, we develop a data-knowledge-data loop that employs a Structured Data-derived Knowledge Graph for SDK extraction and knowledge-driven trajectory imputation. Third, to efficiently process large-scale AIS data, we introduce a workflow management layer that coordinates the end-to-end pipeline, enabling parallel knowledge extraction and trajectory imputation with anomaly handling and redundancy elimination. Experiments on two large AIS datasets show that VISTA is capable of state-of-the-art imputation accuracy and computational efficiency, improving over state-of-the-art baselines by 5%-94% and reducing time cost by 51%-93%, while producing interpretable knowledge cues that benefit downstream tasks. The source code and implementation details of VISTA are publicly available.",
+    "code_links": [
+      "https://github.com/hyLiu1994/VISTA"
+    ],
+    "comment": "22 pages, 13 figures, 3 algorithms, 5 tables. Code available at https://github.com/hyLiu1994/VISTA"
+  },
+  {
+    "title": "Algorithm Support for Graph Databases, Done Right",
+    "authors": "Daan de Graaf, Robert Brijder, Soham Chakraborty, George Fletcher, Bram van de Wall, Nikolay Yakovets",
+    "published": "2026-01-10",
+    "arxiv_id": "2601.06705v1",
+    "url": "http://arxiv.org/abs/2601.06705v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06705v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Graph database query languages cannot express algorithms like PageRank, forcing costly data wrangling, while existing solutions such as algorithm libraries, vertex-centric APIs, and recursive CTEs lack the necessary combination of expressiveness, performance, and usability. We present GraphAlg: a domain-specific language for graph algorithms that compiles to relational algebra, enabling seamless integration with query processing pipelines. Built on linear algebra foundations, GraphAlg provides intuitive matrix operations that are amenable to aggressive optimization including sparsity analysis, loop-invariant code motion, and in-place aggregation. Our implementation in AvantGraph demonstrates significant code complexity reduction compared to SQL/Python and Pregel while achieving excellent performance on LDBC Graphalytics benchmarks. GraphAlg establishes that graph databases can serve as unified platforms for both queries and analytics.",
+    "code_links": [
+      "https://github.com/wildarch/graphalg"
+    ],
+    "comment": "for GraphAlg compiler source code, see https://github.com/wildarch/graphalg"
+  },
+  {
+    "title": "Octopus: A Lightweight Entity-Aware System for Multi-Table Data Discovery and Cell-Level Retrieval",
+    "authors": "Wen-Zhi Li, Sainyam Galhotra",
+    "published": "2026-01-05",
+    "arxiv_id": "2601.02304v1",
+    "url": "http://arxiv.org/abs/2601.02304v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.02304v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Tabular data constitute a dominant form of information in modern data lakes and repositories, yet discovering the relevant tables to answer user questions remains challenging. Existing data discovery systems assume that each question can be answered by a single table and often rely on resource-intensive offline preprocessing, such as model training or large-scale content indexing. In practice, however, many questions require information spread across multiple tables -- either independently or through joins -- and users often seek specific cell values rather than entire tables. In this paper, we present Octopus, a lightweight, entity-aware, and training-free system for multi-table data discovery and cell-level value retrieval. Instead of embedding entire questions, Octopus identifies fine-grained entities (column mentions and value mentions) from natural-language queries using an LLM parser. It then matches these entities to table headers through a compact embedding index and scans table contents directly for value occurrences, eliminating the need for heavy content indexing or costly offline stages. The resulting fine-grained alignment not only improves table retrieval accuracy but also facilitates efficient downstream NL2SQL execution by reducing token usage and redundant LLM calls. To evaluate Octopus, we introduce a new benchmark covering both table- and cell-level discovery under multi-table settings, including five datasets for independent discovery and two for join-based discovery. Experimental results show that Octopus consistently outperforms existing systems while achieving substantially lower computational and token costs. Code is available at https://github.com/wenzhilics/octopus.",
+    "code_links": [
+      "https://github.com/wenzhilics/octopus"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Accelerating Storage-Based Training for Graph Neural Networks",
+    "authors": "Myung-Hwan Jang, Jeong-Min Park, Yunyong Ko, Sang-Wook Kim",
+    "published": "2026-01-04",
+    "arxiv_id": "2601.01473v2",
+    "url": "http://arxiv.org/abs/2601.01473v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.01473v2",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Graph neural networks (GNNs) have achieved breakthroughs in various real-world downstream tasks due to their powerful expressiveness. As the scale of real-world graphs has been continuously growing, a storage-based approach to GNN training has been studied, which leverages external storage (e.g., NVMe SSDs) to handle such web-scale graphs on a single machine. Although such storage-based GNN training methods have shown promising potential in large-scale GNN training, we observed that they suffer from a severe bottleneck in data preparation since they overlook a critical challenge: how to handle a large number of small storage I/Os. To address the challenge, in this paper, we propose a novel storage-based GNN training framework, named AGNES, that employs a method of block-wise storage I/O processing to fully utilize the I/O bandwidth of high-performance storage devices. Moreover, to further enhance the efficiency of each storage I/O, AGNES employs a simple yet effective strategy, hyperbatch-based processing based on the characteristics of real-world graphs. Comprehensive experiments on five real-world graphs reveal that AGNES consistently outperforms four state-of-the-art methods, by up to 4.1X faster than the best competitor. Our code is available at https://github.com/Bigdasgit/agnes-kdd26.",
+    "code_links": [
+      "https://github.com/Bigdasgit/agnes-kdd26"
+    ],
+    "comment": "10 pages, 12 figures, 2 tables, ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD) 2026"
+  },
+  {
+    "title": "RadixGraph: A Fast, Space-Optimized Data Structure for Dynamic Graph Storage (Extended Version)",
+    "authors": "Haoxuan Xie, Junfeng Liu, Siqiang Luo, Kai Wang",
+    "published": "2026-01-04",
+    "arxiv_id": "2601.01444v1",
+    "url": "http://arxiv.org/abs/2601.01444v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.01444v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Dynamic graphs model many real-world applications, and as their sizes grow, efficiently storing and updating them becomes critical. We present RadixGraph, a fast and memory-efficient data structure for dynamic graph storage. RadixGraph features a carefully designed radix-tree-based vertex index that strikes an optimal trade-off between query efficiency and space among all pointer-array-based radix trees. For edge storage, it employs a hybrid snapshot-log architecture that enables amortized $O(1)$ update time. RadixGraph supports millions of concurrent updates per second while maintaining competitive performance for graph analytics. Experimental results show that RadixGraph outperforms the most performant baseline by up to $16.27\\times$ across various datasets in ingesting graph updates, and reduces memory usage by an average of $40.1\\%$. RadixGraph is open-source at https://github.com/ForwardStar/RadixGraph.",
+    "code_links": [
+      "https://github.com/ForwardStar/RadixGraph"
+    ],
+    "comment": "Accepted by SIGMOD 2026"
+  },
+  {
+    "title": "Exploring the Heterogeneity of Tabular Data: A Diversity-aware Data Generator via LLMs",
+    "authors": "Yafeng Tang, Xiaoou Ding, Jianzhuo Du, Zishuo Yan, Zhuang Ma, Zheng Liang, Zekai Qian, Hongzhi Wang",
+    "published": "2025-12-26",
+    "arxiv_id": "2512.21915v1",
+    "url": "http://arxiv.org/abs/2512.21915v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.21915v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Tabular data generation has become increasingly essential for enabling robust machine learning applications, which require large-scale, high-quality data. Existing solutions leverage generative models to learn original data distributions. However, real-world data are naturally heterogeneous with diverse distributions, making it challenging to obtain a universally good model for diverse data generation. To address this limitation, we introduce Diversity-Aware Tabular data gEnerator (DATE), a framework that (i) prepares high-quality and distributionally distinct examples for in-context learning by effectively partitioning the original heterogeneous data into multiple diverse subsets; (ii) harnesses Large Language Models (LLMs) to explore the diversity of the partitioned distribution with decision tree reasoning as feedback, generating high-quality labeled data for each subset. However, the massive generated data inherently involves a trade-off between diversity and quality. To integrate this issue, existing solutions greedily select the validation-best data. However, we prove that the selection in heterogeneous settings does not possess the greedy-choice property, and design a Multi-Arm Bandit-based sampling algorithm that balances the diversity and quality of generated data. Extensive experiments on tabular classification and regression benchmarks demonstrate that DATE consistently outperforms state-of-the-art GAN-based and LLM-based methods. On average, DATE achieves a 23.75% reduction in error rate with just 100 generated data. Empirically, we demonstrate that data generated by DATE can improve the accuracy of Direct Preference Optimization (DPO) and enhance the reasoning capability of LLMs on the target data. Code is available at https://github.com/windblow32/DATE.",
+    "code_links": [
+      "https://github.com/windblow32/DATE"
+    ],
+    "comment": "This manuscript has been submitted to IEEE Transactions on Knowledge and Data Engineering (TKDE) for peer review"
+  },
+  {
+    "title": "Valori: A Deterministic Memory Substrate for AI Systems",
+    "authors": "Varshith Gudur",
+    "published": "2025-12-25",
+    "arxiv_id": "2512.22280v1",
+    "url": "http://arxiv.org/abs/2512.22280v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.22280v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Modern AI systems rely on vector embeddings stored and searched using floating-point arithmetic. While effective for approximate similarity search, this design introduces fundamental non-determinism: identical models, inputs, and code can produce different memory states and retrieval results across hardware architectures (e.g., x86 vs. ARM). This prevents replayability and safe deployment, leading to silent data divergence that prevents post-hoc verification and compromises audit trails in regulated sectors. We present Valori, a deterministic AI memory substrate that replaces floating-point memory operations with fixed-point arithmetic (Q16.16) and models memory as a replayable state machine. Valori guarantees bit-identical memory states, snapshots, and search results across platforms. We demonstrate that non-determinism arises before indexing or retrieval and show how Valori enforces determinism at the memory boundary. Our results suggest that deterministic memory is a necessary primitive for trustworthy AI systems. The reference implementation is open-source and available at https://github.com/varshith-Git/Valori-Kernel (archived at https://zenodo.org/records/18022660).",
+    "code_links": [
+      "https://github.com/varshith-Git/Valori-Kernel"
+    ],
+    "comment": "7 pages, 1 figure. systems paper with empirical evaluation and determinism validation experiments. Code available at https://github.com/varshith-Git/Valori-Kernel"
+  },
+  {
+    "title": "A Multi-agent Text2SQL Framework using Small Language Models and Execution Feedback",
+    "authors": "Thanh Dat Hoang, Thanh Trung Huynh, Matthias Weidlich, Thanh Tam Nguyen, Tong Chen, Hongzhi Yin, Quoc Viet Hung Nguyen",
+    "published": "2025-12-21",
+    "arxiv_id": "2512.18622v1",
+    "url": "http://arxiv.org/abs/2512.18622v1",
+    "pdf_url": "https://arxiv.org/pdf/2512.18622v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text2SQL, the task of generating SQL queries from natural language text, is a critical challenge in data engineering. Recently, Large Language Models (LLMs) have demonstrated superior performance for this task due to their advanced comprehension and generation capabilities. However, privacy and cost considerations prevent companies from using Text2SQL solutions based on external LLMs offered as a service. Rather, small LLMs (SLMs) that are openly available and can hosted in-house are adopted. These SLMs, in turn, lack the generalization capabilities of larger LLMs, which impairs their effectiveness for complex tasks such as Text2SQL. To address these limitations, we propose MATS, a novel Text2SQL framework designed specifically for SLMs. MATS uses a multi-agent mechanism that assigns specialized roles to auxiliary agents, reducing individual workloads and fostering interaction. A training scheme based on reinforcement learning aligns these agents using feedback obtained during execution, thereby maintaining competitive performance despite a limited LLM size. Evaluation results using on benchmark datasets show that MATS, deployed on a single- GPU server, yields accuracy that are on-par with large-scale LLMs when using significantly fewer parameters. Our source code and data are available at https://github.com/thanhdath/mats-sql.",
+    "code_links": [
+      "https://github.com/thanhdath/mats-sql"
+    ],
+    "comment": null
+  }
+]
