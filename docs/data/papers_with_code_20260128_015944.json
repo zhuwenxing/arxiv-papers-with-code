@@ -1,0 +1,407 @@
+[
+  {
+    "title": "TopKGAT: A Top-K Objective-Driven Architecture for Recommendation",
+    "authors": "Sirui Chen, Jiawei Chen, Canghong Jin, Sheng Zhou, Jingbang Chen, Wujie Sun, Can Wang",
+    "published": "2026-01-26",
+    "arxiv_id": "2601.18432v1",
+    "url": "http://arxiv.org/abs/2601.18432v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.18432v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommendation systems (RS) aim to retrieve the top-K items most relevant to users, with metrics such as Precision@K and Recall@K commonly used to assess effectiveness. The architecture of an RS model acts as an inductive bias, shaping the patterns the model is inclined to learn. In recent years, numerous recommendation architectures have emerged, spanning traditional matrix factorization, deep neural networks, and graph neural networks. However, their designs are often not explicitly aligned with the top-K objective, thereby limiting their effectiveness.\n  To address this limitation, we propose TopKGAT, a novel recommendation architecture directly derived from a differentiable approximation of top-K metrics. The forward computation of a single TopKGAT layer is intrinsically aligned with the gradient ascent dynamics of the Precision@K metric, enabling the model to naturally improve top-K recommendation accuracy. Structurally, TopKGAT resembles a graph attention network and can be implemented efficiently. Extensive experiments on four benchmark datasets demonstrate that TopKGAT consistently outperforms state-of-the-art baselines. The code is available at https://github.com/StupidThree/TopKGAT.",
+    "code_links": [
+      "https://github.com/StupidThree/TopKGAT"
+    ],
+    "comment": "Accepted by WWW2026"
+  },
+  {
+    "title": "DMAP: Human-Aligned Structural Document Map for Multimodal Document Understanding",
+    "authors": "ShunLiang Fu, Yanxin Zhang, Yixin Xiang, Xiaoyu Du, Jinhui Tang",
+    "published": "2026-01-26",
+    "arxiv_id": "2601.18203v1",
+    "url": "http://arxiv.org/abs/2601.18203v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.18203v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Existing multimodal document question-answering (QA) systems predominantly rely on flat semantic retrieval, representing documents as a set of disconnected text chunks and largely neglecting their intrinsic hierarchical and relational structures. Such flattening disrupts logical and spatial dependencies - such as section organization, figure-text correspondence, and cross-reference relations, that humans naturally exploit for comprehension. To address this limitation, we introduce a document-level structural Document MAP (DMAP), which explicitly encodes both hierarchical organization and inter-element relationships within multimodal documents. Specifically, we design a Structured-Semantic Understanding Agent to construct DMAP by organizing textual content together with figures, tables, charts, etc. into a human-aligned hierarchical schema that captures both semantic and layout dependencies. Building upon this representation, a Reflective Reasoning Agent performs structure-aware and evidence-driven reasoning, dynamically assessing the sufficiency of retrieved context and iteratively refining answers through targeted interactions with DMAP. Extensive experiments on MMDocQA benchmarks demonstrate that DMAP yields document-specific structural representations aligned with human interpretive patterns, substantially enhancing retrieval precision, reasoning consistency, and multimodal comprehension over conventional RAG-based approaches. Code is available at https://github.com/Forlorin/DMAP",
+    "code_links": [
+      "https://github.com/Forlorin/DMAP"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Post-Training Denoising of User Profiles with LLMs in Collaborative Filtering Recommendation",
+    "authors": "Ervin Dervishaj, Maria Maistro, Tuukka Ruotsalo, Christina Lioma",
+    "published": "2026-01-25",
+    "arxiv_id": "2601.18009v1",
+    "url": "http://arxiv.org/abs/2601.18009v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.18009v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Implicit feedback -- the main data source for training Recommender Systems (RSs) -- is inherently noisy and has been shown to negatively affect recommendation effectiveness. Denoising has been proposed as a method for removing noisy implicit feedback and improving recommendations. Prior work has focused on in-training denoising, however this requires additional data, changes to the model architecture and training procedure or fine-tuning, all of which can be costly and data hungry. In this work, we focus on post-training denoising. Different from in-training denoising, post-training denoising does not involve changing the architecture of the model nor its training procedure, and does not require additional data. Specifically, we present a method for post-training denoising user profiles using Large Language Models (LLMs) for Collaborative Filtering (CF) recommendations. Our approach prompts LLMs with (i) a user profile (user interactions), (ii) a candidate item, and (iii) its rank as given by the CF recommender, and asks the LLM to remove items from the user profile to improve the rank of the candidate item. Experiments with a state-of-the-art CF recommender and 4 open and closed source LLMs in 3 datasets show that our denoising yields improvements up to 13% in effectiveness over the original user profiles. Our code is available at https://github.com/edervishaj/denoising-user-profiles-LLM.",
+    "code_links": [
+      "https://github.com/edervishaj/denoising-user-profiles-LLM"
+    ],
+    "comment": "Accepted at the 48th European Conference on Information Retrieval (ECIR 2026)"
+  },
+  {
+    "title": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction",
+    "authors": "Weijiang Lai, Beihong Jin, Di Zhang, Siru Chen, Jiongyan Zhang, Yuhang Gou, Jian Dong, Xingxing Wang",
+    "published": "2026-01-25",
+    "arxiv_id": "2601.17836v1",
+    "url": "http://arxiv.org/abs/2601.17836v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17836v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In recent years, the success of large language models (LLMs) has driven the exploration of scaling laws in recommender systems. However, models that demonstrate scaling laws are actually challenging to deploy in industrial settings for modeling long sequences of user behaviors, due to the high computational complexity of the standard self-attention mechanism. Despite various sparse self-attention mechanisms proposed in other fields, they are not fully suited for recommendation scenarios. This is because user behaviors exhibit personalization and temporal characteristics: different users have distinct behavior patterns, and these patterns change over time, with data from these users differing significantly from data in other fields in terms of distribution. To address these challenges, we propose SparseCTR, an efficient and effective model specifically designed for long-term behaviors of users. To be precise, we first segment behavior sequences into chunks in a personalized manner to avoid separating continuous behaviors and enable parallel processing of sequences. Based on these chunks, we propose a three-branch sparse self-attention mechanism to jointly identify users' global interests, interest transitions, and short-term interests. Furthermore, we design a composite relative temporal encoding via learnable, head-specific bias coefficients, better capturing sequential and periodic relationships among user behaviors. Extensive experimental results show that SparseCTR not only improves efficiency but also outperforms state-of-the-art methods. More importantly, it exhibits an obvious scaling law phenomenon, maintaining performance improvements across three orders of magnitude in FLOPs. In online A/B testing, SparseCTR increased CTR by 1.72\\% and CPM by 1.41\\%. Our source code is available at https://github.com/laiweijiang/SparseCTR.",
+    "code_links": [
+      "https://github.com/laiweijiang/SparseCTR"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Token-Weighted Multi-Target Learning for Generative Recommenders with Curriculum Learning",
+    "authors": "Wei-Ning Chiu, Chuan-Ju Wang, Pu-Jen Cheng",
+    "published": "2026-01-25",
+    "arxiv_id": "2601.17787v1",
+    "url": "http://arxiv.org/abs/2601.17787v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17787v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommender systems have recently attracted attention by formulating next-item prediction as an autoregressive sequence generation task. However, most existing methods optimize standard next-token likelihood and implicitly treat all tokens as equally informative, which is misaligned with semantic-ID-based generation. Accordingly, we propose two complementary information-gain-based token-weighting strategies tailored to generative recommendation with semantic IDs. Front-Greater Weighting captures conditional semantic information gain by prioritizing early tokens that most effectively reduce candidate-item uncertainty given their prefixes and encode coarse semantics. Frequency Weighting models marginal information gain under long-tailed item and token distributions, upweighting rare tokens to counteract popularity bias. Beyond individual strategies, we introduce a multi-target learning framework with curriculum learning that jointly optimizes the two token-weighted objectives alongside standard likelihood, enabling stable optimization and adaptive emphasis across training stages. Extensive experiments on benchmark datasets show that our method consistently outperforms strong baselines and existing token-weighting approaches, with improved robustness, strong generalization across different semantic-ID constructions, and substantial gains on both head and tail items. Code is available at https://github.com/CHIUWEINING/Token-Weighted-Multi-Target-Learning-for-Generative-Recommenders-with-Curriculum-Learning.",
+    "code_links": [
+      "https://github.com/CHIUWEINING/Token-Weighted-Multi-Target-Learning-for-Generative-Recommenders-with-Curriculum-Learning"
+    ],
+    "comment": "11 pages, 5 figures"
+  },
+  {
+    "title": "To Case or Not to Case: An Empirical Study in Learned Sparse Retrieval",
+    "authors": "Emmanouil Georgios Lionis, Jia-Huei Ju, Angelos Nalmpantis, Casper Thuis, Sean MacAvaney, Andrew Yates",
+    "published": "2026-01-24",
+    "arxiv_id": "2601.17500v1",
+    "url": "http://arxiv.org/abs/2601.17500v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17500v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Learned Sparse Retrieval (LSR) methods construct sparse lexical representations of queries and documents that can be efficiently searched using inverted indexes. Existing LSR approaches have relied almost exclusively on uncased backbone models, whose vocabularies exclude case-sensitive distinctions, thereby reducing vocabulary mismatch. However, the most recent state-of-the-art language models are only available in cased versions. Despite this shift, the impact of backbone model casing on LSR has not been studied, potentially posing a risk to the viability of the method going forward. To fill this gap, we systematically evaluate paired cased and uncased versions of the same backbone models across multiple datasets to assess their suitability for LSR. Our findings show that LSR models with cased backbone models by default perform substantially worse than their uncased counterparts; however, this gap can be eliminated by pre-processing the text to lowercase. Moreover, our token-level analysis reveals that, under lowercasing, cased models almost entirely suppress cased vocabulary items and behave effectively as uncased models, explaining their restored performance. This result broadens the applicability of recent cased models to the LSR setting and facilitates the integration of stronger backbone architectures into sparse retrieval. The complete code and implementation for this project are available at: https://github.com/lionisakis/Uncased-vs-cased-models-in-LSR",
+    "code_links": [
+      "https://github.com/lionisakis/Uncased-vs-cased-models-in-LSR"
+    ],
+    "comment": "This preprint has not undergone peer review (when applicable) or any post-submission improvements or corrections. The Version of Record of this contribution is published in ECIR2026 (Part I) Advances in Information Retrieval"
+  },
+  {
+    "title": "Towards Fair Large Language Model-based Recommender Systems without Costly Retraining",
+    "authors": "Jin Li, Huilin Gu, Shoujin Wang, Qi Zhang, Shui Yu, Chen Wang, Xiwei Xu, Fang Chen",
+    "published": "2026-01-24",
+    "arxiv_id": "2601.17492v1",
+    "url": "http://arxiv.org/abs/2601.17492v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17492v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models (LLMs) have revolutionized Recommender Systems (RS) through advanced generative user modeling. However, LLM-based RS (LLM-RS) often inadvertently perpetuates bias present in the training data, leading to severe fairness issues. Addressing these fairness problems in LLM-RS faces two significant challenges. 1) Existing debiasing methods, designed for specific bias types, lack the generality to handle diverse or emerging biases in real-world applications. 2) Debiasing methods relying on retraining are computationally infeasible given the massive parameter scale of LLMs. To overcome these challenges, we propose FUDLR (Fast Unified Debiasing for LLM-RS). The core idea is to reformulate the debiasing problem as an efficient machine unlearning task with two stages. First, FUDLR identifies bias-inducing samples to unlearn through a novel bias-agnostic mask, optimized to balance fairness improvement with accuracy preservation. Its bias-agnostic design allows adaptability to various or co-existing biases simply by incorporating different fairness metrics. Second, FUDLR performs efficient debiasing by estimating and removing the influence of identified samples on model parameters. Extensive experiments demonstrate that FUDLR effectively and efficiently improves fairness while preserving recommendation accuracy, offering a practical path toward socially responsible LLM-RS. The code and data are available at https://github.com/JinLi-i/FUDLR.",
+    "code_links": [
+      "https://github.com/JinLi-i/FUDLR"
+    ],
+    "comment": "Accepted by WWW 2026"
+  },
+  {
+    "title": "Adversarial Alignment and Disentanglement for Cross-Domain CTR Prediction with Domain-Encompassing Features",
+    "authors": "Junyou He, Lixi Deng, Huichao Guo, Ye Tang, Yong Li, Sulong Xu",
+    "published": "2026-01-24",
+    "arxiv_id": "2601.17472v1",
+    "url": "http://arxiv.org/abs/2601.17472v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17472v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Cross-domain recommendation (CDR) has been increasingly explored to address data sparsity and cold-start issues. However, recent approaches typically disentangle domain-invariant features shared between source and target domains, as well as domain-specific features for each domain. However, they often rely solely on domain-invariant features combined with target domain-specific features, which can lead to suboptimal performance. To overcome the limitations, this paper presents the Adversarial Alignment and Disentanglement Cross-Domain Recommendation ($A^2DCDR$ ) model, an innovative approach designed to capture a comprehensive range of cross-domain information, including both domain-invariant and valuable non-aligned features. The $A^2DCDR$ model enhances cross-domain recommendation through three key components: refining MMD with adversarial training for better generalization, employing a feature disentangler and reconstruction mechanism for intra-domain disentanglement, and introducing a novel fused representation combining domain-invariant, non-aligned features with original contextual data. Experiments on real-world datasets and online A/B testing show that $A^2DCDR$ outperforms existing methods, confirming its effectiveness and practical applicability. The code is provided at https://github.com/youzi0925/A-2DCDR/tree/main.",
+    "code_links": [
+      "https://github.com/youzi0925/A-2DCDR"
+    ],
+    "comment": "Accepted to ICDM 2025"
+  },
+  {
+    "title": "UniGRec: Unified Generative Recommendation with Soft Identifiers for End-to-End Optimization",
+    "authors": "Jialei Li, Yang Zhang, Yimeng Bai, Shuai Zhu, Ziqi Xue, Xiaoyan Zhao, Dingxian Wang, Frank Yang, Andrew Rabinovich, Xiangnan He",
+    "published": "2026-01-24",
+    "arxiv_id": "2601.17438v1",
+    "url": "http://arxiv.org/abs/2601.17438v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17438v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation has recently emerged as a transformative paradigm that directly generates target items, surpassing traditional cascaded approaches. It typically involves two components: a tokenizer that learns item identifiers and a recommender trained on them. Existing methods often decouple tokenization from recommendation or rely on asynchronous alternating optimization, limiting full end-to-end alignment. To address this, we unify the tokenizer and recommender under the ultimate recommendation objective via differentiable soft item identifiers, enabling joint end-to-end training. However, this introduces three challenges: training-inference discrepancy due to soft-to-hard mismatch, item identifier collapse from codeword usage imbalance, and collaborative signal deficiency due to an overemphasis on fine-grained token-level semantics.\n  To tackle these challenges, we propose UniGRec, a unified generative recommendation framework that addresses them from three perspectives. UniGRec employs Annealed Inference Alignment during tokenization to smoothly bridge soft training and hard inference, a Codeword Uniformity Regularization to prevent identifier collapse and encourage codebook diversity, and a Dual Collaborative Distillation mechanism that distills collaborative priors from a lightweight teacher model to jointly guide both the tokenizer and the recommender. Extensive experiments on real-world datasets demonstrate that UniGRec consistently outperforms state-of-the-art baseline methods. Our codes are available at https://github.com/Jialei-03/UniGRec.",
+    "code_links": [
+      "https://github.com/Jialei-03/UniGRec"
+    ],
+    "comment": "11 pages, 6 figures"
+  },
+  {
+    "title": "Better Generalizing to Unseen Concepts: An Evaluation Framework and An LLM-Based Auto-Labeled Pipeline for Biomedical Concept Recognition",
+    "authors": "Shanshan Liu, Noriki Nishida, Fei Cheng, Narumi Tokunaga, Rumana Ferdous Munne, Yuki Yamagata, Kouji Kozaki, Takehito Utsuro, Yuji Matsumoto",
+    "published": "2026-01-23",
+    "arxiv_id": "2601.16711v1",
+    "url": "http://arxiv.org/abs/2601.16711v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.16711v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Generalization to unseen concepts is a central challenge due to the scarcity of human annotations in Mention-agnostic Biomedical Concept Recognition (MA-BCR). This work makes two key contributions to systematically address this issue. First, we propose an evaluation framework built on hierarchical concept indices and novel metrics to measure generalization. Second, we explore LLM-based Auto-Labeled Data (ALD) as a scalable resource, creating a task-specific pipeline for its generation. Our research unequivocally shows that while LLM-generated ALD cannot fully substitute for manual annotations, it is a valuable resource for improving generalization, successfully providing models with the broader coverage and structural knowledge needed to approach recognizing unseen concepts. Code and datasets are available at https://github.com/bio-ie-tool/hi-ald.",
+    "code_links": [
+      "https://github.com/bio-ie-tool/hi-ald"
+    ],
+    "comment": "Accepted to EACL 2026 (Main)"
+  },
+  {
+    "title": "MMGRid: Navigating Temporal-aware and Cross-domain Generative Recommendation via Model Merging",
+    "authors": "Tianjun Wei, Enneng Yang, Yingpeng Du, Huizhong Guo, Jie Zhang, Zhu Sun",
+    "published": "2026-01-22",
+    "arxiv_id": "2601.15930v1",
+    "url": "http://arxiv.org/abs/2601.15930v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.15930v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Model merging (MM) offers an efficient mechanism for integrating multiple specialized models without access to original training data or costly retraining. While MM has demonstrated success in domains like computer vision, its role in recommender systems (RSs) remains largely unexplored. Recently, Generative Recommendation (GR) has emerged as a new paradigm in RSs, characterized by rapidly growing model scales and substantial computational costs, making MM particularly appealing for cost-sensitive deployment scenarios. In this work, we present the first systematic study of MM in GR through a contextual lens. We focus on a fundamental yet underexplored challenge in real-world: how to merge generative recommenders specialized to different real-world contexts, arising from temporal evolving user behaviors and heterogeneous application domains. To this end, we propose a unified framework MMGRid, a structured contextual grid of GR checkpoints that organizes models trained under diverse contexts induced by temporal evolution and domain diversity. All checkpoints are derived from a shared base LLM but fine-tuned on context-specific data, forming a realistic and controlled model space for systematically analyzing MM across GR paradigms and merging algorithms. Our investigation reveals several key insights. First, training GR models from LLMs can introduce parameter conflicts during merging due to token distribution shifts and objective disparities; such conflicts can be alleviated by disentangling task-aware and context-specific parameter changes via base model replacement. Second, incremental training across contexts induces recency bias, which can be effectively balanced through weighted contextual merging. Notably, we observe that optimal merging weights correlate with context-dependent interaction characteristics, offering practical guidance for weight selection in real-world deployments.",
+    "code_links": [
+      "https://github.com/Joinn99/MMGRid"
+    ],
+    "comment": "https://github.com/Joinn99/MMGRid"
+  },
+  {
+    "title": "STAR: Semantic Table Representation with Header-Aware Clustering and Adaptive Weighted Fusion",
+    "authors": "Shui-Hsiang Hsu, Tsung-Hsiang Chou, Chen-Jui Yu, Yao-Chung Fan",
+    "published": "2026-01-22",
+    "arxiv_id": "2601.15860v1",
+    "url": "http://arxiv.org/abs/2601.15860v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.15860v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Table retrieval is the task of retrieving the most relevant tables from large-scale corpora given natural language queries. However, structural and semantic discrepancies between unstructured text and structured tables make embedding alignment particularly challenging. Recent methods such as QGpT attempt to enrich table semantics by generating synthetic queries, yet they still rely on coarse partial-table sampling and simple fusion strategies, which limit semantic diversity and hinder effective query-table alignment. We propose STAR (Semantic Table Representation), a lightweight framework that improves semantic table representation through semantic clustering and weighted fusion. STAR first applies header-aware K-means clustering to group semantically similar rows and selects representative centroid instances to construct a diverse partial table. It then generates cluster-specific synthetic queries to comprehensively cover the table's semantic space. Finally, STAR employs weighted fusion strategies to integrate table and query embeddings, enabling fine-grained semantic alignment. This design enables STAR to capture complementary information from structured and textual sources, improving the expressiveness of table representations. Experiments on five benchmarks show that STAR achieves consistently higher Recall than QGpT on all datasets, demonstrating the effectiveness of semantic clustering and adaptive weighted fusion for robust table representation. Our code is available at https://github.com/adsl135789/STAR.",
+    "code_links": [
+      "https://github.com/adsl135789/STAR"
+    ],
+    "comment": "Accepted at The Web Conference 2026 (WWW 2026)"
+  },
+  {
+    "title": "CGPT: Cluster-Guided Partial Tables with LLM-Generated Supervision for Table Retrieval",
+    "authors": "Tsung-Hsiang Chou, Chen-Jui Yu, Shui-Hsiang Hsu, Yao-Chung Fan",
+    "published": "2026-01-22",
+    "arxiv_id": "2601.15849v1",
+    "url": "http://arxiv.org/abs/2601.15849v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.15849v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "General-purpose embedding models have demonstrated strong performance in text retrieval but remain suboptimal for table retrieval, where highly structured content leads to semantic compression and query-table mismatch. Recent LLM-based retrieval augmentation methods mitigate this issue by generating synthetic queries, yet they often rely on heuristic partial-table selection and seldom leverage these synthetic queries as supervision to improve the embedding model. We introduce CGPT, a training framework that enhances table retrieval through LLM-generated supervision. CGPT constructs semantically diverse partial tables by clustering table instances using K-means and sampling across clusters to broaden semantic coverage. An LLM then generates synthetic queries for these partial tables, which are used in hard-negative contrastive fine-tuning to refine the embedding model. Experiments across four public benchmarks (MimoTable, OTTQA, FetaQA, and E2E-WTQ) show that CGPT consistently outperforms retrieval baselines, including QGpT, with an average R@1 improvement of 16.54 percent. In a unified multi-domain corpus setting, CGPT further demonstrates strong cross-domain generalization and remains effective even when using smaller LLMs for synthetic query generation. These results indicate that semantically guided partial-table construction, combined with contrastive training from LLM-generated supervision, provides an effective and scalable paradigm for large-scale table retrieval. Our code is available at https://github.com/yumeow0122/CGPT.",
+    "code_links": [
+      "https://github.com/yumeow0122/CGPT"
+    ],
+    "comment": "Accepted at The Web Conference 2026 (WWW 2026)"
+  },
+  {
+    "title": "Enhancing guidance for missing data in diffusion-based sequential recommendation",
+    "authors": "Qilong Yan, Yifei Xing, Dugang Liu, Jingpu Duan, Jian Yin",
+    "published": "2026-01-22",
+    "arxiv_id": "2601.15673v1",
+    "url": "http://arxiv.org/abs/2601.15673v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.15673v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Contemporary sequential recommendation methods are becoming more complex, shifting from classification to a diffusion-guided generative paradigm. However, the quality of guidance in the form of user information is often compromised by missing data in the observed sequences, leading to suboptimal generation quality. Existing methods address this by removing locally similar items, but overlook ``critical turning points'' in user interest, which are crucial for accurately predicting subsequent user intent. To address this, we propose a novel Counterfactual Attention Regulation Diffusion model (CARD), which focuses on amplifying the signal from key interest-turning-point items while concurrently identifying and suppressing noise within the user sequence. CARD consists of (1) a Dual-side Thompson Sampling method to identify sequences undergoing significant interest shift, and (2) a counterfactual attention mechanism for these sequences to quantify the importance of each item. In this manner, CARD provides the diffusion model with a high-quality guidance signal composed of dynamically re-weighted interaction vectors to enable effective generation. Experiments show our method works well on real-world data without being computationally expensive. Our code is available at https://github.com/yanqilong3321/CARD.",
+    "code_links": [
+      "https://github.com/yanqilong3321/CARD"
+    ],
+    "comment": "ICASSP 2026 accecpted"
+  },
+  {
+    "title": "What Should I Cite? A RAG Benchmark for Academic Citation Prediction",
+    "authors": "Leqi Zheng, Jiajun Zhang, Canzhi Chen, Chaokun Wang, Hongwei Li, Yuying Li, Yaoxin Mao, Shannan Yan, Zixin Song, Zhiyuan Feng, Zhaolu Kang, Zirong Chen, Hang Zhang, Qiang Liu, Liang Wang, Ziyang Liu",
+    "published": "2026-01-21",
+    "arxiv_id": "2601.14949v2",
+    "url": "http://arxiv.org/abs/2601.14949v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.14949v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "With the rapid growth of Web-based academic publications, more and more papers are being published annually, making it increasingly difficult to find relevant prior work. Citation prediction aims to automatically suggest appropriate references, helping scholars navigate the expanding scientific literature. Here we present \\textbf{CiteRAG}, the first comprehensive retrieval-augmented generation (RAG)-integrated benchmark for evaluating large language models on academic citation prediction, featuring a multi-level retrieval strategy, specialized retrievers, and generators. Our benchmark makes four core contributions: (1) We establish two instances of the citation prediction task with different granularity. Task 1 focuses on coarse-grained list-specific citation prediction, while Task 2 targets fine-grained position-specific citation prediction. To enhance these two tasks, we build a dataset containing 7,267 instances for Task 1 and 8,541 instances for Task 2, enabling comprehensive evaluation of both retrieval and generation. (2) We construct a three-level large-scale corpus with 554k papers spanning many major subfields, using an incremental pipeline. (3) We propose a multi-level hybrid RAG approach for citation prediction, fine-tuning embedding models with contrastive learning to capture complex citation relationships, paired with specialized generation models. (4) We conduct extensive experiments across state-of-the-art language models, including closed-source APIs, open-source models, and our fine-tuned generators, demonstrating the effectiveness of our framework. Our open-source toolkit enables reproducible evaluation and focuses on academic literature, providing the first comprehensive evaluation framework for citation prediction and serving as a methodological template for other scientific domains. Our source code and data are released at https://github.com/LQgdwind/CiteRAG.",
+    "code_links": [
+      "https://github.com/LQgdwind/CiteRAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Rerank Before You Reason: Analyzing Reranking Tradeoffs through Effective Token Cost in Deep Search Agents",
+    "authors": "Sahel Sharifymoghaddam, Jimmy Lin",
+    "published": "2026-01-20",
+    "arxiv_id": "2601.14224v1",
+    "url": "http://arxiv.org/abs/2601.14224v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.14224v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Deep research agents rely on iterative retrieval and reasoning to answer complex queries, but scaling test-time computation raises significant efficiency concerns. We study how to allocate reasoning budget in deep search pipelines, focusing on the role of listwise reranking. Using the BrowseComp-Plus benchmark, we analyze tradeoffs between model scale, reasoning effort, reranking depth, and total token cost via a novel effective token cost (ETC) metric. Our results show that reranking consistently improves retrieval and end-to-end accuracy, and that moderate reranking often yields larger gains than increasing search-time reasoning, achieving comparable accuracy at substantially lower cost. All our code is available at https://github.com/texttron/BrowseComp-Plus.git",
+    "code_links": [
+      "https://github.com/texttron/BrowseComp-Plus"
+    ],
+    "comment": "10 pages, 7 figures"
+  },
+  {
+    "title": "Auditory Brain Passage Retrieval: Cross-Sensory EEG Training for Neural Information Retrieval",
+    "authors": "Niall McGuire, Yashar Moshfeghi",
+    "published": "2026-01-20",
+    "arxiv_id": "2601.14001v1",
+    "url": "http://arxiv.org/abs/2601.14001v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.14001v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Query formulation from internal information needs remains fundamentally challenging across all Information Retrieval paradigms due to cognitive complexity and physical impairments. Brain Passage Retrieval (BPR) addresses this by directly mapping EEG signals to passage representations without intermediate text translation. However, existing BPR research exclusively uses visual stimuli, leaving critical questions unanswered: Can auditory EEG enable effective retrieval for voice-based interfaces and visually impaired users? Can training on combined EEG datasets from different sensory modalities improve performance despite severe data scarcity? We present the first systematic investigation of auditory EEG for BPR and evaluate cross-sensory training benefits. Using dual encoder architectures with four pooling strategies (CLS, mean, max, multi-vector), we conduct controlled experiments comparing auditory-only, visual-only, and combined training on the Alice (auditory) and Nieuwland (visual) datasets. Results demonstrate that auditory EEG consistently outperforms visual EEG, and cross-sensory training with CLS pooling achieves substantial improvements over individual training: 31% in MRR (0.474), 43% in Hit@1 (0.314), and 28% in Hit@10 (0.858). Critically, combined auditory EEG models surpass BM25 text baselines (MRR: 0.474 vs 0.428), establishing neural queries as competitive with traditional retrieval whilst enabling accessible interfaces. These findings validate auditory neural interfaces for IR tasks and demonstrate that cross-sensory training addresses data scarcity whilst outperforming single-modality approaches Code: https://github.com/NiallMcguire/Audio_BPR",
+    "code_links": [
+      "https://github.com/NiallMcguire/Audio_BPR"
+    ],
+    "comment": "Accepted At ECIR 2026"
+  },
+  {
+    "title": "QKVQA: Question-Focused Filtering for Knowledge-based VQA",
+    "authors": "Wei Ye, Yixin Su, Yueguo Chen, Longxiang Gao, Jianjun Li, Ruixuan Li, Rui Zhang",
+    "published": "2026-01-20",
+    "arxiv_id": "2601.13856v2",
+    "url": "http://arxiv.org/abs/2601.13856v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.13856v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Knowledge-based Visual Question Answering (KB-VQA) aims to answer questions by integrating images with external knowledge. Effective knowledge filtering is crucial for improving accuracy. Typical filtering methods use similarity metrics to locate relevant article sections from one article, leading to information selection errors at the article and intra-article levels. Although recent explorations of Multimodal Large Language Model (MLLM)-based filtering methods demonstrate superior semantic understanding and cross-article filtering capabilities, their high computational cost limits practical application. To address these issues, this paper proposes a question-focused filtering method. This approach can perform question-focused, cross-article filtering, efficiently obtaining high-quality filtered knowledge while keeping computational costs comparable to typical methods. Specifically, we design a trainable Question-Focused Filter (QFF) and a Chunk-based Dynamic Multi-Article Selection (CDA) module, which collectively alleviate information selection errors at both the article and intra-article levels. Experiments show that our method outperforms current state-of-the-art models by 4.9% on E-VQA and 3.8% on InfoSeek, validating its effectiveness. The code is publicly available at: https://github.com/leaffeall/QKVQA.",
+    "code_links": [
+      "https://github.com/leaffeall/QKVQA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "CORE-T: COherent REtrieval of Tables for Text-to-SQL",
+    "authors": "Hassan Soliman, Vivek Gupta, Dan Roth, Iryna Gurevych",
+    "published": "2026-01-19",
+    "arxiv_id": "2601.13111v1",
+    "url": "http://arxiv.org/abs/2601.13111v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.13111v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Realistic text-to-SQL workflows often require joining multiple tables. As a result, accurately retrieving the relevant set of tables becomes a key bottleneck for end-to-end performance. We study an open-book setting where queries must be answered over large, heterogeneous table collections pooled from many sources, without clean scoping signals such as database identifiers. Here, dense retrieval (DR) achieves high recall but returns many distractors, while join-aware alternatives often rely on extra assumptions and/or incur high inference overhead. We propose CORE-T, a scalable, training-free framework that enriches tables with LLM-generated purpose metadata and pre-computes a lightweight table-compatibility cache. At inference time, DR returns top-K candidates; a single LLM call selects a coherent, joinable subset, and a simple additive adjustment step restores strongly compatible tables. Across Bird, Spider, and MMQA, CORE-T improves table-selection F1 by up to 22.7 points while retrieving up to 42% fewer tables, improving multi-table execution accuracy by up to 5.0 points on Bird and 6.9 points on MMQA, and using 4-5x fewer tokens than LLM-intensive baselines.",
+    "code_links": [
+      "https://github.com/UKPLab/arxiv2026-core-t"
+    ],
+    "comment": "Preprint under review. Code and data available at: https://github.com/UKPLab/arxiv2026-core-t"
+  },
+  {
+    "title": "Can LLMs Clean Up Your Mess? A Survey of Application-Ready Data Preparation with LLMs",
+    "authors": "Wei Zhou, Jun Zhou, Haoyu Wang, Zhenghao Li, Qikang He, Shaokun Han, Guoliang Li, Xuanhe Zhou, Yeye He, Chunwei Liu, Zirui Tang, Bin Wang, Shen Tang, Kai Zuo, Yuyu Luo, Zhenzhe Zheng, Conghui He, Jingren Zhou, Fan Wu",
+    "published": "2026-01-22",
+    "arxiv_id": "2601.17058v1",
+    "url": "http://arxiv.org/abs/2601.17058v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17058v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Data preparation aims to denoise raw datasets, uncover cross-dataset relationships, and extract valuable insights from them, which is essential for a wide range of data-centric applications. Driven by (i) rising demands for application-ready data (e.g., for analytics, visualization, decision-making), (ii) increasingly powerful LLM techniques, and (iii) the emergence of infrastructures that facilitate flexible agent construction (e.g., using Databricks Unity Catalog), LLM-enhanced methods are rapidly becoming a transformative and potentially dominant paradigm for data preparation.\n  By investigating hundreds of recent literature works, this paper presents a systematic review of this evolving landscape, focusing on the use of LLM techniques to prepare data for diverse downstream tasks. First, we characterize the fundamental paradigm shift, from rule-based, model-specific pipelines to prompt-driven, context-aware, and agentic preparation workflows. Next, we introduce a task-centric taxonomy that organizes the field into three major tasks: data cleaning (e.g., standardization, error processing, imputation), data integration (e.g., entity matching, schema matching), and data enrichment (e.g., data annotation, profiling). For each task, we survey representative techniques, and highlight their respective strengths (e.g., improved generalization, semantic understanding) and limitations (e.g., the prohibitive cost of scaling LLMs, persistent hallucinations even in advanced agents, the mismatch between advanced methods and weak evaluation). Moreover, we analyze commonly used datasets and evaluation metrics (the empirical part). Finally, we discuss open research challenges and outline a forward-looking roadmap that emphasizes scalable LLM-data systems, principled designs for reliable agentic workflows, and robust evaluation protocols.",
+    "code_links": [
+      "https://github.com/weAIDB/awesome-data-llm"
+    ],
+    "comment": "Please refer to our repository for more details: https://github.com/weAIDB/awesome-data-llm"
+  },
+  {
+    "title": "TLSQL: Table Learning Structured Query Language",
+    "authors": "Feiyang Chen, Ken Zhong, Aoqian Zhang, Zheng Wang, Li Pan, Jianhua Li",
+    "published": "2026-01-20",
+    "arxiv_id": "2601.14109v2",
+    "url": "http://arxiv.org/abs/2601.14109v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.14109v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Table learning, which lies at the intersection of machine learning and modern database systems, has recently attracted growing attention. However, existing frameworks typically require explicit data export and extensive feature engineering, creating a high barrier for database practitioners. We present TLSQL (Table Learning Structured Query Language), a system that enables table learning directly over relational databases via SQL-like declarative specifications. TLSQL is implemented as a lightweight Python library that translates these specifications into standard SQL queries and structured learning task descriptions. The generated SQL queries are executed natively by the database engine, while the task descriptions are consumed by downstream table learning frameworks. This design allows users to focus on modeling and analysis rather than low-level data preparation and pipeline orchestration. Experiments on real-world datasets demonstrate that TLSQL effectively lowers the barrier to integrating machine learning into databasecentric workflows. Our code is available at https://github.com/rllm-project/tlsql/.",
+    "code_links": [
+      "https://github.com/rllm-project/tlsql"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Pervasive Annotation Errors Break Text-to-SQL Benchmarks and Leaderboards",
+    "authors": "Tengjun Jin, Yoojin Choi, Yuxuan Zhu, Daniel Kang",
+    "published": "2026-01-13",
+    "arxiv_id": "2601.08778v3",
+    "url": "http://arxiv.org/abs/2601.08778v3",
+    "pdf_url": "https://arxiv.org/pdf/2601.08778v3",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Researchers have proposed numerous text-to-SQL techniques to streamline data analytics and accelerate the development of data-driven applications. To compare these techniques and select the best one for deployment, the community depends on public benchmarks and their leaderboards. Since these benchmarks heavily rely on human annotations during question construction and answer evaluation, the validity of the annotations is crucial.\n  In this paper, we conduct an empirical study that (i) benchmarks annotation error rates for two widely used text-to-SQL benchmarks, BIRD and Spider 2.0-Snow, and (ii) corrects a subset of the BIRD development (Dev) set to measure the impact of annotation errors on text-to-SQL agent performance and leaderboard rankings. Through expert analysis, we show that BIRD Mini-Dev and Spider 2.0-Snow have error rates of 52.8% and 62.8%, respectively. We re-evaluate all 16 open-source agents from the BIRD leaderboard on both the original and the corrected BIRD Dev subsets. We show that performance changes range from -7% to 31% (in relative terms) and rank changes range from $-9$ to $+9$ positions. We further assess whether these impacts generalize to the full BIRD Dev set. We find that the rankings of agents on the uncorrected subset correlate strongly with those on the full Dev set (Spearman's $r_s$=0.85, $p$=3.26e-5), whereas they correlate weakly with those on the corrected subset (Spearman's $r_s$=0.32, $p$=0.23). These findings show that annotation errors can significantly distort reported performance and rankings, potentially misguiding research directions or deployment choices. Our code and data are available at https://github.com/uiuc-kang-lab/text_to_sql_benchmarks.",
+    "code_links": [
+      "https://github.com/uiuc-kang-lab/text_to_sql_benchmarks"
+    ],
+    "comment": "18 pages, 14 figures, 9 tables"
+  },
+  {
+    "title": "VISTA: Knowledge-Driven Interpretable Vessel Trajectory Imputation via Large Language Models",
+    "authors": "Hengyu Liu, Tianyi Li, Haoyu Wang, Kristian Torp, Tiancheng Zhang, Yushuai Li, Christian S. Jensen",
+    "published": "2026-01-11",
+    "arxiv_id": "2601.06940v1",
+    "url": "http://arxiv.org/abs/2601.06940v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06940v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The Automatic Identification System provides critical information for maritime navigation and safety, yet its trajectories are often incomplete due to signal loss or deliberate tampering. Existing imputation methods emphasize trajectory recovery, paying limited attention to interpretability and failing to provide underlying knowledge that benefits downstream tasks such as anomaly detection and route planning. We propose knowledge-driven interpretable vessel trajectory imputation (VISTA), the first trajectory imputation framework that offers interpretability while simultaneously providing underlying knowledge to support downstream analysis. Specifically, we first define underlying knowledge as a combination of Structured Data-derived Knowledge (SDK) distilled from AIS data and Implicit LLM Knowledge acquired from large-scale Internet corpora. Second, to manage and leverage the SDK effectively at scale, we develop a data-knowledge-data loop that employs a Structured Data-derived Knowledge Graph for SDK extraction and knowledge-driven trajectory imputation. Third, to efficiently process large-scale AIS data, we introduce a workflow management layer that coordinates the end-to-end pipeline, enabling parallel knowledge extraction and trajectory imputation with anomaly handling and redundancy elimination. Experiments on two large AIS datasets show that VISTA is capable of state-of-the-art imputation accuracy and computational efficiency, improving over state-of-the-art baselines by 5%-94% and reducing time cost by 51%-93%, while producing interpretable knowledge cues that benefit downstream tasks. The source code and implementation details of VISTA are publicly available.",
+    "code_links": [
+      "https://github.com/hyLiu1994/VISTA"
+    ],
+    "comment": "22 pages, 13 figures, 3 algorithms, 5 tables. Code available at https://github.com/hyLiu1994/VISTA"
+  },
+  {
+    "title": "Algorithm Support for Graph Databases, Done Right",
+    "authors": "Daan de Graaf, Robert Brijder, Soham Chakraborty, George Fletcher, Bram van de Wall, Nikolay Yakovets",
+    "published": "2026-01-10",
+    "arxiv_id": "2601.06705v1",
+    "url": "http://arxiv.org/abs/2601.06705v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06705v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Graph database query languages cannot express algorithms like PageRank, forcing costly data wrangling, while existing solutions such as algorithm libraries, vertex-centric APIs, and recursive CTEs lack the necessary combination of expressiveness, performance, and usability. We present GraphAlg: a domain-specific language for graph algorithms that compiles to relational algebra, enabling seamless integration with query processing pipelines. Built on linear algebra foundations, GraphAlg provides intuitive matrix operations that are amenable to aggressive optimization including sparsity analysis, loop-invariant code motion, and in-place aggregation. Our implementation in AvantGraph demonstrates significant code complexity reduction compared to SQL/Python and Pregel while achieving excellent performance on LDBC Graphalytics benchmarks. GraphAlg establishes that graph databases can serve as unified platforms for both queries and analytics.",
+    "code_links": [
+      "https://github.com/wildarch/graphalg"
+    ],
+    "comment": "for GraphAlg compiler source code, see https://github.com/wildarch/graphalg"
+  },
+  {
+    "title": "Octopus: A Lightweight Entity-Aware System for Multi-Table Data Discovery and Cell-Level Retrieval",
+    "authors": "Wen-Zhi Li, Sainyam Galhotra",
+    "published": "2026-01-05",
+    "arxiv_id": "2601.02304v1",
+    "url": "http://arxiv.org/abs/2601.02304v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.02304v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Tabular data constitute a dominant form of information in modern data lakes and repositories, yet discovering the relevant tables to answer user questions remains challenging. Existing data discovery systems assume that each question can be answered by a single table and often rely on resource-intensive offline preprocessing, such as model training or large-scale content indexing. In practice, however, many questions require information spread across multiple tables -- either independently or through joins -- and users often seek specific cell values rather than entire tables. In this paper, we present Octopus, a lightweight, entity-aware, and training-free system for multi-table data discovery and cell-level value retrieval. Instead of embedding entire questions, Octopus identifies fine-grained entities (column mentions and value mentions) from natural-language queries using an LLM parser. It then matches these entities to table headers through a compact embedding index and scans table contents directly for value occurrences, eliminating the need for heavy content indexing or costly offline stages. The resulting fine-grained alignment not only improves table retrieval accuracy but also facilitates efficient downstream NL2SQL execution by reducing token usage and redundant LLM calls. To evaluate Octopus, we introduce a new benchmark covering both table- and cell-level discovery under multi-table settings, including five datasets for independent discovery and two for join-based discovery. Experimental results show that Octopus consistently outperforms existing systems while achieving substantially lower computational and token costs. Code is available at https://github.com/wenzhilics/octopus.",
+    "code_links": [
+      "https://github.com/wenzhilics/octopus"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Accelerating Storage-Based Training for Graph Neural Networks",
+    "authors": "Myung-Hwan Jang, Jeong-Min Park, Yunyong Ko, Sang-Wook Kim",
+    "published": "2026-01-04",
+    "arxiv_id": "2601.01473v2",
+    "url": "http://arxiv.org/abs/2601.01473v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.01473v2",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Graph neural networks (GNNs) have achieved breakthroughs in various real-world downstream tasks due to their powerful expressiveness. As the scale of real-world graphs has been continuously growing, a storage-based approach to GNN training has been studied, which leverages external storage (e.g., NVMe SSDs) to handle such web-scale graphs on a single machine. Although such storage-based GNN training methods have shown promising potential in large-scale GNN training, we observed that they suffer from a severe bottleneck in data preparation since they overlook a critical challenge: how to handle a large number of small storage I/Os. To address the challenge, in this paper, we propose a novel storage-based GNN training framework, named AGNES, that employs a method of block-wise storage I/O processing to fully utilize the I/O bandwidth of high-performance storage devices. Moreover, to further enhance the efficiency of each storage I/O, AGNES employs a simple yet effective strategy, hyperbatch-based processing based on the characteristics of real-world graphs. Comprehensive experiments on five real-world graphs reveal that AGNES consistently outperforms four state-of-the-art methods, by up to 4.1X faster than the best competitor. Our code is available at https://github.com/Bigdasgit/agnes-kdd26.",
+    "code_links": [
+      "https://github.com/Bigdasgit/agnes-kdd26"
+    ],
+    "comment": "10 pages, 12 figures, 2 tables, ACM SIGKDD International Conference on Knowledge Discovery and Data Mining (KDD) 2026"
+  },
+  {
+    "title": "RadixGraph: A Fast, Space-Optimized Data Structure for Dynamic Graph Storage (Extended Version)",
+    "authors": "Haoxuan Xie, Junfeng Liu, Siqiang Luo, Kai Wang",
+    "published": "2026-01-04",
+    "arxiv_id": "2601.01444v2",
+    "url": "http://arxiv.org/abs/2601.01444v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.01444v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Dynamic graphs model many real-world applications, and as their sizes grow, efficiently storing and updating them becomes critical. We present RadixGraph, a fast and memory-efficient data structure for dynamic graph storage. RadixGraph features a carefully designed radix-tree-based vertex index that strikes an optimal trade-off between query efficiency and space among all pointer-array-based radix trees. For edge storage, it employs a hybrid snapshot-log architecture that enables amortized $O(1)$ update time. RadixGraph supports millions of concurrent updates per second while maintaining competitive performance for graph analytics. Experimental results show that RadixGraph outperforms the most performant baseline by up to $16.27\\times$ across various datasets in ingesting graph updates, and reduces memory usage by an average of $40.1\\%$. RadixGraph is open-source at https://github.com/ForwardStar/RadixGraph.",
+    "code_links": [
+      "https://github.com/ForwardStar/RadixGraph"
+    ],
+    "comment": "Accepted by SIGMOD 2026"
+  }
+]
