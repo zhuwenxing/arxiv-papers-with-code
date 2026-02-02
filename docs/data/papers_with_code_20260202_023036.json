@@ -1,0 +1,285 @@
+[
+  {
+    "title": "ProRAG: Process-Supervised Reinforcement Learning for Retrieval-Augmented Generation",
+    "authors": "Zhao Wang, Ziliang Zhao, Zhicheng Dou",
+    "published": "2026-01-29",
+    "arxiv_id": "2601.21912v1",
+    "url": "http://arxiv.org/abs/2601.21912v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.21912v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Reinforcement learning (RL) has become a promising paradigm for optimizing Retrieval-Augmented Generation (RAG) in complex reasoning tasks. However, traditional outcome-based RL approaches often suffer from reward sparsity and inefficient credit assignment, as coarse-grained scalar rewards fail to identify specific erroneous steps within long-horizon trajectories. This ambiguity frequently leads to \"process hallucinations\", where models reach correct answers through flawed logic or redundant retrieval steps. Although recent process-aware approaches attempt to mitigate this via static preference learning or heuristic reward shaping, they often lack the on-policy exploration capabilities required to decouple step-level credit from global outcomes. To address these challenges, we propose ProRAG, a process-supervised reinforcement learning framework designed to integrate learned step-level supervision into the online optimization loop. Our framework consists of four stages: (1) Supervised Policy Warmup to initialize the model with a structured reasoning format; (2) construction of an MCTS-based Process Reward Model (PRM) to quantify intermediate reasoning quality; (3) PRM-Guided Reasoning Refinement to align the policy with fine-grained process preferences; and (4) Process-Supervised Reinforcement Learning with a dual-granularity advantage mechanism. By aggregating step-level process rewards with global outcome signals, ProRAG provides precise feedback for every action. Extensive experiments on five multi-hop reasoning benchmarks demonstrate that ProRAG achieves superior overall performance compared to strong outcome-based and process-aware RL baselines, particularly on complex long-horizon tasks, validating the effectiveness of fine-grained process supervision. The code and model are available at https://github.com/lilinwz/ProRAG.",
+    "code_links": [
+      "https://github.com/lilinwz/ProRAG"
+    ],
+    "comment": "11 pages, 6 figures"
+  },
+  {
+    "title": "Post-Training Fairness Control: A Single-Train Framework for Dynamic Fairness in Recommendation",
+    "authors": "Weixin Chen, Li Chen, Yuhan Zhao",
+    "published": "2026-01-28",
+    "arxiv_id": "2601.20848v1",
+    "url": "http://arxiv.org/abs/2601.20848v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.20848v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Despite growing efforts to mitigate unfairness in recommender systems, existing fairness-aware methods typically fix the fairness requirement at training time and provide limited post-training flexibility. However, in real-world scenarios, diverse stakeholders may demand differing fairness requirements over time, so retraining for different fairness requirements becomes prohibitive. To address this limitation, we propose Cofair, a single-train framework that enables post-training fairness control in recommendation. Specifically, Cofair introduces a shared representation layer with fairness-conditioned adapter modules to produce user embeddings specialized for varied fairness levels, along with a user-level regularization term that guarantees user-wise monotonic fairness improvements across these levels. We theoretically establish that the adversarial objective of Cofair upper bounds demographic parity and the regularization term enforces progressive fairness at user level. Comprehensive experiments on multiple datasets and backbone models demonstrate that our framework provides dynamic fairness at different levels, delivering comparable or better fairness-accuracy curves than state-of-the-art baselines, without the need to retrain for each new fairness requirement. Our code is publicly available at https://github.com/weixinchen98/Cofair.",
+    "code_links": [
+      "https://github.com/weixinchen98/Cofair"
+    ],
+    "comment": "Accepted to WWW 2026 Workshop on HCRS (Oral Presentation)"
+  },
+  {
+    "title": "MALLOC: Benchmarking the Memory-aware Long Sequence Compression for Large Sequential Recommendation",
+    "authors": "Qihang Yu, Kairui Fu, Zhaocheng Du, Yuxuan Si, Kaiyuan Li, Weihao Zhao, Zhicheng Zhang, Jieming Zhu, Quanyu Dai, Zhenhua Dong, Shengyu Zhang, Kun Kuang, Fei Wu",
+    "published": "2026-01-28",
+    "arxiv_id": "2601.20234v2",
+    "url": "http://arxiv.org/abs/2601.20234v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.20234v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "The scaling law, which indicates that model performance improves with increasing dataset and model capacity, has fueled a growing trend in expanding recommendation models in both industry and academia. However, the advent of large-scale recommenders also brings significantly higher computational costs, particularly under the long-sequence dependencies inherent in the user intent of recommendation systems. Current approaches often rely on pre-storing the intermediate states of the past behavior for each user, thereby reducing the quadratic re-computation cost for the following requests. Despite their effectiveness, these methods often treat memory merely as a medium for acceleration, without adequately considering the space overhead it introduces. This presents a critical challenge in real-world recommendation systems with billions of users, each of whom might initiate thousands of interactions and require massive memory for state storage. Fortunately, there have been several memory management strategies examined for compression in LLM, while most have not been evaluated on the recommendation task. To mitigate this gap, we introduce MALLOC, a comprehensive benchmark for memory-aware long sequence compression. MALLOC presents a comprehensive investigation and systematic classification of memory management techniques applicable to large sequential recommendations. These techniques are integrated into state-of-the-art recommenders, enabling a reproducible and accessible evaluation platform. Through extensive experiments across accuracy, efficiency, and complexity, we demonstrate the holistic reliability of MALLOC in advancing large-scale recommendation. Code is available at https://anonymous.4open.science/r/MALLOC.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "Talos: Optimizing Top-$K$ Accuracy in Recommender Systems",
+    "authors": "Shengjia Zhang, Weiqin Yang, Jiawei Chen, Peng Wu, Yuegang Sun, Gang Wang, Qihao Shi, Can Wang",
+    "published": "2026-01-27",
+    "arxiv_id": "2601.19276v1",
+    "url": "http://arxiv.org/abs/2601.19276v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.19276v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems (RS) aim to retrieve a small set of items that best match individual user preferences. Naturally, RS place primary emphasis on the quality of the Top-$K$ results rather than performance across the entire item set. However, estimating Top-$K$ accuracy (e.g., Precision@$K$, Recall@$K$) requires determining the ranking positions of items, which imposes substantial computational overhead and poses significant challenges for optimization. In addition, RS often suffer from distribution shifts due to evolving user preferences or data biases, further complicating the task.\n  To address these issues, we propose Talos, a loss function that is specifically designed to optimize the Talos recommendation accuracy. Talos leverages a quantile technique that replaces the complex ranking-dependent operations into simpler comparisons between predicted scores and learned score thresholds. We further develop a sampling-based regression algorithm for efficient and accurate threshold estimation, and introduce a constraint term to maintain optimization stability by preventing score inflation. Additionally, we incorporate a tailored surrogate function to address discontinuity and enhance robustness against distribution shifts. Comprehensive theoretical analyzes and empirical experiments are conducted to demonstrate the effectiveness, efficiency, convergence, and distributional robustness of Talos. The code is available at https://github.com/cynthia-shengjia/WWW-2026-Talos.",
+    "code_links": [
+      "https://github.com/cynthia-shengjia/WWW-2026-Talos"
+    ],
+    "comment": "Accepted by WWW'26"
+  },
+  {
+    "title": "TopKGAT: A Top-K Objective-Driven Architecture for Recommendation",
+    "authors": "Sirui Chen, Jiawei Chen, Canghong Jin, Sheng Zhou, Jingbang Chen, Wujie Sun, Can Wang",
+    "published": "2026-01-26",
+    "arxiv_id": "2601.18432v1",
+    "url": "http://arxiv.org/abs/2601.18432v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.18432v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommendation systems (RS) aim to retrieve the top-K items most relevant to users, with metrics such as Precision@K and Recall@K commonly used to assess effectiveness. The architecture of an RS model acts as an inductive bias, shaping the patterns the model is inclined to learn. In recent years, numerous recommendation architectures have emerged, spanning traditional matrix factorization, deep neural networks, and graph neural networks. However, their designs are often not explicitly aligned with the top-K objective, thereby limiting their effectiveness.\n  To address this limitation, we propose TopKGAT, a novel recommendation architecture directly derived from a differentiable approximation of top-K metrics. The forward computation of a single TopKGAT layer is intrinsically aligned with the gradient ascent dynamics of the Precision@K metric, enabling the model to naturally improve top-K recommendation accuracy. Structurally, TopKGAT resembles a graph attention network and can be implemented efficiently. Extensive experiments on four benchmark datasets demonstrate that TopKGAT consistently outperforms state-of-the-art baselines. The code is available at https://github.com/StupidThree/TopKGAT.",
+    "code_links": [
+      "https://github.com/StupidThree/TopKGAT"
+    ],
+    "comment": "Accepted by WWW2026"
+  },
+  {
+    "title": "DMAP: Human-Aligned Structural Document Map for Multimodal Document Understanding",
+    "authors": "ShunLiang Fu, Yanxin Zhang, Yixin Xiang, Xiaoyu Du, Jinhui Tang",
+    "published": "2026-01-26",
+    "arxiv_id": "2601.18203v2",
+    "url": "http://arxiv.org/abs/2601.18203v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.18203v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Existing multimodal document question-answering (QA) systems predominantly rely on flat semantic retrieval, representing documents as a set of disconnected text chunks and largely neglecting their intrinsic hierarchical and relational structures. Such flattening disrupts logical and spatial dependencies - such as section organization, figure-text correspondence, and cross-reference relations, that humans naturally exploit for comprehension. To address this limitation, we introduce a document-level structural Document MAP (DMAP), which explicitly encodes both hierarchical organization and inter-element relationships within multimodal documents. Specifically, we design a Structured-Semantic Understanding Agent to construct DMAP by organizing textual content together with figures, tables, charts, etc. into a human-aligned hierarchical schema that captures both semantic and layout dependencies. Building upon this representation, a Reflective Reasoning Agent performs structure-aware and evidence-driven reasoning, dynamically assessing the sufficiency of retrieved context and iteratively refining answers through targeted interactions with DMAP. Extensive experiments on MMDocQA benchmarks demonstrate that DMAP yields document-specific structural representations aligned with human interpretive patterns, substantially enhancing retrieval precision, reasoning consistency, and multimodal comprehension over conventional RAG-based approaches. Code is available at https://github.com/Forlorin/DMAP",
+    "code_links": [
+      "https://github.com/Forlorin/DMAP"
+    ],
+    "comment": "WebConf 2026"
+  },
+  {
+    "title": "Post-Training Denoising of User Profiles with LLMs in Collaborative Filtering Recommendation",
+    "authors": "Ervin Dervishaj, Maria Maistro, Tuukka Ruotsalo, Christina Lioma",
+    "published": "2026-01-25",
+    "arxiv_id": "2601.18009v1",
+    "url": "http://arxiv.org/abs/2601.18009v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.18009v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Implicit feedback -- the main data source for training Recommender Systems (RSs) -- is inherently noisy and has been shown to negatively affect recommendation effectiveness. Denoising has been proposed as a method for removing noisy implicit feedback and improving recommendations. Prior work has focused on in-training denoising, however this requires additional data, changes to the model architecture and training procedure or fine-tuning, all of which can be costly and data hungry. In this work, we focus on post-training denoising. Different from in-training denoising, post-training denoising does not involve changing the architecture of the model nor its training procedure, and does not require additional data. Specifically, we present a method for post-training denoising user profiles using Large Language Models (LLMs) for Collaborative Filtering (CF) recommendations. Our approach prompts LLMs with (i) a user profile (user interactions), (ii) a candidate item, and (iii) its rank as given by the CF recommender, and asks the LLM to remove items from the user profile to improve the rank of the candidate item. Experiments with a state-of-the-art CF recommender and 4 open and closed source LLMs in 3 datasets show that our denoising yields improvements up to 13% in effectiveness over the original user profiles. Our code is available at https://github.com/edervishaj/denoising-user-profiles-LLM.",
+    "code_links": [
+      "https://github.com/edervishaj/denoising-user-profiles-LLM"
+    ],
+    "comment": "Accepted at the 48th European Conference on Information Retrieval (ECIR 2026)"
+  },
+  {
+    "title": "Unleashing the Potential of Sparse Attention on Long-term Behaviors for CTR Prediction",
+    "authors": "Weijiang Lai, Beihong Jin, Di Zhang, Siru Chen, Jiongyan Zhang, Yuhang Gou, Jian Dong, Xingxing Wang",
+    "published": "2026-01-25",
+    "arxiv_id": "2601.17836v1",
+    "url": "http://arxiv.org/abs/2601.17836v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17836v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In recent years, the success of large language models (LLMs) has driven the exploration of scaling laws in recommender systems. However, models that demonstrate scaling laws are actually challenging to deploy in industrial settings for modeling long sequences of user behaviors, due to the high computational complexity of the standard self-attention mechanism. Despite various sparse self-attention mechanisms proposed in other fields, they are not fully suited for recommendation scenarios. This is because user behaviors exhibit personalization and temporal characteristics: different users have distinct behavior patterns, and these patterns change over time, with data from these users differing significantly from data in other fields in terms of distribution. To address these challenges, we propose SparseCTR, an efficient and effective model specifically designed for long-term behaviors of users. To be precise, we first segment behavior sequences into chunks in a personalized manner to avoid separating continuous behaviors and enable parallel processing of sequences. Based on these chunks, we propose a three-branch sparse self-attention mechanism to jointly identify users' global interests, interest transitions, and short-term interests. Furthermore, we design a composite relative temporal encoding via learnable, head-specific bias coefficients, better capturing sequential and periodic relationships among user behaviors. Extensive experimental results show that SparseCTR not only improves efficiency but also outperforms state-of-the-art methods. More importantly, it exhibits an obvious scaling law phenomenon, maintaining performance improvements across three orders of magnitude in FLOPs. In online A/B testing, SparseCTR increased CTR by 1.72\\% and CPM by 1.41\\%. Our source code is available at https://github.com/laiweijiang/SparseCTR.",
+    "code_links": [
+      "https://github.com/laiweijiang/SparseCTR"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Token-Weighted Multi-Target Learning for Generative Recommenders with Curriculum Learning",
+    "authors": "Wei-Ning Chiu, Chuan-Ju Wang, Pu-Jen Cheng",
+    "published": "2026-01-25",
+    "arxiv_id": "2601.17787v1",
+    "url": "http://arxiv.org/abs/2601.17787v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17787v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommender systems have recently attracted attention by formulating next-item prediction as an autoregressive sequence generation task. However, most existing methods optimize standard next-token likelihood and implicitly treat all tokens as equally informative, which is misaligned with semantic-ID-based generation. Accordingly, we propose two complementary information-gain-based token-weighting strategies tailored to generative recommendation with semantic IDs. Front-Greater Weighting captures conditional semantic information gain by prioritizing early tokens that most effectively reduce candidate-item uncertainty given their prefixes and encode coarse semantics. Frequency Weighting models marginal information gain under long-tailed item and token distributions, upweighting rare tokens to counteract popularity bias. Beyond individual strategies, we introduce a multi-target learning framework with curriculum learning that jointly optimizes the two token-weighted objectives alongside standard likelihood, enabling stable optimization and adaptive emphasis across training stages. Extensive experiments on benchmark datasets show that our method consistently outperforms strong baselines and existing token-weighting approaches, with improved robustness, strong generalization across different semantic-ID constructions, and substantial gains on both head and tail items. Code is available at https://github.com/CHIUWEINING/Token-Weighted-Multi-Target-Learning-for-Generative-Recommenders-with-Curriculum-Learning.",
+    "code_links": [
+      "https://github.com/CHIUWEINING/Token-Weighted-Multi-Target-Learning-for-Generative-Recommenders-with-Curriculum-Learning"
+    ],
+    "comment": "11 pages, 5 figures"
+  },
+  {
+    "title": "To Case or Not to Case: An Empirical Study in Learned Sparse Retrieval",
+    "authors": "Emmanouil Georgios Lionis, Jia-Huei Ju, Angelos Nalmpantis, Casper Thuis, Sean MacAvaney, Andrew Yates",
+    "published": "2026-01-24",
+    "arxiv_id": "2601.17500v1",
+    "url": "http://arxiv.org/abs/2601.17500v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17500v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Learned Sparse Retrieval (LSR) methods construct sparse lexical representations of queries and documents that can be efficiently searched using inverted indexes. Existing LSR approaches have relied almost exclusively on uncased backbone models, whose vocabularies exclude case-sensitive distinctions, thereby reducing vocabulary mismatch. However, the most recent state-of-the-art language models are only available in cased versions. Despite this shift, the impact of backbone model casing on LSR has not been studied, potentially posing a risk to the viability of the method going forward. To fill this gap, we systematically evaluate paired cased and uncased versions of the same backbone models across multiple datasets to assess their suitability for LSR. Our findings show that LSR models with cased backbone models by default perform substantially worse than their uncased counterparts; however, this gap can be eliminated by pre-processing the text to lowercase. Moreover, our token-level analysis reveals that, under lowercasing, cased models almost entirely suppress cased vocabulary items and behave effectively as uncased models, explaining their restored performance. This result broadens the applicability of recent cased models to the LSR setting and facilitates the integration of stronger backbone architectures into sparse retrieval. The complete code and implementation for this project are available at: https://github.com/lionisakis/Uncased-vs-cased-models-in-LSR",
+    "code_links": [
+      "https://github.com/lionisakis/Uncased-vs-cased-models-in-LSR"
+    ],
+    "comment": "This preprint has not undergone peer review (when applicable) or any post-submission improvements or corrections. The Version of Record of this contribution is published in ECIR2026 (Part I) Advances in Information Retrieval"
+  },
+  {
+    "title": "Towards Fair Large Language Model-based Recommender Systems without Costly Retraining",
+    "authors": "Jin Li, Huilin Gu, Shoujin Wang, Qi Zhang, Shui Yu, Chen Wang, Xiwei Xu, Fang Chen",
+    "published": "2026-01-24",
+    "arxiv_id": "2601.17492v1",
+    "url": "http://arxiv.org/abs/2601.17492v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17492v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models (LLMs) have revolutionized Recommender Systems (RS) through advanced generative user modeling. However, LLM-based RS (LLM-RS) often inadvertently perpetuates bias present in the training data, leading to severe fairness issues. Addressing these fairness problems in LLM-RS faces two significant challenges. 1) Existing debiasing methods, designed for specific bias types, lack the generality to handle diverse or emerging biases in real-world applications. 2) Debiasing methods relying on retraining are computationally infeasible given the massive parameter scale of LLMs. To overcome these challenges, we propose FUDLR (Fast Unified Debiasing for LLM-RS). The core idea is to reformulate the debiasing problem as an efficient machine unlearning task with two stages. First, FUDLR identifies bias-inducing samples to unlearn through a novel bias-agnostic mask, optimized to balance fairness improvement with accuracy preservation. Its bias-agnostic design allows adaptability to various or co-existing biases simply by incorporating different fairness metrics. Second, FUDLR performs efficient debiasing by estimating and removing the influence of identified samples on model parameters. Extensive experiments demonstrate that FUDLR effectively and efficiently improves fairness while preserving recommendation accuracy, offering a practical path toward socially responsible LLM-RS. The code and data are available at https://github.com/JinLi-i/FUDLR.",
+    "code_links": [
+      "https://github.com/JinLi-i/FUDLR"
+    ],
+    "comment": "Accepted by WWW 2026"
+  },
+  {
+    "title": "Adversarial Alignment and Disentanglement for Cross-Domain CTR Prediction with Domain-Encompassing Features",
+    "authors": "Junyou He, Lixi Deng, Huichao Guo, Ye Tang, Yong Li, Sulong Xu",
+    "published": "2026-01-24",
+    "arxiv_id": "2601.17472v1",
+    "url": "http://arxiv.org/abs/2601.17472v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17472v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Cross-domain recommendation (CDR) has been increasingly explored to address data sparsity and cold-start issues. However, recent approaches typically disentangle domain-invariant features shared between source and target domains, as well as domain-specific features for each domain. However, they often rely solely on domain-invariant features combined with target domain-specific features, which can lead to suboptimal performance. To overcome the limitations, this paper presents the Adversarial Alignment and Disentanglement Cross-Domain Recommendation ($A^2DCDR$ ) model, an innovative approach designed to capture a comprehensive range of cross-domain information, including both domain-invariant and valuable non-aligned features. The $A^2DCDR$ model enhances cross-domain recommendation through three key components: refining MMD with adversarial training for better generalization, employing a feature disentangler and reconstruction mechanism for intra-domain disentanglement, and introducing a novel fused representation combining domain-invariant, non-aligned features with original contextual data. Experiments on real-world datasets and online A/B testing show that $A^2DCDR$ outperforms existing methods, confirming its effectiveness and practical applicability. The code is provided at https://github.com/youzi0925/A-2DCDR/tree/main.",
+    "code_links": [
+      "https://github.com/youzi0925/A-2DCDR"
+    ],
+    "comment": "Accepted to ICDM 2025"
+  },
+  {
+    "title": "UniGRec: Unified Generative Recommendation with Soft Identifiers for End-to-End Optimization",
+    "authors": "Jialei Li, Yang Zhang, Yimeng Bai, Shuai Zhu, Ziqi Xue, Xiaoyan Zhao, Dingxian Wang, Frank Yang, Andrew Rabinovich, Xiangnan He",
+    "published": "2026-01-24",
+    "arxiv_id": "2601.17438v1",
+    "url": "http://arxiv.org/abs/2601.17438v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17438v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation has recently emerged as a transformative paradigm that directly generates target items, surpassing traditional cascaded approaches. It typically involves two components: a tokenizer that learns item identifiers and a recommender trained on them. Existing methods often decouple tokenization from recommendation or rely on asynchronous alternating optimization, limiting full end-to-end alignment. To address this, we unify the tokenizer and recommender under the ultimate recommendation objective via differentiable soft item identifiers, enabling joint end-to-end training. However, this introduces three challenges: training-inference discrepancy due to soft-to-hard mismatch, item identifier collapse from codeword usage imbalance, and collaborative signal deficiency due to an overemphasis on fine-grained token-level semantics.\n  To tackle these challenges, we propose UniGRec, a unified generative recommendation framework that addresses them from three perspectives. UniGRec employs Annealed Inference Alignment during tokenization to smoothly bridge soft training and hard inference, a Codeword Uniformity Regularization to prevent identifier collapse and encourage codebook diversity, and a Dual Collaborative Distillation mechanism that distills collaborative priors from a lightweight teacher model to jointly guide both the tokenizer and the recommender. Extensive experiments on real-world datasets demonstrate that UniGRec consistently outperforms state-of-the-art baseline methods. Our codes are available at https://github.com/Jialei-03/UniGRec.",
+    "code_links": [
+      "https://github.com/Jialei-03/UniGRec"
+    ],
+    "comment": "11 pages, 6 figures"
+  },
+  {
+    "title": "Can LLMs Clean Up Your Mess? A Survey of Application-Ready Data Preparation with LLMs",
+    "authors": "Wei Zhou, Jun Zhou, Haoyu Wang, Zhenghao Li, Qikang He, Shaokun Han, Guoliang Li, Xuanhe Zhou, Yeye He, Chunwei Liu, Zirui Tang, Bin Wang, Shen Tang, Kai Zuo, Yuyu Luo, Zhenzhe Zheng, Conghui He, Jingren Zhou, Fan Wu",
+    "published": "2026-01-22",
+    "arxiv_id": "2601.17058v1",
+    "url": "http://arxiv.org/abs/2601.17058v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17058v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Data preparation aims to denoise raw datasets, uncover cross-dataset relationships, and extract valuable insights from them, which is essential for a wide range of data-centric applications. Driven by (i) rising demands for application-ready data (e.g., for analytics, visualization, decision-making), (ii) increasingly powerful LLM techniques, and (iii) the emergence of infrastructures that facilitate flexible agent construction (e.g., using Databricks Unity Catalog), LLM-enhanced methods are rapidly becoming a transformative and potentially dominant paradigm for data preparation.\n  By investigating hundreds of recent literature works, this paper presents a systematic review of this evolving landscape, focusing on the use of LLM techniques to prepare data for diverse downstream tasks. First, we characterize the fundamental paradigm shift, from rule-based, model-specific pipelines to prompt-driven, context-aware, and agentic preparation workflows. Next, we introduce a task-centric taxonomy that organizes the field into three major tasks: data cleaning (e.g., standardization, error processing, imputation), data integration (e.g., entity matching, schema matching), and data enrichment (e.g., data annotation, profiling). For each task, we survey representative techniques, and highlight their respective strengths (e.g., improved generalization, semantic understanding) and limitations (e.g., the prohibitive cost of scaling LLMs, persistent hallucinations even in advanced agents, the mismatch between advanced methods and weak evaluation). Moreover, we analyze commonly used datasets and evaluation metrics (the empirical part). Finally, we discuss open research challenges and outline a forward-looking roadmap that emphasizes scalable LLM-data systems, principled designs for reliable agentic workflows, and robust evaluation protocols.",
+    "code_links": [
+      "https://github.com/weAIDB/awesome-data-llm"
+    ],
+    "comment": "Please refer to our repository for more details: https://github.com/weAIDB/awesome-data-llm"
+  },
+  {
+    "title": "TLSQL: Table Learning Structured Query Language",
+    "authors": "Feiyang Chen, Ken Zhong, Aoqian Zhang, Zheng Wang, Li Pan, Jianhua Li",
+    "published": "2026-01-20",
+    "arxiv_id": "2601.14109v2",
+    "url": "http://arxiv.org/abs/2601.14109v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.14109v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Table learning, which lies at the intersection of machine learning and modern database systems, has recently attracted growing attention. However, existing frameworks typically require explicit data export and extensive feature engineering, creating a high barrier for database practitioners. We present TLSQL (Table Learning Structured Query Language), a system that enables table learning directly over relational databases via SQL-like declarative specifications. TLSQL is implemented as a lightweight Python library that translates these specifications into standard SQL queries and structured learning task descriptions. The generated SQL queries are executed natively by the database engine, while the task descriptions are consumed by downstream table learning frameworks. This design allows users to focus on modeling and analysis rather than low-level data preparation and pipeline orchestration. Experiments on real-world datasets demonstrate that TLSQL effectively lowers the barrier to integrating machine learning into databasecentric workflows. Our code is available at https://github.com/rllm-project/tlsql/.",
+    "code_links": [
+      "https://github.com/rllm-project/tlsql"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Pervasive Annotation Errors Break Text-to-SQL Benchmarks and Leaderboards",
+    "authors": "Tengjun Jin, Yoojin Choi, Yuxuan Zhu, Daniel Kang",
+    "published": "2026-01-13",
+    "arxiv_id": "2601.08778v3",
+    "url": "http://arxiv.org/abs/2601.08778v3",
+    "pdf_url": "https://arxiv.org/pdf/2601.08778v3",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Researchers have proposed numerous text-to-SQL techniques to streamline data analytics and accelerate the development of data-driven applications. To compare these techniques and select the best one for deployment, the community depends on public benchmarks and their leaderboards. Since these benchmarks heavily rely on human annotations during question construction and answer evaluation, the validity of the annotations is crucial.\n  In this paper, we conduct an empirical study that (i) benchmarks annotation error rates for two widely used text-to-SQL benchmarks, BIRD and Spider 2.0-Snow, and (ii) corrects a subset of the BIRD development (Dev) set to measure the impact of annotation errors on text-to-SQL agent performance and leaderboard rankings. Through expert analysis, we show that BIRD Mini-Dev and Spider 2.0-Snow have error rates of 52.8% and 62.8%, respectively. We re-evaluate all 16 open-source agents from the BIRD leaderboard on both the original and the corrected BIRD Dev subsets. We show that performance changes range from -7% to 31% (in relative terms) and rank changes range from $-9$ to $+9$ positions. We further assess whether these impacts generalize to the full BIRD Dev set. We find that the rankings of agents on the uncorrected subset correlate strongly with those on the full Dev set (Spearman's $r_s$=0.85, $p$=3.26e-5), whereas they correlate weakly with those on the corrected subset (Spearman's $r_s$=0.32, $p$=0.23). These findings show that annotation errors can significantly distort reported performance and rankings, potentially misguiding research directions or deployment choices. Our code and data are available at https://github.com/uiuc-kang-lab/text_to_sql_benchmarks.",
+    "code_links": [
+      "https://github.com/uiuc-kang-lab/text_to_sql_benchmarks"
+    ],
+    "comment": "18 pages, 14 figures, 9 tables"
+  },
+  {
+    "title": "VISTA: Knowledge-Driven Interpretable Vessel Trajectory Imputation via Large Language Models",
+    "authors": "Hengyu Liu, Tianyi Li, Haoyu Wang, Kristian Torp, Tiancheng Zhang, Yushuai Li, Christian S. Jensen",
+    "published": "2026-01-11",
+    "arxiv_id": "2601.06940v1",
+    "url": "http://arxiv.org/abs/2601.06940v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06940v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The Automatic Identification System provides critical information for maritime navigation and safety, yet its trajectories are often incomplete due to signal loss or deliberate tampering. Existing imputation methods emphasize trajectory recovery, paying limited attention to interpretability and failing to provide underlying knowledge that benefits downstream tasks such as anomaly detection and route planning. We propose knowledge-driven interpretable vessel trajectory imputation (VISTA), the first trajectory imputation framework that offers interpretability while simultaneously providing underlying knowledge to support downstream analysis. Specifically, we first define underlying knowledge as a combination of Structured Data-derived Knowledge (SDK) distilled from AIS data and Implicit LLM Knowledge acquired from large-scale Internet corpora. Second, to manage and leverage the SDK effectively at scale, we develop a data-knowledge-data loop that employs a Structured Data-derived Knowledge Graph for SDK extraction and knowledge-driven trajectory imputation. Third, to efficiently process large-scale AIS data, we introduce a workflow management layer that coordinates the end-to-end pipeline, enabling parallel knowledge extraction and trajectory imputation with anomaly handling and redundancy elimination. Experiments on two large AIS datasets show that VISTA is capable of state-of-the-art imputation accuracy and computational efficiency, improving over state-of-the-art baselines by 5%-94% and reducing time cost by 51%-93%, while producing interpretable knowledge cues that benefit downstream tasks. The source code and implementation details of VISTA are publicly available.",
+    "code_links": [
+      "https://github.com/hyLiu1994/VISTA"
+    ],
+    "comment": "22 pages, 13 figures, 3 algorithms, 5 tables. Code available at https://github.com/hyLiu1994/VISTA"
+  },
+  {
+    "title": "Algorithm Support for Graph Databases, Done Right",
+    "authors": "Daan de Graaf, Robert Brijder, Soham Chakraborty, George Fletcher, Bram van de Wall, Nikolay Yakovets",
+    "published": "2026-01-10",
+    "arxiv_id": "2601.06705v1",
+    "url": "http://arxiv.org/abs/2601.06705v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06705v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Graph database query languages cannot express algorithms like PageRank, forcing costly data wrangling, while existing solutions such as algorithm libraries, vertex-centric APIs, and recursive CTEs lack the necessary combination of expressiveness, performance, and usability. We present GraphAlg: a domain-specific language for graph algorithms that compiles to relational algebra, enabling seamless integration with query processing pipelines. Built on linear algebra foundations, GraphAlg provides intuitive matrix operations that are amenable to aggressive optimization including sparsity analysis, loop-invariant code motion, and in-place aggregation. Our implementation in AvantGraph demonstrates significant code complexity reduction compared to SQL/Python and Pregel while achieving excellent performance on LDBC Graphalytics benchmarks. GraphAlg establishes that graph databases can serve as unified platforms for both queries and analytics.",
+    "code_links": [
+      "https://github.com/wildarch/graphalg"
+    ],
+    "comment": "for GraphAlg compiler source code, see https://github.com/wildarch/graphalg"
+  },
+  {
+    "title": "Octopus: A Lightweight Entity-Aware System for Multi-Table Data Discovery and Cell-Level Retrieval",
+    "authors": "Wen-Zhi Li, Sainyam Galhotra",
+    "published": "2026-01-05",
+    "arxiv_id": "2601.02304v1",
+    "url": "http://arxiv.org/abs/2601.02304v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.02304v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Tabular data constitute a dominant form of information in modern data lakes and repositories, yet discovering the relevant tables to answer user questions remains challenging. Existing data discovery systems assume that each question can be answered by a single table and often rely on resource-intensive offline preprocessing, such as model training or large-scale content indexing. In practice, however, many questions require information spread across multiple tables -- either independently or through joins -- and users often seek specific cell values rather than entire tables. In this paper, we present Octopus, a lightweight, entity-aware, and training-free system for multi-table data discovery and cell-level value retrieval. Instead of embedding entire questions, Octopus identifies fine-grained entities (column mentions and value mentions) from natural-language queries using an LLM parser. It then matches these entities to table headers through a compact embedding index and scans table contents directly for value occurrences, eliminating the need for heavy content indexing or costly offline stages. The resulting fine-grained alignment not only improves table retrieval accuracy but also facilitates efficient downstream NL2SQL execution by reducing token usage and redundant LLM calls. To evaluate Octopus, we introduce a new benchmark covering both table- and cell-level discovery under multi-table settings, including five datasets for independent discovery and two for join-based discovery. Experimental results show that Octopus consistently outperforms existing systems while achieving substantially lower computational and token costs. Code is available at https://github.com/wenzhilics/octopus.",
+    "code_links": [
+      "https://github.com/wenzhilics/octopus"
+    ],
+    "comment": null
+  }
+]
