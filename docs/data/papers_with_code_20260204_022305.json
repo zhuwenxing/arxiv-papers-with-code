@@ -1,0 +1,210 @@
+[
+  {
+    "title": "To Search or Not to Search: Aligning the Decision Boundary of Deep Search Agents via Causal Intervention",
+    "authors": "Wenlin Zhang, Kuicai Dong, Junyi Li, Yingyi Zhang, Xiaopeng Li, Pengyue Jia, Yi Wen, Derong Xu, Maolin Wang, Yichao Wang, Yong Liu, Xiangyu Zhao",
+    "published": "2026-02-03",
+    "arxiv_id": "2602.03304v1",
+    "url": "http://arxiv.org/abs/2602.03304v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.03304v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Deep search agents, which autonomously iterate through multi-turn web-based reasoning, represent a promising paradigm for complex information-seeking tasks. However, current agents suffer from critical inefficiency: they conduct excessive searches as they cannot accurately judge when to stop searching and start answering. This stems from outcome-centric training that prioritize final results over the search process itself. We identify the root cause as misaligned decision boundaries, the threshold determining when accumulated information suffices to answer. This causes over-search (redundant searching despite sufficient knowledge) and under-search (premature termination yielding incorrect answers). To address these errors, we propose a comprehensive framework comprising two key components. First, we introduce causal intervention-based diagnosis that identifies boundary errors by comparing factual and counterfactual trajectories at each decision point. Second, we develop Decision Boundary Alignment for Deep Search agents (DAS), which constructs preference datasets from causal feedback and aligns policies via preference optimization. Experiments on public datasets demonstrate that decision boundary errors are pervasive across state-of-the-art agents. Our DAS method effectively calibrates these boundaries, mitigating both over-search and under-search to achieve substantial gains in accuracy and efficiency. Our code and data are publicly available at: https://github.com/Applied-Machine-Learning-Lab/WWW2026_DAS.",
+    "code_links": [
+      "https://github.com/Applied-Machine-Learning-Lab/WWW2026_DAS"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Why Steering Works: Toward a Unified View of Language Model Parameter Dynamics",
+    "authors": "Ziwen Xu, Chenyan Wu, Hengyu Sun, Haiwen Hong, Mengru Wang, Yunzhi Yao, Longtao Huang, Hui Xue, Shumin Deng, Zhixuan Chu, Huajun Chen, Ningyu Zhang",
+    "published": "2026-02-02",
+    "arxiv_id": "2602.02343v1",
+    "url": "http://arxiv.org/abs/2602.02343v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.02343v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Methods for controlling large language models (LLMs), including local weight fine-tuning, LoRA-based adaptation, and activation-based interventions, are often studied in isolation, obscuring their connections and making comparison difficult. In this work, we present a unified view that frames these interventions as dynamic weight updates induced by a control signal, placing them within a single conceptual framework. Building on this view, we propose a unified preference-utility analysis that separates control effects into preference, defined as the tendency toward a target concept, and utility, defined as coherent and task-valid generation, and measures both on a shared log-odds scale using polarity-paired contrastive examples. Across methods, we observe a consistent trade-off between preference and utility: stronger control increases preference while predictably reducing utility. We further explain this behavior through an activation manifold perspective, in which control shifts representations along target-concept directions to enhance preference, while utility declines primarily when interventions push representations off the model's valid-generation manifold. Finally, we introduce a new steering approach SPLIT guided by this analysis that improves preference while better preserving utility. Code is available at https://github.com/zjunlp/EasyEdit/blob/main/examples/SPLIT.md.",
+    "code_links": [
+      "https://github.com/zjunlp/EasyEdit"
+    ],
+    "comment": "Work in progress"
+  },
+  {
+    "title": "Rethinking Generative Recommender Tokenizer: Recsys-Native Encoding and Semantic Quantization Beyond LLMs",
+    "authors": "Yu Liang, Zhongjin Zhang, Yuxuan Zhu, Kerui Zhang, Zhiluohan Guo, Wenhang Zhou, Zonqi Yang, Kangle Wu, Yabo Ni, Anxiang Zeng, Cong Fu, Jianxin Wang, Jiazhi Xia",
+    "published": "2026-02-02",
+    "arxiv_id": "2602.02338v1",
+    "url": "http://arxiv.org/abs/2602.02338v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.02338v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Semantic ID (SID)-based recommendation is a promising paradigm for scaling sequential recommender systems, but existing methods largely follow a semantic-centric pipeline: item embeddings are learned from foundation models and discretized using generic quantization schemes. This design is misaligned with generative recommendation objectives: semantic embeddings are weakly coupled with collaborative prediction, and generic quantization is inefficient at reducing sequential uncertainty for autoregressive modeling. To address these, we propose ReSID, a recommendation-native, principled SID framework that rethinks representation learning and quantization from the perspective of information preservation and sequential predictability, without relying on LLMs. ReSID consists of two components: (i) Field-Aware Masked Auto-Encoding (FAMAE), which learns predictive-sufficient item representations from structured features, and (ii) Globally Aligned Orthogonal Quantization (GAOQ), which produces compact and predictable SID sequences by jointly reducing semantic ambiguity and prefix-conditional uncertainty. Theoretical analysis and extensive experiments across ten datasets show the effectiveness of ReSID. ReSID consistently outperforms strong sequential and SID-based generative baselines by an average of over 10%, while reducing tokenization cost by up to 122x. Code is available at https://github.com/FuCongResearchSquad/ReSID.",
+    "code_links": [
+      "https://github.com/FuCongResearchSquad/ReSID"
+    ],
+    "comment": null
+  },
+  {
+    "title": "SWGCN: Synergy Weighted Graph Convolutional Network for Multi-Behavior Recommendation",
+    "authors": "Fangda Chen, Yueyang Wang, Chaoli Lou, Min Gao, Qingyu Xiong",
+    "published": "2026-01-31",
+    "arxiv_id": "2602.00727v1",
+    "url": "http://arxiv.org/abs/2602.00727v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.00727v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multi-behavior recommendation paradigms have emerged to capture diverse user activities, forecasting primary conversions (e.g., purchases) by leveraging secondary signals like browsing history. However, current graph-based methods often overlook cross-behavioral synergistic signals and fine-grained intensity of individual actions. Motivated by the need to overcome these shortcomings, we introduce Synergy Weighted Graph Convolutional Network (SWGCN). SWGCN introduces two novel components: a Target Preference Weigher, which adaptively assigns weights to user-item interactions within each behavior, and a Synergy Alignment Task, which guides its training by leveraging an Auxiliary Preference Valuator. This task prioritizes interactions from synergistic signals that more accurately reflect user preferences. The performance of our model is rigorously evaluated through comprehensive tests on three open-source datasets, specifically Taobao, IJCAI, and Beibei. On the Taobao dataset, SWGCN yields relative gains of 112.49% and 156.36% in terms of Hit Ratio (HR) and Normalized Discounted Cumulative Gain (NDCG), respectively. It also yields consistent gains on IJCAI and Beibei, confirming its robustness and generalizability across various datasets. Our implementation is open-sourced and can be accessed via https://github.com/FangdChen/SWGCN.",
+    "code_links": [
+      "https://github.com/FangdChen/SWGCN"
+    ],
+    "comment": "Accepted by Information Sciences"
+  },
+  {
+    "title": "RecGOAT: Graph Optimal Adaptive Transport for LLM-Enhanced Multimodal Recommendation with Dual Semantic Alignment",
+    "authors": "Yuecheng Li, Hengwei Ju, Zeyu Song, Wei Yang, Chi Lu, Peng Jiang, Kun Gai",
+    "published": "2026-01-31",
+    "arxiv_id": "2602.00682v1",
+    "url": "http://arxiv.org/abs/2602.00682v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.00682v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal recommendation systems typically integrates user behavior with multimodal data from items, thereby capturing more accurate user preferences. Concurrently, with the rise of large models (LMs), multimodal recommendation is increasingly leveraging their strengths in semantic understanding and contextual reasoning. However, LM representations are inherently optimized for general semantic tasks, while recommendation models rely heavily on sparse user/item unique identity (ID) features. Existing works overlook the fundamental representational divergence between large models and recommendation systems, resulting in incompatible multimodal representations and suboptimal recommendation performance. To bridge this gap, we propose RecGOAT, a novel yet simple dual semantic alignment framework for LLM-enhanced multimodal recommendation, which offers theoretically guaranteed alignment capability. RecGOAT first employs graph attention networks to enrich collaborative semantics by modeling item-item, user-item, and user-user relationships, leveraging user/item LM representations and interaction history. Furthermore, we design a dual-granularity progressive multimodality-ID alignment framework, which achieves instance-level and distribution-level semantic alignment via cross-modal contrastive learning (CMCL) and optimal adaptive transport (OAT), respectively. Theoretically, we demonstrate that the unified representations derived from our alignment framework exhibit superior semantic consistency and comprehensiveness. Extensive experiments on three public benchmarks show that our RecGOAT achieves state-of-the-art performance, empirically validating our theoretical insights. Additionally, the deployment on a large-scale online advertising platform confirms the model's effectiveness and scalability in industrial recommendation scenarios. Code available at https://github.com/6lyc/RecGOAT-LLM4Rec.",
+    "code_links": [
+      "https://github.com/6lyc/RecGOAT-LLM4Rec"
+    ],
+    "comment": "Under Review"
+  },
+  {
+    "title": "ProRAG: Process-Supervised Reinforcement Learning for Retrieval-Augmented Generation",
+    "authors": "Zhao Wang, Ziliang Zhao, Zhicheng Dou",
+    "published": "2026-01-29",
+    "arxiv_id": "2601.21912v1",
+    "url": "http://arxiv.org/abs/2601.21912v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.21912v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Reinforcement learning (RL) has become a promising paradigm for optimizing Retrieval-Augmented Generation (RAG) in complex reasoning tasks. However, traditional outcome-based RL approaches often suffer from reward sparsity and inefficient credit assignment, as coarse-grained scalar rewards fail to identify specific erroneous steps within long-horizon trajectories. This ambiguity frequently leads to \"process hallucinations\", where models reach correct answers through flawed logic or redundant retrieval steps. Although recent process-aware approaches attempt to mitigate this via static preference learning or heuristic reward shaping, they often lack the on-policy exploration capabilities required to decouple step-level credit from global outcomes. To address these challenges, we propose ProRAG, a process-supervised reinforcement learning framework designed to integrate learned step-level supervision into the online optimization loop. Our framework consists of four stages: (1) Supervised Policy Warmup to initialize the model with a structured reasoning format; (2) construction of an MCTS-based Process Reward Model (PRM) to quantify intermediate reasoning quality; (3) PRM-Guided Reasoning Refinement to align the policy with fine-grained process preferences; and (4) Process-Supervised Reinforcement Learning with a dual-granularity advantage mechanism. By aggregating step-level process rewards with global outcome signals, ProRAG provides precise feedback for every action. Extensive experiments on five multi-hop reasoning benchmarks demonstrate that ProRAG achieves superior overall performance compared to strong outcome-based and process-aware RL baselines, particularly on complex long-horizon tasks, validating the effectiveness of fine-grained process supervision. The code and model are available at https://github.com/lilinwz/ProRAG.",
+    "code_links": [
+      "https://github.com/lilinwz/ProRAG"
+    ],
+    "comment": "11 pages, 6 figures"
+  },
+  {
+    "title": "Post-Training Fairness Control: A Single-Train Framework for Dynamic Fairness in Recommendation",
+    "authors": "Weixin Chen, Li Chen, Yuhan Zhao",
+    "published": "2026-01-28",
+    "arxiv_id": "2601.20848v1",
+    "url": "http://arxiv.org/abs/2601.20848v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.20848v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Despite growing efforts to mitigate unfairness in recommender systems, existing fairness-aware methods typically fix the fairness requirement at training time and provide limited post-training flexibility. However, in real-world scenarios, diverse stakeholders may demand differing fairness requirements over time, so retraining for different fairness requirements becomes prohibitive. To address this limitation, we propose Cofair, a single-train framework that enables post-training fairness control in recommendation. Specifically, Cofair introduces a shared representation layer with fairness-conditioned adapter modules to produce user embeddings specialized for varied fairness levels, along with a user-level regularization term that guarantees user-wise monotonic fairness improvements across these levels. We theoretically establish that the adversarial objective of Cofair upper bounds demographic parity and the regularization term enforces progressive fairness at user level. Comprehensive experiments on multiple datasets and backbone models demonstrate that our framework provides dynamic fairness at different levels, delivering comparable or better fairness-accuracy curves than state-of-the-art baselines, without the need to retrain for each new fairness requirement. Our code is publicly available at https://github.com/weixinchen98/Cofair.",
+    "code_links": [
+      "https://github.com/weixinchen98/Cofair"
+    ],
+    "comment": "Accepted to WWW 2026 Workshop on HCRS (Oral Presentation)"
+  },
+  {
+    "title": "MALLOC: Benchmarking the Memory-aware Long Sequence Compression for Large Sequential Recommendation",
+    "authors": "Qihang Yu, Kairui Fu, Zhaocheng Du, Yuxuan Si, Kaiyuan Li, Weihao Zhao, Zhicheng Zhang, Jieming Zhu, Quanyu Dai, Zhenhua Dong, Shengyu Zhang, Kun Kuang, Fei Wu",
+    "published": "2026-01-28",
+    "arxiv_id": "2601.20234v2",
+    "url": "http://arxiv.org/abs/2601.20234v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.20234v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "The scaling law, which indicates that model performance improves with increasing dataset and model capacity, has fueled a growing trend in expanding recommendation models in both industry and academia. However, the advent of large-scale recommenders also brings significantly higher computational costs, particularly under the long-sequence dependencies inherent in the user intent of recommendation systems. Current approaches often rely on pre-storing the intermediate states of the past behavior for each user, thereby reducing the quadratic re-computation cost for the following requests. Despite their effectiveness, these methods often treat memory merely as a medium for acceleration, without adequately considering the space overhead it introduces. This presents a critical challenge in real-world recommendation systems with billions of users, each of whom might initiate thousands of interactions and require massive memory for state storage. Fortunately, there have been several memory management strategies examined for compression in LLM, while most have not been evaluated on the recommendation task. To mitigate this gap, we introduce MALLOC, a comprehensive benchmark for memory-aware long sequence compression. MALLOC presents a comprehensive investigation and systematic classification of memory management techniques applicable to large sequential recommendations. These techniques are integrated into state-of-the-art recommenders, enabling a reproducible and accessible evaluation platform. Through extensive experiments across accuracy, efficiency, and complexity, we demonstrate the holistic reliability of MALLOC in advancing large-scale recommendation. Code is available at https://anonymous.4open.science/r/MALLOC.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "MedBeads: An Agent-Native, Immutable Data Substrate for Trustworthy Medical AI",
+    "authors": "Takahito Nakajima",
+    "published": "2026-02-01",
+    "arxiv_id": "2602.01086v1",
+    "url": "http://arxiv.org/abs/2602.01086v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.01086v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Background: As of 2026, Large Language Models (LLMs) demonstrate expert-level medical knowledge. However, deploying them as autonomous \"Clinical Agents\" remains limited. Current Electronic Medical Records (EMRs) and standards like FHIR are designed for human review, creating a \"Context Mismatch\": AI agents receive fragmented data and must rely on probabilistic inference (e.g., RAG) to reconstruct patient history. This approach causes hallucinations and hinders auditability. Methods: We propose MedBeads, an agent-native data infrastructure where clinical events are immutable \"Beads\"--nodes in a Merkle Directed Acyclic Graph (DAG)--cryptographically referencing causal predecessors. This \"write-once, read-many\" architecture makes tampering mathematically detectable. We implemented a prototype with a Go Core Engine, Python middleware for LLM integration, and a React-based visualization interface. Results: We successfully implemented the workflow using synthetic data. The FHIR-to-DAG conversion transformed flat resources into a causally-linked graph. Our Breadth-First Search (BFS) Context Retrieval algorithm traverses relevant subgraphs with O(V+E) complexity, enabling real-time decision support. Tamper-evidence is guaranteed by design: any modification breaks the cryptographic chain. The visualization aids clinician understanding through explicit causal links. Conclusion: MedBeads addresses the \"Context Mismatch\" by shifting from probabilistic search to deterministic graph traversal, and from mutable records to immutable chains, providing the substrate for \"Trustworthy Medical AI.\" It guarantees the context the AI receives is deterministic and tamper-evident, while the LLM determines interpretation. The structured Bead format serves as a token-efficient \"AI-native language.\" We release MedBeads as open-source software to accelerate agent-native data standards.",
+    "code_links": [
+      "https://github.com/medbeads/medbeads"
+    ],
+    "comment": "19 pages, 5 figures. Code available at https://github.com/medbeads/medbeads"
+  },
+  {
+    "title": "Can LLMs Clean Up Your Mess? A Survey of Application-Ready Data Preparation with LLMs",
+    "authors": "Wei Zhou, Jun Zhou, Haoyu Wang, Zhenghao Li, Qikang He, Shaokun Han, Guoliang Li, Xuanhe Zhou, Yeye He, Chunwei Liu, Zirui Tang, Bin Wang, Shen Tang, Kai Zuo, Yuyu Luo, Zhenzhe Zheng, Conghui He, Jingren Zhou, Fan Wu",
+    "published": "2026-01-22",
+    "arxiv_id": "2601.17058v1",
+    "url": "http://arxiv.org/abs/2601.17058v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.17058v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Data preparation aims to denoise raw datasets, uncover cross-dataset relationships, and extract valuable insights from them, which is essential for a wide range of data-centric applications. Driven by (i) rising demands for application-ready data (e.g., for analytics, visualization, decision-making), (ii) increasingly powerful LLM techniques, and (iii) the emergence of infrastructures that facilitate flexible agent construction (e.g., using Databricks Unity Catalog), LLM-enhanced methods are rapidly becoming a transformative and potentially dominant paradigm for data preparation.\n  By investigating hundreds of recent literature works, this paper presents a systematic review of this evolving landscape, focusing on the use of LLM techniques to prepare data for diverse downstream tasks. First, we characterize the fundamental paradigm shift, from rule-based, model-specific pipelines to prompt-driven, context-aware, and agentic preparation workflows. Next, we introduce a task-centric taxonomy that organizes the field into three major tasks: data cleaning (e.g., standardization, error processing, imputation), data integration (e.g., entity matching, schema matching), and data enrichment (e.g., data annotation, profiling). For each task, we survey representative techniques, and highlight their respective strengths (e.g., improved generalization, semantic understanding) and limitations (e.g., the prohibitive cost of scaling LLMs, persistent hallucinations even in advanced agents, the mismatch between advanced methods and weak evaluation). Moreover, we analyze commonly used datasets and evaluation metrics (the empirical part). Finally, we discuss open research challenges and outline a forward-looking roadmap that emphasizes scalable LLM-data systems, principled designs for reliable agentic workflows, and robust evaluation protocols.",
+    "code_links": [
+      "https://github.com/weAIDB/awesome-data-llm"
+    ],
+    "comment": "Please refer to our repository for more details: https://github.com/weAIDB/awesome-data-llm"
+  },
+  {
+    "title": "TLSQL: Table Learning Structured Query Language",
+    "authors": "Feiyang Chen, Ken Zhong, Aoqian Zhang, Zheng Wang, Li Pan, Jianhua Li",
+    "published": "2026-01-20",
+    "arxiv_id": "2601.14109v2",
+    "url": "http://arxiv.org/abs/2601.14109v2",
+    "pdf_url": "https://arxiv.org/pdf/2601.14109v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Table learning, which lies at the intersection of machine learning and modern database systems, has recently attracted growing attention. However, existing frameworks typically require explicit data export and extensive feature engineering, creating a high barrier for database practitioners. We present TLSQL (Table Learning Structured Query Language), a system that enables table learning directly over relational databases via SQL-like declarative specifications. TLSQL is implemented as a lightweight Python library that translates these specifications into standard SQL queries and structured learning task descriptions. The generated SQL queries are executed natively by the database engine, while the task descriptions are consumed by downstream table learning frameworks. This design allows users to focus on modeling and analysis rather than low-level data preparation and pipeline orchestration. Experiments on real-world datasets demonstrate that TLSQL effectively lowers the barrier to integrating machine learning into databasecentric workflows. Our code is available at https://github.com/rllm-project/tlsql/.",
+    "code_links": [
+      "https://github.com/rllm-project/tlsql"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Pervasive Annotation Errors Break Text-to-SQL Benchmarks and Leaderboards",
+    "authors": "Tengjun Jin, Yoojin Choi, Yuxuan Zhu, Daniel Kang",
+    "published": "2026-01-13",
+    "arxiv_id": "2601.08778v3",
+    "url": "http://arxiv.org/abs/2601.08778v3",
+    "pdf_url": "https://arxiv.org/pdf/2601.08778v3",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Researchers have proposed numerous text-to-SQL techniques to streamline data analytics and accelerate the development of data-driven applications. To compare these techniques and select the best one for deployment, the community depends on public benchmarks and their leaderboards. Since these benchmarks heavily rely on human annotations during question construction and answer evaluation, the validity of the annotations is crucial.\n  In this paper, we conduct an empirical study that (i) benchmarks annotation error rates for two widely used text-to-SQL benchmarks, BIRD and Spider 2.0-Snow, and (ii) corrects a subset of the BIRD development (Dev) set to measure the impact of annotation errors on text-to-SQL agent performance and leaderboard rankings. Through expert analysis, we show that BIRD Mini-Dev and Spider 2.0-Snow have error rates of 52.8% and 62.8%, respectively. We re-evaluate all 16 open-source agents from the BIRD leaderboard on both the original and the corrected BIRD Dev subsets. We show that performance changes range from -7% to 31% (in relative terms) and rank changes range from $-9$ to $+9$ positions. We further assess whether these impacts generalize to the full BIRD Dev set. We find that the rankings of agents on the uncorrected subset correlate strongly with those on the full Dev set (Spearman's $r_s$=0.85, $p$=3.26e-5), whereas they correlate weakly with those on the corrected subset (Spearman's $r_s$=0.32, $p$=0.23). These findings show that annotation errors can significantly distort reported performance and rankings, potentially misguiding research directions or deployment choices. Our code and data are available at https://github.com/uiuc-kang-lab/text_to_sql_benchmarks.",
+    "code_links": [
+      "https://github.com/uiuc-kang-lab/text_to_sql_benchmarks"
+    ],
+    "comment": "18 pages, 14 figures, 9 tables"
+  },
+  {
+    "title": "VISTA: Knowledge-Driven Interpretable Vessel Trajectory Imputation via Large Language Models",
+    "authors": "Hengyu Liu, Tianyi Li, Haoyu Wang, Kristian Torp, Tiancheng Zhang, Yushuai Li, Christian S. Jensen",
+    "published": "2026-01-11",
+    "arxiv_id": "2601.06940v1",
+    "url": "http://arxiv.org/abs/2601.06940v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06940v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The Automatic Identification System provides critical information for maritime navigation and safety, yet its trajectories are often incomplete due to signal loss or deliberate tampering. Existing imputation methods emphasize trajectory recovery, paying limited attention to interpretability and failing to provide underlying knowledge that benefits downstream tasks such as anomaly detection and route planning. We propose knowledge-driven interpretable vessel trajectory imputation (VISTA), the first trajectory imputation framework that offers interpretability while simultaneously providing underlying knowledge to support downstream analysis. Specifically, we first define underlying knowledge as a combination of Structured Data-derived Knowledge (SDK) distilled from AIS data and Implicit LLM Knowledge acquired from large-scale Internet corpora. Second, to manage and leverage the SDK effectively at scale, we develop a data-knowledge-data loop that employs a Structured Data-derived Knowledge Graph for SDK extraction and knowledge-driven trajectory imputation. Third, to efficiently process large-scale AIS data, we introduce a workflow management layer that coordinates the end-to-end pipeline, enabling parallel knowledge extraction and trajectory imputation with anomaly handling and redundancy elimination. Experiments on two large AIS datasets show that VISTA is capable of state-of-the-art imputation accuracy and computational efficiency, improving over state-of-the-art baselines by 5%-94% and reducing time cost by 51%-93%, while producing interpretable knowledge cues that benefit downstream tasks. The source code and implementation details of VISTA are publicly available.",
+    "code_links": [
+      "https://github.com/hyLiu1994/VISTA"
+    ],
+    "comment": "22 pages, 13 figures, 3 algorithms, 5 tables. Code available at https://github.com/hyLiu1994/VISTA"
+  },
+  {
+    "title": "Algorithm Support for Graph Databases, Done Right",
+    "authors": "Daan de Graaf, Robert Brijder, Soham Chakraborty, George Fletcher, Bram van de Wall, Nikolay Yakovets",
+    "published": "2026-01-10",
+    "arxiv_id": "2601.06705v1",
+    "url": "http://arxiv.org/abs/2601.06705v1",
+    "pdf_url": "https://arxiv.org/pdf/2601.06705v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Graph database query languages cannot express algorithms like PageRank, forcing costly data wrangling, while existing solutions such as algorithm libraries, vertex-centric APIs, and recursive CTEs lack the necessary combination of expressiveness, performance, and usability. We present GraphAlg: a domain-specific language for graph algorithms that compiles to relational algebra, enabling seamless integration with query processing pipelines. Built on linear algebra foundations, GraphAlg provides intuitive matrix operations that are amenable to aggressive optimization including sparsity analysis, loop-invariant code motion, and in-place aggregation. Our implementation in AvantGraph demonstrates significant code complexity reduction compared to SQL/Python and Pregel while achieving excellent performance on LDBC Graphalytics benchmarks. GraphAlg establishes that graph databases can serve as unified platforms for both queries and analytics.",
+    "code_links": [
+      "https://github.com/wildarch/graphalg"
+    ],
+    "comment": "for GraphAlg compiler source code, see https://github.com/wildarch/graphalg"
+  }
+]
