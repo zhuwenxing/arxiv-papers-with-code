@@ -1,0 +1,253 @@
+[
+  {
+    "title": "Single-Turn LLM Reformulation Powered Multi-Stage Hybrid Re-Ranking for Tip-of-the-Tongue Known-Item Retrieval",
+    "authors": "Debayan Mukhopadhyay, Utshab Kumar Ghosh, Shubham Chatterjee",
+    "published": "2026-02-10",
+    "arxiv_id": "2602.10321v1",
+    "url": "http://arxiv.org/abs/2602.10321v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.10321v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieving known items from vague descriptions, Tip-of-the-Tongue (ToT) retrieval, remains a significant challenge. We propose using a single call to a generic 8B-parameter LLM for query reformulation, bridging the gap between ill-formed ToT queries and specific information needs. This method is particularly effective where standard Pseudo-Relevance Feedback fails due to poor initial recall. Crucially, our LLM is not fine-tuned for ToT or specific domains, demonstrating that gains stem from our prompting strategy rather than model specialization. Rewritten queries feed a multi-stage pipeline: sparse retrieval (BM25), dense/late-interaction reranking (Contriever, E5-large-v2, ColBERTv2), monoT5 cross-encoding, and list-wise reranking (Qwen 2.5 72B). Experiments on 2025 TREC-ToT datasets show that while raw queries yield poor performance, our lightweight pre-retrieval transformation improves Recall by 20.61%. Subsequent reranking improves nDCG@10 by 33.88%, MRR by 29.92%, and MAP@10 by 29.98%, offering a cost-effective intervention that unlocks the potential of downstream rankers. Code and data: https://github.com/debayan1405/TREC-TOT-2025",
+    "code_links": [
+      "https://github.com/debayan1405/TREC-TOT-2025"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Efficient Learning of Sparse Representations from Interactions",
+    "authors": "Vojtěch Vančura, Martin Spišák, Rodrigo Alves, Ladislav Peška",
+    "published": "2026-02-10",
+    "arxiv_id": "2602.09935v1",
+    "url": "http://arxiv.org/abs/2602.09935v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.09935v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Behavioral patterns captured in embeddings learned from interaction data are pivotal across various stages of production recommender systems. However, in the initial retrieval stage, practitioners face an inherent tradeoff between embedding expressiveness and the scalability and latency of serving components, resulting in the need for representations that are both compact and expressive. To address this challenge, we propose a training strategy for learning high-dimensional sparse embedding layers in place of conventional dense ones, balancing efficiency, representational expressiveness, and interpretability. To demonstrate our approach, we modified the production-grade collaborative filtering autoencoder ELSA, achieving up to 10x reduction in embedding size with no loss of recommendation accuracy, and up to 100x reduction with only a 2.5% loss. Moreover, the active embedding dimensions reveal an interpretable inverted-index structure that segments items in a way directly aligned with the model's latent space, thereby enabling integration of segment-level recommendation functionality (e.g., 2D homepage layouts) within the candidate retrieval model itself. Source codes, additional results, as well as a live demo are available at https://github.com/zombak79/compressed_elsa",
+    "code_links": [
+      "https://github.com/zombak79/compressed_elsa"
+    ],
+    "comment": "In the proceedings of the Web Conference (WWW) 2026 (4 pages)"
+  },
+  {
+    "title": "LEMUR: A Corpus for Robust Fine-Tuning of Multilingual Law Embedding Models for Retrieval",
+    "authors": "Narges Baba Ahmadi, Jan Strich, Martin Semmann, Chris Biemann",
+    "published": "2026-02-10",
+    "arxiv_id": "2602.09570v1",
+    "url": "http://arxiv.org/abs/2602.09570v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.09570v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models (LLMs) are increasingly used to access legal information. Yet, their deployment in multilingual legal settings is constrained by unreliable retrieval and the lack of domain-adapted, open-embedding models. In particular, existing multilingual legal corpora are not designed for semantic retrieval, and PDF-based legislative sources introduce substantial noise due to imperfect text extraction. To address these challenges, we introduce LEMUR, a large-scale multilingual corpus of EU environmental legislation constructed from 24,953 official EUR-Lex PDF documents covering 25 languages. We quantify the fidelity of PDF-to-text conversion by measuring lexical consistency against authoritative HTML versions using the Lexical Content Score (LCS). Building on LEMUR, we fine-tune three state-of-the-art multilingual embedding models using contrastive objectives in both monolingual and bilingual settings, reflecting realistic legal-retrieval scenarios. Experiments across low- and high-resource languages demonstrate that legal-domain fine-tuning consistently improves Top-k retrieval accuracy relative to strong baselines, with particularly pronounced gains for low-resource languages. Cross-lingual evaluations show that these improvements transfer to unseen languages, indicating that fine-tuning primarily enhances language-independent, content-level legal representations rather than language-specific cues. We publish code\\footnote{\\href{https://github.com/nargesbh/eur_lex}{GitHub Repository}} and data\\footnote{\\href{https://huggingface.co/datasets/G4KMU/LEMUR}{Hugging Face Dataset}}.",
+    "code_links": [
+      "https://github.com/nargesbh/eur_lex"
+    ],
+    "comment": "Accepted at EACL SRW 26"
+  },
+  {
+    "title": "Comprehensive Comparison of RAG Methods Across Multi-Domain Conversational QA",
+    "authors": "Klejda Alushi, Jan Strich, Chris Biemann, Martin Semmann",
+    "published": "2026-02-10",
+    "arxiv_id": "2602.09552v1",
+    "url": "http://arxiv.org/abs/2602.09552v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.09552v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Conversational question answering increasingly relies on retrieval-augmented generation (RAG) to ground large language models (LLMs) in external knowledge. Yet, most existing studies evaluate RAG methods in isolation and primarily focus on single-turn settings. This paper addresses the lack of a systematic comparison of RAG methods for multi-turn conversational QA, where dialogue history, coreference, and shifting user intent substantially complicate retrieval. We present a comprehensive empirical study of vanilla and advanced RAG methods across eight diverse conversational QA datasets spanning multiple domains. Using a unified experimental setup, we evaluate retrieval quality and answer generation using generator and retrieval metrics, and analyze how performance evolves across conversation turns. Our results show that robust yet straightforward methods, such as reranking, hybrid BM25, and HyDE, consistently outperform vanilla RAG. In contrast, several advanced techniques fail to yield gains and can even degrade performance below the No-RAG baseline. We further demonstrate that dataset characteristics and dialogue length strongly influence retrieval effectiveness, explaining why no single RAG strategy dominates across settings. Overall, our findings indicate that effective conversational RAG depends less on method complexity than on alignment between the retrieval strategy and the dataset structure. We publish the code used.\\footnote{\\href{https://github.com/Klejda-A/exp-rag.git}{GitHub Repository}}",
+    "code_links": [
+      "https://github.com/Klejda-A/exp-rag"
+    ],
+    "comment": "Accepted to EACL SRW 26"
+  },
+  {
+    "title": "Personalized Parameter-Efficient Fine-Tuning of Foundation Models for Multimodal Recommendation",
+    "authors": "Sunwoo Kim, Hyunjin Hwang, Kijung Shin",
+    "published": "2026-02-10",
+    "arxiv_id": "2602.09445v1",
+    "url": "http://arxiv.org/abs/2602.09445v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.09445v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In recent years, substantial research has integrated multimodal item metadata into recommender systems, often by using pre-trained multimodal foundation models to encode such data. Since these models are not originally trained for recommendation tasks, recent works efficiently adapt them via parameter-efficient fine-tuning (PEFT). However, even with PEFT, item embeddings from multimodal foundation models remain user-blind: item embeddings are not conditioned on user interests, despite the fact that users with diverse interests attend to different item aspects. To address this limitation, we propose PerPEFT, a personalized PEFT strategy for multimodal recommendation. Specifically, PerPEFT groups users by interest and assigns a distinct PEFT module to each group, enabling each module to capture the fine-grained item aspects most predictive of that group`s purchase decisions. We further introduce a specialized training technique that strengthens this user-group conditioning. Notably, PerPEFT is PEFT-agnostic and can be paired with any PEFT method applicable to multimodal foundation models. Through extensive experiments, we show that (1) PerPEFT outperforms the strongest baseline by up to 15.3% (NDCG@20) and (2) delivers consistent gains across diverse PEFT variants. It is noteworthy that, even with personalization, PEFT remains lightweight, adding only 1.3% of the parameter count of the foundation model. We provide our code and datasets at https://github.com/kswoo97/PerPEFT.",
+    "code_links": [
+      "https://github.com/kswoo97/PerPEFT"
+    ],
+    "comment": "To be published at The Web Conference 2026 (WWW 2026)"
+  },
+  {
+    "title": "A Sketch+Text Composed Image Retrieval Dataset for Thangka",
+    "authors": "Jinyu Xu, Yi Sun, Jiangling Zhang, Qing Xie, Daomin Ji, Zhifeng Bao, Jiachen Li, Yanchun Ma, Yongjian Liu",
+    "published": "2026-02-09",
+    "arxiv_id": "2602.08411v1",
+    "url": "http://arxiv.org/abs/2602.08411v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.08411v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Composed Image Retrieval (CIR) enables image retrieval by combining multiple query modalities, but existing benchmarks predominantly focus on general-domain imagery and rely on reference images with short textual modifications. As a result, they provide limited support for retrieval scenarios that require fine-grained semantic reasoning, structured visual understanding, and domain-specific knowledge. In this work, we introduce CIRThan, a sketch+text Composed Image Retrieval dataset for Thangka imagery, a culturally grounded and knowledge-specific visual domain characterized by complex structures, dense symbolic elements, and domain-dependent semantic conventions. CIRThan contains 2,287 high-quality Thangka images, each paired with a human-drawn sketch and hierarchical textual descriptions at three semantic levels, enabling composed queries that jointly express structural intent and multi-level semantic specification. We provide standardized data splits, comprehensive dataset analysis, and benchmark evaluations of representative supervised and zero-shot CIR methods. Experimental results reveal that existing CIR approaches, largely developed for general-domain imagery, struggle to effectively align sketch-based abstractions and hierarchical textual semantics with fine-grained Thangka images, particularly without in-domain supervision. We believe CIRThan offers a valuable benchmark for advancing sketch+text CIR, hierarchical semantic modeling, and multimodal retrieval in cultural heritage and other knowledge-specific visual domains. The dataset is publicly available at https://github.com/jinyuxu-whut/CIRThan.",
+    "code_links": [
+      "https://github.com/jinyuxu-whut/CIRThan"
+    ],
+    "comment": "9 pages"
+  },
+  {
+    "title": "IRB: Automated Generation of Robust Factuality Benchmarks",
+    "authors": "Lam Thanh Do, Bhagyashree Taleka, Hozaifa Ammar Bhutta, Vikram Sharma Mailthody, Kevin Chen-Chuan Chang, Wen-mei Hwu",
+    "published": "2026-02-08",
+    "arxiv_id": "2602.08070v1",
+    "url": "http://arxiv.org/abs/2602.08070v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.08070v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Static benchmarks for RAG systems often suffer from rapid saturation and require significant manual effort to maintain robustness. To address this, we present IRB, a framework for automatically generating benchmarks to evaluate the factuality of RAG systems. IRB employs a structured generation pipeline utilizing \\textit{factual scaffold} and \\textit{algorithmic scaffold}. We utilize IRB to construct a benchmark and evaluate frontier LLMs and retrievers. Our results demonstrate that IRB poses a significant challenge for frontier LLMs in the closed-book setting. Furthermore, our evaluation suggests that reasoning LLMs are more reliable, and that improving the retrieval component may yield more cost-effective gains in RAG system correctness than scaling the generator.",
+    "code_links": [
+      "https://github.com/Hozaifa-Bhutta/IRB"
+    ],
+    "comment": "Code: https://github.com/Hozaifa-Bhutta/IRB"
+  },
+  {
+    "title": "SimGR: Escaping the Pitfalls of Generative Decoding in LLM-based Recommendation",
+    "authors": "Yuanbo Zhao, Ruochen Liu, Senzhang Wang, Jun Yin, Yuxin Dong, Huan Gong, Hao Chen, Shirui Pan, Chengqi Zhang",
+    "published": "2026-02-08",
+    "arxiv_id": "2602.07847v1",
+    "url": "http://arxiv.org/abs/2602.07847v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.07847v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "A core objective in recommender systems is to accurately model the distribution of user preferences over items to enable personalized recommendations. Recently, driven by the strong generative capabilities of large language models (LLMs), LLM-based generative recommendation has become increasingly popular. However, we observe that existing methods inevitably introduce systematic bias when estimating item-level preference distributions. Specifically, autoregressive generation suffers from incomplete coverage due to beam search pruning, while parallel generation distorts probabilities by assuming token independence. We attribute this issue to a fundamental modeling mismatch: these methods approximate item-level distributions via token-level generation, which inherently induces approximation errors. Through both theoretical analysis and empirical validation, we demonstrate that token-level generation cannot faithfully substitute item-level generation, leading to biased item distributions. To address this, we propose \\textbf{Sim}ply \\textbf{G}enerative \\textbf{R}ecommendation (\\textbf{SimGR}), a framework that directly models item-level preference distributions in a shared latent space and ranks items by similarity, thereby aligning the modeling objective with recommendation and mitigating distributional distortion. Extensive experiments across multiple datasets and LLM backbones show that SimGR consistently outperforms existing generative recommenders. Our code is available at https://anonymous.4open.science/r/SimGR-C408/",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "ViHERMES: A Graph-Grounded Multihop Question Answering Benchmark and System for Vietnamese Healthcare Regulations",
+    "authors": "Long S. T. Nguyen, Quan M. Bui, Tin T. Ngo, Quynh T. N. Vo, Dung N. H. Le, Tho T. Quan",
+    "published": "2026-02-07",
+    "arxiv_id": "2602.07361v1",
+    "url": "http://arxiv.org/abs/2602.07361v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.07361v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Question Answering (QA) over regulatory documents is inherently challenging due to the need for multihop reasoning across legally interdependent texts, a requirement that is particularly pronounced in the healthcare domain where regulations are hierarchically structured and frequently revised through amendments and cross-references. Despite recent progress in retrieval-augmented and graph-based QA methods, systematic evaluation in this setting remains limited, especially for low-resource languages such as Vietnamese, due to the lack of benchmark datasets that explicitly support multihop reasoning over healthcare regulations. In this work, we introduce the Vietnamese Healthcare Regulations-Multihop Reasoning Dataset (ViHERMES), a benchmark designed for multihop QA over Vietnamese healthcare regulatory documents. ViHERMES consists of high-quality question-answer pairs that require reasoning across multiple regulations and capture diverse dependency patterns, including amendment tracing, cross-document comparison, and procedural synthesis. To construct the dataset, we propose a controlled multihop QA generation pipeline based on semantic clustering and graph-inspired data mining, followed by large language model-based generation with structured evidence and reasoning annotations. We further present a graph-aware retrieval framework that models formal legal relations at the level of legal units and supports principled context expansion for legally valid and coherent answers. Experimental results demonstrate that ViHERMES provides a challenging benchmark for evaluating multihop regulatory QA systems and that the proposed graph-aware approach consistently outperforms strong retrieval-based baselines. The ViHERMES dataset and system implementation are publicly available at https://github.com/ura-hcmut/ViHERMES.",
+    "code_links": [
+      "https://github.com/ura-hcmut/ViHERMES"
+    ],
+    "comment": "Accepted at ACIIDS 2026"
+  },
+  {
+    "title": "Sequences as Nodes for Contrastive Multimodal Graph Recommendation",
+    "authors": "Bucher Sahyouni, Matthew Vowels, Liqun Chen, Simon Hadfield",
+    "published": "2026-02-06",
+    "arxiv_id": "2602.07208v1",
+    "url": "http://arxiv.org/abs/2602.07208v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.07208v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "To tackle cold-start and data sparsity issues in recommender systems, numerous multimodal, sequential, and contrastive techniques have been proposed. While these augmentations can boost recommendation performance, they tend to add noise and disrupt useful semantics. To address this, we propose MuSICRec (Multimodal Sequence-Item Contrastive Recommender), a multi-view graph-based recommender that combines collaborative, sequential, and multimodal signals. We build a sequence-item (SI) view by attention pooling over the user's interacted items to form sequence nodes. We propagate over the SI graph, obtaining a second view organically as an alternative to artificial data augmentation, while simultaneously injecting sequential context signals. Additionally, to mitigate modality noise and align the multimodal information, the contribution of text and visual features is modulated according to an ID-guided gate.\n  We evaluate under a strict leave-two-out split against a broad range of sequential, multimodal, and contrastive baselines. On the Amazon Baby, Sports, and Electronics datasets, MuSICRec outperforms state-of-the-art baselines across all model types. We observe the largest gains for short-history users, mitigating sparsity and cold-start challenges. Our code is available at https://anonymous.4open.science/r/MuSICRec-3CEE/ and will be made publicly available.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "Reasoning-Augmented Representations for Multimodal Retrieval",
+    "authors": "Jianrui Zhang, Anirudh Sundara Rajan, Brandon Han, Soochahn Lee, Sukanta Ganguly, Yong Jae Lee",
+    "published": "2026-02-06",
+    "arxiv_id": "2602.07125v1",
+    "url": "http://arxiv.org/abs/2602.07125v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.07125v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Universal Multimodal Retrieval (UMR) seeks any-to-any search across text and vision, yet modern embedding models remain brittle when queries require latent reasoning (e.g., resolving underspecified references or matching compositional constraints). We argue this brittleness is often data-induced: when images carry \"silent\" evidence and queries leave key semantics implicit, a single embedding pass must both reason and compress, encouraging spurious feature matching. We propose a data-centric framework that decouples these roles by externalizing reasoning before retrieval. Using a strong Vision--Language Model, we make implicit semantics explicit by densely captioning visual evidence in corpus entries, resolving ambiguous multimodal references in queries, and rewriting verbose instructions into concise retrieval constraints. Inference-time enhancement alone is insufficient; the retriever must be trained on these semantically dense representations to avoid distribution shift and fully exploit the added signal. Across M-BEIR, our reasoning-augmented training method yields consistent gains over strong baselines, with ablations showing that corpus enhancement chiefly benefits knowledge-intensive queries while query enhancement is critical for compositional modification requests. We publicly release our code at https://github.com/AugmentedRetrieval/ReasoningAugmentedRetrieval.",
+    "code_links": [
+      "https://github.com/AugmentedRetrieval/ReasoningAugmentedRetrieval"
+    ],
+    "comment": null
+  },
+  {
+    "title": "R2LED: Equipping Retrieval and Refinement in Lifelong User Modeling with Semantic IDs for CTR Prediction",
+    "authors": "Qidong Liu, Gengnan Wang, Zhichen Liu, Moranxin Wang, Zijian Zhang, Xiao Han, Ni Zhang, Tao Qin, Chen Li",
+    "published": "2026-02-06",
+    "arxiv_id": "2602.06622v1",
+    "url": "http://arxiv.org/abs/2602.06622v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.06622v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Lifelong user modeling, which leverages users' long-term behavior sequences for CTR prediction, has been widely applied in personalized services. Existing methods generally adopted a two-stage \"retrieval-refinement\" strategy to balance effectiveness and efficiency. However, they still suffer from (i) noisy retrieval due to skewed data distribution and (ii) lack of semantic understanding in refinement. While semantic enhancement, e.g., LLMs modeling or semantic embeddings, offers potential solutions to these two challenges, these approaches face impractical inference costs or insufficient representation granularity. Obsorbing multi-granularity and lightness merits of semantic identity (SID), we propose a novel paradigm that equips retrieval and refinement in Lifelong User Modeling with SEmantic IDs (R2LED) to address these issues. First, we introduce a Multi-route Mixed Retrieval for the retrieval stage. On the one hand, it captures users' interests from various granularities by several parallel recall routes. On the other hand, a mixed retrieval mechanism is proposed to efficiently retrieve candidates from both collaborative and semantic views, reducing noise. Then, for refinement, we design a Bi-level Fusion Refinement, including a target-aware cross-attention for route-level fusion and a gate mechanism for SID-level fusion. It can bridge the gap between semantic and collaborative spaces, exerting the merits of SID. The comprehensive experimental results on two public datasets demonstrate the superiority of our method in both performance and efficiency. To facilitate the reproduction, we have released the code online https://github.com/abananbao/R2LED.",
+    "code_links": [
+      "https://github.com/abananbao/R2LED"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MuCo: Multi-turn Contrastive Learning for Multimodal Embedding Model",
+    "authors": "Geonmo Gu, Byeongho Heo, Jaemyung Yu, Jaehui Hwang, Taekyung Kim, Sangmin Lee, HeeJae Jun, Yoohoon Kang, Sangdoo Yun, Dongyoon Han",
+    "published": "2026-02-06",
+    "arxiv_id": "2602.06393v1",
+    "url": "http://arxiv.org/abs/2602.06393v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.06393v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Universal Multimodal embedding models built on Multimodal Large Language Models (MLLMs) have traditionally employed contrastive learning, which aligns representations of query-target pairs across different modalities. Yet, despite its empirical success, they are primarily built on a \"single-turn\" formulation where each query-target pair is treated as an independent data point. This paradigm leads to computational inefficiency when scaling, as it requires a separate forward pass for each pair and overlooks potential contextual relationships between multiple queries that can relate to the same context. In this work, we introduce Multi-Turn Contrastive Learning (MuCo), a dialogue-inspired framework that revisits this process. MuCo leverages the conversational nature of MLLMs to process multiple, related query-target pairs associated with a single image within a single forward pass. This allows us to extract a set of multiple query and target embeddings simultaneously, conditioned on a shared context representation, amplifying the effective batch size and overall training efficiency. Experiments exhibit MuCo with a newly curated 5M multimodal multi-turn dataset (M3T), which yields state-of-the-art retrieval performance on MMEB and M-BEIR benchmarks, while markedly enhancing both training efficiency and representation coherence across modalities. Code and M3T are available at https://github.com/naver-ai/muco",
+    "code_links": [
+      "https://github.com/naver-ai/muco"
+    ],
+    "comment": "22 pages"
+  },
+  {
+    "title": "SciDef: Automating Definition Extraction from Academic Literature with Large Language Models",
+    "authors": "Filip Kučera, Christoph Mandl, Isao Echizen, Radu Timofte, Timo Spinde",
+    "published": "2026-02-05",
+    "arxiv_id": "2602.05413v1",
+    "url": "http://arxiv.org/abs/2602.05413v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.05413v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Definitions are the foundation for any scientific work, but with a significant increase in publication numbers, gathering definitions relevant to any keyword has become challenging. We therefore introduce SciDef, an LLM-based pipeline for automated definition extraction. We test SciDef on DefExtra & DefSim, novel datasets of human-extracted definitions and definition-pairs' similarity, respectively. Evaluating 16 language models across prompting strategies, we demonstrate that multi-step and DSPy-optimized prompting improve extraction performance. To evaluate extraction, we test various metrics and show that an NLI-based method yields the most reliable results. We show that LLMs are largely able to extract definitions from scientific literature (86.4% of definitions from our test-set); yet future work should focus not just on finding definitions, but on identifying relevant ones, as models tend to over-generate them.\n  Code & datasets are available at https://github.com/Media-Bias-Group/SciDef.",
+    "code_links": [
+      "https://github.com/Media-Bias-Group/SciDef"
+    ],
+    "comment": "Under Review - Submitted to SIGIR 2026 Resources Track; 8 pages, 6 figures, 4 tables"
+  },
+  {
+    "title": "SemPipes -- Optimizable Semantic Data Operators for Tabular Machine Learning Pipelines",
+    "authors": "Olga Ovcharenko, Matthias Boehm, Sebastian Schelter",
+    "published": "2026-02-04",
+    "arxiv_id": "2602.05134v1",
+    "url": "http://arxiv.org/abs/2602.05134v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.05134v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Real-world machine learning on tabular data relies on complex data preparation pipelines for prediction, data integration, augmentation, and debugging. Designing these pipelines requires substantial domain expertise and engineering effort, motivating the question of how large language models (LLMs) can support tabular ML through code synthesis. We introduce SemPipes, a novel declarative programming model that integrates LLM-powered semantic data operators into tabular ML pipelines. Semantic operators specify data transformations in natural language while delegating execution to a runtime system. During training, SemPipes synthesizes custom operator implementations based on data characteristics, operator instructions, and pipeline context. This design enables the automatic optimization of data operations in a pipeline via LLM-based code synthesis guided by evolutionary search. We evaluate SemPipes across diverse tabular ML tasks and show that semantic operators substantially improve end-to-end predictive performance for both expert-designed and agent-generated pipelines, while reducing pipeline complexity. We implement SemPipes in Python and release it at https://github.com/deem-data/sempipes/tree/v1.",
+    "code_links": [
+      "https://github.com/deem-data/sempipes"
+    ],
+    "comment": null
+  },
+  {
+    "title": "PluRel: Synthetic Data unlocks Scaling Laws for Relational Foundation Models",
+    "authors": "Vignesh Kothapalli, Rishabh Ranjan, Valter Hudovernik, Vijay Prakash Dwivedi, Johannes Hoffart, Carlos Guestrin, Jure Leskovec",
+    "published": "2026-02-03",
+    "arxiv_id": "2602.04029v1",
+    "url": "http://arxiv.org/abs/2602.04029v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.04029v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Relational Foundation Models (RFMs) facilitate data-driven decision-making by learning from complex multi-table databases. However, the diverse relational databases needed to train such models are rarely public due to privacy constraints. While there are methods to generate synthetic tabular data of arbitrary size, incorporating schema structure and primary--foreign key connectivity for multi-table generation remains challenging. Here we introduce PluRel, a framework to synthesize multi-tabular relational databases from scratch. In a step-by-step fashion, PluRel models (1) schemas with directed graphs, (2) inter-table primary-foreign key connectivity with bipartite graphs, and, (3) feature distributions in tables via conditional causal mechanisms. The design space across these stages supports the synthesis of a wide range of diverse databases, while being computationally lightweight. Using PluRel, we observe for the first time that (1) RFM pretraining loss exhibits power-law scaling with the number of synthetic databases and total pretraining tokens, (2) scaling the number of synthetic databases improves generalization to real databases, and (3) synthetic pretraining yields strong base models for continued pretraining on real databases. Overall, our framework and results position synthetic data scaling as a promising paradigm for RFMs.",
+    "code_links": [
+      "https://github.com/snap-stanford/plurel"
+    ],
+    "comment": "Code: https://github.com/snap-stanford/plurel"
+  },
+  {
+    "title": "MedBeads: An Agent-Native, Immutable Data Substrate for Trustworthy Medical AI",
+    "authors": "Takahito Nakajima",
+    "published": "2026-02-01",
+    "arxiv_id": "2602.01086v1",
+    "url": "http://arxiv.org/abs/2602.01086v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.01086v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Background: As of 2026, Large Language Models (LLMs) demonstrate expert-level medical knowledge. However, deploying them as autonomous \"Clinical Agents\" remains limited. Current Electronic Medical Records (EMRs) and standards like FHIR are designed for human review, creating a \"Context Mismatch\": AI agents receive fragmented data and must rely on probabilistic inference (e.g., RAG) to reconstruct patient history. This approach causes hallucinations and hinders auditability. Methods: We propose MedBeads, an agent-native data infrastructure where clinical events are immutable \"Beads\"--nodes in a Merkle Directed Acyclic Graph (DAG)--cryptographically referencing causal predecessors. This \"write-once, read-many\" architecture makes tampering mathematically detectable. We implemented a prototype with a Go Core Engine, Python middleware for LLM integration, and a React-based visualization interface. Results: We successfully implemented the workflow using synthetic data. The FHIR-to-DAG conversion transformed flat resources into a causally-linked graph. Our Breadth-First Search (BFS) Context Retrieval algorithm traverses relevant subgraphs with O(V+E) complexity, enabling real-time decision support. Tamper-evidence is guaranteed by design: any modification breaks the cryptographic chain. The visualization aids clinician understanding through explicit causal links. Conclusion: MedBeads addresses the \"Context Mismatch\" by shifting from probabilistic search to deterministic graph traversal, and from mutable records to immutable chains, providing the substrate for \"Trustworthy Medical AI.\" It guarantees the context the AI receives is deterministic and tamper-evident, while the LLM determines interpretation. The structured Bead format serves as a token-efficient \"AI-native language.\" We release MedBeads as open-source software to accelerate agent-native data standards.",
+    "code_links": [
+      "https://github.com/medbeads/medbeads"
+    ],
+    "comment": "19 pages, 5 figures. Code available at https://github.com/medbeads/medbeads"
+  }
+]
