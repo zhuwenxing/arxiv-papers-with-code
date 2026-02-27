@@ -1,0 +1,298 @@
+[
+  {
+    "title": "Multi-Vector Index Compression in Any Modality",
+    "authors": "Hanxiang Qin, Alexander Martin, Rohan Jha, Chunsheng Zuo, Reno Kriz, Benjamin Van Durme",
+    "published": "2026-02-24",
+    "arxiv_id": "2602.21202v1",
+    "url": "http://arxiv.org/abs/2602.21202v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.21202v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "We study efficient multi-vector retrieval for late interaction in any modality. Late interaction has emerged as a dominant paradigm for information retrieval in text, images, visual documents, and videos, but its computation and storage costs grow linearly with document length, making it costly for image-, video-, and audio-rich corpora. To address this limitation, we explore query-agnostic methods for compressing multi-vector document representations under a constant vector budget. We introduce four approaches for index compression: sequence resizing, memory tokens, hierarchical pooling, and a novel attention-guided clustering (AGC). AGC uses an attention-guided mechanism to identify the most semantically salient regions of a document as cluster centroids and to weight token aggregation. Evaluating these methods on retrieval tasks spanning text (BEIR), visual-document (ViDoRe), and video (MSR-VTT, MultiVENT 2.0), we show that attention-guided clustering consistently outperforms other parameterized compression methods (sequence resizing and memory tokens), provides greater flexibility in index size than non-parametric hierarchical clustering, and achieves competitive or improved performance compared to a full, uncompressed index. The source code is available at: github.com/hanxiangqin/omni-col-press.",
+    "code_links": [
+      "https://github.com/hanxiangqin/omni-col-press"
+    ],
+    "comment": "12 pages, 4 figures"
+  },
+  {
+    "title": "Turning Semantics into Topology: LLM-Driven Attribute Augmentation for Collaborative Filtering",
+    "authors": "Junjie Meng, Ranxu zhang, Wei Wu, Rui Zhang, Chuan Qin, Qi Zhang, Qi Liu, Hui Xiong, Chao Wang",
+    "published": "2026-02-24",
+    "arxiv_id": "2602.21099v1",
+    "url": "http://arxiv.org/abs/2602.21099v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.21099v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models (LLMs) have shown great potential for enhancing recommender systems through their extensive world knowledge and reasoning capabilities. However, effectively translating these semantic signals into traditional collaborative embeddings remains an open challenge. Existing approaches typically fall into two extremes: direct inference methods are computationally prohibitive for large-scale retrieval, while embedding-based methods primarily focus on unilateral feature augmentation rather than holistic collaborative signal enhancement. To bridge this gap, we propose Topology-Augmented Graph Collaborative Filtering (TAGCF), a novel framework that transforms semantic knowledge into topological connectivity. Unlike existing approaches that depend on textual features or direct interaction synthesis, TAGCF employs LLMs to infer interaction intents and underlying causal relationships from user-item pairs, representing these insights as intermediate attribute nodes within an enriched User-Attribute-Item (U-A-I) graph. Furthermore, to effectively model the heterogeneous relations in this augmented structure, we propose Adaptive Relation-weighted Graph Convolution (ARGC), which employs relation-specific prediction networks to dynamically estimate the importance of each relation type. Extensive experiments across multiple benchmark datasets and CF backbones demonstrate consistent improvements, with comprehensive evaluations including cold-start scenarios validating the effectiveness and robustness of our framework. All code will be made publicly available. For anonymous review, our code is available at the following anonymous link: https://anonymous.4open.science/r/AGCF-2441353190/.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "NanoKnow: How to Know What Your Language Model Knows",
+    "authors": "Lingwei Gu, Nour Jedidi, Jimmy Lin",
+    "published": "2026-02-23",
+    "arxiv_id": "2602.20122v1",
+    "url": "http://arxiv.org/abs/2602.20122v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.20122v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "How do large language models (LLMs) know what they know? Answering this question has been difficult because pre-training data is often a \"black box\" -- unknown or inaccessible. The recent release of nanochat -- a family of small LLMs with fully open pre-training data -- addresses this as it provides a transparent view into where a model's parametric knowledge comes from. Towards the goal of understanding how knowledge is encoded by LLMs, we release NanoKnow, a benchmark dataset that partitions questions from Natural Questions and SQuAD into splits based on whether their answers are present in nanochat's pre-training corpus. Using these splits, we can now properly disentangle the sources of knowledge that LLMs rely on when producing an output. To demonstrate NanoKnow's utility, we conduct experiments using eight nanochat checkpoints. Our findings show: (1) closed-book accuracy is strongly influenced by answer frequency in the pre-training data, (2) providing external evidence can mitigate this frequency dependence, (3) even with external evidence, models are more accurate when answers were seen during pre-training, demonstrating that parametric and external knowledge are complementary, and (4) non-relevant information is harmful, with accuracy decreasing based on both the position and the number of non-relevant contexts. We release all NanoKnow artifacts at https://github.com/castorini/NanoKnow.",
+    "code_links": [
+      "https://github.com/castorini/NanoKnow"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ManCAR: Manifold-Constrained Latent Reasoning with Adaptive Test-Time Computation for Sequential Recommendation",
+    "authors": "Kun Yang, Yuxuan Zhu, Yazhe Chen, Siyao Zheng, Bangyang Hong, Kangle Wu, Yabo Ni, Anxiang Zeng, Cong Fu, Hui Li",
+    "published": "2026-02-23",
+    "arxiv_id": "2602.20093v1",
+    "url": "http://arxiv.org/abs/2602.20093v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.20093v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential recommendation increasingly employs latent multi-step reasoning to enhance test-time computation. Despite empirical gains, existing approaches largely drive intermediate reasoning states via target-dominant objectives without imposing explicit feasibility constraints. This results in latent drift, where reasoning trajectories deviate into implausible regions. We argue that effective recommendation reasoning should instead be viewed as navigation on a collaborative manifold rather than free-form latent refinement. To this end, we propose ManCAR (Manifold-Constrained Adaptive Reasoning), a principled framework that grounds reasoning within the topology of a global interaction graph. ManCAR constructs a local intent prior from the collaborative neighborhood of a user's recent actions, represented as a distribution over the item simplex. During training, the model progressively aligns its latent predictive distribution with this prior, forcing the reasoning trajectory to remain within the valid manifold. At test time, reasoning proceeds adaptively until the predictive distribution stabilizes, avoiding over-refinement. We provide a variational interpretation of ManCAR to theoretically validate its drift-prevention and adaptive test-time stopping mechanisms. Experiments on seven benchmarks demonstrate that ManCAR consistently outperforms state-of-the-art baselines, achieving up to a 46.88% relative improvement w.r.t. NDCG@10. Our code is available at https://github.com/FuCongResearchSquad/ManCAR.",
+    "code_links": [
+      "https://github.com/FuCongResearchSquad/ManCAR"
+    ],
+    "comment": "15 pages, 7 figures"
+  },
+  {
+    "title": "Counterfactual Understanding via Retrieval-aware Multimodal Modeling for Time-to-Event Survival Prediction",
+    "authors": "Ha-Anh Hoang Nguyen, Tri-Duc Phan Le, Duc-Hoang Pham, Huy-Son Nguyen, Cam-Van Thi Nguyen, Duc-Trong Le, Hoang-Quynh Le",
+    "published": "2026-02-23",
+    "arxiv_id": "2602.19987v1",
+    "url": "http://arxiv.org/abs/2602.19987v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.19987v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "This paper tackles the problem of time-to-event counterfactual survival prediction, aiming to optimize individualized survival outcomes in the presence of heterogeneity and censored data. We propose CURE, a framework that advances counterfactual survival modeling via comprehensive multimodal embedding and latent subgroup retrieval. CURE integrates clinical, paraclinical, demographic, and multi-omics information, which are aligned and fused through cross-attention mechanisms. Complex multi-omics signals can be adaptively refined using a mixture-of-experts architecture, emphasizing the most informative omics components. Building upon this representation, CURE implicitly retrieves patient-specific latent subgroups that capture both baseline survival dynamics and treatment-dependent variations. Experimental results on METABRIC and TCGA-LUAD datasets demonstrate that proposed CURE model consistently outperforms strong baselines in survival analysis, evaluated using the Time-dependent Concordance Index ($C^{td}$) and Integrated Brier Score (IBS). These findings highlight the potential of CURE to enhance multimodal understanding and serve as a foundation for future treatment recommendation models. All code and related resources are publicly available to facilitate the reproducibility https://github.com/L2R-UET/CURE.",
+    "code_links": [
+      "https://github.com/L2R-UET/CURE"
+    ],
+    "comment": null
+  },
+  {
+    "title": "VQPP: Video Query Performance Prediction Benchmark",
+    "authors": "Adrian Catalin Lutu, Eduard Poesina, Radu Tudor Ionescu",
+    "published": "2026-02-19",
+    "arxiv_id": "2602.17814v1",
+    "url": "http://arxiv.org/abs/2602.17814v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.17814v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Query performance prediction (QPP) is an important and actively studied information retrieval task, having various applications, such as query reformulation, query expansion, and retrieval system selection, among many others. The task has been primarily studied in the context of text and image retrieval, whereas QPP for content-based video retrieval (CBVR) remains largely underexplored. To this end, we propose the first benchmark for video query performance prediction (VQPP), comprising two text-to-video retrieval datasets and two CBVR systems, respectively. VQPP contains a total of 56K text queries and 51K videos, and comes with official training, validation and test splits, fostering direct comparisons and reproducible results. We explore multiple pre-retrieval and post-retrieval performance predictors, creating a representative benchmark for future exploration of QPP in the video domain. Our results show that pre-retrieval predictors obtain competitive performance, enabling applications before performing the retrieval step. We also demonstrate the applicability of VQPP by employing the best performing pre-retrieval predictor as reward model for training a large language model (LLM) on the query reformulation task via direct preference optimization (DPO). We release our benchmark and code at https://github.com/AdrianLutu/VQPP.",
+    "code_links": [
+      "https://github.com/AdrianLutu/VQPP"
+    ],
+    "comment": null
+  },
+  {
+    "title": "WarpRec: Unifying Academic Rigor and Industrial Scale for Responsible, Reproducible, and Efficient Recommendation",
+    "authors": "Marco Avolio, Potito Aghilar, Sabino Roccotelli, Vito Walter Anelli, Chiara Mallamaci, Vincenzo Paparella, Marco Valentini, Alejandro Bellogín, Michelantonio Trizio, Joseph Trotta, Antonio Ferrara, Tommaso Di Noia",
+    "published": "2026-02-19",
+    "arxiv_id": "2602.17442v1",
+    "url": "http://arxiv.org/abs/2602.17442v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.17442v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Innovation in Recommender Systems is currently impeded by a fractured ecosystem, where researchers must choose between the ease of in-memory experimentation and the costly, complex rewriting required for distributed industrial engines. To bridge this gap, we present WarpRec, a high-performance framework that eliminates this trade-off through a novel, backend-agnostic architecture. It includes 50+ state-of-the-art algorithms, 40 metrics, and 19 filtering and splitting strategies that seamlessly transition from local execution to distributed training and optimization. The framework enforces ecological responsibility by integrating CodeCarbon for real-time energy tracking, showing that scalability need not come at the cost of scientific integrity or sustainability. Furthermore, WarpRec anticipates the shift toward Agentic AI, leading Recommender Systems to evolve from static ranking engines into interactive tools within the Generative AI ecosystem. In summary, WarpRec not only bridges the gap between academia and industry but also can serve as the architectural backbone for the next generation of sustainable, agent-ready Recommender Systems. Code is available at https://github.com/sisinflab/warprec/",
+    "code_links": [
+      "https://github.com/sisinflab/warprec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "On the Reliability of User-Centric Evaluation of Conversational Recommender Systems",
+    "authors": "Michael Müller, Amir Reza Mohammadi, Andreas Peintner, Beatriz Barroso Gstrein, Günther Specht, Eva Zangerle",
+    "published": "2026-02-19",
+    "arxiv_id": "2602.17264v1",
+    "url": "http://arxiv.org/abs/2602.17264v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.17264v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "User-centric evaluation has become a key paradigm for assessing Conversational Recommender Systems (CRS), aiming to capture subjective qualities such as satisfaction, trust, and rapport. To enable scalable evaluation, recent work increasingly relies on third-party annotations of static dialogue logs by crowd workers or large language models. However, the reliability of this practice remains largely unexamined. In this paper, we present a large-scale empirical study investigating the reliability and structure of user-centric CRS evaluation on static dialogue transcripts. We collected 1,053 annotations from 124 crowd workers on 200 ReDial dialogues using the 18-dimensional CRS-Que framework. Using random-effects reliability models and correlation analysis, we quantify the stability of individual dimensions and their interdependencies. Our results show that utilitarian and outcome-oriented dimensions such as accuracy, usefulness, and satisfaction achieve moderate reliability under aggregation, whereas socially grounded constructs such as humanness and rapport are substantially less reliable. Furthermore, many dimensions collapse into a single global quality signal, revealing a strong halo effect in third-party judgments. These findings challenge the validity of single-annotator and LLM-based evaluation protocols and motivate the need for multi-rater aggregation and dimension reduction in offline CRS evaluation.",
+    "code_links": [
+      "https://github.com/michael-mue/reliable-crs-eval"
+    ],
+    "comment": "5 pages, 2 figures. Submitted to UMAP 2026. Code available at https://github.com/michael-mue/reliable-crs-eval"
+  },
+  {
+    "title": "Can Recommender Systems Teach Themselves? A Recursive Self-Improving Framework with Fidelity Control",
+    "authors": "Luankang Zhang, Hao Wang, Zhongzhou Liu, Mingjia Yin, Yonghao Huang, Jiaqi Li, Wei Guo, Yong Liu, Huifeng Guo, Defu Lian, Enhong Chen",
+    "published": "2026-02-17",
+    "arxiv_id": "2602.15659v1",
+    "url": "http://arxiv.org/abs/2602.15659v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.15659v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "The scarcity of high-quality training data presents a fundamental bottleneck to scaling machine learning models. This challenge is particularly acute in recommendation systems, where extreme sparsity in user interactions leads to rugged optimization landscapes and poor generalization. We propose the Recursive Self-Improving Recommendation (RSIR) framework, a paradigm in which a model bootstraps its own performance without reliance on external data or teacher models. RSIR operates in a closed loop: the current model generates plausible user interaction sequences, a fidelity-based quality control mechanism filters them for consistency with user's approximate preference manifold, and a successor model is augmented on the enriched dataset. Our theoretical analysis shows that RSIR acts as a data-driven implicit regularizer, smoothing the optimization landscape and guiding models toward more robust solutions. Empirically, RSIR yields consistent, cumulative gains across multiple benchmarks and architectures. Notably, even smaller models benefit, and weak models can generate effective training curricula for stronger ones. These results demonstrate that recursive self-improvement is a general, model-agnostic approach to overcoming data sparsity, suggesting a scalable path forward for recommender systems and beyond. Our anonymized code is available at https://anonymous.4open.science/r/RSIR-7C5B .",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "Eco-Amazon: Enriching E-commerce Datasets with Product Carbon Footprint for Sustainable Recommendations",
+    "authors": "Giuseppe Spillo, Allegra De Filippo, Cataldo Musto, Michela Milano, Giovanni Semeraro",
+    "published": "2026-02-17",
+    "arxiv_id": "2602.15508v1",
+    "url": "http://arxiv.org/abs/2602.15508v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.15508v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In the era of responsible and sustainable AI, information retrieval and recommender systems must expand their scope beyond traditional accuracy metrics to incorporate environmental sustainability. However, this research line is severely limited by the lack of item-level environmental impact data in standard benchmarks. This paper introduces Eco-Amazon, a novel resource designed to bridge this gap. Our resource consists of an enriched version of three widely used Amazon datasets (i.e., Home, Clothing, and Electronics) augmented with Product Carbon Footprint (PCF) metadata. CO2e emission scores were generated using a zero-shot framework that leverages Large Language Models (LLMs) to estimate item-level PCF based on product attributes. Our contribution is three-fold: (i) the release of the Eco-Amazon datasets, enriching item metadata with PCF signals; (ii) the LLM-based PCF estimation script, which allows researchers to enrich any product catalogue and reproduce our results; (iii) a use case demonstrating how PCF estimates can be exploited to promote more sustainable products. By providing these environmental signals, Eco-Amazon enables the community to develop, benchmark, and evaluate the next generation of sustainable retrieval and recommendation models. Our resource is available at https://doi.org/10.5281/zenodo.18549130, while our source code is available at: http://github.com/giuspillo/EcoAmazon/.",
+    "code_links": [
+      "https://github.com/giuspillo/EcoAmazon"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Binge Watch: Reproducible Multimodal Benchmarks Datasets for Large-Scale Movie Recommendation on MovieLens-10M and 20M",
+    "authors": "Giuseppe Spillo, Alessandro Petruzzelli, Cataldo Musto, Marco de Gemmis, Pasquale Lops, Giovanni Semeraro",
+    "published": "2026-02-17",
+    "arxiv_id": "2602.15505v1",
+    "url": "http://arxiv.org/abs/2602.15505v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.15505v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "With the growing interest in Multimodal Recommender Systems (MRSs), collecting high-quality datasets provided with multimedia side information (text, images, audio, video) has become a fundamental step. However, most of the current literature in the field relies on small- or medium-scale datasets that are either not publicly released or built using undocumented processes.\n  In this paper, we aim to fill this gap by releasing M3L-10M and M3L-20M, two large-scale, reproducible, multimodal datasets for the movie domain, obtained by enriching with multimodal features the popular MovieLens-10M and MovieLens-20M, respectively. By following a fully documented pipeline, we collect movie plots, posters, and trailers, from which textual, visual, acoustic, and video features are extracted using several state-of-the-art encoders. We publicly release mappings to download the original raw data, the extracted features, and the complete datasets in multiple formats, fostering reproducibility and advancing the field of MRSs. In addition, we conduct qualitative and quantitative analyses that showcase our datasets across several perspectives.\n  This work represents a foundational step to ensure reproducibility and replicability in the large-scale, multimodal movie recommendation domain. Our resource can be fully accessed at the following link: https://zenodo.org/records/18499145, while the source code is accessible at https://github.com/giuspillo/M3L_10M_20M.",
+    "code_links": [
+      "https://github.com/giuspillo/M3L_10M_20M"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MoDora: Tree-Based Semi-Structured Document Analysis System",
+    "authors": "Bangrui Xu, Qihang Yao, Zirui Tang, Xuanhe Zhou, Yeye He, Shihan Yu, Qianqian Xu, Bin Wang, Guoliang Li, Conghui He, Fan Wu",
+    "published": "2026-02-26",
+    "arxiv_id": "2602.23061v1",
+    "url": "http://arxiv.org/abs/2602.23061v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.23061v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "Semi-structured documents integrate diverse interleaved data elements (e.g., tables, charts, hierarchical paragraphs) arranged in various and often irregular layouts. These documents are widely observed across domains and account for a large portion of real-world data. However, existing methods struggle to support natural language question answering over these documents due to three main technical challenges: (1) The elements extracted by techniques like OCR are often fragmented and stripped of their original semantic context, making them inadequate for analysis. (2) Existing approaches lack effective representations to capture hierarchical structures within documents (e.g., associating tables with nested chapter titles) and to preserve layout-specific distinctions (e.g., differentiating sidebars from main content). (3) Answering questions often requires retrieving and aligning relevant information scattered across multiple regions or pages, such as linking a descriptive paragraph to table cells located elsewhere in the document.\n  To address these issues, we propose MoDora, an LLM-powered system for semi-structured document analysis. First, we adopt a local-alignment aggregation strategy to convert OCR-parsed elements into layout-aware components, and conduct type-specific information extraction for components with hierarchical titles or non-text elements. Second, we design the Component-Correlation Tree (CCTree) to hierarchically organize components, explicitly modeling inter-component relations and layout distinctions through a bottom-up cascade summarization process. Finally, we propose a question-type-aware retrieval strategy that supports (1) layout-based grid partitioning for location-based retrieval and (2) LLM-guided pruning for semantic-based retrieval. Experiments show MoDora outperforms baselines by 5.97%-61.07% in accuracy. The code is at https://github.com/weAIDB/MoDora.",
+    "code_links": [
+      "https://github.com/weAIDB/MoDora"
+    ],
+    "comment": "Extension of our SIGMOD 2026 paper. Please refer to source code available at https://github.com/weAIDB/MoDora"
+  },
+  {
+    "title": "Resp-Agent: An Agent-Based System for Multimodal Respiratory Sound Generation and Disease Diagnosis",
+    "authors": "Pengfei Zhang, Tianxin Xie, Minghao Yang, Li Liu",
+    "published": "2026-02-16",
+    "arxiv_id": "2602.15909v2",
+    "url": "http://arxiv.org/abs/2602.15909v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.15909v2",
+    "category": "databases",
+    "primary_category": "eess.AS",
+    "abstract": "Deep learning-based respiratory auscultation is currently hindered by two fundamental challenges: (i) inherent information loss, as converting signals into spectrograms discards transient acoustic events and clinical context; (ii) limited data availability, exacerbated by severe class imbalance. To bridge these gaps, we present Resp-Agent, an autonomous multimodal system orchestrated by a novel Active Adversarial Curriculum Agent (Thinker-A$^2$CA). Unlike static pipelines, Thinker-A$^2$CA serves as a central controller that actively identifies diagnostic weaknesses and schedules targeted synthesis in a closed loop. To address the representation gap, we introduce a Modality-Weaving Diagnoser that weaves EHR data with audio tokens via Strategic Global Attention and sparse audio anchors, capturing both long-range clinical context and millisecond-level transients. To address the data gap, we design a Flow Matching Generator that adapts a text-only Large Language Model (LLM) via modality injection, decoupling pathological content from acoustic style to synthesize hard-to-diagnose samples. As a foundation for these efforts, we introduce Resp-229k, a benchmark corpus of 229k recordings paired with LLM-distilled clinical narratives. Extensive experiments demonstrate that Resp-Agent consistently outperforms prior approaches across diverse evaluation settings, improving diagnostic robustness under data scarcity and long-tailed class imbalance. Our code and data are available at https://github.com/zpforlove/Resp-Agent.",
+    "code_links": [
+      "https://github.com/zpforlove/Resp-Agent"
+    ],
+    "comment": "24 pages, 3 figures. Published as a conference paper at ICLR 2026"
+  },
+  {
+    "title": "Qute: Towards Quantum-Native Database",
+    "authors": "Muzhi Chen, Xuanhe Zhou, Wei Zhou, Bangrui Xu, Surui Tang, Guoliang Li, Bingsheng He, Yeye He, Yitong Song, Fan Wu",
+    "published": "2026-02-16",
+    "arxiv_id": "2602.14699v1",
+    "url": "http://arxiv.org/abs/2602.14699v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.14699v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "This paper envisions a quantum database (Qute) that treats quantum computation as a first-class execution option. Unlike prior simulation-based methods that either run quantum algorithms on classical machines or adapt existing databases for quantum simulation, Qute instead (i) compiles an extended form of SQL into gate-efficient quantum circuits, (ii) employs a hybrid optimizer to dynamically select between quantum and classical execution plans, (iii) introduces selective quantum indexing, and (iv) designs fidelity-preserving storage to mitigate current qubit constraints. We also present a three-stage evolution roadmap toward quantum-native database. Finally, by deploying Qute on a real quantum processor (origin_wukong), we show that it outperforms a classical baseline at scale, and we release an open-source prototype at https://github.com/weAIDB/Qute.",
+    "code_links": [
+      "https://github.com/weAIDB/Qute"
+    ],
+    "comment": "Please refer our open-source prototype at: https://github.com/weAIDB/Qute"
+  },
+  {
+    "title": "Tabular Foundation Models Can Learn Association Rules",
+    "authors": "Erkan Karabulut, Daniel Daza, Paul Groth, Martijn C. Schut, Victoria Degeler",
+    "published": "2026-02-16",
+    "arxiv_id": "2602.14622v2",
+    "url": "http://arxiv.org/abs/2602.14622v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.14622v2",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Association Rule Mining (ARM) is a fundamental task for knowledge discovery in tabular data and is widely used in high-stakes decision-making. Classical ARM methods rely on frequent itemset mining, leading to rule explosion and poor scalability, while recent neural approaches mitigate these issues but suffer from degraded performance in low-data regimes. Tabular foundation models (TFMs), pretrained on diverse tabular data with strong in-context generalization, provide a basis for addressing these limitations. We introduce a model-agnostic association rule learning framework that extracts association rules from any conditional probabilistic model over tabular data, enabling us to leverage TFMs. We then introduce TabProbe, an instantiation of our framework that utilizes TFMs as conditional probability estimators to learn association rules out-of-the-box without frequent itemset mining. We evaluate our approach on tabular datasets of varying sizes based on standard ARM rule quality metrics and downstream classification performance. The results show that TFMs consistently produce concise, high-quality association rules with strong predictive performance and remain robust in low-data settings without task-specific training. Source code is available at https://github.com/DiTEC-project/tabprobe.",
+    "code_links": [
+      "https://github.com/DiTEC-project/tabprobe"
+    ],
+    "comment": null
+  },
+  {
+    "title": "PIPE-RDF: An LLM-Assisted Pipeline for Enterprise RDF Benchmarking",
+    "authors": "Suraj Ranganath",
+    "published": "2026-02-15",
+    "arxiv_id": "2602.18497v1",
+    "url": "http://arxiv.org/abs/2602.18497v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.18497v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Enterprises rely on RDF knowledge graphs and SPARQL to expose operational data through natural language interfaces, yet public KGQA benchmarks do not reflect proprietary schemas, prefixes, or query distributions. We present PIPE-RDF, a three-phase pipeline that constructs schema-specific NL-SPARQL benchmarks using reverse querying, category-balanced template generation, retrieval-augmented prompting, deduplication, and execution-based validation with repair. We instantiate PIPE-RDF on a fixed-schema company-location slice (5,000 companies) derived from public RDF data and generate a balanced benchmark of 450 question-SPARQL pairs across nine categories. The pipeline achieves 100% parse and execution validity after repair, with pre-repair validity rates of 96.5%-100% across phases. We report entity diversity metrics, template coverage analysis, and cost breakdowns to support deployment planning. We release structured artifacts (CSV/JSONL, logs, figures) and operational metrics to support model evaluation and system planning in real-world settings. Code is available at https://github.com/suraj-ranganath/PIPE-RDF.",
+    "code_links": [
+      "https://github.com/suraj-ranganath/PIPE-RDF"
+    ],
+    "comment": "Conference submission"
+  },
+  {
+    "title": "DTBench: A Synthetic Benchmark for Document-to-Table Extraction",
+    "authors": "Yuxiang Guo, Zhuoran Du, Nan Tang, Kezheng Tang, Congcong Ge, Yunjun Gao",
+    "published": "2026-02-14",
+    "arxiv_id": "2602.13812v2",
+    "url": "http://arxiv.org/abs/2602.13812v2",
+    "pdf_url": "https://arxiv.org/pdf/2602.13812v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Document-to-table (Doc2Table) extraction derives structured tables from unstructured documents under a target schema, enabling reliable and verifiable SQL-based data analytics. Although large language models (LLMs) have shown promise in flexible information extraction, their ability to produce precisely structured tables remains insufficiently understood, particularly for indirect extraction that requires complex capabilities such as reasoning and conflict resolution. Existing benchmarks neither explicitly distinguish nor comprehensively cover the diverse capabilities required in Doc2Table extraction. We argue that a capability-aware benchmark is essential for systematic evaluation. However, constructing such benchmarks using human-annotated document-table pairs is costly, difficult to scale, and limited in capability coverage. To address this, we adopt a reverse Table2Doc paradigm and design a multi-agent synthesis workflow to generate documents from ground-truth tables. Based on this approach, we present DTBench, a synthetic benchmark that adopts a proposed two-level taxonomy of Doc2Table capabilities, covering 5 major categories and 13 subcategories. We evaluate several mainstream LLMs on DTBench, and demonstrate substantial performance gaps across models, as well as persistent challenges in reasoning, faithfulness, and conflict resolution. DTBench provides a comprehensive testbed for data generation and evaluation, facilitating future research on Doc2Table extraction. The benchmark is publicly available at https://github.com/ZJU-DAILY/DTBench.",
+    "code_links": [
+      "https://github.com/ZJU-DAILY/DTBench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "No Need to Train Your RDB Foundation Model",
+    "authors": "Linjie Xu, Yanlin Zhang, Quan Gan, Minjie Wang, David Wipf",
+    "published": "2026-02-14",
+    "arxiv_id": "2602.13697v1",
+    "url": "http://arxiv.org/abs/2602.13697v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.13697v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Relational databases (RDBs) contain vast amounts of heterogeneous tabular information that can be exploited for predictive modeling purposes. But since the space of potential targets is vast across enterprise settings, how can we \\textit{avoid retraining} a new model each time we wish to predict a new quantity of interest? Foundation models based on in-context learning (ICL) offer a convenient option, but so far are largely restricted to single-table operability. In generalizing to multiple interrelated tables, it is essential to compress variably-sized RDB neighborhoods into fixed-length ICL samples for consumption by the decoder. However, the details here are critical: unlike existing supervised learning RDB pipelines, we provide theoretical and empirical evidence that ICL-specific compression should be constrained \\emph{within} high-dimensional RDB columns where all entities share units and roles, not \\textit{across} columns where the relevance of heterogeneous data types cannot possibly be determined without label information. Conditioned on this restriction, we then demonstrate that encoder expressiveness is actually not compromised by excluding trainable parameters. Hence we arrive at a principled family of RDB encoders that can be seamlessly paired with already-existing single-table ICL foundation models, whereby no training or fine-tuning is required. From a practical standpoint, we develop scalable SQL primitives to implement the encoder stage, resulting in an easy-to-use open-source RDB foundation model\\footnote{\\label{foot: RDBLearn_learn} https://github.com/HKUSHXLab/rdblearn} capable of robust performance on unseen datasets out of the box.",
+    "code_links": [
+      "https://github.com/HKUSHXLab/rdblearn"
+    ],
+    "comment": null
+  },
+  {
+    "title": "RDBLearn: Simple In-Context Prediction Over Relational Databases",
+    "authors": "Yanlin Zhang, Linjie Xu, Quan Gan, David Wipf, Minjie Wang",
+    "published": "2026-02-14",
+    "arxiv_id": "2602.18495v1",
+    "url": "http://arxiv.org/abs/2602.18495v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.18495v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Recent advances in tabular in-context learning (ICL) show that a single pretrained model can adapt to new prediction tasks from a small set of labeled examples, avoiding per-task training and heavy tuning. However, many real-world tasks live in relational databases, where predictive signal is spread across multiple linked tables rather than a single flat table. We show that tabular ICL can be extended to relational prediction with a simple recipe: automatically featurize each target row using relational aggregations over its linked records, materialize the resulting augmented table, and run an off-the-shelf tabular foundation model on it. We package this approach in \\textit{RDBLearn} (https://github.com/HKUSHXLab/rdblearn), an easy-to-use toolkit with a scikit-learn-style estimator interface that makes it straightforward to swap different tabular ICL backends; a complementary agent-specific interface is provided as well. Across a broad collection of RelBench and 4DBInfer datasets, RDBLearn is the best-performing foundation model approach we evaluate, at times even outperforming strong supervised baselines trained or fine-tuned on each dataset.",
+    "code_links": [
+      "https://github.com/HKUSHXLab/rdblearn"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Filtered Approximate Nearest Neighbor Search in Vector Databases: System Design and Performance Analysis",
+    "authors": "Abylay Amanbayev, Brian Tsan, Tri Dang, Florin Rusu",
+    "published": "2026-02-11",
+    "arxiv_id": "2602.11443v1",
+    "url": "http://arxiv.org/abs/2602.11443v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.11443v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Retrieval-Augmented Generation (RAG) applications increasingly rely on Filtered Approximate Nearest Neighbor Search (FANNS) to combine semantic retrieval with metadata constraints. While algorithmic innovations for FANNS have been proposed, there remains a lack of understanding regarding how generic filtering strategies perform within Vector Databases. In this work, we systematize the taxonomy of filtering strategies and evaluate their integration into FAISS, Milvus, and pgvector. To provide a robust benchmarking framework, we introduce a new relational dataset, \\textit{MoReVec}, consisting of two tables, featuring 768-dimensional text embeddings and a rich schema of metadata attributes. We further propose the \\textit{Global-Local Selectivity (GLS)} correlation metric to quantify the relationship between filters and query vectors.\n  Our experiments reveal that algorithmic adaptations within the engine often override raw index performance. Specifically, we find that: (1) \\textit{Milvus} achieves superior recall stability through hybrid approximate/exact execution; (2) \\textit{pgvector}'s cost-based query optimizer frequently selects suboptimal execution plans, favoring approximate index scans even when exact sequential scans would yield perfect recall at comparable latency; and (3) partition-based indexes (IVFFlat) outperform graph-based indexes (HNSW) for low-selectivity queries. To facilitate this analysis, we extend the widely-used \\textit{ANN-Benchmarks} to support filtered vector search and make it available online. Finally, we synthesize our findings into a set of practical guidelines for selecting index types and configuring query optimizers for hybrid search workloads.",
+    "code_links": [
+      "https://github.com/aabylay/ANN-benchmark-HQ"
+    ],
+    "comment": "The artifacts are available at: https://github.com/aabylay/ANN-benchmark-HQ"
+  }
+]
