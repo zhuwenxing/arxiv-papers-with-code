@@ -1,0 +1,362 @@
+[
+  {
+    "title": "RAGPerf: An End-to-End Benchmarking Framework for Retrieval-Augmented Generation Systems",
+    "authors": "Shaobo Li, Yirui Zhou, Yuan Xu, Kevin Chen, Daniel Waddington, Swaminathan Sundararaman, Hubertus Franke, Jian Huang",
+    "published": "2026-03-11",
+    "arxiv_id": "2603.10765v1",
+    "url": "http://arxiv.org/abs/2603.10765v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.10765v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.PF",
+    "abstract": "We present the design and implementation of a RAG-based AI system benchmarking (RAGPerf) framework for characterizing the system behaviors of RAG pipelines. To facilitate detailed profiling and fine-grained performance analysis, RAGPerf decouples the RAG workflow into several modular components - embedding, indexing, retrieval, reranking, and generation. RAGPerf offers the flexibility for users to configure the core parameters of each component and examine their impact on the end-to-end query performance and quality. RAGPerf has a workload generator to model real-world scenarios by supporting diverse datasets (e.g., text, pdf, code, and audio), different retrieval and update ratios, and query distributions. RAGPerf also supports different embedding models, major vector databases such as LanceDB, Milvus, Qdrant, Chroma, and Elasticsearch, as well as different LLMs for content generation. It automates the collection of performance metrics (i.e., end-to-end query throughput, host/GPU memory footprint, and CPU/GPU utilization) and accuracy metrics (i.e., context recall, query accuracy, and factual consistency). We demonstrate the capabilities of RAGPerf through a comprehensive set of experiments and open source its codebase at GitHub. Our evaluation shows that RAGPerf incurs negligible performance overhead.",
+    "code_links": [
+      "https://github.com/platformxlab/RAGPerf"
+    ],
+    "comment": "The codebase of RAGPerf is available at https://github.com/platformxlab/RAGPerf"
+  },
+  {
+    "title": "Breaking User-Centric Agency: A Tri-Party Framework for Agent-Based Recommendation",
+    "authors": "Yaxin Gong, Chongming Gao, Chenxiao Fan, Wenjie Wang, Fuli Feng, Xiangnan He",
+    "published": "2026-03-11",
+    "arxiv_id": "2603.10673v1",
+    "url": "http://arxiv.org/abs/2603.10673v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.10673v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recent advances in large language models (LLMs) have stimulated growing interest in agent-based recommender systems, enabling language-driven interaction and reasoning for more expressive preference modeling. However, most existing agentic approaches remain predominantly user-centric, treating items as passive entities and neglecting the interests of other critical stakeholders. This limitation exacerbates exposure concentration and long-tail under-representation, threatening long-term system sustainability. In this work, we identify this fundamental limitation and propose the first Tri-party LLM-agent Recommendation framework (TriRec) that explicitly coordinates user utility, item exposure, and platform-level fairness. The framework employs a two-stage architecture: Stage~1 empowers item agents with personalized self-promotion to improve matching quality and alleviate cold-start barriers, while Stage~2 uses a platform agent for sequential multi-objective re-ranking, balancing user relevance, item utility, and exposure fairness. Experiments on multiple benchmarks show consistent gains in accuracy, fairness, and item-level utility. Moreover, we find that item self-promotion can simultaneously enhance fairness and effectiveness, challenging the conventional trade-off assumption between relevance and fairness. Our code is available at https://github.com/Marfekey/TriRec.",
+    "code_links": [
+      "https://github.com/Marfekey/TriRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "PRECEPT: Planning Resilience via Experience, Context Engineering & Probing Trajectories A Unified Framework for Test-Time Adaptation with Compositional Rule Learning and Pareto-Guided Prompt Evolution",
+    "authors": "Arash Shahmansoori",
+    "published": "2026-03-10",
+    "arxiv_id": "2603.09641v1",
+    "url": "http://arxiv.org/abs/2603.09641v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.09641v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "LLM agents that store knowledge as natural language suffer steep retrieval degradation as condition count grows, often struggle to compose learned rules reliably, and typically lack explicit mechanisms to detect stale or adversarial knowledge. We introduce PRECEPT, a unified framework for test-time adaptation with three tightly coupled components: (1) deterministic exact-match rule retrieval over structured condition keys, (2) conflict-aware memory with Bayesian source reliability and threshold-based rule invalidation, and (3) COMPASS, a Pareto-guided prompt-evolution outer loop. Exact retrieval eliminates partial-match interpretation errors on the deterministic path (0% by construction, vs 94.4% under Theorem~B.6's independence model at N=10) and supports compositional stacking through a semantic tier hierarchy; conflict-aware memory resolves static--dynamic disagreements and supports drift adaptation; COMPASS evaluates prompts through the same end-to-end execution pipeline.\n  Results (9--10 seeds): PRECEPT achieves a +41.1pp first-try advantage over Full Reflexion (d>1.9), +33.3pp compositional generalization (d=1.55), 100% $P_1$ on 2-way logistics compositions (d=2.64), +40--55pp continuous learning gains, strong eventual robustness under adversarial static knowledge (100% logistics with adversarial SK active; partial recovery on integration), +55.0pp drift recovery (d=0.95, p=0.031), and 61% fewer steps. Core comparisons are statistically significant, often at p<0.001.",
+    "code_links": [
+      "https://github.com/arash-shahmansoori/precept-framework"
+    ],
+    "comment": "50 pages, 14 figures. Code and reproducibility resources: https://github.com/arash-shahmansoori/precept-framework"
+  },
+  {
+    "title": "Structure-Preserving Graph Contrastive Learning for Mathematical Information Retrieval",
+    "authors": "Chun-Hsi Ku, Hung-Hsuan Chen",
+    "published": "2026-03-09",
+    "arxiv_id": "2603.08012v1",
+    "url": "http://arxiv.org/abs/2603.08012v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.08012v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "This paper introduces Variable Substitution as a domain-specific graph augmentation technique for graph contrastive learning (GCL) in the context of searching for mathematical formulas. Standard GCL augmentation techniques often distort the semantic meaning of mathematical formulas, particularly for small and highly structured graphs. Variable Substitution, on the other hand, preserves the core algebraic relationships and formula structure. To demonstrate the effectiveness of our technique, we apply it to a classic GCL-based retrieval model. Experiments show that this straightforward approach significantly improves retrieval performance compared to generic augmentation strategies. We release the code on GitHub.\\footnote{https://github.com/lazywulf/formula_ret_aug}.",
+    "code_links": [
+      "https://github.com/lazywulf/formula_ret_aug"
+    ],
+    "comment": null
+  },
+  {
+    "title": "SynPlanResearch-R1: Encouraging Tool Exploration for Deep Research with Synthetic Plans",
+    "authors": "Hansi Zeng, Zoey Li, Yifan Gao, Chenwei Zhang, Xiaoman Pan, Tao Yang, Fengran Mo, Jiacheng Lin, Xian Li, Jingbo Shang",
+    "published": "2026-03-09",
+    "arxiv_id": "2603.07853v1",
+    "url": "http://arxiv.org/abs/2603.07853v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.07853v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Research Agents enable models to gather information from the web using tools to answer user queries, requiring them to dynamically interleave internal reasoning with tool use. While such capabilities can in principle be learned via reinforcement learning with verifiable rewards (RLVR), we observe that agents often exhibit poor exploration behaviors, including premature termination and biased tool usage. As a result, RLVR alone yields limited improvements. We propose SynPlanResearch-R1, a framework that synthesizes tool-use trajectories that encourage deeper exploration to shape exploration during cold-start supervised fine-tuning, providing a strong initialization for subsequent RL. Across seven multi-hop and open-web benchmarks, \\framework improves performance by up to 6.0% on Qwen3-8B and 5.8% on Qwen3-4B backbones respectively compared to SOTA baselines. Further analyses of tool-use patterns and training dynamics compared to baselines shed light on the factors underlying these gains. Our code is publicly available at https://github.com/HansiZeng/syn-plan-research.",
+    "code_links": [
+      "https://github.com/HansiZeng/syn-plan-research"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Verifiable Reasoning for LLM-based Generative Recommendation",
+    "authors": "Xinyu Lin, Hanqing Zeng, Hanchao Yu, Yinglong Xia, Jiang Zhang, Aashu Singh, Fei Liu, Wenjie Wang, Fuli Feng, Tat-Seng Chua, Qifan Wang",
+    "published": "2026-03-08",
+    "arxiv_id": "2603.07725v1",
+    "url": "http://arxiv.org/abs/2603.07725v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.07725v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Reasoning in Large Language Models (LLMs) has recently shown strong potential in enhancing generative recommendation through deep understanding of complex user preference. Existing approaches follow a {reason-then-recommend} paradigm, where LLMs perform step-by-step reasoning before item generation. However, this paradigm inevitably suffers from reasoning degradation (i.e., homogeneous or error-accumulated reasoning) due to the lack of intermediate verification, thus undermining the recommendation. To bridge this gap, we propose a novel \\textbf{\\textit{reason-verify-recommend}} paradigm, which interleaves reasoning with verification to provide reliable feedback, guiding the reasoning process toward more faithful user preference understanding. To enable effective verification, we establish two key principles for verifier design: 1) reliability ensures accurate evaluation of reasoning correctness and informative guidance generation; and 2) multi-dimensionality emphasizes comprehensive verification across multi-dimensional user preferences. Accordingly, we propose an effective implementation called VRec. It employs a mixture of verifiers to ensure multi-dimensionality, while leveraging a proxy prediction objective to pursue reliability. Experiments on four real-world datasets demonstrate that VRec substantially enhances recommendation effectiveness and scalability without compromising efficiency. The codes can be found at https://github.com/Linxyhaha/Verifiable-Rec.",
+    "code_links": [
+      "https://github.com/Linxyhaha/Verifiable-Rec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Dial: A Knowledge-Grounded Dialect-Specific NL2SQL System",
+    "authors": "Xiang Zhang, Hongming Xu, Le Zhou, Wei Zhou, Xuanhe Zhou, Guoliang Li, Yuyu Luo, Changdong Liu, Guorun Chen, Jiang Liao, Fan Wu",
+    "published": "2026-03-08",
+    "arxiv_id": "2603.07449v1",
+    "url": "http://arxiv.org/abs/2603.07449v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.07449v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DB",
+    "abstract": "Enterprises commonly deploy heterogeneous database systems, each of which owns a distinct SQL dialect with different syntax rules, built-in functions, and execution constraints. However, most existing NL2SQL methods assume a single dialect (e.g., SQLite) and struggle to produce queries that are both semantically correct and executable on target engines. Prompt-based approaches tightly couple intent reasoning with dialect syntax, rule-based translators often degrade native operators into generic constructs, and multi-dialect fine-tuning suffers from cross-dialect interference.\n  In this paper, we present Dial, a knowledge-grounded framework for dialect-specific NL2SQL. Dial introduces: (1) a Dialect-Aware Logical Query Planning module that converts natural language into a dialect-aware logical query plan via operator-level intent decomposition and divergence-aware specification; (2) HINT-KB, a hierarchical intent-aware knowledge base that organizes dialect knowledge into (i) a canonical syntax reference, (ii) a declarative function repository, and (iii) a procedural constraint repository; and (3) an execution-driven debugging and semantic verification loop that separates syntactic recovery from logic auditing to prevent semantic drift. We construct DS-NL2SQL, a benchmark covering six major database systems with 2,218 dialect-specific test cases. Experimental results show that Dial consistently improves translation accuracy by 10.25% and dialect feature coverage by 15.77% over state-of-the-art baselines. The code is at https://github.com/weAIDB/Dial.",
+    "code_links": [
+      "https://github.com/weAIDB/Dial"
+    ],
+    "comment": null
+  },
+  {
+    "title": "AutoDataset: A Lightweight System for Continuous Dataset Discovery and Search",
+    "authors": "Junzhe Yang, Xinghao Chen, Yunuo Liu, Zhijing Sun, Wenjin Guo, Xiaoyu Shen",
+    "published": "2026-03-07",
+    "arxiv_id": "2603.07271v1",
+    "url": "http://arxiv.org/abs/2603.07271v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.07271v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "The continuous expansion of task-specific datasets has become a major driver of progress in machine learning. However, discovering newly released datasets remains difficult, as existing platforms largely depend on manual curation or community submissions, leading to limited coverage and substantial delays. To address this challenge, we introduce AutoDataset, a lightweight, automated system for real-time dataset discovery and retrieval. AutoDataset adopts a paper-first approach by continuously monitoring arXiv to detect and index datasets directly from newly published research. The system operates through a low-overhead multi-stage pipeline. First, a lightweight classifier rapidly filters titles and abstracts to identify papers releasing datasets, achieving an F1 score of 0.94 with an inference latency of 11 ms. For identified papers, we parse PDFs with GROBID and apply a sentence-level extractor to extract dataset descriptions. Dataset URLs are extracted from the paper text with an automated fallback to LaTeX source analysis when needed. Finally, the structured records are indexed using a dense semantic retriever, enabling low-latency natural language search. We deploy AutoDataset as a live system that continuously ingests new papers and provides up-to-date dataset discovery. In practice, it has been shown to significantly reduce the time required for researchers to locate newly released datasets, improving dataset discovery efficiency by up to 80%.",
+    "code_links": [
+      "https://github.com/EIT-NLP/AutoDataset"
+    ],
+    "comment": "10 pages, 4 figures. Source code is available at https://github.com/EIT-NLP/AutoDataset. Screencast video: https://youtu.be/_QSxHKyIYns"
+  },
+  {
+    "title": "Retrieval-Augmented Generation for Predicting Cellular Responses to Gene Perturbation",
+    "authors": "Andrea Giuseppe Di Francesco, Andrea Rubbi, Pietro Liò",
+    "published": "2026-03-07",
+    "arxiv_id": "2603.07233v1",
+    "url": "http://arxiv.org/abs/2603.07233v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.07233v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Predicting how cells respond to genetic perturbations is fundamental to understanding gene function, disease mechanisms, and therapeutic development. While recent deep learning approaches have shown promise in modeling single-cell perturbation responses, they struggle to generalize across cell types and perturbation contexts due to limited contextual information during generation. We introduce PT-RAG (Perturbation-aware Two-stage Retrieval-Augmented Generation), a novel framework that extends Retrieval-Augmented Generation beyond traditional language-model applications to cellular biology. Unlike standard RAG systems designed for text retrieval with pre-trained LLMs, perturbation retrieval lacks established similarity metrics and requires learning what constitutes relevant context, making differentiable retrieval essential. PT-RAG addresses this through a two-stage pipeline: first, retrieving candidate perturbations $K$ using GenePT embeddings, then adaptively refining the selection through Gumbel-Softmax discrete sampling conditioned on both the cell state and the input perturbation. This cell-type-aware differentiable retrieval enables end-to-end optimization of the retrieval objective jointly with generation. On the Replogle-Nadig single-gene perturbation dataset, we demonstrate that PT-RAG outperforms both STATE and vanilla RAG under identical experimental conditions, with the strongest gains in distributional similarity metrics ($W_1$, $W_2$). Notably, vanilla RAG's dramatic failure is itself a key finding: it demonstrates that differentiable, cell-type-aware retrieval is essential in this domain, and that naive retrieval can actively harm performance. Our results establish retrieval-augmented generation as a promising paradigm for modelling cellular responses to gene perturbation. The code to reproduce our experiments is available at https://github.com/difra100/PT-RAG_ICLR.",
+    "code_links": [
+      "https://github.com/difra100/PT-RAG_ICLR"
+    ],
+    "comment": "Accepted at ICLR 2026 Workshop: Generative AI in Genomics. 25 pages, 9 figures"
+  },
+  {
+    "title": "Multi-TAP: Multi-criteria Target Adaptive Persona Modeling for Cross-Domain Recommendation",
+    "authors": "Daehee Kang, Yeon-Chang Lee",
+    "published": "2026-03-07",
+    "arxiv_id": "2603.07086v1",
+    "url": "http://arxiv.org/abs/2603.07086v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.07086v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.HC",
+    "abstract": "Cross-domain recommendation (CDR) aims to alleviate data sparsity by transferring knowledge across domains, yet existing methods primarily rely on coarse-grained behavioral signals and often overlook intra-domain heterogeneity in user preferences. We propose Multi-TAP, a multi-criteria target-adaptive persona framework that explicitly captures such heterogeneity through semantic persona modeling. To enable effective transfer, Multi-TAP selectively incorporates source-domain signals conditioned on the target domain, preserving relevance during knowledge transfer. Experiments on real-world datasets demonstrate that Multi-TAP consistently outperforms state-of-the-art CDR methods, highlighting the importance of modeling intra-domain heterogeneity for robust cross-domain recommendation. The codebase of Multi-TAP is currently available at https://github.com/archivehee/Multi-TAP.",
+    "code_links": [
+      "https://github.com/archivehee/Multi-TAP"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MLLMRec-R1: Incentivizing Reasoning Capability in Large Language Models for Multimodal Sequential Recommendation",
+    "authors": "Yu Wang, Yonghui Yang, Le Wu, Jiancan Wu, Hefei Xu, Hui Lin",
+    "published": "2026-03-06",
+    "arxiv_id": "2603.06243v1",
+    "url": "http://arxiv.org/abs/2603.06243v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.06243v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Group relative policy optimization (GRPO) has become a standard post-training paradigm for improving reasoning and preference alignment in large language models (LLMs), and has recently shown strong effectiveness in LLM-based recommender systems. However, extending GRPO-based reasoning pipelines to multimodal sequential recommendation (MSR) with multimodal large language models (MLLMs) faces fundamental obstacles. First, MSR requires jointly encoding visual content for both historical interactions and multiple candidate items, causing visual tokens to dominate the input and making the cost of group-based rollout scale with history length and candidate set size, which renders GRPO-based training prohibitively expensive. Second, existing Chain-of-Thought (CoT) supervision suffers from reward inflation in recommendation scenarios, where higher training rewards do not reliably translate into improved ranking performance and may induce shortcut learning. To address these challenges, we propose MLLMRec-R1, an efficient and stable GRPO-based reasoning framework for multimodal sequential recommendation. MLLMRec-R1 textualizes visual signals offline to eliminate expensive visual tokens while preserving multimodal semantics, and constructs high-quality multimodal CoT supervision through refinement and confidence-aware assessment. Furthermore, a mixed-grained data augmentation strategy selectively injects reliable CoT samples while retaining standard training data, mitigating reward inflation and improving generalization stability. Extensive experiments on three benchmark datasets demonstrate that MLLMRec-R1 consistently outperforms state-of-the-art methods, establishing a practical and effective GRPO-based reasoning pipeline for multimodal sequential recommendation. The code is available at https://github.com/wangyu0627/MLLMRec-R1.",
+    "code_links": [
+      "https://github.com/wangyu0627/MLLMRec-R1"
+    ],
+    "comment": "14 pages, 10figures"
+  },
+  {
+    "title": "Still Fresh? Evaluating Temporal Drift in Retrieval Benchmarks",
+    "authors": "Nathan Kuissi, Suraj Subrahmanyan, Nandan Thakur, Jimmy Lin",
+    "published": "2026-03-04",
+    "arxiv_id": "2603.04532v1",
+    "url": "http://arxiv.org/abs/2603.04532v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.04532v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Information retrieval (IR) benchmarks typically follow the Cranfield paradigm, relying on static and predefined corpora. However, temporal changes in technical corpora, such as API deprecations and code reorganizations, can render existing benchmarks stale. In our work, we investigate how temporal corpus drift affects FreshStack, a retrieval benchmark focused on technical domains. We examine two independent corpus snapshots of FreshStack from October 2024 and October 2025 to answer questions about LangChain. Our analysis shows that all but one query posed in 2024 remain fully supported by the 2025 corpus, as relevant documents \"migrate\" from LangChain to competitor repositories, such as LlamaIndex. Next, we compare the accuracy of retrieval models on both snapshots and observe only minor shifts in model rankings, with overall strong correlation of up to 0.978 Kendall $τ$ at Recall@50. These results suggest that retrieval benchmarks re-judged with evolving temporal corpora can remain reliable for retrieval evaluation. We publicly release all our artifacts at https://github.com/fresh-stack/driftbench.",
+    "code_links": [
+      "https://github.com/fresh-stack/driftbench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "LabelBuddy: An Open Source Music and Audio Language Annotation Tagging Tool Using AI Assistance",
+    "authors": "Ioannis Prokopiou, Ioannis Sina, Agisilaos Kounelis, Pantelis Vikatos, Themos Stafylakis",
+    "published": "2026-03-04",
+    "arxiv_id": "2603.04293v1",
+    "url": "http://arxiv.org/abs/2603.04293v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.04293v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.SD",
+    "abstract": "The advancement of Machine learning (ML), Large Audio Language Models (LALMs), and autonomous AI agents in Music Information Retrieval (MIR) necessitates a shift from static tagging to rich, human-aligned representation learning. However, the scarcity of open-source infrastructure capable of capturing the subjective nuances of audio annotation remains a critical bottleneck. This paper introduces \\textbf{LabelBuddy}, an open-source collaborative auto-tagging audio annotation tool designed to bridge the gap between human intent and machine understanding. Unlike static tools, it decouples the interface from inference via containerized backends, allowing users to plug in custom models for AI-assisted pre-annotation. We describe the system architecture, which supports multi-user consensus, containerized model isolation, and a roadmap for extending agents and LALMs. Code available at https://github.com/GiannisProkopiou/gsoc2022-Label-buddy.",
+    "code_links": [
+      "https://github.com/GiannisProkopiou/gsoc2022-Label-buddy"
+    ],
+    "comment": "Accepted at NLP4MusA 2026 (4th Workshop on NLP for Music and Audio)"
+  },
+  {
+    "title": "The Science Data Lake: A Unified Open Infrastructure Integrating 293 Million Papers Across Eight Scholarly Sources with Embedding-Based Ontology Alignment",
+    "authors": "Jonas Wilinski",
+    "published": "2026-03-03",
+    "arxiv_id": "2603.03126v1",
+    "url": "http://arxiv.org/abs/2603.03126v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.03126v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DL",
+    "abstract": "Scholarly data are largely fragmented across siloed databases with divergent metadata and missing linkages among them. We present the Science Data Lake, a locally-deployable infrastructure built on DuckDB and simple Parquet files that unifies eight open sources - Semantic Scholar, OpenAlex, SciSciNet, Papers with Code, Retraction Watch, Reliance on Science, a preprint-to-published mapping, and Crossref - via DOI normalization while preserving source-level schemas. The resource comprises approximately 960GB of Parquet files spanning ~293 million uniquely identifiable papers across ~22 schemas and ~153 SQL views. An embedding-based ontology alignment using BGE-large sentence embeddings maps 4,516 OpenAlex topics to 13 scientific ontologies (~1.3 million terms), yielding 16,150 mappings covering 99.8% of topics ($\\geq 0.65$ threshold) with $F1 = 0.77$ at the recommended $\\geq 0.85$ operating point, outperforming TF-IDF, BM25, and Jaro-Winkler baselines on a 300-pair gold-standard evaluation. We validate through 10 automated checks, cross-source citation agreement analysis (pairwise Pearson $r = 0.76$ - $0.87$), and stratified manual annotation. Four vignettes demonstrate cross-source analyses infeasible with any single database. The resource is open source, deployable on a single drive or queryable remotely via HuggingFace, and includes structured documentation suitable for large language model (LLM) based research agents.",
+    "code_links": [
+      "https://github.com/J0nasW/science-datalake"
+    ],
+    "comment": "18 pages, 8 figures, 7 tables. Dataset DOI: 10.57967/hf/7850. Code: https://github.com/J0nasW/science-datalake"
+  },
+  {
+    "title": "LLM-Driven Online Aggregation for Unstructured Text Analytics",
+    "authors": "Chao Hui, Weizheng Lu, Yanjie Gao, Lingfeng Xiong, Yunhai Wang, Yueguo Chen",
+    "published": "2026-03-09",
+    "arxiv_id": "2603.08443v1",
+    "url": "http://arxiv.org/abs/2603.08443v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.08443v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Large Language Models (LLMs) exhibit strong capabilities in text processing, and recent research has augmented SQL and DataFrame with LLM-powered semantic operators for data analysis. However, LLM-based data processing is hindered by slower token generation speeds compared to relational queries. To enhance real-time responsiveness, we propose OLLA, an LLM-driven online aggregation framework that accelerates semantic processing within relational queries. In contrast to batch-processing systems that yield results only after the entire dataset is processed, our approach incrementally transforms text into a structured data stream and applies online aggregation to provide progressive output. To enhance our online aggregation process, we introduce a semantic stratified sampling approach that improves data selection and expedites convergence to the ground truth. Evaluations show that OLLA reaches 1% accuracy error bound compared with labeled ground truth using less than 4% of the full-data time. It achieves speedups ranging from 1.6$\\times$ to 38$\\times$ across diverse domains, measured by comparing the time to reach a 5% error bound with that of full-data time. We release our code at https://github.com/olla-project/llm-online-agg.git.",
+    "code_links": [
+      "https://github.com/olla-project/llm-online-agg"
+    ],
+    "comment": "DASFAA 2026"
+  },
+  {
+    "title": "Dial: A Knowledge-Grounded Dialect-Specific NL2SQL System",
+    "authors": "Xiang Zhang, Hongming Xu, Le Zhou, Wei Zhou, Xuanhe Zhou, Guoliang Li, Yuyu Luo, Changdong Liu, Guorun Chen, Jiang Liao, Fan Wu",
+    "published": "2026-03-08",
+    "arxiv_id": "2603.07449v1",
+    "url": "http://arxiv.org/abs/2603.07449v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.07449v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Enterprises commonly deploy heterogeneous database systems, each of which owns a distinct SQL dialect with different syntax rules, built-in functions, and execution constraints. However, most existing NL2SQL methods assume a single dialect (e.g., SQLite) and struggle to produce queries that are both semantically correct and executable on target engines. Prompt-based approaches tightly couple intent reasoning with dialect syntax, rule-based translators often degrade native operators into generic constructs, and multi-dialect fine-tuning suffers from cross-dialect interference.\n  In this paper, we present Dial, a knowledge-grounded framework for dialect-specific NL2SQL. Dial introduces: (1) a Dialect-Aware Logical Query Planning module that converts natural language into a dialect-aware logical query plan via operator-level intent decomposition and divergence-aware specification; (2) HINT-KB, a hierarchical intent-aware knowledge base that organizes dialect knowledge into (i) a canonical syntax reference, (ii) a declarative function repository, and (iii) a procedural constraint repository; and (3) an execution-driven debugging and semantic verification loop that separates syntactic recovery from logic auditing to prevent semantic drift. We construct DS-NL2SQL, a benchmark covering six major database systems with 2,218 dialect-specific test cases. Experimental results show that Dial consistently improves translation accuracy by 10.25% and dialect feature coverage by 15.77% over state-of-the-art baselines. The code is at https://github.com/weAIDB/Dial.",
+    "code_links": [
+      "https://github.com/weAIDB/Dial"
+    ],
+    "comment": null
+  },
+  {
+    "title": "The Fifth Graph Normal Form (5GNF): A Trait-Based Framework for Metadata Normalization in Property Graphs",
+    "authors": "Yahya Sa'd, Vojtech Merunka, Renzo Angles",
+    "published": "2026-03-05",
+    "arxiv_id": "2603.06703v1",
+    "url": "http://arxiv.org/abs/2603.06703v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.06703v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Graph databases are widely used in systems that manage rich metadata, yet current modelling practices often embed descriptive attributes directly in nodes, leading to redundancy and inconsistent semantics. This paper introduces the Fifth Graph Normal Form (5GNF), a trait-based normalization framework for property graphs that represents recurring metadata as canonical Trait Nodes connected through HAS_TRAIT relationships. We formalize trait functional dependencies (tFDs) and present the TraitExtraction5GNF algorithm for identifying and extracting reusable traits. The approach is implemented in Neo4j and evaluated using the widely used Northwind dataset, which contains substantial duplication in location and shipping metadata. The normalization process externalizes recurring metadata into shared traits, removes thousands of redundant attribute instances, reduces schema complexity, and simplifies analytical queries. Experimental results indicate that the normalized model maintains competitive performance while improving semantic clarity and reusability of metadata structures. These findings suggest that 5GNF provides a practical normalization framework for property graph schemas and contributes toward more consistent and maintainable graph data models.",
+    "code_links": [
+      "https://github.com/yahyazuh/5GNF-normalization-example"
+    ],
+    "comment": "Accepted at ENASE 2026. 14 pages, 6 figures. Implementation and experimental scripts available at https://github.com/yahyazuh/5GNF-normalization-example"
+  },
+  {
+    "title": "Relational In-Context Learning via Synthetic Pre-training with Structural Prior",
+    "authors": "Yanbo Wang, Jiaxuan You, Chuan Shi, Muhan Zhang",
+    "published": "2026-03-04",
+    "arxiv_id": "2603.03805v1",
+    "url": "http://arxiv.org/abs/2603.03805v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.03805v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Relational Databases (RDBs) are the backbone of modern business, yet they lack foundation models comparable to those in text or vision. A key obstacle is that high-quality RDBs are private, scarce and structurally heterogeneous, making internet-scale pre-training infeasible. To overcome this data scarcity, We introduce $\\textbf{RDB-PFN}$, the first relational foundation model trained purely via $\\textbf{synthetic data}$. Inspired by Prior-Data Fitted Networks (PFNs) where synthetic data generated from Structural Causal Models (SCMs) enables reasoning on single tables, we design a $\\textbf{Relational Prior Generator}$ to create an infinite stream of diverse RDBs from scratch. Pre-training on $\\textbf{over 2 million}$ synthetic single-table and relational tasks, RDB-PFN learns to adapt to any new database instantly via genuine $\\textbf{in-context learning}$. Experiments verify RDB-PFN achieves strong few-shot performance on 19 real-world relational prediction tasks, outperforming graph-based and single-table foundation-model baselines (given the same DFS-linearized inputs), while using a lightweight architecture and fast inference. The code is available at https://github.com/MuLabPKU/RDBPFN",
+    "code_links": [
+      "https://github.com/MuLabPKU/RDBPFN"
+    ],
+    "comment": null
+  },
+  {
+    "title": "The Science Data Lake: A Unified Open Infrastructure Integrating 293 Million Papers Across Eight Scholarly Sources with Embedding-Based Ontology Alignment",
+    "authors": "Jonas Wilinski",
+    "published": "2026-03-03",
+    "arxiv_id": "2603.03126v1",
+    "url": "http://arxiv.org/abs/2603.03126v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.03126v1",
+    "category": "databases",
+    "primary_category": "cs.DL",
+    "abstract": "Scholarly data are largely fragmented across siloed databases with divergent metadata and missing linkages among them. We present the Science Data Lake, a locally-deployable infrastructure built on DuckDB and simple Parquet files that unifies eight open sources - Semantic Scholar, OpenAlex, SciSciNet, Papers with Code, Retraction Watch, Reliance on Science, a preprint-to-published mapping, and Crossref - via DOI normalization while preserving source-level schemas. The resource comprises approximately 960GB of Parquet files spanning ~293 million uniquely identifiable papers across ~22 schemas and ~153 SQL views. An embedding-based ontology alignment using BGE-large sentence embeddings maps 4,516 OpenAlex topics to 13 scientific ontologies (~1.3 million terms), yielding 16,150 mappings covering 99.8% of topics ($\\geq 0.65$ threshold) with $F1 = 0.77$ at the recommended $\\geq 0.85$ operating point, outperforming TF-IDF, BM25, and Jaro-Winkler baselines on a 300-pair gold-standard evaluation. We validate through 10 automated checks, cross-source citation agreement analysis (pairwise Pearson $r = 0.76$ - $0.87$), and stratified manual annotation. Four vignettes demonstrate cross-source analyses infeasible with any single database. The resource is open source, deployable on a single drive or queryable remotely via HuggingFace, and includes structured documentation suitable for large language model (LLM) based research agents.",
+    "code_links": [
+      "https://github.com/J0nasW/science-datalake"
+    ],
+    "comment": "18 pages, 8 figures, 7 tables. Dataset DOI: 10.57967/hf/7850. Code: https://github.com/J0nasW/science-datalake"
+  },
+  {
+    "title": "V3DB: Audit-on-Demand Zero-Knowledge Proofs for Verifiable Vector Search over Committed Snapshots",
+    "authors": "Zipeng Qiu, Wenjie Qu, Jiaheng Zhang, Binhang Yuan",
+    "published": "2026-03-03",
+    "arxiv_id": "2603.03065v2",
+    "url": "http://arxiv.org/abs/2603.03065v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.03065v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Dense retrieval services increasingly underpin semantic search, recommendation, and retrieval-augmented generation, yet clients typically receive only a top-$k$ list with no auditable evidence of how it was produced. We present V3DB, a verifiable, versioned vector-search service that enables audit-on-demand correctness checks for approximate nearest-neighbour (ANN) retrieval executed by a potentially untrusted service provider. V3DB commits to each corpus snapshot and standardises an IVF-PQ search pipeline into a fixed-shape, five-step query semantics. Given a public snapshot commitment and a query embedding, the service returns the top-$k$ payloads and, when challenged, produces a succinct zero-knowledge proof that the output is exactly the result of executing the published semantics on the committed snapshot -- without revealing the embedding corpus or private index contents. To make proving practical, V3DB avoids costly in-circuit sorting and random access by combining multiset equality/inclusion checks with lightweight boundary conditions. Our prototype implementation based on Plonky2 achieves up to $22\\times$ faster proving and up to $40\\%$ lower peak memory consumption than the circuit-only baseline, with millisecond-level verification time.\n  Github Repo at https://github.com/TabibitoQZP/zk-IVF-PQ.",
+    "code_links": [
+      "https://github.com/TabibitoQZP/zk-IVF-PQ"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Large Language Model-Enhanced Relational Operators: Taxonomy, Benchmark, and Analysis",
+    "authors": "Yunxiang Su, Tianjing Zeng, Zhongjun Ding, Yin Lin, Rong Zhu, Zhewei Wei, Bolin Ding, Jingren Zhou",
+    "published": "2026-03-03",
+    "arxiv_id": "2603.02537v1",
+    "url": "http://arxiv.org/abs/2603.02537v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.02537v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "With the development of large language models (LLMs), numerous studies integrate LLMs through operator-like components to enhance relational data processing tasks, e.g., filters with semantic predicates, knowledge-augmented table imputation, reasoning-driven entity matching and more challenging semantic query processing. These components invoke LLMs while preserving a relational input/output interface, which we refer to as LLM-Enhanced Relational Operators (LROs). From an operator perspective, unfortunately, these existing LROs suffer from fragmented definition, various implementation strategies and inadequate evaluation benchmarks. To this end, in this paper, we first establish a unified LRO taxonomy to align existing LROs, and categorize them into: Select, Match, Impute, Cluster and Order, along with their operands and implementation variants. Second, we design LROBench, a comprehensive benchmark featuring 290 single-LRO queries and 60 multi-LRO queries, spanning 27 databases across more than 10 domains. LROBench covers all operating logics and operand granularities in its single-LRO workload, and provides challenging multi-LRO queries stratified by query complexity. Based on these, we evaluate individual LROs under various implementations, deriving practical insights into LRO design choices and summarizing our empirical best practices. We further compare the end-to-end performance of existing multi-LRO systems against an LRO suite instantiated with these best practices, in order to investigate how to design an effective LRO set for multi-LRO systems targeting complex semantic queries. Last, to facilitate future work, we outline promising future directions and open-source all benchmark data and evaluation code, available at https://github.com/LROBench/LROBench/.",
+    "code_links": [
+      "https://github.com/LROBench/LROBench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Approximate Nearest Neighbor Search for Modern AI: A Projection-Augmented Graph Approach",
+    "authors": "Kejing Lu, Zhenpeng Pan, Jianbin Qin, Yoshiharu Ishikawa, Chuan Xiao",
+    "published": "2026-03-01",
+    "arxiv_id": "2603.06660v1",
+    "url": "http://arxiv.org/abs/2603.06660v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.06660v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "Approximate Nearest Neighbor Search (ANNS) is fundamental to modern AI applications. Most existing solutions optimize query efficiency but fail to align with the practical requirements of modern workloads. In this paper, we outline six critical demands of modern AI applications: high query efficiency, fast indexing, low memory footprint, scalability to high dimensionality, robustness across varying retrieval sizes, and support for online insertions. To satisfy all these demands, we introduce Projection-Augmented Graph (PAG), a new ANNS framework that integrates projection techniques into a graph index. PAG reduces unnecessary exact distance computations through asymmetric comparisons between exact and approximate distances as guided by projection-based statistical tests. Three key components are designed and unified to the graph index to optimize indexing and searching. Experiments on six modern datasets demonstrate that PAG consistently achieves superior query per second (QPS)-recall performance -- up to 5x faster than HNSW -- while offering fast indexing speed and moderate memory footprint. PAG remains robust as dimensionality and retrieval size increase and naturally supports online insertions.",
+    "code_links": [
+      "https://github.com/KejingLu-810/PAG"
+    ],
+    "comment": "Source code is available at https://github.com/KejingLu-810/PAG/"
+  },
+  {
+    "title": "Towards Neural Graph Data Management",
+    "authors": "Yufei Li, Yisen Gao, Jiaxin Bai, Jiaxuan Xiong, Haoyu Huang, Zhongwei Xie, Hong Ting Tsang, Yangqiu Song",
+    "published": "2026-02-27",
+    "arxiv_id": "2603.05529v1",
+    "url": "http://arxiv.org/abs/2603.05529v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.05529v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "While AI systems have made remarkable progress in processing unstructured text, structured data such as graphs stored in databases, continues to grow rapidly yet remains difficult for neural models to effectively utilize. We introduce NGDBench, a unified benchmark for evaluating neural graph database capabilities across five diverse domains, including finance, medicine, and AI agent tooling. Unlike prior benchmarks limited to elementary logical operations, NGDBench supports the full Cypher query language, enabling complex pattern matching, variable-length paths, and numerical aggregations, while incorporating realistic noise injection and dynamic data management operations. Our evaluation of state-of-the-art LLMs and RAG methods reveals significant limitations in structured reasoning, noise robustness, and analytical precision, establishing NGDBench as a critical testbed for advancing neural graph data management. Our code and data are available at https://github.com/HKUST-KnowComp/NGDBench.",
+    "code_links": [
+      "https://github.com/HKUST-KnowComp/NGDBench"
+    ],
+    "comment": "https://github.com/HKUST-KnowComp/NGDBench"
+  },
+  {
+    "title": "SPARTA: Scalable and Principled Benchmark of Tree-Structured Multi-hop QA over Text and Tables",
+    "authors": "Sungho Park, Jueun Kim, Wook-Shin Han",
+    "published": "2026-02-26",
+    "arxiv_id": "2602.23286v1",
+    "url": "http://arxiv.org/abs/2602.23286v1",
+    "pdf_url": "https://arxiv.org/pdf/2602.23286v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Real-world Table-Text question answering (QA) tasks require models that can reason across long text and source tables, traversing multiple hops and executing complex operations such as aggregation. Yet existing benchmarks are small, manually curated - and therefore error-prone - and contain shallow questions that seldom demand more than two hops or invoke aggregations, grouping, or other advanced analytical operations expressible in natural-language queries. We present SPARTA, an end-to-end construction framework that automatically generates large-scale Table-Text QA benchmarks with lightweight human validation, requiring only one quarter of the annotation time of HybridQA. The framework first constructs a reference fact database by enriching each source table with grounding tables whose tuples are atomic facts automatically extracted from the accompanying unstructured passages, then synthesizes nested queries whose number of nested predicates matches the desired hop count. To ensure that every SQL statement is executable and that its verbalization yields a fluent, human-sounding question, we propose two novel techniques: provenance-based refinement, which rewrites any syntactically valid query that returns a non-empty result, and realistic-structure enforcement, which confines generation to post-order traversals of the query graph. The resulting pipeline produces thousands of high-fidelity question-answer pairs covering aggregations, grouping, and deep multi-hop reasoning across text and tables. On SPARTA, state-of-the-art models that reach over 70 F1 on HybridQA or over 50 F1 on OTT-QA drop by more than 30 F1 points, exposing fundamental weaknesses in current cross-modal reasoning. Our benchmark, construction code, and baseline models are available at https://github.com/pshlego/SPARTA/tree/main.",
+    "code_links": [
+      "https://github.com/pshlego/SPARTA"
+    ],
+    "comment": "10 pages, 5 figures. Published as a conference paper at ICLR 2026. Project page: https://sparta-projectpage.github.io/"
+  }
+]
