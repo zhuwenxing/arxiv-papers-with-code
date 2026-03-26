@@ -1,0 +1,348 @@
+[
+  {
+    "title": "OneSearch-V2: The Latent Reasoning Enhanced Self-distillation Generative Search Framework",
+    "authors": "Ben Chen, Siyuan Wang, Yufei Ma, Zihan Liang, Xuxin Zhang, Yue Lv, Ying Yang, Huangyu Dai, Lingtao Mao, Tong Zhao, Zhipeng Qian, Xinyu Sun, Zhixin Zhai, Yang Zhao, Bochao Liu, Jingshan Lv, Xiao Liang, Hui Kong, Jing Chen, Han Li, Chenyi Lei, Wenwu Ou, Kun Gai",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.24422v1",
+    "url": "http://arxiv.org/abs/2603.24422v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24422v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative Retrieval (GR) has emerged as a promising paradigm for modern search systems. Compared to multi-stage cascaded architecture, it offers advantages such as end-to-end joint optimization and high computational efficiency. OneSearch, as a representative industrial-scale deployed generative search framework, has brought significant commercial and operational benefits. However, its inadequate understanding of complex queries, inefficient exploitation of latent user intents, and overfitting to narrow historical preferences have limited its further performance improvement. To address these challenges, we propose \\textbf{OneSearch-V2}, a latent reasoning enhanced self-distillation generative search framework. It contains three key innovations: (1) a thought-augmented complex query understanding module, which enables deep query understanding and overcomes the shallow semantic matching limitations of direct inference; (2) a reasoning-internalized self-distillation training pipeline, which uncovers users' potential yet precise e-commerce intentions beyond log-fitting through implicit in-context learning; (3) a behavior preference alignment optimization system, which mitigates reward hacking arising from the single conversion metric, and addresses personal preference via direct user feedback. Extensive offline evaluations demonstrate OneSearch-V2's strong query recognition and user profiling capabilities. Online A/B tests further validate its business effectiveness, yielding +3.98\\% item CTR, +3.05\\% buyer conversion rate, and +2.11\\% order volume. Manual evaluation further confirms gains in search experience quality, with +1.65\\% in page good rate and +1.37\\% in query-item relevance. More importantly, OneSearch-V2 effectively mitigates common search system issues such as information bubbles and long-tail sparsity, without incurring additional inference costs or serving latency.",
+    "code_links": [
+      "https://github.com/benchen4395/onesearch-family"
+    ],
+    "comment": "Key codes are available at https://github.com/benchen4395/onesearch-family. Feel free to contact benchen4395@gmail.com"
+  },
+  {
+    "title": "Boosting Document Parsing Efficiency and Performance with Coarse-to-Fine Visual Processing",
+    "authors": "Cheng Cui, Ting Sun, Suyin Liang, Tingquan Gao, Zelun Zhang, Jiaxuan Liu, Xueqing Wang, Changda Zhou, Hongen Liu, Manhui Lin, Yue Zhang, Yubo Zhang, Jing Zhang, Jun Zhang, Xing Wei, Yi Liu, Dianhai Yu, Yanjun Ma",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.24326v1",
+    "url": "http://arxiv.org/abs/2603.24326v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24326v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Document parsing is a fine-grained task where image resolution significantly impacts performance. While advanced research leveraging vision-language models benefits from high-resolution input to boost model performance, this often leads to a quadratic increase in the number of vision tokens and significantly raises computational costs. We attribute this inefficiency to substantial visual regions redundancy in document images, like background. To tackle this, we propose PaddleOCR-VL, a novel coarse-to-fine architecture that focuses on semantically relevant regions while suppressing redundant ones, thereby improving both efficiency and performance. Specifically, we introduce a lightweight Valid Region Focus Module (VRFM) which leverages localization and contextual relationship prediction capabilities to identify valid vision tokens. Subsequently, we design and train a compact yet powerful 0.9B vision-language model (PaddleOCR-VL-0.9B) to perform detailed recognition, guided by VRFM outputs to avoid direct processing of the entire large image. Extensive experiments demonstrate that PaddleOCR-VL achieves state-of-the-art performance in both page-level parsing and element-level recognition. It significantly outperforms existing solutions, exhibits strong competitiveness against top-tier VLMs, and delivers fast inference while utilizing substantially fewer vision tokens and parameters, highlighting the effectiveness of targeted coarse-to-fine parsing for accurate and efficient document understanding. The source code and models are publicly available at https://github.com/PaddlePaddle/PaddleOCR.",
+    "code_links": [
+      "https://github.com/PaddlePaddle/PaddleOCR"
+    ],
+    "comment": "Accepted by CVPR2026"
+  },
+  {
+    "title": "Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching",
+    "authors": "Anjun Gao, Zhenglin Wan, Pingfu Chao, Shunyu Yao",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.24054v1",
+    "url": "http://arxiv.org/abs/2603.24054v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24054v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DB",
+    "abstract": "The integration of GNSS data into portable devices has led to the generation of vast amounts of trajectory data, which is crucial for applications such as map-matching. To tackle the limitations of rule-based methods, recent works in deep learning for trajectory-related tasks occur. However, existing models remain challenging due to issues such as the difficulty of large-scale data labeling, ineffective modeling of spatial-temporal relationships, and discrepancies between training and test data distributions. To tackle these challenges, we propose HSTGMatch, a novel model designed to enhance map-matching performance. Our approach involves a two-stage process: hierarchical self-supervised learning and spatial-temporal supervised learning. We introduce a hierarchical trajectory representation, leveraging both grid cells and geographic tuples to capture moving patterns effectively. The model constructs an Adaptive Trajectory Adjacency Graph to dynamically capture spatial relationships, optimizing GATs for improved efficiency. Furthermore, we incorporate a Spatial-Temporal Factor to extract relevant features and employ a decay coefficient to address variations in trajectory length. Our extensive experiments demonstrate the model's superior performance, module effectiveness, and robustness, providing a promising solution for overcoming the existing limitations in map-matching applications. The source code of HSTGMatch is publicly available on GitHub at https://github.com/Nerooo-g/HSTGMatch.",
+    "code_links": [
+      "https://github.com/Nerooo-g/HSTGMatch"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Grounding Arabic LLMs in the Doha Historical Dictionary: Retrieval-Augmented Understanding of Quran and Hadith",
+    "authors": "Somaya Eltanbouly, Samer Rashwani",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.23972v1",
+    "url": "http://arxiv.org/abs/2603.23972v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.23972v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models (LLMs) have achieved remarkable progress in many language tasks, yet they continue to struggle with complex historical and religious Arabic texts such as the Quran and Hadith. To address this limitation, we develop a retrieval-augmented generation (RAG) framework grounded in diachronic lexicographic knowledge. Unlike prior RAG systems that rely on general-purpose corpora, our approach retrieves evidence from the Doha Historical Dictionary of Arabic (DHDA), a large-scale resource documenting the historical development of Arabic vocabulary. The proposed pipeline combines hybrid retrieval with an intent-based routing mechanism to provide LLMs with precise, contextually relevant historical information. Our experiments show that this approach improves the accuracy of Arabic-native LLMs, including Fanar and ALLaM, to over 85\\%, substantially reducing the performance gap with Gemini, a proprietary large-scale model. Gemini also serves as an LLM-as-a-judge system for automatic evaluation in our experiments. The automated judgments were verified through human evaluation, demonstrating high agreement (kappa = 0.87). An error analysis further highlights key linguistic challenges, including diacritics and compound expressions. These findings demonstrate the value of integrating diachronic lexicographic resources into retrieval-augmented generation frameworks to enhance Arabic language understanding, particularly for historical and religious texts. The code and resources are publicly available at: https://github.com/somayaeltanbouly/Doha-Dictionary-RAG.",
+    "code_links": [
+      "https://github.com/somayaeltanbouly/Doha-Dictionary-RAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "flexvec: SQL Vector Retrieval with Programmatic Embedding Modulation",
+    "authors": "Damian Delmas",
+    "published": "2026-03-23",
+    "arxiv_id": "2603.22587v1",
+    "url": "http://arxiv.org/abs/2603.22587v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.22587v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "As AI agents become the primary consumers of retrieval APIs, there is an opportunity to expose more of the retrieval pipeline to the caller. flexvec is a retrieval kernel that exposes the embedding matrix and score array as a programmable surface, allowing arithmetic operations on both before selection. We refer to composing operations on this surface at query time as Programmatic Embedding Modulation (PEM). This paper describes a set of such operations and integrates them into a SQL interface via a query materializer that facilitates composable query primitives. On a production corpus of 240,000 chunks, three composed modulations execute in 19 ms end-to-end on a desktop CPU without approximate indexing. At one million chunks, the same operations execute in 82 ms.",
+    "code_links": [
+      "https://github.com/damiandelmas/flexvec"
+    ],
+    "comment": "15 pages, 1 figure, 7 tables, 4 appendices. Code available at https://github.com/damiandelmas/flexvec"
+  },
+  {
+    "title": "User Preference Modeling for Conversational LLM Agents: Weak Rewards from Retrieval-Augmented Interaction",
+    "authors": "Yuren Hao, Shuhaib Mehri, ChengXiang Zhai, Dilek Hakkani-Tür",
+    "published": "2026-03-21",
+    "arxiv_id": "2603.20939v1",
+    "url": "http://arxiv.org/abs/2603.20939v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20939v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models are increasingly used as personal assistants, yet most lack a persistent user model, forcing users to repeatedly restate preferences across sessions. We propose Vector-Adapted Retrieval Scoring (VARS), a pipeline-agnostic, frozen-backbone framework that represents each user with long-term and short-term vectors in a shared preference space and uses these vectors to bias retrieval scoring over structured preference memory. The vectors are updated online from weak scalar rewards from users' feedback, enabling personalization without per-user fine-tuning. We evaluate on \\textsc{MultiSessionCollab}, an online multi-session collaboration benchmark with rich user preference profiles, across math and code tasks. Under frozen backbones, the main benefit of user-aware retrieval is improved interaction efficiency rather than large gains in raw task accuracy: our full VARS agent achieves the strongest overall performance, matches a strong Reflection baseline in task success, and reduces timeout rate and user effort. The learned long-term vectors also align with cross-user preference overlap, while short-term vectors capture session-specific adaptation, supporting the interpretability of the dual-vector design. Code, model, and data are available at https://github.com/YurenHao0426/VARS.",
+    "code_links": [
+      "https://github.com/YurenHao0426/VARS"
+    ],
+    "comment": "21 pages including appendices"
+  },
+  {
+    "title": "PEARL: Personalized Streaming Video Understanding Model",
+    "authors": "Yuanhong Zheng, Ruichuan An, Xiaopeng Lin, Yuxing Liu, Sihan Yang, Huanyu Zhang, Haodong Li, Qintong Zhang, Renrui Zhang, Guopeng Li, Yifan Zhang, Yuheng Li, Wentao Zhang",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.20422v1",
+    "url": "http://arxiv.org/abs/2603.20422v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20422v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Human cognition of new concepts is inherently a streaming process: we continuously recognize new objects or identities and update our memories over time. However, current multimodal personalization methods are largely limited to static images or offline videos. This disconnects continuous visual input from instant real-world feedback, limiting their ability to provide the real-time, interactive personalized responses essential for future AI assistants. To bridge this gap, we first propose and formally define the novel task of Personalized Streaming Video Understanding (PSVU). To facilitate research in this new direction, we introduce PEARL-Bench, the first comprehensive benchmark designed specifically to evaluate this challenging setting. It evaluates a model's ability to respond to personalized concepts at exact timestamps under two modes: (1) Frame-level, focusing on a specific person or object in discrete frames, and (2) a novel Video-level, focusing on personalized actions unfolding across continuous frames. PEARL-Bench comprises 132 unique videos and 2,173 fine-grained annotations with precise timestamps. Concept diversity and annotation quality are strictly ensured through a combined pipeline of automated generation and human verification. To tackle this challenging new setting, we further propose PEARL, a plug-and-play, training-free strategy that serves as a strong baseline. Extensive evaluations across 8 offline and online models demonstrate that PEARL achieves state-of-the-art performance. Notably, it brings consistent PSVU improvements when applied to 3 distinct architectures, proving to be a highly effective and robust strategy. We hope this work advances vision-language model (VLM) personalization and inspires further research into streaming personalized AI assistants. Code is available at https://github.com/Yuanhong-Zheng/PEARL.",
+    "code_links": [
+      "https://github.com/Yuanhong-Zheng/PEARL"
+    ],
+    "comment": "Arxiv Submission"
+  },
+  {
+    "title": "RouterKGQA: Specialized--General Model Routing for Constraint-Aware Knowledge Graph Question Answering",
+    "authors": "Bo Yuan, Hexuan Deng, Xuebo Liu, Min Zhang",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.20017v1",
+    "url": "http://arxiv.org/abs/2603.20017v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20017v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Knowledge graph question answering (KGQA) is a promising approach for mitigating LLM hallucination by grounding reasoning in structured and verifiable knowledge graphs. Existing approaches fall into two paradigms: retrieval-based methods utilize small specialized models, which are efficient but often produce unreachable paths and miss implicit constraints, while agent-based methods utilize large general models, which achieve stronger structural grounding at substantially higher cost. We propose RouterKGQA, a framework for specialized--general model collaboration, in which a specialized model generates reasoning paths and a general model performs KG-guided repair only when needed, improving performance at minimal cost. We further equip the specialized with constraint-aware answer filtering, which reduces redundant answers. In addition, we design a more efficient general agent workflow, further lowering inference cost. Experimental results show that RouterKGQA outperforms the previous best by 3.57 points in F1 and 0.49 points in Hits@1 on average across benchmarks, while requiring only 1.15 average LLM calls per question. Codes and models are available at https://github.com/Oldcircle/RouterKGQA.",
+    "code_links": [
+      "https://github.com/Oldcircle/RouterKGQA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "A Super Fast K-means for Indexing Vector Embeddings",
+    "authors": "Leonardo Kuffo, Sven Hepkema, Peter Boncz",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.20009v1",
+    "url": "http://arxiv.org/abs/2603.20009v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20009v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "We present SuperKMeans: a k-means variant designed for clustering collections of high-dimensional vector embeddings. SuperKMeans' clustering is up to 7x faster than FAISS and Scikit-Learn on modern CPUs and up to 4x faster than cuVS on GPUs (Figure 1), while maintaining the quality of the resulting centroids for vector similarity search tasks. SuperKMeans acceleration comes from reducing data-access and compute overhead by reliably and efficiently pruning dimensions that are not needed to assign a vector to a centroid. Furthermore, we present Early Termination by Recall, a novel mechanism that early-terminates k-means when the quality of the centroids for retrieval tasks stops improving across iterations. In practice, this further reduces runtimes without compromising retrieval quality. We open-source our implementation at https://github.com/cwida/SuperKMeans",
+    "code_links": [
+      "https://github.com/cwida/SuperKMeans"
+    ],
+    "comment": null
+  },
+  {
+    "title": "EvidenceRL: Reinforcing Evidence Consistency for Trustworthy Language Models",
+    "authors": "J. Ben Tamo, Yuxing Lu, Benoit L. Marteau, Micky C. Nnamdi, May D. Wang",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.19532v1",
+    "url": "http://arxiv.org/abs/2603.19532v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.19532v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large Language Models (LLMs) are fluent but prone to hallucinations, producing answers that appear plausible yet are unsupported by available evidence. This failure is especially problematic in high-stakes domains where decisions must be justified by verifiable information. We introduce \\textbf{EvidenceRL}, a reinforcement learning framework that enforces evidence adherence during training. EvidenceRL scores candidate responses for grounding (entailment with retrieved evidence and context) and correctness (agreement with reference answers) and optimizes the generator using Group Relative Policy Optimization (GRPO). We evaluate across two high-stakes domains, cardiac diagnosis and legal reasoning, where EvidenceRL consistently improves evidence grounding and faithfulness without sacrificing task accuracy. On cardiac diagnosis, F1@3 increases from 37.0 to 54.5 on Llama-3.2-3B while grounding ($G_{\\max}@3$) rises from 47.6 to 78.2; hallucinations drop nearly 5$\\times$ and evidence-supported diagnoses increase from 31.8\\% to 61.6\\%. On legal reasoning, EvidenceRL raises Faithfulness from 32.8\\% to 67.6\\% on Llama-3.1-8B, demonstrating consistent behavioral change across domains. Our code is open-sourced at https://github.com/Wizaaard/EvidenceRL.git.",
+    "code_links": [
+      "https://github.com/Wizaaard/EvidenceRL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Benchmarking PDF Parsers on Table Extraction with LLM-based Semantic Evaluation",
+    "authors": "Pius Horn, Janis Keuper",
+    "published": "2026-03-19",
+    "arxiv_id": "2603.18652v1",
+    "url": "http://arxiv.org/abs/2603.18652v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.18652v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Reliably extracting tables from PDFs is essential for large-scale scientific data mining and knowledge base construction, yet existing evaluation approaches rely on rule-based metrics that fail to capture semantic equivalence of table content. We present a benchmarking framework based on synthetically generated PDFs with precise LaTeX ground truth, using tables sourced from arXiv to ensure realistic complexity and diversity. As our central methodological contribution, we apply LLM-as-a-judge for semantic table evaluation, integrated into a matching pipeline that accommodates inconsistencies in parser outputs. Through a human validation study comprising over 1,500 quality judgments on extracted table pairs, we show that LLM-based evaluation achieves substantially higher correlation with human judgment (Pearson r=0.93) compared to Tree Edit Distance-based Similarity (TEDS, r=0.68) and Grid Table Similarity (GriTS, r=0.70). Evaluating 21 contemporary PDF parsers across 100 synthetic documents containing 451 tables reveals significant performance disparities. Our results offer practical guidance for selecting parsers for tabular data extraction and establish a reproducible, scalable evaluation methodology for this critical task.\n  Code and data: https://github.com/phorn1/pdf-parse-bench Metric study and human evaluation: https://github.com/phorn1/table-metric-study",
+    "code_links": [
+      "https://github.com/phorn1/pdf-parse-bench",
+      "https://github.com/phorn1/table-metric-study"
+    ],
+    "comment": "Submitted to ICDAR 2026"
+  },
+  {
+    "title": "From Topic to Transition Structure: Unsupervised Concept Discovery at Corpus Scale via Predictive Associative Memory",
+    "authors": "Jason Dury",
+    "published": "2026-03-19",
+    "arxiv_id": "2603.18420v1",
+    "url": "http://arxiv.org/abs/2603.18420v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.18420v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Embedding models group text by semantic content, what text is about. We show that temporal co-occurrence within texts discovers a different kind of structure: recurrent transition-structure concepts or what text does. We train a 29.4M-parameter contrastive model on 373 million co-occurrence pairs from 9,766 Project Gutenberg texts (24.96 million passages), mapping pre-trained embeddings into an association space where passages with similar transition structure cluster together. Under capacity constraint (42.75% accuracy), the model must compress across recurring patterns rather than memorise individual co-occurrences. Clustering at six granularities (k=50 to k=2,000) produces a multi-resolution concept map; from broad modes like \"direct confrontation\" and \"lyrical meditation\" to precise registers and scene templates like \"sailor dialect\" and \"courtroom cross-examination.\" At k=100, clusters average 4,508 books each (of 9,766), confirming corpus-wide patterns. Direct comparison with embedding-similarity clustering shows that raw embeddings group by topic while association-space clusters group by function, register, and literary tradition. Unseen novels are assigned to existing clusters without retraining; the association model concentrates each novel into a selective subset of coherent clusters, while raw embedding assignment saturates nearly all clusters. Validation controls address positional, length, and book-concentration confounds. The method extends Predictive Associative Memory (PAM, arXiv:2602.11322) from episodic recall to concept formation: where PAM recalls specific associations, multi-epoch contrastive training under compression extracts structural patterns that transfer to unseen texts, the same framework producing qualitatively different behaviour in a different regime.",
+    "code_links": [
+      "https://github.com/EridosAI/PAM-Concept-Discovery"
+    ],
+    "comment": "22 pages, 5 figures. Code and demo: https://github.com/EridosAI/PAM-Concept-Discovery"
+  },
+  {
+    "title": "A Contextual Help Browser Extension to Assist Digital Illiterate Internet Users",
+    "authors": "Christos Koutsiaris",
+    "published": "2026-03-18",
+    "arxiv_id": "2603.17592v1",
+    "url": "http://arxiv.org/abs/2603.17592v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.17592v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "This paper describes the design, implementation, and evaluation of a browser extension that provides contextual help to users who hover over technological acronyms and abbreviations on web pages. The extension combines a curated technical dictionary with OpenAI's large language model (LLM) to deliver on-demand definitions through lightweight tooltip overlays. A dual-layer artificial intelligence (AI) pipeline, comprising Google Cloud's Natural Language Processing (NLP) taxonomy API and OpenAI's ChatGPT, classifies each visited page as technology-related before activating the tooltip logic, thereby reducing false-positive detections. A mixed-methods study with 25 participants evaluated the tool's effect on reading comprehension and information-retrieval time among users with low to intermediate digital literacy. Results show that 92% of participants reported improved understanding of technical terms, 96% confirmed time savings over manual web searches, and all participants found the tooltips non-disruptive. Dictionary-based definitions were appended in an average of 2135 ms, compared to 16429 ms for AI-generated definitions and a mean manual search time of 17200 ms per acronym. The work demonstrates a practical, real-time approach to bridging the digital literacy gap and points toward extending contextual help to other domains such as medicine, law, and finance.",
+    "code_links": [
+      "https://github.com/unseen1980/acro-helper"
+    ],
+    "comment": "9 pages, 5 figures, 2 tables; MSc dissertation reformatted as conference paper; extended version available at github.com/unseen1980/acro-helper"
+  },
+  {
+    "title": "From Isolated Scoring to Collaborative Ranking: A Comparison-Native Framework for LLM-Based Paper Evaluation",
+    "authors": "Pujun Zheng, Jiacheng Yao, Jinquan Zheng, Chenyang Gu, Guoxiu He, Jiawei Liu, Yong Huang, Tianrui Guo, Wei Lu",
+    "published": "2026-03-18",
+    "arxiv_id": "2603.17588v1",
+    "url": "http://arxiv.org/abs/2603.17588v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.17588v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large language models (LLMs) are currently applied to scientific paper evaluation by assigning an absolute score to each paper independently. However, since score scales vary across conferences, time periods, and evaluation criteria, models trained on absolute scores are prone to fitting narrow, context-specific rules rather than developing robust scholarly judgment. To overcome this limitation, we propose shifting paper evaluation from isolated scoring to collaborative ranking. In particular, we design \\textbf{C}omparison-\\textbf{N}ative framework for \\textbf{P}aper \\textbf{E}valuation (\\textbf{CNPE}), integrating comparison into both data construction and model learning. We first propose a graph-based similarity ranking algorithm to facilitate the sampling of more informative and discriminative paper pairs from a collection. We then enhance relative quality judgment through supervised fine-tuning and reinforcement learning with comparison-based rewards. At inference, the model performs pairwise comparisons over sampled paper pairs and aggregates these preference signals into a global relative quality ranking. Experimental results demonstrate that our framework achieves an average relative improvement of \\textbf{21.8\\%} over the strong baseline DeepReview-14B, while exhibiting robust generalization to five previously unseen datasets. \\href{https://github.com/ECNU-Text-Computing/ComparisonReview}{Code}.",
+    "code_links": [
+      "https://github.com/ECNU-Text-Computing/ComparisonReview"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching",
+    "authors": "Anjun Gao, Zhenglin Wan, Pingfu Chao, Shunyu Yao",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.24054v1",
+    "url": "http://arxiv.org/abs/2603.24054v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24054v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The integration of GNSS data into portable devices has led to the generation of vast amounts of trajectory data, which is crucial for applications such as map-matching. To tackle the limitations of rule-based methods, recent works in deep learning for trajectory-related tasks occur. However, existing models remain challenging due to issues such as the difficulty of large-scale data labeling, ineffective modeling of spatial-temporal relationships, and discrepancies between training and test data distributions. To tackle these challenges, we propose HSTGMatch, a novel model designed to enhance map-matching performance. Our approach involves a two-stage process: hierarchical self-supervised learning and spatial-temporal supervised learning. We introduce a hierarchical trajectory representation, leveraging both grid cells and geographic tuples to capture moving patterns effectively. The model constructs an Adaptive Trajectory Adjacency Graph to dynamically capture spatial relationships, optimizing GATs for improved efficiency. Furthermore, we incorporate a Spatial-Temporal Factor to extract relevant features and employ a decay coefficient to address variations in trajectory length. Our extensive experiments demonstrate the model's superior performance, module effectiveness, and robustness, providing a promising solution for overcoming the existing limitations in map-matching applications. The source code of HSTGMatch is publicly available on GitHub at https://github.com/Nerooo-g/HSTGMatch.",
+    "code_links": [
+      "https://github.com/Nerooo-g/HSTGMatch"
+    ],
+    "comment": null
+  },
+  {
+    "title": "flexvec: SQL Vector Retrieval with Programmatic Embedding Modulation",
+    "authors": "Damian Delmas",
+    "published": "2026-03-23",
+    "arxiv_id": "2603.22587v1",
+    "url": "http://arxiv.org/abs/2603.22587v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.22587v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "As AI agents become the primary consumers of retrieval APIs, there is an opportunity to expose more of the retrieval pipeline to the caller. flexvec is a retrieval kernel that exposes the embedding matrix and score array as a programmable surface, allowing arithmetic operations on both before selection. We refer to composing operations on this surface at query time as Programmatic Embedding Modulation (PEM). This paper describes a set of such operations and integrates them into a SQL interface via a query materializer that facilitates composable query primitives. On a production corpus of 240,000 chunks, three composed modulations execute in 19 ms end-to-end on a desktop CPU without approximate indexing. At one million chunks, the same operations execute in 82 ms.",
+    "code_links": [
+      "https://github.com/damiandelmas/flexvec"
+    ],
+    "comment": "15 pages, 1 figure, 7 tables, 4 appendices. Code available at https://github.com/damiandelmas/flexvec"
+  },
+  {
+    "title": "Can AI Agents Answer Your Data Questions? A Benchmark for Data Agents",
+    "authors": "Ruiying Ma, Shreya Shankar, Ruiqi Chen, Yiming Lin, Sepanta Zeighami, Rajoshi Ghosh, Abhinav Gupta, Anushrut Gupta, Tanmai Gopal, Aditya G. Parameswaran",
+    "published": "2026-03-21",
+    "arxiv_id": "2603.20576v1",
+    "url": "http://arxiv.org/abs/2603.20576v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20576v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Users across enterprises increasingly rely on AI agents to query their data through natural language. However, building reliable data agents remains difficult because real-world data is often fragmented across multiple heterogeneous database systems, with inconsistent references and information buried in unstructured text. Existing benchmarks only tackle individual pieces of this problem -- e.g., translating natural-language questions into SQL queries, answering questions over small tables provided in context -- but do not evaluate the full pipeline of integrating, transforming, and analyzing data across multiple database systems. To fill this gap, we present the Data Agent Benchmark (DAB), grounded in a formative study of enterprise data agent workloads across six industries. DAB comprises 54 queries across 12 datasets, 9 domains, and 4 database management systems. On DAB, the best frontier model (Gemini-3-Pro) achieves only 38% pass@1 accuracy. We benchmark five frontier LLMs, analyze their failure modes, and distill takeaways for future data agent development. Our benchmark and experiment code are published at github.com/ucbepic/DataAgentBench.",
+    "code_links": [
+      "https://github.com/ucbepic/DataAgentBench"
+    ],
+    "comment": "22 pages, 7 figures, 9 tables"
+  },
+  {
+    "title": "RouterKGQA: Specialized--General Model Routing for Constraint-Aware Knowledge Graph Question Answering",
+    "authors": "Bo Yuan, Hexuan Deng, Xuebo Liu, Min Zhang",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.20017v1",
+    "url": "http://arxiv.org/abs/2603.20017v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20017v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Knowledge graph question answering (KGQA) is a promising approach for mitigating LLM hallucination by grounding reasoning in structured and verifiable knowledge graphs. Existing approaches fall into two paradigms: retrieval-based methods utilize small specialized models, which are efficient but often produce unreachable paths and miss implicit constraints, while agent-based methods utilize large general models, which achieve stronger structural grounding at substantially higher cost. We propose RouterKGQA, a framework for specialized--general model collaboration, in which a specialized model generates reasoning paths and a general model performs KG-guided repair only when needed, improving performance at minimal cost. We further equip the specialized with constraint-aware answer filtering, which reduces redundant answers. In addition, we design a more efficient general agent workflow, further lowering inference cost. Experimental results show that RouterKGQA outperforms the previous best by 3.57 points in F1 and 0.49 points in Hits@1 on average across benchmarks, while requiring only 1.15 average LLM calls per question. Codes and models are available at https://github.com/Oldcircle/RouterKGQA.",
+    "code_links": [
+      "https://github.com/Oldcircle/RouterKGQA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "A Super Fast K-means for Indexing Vector Embeddings",
+    "authors": "Leonardo Kuffo, Sven Hepkema, Peter Boncz",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.20009v1",
+    "url": "http://arxiv.org/abs/2603.20009v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20009v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "We present SuperKMeans: a k-means variant designed for clustering collections of high-dimensional vector embeddings. SuperKMeans' clustering is up to 7x faster than FAISS and Scikit-Learn on modern CPUs and up to 4x faster than cuVS on GPUs (Figure 1), while maintaining the quality of the resulting centroids for vector similarity search tasks. SuperKMeans acceleration comes from reducing data-access and compute overhead by reliably and efficiently pruning dimensions that are not needed to assign a vector to a centroid. Furthermore, we present Early Termination by Recall, a novel mechanism that early-terminates k-means when the quality of the centroids for retrieval tasks stops improving across iterations. In practice, this further reduces runtimes without compromising retrieval quality. We open-source our implementation at https://github.com/cwida/SuperKMeans",
+    "code_links": [
+      "https://github.com/cwida/SuperKMeans"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DarkDriving: A Real-World Day and Night Aligned Dataset for Autonomous Driving in the Dark Environment",
+    "authors": "Wuqi Wang, Haochen Yang, Baolu Li, Jiaqi Sun, Xiangmo Zhao, Zhigang Xu, Qing Guo, Haigen Min, Tianyun Zhang, Hongkai Yu",
+    "published": "2026-03-18",
+    "arxiv_id": "2603.18067v2",
+    "url": "http://arxiv.org/abs/2603.18067v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.18067v2",
+    "category": "databases",
+    "primary_category": "cs.CV",
+    "abstract": "The low-light conditions are challenging to the vision-centric perception systems for autonomous driving in the dark environment. In this paper, we propose a new benchmark dataset (named DarkDriving) to investigate the low-light enhancement for autonomous driving. The existing real-world low-light enhancement benchmark datasets can be collected by controlling various exposures only in small-ranges and static scenes. The dark images of the current nighttime driving datasets do not have the precisely aligned daytime counterparts. The extreme difficulty to collect a real-world day and night aligned dataset in the dynamic driving scenes significantly limited the research in this area. With a proposed automatic day-night Trajectory Tracking based Pose Matching (TTPM) method in a large real-world closed driving test field (area: 69 acres), we collected the first real-world day and night aligned dataset for autonomous driving in the dark environment. The DarkDriving dataset has 9,538 day and night image pairs precisely aligned in location and spatial contents, whose alignment error is in just several centimeters. For each pair, we also manually label the object 2D bounding boxes. DarkDriving introduces four perception related tasks, including low-light enhancement, generalized low-light enhancement, and low-light enhancement for 2D detection and 3D detection of autonomous driving in the dark environment. The experimental results show that our DarkDriving dataset provides a comprehensive benchmark for evaluating low-light enhancement for autonomous driving and it can also be generalized to enhance dark images and promote detection in some other low-light driving environment, such as nuScenes.The code and dataset will be publicly available at https://github.com/DriveMindLab/DarkDriving-ICRA-2026.",
+    "code_links": [
+      "https://github.com/DriveMindLab/DarkDriving-ICRA-2026"
+    ],
+    "comment": "8 pages, 8 figures. Accepted to ICRA 2026"
+  },
+  {
+    "title": "Beyond Benchmark Islands: Toward Representative Trustworthiness Evaluation for Agentic AI",
+    "authors": "Jinhu Qi, Yifan Li, Minghao Zhao, Wentao Zhang, Zijian Zhang, Yaoman Li, Irwin King",
+    "published": "2026-03-16",
+    "arxiv_id": "2603.14987v1",
+    "url": "http://arxiv.org/abs/2603.14987v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.14987v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "As agentic AI systems move beyond static question answering into open-ended, tool-augmented, and multi-step real-world workflows, their increased authority poses greater risks of system misuse and operational failures. However, current evaluation practices remain fragmented, measuring isolated capabilities such as coding, hallucination, jailbreak resistance, or tool use in narrowly defined settings. We argue that the central limitation is not merely insufficient coverage of evaluation dimensions, but the lack of a principled notion of representativeness: an agent's trustworthiness should be assessed over a representative socio-technical scenario distribution rather than a collection of disconnected benchmark instances. To this end, we propose the Holographic Agent Assessment Framework (HAAF), a systematic evaluation paradigm that characterizes agent trustworthiness over a scenario manifold spanning task types, tool interfaces, interaction dynamics, social contexts, and risk levels. The framework integrates four complementary components: (i) static cognitive and policy analysis, (ii) interactive sandbox simulation, (iii) social-ethical alignment assessment, and (iv) a distribution-aware representative sampling engine that jointly optimizes coverage and risk sensitivity -- particularly for rare but high-consequence tail risks that conventional benchmarks systematically overlook. These components are connected through an iterative Trustworthy Optimization Factory. Through cycles of red-team probing and blue-team hardening, this paradigm progressively narrows the vulnerabilities to meet deployment standards, shifting agent evaluation from benchmark islands toward representative, real-world trustworthiness. Code and data for the illustrative instantiation are available at https://github.com/TonyQJH/haaf-pilot.",
+    "code_links": [
+      "https://github.com/TonyQJH/haaf-pilot"
+    ],
+    "comment": "6 pages, 1 figure. Submitted to KDD 2026 Blue Sky Track"
+  },
+  {
+    "title": "The Equivalence Theorem: First-Class Relationships for Structurally Complete Database Systems",
+    "authors": "Matthew Alford",
+    "published": "2026-03-13",
+    "arxiv_id": "2603.13603v1",
+    "url": "http://arxiv.org/abs/2603.13603v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.13603v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "We prove The Equivalence Theorem: structurally complete knowledge representation requires exactly four mutually entailing capabilities -- n-ary relationships with attributes, temporal validity, uncertainty quantification, and causal relationships between relationships -- collectively equivalent to treating relationships as first-class objects. Any system implementing one capability necessarily requires all four; any system missing one cannot achieve structural completeness. This result is constructive: we exhibit an Attributed Temporal Causal Hypergraph (ATCH) framework satisfying all four conditions simultaneously. The theorem yields a strict expressiveness hierarchy -- SQL < LPG < TypeDB < ATCH -- with witness queries that are structurally inexpressible at each lower level. We establish computational complexity bounds showing NP-completeness for general queries but polynomial-time tractability for practical query classes (acyclic patterns, bounded-depth causal chains, windowed temporal queries). As direct corollaries, we derive solutions to classical AI problems: the Frame Problem (persistence by default from temporal validity), conflict resolution (contradictions as unresolved metadata with hidden variable discovery), and common sense reasoning (defaults with causal inhibitors). A prototype PostgreSQL extension in C validates practical feasibility within the established complexity bounds.",
+    "code_links": [
+      "https://github.com/Network-Services-Group/equivalence-theorem-lean4"
+    ],
+    "comment": "35 pages, 2 figures, Lean 4 formalization at https://github.com/Network-Services-Group/equivalence-theorem-lean4"
+  },
+  {
+    "title": "PRMB: Benchmarking Reward Models in Long-Horizon CBT-based Counseling Dialogue",
+    "authors": "Yougen Zhou, Qin Chen, Ningning Zhou, Jie Zhou, Liang He",
+    "published": "2026-03-12",
+    "arxiv_id": "2603.11494v1",
+    "url": "http://arxiv.org/abs/2603.11494v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.11494v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Large language models (LLMs) hold potential for mental healthcare applications, particularly in cognitive behavioral therapy (CBT)-based counseling, where reward models play a critical role in aligning LLMs with preferred therapeutic behaviors. However, existing reward model evaluations often fail to capture alignment effectiveness in long-horizon interventions due to limited coverage of process-oriented datasets and misalignment between evaluation targets and psychological alignment objectives. To address these limitations, we present PRMB, a comprehensive benchmark tailored for evaluating reward models in multi-session CBT counseling. PRMB spans 6 sessions and 21 diverse negative scenarios, incorporating both pairwise and Best-of-N preference evaluations. We demonstrate a positive correlation between our benchmark and downstream counseling dialogue performance. Based on our benchmark, we conduct extensive analysis on the state-of-the-art reward models, revealing their generalization defects that were not discovered by previous benchmarks and highlighting the potential of generative reward models. Furthermore, we delve into examining the effectiveness of inference-time strategy for the evaluation of reward models and analyzing the impact factors of generative reward models. This work advances intelligent informatics for personalized healthcare by establishing a framework for reward model assessment in mental health dialogues. Evaluation code and datasets are publicly available at https://github.com/YouKenChaw/PRMB",
+    "code_links": [
+      "https://github.com/YouKenChaw/PRMB"
+    ],
+    "comment": null
+  }
+]
