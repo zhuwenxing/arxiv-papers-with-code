@@ -1,0 +1,302 @@
+[
+  {
+    "title": "User-Aware Conditional Generative Total Correlation Learning for Multi-Modal Recommendation",
+    "authors": "Jing Du, Zesheng Ye, Congbo Ma, Feng Liu, Flora. D. Salim",
+    "published": "2026-04-03",
+    "arxiv_id": "2604.03014v1",
+    "url": "http://arxiv.org/abs/2604.03014v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03014v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multi-modal recommendation (MMR) enriches item representations by introducing item content, e.g., visual and textual descriptions, to improve upon interaction-only recommenders. The success of MMR hinges on aligning these content modalities with user preferences derived from interaction data, yet dominant practices based on disentangling modality-invariant preference-driving signals from modality-specific preference-irrelevant noises are flawed. First, they assume a one-size-fits-all relevance of item content to user preferences for all users, which contradicts the user-conditional fact of preferences. Second, they optimize pairwise contrastive losses separately toward cross-modal alignment, systematically ignoring higher-order dependencies inherent when multiple content modalities jointly influence user choices. In this paper, we introduce GTC, a conditional Generative Total Correlation learning framework. We employ an interaction-guided diffusion model to perform user-aware content feature filtering, preserving only personalized features relevant to each individual user. Furthermore, to capture complete cross-modal dependencies, we optimize a tractable lower bound of the total correlation of item representations across all modalities. Experiments on standard MMR benchmarks show GTC consistently outperforms state-of-the-art, with gains of up to 28.30% in NDCG@5. Ablation studies validate both conditional preference-driven feature filtering and total correlation optimization, confirming the ability of GTC to model user-conditional relationships in MMR tasks. The code is available at: https://github.com/jingdu-cs/GTC.",
+    "code_links": [
+      "https://github.com/jingdu-cs/GTC"
+    ],
+    "comment": "11 pages, 7 figures, 3 tables"
+  },
+  {
+    "title": "Rewrite the News: Tracing Editorial Reuse Across News Agencies",
+    "authors": "Soveatin Kuntur, Nina Smirnova, Anna Wroblewska, Philipp Mayr, Sebastijan Razboršek Maček",
+    "published": "2026-03-31",
+    "arxiv_id": "2603.29937v1",
+    "url": "http://arxiv.org/abs/2603.29937v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.29937v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "This paper investigates sentence-level text reuse in multilingual journalism, analyzing where reused content occurs within articles. We present a weakly supervised method for detecting sentence-level cross-lingual reuse without requiring full translations, designed to support automated pre-selection to reduce information overload for journalists (Holyst et al., 2024). The study compares English-language articles from the Slovenian Press Agency (STA) with reports from 15 foreign agencies (FA) in seven languages, using publication timestamps to retain the earliest likely foreign source for each reused sentence. We analyze 1,037 STA and 237,551 FA articles from two time windows (October 7-November 2, 2023; February 1-28, 2025) and identify 1,087 aligned sentence pairs after filtering to the earliest sources. Reuse occurs in 52% of STA articles and 1.6% of FA articles and is predominantly non-literal, involving paraphrase and compositional reuse from multiple sources. Reused content tends to appear in the middle and end of English articles, while leads are more often original, indicating that simple lexical matching overlooks substantial editorial reuse. Compared with prior work focused on monolingual overlap, we (i) detect reuse across languages without requiring full translation, (ii) use publication timing to identify likely sources, and (iii) analyze where reused material is situated within articles. Dataset and code: https://github.com/kunturs/lrec2026-rewrite-news.",
+    "code_links": [
+      "https://github.com/kunturs/lrec2026-rewrite-news"
+    ],
+    "comment": "The paper is accepted to SoCon-NLPSI 2026 : Social Context (SoCon) and Integrating NLP and Psychology to Study Social Interactions (NLPSI) workshop co-located with LREC 2026"
+  },
+  {
+    "title": "Drift-Aware Continual Tokenization for Generative Recommendation",
+    "authors": "Yuebo Feng, Jiahao Liu, Mingzhe Han, Dongsheng Li, Hansu Gu, Peng Zhang, Tun Lu, Ning Gu",
+    "published": "2026-03-31",
+    "arxiv_id": "2603.29705v1",
+    "url": "http://arxiv.org/abs/2603.29705v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.29705v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation commonly adopts a two-stage pipeline in which a learnable tokenizer maps items to discrete token sequences (i.e. identifiers) and an autoregressive generative recommender model (GRM) performs prediction based on these identifiers. Recent tokenizers further incorporate collaborative signals so that items with similar user-behavior patterns receive similar codes, substantially improving recommendation quality. However, real-world environments evolve continuously: new items cause identifier collision and shifts, while new interactions induce collaborative drift in existing items (e.g., changing co-occurrence patterns and popularity). Fully retraining both tokenizer and GRM is often prohibitively expensive, yet naively fine-tuning the tokenizer can alter token sequences for the majority of existing items, undermining the GRM's learned token-embedding alignment. To balance plasticity and stability for collaborative tokenizers, we propose DACT, a Drift-Aware Continual Tokenization framework with two stages: (i) tokenizer fine-tuning, augmented with a jointly trained Collaborative Drift Identification Module (CDIM) that outputs item-level drift confidence and enables differentiated optimization for drifting and stationary items; and (ii) hierarchical code reassignment using a relaxed-to-strict strategy to update token sequences while limiting unnecessary changes. Experiments on three real-world datasets with two representative GRMs show that DACT consistently achieves better performance than baselines, demonstrating effective adaptation to collaborative evolution with reduced disruption to prior knowledge. Our implementation is publicly available at https://github.com/HomesAmaranta/DACT for reproducibility.",
+    "code_links": [
+      "https://github.com/HomesAmaranta/DACT"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Hydra: Unifying Document Retrieval and Generation in a Single Vision-Language Model",
+    "authors": "Athos Georgiou",
+    "published": "2026-03-30",
+    "arxiv_id": "2603.28554v1",
+    "url": "http://arxiv.org/abs/2603.28554v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.28554v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Visual document understanding typically requires separate retrieval and generation models, doubling memory and system complexity. We present Hydra, a dual-head approach that provides both ColBERT-style late-interaction retrieval and autoregressive generation from a single vision-language model (VLM). A single LoRA adapter, trained only for retrieval, is toggled at inference: enabling it produces multi-vector embeddings; disabling it recovers the base model's generation quality -- byte-identical outputs in 100% of 10,500 greedy and stochastic samples, with max delta-ANLS = 0.0044 across 15,301 samples on four VQA benchmarks (three informative; ChartQA is near-zero for both models under greedy decoding) when compared against an independent base-model pipeline. We identify three engineering requirements (attention-mode restoration, lm_head preservation, KV-cache-aware decoding) whose omission silently breaks generation despite correct weight recovery. On ViDoRe V1, Hydra (4B) is within 1 percentage point of a controlled single-head baseline in a single training run, with higher aggregate scores on V2 and V3 that are concentrated on a subset of tasks; multi-seed experiments are needed to confirm these trends. The single-model design reduces peak GPU memory by 41%, though adapter switching introduces throughput overhead under concurrent serving loads. An ablation shows that GritLM-style joint training provides no benefit within the LoRA-based (r=16) training regime. A proof-of-concept extension to Qwen2.5-Omni-3B demonstrates that the mechanism generalizes to audio retrieval and video embedding, with speech generation.",
+    "code_links": [
+      "https://github.com/athrael-soju/hydra"
+    ],
+    "comment": "Comments: 17 pages, 2 figures, 7 tables. ## Model Cards - https://huggingface.co/athrael-soju/HydraQwen3.5-4B - https://huggingface.co/athrael-soju/HydraQwen2.5-Omni-3B - https://huggingface.co/athrael-soju/ColQwen3.5-4B-controlled-baseline - https://huggingface.co/athrael-soju/DualHead-GritLM-Qwen3.5-4B ## Scripts & evals - https://github.com/athrael-soju/hydra"
+  },
+  {
+    "title": "Analysing Calls to Order in German Parliamentary Debates",
+    "authors": "Nina Smirnova, Daniel Dan, Philipp Mayr",
+    "published": "2026-03-27",
+    "arxiv_id": "2603.26430v1",
+    "url": "http://arxiv.org/abs/2603.26430v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.26430v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Parliamentary debate constitutes a central arena of political power, shaping legislative outcomes and public discourse. Incivility within this arena signals political polarization and institutional conflict. This study presents a systematic investigation of incivility in the German Bundestag by examining calls to order (CtO; plural: CtOs) as formal indicators of norm violations. Despite their relevance, CtOs have received little systematic attention in parliamentary research. We introduce a rule-based method for detecting and annotating CtOs in parliamentary speeches and present a novel dataset of German parliamentary debates spanning 72 years that includes annotated CtO instances. Additionally, we develop the first classification system for CtO triggers and analyze the factors associated with their occurrence. Our findings show that, despite formal regulations, the issuance of CtOs is partly subjective and influenced by session presidents and parliamentary dynamics, with certain individuals disproportionately affected. An insult towards individuals is the most frequent cause of CtO. In general, male members and those belonging to opposition parties receive more calls to order than their female and coalition-party counterparts. Most CtO triggers were detected in speeches dedicated to governmental affairs and actions of the presidency. The CtO triggers dataset is available at: https://github.com/kalawinka/cto_analysis.",
+    "code_links": [
+      "https://github.com/kalawinka/cto_analysis"
+    ],
+    "comment": "The paper is accepted to the 3rd Workshop on Natural Language Processing for Political Sciences (PoliticalNLP 2026) co-located with LREC 2026"
+  },
+  {
+    "title": "Adaptive Chunking: Optimizing Chunking-Method Selection for RAG",
+    "authors": "Paulo Roberto de Moura Júnior, Jean Lelong, Annabelle Blangero",
+    "published": "2026-03-26",
+    "arxiv_id": "2603.25333v1",
+    "url": "http://arxiv.org/abs/2603.25333v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.25333v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "The effectiveness of Retrieval-Augmented Generation (RAG) is highly dependent on how documents are chunked, that is, segmented into smaller units for indexing and retrieval. Yet, commonly used \"one-size-fits-all\" approaches often fail to capture the nuanced structure and semantics of diverse texts. Despite its central role, chunking lacks a dedicated evaluation framework, making it difficult to assess and compare strategies independently of downstream performance. We challenge this paradigm by introducing Adaptive Chunking, a framework that selects the most suitable chunking strategy for each document based on a set of five novel intrinsic, document-based metrics: References Completeness (RC), Intrachunk Cohesion (ICC), Document Contextual Coherence (DCC), Block Integrity (BI), and Size Compliance (SC), which directly assess chunking quality across key dimensions. To support this framework, we also introduce two new chunkers, an LLM-regex splitter and a split-then-merge recursive splitter, alongside targeted post-processing techniques. On a diverse corpus spanning legal, technical, and social science domains, our metric-guided adaptive method significantly improves downstream RAG performance. Without changing models or prompts, our framework increases RAG outcomes, raising answers correctness to 72% (from 62-64%) and increasing the number of successfully answered questions by over 30% (65 vs. 49). These results demonstrate that adaptive, document-aware chunking, guided by a complementary suite of intrinsic metrics, offers a practical and effective path to more robust RAG systems. Code available at https://github.com/ekimetrics/adaptive-chunking.",
+    "code_links": [
+      "https://github.com/ekimetrics/adaptive-chunking"
+    ],
+    "comment": "Accepted at LREC 2026. 10 pages, 4 figures. Code: https://github.com/ekimetrics/adaptive-chunking"
+  },
+  {
+    "title": "UniAI-GraphRAG: Synergizing Ontology-Guided Extraction, Multi-Dimensional Clustering, and Dual-Channel Fusion for Robust Multi-Hop Reasoning",
+    "authors": "Jie Wang, Honghua Huang, Xi Ge, Jianhui Su, Wen Liu, Shiguo Lian",
+    "published": "2026-03-26",
+    "arxiv_id": "2603.25152v2",
+    "url": "http://arxiv.org/abs/2603.25152v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.25152v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Retrieval-Augmented Generation (RAG) systems face significant challenges in complex reasoning, multi-hop queries, and domain-specific QA. While existing GraphRAG frameworks have made progress in structural knowledge organization, they still have limitations in cross-industry adaptability, community report integrity, and retrieval performance. This paper proposes UniAI-GraphRAG, an enhanced framework built upon open-source GraphRAG. The framework introduces three core innovations: (1) Ontology-Guided Knowledge Extraction that uses predefined Schema to guide LLMs in accurately identifying domain-specific entities and relations; (2) Multi-Dimensional Community Clustering Strategy that improves community completeness through alignment completion, attribute-based clustering, and multi-hop relationship clustering; (3) Dual-Channel Graph Retrieval Fusion that balances QA accuracy and performance through hybrid graph and community retrieval. Evaluation results on MultiHopRAG benchmark show that UniAI-GraphRAG outperforms mainstream open source solutions (e.g.LightRAG) in comprehensive F1 scores, particularly in inference and temporal queries. The code is available at https://github.com/UnicomAI/wanwu/tree/main/rag/rag_open_source/rag_core/graph.",
+    "code_links": [
+      "https://github.com/UnicomAI/wanwu"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MCLMR: A Model-Agnostic Causal Learning Framework for Multi-Behavior Recommendation",
+    "authors": "Ranxu Zhang, Junjie Meng, Ying Sun, Ziqi Xu, Bing Yin, Hao Li, Yanyong Zhang, Chao Wang",
+    "published": "2026-03-26",
+    "arxiv_id": "2603.25126v1",
+    "url": "http://arxiv.org/abs/2603.25126v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.25126v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multi-Behavior Recommendation (MBR) leverages multiple user interaction types (e.g., views, clicks, purchases) to enrich preference modeling and alleviate data sparsity issues in traditional single-behavior approaches. However, existing MBR methods face fundamental challenges: they lack principled frameworks to model complex confounding effects from user behavioral habits and item multi-behavior distributions, struggle with effective aggregation of heterogeneous auxiliary behaviors, and fail to align behavioral representations across semantic gaps while accounting for bias distortions. To address these limitations, we propose MCLMR, a novel model-agnostic causal learning framework that can be seamlessly integrated into various MBR architectures. MCLMR first constructs a causal graph to model confounding effects and performs interventions for unbiased preference estimation. Under this causal framework, it employs an Adaptive Aggregation module based on Mixture-of-Experts to dynamically fuse auxiliary behavior information and a Bias-aware Contrastive Learning module to align cross-behavior representations in a bias-aware manner. Extensive experiments on three real-world datasets demonstrate that MCLMR achieves significant performance improvements across various baseline models, validating its effectiveness and generality. All data and code will be made publicly available. For anonymous review, our code is available at the following the link: https://github.com/gitrxh/MCLMR.",
+    "code_links": [
+      "https://github.com/gitrxh/MCLMR"
+    ],
+    "comment": "Accepted by WWW 2026"
+  },
+  {
+    "title": "AuthorityBench: Benchmarking LLM Authority Perception for Reliable Retrieval-Augmented Generation",
+    "authors": "Zhihui Yao, Hengran Zhang, Keping Bi",
+    "published": "2026-03-26",
+    "arxiv_id": "2603.25092v1",
+    "url": "http://arxiv.org/abs/2603.25092v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.25092v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval-Augmented Generation (RAG) enhances Large Language Models (LLMs) with external knowledge but remains vulnerable to low-authority sources that can propagate misinformation. We investigate whether LLMs can perceive information authority - a capability extending beyond semantic understanding. To address this, we introduce AuthorityBench, a comprehensive benchmark for evaluating LLM authority perception comprising three datasets: DomainAuth (10K web domains with PageRank-based authority), EntityAuth (22K entities with popularity-based authority), and RAGAuth (120 queries with documents of varying authority for downstream evaluation). We evaluate five LLMs using three judging methods (PointJudge, PairJudge, ListJudge) across multiple output formats. Results show that ListJudge and PairJudge with PointScore output achieve the strongest correlation with ground-truth authority, while ListJudge offers optimal cost-effectiveness. Notably, incorporating webpage text consistently degrades judgment performance, suggesting authority is distinct from textual style. Downstream experiments on RAG demonstrate that authority-guided filtering largely improves answer accuracy, validating the practical importance of authority perception for reliable knowledge retrieval. Code and benchmark are available at: https://github.com/Trustworthy-Information-Access/AuthorityBench.",
+    "code_links": [
+      "https://github.com/Trustworthy-Information-Access/AuthorityBench"
+    ],
+    "comment": "11 pages, 4 figures. Submitted to ACL 2026"
+  },
+  {
+    "title": "OneSearch-V2: The Latent Reasoning Enhanced Self-distillation Generative Search Framework",
+    "authors": "Ben Chen, Siyuan Wang, Yufei Ma, Zihan Liang, Xuxin Zhang, Yue Lv, Ying Yang, Huangyu Dai, Lingtao Mao, Tong Zhao, Zhipeng Qian, Xinyu Sun, Zhixin Zhai, Yang Zhao, Bochao Liu, Jingshan Lv, Xiao Liang, Hui Kong, Jing Chen, Han Li, Chenyi Lei, Wenwu Ou, Kun Gai",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.24422v1",
+    "url": "http://arxiv.org/abs/2603.24422v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24422v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative Retrieval (GR) has emerged as a promising paradigm for modern search systems. Compared to multi-stage cascaded architecture, it offers advantages such as end-to-end joint optimization and high computational efficiency. OneSearch, as a representative industrial-scale deployed generative search framework, has brought significant commercial and operational benefits. However, its inadequate understanding of complex queries, inefficient exploitation of latent user intents, and overfitting to narrow historical preferences have limited its further performance improvement. To address these challenges, we propose \\textbf{OneSearch-V2}, a latent reasoning enhanced self-distillation generative search framework. It contains three key innovations: (1) a thought-augmented complex query understanding module, which enables deep query understanding and overcomes the shallow semantic matching limitations of direct inference; (2) a reasoning-internalized self-distillation training pipeline, which uncovers users' potential yet precise e-commerce intentions beyond log-fitting through implicit in-context learning; (3) a behavior preference alignment optimization system, which mitigates reward hacking arising from the single conversion metric, and addresses personal preference via direct user feedback. Extensive offline evaluations demonstrate OneSearch-V2's strong query recognition and user profiling capabilities. Online A/B tests further validate its business effectiveness, yielding +3.98\\% item CTR, +3.05\\% buyer conversion rate, and +2.11\\% order volume. Manual evaluation further confirms gains in search experience quality, with +1.65\\% in page good rate and +1.37\\% in query-item relevance. More importantly, OneSearch-V2 effectively mitigates common search system issues such as information bubbles and long-tail sparsity, without incurring additional inference costs or serving latency.",
+    "code_links": [
+      "https://github.com/benchen4395/onesearch-family"
+    ],
+    "comment": "Key codes are available at https://github.com/benchen4395/onesearch-family. Feel free to contact benchen4395@gmail.com"
+  },
+  {
+    "title": "Boosting Document Parsing Efficiency and Performance with Coarse-to-Fine Visual Processing",
+    "authors": "Cheng Cui, Ting Sun, Suyin Liang, Tingquan Gao, Zelun Zhang, Jiaxuan Liu, Xueqing Wang, Changda Zhou, Hongen Liu, Manhui Lin, Yue Zhang, Yubo Zhang, Jing Zhang, Jun Zhang, Xing Wei, Yi Liu, Dianhai Yu, Yanjun Ma",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.24326v2",
+    "url": "http://arxiv.org/abs/2603.24326v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.24326v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Document parsing is a fine-grained task where image resolution significantly impacts performance. While advanced research leveraging vision-language models benefits from high-resolution input to boost model performance, this often leads to a quadratic increase in the number of vision tokens and significantly raises computational costs. We attribute this inefficiency to substantial visual regions redundancy in document images, like background. To tackle this, we propose PaddleOCR-VL, a novel coarse-to-fine architecture that focuses on semantically relevant regions while suppressing redundant ones, thereby improving both efficiency and performance. Specifically, we introduce a lightweight Valid Region Focus Module (VRFM) which leverages localization and contextual relationship prediction capabilities to identify valid vision tokens. Subsequently, we design and train a compact yet powerful 0.9B vision-language model (PaddleOCR-VL-0.9B) to perform detailed recognition, guided by VRFM outputs to avoid direct processing of the entire large image. Extensive experiments demonstrate that PaddleOCR-VL achieves state-of-the-art performance in both page-level parsing and element-level recognition. It significantly outperforms existing solutions, exhibits strong competitiveness against top-tier VLMs, and delivers fast inference while utilizing substantially fewer vision tokens and parameters, highlighting the effectiveness of targeted coarse-to-fine parsing for accurate and efficient document understanding. The source code and models are publicly available at https://github.com/PaddlePaddle/PaddleOCR.",
+    "code_links": [
+      "https://github.com/PaddlePaddle/PaddleOCR"
+    ],
+    "comment": "Accepted by CVPR2026"
+  },
+  {
+    "title": "Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching",
+    "authors": "Anjun Gao, Zhenglin Wan, Pingfu Chao, Shunyu Yao",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.24054v1",
+    "url": "http://arxiv.org/abs/2603.24054v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24054v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DB",
+    "abstract": "The integration of GNSS data into portable devices has led to the generation of vast amounts of trajectory data, which is crucial for applications such as map-matching. To tackle the limitations of rule-based methods, recent works in deep learning for trajectory-related tasks occur. However, existing models remain challenging due to issues such as the difficulty of large-scale data labeling, ineffective modeling of spatial-temporal relationships, and discrepancies between training and test data distributions. To tackle these challenges, we propose HSTGMatch, a novel model designed to enhance map-matching performance. Our approach involves a two-stage process: hierarchical self-supervised learning and spatial-temporal supervised learning. We introduce a hierarchical trajectory representation, leveraging both grid cells and geographic tuples to capture moving patterns effectively. The model constructs an Adaptive Trajectory Adjacency Graph to dynamically capture spatial relationships, optimizing GATs for improved efficiency. Furthermore, we incorporate a Spatial-Temporal Factor to extract relevant features and employ a decay coefficient to address variations in trajectory length. Our extensive experiments demonstrate the model's superior performance, module effectiveness, and robustness, providing a promising solution for overcoming the existing limitations in map-matching applications. The source code of HSTGMatch is publicly available on GitHub at https://github.com/Nerooo-g/HSTGMatch.",
+    "code_links": [
+      "https://github.com/Nerooo-g/HSTGMatch"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Grounding Arabic LLMs in the Doha Historical Dictionary: Retrieval-Augmented Understanding of Quran and Hadith",
+    "authors": "Somaya Eltanbouly, Samer Rashwani",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.23972v1",
+    "url": "http://arxiv.org/abs/2603.23972v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.23972v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models (LLMs) have achieved remarkable progress in many language tasks, yet they continue to struggle with complex historical and religious Arabic texts such as the Quran and Hadith. To address this limitation, we develop a retrieval-augmented generation (RAG) framework grounded in diachronic lexicographic knowledge. Unlike prior RAG systems that rely on general-purpose corpora, our approach retrieves evidence from the Doha Historical Dictionary of Arabic (DHDA), a large-scale resource documenting the historical development of Arabic vocabulary. The proposed pipeline combines hybrid retrieval with an intent-based routing mechanism to provide LLMs with precise, contextually relevant historical information. Our experiments show that this approach improves the accuracy of Arabic-native LLMs, including Fanar and ALLaM, to over 85\\%, substantially reducing the performance gap with Gemini, a proprietary large-scale model. Gemini also serves as an LLM-as-a-judge system for automatic evaluation in our experiments. The automated judgments were verified through human evaluation, demonstrating high agreement (kappa = 0.87). An error analysis further highlights key linguistic challenges, including diacritics and compound expressions. These findings demonstrate the value of integrating diachronic lexicographic resources into retrieval-augmented generation frameworks to enhance Arabic language understanding, particularly for historical and religious texts. The code and resources are publicly available at: https://github.com/somayaeltanbouly/Doha-Dictionary-RAG.",
+    "code_links": [
+      "https://github.com/somayaeltanbouly/Doha-Dictionary-RAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DaiSy: A Library for Scalable Data Series Similarity Search",
+    "authors": "Francesca Del Gaudio, Manos Chatzakis, Gayathiri Ravendirane, Botao Peng, Themis Palpanas",
+    "published": "2026-03-29",
+    "arxiv_id": "2603.27719v1",
+    "url": "http://arxiv.org/abs/2603.27719v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.27719v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Exact similarity search over large collections of data series is a fundamental operation in modern applications, yet existing solutions are often fragmented, specialized, or tailored to specific execution environments. In this paper, we present DaiSy, a unified library for exact data series similarity search that integrates multiple state-of-the-art algorithms within a single, coherent framework. DaiSy is the first library to support exact similarity search across diverse execution environments, including implementations for disk-based, in-memory, GPU-accelerated, and distributed scalable similarity search. Although designed for data series, DaiSy is also directly applicable to exact similarity search over vector data, enabling its use in a broader range of applications. The library supports interfaces in both C++ and Python, enabling users to easily integrate its functionality into a variety of tasks. DaiSy is open-sourced and available at: https://github.com/MChatzakis/DaiSy.",
+    "code_links": [
+      "https://github.com/MChatzakis/DaiSy"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching",
+    "authors": "Anjun Gao, Zhenglin Wan, Pingfu Chao, Shunyu Yao",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.24054v1",
+    "url": "http://arxiv.org/abs/2603.24054v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24054v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The integration of GNSS data into portable devices has led to the generation of vast amounts of trajectory data, which is crucial for applications such as map-matching. To tackle the limitations of rule-based methods, recent works in deep learning for trajectory-related tasks occur. However, existing models remain challenging due to issues such as the difficulty of large-scale data labeling, ineffective modeling of spatial-temporal relationships, and discrepancies between training and test data distributions. To tackle these challenges, we propose HSTGMatch, a novel model designed to enhance map-matching performance. Our approach involves a two-stage process: hierarchical self-supervised learning and spatial-temporal supervised learning. We introduce a hierarchical trajectory representation, leveraging both grid cells and geographic tuples to capture moving patterns effectively. The model constructs an Adaptive Trajectory Adjacency Graph to dynamically capture spatial relationships, optimizing GATs for improved efficiency. Furthermore, we incorporate a Spatial-Temporal Factor to extract relevant features and employ a decay coefficient to address variations in trajectory length. Our extensive experiments demonstrate the model's superior performance, module effectiveness, and robustness, providing a promising solution for overcoming the existing limitations in map-matching applications. The source code of HSTGMatch is publicly available on GitHub at https://github.com/Nerooo-g/HSTGMatch.",
+    "code_links": [
+      "https://github.com/Nerooo-g/HSTGMatch"
+    ],
+    "comment": null
+  },
+  {
+    "title": "flexvec: SQL Vector Retrieval with Programmatic Embedding Modulation",
+    "authors": "Damian Delmas",
+    "published": "2026-03-23",
+    "arxiv_id": "2603.22587v1",
+    "url": "http://arxiv.org/abs/2603.22587v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.22587v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "As AI agents become the primary consumers of retrieval APIs, there is an opportunity to expose more of the retrieval pipeline to the caller. flexvec is a retrieval kernel that exposes the embedding matrix and score array as a programmable surface, allowing arithmetic operations on both before selection. We refer to composing operations on this surface at query time as Programmatic Embedding Modulation (PEM). This paper describes a set of such operations and integrates them into a SQL interface via a query materializer that facilitates composable query primitives. On a production corpus of 240,000 chunks, three composed modulations execute in 19 ms end-to-end on a desktop CPU without approximate indexing. At one million chunks, the same operations execute in 82 ms.",
+    "code_links": [
+      "https://github.com/damiandelmas/flexvec"
+    ],
+    "comment": "15 pages, 1 figure, 7 tables, 4 appendices. Code available at https://github.com/damiandelmas/flexvec"
+  },
+  {
+    "title": "Can AI Agents Answer Your Data Questions? A Benchmark for Data Agents",
+    "authors": "Ruiying Ma, Shreya Shankar, Ruiqi Chen, Yiming Lin, Sepanta Zeighami, Rajoshi Ghosh, Abhinav Gupta, Anushrut Gupta, Tanmai Gopal, Aditya G. Parameswaran",
+    "published": "2026-03-21",
+    "arxiv_id": "2603.20576v1",
+    "url": "http://arxiv.org/abs/2603.20576v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20576v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Users across enterprises increasingly rely on AI agents to query their data through natural language. However, building reliable data agents remains difficult because real-world data is often fragmented across multiple heterogeneous database systems, with inconsistent references and information buried in unstructured text. Existing benchmarks only tackle individual pieces of this problem -- e.g., translating natural-language questions into SQL queries, answering questions over small tables provided in context -- but do not evaluate the full pipeline of integrating, transforming, and analyzing data across multiple database systems. To fill this gap, we present the Data Agent Benchmark (DAB), grounded in a formative study of enterprise data agent workloads across six industries. DAB comprises 54 queries across 12 datasets, 9 domains, and 4 database management systems. On DAB, the best frontier model (Gemini-3-Pro) achieves only 38% pass@1 accuracy. We benchmark five frontier LLMs, analyze their failure modes, and distill takeaways for future data agent development. Our benchmark and experiment code are published at github.com/ucbepic/DataAgentBench.",
+    "code_links": [
+      "https://github.com/ucbepic/DataAgentBench"
+    ],
+    "comment": "22 pages, 7 figures, 9 tables"
+  },
+  {
+    "title": "RouterKGQA: Specialized--General Model Routing for Constraint-Aware Knowledge Graph Question Answering",
+    "authors": "Bo Yuan, Hexuan Deng, Xuebo Liu, Min Zhang",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.20017v1",
+    "url": "http://arxiv.org/abs/2603.20017v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20017v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Knowledge graph question answering (KGQA) is a promising approach for mitigating LLM hallucination by grounding reasoning in structured and verifiable knowledge graphs. Existing approaches fall into two paradigms: retrieval-based methods utilize small specialized models, which are efficient but often produce unreachable paths and miss implicit constraints, while agent-based methods utilize large general models, which achieve stronger structural grounding at substantially higher cost. We propose RouterKGQA, a framework for specialized--general model collaboration, in which a specialized model generates reasoning paths and a general model performs KG-guided repair only when needed, improving performance at minimal cost. We further equip the specialized with constraint-aware answer filtering, which reduces redundant answers. In addition, we design a more efficient general agent workflow, further lowering inference cost. Experimental results show that RouterKGQA outperforms the previous best by 3.57 points in F1 and 0.49 points in Hits@1 on average across benchmarks, while requiring only 1.15 average LLM calls per question. Codes and models are available at https://github.com/Oldcircle/RouterKGQA.",
+    "code_links": [
+      "https://github.com/Oldcircle/RouterKGQA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "A Super Fast K-means for Indexing Vector Embeddings",
+    "authors": "Leonardo Kuffo, Sven Hepkema, Peter Boncz",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.20009v1",
+    "url": "http://arxiv.org/abs/2603.20009v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20009v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "We present SuperKMeans: a k-means variant designed for clustering collections of high-dimensional vector embeddings. SuperKMeans' clustering is up to 7x faster than FAISS and Scikit-Learn on modern CPUs and up to 4x faster than cuVS on GPUs (Figure 1), while maintaining the quality of the resulting centroids for vector similarity search tasks. SuperKMeans acceleration comes from reducing data-access and compute overhead by reliably and efficiently pruning dimensions that are not needed to assign a vector to a centroid. Furthermore, we present Early Termination by Recall, a novel mechanism that early-terminates k-means when the quality of the centroids for retrieval tasks stops improving across iterations. In practice, this further reduces runtimes without compromising retrieval quality. We open-source our implementation at https://github.com/cwida/SuperKMeans",
+    "code_links": [
+      "https://github.com/cwida/SuperKMeans"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DarkDriving: A Real-World Day and Night Aligned Dataset for Autonomous Driving in the Dark Environment",
+    "authors": "Wuqi Wang, Haochen Yang, Baolu Li, Jiaqi Sun, Xiangmo Zhao, Zhigang Xu, Qing Guo, Haigen Min, Tianyun Zhang, Hongkai Yu",
+    "published": "2026-03-18",
+    "arxiv_id": "2603.18067v2",
+    "url": "http://arxiv.org/abs/2603.18067v2",
+    "pdf_url": "https://arxiv.org/pdf/2603.18067v2",
+    "category": "databases",
+    "primary_category": "cs.CV",
+    "abstract": "The low-light conditions are challenging to the vision-centric perception systems for autonomous driving in the dark environment. In this paper, we propose a new benchmark dataset (named DarkDriving) to investigate the low-light enhancement for autonomous driving. The existing real-world low-light enhancement benchmark datasets can be collected by controlling various exposures only in small-ranges and static scenes. The dark images of the current nighttime driving datasets do not have the precisely aligned daytime counterparts. The extreme difficulty to collect a real-world day and night aligned dataset in the dynamic driving scenes significantly limited the research in this area. With a proposed automatic day-night Trajectory Tracking based Pose Matching (TTPM) method in a large real-world closed driving test field (area: 69 acres), we collected the first real-world day and night aligned dataset for autonomous driving in the dark environment. The DarkDriving dataset has 9,538 day and night image pairs precisely aligned in location and spatial contents, whose alignment error is in just several centimeters. For each pair, we also manually label the object 2D bounding boxes. DarkDriving introduces four perception related tasks, including low-light enhancement, generalized low-light enhancement, and low-light enhancement for 2D detection and 3D detection of autonomous driving in the dark environment. The experimental results show that our DarkDriving dataset provides a comprehensive benchmark for evaluating low-light enhancement for autonomous driving and it can also be generalized to enhance dark images and promote detection in some other low-light driving environment, such as nuScenes.The code and dataset will be publicly available at https://github.com/DriveMindLab/DarkDriving-ICRA-2026.",
+    "code_links": [
+      "https://github.com/DriveMindLab/DarkDriving-ICRA-2026"
+    ],
+    "comment": "8 pages, 8 figures. Accepted to ICRA 2026"
+  }
+]
