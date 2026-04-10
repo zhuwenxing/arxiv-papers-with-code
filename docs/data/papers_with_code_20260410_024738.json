@@ -1,0 +1,538 @@
+[
+  {
+    "title": "Context-Aware Disentanglement for Cross-Domain Sequential Recommendation: A Causal View",
+    "authors": "Xingzi Wang, Qingtian Bian, Hui Fang",
+    "published": "2026-04-09",
+    "arxiv_id": "2604.07992v1",
+    "url": "http://arxiv.org/abs/2604.07992v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07992v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Cross-Domain Sequential Recommendation (CDSR) aims to en-hance recommendation quality by transferring knowledge across domains, offering effective solutions to data sparsity and cold-start issues. However, existing methods face three major limitations: (1) they overlook varying contexts in user interaction sequences, resulting in spurious correlations that obscure the true causal relationships driving user preferences; (2) the learning of domain- shared and domain-specific preferences is hindered by gradient conflicts between domains, leading to a seesaw effect where performance in one domain improves at the expense of the other; (3) most methods rely on the unrealistic assumption of substantial user overlap across domains. To address these issues, we propose CoDiS, a context-aware disentanglement framework grounded in a causal view to accurately disentangle domain-shared and domain-specific preferences. Specifically, Our approach includes a variational context adjustment method to reduce confounding effects of contexts, expert isolation and selection strategies to resolve gradient conflict, and a variational adversarial disentangling module for the thorough disentanglement of domain-shared and domain-specific representations. Extensive experiments on three real-world datasets demonstrate that CoDiS consistently outperforms state-of-the-art CDSR baselines with statistical significance. Code is available at:https://anonymous.4open.science/r/CoDiS-6FA0.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "Task-Adaptive Retrieval over Agentic Multi-Modal Web Histories via Learned Graph Memory",
+    "authors": "Saman Forouzandeh, Kamal Berahmand, Mahdi Jalili",
+    "published": "2026-04-09",
+    "arxiv_id": "2604.07863v1",
+    "url": "http://arxiv.org/abs/2604.07863v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07863v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieving relevant observations from long multi-modal web interaction histories is challenging because relevance depends on the evolving task state, modality (screenshots, HTML text, structured signals), and temporal distance. Prior approaches typically rely on static similarity thresholds or fixed-capacity buffers, which fail to adapt relevance to the current task context. We propose \\textbf{ACGM}, a learned graph-memory retriever that constructs \\emph{task-adaptive} relevance graphs over agent histories using policy-gradient optimization from downstream task success. ACGM captures heterogeneous temporal dynamics with modality-specific decay (visual decays $4.3\\times$ faster than text: $λ_v{=}0.47$ vs.\\ $λ_x{=}0.11$) and learns sparse connectivity (3.2 edges/node), enabling efficient $O(\\log T)$ retrieval. Across WebShop, VisualWebArena, and Mind2Web, ACGM improves retrieval quality to \\textbf{82.7 nDCG@10} (+9.3 over GPT-4o, $p{<}0.001$) and \\textbf{89.2\\% Precision@10} (+7.7), outperforming 19 strong dense, re-ranking, multi-modal, and graph-based baselines. Code to reproduce our results is available at{\\color{blue}\\href{https://github.com/S-Forouzandeh/ACGM-Agentic-Web}{Saman Forouzandeh}}.",
+    "code_links": [
+      "https://github.com/S-Forouzandeh/ACGM-Agentic-Web"
+    ],
+    "comment": "The 49th International ACM SIGIR Conference on Research and Development in Information Retrieval"
+  },
+  {
+    "title": "ReRec: Reasoning-Augmented LLM-based Recommendation Assistant via Reinforcement Fine-tuning",
+    "authors": "Jiani Huang, Shijie Wang, Liangbo Ning, Wenqi Fan, Qing Li",
+    "published": "2026-04-09",
+    "arxiv_id": "2604.07851v1",
+    "url": "http://arxiv.org/abs/2604.07851v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07851v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "With the rise of LLMs, there is an increasing need for intelligent recommendation assistants that can handle complex queries and provide personalized, reasoning-driven recommendations. LLM-based recommenders show potential but face challenges in multi-step reasoning, underscoring the need for reasoning-augmented systems. To address this gap, we propose ReRec, a novel reinforcement fine-tuning (RFT) framework designed to improve LLM reasoning in complex recommendation tasks. Our framework introduces three key components: (1) Dual-Graph Enhanced Reward Shaping, integrating recommendation metrics like NDCG@K with Query Alignment and Preference Alignment Scores to provide fine-grained reward signals for LLM optimization; (2) Reasoning-aware Advantage Estimation, which decomposes LLM outputs into reasoning segments and penalizes incorrect steps to enhance reasoning of recommendation; and (3) Online Curriculum Scheduler, dynamically assess query difficulty and organize training curriculum to ensure stable learning during RFT. Experiments demonstrate that ReRec outperforms state-of-the-art baselines and preserves core abilities like instruction-following and general knowledge. Our codes are available at https://github.com/jiani-huang/ReRec.",
+    "code_links": [
+      "https://github.com/jiani-huang/ReRec"
+    ],
+    "comment": "Accepted by ACL 2026"
+  },
+  {
+    "title": "DCD: Domain-Oriented Design for Controlled Retrieval-Augmented Generation",
+    "authors": "Valeriy Kovalskiy, Nikita Belov, Nikita Miteyko, Igor Reshetnikov, Max Maximov",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.07590v1",
+    "url": "http://arxiv.org/abs/2604.07590v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07590v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval-Augmented Generation (RAG) is widely used to ground large language models in external knowledge sources. However, when applied to heterogeneous corpora and multi-step queries, Naive RAG pipelines often degrade in quality due to flat knowledge representations and the absence of explicit workflows. In this work, we introduce DCD (Domain-Collection-Document), a domain-oriented design to structure knowledge and control query processing in RAG systems without modifying the underlying language model. The proposed approach relies on a hierarchical decomposition of the information space and multi-stage routing based on structured model outputs, enabling progressive restriction of both retrieval and generation scopes. The architecture is complemented by smart chunking, hybrid retrieval, and integrated validation and generation guardrail mechanisms. We describe the DCD architecture and workflow and discuss evaluation results on synthetic evaluation dataset, highlighting their impact on robustness, factual accuracy, and answer relevance in applied RAG scenarios.",
+    "code_links": [
+      "https://github.com/redmadrobot-rnd/dcd"
+    ],
+    "comment": "11 pages, 4 figures, 2 links, link to HF https://huggingface.co/datasets/redmadrobot-rnd/dcd, link to GIT https://github.com/redmadrobot-rnd/dcd"
+  },
+  {
+    "title": "HIVE: Query, Hypothesize, Verify An LLM Framework for Multimodal Reasoning-Intensive Retrieval",
+    "authors": "Mahmoud Abdalla, Mahmoud SalahEldin Kasem, Mohamed Mahmoud, Mostafa Farouk Senussi, Abdelrahman Abdallah, Hyun-Soo Kang",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.07220v1",
+    "url": "http://arxiv.org/abs/2604.07220v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07220v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal retrieval models fail on reasoning-intensive queries where images (diagrams, charts, screenshots) must be deeply integrated with text to identify relevant documents -- the best multimodal model achieves only 27.6 nDCG@10 on MM-BRIGHT, underperforming even strong text-only retrievers (32.2). We introduce \\textbf{HIVE} (\\textbf{H}ypothesis-driven \\textbf{I}terative \\textbf{V}isual \\textbf{E}vidence Retrieval), a plug-and-play framework that injects explicit visual-text reasoning into a retriever via LLMs. HIVE operates in four stages: (1) initial retrieval over the corpus, (2) LLM-based compensatory query synthesis that explicitly articulates visual and logical gaps observed in top-$k$ candidates, (3) secondary retrieval with the refined query, and (4) LLM verification and reranking over the union of candidates. Evaluated on the multimodal-to-text track of MM-BRIGHT (2,803 real-world queries across 29 technical domains), HIVE achieves a new state-of-the-art aggregated nDCG@10 of \\textbf{41.7} -- a \\textbf{+9.5} point gain over the best text-only model (DiVeR: 32.2) and \\textbf{+14.1} over the best multimodal model (Nomic-Vision: 27.6), where our reasoning-enhanced base retriever contributes 33.2 and the HIVE framework adds a further \\textbf{+8.5} points -- with particularly strong results in visually demanding domains (Gaming: 68.2, Chemistry: 42.5, Sustainability: 49.4). Compatible with both standard and reasoning-enhanced retrievers, HIVE demonstrates that LLM-mediated visual hypothesis generation and verification can substantially close the multimodal reasoning gap in retrieval. https://github.com/mm-bright/multimodal-reasoning-retrieval",
+    "code_links": [
+      "https://github.com/mm-bright/multimodal-reasoning-retrieval"
+    ],
+    "comment": "accepted at CVPR 2026 Workshop GRAIL-V"
+  },
+  {
+    "title": "BRIDGE: Multimodal-to-Text Retrieval via Reinforcement-Learned Query Alignment",
+    "authors": "Mohamed Darwish Mounis, Mohamed Mahmoud, Shaimaa Sedek, Mahmoud Abdalla, Mahmoud SalahEldin Kasem, Abdelrahman Abdallah, Hyun-Soo Kang",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.07201v1",
+    "url": "http://arxiv.org/abs/2604.07201v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07201v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal retrieval systems struggle to resolve image-text queries against text-only corpora: the best vision-language encoder achieves only 27.6 nDCG@10 on MM-BRIGHT, underperforming strong text-only retrievers. We argue the bottleneck is not the retriever but the query -- raw multimodal queries entangle visual descriptions, conversational noise, and retrieval intent in ways that systematically degrade embedding similarity. We present \\textbf{BRIDGE}, a two-component system that resolves this mismatch without multimodal encoders. \\textbf{FORGE} (\\textbf{F}ocused Retrieval Query Generato\\textbf{r}) is a query alignment model trained via reinforcement learning, which distills noisy multimodal queries into compact, retrieval-optimized search strings. \\textbf{LENS} (\\textbf{L}anguage-\\textbf{E}nhanced \\textbf{N}eural \\textbf{S}earch) is a reasoning-enhanced dense retriever fine-tuned on reasoning-intensive retrieval data to handle the intent-rich queries FORGE produces. Evaluated on MM-BRIGHT (2,803 queries, 29 domains), BRIDGE achieves \\textbf{29.7} nDCG@10, surpassing all multimodal encoder baselines including Nomic-Vision (27.6). When FORGE is applied as a plug-and-play aligner on top of Nomic-Vision, the combined system reaches \\textbf{33.3} nDCG@10 -- exceeding the best text-only retriever (32.2) -- demonstrating that \\textit{query alignment} is the key bottleneck in multimodal-to-text retrieval. https://github.com/mm-bright/multimodal-reasoning-retrieval",
+    "code_links": [
+      "https://github.com/mm-bright/multimodal-reasoning-retrieval"
+    ],
+    "comment": "Accepted at CVPR 2026 Workshop GRAIL-V"
+  },
+  {
+    "title": "ReAlign: Optimizing the Visual Document Retriever with Reasoning-Guided Fine-Grained Alignment",
+    "authors": "Hao Yang, Yifan Ji, Zhipeng Xu, Zhenghao Liu, Yukun Yan, Zulong Chen, Shuo Wang, Yu Gu, Ge Yu",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.07419v1",
+    "url": "http://arxiv.org/abs/2604.07419v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07419v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Visual document retrieval aims to retrieve a set of document pages relevant to a query from visually rich collections. Existing methods often employ Vision-Language Models (VLMs) to encode queries and visual pages into a shared embedding space, which is then optimized via contrastive training. However, during visual document representation, localized evidence is usually scattered across complex document layouts, making it difficult for retrieval models to capture crucial cues for effective embedding learning. In this paper, we propose Reasoning-Guided Alignment (ReAlign), a method that enhances visual document retrieval by leveraging the reasoning capability of VLMs to provide fine-grained visual document descriptions as supervision signals for training. Specifically, ReAlign employs a superior VLM to identify query-related regions on a page and then generates a query-aware description grounding the cropped visual regions. The retriever is then trained using these region-focused descriptions to align the semantics between queries and visual documents by encouraging the document ranking distribution induced by the region-focused descriptions to match that induced by the original query. Experiments on diverse visually rich document retrieval benchmarks demonstrate that ReAlign consistently improves visual document retrieval performance on both in-domain and out-of-domain datasets, achieving up to 2% relative improvements. Moreover, the advantages of ReAlign generalize across different VLM backbones by guiding models to better focus their attention on critical visual cues for document representation. All code and datasets are available at https://github.com/NEUIR/ReAlign.",
+    "code_links": [
+      "https://github.com/NEUIR/ReAlign"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MARVEL: Multimodal Adaptive Reasoning-intensiVe Expand-rerank and retrievaL",
+    "authors": "Mahmoud SalahEldin Kasem, Mohamed Mahmoud, Mostafa Farouk Senussi, Mahmoud Abdalla, Abdelrahman Abdallah, Hyun-Soo Kang",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.07079v1",
+    "url": "http://arxiv.org/abs/2604.07079v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07079v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal retrieval over text corpora remains a fundamental challenge: the best vision-language encoder achieves only 27.6 nDCG@10 on MM-BRIGHT, a reasoning-intensive multimodal retrieval benchmark, underperforming strong text-only systems. We argue that effective multimodal retrieval requires three tightly integrated capabilities that existing approaches address only in isolation: expanding the query's latent intent, retrieving with a model trained for complex reasoning, and reranking via explicit step-by-step reasoning over candidates. We introduce \\textbf{MARVEL} (\\textbf{M}ultimodal \\textbf{A}daptive \\textbf{R}easoning-intensi\\textbf{V}e \\textbf{E}xpand-rerank and retrieva\\textbf{L}), a unified pipeline that combines LLM-driven query expansion, \\textbf{MARVEL-Retriever} -- a reasoning-enhanced dense retriever fine-tuned for complex multimodal queries -- and GPT-4o-based chain-of-thought reranking with optional multi-pass reciprocal rank fusion. Evaluated on MM-BRIGHT across 29 technical domains, MARVEL achieves \\textbf{37.9} nDCG@10, surpassing the best multimodal encoder by \\textbf{+10.3 points} and outperforming all single-stage baselines in 27 of 29 domains and matching or approaching the best baseline in the remaining two highly-specialized domains (Crypto, Quantum Computing), demonstrating that reasoning-intensive multimodal retrieval is best addressed through a unified expand-retrieve-rerank framework. https://github.com/mm-bright/multimodal-reasoning-retrieval",
+    "code_links": [
+      "https://github.com/mm-bright/multimodal-reasoning-retrieval"
+    ],
+    "comment": null
+  },
+  {
+    "title": "AV-SQL: Decomposing Complex Text-to-SQL Queries with Agentic Views",
+    "authors": "Minh Tam Pham, Trinh Pham, Tong Chen, Hongzhi Yin, Quoc Viet Hung Nguyen, Thanh Tam Nguyen",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.07041v1",
+    "url": "http://arxiv.org/abs/2604.07041v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07041v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DB",
+    "abstract": "Text-to-SQL is the task of translating natural language queries into executable SQL for a given database, enabling non-expert users to access structured data without writing SQL manually. Despite rapid advances driven by large language models (LLMs), existing approaches still struggle with complex queries in real-world settings, where database schemas are large and questions require multi-step reasoning over many interrelated tables. In such cases, providing the full schema often exceeds the context window, while one-shot generation frequently produces non-executable SQL due to syntax errors and incorrect schema linking. To address these challenges, we introduce AV-SQL, a framework that decomposes complex Text-to-SQL into a pipeline of specialized LLM agents. Central to AV-SQL is the concept of agentic views: agent-generated Common Table Expressions (CTEs) that encapsulate intermediate query logic and filter relevant schema elements from large schemas. AV-SQL operates in three stages: (1) a rewriter agent compresses and clarifies the input query; (2) a view generator agent processes schema chunks to produce agentic views; and (3) a planner, generator, and revisor agent collaboratively compose these views into the final SQL query. Extensive experiments show that AV-SQL achieves 70.38% execution accuracy on the challenging Spider 2.0 benchmark, outperforming state-of-the-art baselines, while remaining competitive on standard datasets with 85.59% on Spider, 72.16% on BIRD and 63.78% on KaggleDBQA. Our source code is available at https://github.com/pminhtam/AV-SQL.",
+    "code_links": [
+      "https://github.com/pminhtam/AV-SQL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ATANT: An Evaluation Framework for AI Continuity",
+    "authors": "Samuel Sameer Tanguturi",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.06710v1",
+    "url": "http://arxiv.org/abs/2604.06710v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.06710v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "We present ATANT (Automated Test for Acceptance of Narrative Truth), an open evaluation framework for measuring continuity in AI systems: the ability to persist, update, disambiguate, and reconstruct meaningful context across time. While the AI industry has produced memory components (RAG pipelines, vector databases, long context windows, profile layers), no published framework formally defines or measures whether these components produce genuine continuity. We define continuity as a system property with 7 required properties, introduce a 10-checkpoint evaluation methodology that operates without an LLM in the evaluation loop, and present a narrative test corpus of 250 stories comprising 1,835 verification questions across 6 life domains. We evaluate a reference implementation across 5 test suite iterations, progressing from 58% (legacy architecture) to 100% in isolated mode (250 stories) and 100% in 50-story cumulative mode, with 96% at 250-story cumulative scale. The cumulative result is the primary measure: when 250 distinct life narratives coexist in the same database, the system must retrieve the correct fact for the correct context without cross-contamination. ATANT is system-agnostic, model-independent, and designed as a sequenced methodology for building and validating continuity systems. The framework specification, example stories, and evaluation protocol are available at https://github.com/Kenotic-Labs/ATANT. The full 250-story corpus will be released incrementally.",
+    "code_links": [
+      "https://github.com/Kenotic-Labs/ATANT"
+    ],
+    "comment": "7 pages, 8 tables. Framework and evaluation protocol available at https://github.com/Kenotic-Labs/ATANT"
+  },
+  {
+    "title": "CLEAR: Cross-Lingual Enhancement in Alignment via Reverse-training",
+    "authors": "Seungyoon Lee, Minhyuk Kim, Seongtae Hong, Youngjoon Jang, Dongsuk Oh, Heuiseok Lim",
+    "published": "2026-04-07",
+    "arxiv_id": "2604.05821v1",
+    "url": "http://arxiv.org/abs/2604.05821v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.05821v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Existing multilingual embedding models often encounter challenges in cross-lingual scenarios due to imbalanced linguistic resources and less consideration of cross-lingual alignment during training. Although standardized contrastive learning approaches for cross-lingual adaptation are widely adopted, they may struggle to capture fundamental alignment between languages and degrade performance in well-aligned languages such as English. To address these challenges, we propose Cross-Lingual Enhancement in Retrieval via Reverse-training (CLEAR), a novel loss function utilizing a reverse training scheme to improve retrieval performance across diverse cross-lingual retrieval scenarios. CLEAR leverages an English passage as a bridge to strengthen alignments between the target language and English, ensuring robust performance in the cross-lingual retrieval task. Our extensive experiments demonstrate that CLEAR achieves notable improvements in cross-lingual scenarios, with gains up to 15%, particularly in low-resource languages, while minimizing performance degradation in English. Furthermore, our findings highlight that CLEAR offers promising effectiveness even in multilingual training, suggesting its potential for broad application and scalability. We release the code at https://github.com/dltmddbs100/CLEAR.",
+    "code_links": [
+      "https://github.com/dltmddbs100/CLEAR"
+    ],
+    "comment": "ACL2026 Main"
+  },
+  {
+    "title": "WikiSeeker: Rethinking the Role of Vision-Language Models in Knowledge-Based Visual Question Answering",
+    "authors": "Yingjian Zhu, Xinming Wang, Kun Ding, Ying Wang, Bin Fan, Shiming Xiang",
+    "published": "2026-04-07",
+    "arxiv_id": "2604.05818v1",
+    "url": "http://arxiv.org/abs/2604.05818v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.05818v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Multi-modal Retrieval-Augmented Generation (RAG) has emerged as a highly effective paradigm for Knowledge-Based Visual Question Answering (KB-VQA). Despite recent advancements, prevailing methods still primarily depend on images as the retrieval key, and often overlook or misplace the role of Vision-Language Models (VLMs), thereby failing to leverage their potential fully. In this paper, we introduce WikiSeeker, a novel multi-modal RAG framework that bridges these gaps by proposing a multi-modal retriever and redefining the role of VLMs. Rather than serving merely as answer generators, we assign VLMs two specialized agents: a Refiner and an Inspector. The Refiner utilizes the capability of VLMs to rewrite the textual query according to the input image, significantly improving the performance of the multimodal retriever. The Inspector facilitates a decoupled generation strategy by selectively routing reliable retrieved context to another LLM for answer generation, while relying on the VLM's internal knowledge when retrieval is unreliable. Extensive experiments on EVQA, InfoSeek, and M2KR demonstrate that WikiSeeker achieves state-of-the-art performance, with substantial improvements in both retrieval accuracy and answer quality. Our code will be released on https://github.com/zhuyjan/WikiSeeker.",
+    "code_links": [
+      "https://github.com/zhuyjan/WikiSeeker"
+    ],
+    "comment": "Accepted by ACL 2026 Findings"
+  },
+  {
+    "title": "Curr-RLCER:Curriculum Reinforcement Learning For Coherence Explainable Recommendation",
+    "authors": "Xiangchen Pan, Wei Wei",
+    "published": "2026-04-07",
+    "arxiv_id": "2604.05341v1",
+    "url": "http://arxiv.org/abs/2604.05341v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.05341v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Explainable recommendation systems (RSs) are designed to explicitly uncover the rationale of each recommendation, thereby enhancing the transparency and credibility of RSs. Previous methods often jointly predicted ratings and generated explanations, but overlooked the incoherence of such two objectives. To address this issue, we propose Curr-RLCER, a reinforcement learning framework for explanation coherent recommendation with dynamic rating alignment. It employs curriculum learning, transitioning from basic predictions (i.e., click through rating-CTR, selection-based rating) to open-ended recommendation explanation generation. In particular, the rewards of each stage are designed for progressively enhancing the stability of RSs. Furthermore, a coherence-driven reward mechanism is also proposed to enforce the coherence between generated explanations and predicted ratings, supported by a specifically designed evaluation scheme. The extensive experimental results on three explainable recommendation datasets indicate that the proposed framework is effective. Codes and datasets are available at https://github.com/pxcstart/Curr-RLCER.",
+    "code_links": [
+      "https://github.com/pxcstart/Curr-RLCER"
+    ],
+    "comment": "Accepted at DASFAA 2026. This is the author version"
+  },
+  {
+    "title": "Pay Attention to Sequence Split: Uncovering the Impacts of Sub-Sequence Splitting on Sequential Recommendation Models",
+    "authors": "Yizhou Dang, Yifan Wu, Minhan Huang, Chuang Zhao, Lianbo Ma, Guibing Guo, Xingwei Wang, Zhu Sun",
+    "published": "2026-04-07",
+    "arxiv_id": "2604.05309v1",
+    "url": "http://arxiv.org/abs/2604.05309v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.05309v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sub-sequence splitting (SSS) has been demonstrated as an effective approach to mitigate data sparsity in sequential recommendation (SR) by splitting a raw user interaction sequence into multiple sub-sequences. Previous studies have demonstrated its ability to enhance the performance of SR models significantly. However, in this work, we discover that \\textbf{(i). SSS may interfere with the evaluation of the model's actual performance.} We observed that many recent state-of-the-art SR models employ SSS during the data reading stage (not mentioned in the papers). When we removed this operation, performance significantly declined, even falling below that of earlier classical SR models. The varying improvements achieved by SSS and different splitting methods across different models prompt us to analyze further when SSS proves effective. We find that \\textbf{(ii). SSS demonstrates strong capabilities only when specific splitting methods, target strategies, and loss functions are used together.} Inappropriate combinations may even harm performance. Furthermore, we analyze why sub-sequence splitting yields such remarkable performance gains and find that \\textbf{(iii). it evens out the distribution of training data while increasing the likelihood that different items are targeted.} Finally, we provide suggestions for overcoming SSS interference, along with a discussion on data augmentation methods and future directions. We hope this work will prompt the broader community to re-examine the impact of data splitting on SR and promote fairer, more rigorous model evaluation. All analysis code and data will be made available upon acceptance. We provide a simple, anonymous implementation at https://github.com/KingGugu/SSS4SR.",
+    "code_links": [
+      "https://github.com/KingGugu/SSS4SR"
+    ],
+    "comment": "Accepted by SIGIR 2026"
+  },
+  {
+    "title": "SkillX: Automatically Constructing Skill Knowledge Bases for Agents",
+    "authors": "Chenxi Wang, Zhuoyun Yu, Xin Xie, Wuguannan Yao, Runnan Fang, Shuofei Qiao, Kexin Cao, Guozhou Zheng, Xiang Qi, Peng Zhang, Shumin Deng",
+    "published": "2026-04-06",
+    "arxiv_id": "2604.04804v1",
+    "url": "http://arxiv.org/abs/2604.04804v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.04804v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Learning from experience is critical for building capable large language model (LLM) agents, yet prevailing self-evolving paradigms remain inefficient: agents learn in isolation, repeatedly rediscover similar behaviors from limited experience, resulting in redundant exploration and poor generalization. To address this problem, we propose SkillX, a fully automated framework for constructing a \\textbf{plug-and-play skill knowledge base} that can be reused across agents and environments. SkillX operates through a fully automated pipeline built on three synergistic innovations: \\textit{(i) Multi-Level Skills Design}, which distills raw trajectories into three-tiered hierarchy of strategic plans, functional skills, and atomic skills; \\textit{(ii) Iterative Skills Refinement}, which automatically revises skills based on execution feedback to continuously improve library quality; and \\textit{(iii) Exploratory Skills Expansion}, which proactively generates and validates novel skills to expand coverage beyond seed training data. Using a strong backbone agent (GLM-4.6), we automatically build a reusable skill library and evaluate its transferability on challenging long-horizon, user-interactive benchmarks, including AppWorld, BFCL-v3, and $τ^2$-Bench. Experiments show that SkillKB consistently improves task success and execution efficiency when plugged into weaker base agents, highlighting the importance of structured, hierarchical experience representations for generalizable agent learning. Our code will be publicly available soon at https://github.com/zjunlp/SkillX.",
+    "code_links": [
+      "https://github.com/zjunlp/SkillX"
+    ],
+    "comment": "Work in progress"
+  },
+  {
+    "title": "SuperLocalMemory V3.3: The Living Brain -- Biologically-Inspired Forgetting, Cognitive Quantization, and Multi-Channel Retrieval for Zero-LLM Agent Memory Systems",
+    "authors": "Varun Pratap Bhardwaj",
+    "published": "2026-04-06",
+    "arxiv_id": "2604.04514v1",
+    "url": "http://arxiv.org/abs/2604.04514v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.04514v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "AI coding agents operate in a paradox: they possess vast parametric knowledge yet cannot remember a conversation from an hour ago. Existing memory systems store text in vector databases with single-channel retrieval, require cloud LLMs for core operations, and implement none of the cognitive processes that make human memory effective.\n  We present SuperLocalMemory V3.3 (\"The Living Brain\"), a local-first agent memory system implementing the full cognitive memory taxonomy with mathematical lifecycle dynamics. Building on the information-geometric foundations of V3.2 (arXiv:2603.14588), we introduce five contributions: (1) Fisher-Rao Quantization-Aware Distance (FRQAD) -- a new metric on the Gaussian statistical manifold achieving 100% precision at preferring high-fidelity embeddings over quantized ones (vs 85.6% for cosine), with zero prior art; (2) Ebbinghaus Adaptive Forgetting with lifecycle-aware quantization -- the first mathematical forgetting curve in local agent memory coupled to progressive embedding compression, achieving 6.7x discriminative power; (3) 7-channel cognitive retrieval spanning semantic, keyword, entity graph, temporal, spreading activation, consolidation, and Hopfield associative channels, achieving 70.4% on LoCoMo in zero-LLM Mode A; (4) memory parameterization implementing Long-Term Implicit memory via soft prompts; (5) zero-friction auto-cognitive pipeline automating the complete memory lifecycle.\n  On LoCoMo, V3.3 achieves 70.4% in Mode A (zero-LLM), with +23.8pp on multi-hop and +12.7pp on adversarial. V3.2 achieved 74.8% Mode A and 87.7% Mode C; the 4.4pp gap reflects a deliberate architectural trade-off. SLM V3.3 is open source under the Elastic License 2.0, runs entirely on CPU, with over 5,000 monthly downloads.",
+    "code_links": [
+      "https://github.com/qualixar/superlocalmemory"
+    ],
+    "comment": "19 pages, 4 figures, 11 tables. Third paper in the SuperLocalMemory trilogy. Code: https://github.com/qualixar/superlocalmemory (v3.3.26). npm: superlocalmemory. PyPI: superlocalmemory"
+  },
+  {
+    "title": "A Logical-Rule Autoencoder for Interpretable Recommendations",
+    "authors": "Jinhao Pan, Bowen Wei, Ziwei Zhu",
+    "published": "2026-04-05",
+    "arxiv_id": "2604.04270v1",
+    "url": "http://arxiv.org/abs/2604.04270v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.04270v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Most deep learning recommendation models operate as black boxes, relying on latent representations that obscure their decision process. This lack of intrinsic interpretability raises concerns in applications that require transparency and accountability. In this work, we propose a Logical-rule Interpretable Autoencoder (LIA) for collaborative filtering that is interpretable by design. LIA introduces a learnable logical rule layer in which each rule neuron is equipped with a gate parameter that automatically selects between AND and OR operators during training, enabling the model to discover diverse logical patterns directly from data. To support functional completeness without doubling the input dimensionality, LIA encodes negation through the sign of connection weights, providing a parameter-efficient mechanism for expressing both positive and negated item conditions within each rule. By learning explicit, human-readable reconstruction rules, LIA allows users to directly trace the decision process behind each recommendation. Extensive experiments show that our method achieves improved recommendation performance over traditional baselines while remaining fully interpretable. Code and data are available at https://github.com/weibowen555/LIA.",
+    "code_links": [
+      "https://github.com/weibowen555/LIA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "A Semi-Automated Annotation Workflow for Paediatric Histopathology Reports Using Small Language Models",
+    "authors": "Avish Vijayaraghavan, Jaskaran Singh Kawatra, Sebin Sabu, Jonny Sheldon, Will Poulett, Alex Eze, Daniel Key, John Booth, Shiren Patel, Jonny Pearson, Dan Schofield, Jonathan Hope, Pavithra Rajendran, Neil Sebire",
+    "published": "2026-04-05",
+    "arxiv_id": "2604.04168v2",
+    "url": "http://arxiv.org/abs/2604.04168v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.04168v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Electronic Patient Record (EPR) systems contain valuable clinical information, but much of it is trapped in unstructured text, limiting its use for research and decision-making. Large language models can extract such information but require substantial computational resources to run locally, and sending sensitive clinical data to cloud-based services, even when deidentified, raises significant patient privacy concerns. In this study, we develop a resource-efficient semi-automated annotation workflow using small language models (SLMs) to extract structured information from unstructured EPR data, focusing on paediatric histopathology reports. As a proof-of-concept, we apply the workflow to paediatric renal biopsy reports, a domain chosen for its constrained diagnostic scope and well-defined underlying biology. We develop the workflow iteratively with clinical oversight across three meetings, manually annotating 400 reports from a dataset of 2,111 at Great Ormond Street Hospital as a gold standard, while developing an automated information extraction approach using SLMs. We frame extraction as a Question-Answering task grounded by clinician-guided entity guidelines and few-shot examples, evaluating five instruction-tuned SLMs with a disagreement modelling framework to prioritise reports for clinical review. Gemma 2 2B achieves the highest accuracy at 84.3%, outperforming off-the-shelf models including spaCy (74.3%), BioBERT-SQuAD (62.3%), RoBERTa-SQuAD (59.7%), and GLiNER (60.2%). Entity guidelines improved performance by 7-19% over the zero-shot baseline, and few-shot examples by 6-38%, though their benefits do not compound when combined. These results demonstrate that SLMs can extract structured information from specialised clinical domains on CPU-only infrastructure with minimal clinician involvement. Our code is available at https://github.com/gosh-dre/nlp_renal_biopsy.",
+    "code_links": [
+      "https://github.com/gosh-dre/nlp_renal_biopsy"
+    ],
+    "comment": "36 pages, includes supplementary information"
+  },
+  {
+    "title": "FLAME: Condensing Ensemble Diversity into a Single Network for Efficient Sequential Recommendation",
+    "authors": "WooJoo Kim, JunYoung Kim, JaeHyung Lim, SeongJin Choi, SeongKu Kang, HwanJo Yu",
+    "published": "2026-04-05",
+    "arxiv_id": "2604.04038v1",
+    "url": "http://arxiv.org/abs/2604.04038v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.04038v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential recommendation requires capturing diverse user behaviors, which a single network often fails to capture. While ensemble methods mitigate this by leveraging multiple networks, training them all from scratch leads to high computational cost and instability from noisy mutual supervision. We propose {\\bf F}rozen and {\\bf L}earnable networks with {\\bf A}ligned {\\bf M}odular {\\bf E}nsemble ({\\bf FLAME}), a novel framework that condenses ensemble-level diversity into a single network for efficient sequential recommendation. During training, FLAME simulates exponential diversity using only two networks via {\\it modular ensemble}. By decomposing each network into sub-modules (e.g., layers or blocks) and dynamically combining them, FLAME generates a rich space of diverse representation patterns. To stabilize this process, we pretrain and freeze one network to serve as a semantic anchor and employ {\\it guided mutual learning}. This aligns the diverse representations into the space of the remaining learnable network, ensuring robust optimization. Consequently, at inference, FLAME utilizes only the learnable network, achieving ensemble-level performance with zero overhead compared to a single network. Experiments on six datasets show that FLAME outperforms state-of-the-art baselines, achieving up to 7.69$\\times$ faster convergence and 9.70\\% improvement in NDCG@20. We provide the source code of FLAME at https://github.com/woo-joo/FLAME_SIGIR26.",
+    "code_links": [
+      "https://github.com/woo-joo/FLAME_SIGIR26"
+    ],
+    "comment": "Accepted to SIGIR 2026 full papers track"
+  },
+  {
+    "title": "MisEdu-RAG: A Misconception-Aware Dual-Hypergraph RAG for Novice Math Teachers",
+    "authors": "Zhihan Guo, Rundong Xue, Yuting Lu, Jionghao Lin",
+    "published": "2026-04-05",
+    "arxiv_id": "2604.04036v1",
+    "url": "http://arxiv.org/abs/2604.04036v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.04036v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Novice math teachers often encounter students' mistakes that are difficult to diagnose and remediate. Misconceptions are especially challenging because teachers must explain what went wrong and how to solve them. Although many existing large language model (LLM) platforms can assist in generating instructional feedback, these LLMs loosely connect pedagogical knowledge and student mistakes, which might make the guidance less actionable for teachers. To address this gap, we propose MisEdu-RAG, a dual-hypergraph-based retrieval-augmented generation (RAG) framework that organizes pedagogical knowledge as a concept hypergraph and real student mistake cases as an instance hypergraph. Given a query, MisEdu-RAG performs a two-stage retrieval to gather connected evidence from both layers and generates a response grounded in the retrieved cases and pedagogical principles. We evaluate on \\textit{MisstepMath}, a dataset of math mistakes paired with teacher solutions, as a benchmark for misconception-aware retrieval and response generation across topics and error types. Evaluation results on \\textit{MisstepMath} show that, compared with baseline models, MisEdu-RAG improves token-F1 by 10.95\\% and yields up to 15.3\\% higher five-dimension response quality, with the largest gains on \\textit{Diversity} and \\textit{Empowerment}. To verify its applicability in practical use, we further conduct a pilot study through a questionnaire survey of 221 teachers and interviews with 6 novices. The findings suggest that MisEdu-RAG provides diagnosis results and concrete teaching moves for high-demand misconception scenarios. Overall, MisEdu-RAG demonstrates strong potential for scalable teacher training and AI-assisted instruction for misconception handling. Our code is available on GitHub: https://github.com/GEMLab-HKU/MisEdu-RAG.",
+    "code_links": [
+      "https://github.com/GEMLab-HKU/MisEdu-RAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Tencent Advertising Algorithm Challenge 2025: All-Modality Generative Recommendation",
+    "authors": "Junwei Pan, Wei Xue, Chao Zhou, Xing Zhou, Lunan Fan, Yanbo Wang, Haoran Xin, Zhiyu Hu, Yaozheng Wang, Fengye Xu, Yurong Yang, Xiaotian Li, Junbang Huo, Wentao Ning, Yuliang Sun, Chengguo Yin, Jun Zhang, Shudong Huang, Lei Xiao, Huan Yu, Irwin King, Haijie Gu, Jie Jiang",
+    "published": "2026-04-04",
+    "arxiv_id": "2604.04976v1",
+    "url": "http://arxiv.org/abs/2604.04976v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.04976v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommender systems are rapidly emerging as a new paradigm for recommendation, where collaborative identifiers and/or multi-modal content are mapped into discrete token spaces and user behavior is modelled with autoregressive sequence models. Despite progress on multi-modal recommendation datasets, there is still a lack of public benchmarks that jointly offer large-scale, realistic and fully all-modality data designed specifically for generative recommendation (GR) in industrial advertising. To foster research in this direction, we organised the Tencent Advertising Algorithm Challenge 2025, a global competition built on top of two all-modality datasets for GR: TencentGR-1M and TencentGR-10M. Both datasets are constructed from real de-identified Tencent Ads logs and contain rich collaborative IDs and multi-modal representations extracted with state-of-the-art embedding models. The preliminary track (TencentGR-1M) provides 1 million user sequences with up to 100 interacted items each, where each interaction is labeled with exposure and click signals, while the final track (TencentGR-10M) scales this to 10 million users and explicitly distinguishes between click and conversion events at both the sequence and target level. This paper presents the task definition, data construction process, feature schema, baseline GR model, evaluation protocol, and key findings from top-ranked and award-winning solutions. Our datasets focus on multi-modal sequence generation in an advertising setting and introduce weighted evaluation for high-value conversion events. We release our datasets at https://huggingface.co/datasets/TAAC2025 and baseline implementations at https://github.com/TencentAdvertisingAlgorithmCompetition/baseline_2025 to enable future research on all-modality generative recommendation at an industrial scale. The official website is https://algo.qq.com/2025.",
+    "code_links": [
+      "https://github.com/TencentAdvertisingAlgorithmCompetition/baseline_2025"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MMP-Refer: Multimodal Path Retrieval-augmented LLMs For Explainable Recommendation",
+    "authors": "Xiangchen Pan, Wei Wei",
+    "published": "2026-04-04",
+    "arxiv_id": "2604.03666v1",
+    "url": "http://arxiv.org/abs/2604.03666v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03666v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Explainable recommendations help improve the transparency and credibility of recommendation systems, and play an important role in personalized recommendation scenarios. At present, methods for explainable recommendation based on large language models(LLMs) often consider introducing collaborative information to enhance the personalization and accuracy of the model, but ignore the multimodal information in the recommendation dataset; In addition, collaborative information needs to be aligned with the semantic space of LLM. Introducing collaborative signals through retrieval paths is a good choice, but most of the existing retrieval path collection schemes use the existing Explainable GNN algorithms. Although these methods are effective, they are relatively unexplainable and not be suitable for the recommendation field.\n  To address the above challenges, we propose MMP-Refer, a framework using \\textbf{M}ulti\\textbf{M}odal Retrieval \\textbf{P}aths with \\textbf{Re}trieval-augmented LLM \\textbf{F}or \\textbf{E}xplainable \\textbf{R}ecommendation. We use a sequential recommendation model based on joint residual coding to obtain multimodal embeddings, and design a heuristic search algorithm to obtain retrieval paths by multimodal embeddings; In the generation phase, we integrated a trainable lightweight collaborative adapter to map the graph encoding of interaction subgraphs to the semantic space of the LLM, as soft prompts to enhance the understanding of interaction information by the LLM. Extensive experiments have demonstrated the effectiveness of our approach. Codes and data are available at https://github.com/pxcstart/MMP-Refer.",
+    "code_links": [
+      "https://github.com/pxcstart/MMP-Refer"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Love Me, Love My Label: Rethinking the Role of Labels in Prompt Retrieval for Visual In-Context Learning",
+    "authors": "Tianci Luo, Haohao Pan, Jinpeng Wang, Niu Lian, Xinrui Chen, Bin Chen, Shu-Tao Xia, Chun Yuan",
+    "published": "2026-04-04",
+    "arxiv_id": "2604.03657v1",
+    "url": "http://arxiv.org/abs/2604.03657v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03657v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Visual in-context learning (VICL) enables visual foundation models to handle multiple tasks by steering them with demonstrative prompts. The choice of such prompts largely influences VICL performance, standing out as a key challenge. Prior work has made substantial progress on prompt retrieval and reranking strategies, but mainly focuses on prompt images while overlooking labels. We reveal these approaches sometimes get visually similar but label-inconsistent prompts, which potentially degrade VICL performance. On the other hand, higher label consistency between query and prompts preferably indicates stronger VICL results. Motivated by these findings, we develop a framework named LaPR (Label-aware Prompt Retrieval), which highlights the role of labels in prompt selection. Our framework first designs an image-label joint representation for prompts to incorporate label cues explicitly. Besides, to handle unavailable query labels at test time, we introduce a mixture-of-expert mechanism to the dual encoders with query-adaptive routing. Each expert is expected to capture a specific label mode, while the router infers query-adaptive mixture weights and helps to learn label-aware representation. We carefully design alternative optimization for experts and router, with a VICL performance-guided contrastive loss and a label-guided contrastive loss, respectively. Extensive experiments show promising and consistent improvement of LaPR on in-context segmentation, detection, and colorization tasks. Moreover, LaPR generalizes well across feature extractors and cross-fold scenarios, suggesting the importance of label utilization in prompt retrieval for VICL. Code is available at https://github.com/luotc-why/CVPR26-LaPR.",
+    "code_links": [
+      "https://github.com/luotc-why/CVPR26-LaPR"
+    ],
+    "comment": "Accepted to CVPR 2026. 10 pages, 5 figures, 3 tables"
+  },
+  {
+    "title": "Joint Behavior-guided and Modality-coherence Conditional Graph Diffusion Denoising for Multi Modal Recommendation",
+    "authors": "Xiangchen Pan, Wei Wei",
+    "published": "2026-04-04",
+    "arxiv_id": "2604.03654v1",
+    "url": "http://arxiv.org/abs/2604.03654v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03654v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In recent years, multimodal recommendation has received significant attention and achieved remarkable success in GCN-based recommendation methods. However, there are two key challenges here: (1) There is a significant amount of redundant information in multimodal features that is unrelated to user preferences. Directly injecting multimodal features into the interaction graph can affect the collaborative feature learning between users and items. (2) There are false negative and false positive behaviors caused by system errors such as accidental clicks and non-exposure. This feedback bias can affect the ranking accuracy of training sample pairs, thereby reducing the recommendation accuracy of the model.\n  To address these challenges, this work proposes a Joint Behavior-guided and Modal-consistent Conditional Graph Diffusion Model (JBM-Diff) for joint denoising of multimodal features and user feedback. We design a diffusion model conditioned on collaborative features for each modal feature to remove preference-irrelevant information, and enhance the alignment between collaborative features and modal semantic information through multi-view message propagation and feature fusion. Finally, we detect the partial order consistency of sample pairs from a behavioral perspective based on learned modal preferences, set the credibility for sample pairs, and achieve data augmentation. Extensive experiments on three public datasets demonstrate the effectiveness of this work. Codes are available at https://github.com/pxcstart/JBMDiff.",
+    "code_links": [
+      "https://github.com/pxcstart/JBMDiff"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Imagine Before Concentration: Diffusion-Guided Registers Enhance Partially Relevant Video Retrieval",
+    "authors": "Jun Li, Xuhang Lou, Jinpeng Wang, Yuting Wang, Yaowei Wang, Shu-Tao Xia, Bin Chen",
+    "published": "2026-04-04",
+    "arxiv_id": "2604.03653v1",
+    "url": "http://arxiv.org/abs/2604.03653v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03653v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Partially Relevant Video Retrieval (PRVR) aims to retrieve untrimmed videos based on text queries that describe only partial events. Existing methods suffer from incomplete global contextual perception, struggling with query ambiguity and local noise induced by spurious responses. To address these issues, we propose DreamPRVR, which adopts a coarse-to-fine representation learning paradigm. The model first generates global contextual semantic registers as coarse-grained highlights spanning the entire video and then concentrates on fine-grained similarity optimization for precise cross-modal matching. Concretely, these registers are generated by initializing from the video-centric distribution produced by a probabilistic variational sampler and then iteratively refined via a text-supervised truncated diffusion model. During this process, textual semantic structure learning constructs a well-formed textual latent space, enhancing the reliability of global perception. The registers are then adaptively fused with video tokens through register-augmented Gaussian attention blocks, enabling context-aware feature learning. Extensive experiments show that DreamPRVR outperforms state-of-the-art methods. Code is released at https://github.com/lijun2005/CVPR26-DreamPRVR.",
+    "code_links": [
+      "https://github.com/lijun2005/CVPR26-DreamPRVR"
+    ],
+    "comment": "Accepted to CVPR 2026. 15 pages, 7 figures, 3 tables"
+  },
+  {
+    "title": "User-Aware Conditional Generative Total Correlation Learning for Multi-Modal Recommendation",
+    "authors": "Jing Du, Zesheng Ye, Congbo Ma, Feng Liu, Flora. D. Salim",
+    "published": "2026-04-03",
+    "arxiv_id": "2604.03014v1",
+    "url": "http://arxiv.org/abs/2604.03014v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.03014v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multi-modal recommendation (MMR) enriches item representations by introducing item content, e.g., visual and textual descriptions, to improve upon interaction-only recommenders. The success of MMR hinges on aligning these content modalities with user preferences derived from interaction data, yet dominant practices based on disentangling modality-invariant preference-driving signals from modality-specific preference-irrelevant noises are flawed. First, they assume a one-size-fits-all relevance of item content to user preferences for all users, which contradicts the user-conditional fact of preferences. Second, they optimize pairwise contrastive losses separately toward cross-modal alignment, systematically ignoring higher-order dependencies inherent when multiple content modalities jointly influence user choices. In this paper, we introduce GTC, a conditional Generative Total Correlation learning framework. We employ an interaction-guided diffusion model to perform user-aware content feature filtering, preserving only personalized features relevant to each individual user. Furthermore, to capture complete cross-modal dependencies, we optimize a tractable lower bound of the total correlation of item representations across all modalities. Experiments on standard MMR benchmarks show GTC consistently outperforms state-of-the-art, with gains of up to 28.30% in NDCG@5. Ablation studies validate both conditional preference-driven feature filtering and total correlation optimization, confirming the ability of GTC to model user-conditional relationships in MMR tasks. The code is available at: https://github.com/jingdu-cs/GTC.",
+    "code_links": [
+      "https://github.com/jingdu-cs/GTC"
+    ],
+    "comment": "11 pages, 7 figures, 3 tables"
+  },
+  {
+    "title": "AV-SQL: Decomposing Complex Text-to-SQL Queries with Agentic Views",
+    "authors": "Minh Tam Pham, Trinh Pham, Tong Chen, Hongzhi Yin, Quoc Viet Hung Nguyen, Thanh Tam Nguyen",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.07041v1",
+    "url": "http://arxiv.org/abs/2604.07041v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07041v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text-to-SQL is the task of translating natural language queries into executable SQL for a given database, enabling non-expert users to access structured data without writing SQL manually. Despite rapid advances driven by large language models (LLMs), existing approaches still struggle with complex queries in real-world settings, where database schemas are large and questions require multi-step reasoning over many interrelated tables. In such cases, providing the full schema often exceeds the context window, while one-shot generation frequently produces non-executable SQL due to syntax errors and incorrect schema linking. To address these challenges, we introduce AV-SQL, a framework that decomposes complex Text-to-SQL into a pipeline of specialized LLM agents. Central to AV-SQL is the concept of agentic views: agent-generated Common Table Expressions (CTEs) that encapsulate intermediate query logic and filter relevant schema elements from large schemas. AV-SQL operates in three stages: (1) a rewriter agent compresses and clarifies the input query; (2) a view generator agent processes schema chunks to produce agentic views; and (3) a planner, generator, and revisor agent collaboratively compose these views into the final SQL query. Extensive experiments show that AV-SQL achieves 70.38% execution accuracy on the challenging Spider 2.0 benchmark, outperforming state-of-the-art baselines, while remaining competitive on standard datasets with 85.59% on Spider, 72.16% on BIRD and 63.78% on KaggleDBQA. Our source code is available at https://github.com/pminhtam/AV-SQL.",
+    "code_links": [
+      "https://github.com/pminhtam/AV-SQL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "SQLStructEval: Structural Evaluation of LLM Text-to-SQL Generation",
+    "authors": "Yixi Zhou, Fan Zhang, Zhiqiao Guo, Yu Chen, Haipeng Zhang, Preslav Nakov, Zhuohan Xie",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.06736v1",
+    "url": "http://arxiv.org/abs/2604.06736v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.06736v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Despite strong performance on Text-to-SQL benchmarks, it remains unclear whether LLM-generated SQL programs are structurally reliable. In this work, we investigate the structural behavior of LLM-generated SQL queries and introduce SQLStructEval, a framework for analyzing program structures through canonical abstract syntax tree (AST) representations. Our experiments on the Spider benchmark show that modern LLMs often produce structurally diverse queries for the same input, even when execution results are correct, and that such variance is frequently triggered by surface-level input changes such as paraphrases or schema presentation. We further show that generating queries in a structured space via a compile-style pipeline can improve both execution accuracy and structural consistency. These findings suggest that structural reliability is a critical yet overlooked dimension for evaluating LLM-based program generation systems. Our code is available at https://anonymous.4open.science/r/StructEval-2435.",
+    "code_links": [],
+    "comment": "17 pages, including figures and tables"
+  },
+  {
+    "title": "Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects",
+    "authors": "Hanxi Li, Jianan Zhou, Jiale Lao, Yibo Wang, Zhengmao Ye, Yang Cao, Junfen Wang, Mingjie Tang",
+    "published": "2026-04-07",
+    "arxiv_id": "2604.05480v1",
+    "url": "http://arxiv.org/abs/2604.05480v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.05480v1",
+    "category": "databases",
+    "primary_category": "cs.CR",
+    "abstract": "Vector databases serve as the retrieval backbone of modern AI applications, yet their security remains largely unexplored. We propose the Black-Hole Attack, a poisoning attack that injects a small number of malicious vectors near the geometric center of the stored vectors. These injected vectors attract queries like a black hole and frequently appear in the top-k retrieval results for most queries. This attack is enabled by a phenomenon we term centrality-driven hubness: in high-dimensional embedding spaces, vectors near the centroid become nearest neighbors of a disproportionately large number of other vectors, while this centroid region is nearly empty in practice. The attack shows that vectors in a vector database cannot be blindly trusted: geometric defects in high-dimensional embeddings make retrieval inherently vulnerable. Our experiments show that malicious vectors appear in up to 99.85% of top-10 results. Additionally, we evaluate existing hubness mitigation methods as potential defenses against the Black-Hole Attack. The results show that these methods either significantly reduce retrieval accuracy or provide limited protection, which indicates the need for more robust defenses against the Black-Hole Attack.",
+    "code_links": [
+      "https://github.com/hanxi19/Black_Hole_Attack_for_Vector_Database"
+    ],
+    "comment": "Source code: https://github.com/hanxi19/Black_Hole_Attack_for_Vector_Database"
+  },
+  {
+    "title": "Automating Database-Native Function Code Synthesis with LLMs",
+    "authors": "Wei Zhou, Xuanhe Zhou, Qikang He, Guoliang Li, Bingsheng He, Quanqing Xu, Fan Wu",
+    "published": "2026-04-02",
+    "arxiv_id": "2604.06231v1",
+    "url": "http://arxiv.org/abs/2604.06231v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.06231v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Database systems incorporate an ever-growing number of functions in their kernels (a.k.a., database native functions) for scenarios like new application support and business migration. This growth causes an urgent demand for automatic database native function synthesis. While recent advances in LLM-based code generation (e.g., Claude Code) show promise, they are too generic for database-specific development. They often hallucinate or overlook critical context because database function synthesis is inherently complex and error-prone, where synthesizing a single function may involve registering multiple function units, linking internal references, and implementing logic correctly. To this end, we propose DBCooker, an LLM-based system for automatically synthesizing database native functions. It consists of three components. First, the function characterization module aggregates multi-source declarations, identifies function units that require specialized coding, and traces cross-unit dependencies. Second, we design operations to address the main synthesis challenges: (1) a pseudo-code-based coding plan generator that constructs structured implementation skeletons by identifying key elements such as reusable referenced functions; (2) a hybrid fill-in-the-blank model guided by probabilistic priors and component awareness to integrate core logic with reusable routines; and (3) three-level progressive validation, including syntax checking, standards compliance, and LLM-guided semantic verification. Finally, an adaptive orchestration strategy unifies these operations with existing tools and dynamically sequences them via the orchestration history of similar functions. Results show that DBCooker outperforms other methods on SQLite, PostgreSQL, and DuckDB (34.55% higher accuracy on average), and can synthesize new functions absent in the latest SQLite (v3.50).",
+    "code_links": [
+      "https://github.com/weAIDB/OpenCook"
+    ],
+    "comment": "Please visit our homepage at: https://code4db.github.io/hi-opencook/. The code is available at: https://github.com/weAIDB/OpenCook"
+  },
+  {
+    "title": "DaiSy: A Library for Scalable Data Series Similarity Search",
+    "authors": "Francesca Del Gaudio, Manos Chatzakis, Gayathiri Ravendirane, Botao Peng, Themis Palpanas",
+    "published": "2026-03-29",
+    "arxiv_id": "2603.27719v1",
+    "url": "http://arxiv.org/abs/2603.27719v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.27719v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Exact similarity search over large collections of data series is a fundamental operation in modern applications, yet existing solutions are often fragmented, specialized, or tailored to specific execution environments. In this paper, we present DaiSy, a unified library for exact data series similarity search that integrates multiple state-of-the-art algorithms within a single, coherent framework. DaiSy is the first library to support exact similarity search across diverse execution environments, including implementations for disk-based, in-memory, GPU-accelerated, and distributed scalable similarity search. Although designed for data series, DaiSy is also directly applicable to exact similarity search over vector data, enabling its use in a broader range of applications. The library supports interfaces in both C++ and Python, enabling users to easily integrate its functionality into a variety of tasks. DaiSy is open-sourced and available at: https://github.com/MChatzakis/DaiSy.",
+    "code_links": [
+      "https://github.com/MChatzakis/DaiSy"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Hierarchical Spatial-Temporal Graph-Enhanced Model for Map-Matching",
+    "authors": "Anjun Gao, Zhenglin Wan, Pingfu Chao, Shunyu Yao",
+    "published": "2026-03-25",
+    "arxiv_id": "2603.24054v1",
+    "url": "http://arxiv.org/abs/2603.24054v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.24054v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The integration of GNSS data into portable devices has led to the generation of vast amounts of trajectory data, which is crucial for applications such as map-matching. To tackle the limitations of rule-based methods, recent works in deep learning for trajectory-related tasks occur. However, existing models remain challenging due to issues such as the difficulty of large-scale data labeling, ineffective modeling of spatial-temporal relationships, and discrepancies between training and test data distributions. To tackle these challenges, we propose HSTGMatch, a novel model designed to enhance map-matching performance. Our approach involves a two-stage process: hierarchical self-supervised learning and spatial-temporal supervised learning. We introduce a hierarchical trajectory representation, leveraging both grid cells and geographic tuples to capture moving patterns effectively. The model constructs an Adaptive Trajectory Adjacency Graph to dynamically capture spatial relationships, optimizing GATs for improved efficiency. Furthermore, we incorporate a Spatial-Temporal Factor to extract relevant features and employ a decay coefficient to address variations in trajectory length. Our extensive experiments demonstrate the model's superior performance, module effectiveness, and robustness, providing a promising solution for overcoming the existing limitations in map-matching applications. The source code of HSTGMatch is publicly available on GitHub at https://github.com/Nerooo-g/HSTGMatch.",
+    "code_links": [
+      "https://github.com/Nerooo-g/HSTGMatch"
+    ],
+    "comment": null
+  },
+  {
+    "title": "flexvec: SQL Vector Retrieval with Programmatic Embedding Modulation",
+    "authors": "Damian Delmas",
+    "published": "2026-03-23",
+    "arxiv_id": "2603.22587v1",
+    "url": "http://arxiv.org/abs/2603.22587v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.22587v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "As AI agents become the primary consumers of retrieval APIs, there is an opportunity to expose more of the retrieval pipeline to the caller. flexvec is a retrieval kernel that exposes the embedding matrix and score array as a programmable surface, allowing arithmetic operations on both before selection. We refer to composing operations on this surface at query time as Programmatic Embedding Modulation (PEM). This paper describes a set of such operations and integrates them into a SQL interface via a query materializer that facilitates composable query primitives. On a production corpus of 240,000 chunks, three composed modulations execute in 19 ms end-to-end on a desktop CPU without approximate indexing. At one million chunks, the same operations execute in 82 ms.",
+    "code_links": [
+      "https://github.com/damiandelmas/flexvec"
+    ],
+    "comment": "15 pages, 1 figure, 7 tables, 4 appendices. Code available at https://github.com/damiandelmas/flexvec"
+  },
+  {
+    "title": "Can AI Agents Answer Your Data Questions? A Benchmark for Data Agents",
+    "authors": "Ruiying Ma, Shreya Shankar, Ruiqi Chen, Yiming Lin, Sepanta Zeighami, Rajoshi Ghosh, Abhinav Gupta, Anushrut Gupta, Tanmai Gopal, Aditya G. Parameswaran",
+    "published": "2026-03-21",
+    "arxiv_id": "2603.20576v1",
+    "url": "http://arxiv.org/abs/2603.20576v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20576v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Users across enterprises increasingly rely on AI agents to query their data through natural language. However, building reliable data agents remains difficult because real-world data is often fragmented across multiple heterogeneous database systems, with inconsistent references and information buried in unstructured text. Existing benchmarks only tackle individual pieces of this problem -- e.g., translating natural-language questions into SQL queries, answering questions over small tables provided in context -- but do not evaluate the full pipeline of integrating, transforming, and analyzing data across multiple database systems. To fill this gap, we present the Data Agent Benchmark (DAB), grounded in a formative study of enterprise data agent workloads across six industries. DAB comprises 54 queries across 12 datasets, 9 domains, and 4 database management systems. On DAB, the best frontier model (Gemini-3-Pro) achieves only 38% pass@1 accuracy. We benchmark five frontier LLMs, analyze their failure modes, and distill takeaways for future data agent development. Our benchmark and experiment code are published at github.com/ucbepic/DataAgentBench.",
+    "code_links": [
+      "https://github.com/ucbepic/DataAgentBench"
+    ],
+    "comment": "22 pages, 7 figures, 9 tables"
+  },
+  {
+    "title": "RouterKGQA: Specialized--General Model Routing for Constraint-Aware Knowledge Graph Question Answering",
+    "authors": "Bo Yuan, Hexuan Deng, Xuebo Liu, Min Zhang",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.20017v1",
+    "url": "http://arxiv.org/abs/2603.20017v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20017v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Knowledge graph question answering (KGQA) is a promising approach for mitigating LLM hallucination by grounding reasoning in structured and verifiable knowledge graphs. Existing approaches fall into two paradigms: retrieval-based methods utilize small specialized models, which are efficient but often produce unreachable paths and miss implicit constraints, while agent-based methods utilize large general models, which achieve stronger structural grounding at substantially higher cost. We propose RouterKGQA, a framework for specialized--general model collaboration, in which a specialized model generates reasoning paths and a general model performs KG-guided repair only when needed, improving performance at minimal cost. We further equip the specialized with constraint-aware answer filtering, which reduces redundant answers. In addition, we design a more efficient general agent workflow, further lowering inference cost. Experimental results show that RouterKGQA outperforms the previous best by 3.57 points in F1 and 0.49 points in Hits@1 on average across benchmarks, while requiring only 1.15 average LLM calls per question. Codes and models are available at https://github.com/Oldcircle/RouterKGQA.",
+    "code_links": [
+      "https://github.com/Oldcircle/RouterKGQA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "A Super Fast K-means for Indexing Vector Embeddings",
+    "authors": "Leonardo Kuffo, Sven Hepkema, Peter Boncz",
+    "published": "2026-03-20",
+    "arxiv_id": "2603.20009v1",
+    "url": "http://arxiv.org/abs/2603.20009v1",
+    "pdf_url": "https://arxiv.org/pdf/2603.20009v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "We present SuperKMeans: a k-means variant designed for clustering collections of high-dimensional vector embeddings. SuperKMeans' clustering is up to 7x faster than FAISS and Scikit-Learn on modern CPUs and up to 4x faster than cuVS on GPUs (Figure 1), while maintaining the quality of the resulting centroids for vector similarity search tasks. SuperKMeans acceleration comes from reducing data-access and compute overhead by reliably and efficiently pruning dimensions that are not needed to assign a vector to a centroid. Furthermore, we present Early Termination by Recall, a novel mechanism that early-terminates k-means when the quality of the centroids for retrieval tasks stops improving across iterations. In practice, this further reduces runtimes without compromising retrieval quality. We open-source our implementation at https://github.com/cwida/SuperKMeans",
+    "code_links": [
+      "https://github.com/cwida/SuperKMeans"
+    ],
+    "comment": null
+  }
+]
