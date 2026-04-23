@@ -1,0 +1,510 @@
+[
+  {
+    "title": "Enhancing Research Idea Generation through Combinatorial Innovation and Multi-Agent Iterative Search Strategies",
+    "authors": "Shuai Chen, Chengzhi Zhang",
+    "published": "2026-04-22",
+    "arxiv_id": "2604.20548v1",
+    "url": "http://arxiv.org/abs/2604.20548v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.20548v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Scientific progress depends on the continual generation of innovative re-search ideas. However, the rapid growth of scientific literature has greatly increased the cost of knowledge filtering, making it harder for researchers to identify novel directions. Although existing large language model (LLM)-based methods show promise in research idea generation, the ideas they produce are often repetitive and lack depth. To address this issue, this study proposes a multi-agent iterative planning search strategy inspired by com-binatorial innovation theory. The framework combines iterative knowledge search with an LLM-based multi-agent system to generate, evaluate, and re-fine research ideas through repeated interaction, with the goal of improving idea diversity and novelty. Experiments in the natural language processing domain show that the proposed method outperforms state-of-the-art base-lines in both diversity and novelty. Further comparison with ideas derived from top-tier machine learning conference papers indicates that the quality of the generated ideas falls between that of accepted and rejected papers. These results suggest that the proposed framework is a promising approach for supporting high-quality research idea generation. The source code and dataset used in this paper are publicly available on Github repository: https://github.com/ChenShuai00/MAGenIdeas. The demo is available at https://huggingface.co/spaces/cshuai20/MAGenIdeas.",
+    "code_links": [
+      "https://github.com/ChenShuai00/MAGenIdeas"
+    ],
+    "comment": "Scientometrics"
+  },
+  {
+    "title": "Break the Optimization Barrier of LLM-Enhanced Recommenders: A Theoretical Analysis and Practical Framework",
+    "authors": "Zhangchi Zhu, Wei Zhang",
+    "published": "2026-04-22",
+    "arxiv_id": "2604.20490v1",
+    "url": "http://arxiv.org/abs/2604.20490v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.20490v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large language model (LLM)-enhanced recommendation models inject LLM representations into backbone recommenders to exploit rich item text without inference-time LLM cost. However, we find that existing LLM-enhanced methods significantly hinder the optimization of backbone models, resulting in high training losses that are difficult to reduce. To address it, we establish a comprehensive theoretical analysis of local optimization curvature and identify two key causes: 1) large norm disparity and 2) semantic-collaboration misaligned angular clustering of LLM representations. Guided by these insights, we propose Training-Friendly LLM-Enhanced Recommender (TF-LLMER), a lightweight framework with two key components. First, we highlight the necessity of item embedding normalization to eliminate norm-driven instability and achieve provable control over optimization conditioning. Second, we introduce Rec-PCA, a recommendation-aware dimensionality reduction method that injects collaborative structure into the representation transformation to resolve semantic-collaboration misaligned angular clustering. It jointly optimizes semantic information retention and alignment with an item-item co-occurrence graph constructed from interaction histories. The graph captures collaborative structure, and alignment is promoted by penalizing total variation over the graph. Both theory and extensive experiments demonstrate that TF-LLMER significantly outperforms state-of-the-art methods. Our code is available at https://github.com/woriazzc/TF-LLMER.",
+    "code_links": [
+      "https://github.com/woriazzc/TF-LLMER"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Finding Duplicates in 1.1M BDD Steps: cukereuse, a Paraphrase-Robust Static Detector for Cucumber and Gherkin",
+    "authors": "Ali Hassaan Mughal, Noor Fatima, Muhammad Bilal",
+    "published": "2026-04-22",
+    "arxiv_id": "2604.20462v1",
+    "url": "http://arxiv.org/abs/2604.20462v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.20462v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.SE",
+    "abstract": "Behaviour-Driven Development (BDD) suites accumulate step-text duplication whose\n  maintenance cost is established in prior work. Existing detection techniques require\n  running the tests (Binamungu et al., 2018-2023) or are confined to a single\n  organisation (Irshad et al., 2020-2022), leaving a gap: a purely static,\n  paraphrase-robust, step-level detector usable on any repository. We fill the gap\n  with cukereuse, an open-source Python CLI combining exact hashing, Levenshtein\n  ratio, and sentence-transformer embeddings in a layered pipeline, released alongside\n  an empirical corpus of 347 public GitHub repositories, 23,667 parsed .feature\n  files, and 1,113,616 Gherkin steps. The step-weighted exact-duplicate rate is 80.2\n  %; the median-repository rate is 58.6 % (Spearman rho = 0.51 with size). The top\n  hybrid cluster groups 20.7k occurrences across 2.2k files. Against 1,020 pairs\n  manually labelled by the three authors under a released rubric (inter-annotator\n  Fleiss' kappa = 0.84 on a 60-pair overlap), we report precision, recall, and F1 with\n  bootstrap 95 % CIs under two protocols: the primary rubric and a score-free\n  second-pass relabelling. The strongest honest pair-level number is near-exact at F1\n  = 0.822 on score-free labels; the primary-rubric semantic F1 = 0.906 is inflated by\n  a stratification artefact that pins recall at 1.000. Lexical baselines\n  (SourcererCC-style, NiCad-style) reach primary F1 = 0.761 and 0.799. The paper also\n  presents a CDN-structured critique of Gherkin (Cognitive Dimensions of Notations);\n  eight of fourteen dimensions are rated problematic or unsupported. The tool, corpus,\n  labelled pairs, rubric, and pipeline are released under permissive licences.",
+    "code_links": [
+      "https://github.com/amughalbscs16/cukereuse-release"
+    ],
+    "comment": "39 pages, 9 figures, 8 tables. Under review at Software Quality Journal. Tool, corpus, labelled benchmark, and rubric released at https://github.com/amughalbscs16/cukereuse-release under Apache-2.0"
+  },
+  {
+    "title": "HaS: Accelerating RAG through Homology-Aware Speculative Retrieval",
+    "authors": "Peng Peng, Weiwei Lin, Wentai Wu, Xinyang Wang, Yongheng Liu",
+    "published": "2026-04-22",
+    "arxiv_id": "2604.20452v1",
+    "url": "http://arxiv.org/abs/2604.20452v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.20452v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval-Augmented Generation (RAG) expands the knowledge boundary of large language models (LLMs) at inference by retrieving external documents as context. However, retrieval becomes increasingly time-consuming as the knowledge databases grow in size. Existing acceleration strategies either compromise accuracy through approximate retrieval, or achieve marginal gains by reusing results of strictly identical queries. We propose HaS, a homology-aware speculative retrieval framework that performs low-latency speculative retrieval over restricted scopes to obtain candidate documents, followed by validating whether they contain the required knowledge. The validation, grounded in the homology relation between queries, is formulated as a homologous query re-identification task: once a previously observed query is identified as a homologous re-encounter of the incoming query, the draft is deemed acceptable, allowing the system to bypass slow full-database retrieval. Benefiting from the prevalence of homologous queries under real-world popularity patterns, HaS achieves substantial efficiency gains. Extensive experiments demonstrate that HaS reduces retrieval latency by 23.74% and 36.99% across datasets with only a 1-2% marginal accuracy drop. As a plug-and-play solution, HaS also significantly accelerates complex multi-hop queries in modern agentic RAG pipelines. Source code is available at: https://github.com/ErrEqualsNil/HaS.",
+    "code_links": [
+      "https://github.com/ErrEqualsNil/HaS"
+    ],
+    "comment": "Accepted by ICDE 2026"
+  },
+  {
+    "title": "From Top-1 to Top-K: A Reproducibility Study and Benchmarking of Counterfactual Explanations for Recommender Systems",
+    "authors": "Quang-Huy Nguyen, Thanh-Hai Nguyen, Khac-Manh Thai, Duc-Hoang Pham, Huy-Son Nguyen, Cam-Van Thi Nguyen, Masoud Mansoury, Duc-Trong Le, Hoang-Quynh Le",
+    "published": "2026-04-21",
+    "arxiv_id": "2604.19663v1",
+    "url": "http://arxiv.org/abs/2604.19663v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.19663v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Counterfactual explanations (CEs) provide an intuitive way to understand recommender systems by identifying minimal modifications to user-item interactions that alter recommendation outcomes. Existing CE methods for recommender systems, however, have been evaluated under heterogeneous protocols, using different datasets, recommenders, metrics, and even explanation formats, which hampers reproducibility and fair comparison. Our paper systematically reproduces, re-implement, and re-evaluate eleven state-of-the-art CE methods for recommender systems, covering both native explainers (e.g., LIME-RS, SHAP, PRINCE, ACCENT, LXR, GREASE) and specific graph-based explainers originally proposed for GNNs. Here, a unified benchmarking framework is proposed to assess explainers along three dimensions: explanation format (implicit vs. explicit), evaluation level (item-level vs. list-level), and perturbation scope (user interaction vectors vs. user-item interaction graphs). Our evaluation protocol includes effectiveness, sparsity, and computational complexity metrics, and extends existing item-level assessments to top-K list-level explanations. Through extensive experiments on three real-world datasets and six representative recommender models, we analyze how well previously reported strengths of CE methods generalize across diverse setups. We observe that the trade-off between effectiveness and sparsity depends strongly on the specific method and evaluation setting, particularly under the explicit format; in addition, explainer performance remains largely consistent across item level and list level evaluations, and several graph-based explainers exhibit notable scalability limitations on large recommender graphs. Our results refine and challenge earlier conclusions about the robustness and practicality of CE generation methods in recommender systems: https://github.com/L2R-UET/CFExpRec.",
+    "code_links": [
+      "https://github.com/L2R-UET/CFExpRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Enhancing Unsupervised Keyword Extraction in Academic Papers through Integrating Highlights with Abstract",
+    "authors": "Yi Xiang, Chengzhi Zhang",
+    "published": "2026-04-21",
+    "arxiv_id": "2604.19505v1",
+    "url": "http://arxiv.org/abs/2604.19505v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.19505v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Automatic keyword extraction from academic papers is a key area of interest in natural language processing and information retrieval. Although previous research has mainly focused on utilizing abstract and references for keyword extraction, this paper focuses on the highlights section - a summary describing the key findings and contributions, offering readers a quick overview of the research. Our observations indicate that highlights contain valuable keyword information that can effectively complement the abstract. To investigate the impact of incorporating highlights into unsupervised keyword extraction, we evaluate three input scenarios: using only the abstract, the highlights, and a combination of both. Experiments conducted with four unsupervised models on Computer Science (CS), Library and Information Science (LIS) datasets reveal that integrating the abstract with highlights significantly improves extraction performance. Furthermore, we examine the differences in keyword coverage and content between abstract and highlights, exploring how these variations influence extraction outcomes. The data and code are available at https://github.com/xiangyi-njust/Highlight-KPE.",
+    "code_links": [
+      "https://github.com/xiangyi-njust/Highlight-KPE"
+    ],
+    "comment": "Scientometrics"
+  },
+  {
+    "title": "IndiaFinBench: An Evaluation Benchmark for Large Language Model Performance on Indian Financial Regulatory Text",
+    "authors": "Rajveer Singh Pall",
+    "published": "2026-04-21",
+    "arxiv_id": "2604.19298v1",
+    "url": "http://arxiv.org/abs/2604.19298v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.19298v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "We introduce IndiaFinBench, to our knowledge the first publicly available evaluation benchmark for assessing large language model (LLM) performance on Indian financial regulatory text. Existing financial NLP benchmarks draw exclusively from Western financial corpora (SEC filings, US earnings reports, and English-language financial news), leaving a significant gap in coverage of non-Western regulatory frameworks. IndiaFinBench addresses this gap with 406 expert-annotated question-answer pairs drawn from 192 documents sourced from the Securities and Exchange Board of India (SEBI) and the Reserve Bank of India (RBI), spanning four task types: regulatory interpretation (174 items), numerical reasoning (92 items), contradiction detection (62 items), and temporal reasoning (78 items). Annotation quality is validated through a model-based secondary pass (kappa=0.918 on contradiction detection) and a 60-item human inter-annotator agreement evaluation (kappa=0.611; 76.7% overall agreement). We evaluate twelve models under zero-shot conditions, with accuracy ranging from 70.4% (Gemma 4 E4B) to 89.7% (Gemini 2.5 Flash). All models substantially outperform a non-specialist human baseline of 60.0%. Numerical reasoning is the most discriminative task, with a 35.9 percentage-point spread across models. Bootstrap significance testing (10,000 resamples) reveals three statistically distinct performance tiers. The dataset, evaluation code, and all model outputs are available at https://github.com/rajveerpall/IndiaFinBench",
+    "code_links": [
+      "https://github.com/rajveerpall/IndiaFinBench"
+    ],
+    "comment": "24 pages, 4 figures, 11 tables. Dataset and evaluation code at https://github.com/rajveerpall/IndiaFinBench"
+  },
+  {
+    "title": "STK-Adapter: Incorporating Evolving Graph and Event Chain for Temporal Knowledge Graph Extrapolation",
+    "authors": "Shuyuan Zhao, Wei Chen, Weijie Zhang, Xinrui Hou, Junfeng Shen, Boyan Shi, Shengnan Guo, Youfang Lin, Huaiyu Wan",
+    "published": "2026-04-21",
+    "arxiv_id": "2604.19042v1",
+    "url": "http://arxiv.org/abs/2604.19042v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.19042v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Temporal Knowledge Graph (TKG) extrapolation aims to predict future events based on historical facts. Recent studies have attempted to enhance TKG extrapolation by integrating TKG's evolving structural representations and textual event chains into Large Language Models (LLMs). Yet, two main challenges limit these approaches: (1) The loss of essential spatial-temporal information due to shallow alignment between TKG's graph evolving structural representation and the LLM's semantic space, and (2) the progressive dilution of the TKG's evolving structural features during LLM fine-tuning. To address these challenges, we propose the Spatial-Temporal Knowledge Adapter (STK-Adapter), which flexibly integrates the evolving graph encoder and the LLM to facilitate TKG reasoning. In STK-Adapter, a Spatial-Temporal MoE is designed to capture spatial structures and temporal patterns inherent in TKGs. An Event-Aware MoE is employed to model intricate temporal semantics dependencies within event chains. In addition, a Cross-Modality Alignment MoE is proposed to facilitate deep cross-modality alignment by TKG-guided attention experts. Extensive experiments on benchmark datasets demonstrate that STK-Adapter significantly outperforms state-of-the-art methods and exhibits strong generalization capabilities in cross-dataset task. The code is available at https://github.com/Zhaoshuyuan0246/STK-Adapter.",
+    "code_links": [
+      "https://github.com/Zhaoshuyuan0246/STK-Adapter"
+    ],
+    "comment": "Accepted by ACL 2026"
+  },
+  {
+    "title": "ArbGraph: Conflict-Aware Evidence Arbitration for Reliable Long-Form Retrieval-Augmented Generation",
+    "authors": "Qingying Niu, Yuhao Wang, Ruiyang Ren, Bohui Fang, Wayne Xin Zhao",
+    "published": "2026-04-20",
+    "arxiv_id": "2604.18362v1",
+    "url": "http://arxiv.org/abs/2604.18362v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.18362v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Retrieval-augmented generation (RAG) remains unreliable in long-form settings, where retrieved evidence is noisy or contradictory, making it difficult for RAG pipelines to maintain factual consistency. Existing approaches focus on retrieval expansion or verification during generation, leaving conflict resolution entangled with generation. To address this limitation, we propose ArbGraph, a framework for pre-generation evidence arbitration in long-form RAG that explicitly resolves factual conflicts. ArbGraph decomposes retrieved documents into atomic claims and organizes them into a conflict-aware evidence graph with explicit support and contradiction relations. On top of this graph, we introduce an intensity-driven iterative arbitration mechanism that propagates credibility signals through evidence interactions, enabling the system to suppress unreliable and inconsistent claims before final generation. In this way, ArbGraph separates evidence validation from text generation and provides a coherent evidence foundation for downstream long-form generation. We evaluate ArbGraph on two widely used long-form RAG benchmarks, LongFact and RAGChecker, using multiple large language model backbones. Experimental results show that ArbGraph consistently improves factual recall and information density while reducing hallucinations and sensitivity to retrieval noise. Additional analyses show that these gains are evident under conflicting or ambiguous evidence, highlighting the effectiveness of evidence-level conflict resolution for improving the reliability of long-form RAG. The implementation is publicly available at https://github.com/1212Judy/ArbGraph.",
+    "code_links": [
+      "https://github.com/1212Judy/ArbGraph"
+    ],
+    "comment": "23 pages, 4 figures"
+  },
+  {
+    "title": "DocQAC: Adaptive Trie-Guided Decoding for Effective In-Document Query Auto-Completion",
+    "authors": "Rahul Mehta, Kavin R, Indrajit Pal, Tushar Abhishek, Pawan Goyal, Manish Gupta",
+    "published": "2026-04-20",
+    "arxiv_id": "2604.18257v1",
+    "url": "http://arxiv.org/abs/2604.18257v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.18257v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Query auto-completion (QAC) has been widely studied in the context of web search, yet remains underexplored for in-document search, which we term DocQAC. DocQAC aims to enhance search productivity within long documents by helping users craft faster, more precise queries, even for complex or hard-to-spell terms. While global historical queries are available to both WebQAC and DocQAC, DocQAC uniquely accesses document-specific context, including the current document's content and its specific history of user query interactions.\n  To address this setting, we propose a novel adaptive trie-guided decoding framework that uses user query prefixes to softly steer language models toward high-quality completions. Our approach introduces an adaptive penalty mechanism with tunable hyperparameters, enabling a principled trade-off between model confidence and trie-based guidance. To efficiently incorporate document context, we explore retrieval-augmented generation (RAG) and lightweight contextual document signals such as titles, keyphrases, and summaries.\n  When applied to encoder-decoder models like T5 and BART, our trie-guided framework outperforms strong baselines and even surpasses much larger instruction-tuned models such as LLaMA-3 and Phi-3 on seen queries across both seen and unseen documents. This demonstrates its practicality for real-world DocQAC deployments, where efficiency and scalability are critical. We evaluate our method on a newly introduced DocQAC benchmark derived from ORCAS, enriched with query-document pairs. We make both the DocQAC dataset (https://bit.ly/3IGEkbH) and code (https://github.com/rahcode7/DocQAC) publicly available.",
+    "code_links": [
+      "https://github.com/rahcode7/DocQAC"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Evaluating Multi-Hop Reasoning in RAG Systems: A Comparison of LLM-Based Retriever Evaluation Strategies",
+    "authors": "Lorenz Brehme, Thomas Ströhle, Ruth Breu",
+    "published": "2026-04-20",
+    "arxiv_id": "2604.18234v1",
+    "url": "http://arxiv.org/abs/2604.18234v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.18234v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval-augmented generation (RAG) enhances large language models (LLMs) with external knowledge to answer questions more accurately.\n  However, research on evaluating RAG systems-particularly the retriever component-remains limited, as most existing work focuses on single-context retrieval rather than multi-hop queries, where individual contexts may appear irrelevant in isolation but are essential when combined. In this research, we use the HotPotQA, MuSiQue, and SQuAD datasets to simulate a RAG system and compare three LLM-as-judge evaluation strategies, including our proposed Context-Aware Retriever Evaluation (CARE). Our goal is to better understand how multi-hop reasoning can be most effectively evaluated in RAG systems.\n  Experiments with LLMs from OpenAI, Meta, and Google demonstrate that CARE consistently outperforms existing methods for evaluating multi-hop reasoning in RAG systems. The performance gains are most pronounced in models with larger parameter counts and longer context windows, while single-hop queries show minimal sensitivity to context-aware evaluation. Overall, the results highlight the critical role of context-aware evaluation in improving the reliability and accuracy of retrieval-augmented generation systems, particularly in complex query scenarios. To ensure reproducibility, we provide the complete data of our experiments at https://github.com/lorenzbrehme/CARE.",
+    "code_links": [
+      "https://github.com/lorenzbrehme/CARE"
+    ],
+    "comment": "15 Pages, Accepted for publication at the SynIRgy Workshop, ECIR 2026 (48th European Conference on Information Retrieval)"
+  },
+  {
+    "title": "Multi-LLM Token Filtering and Routing for Sequential Recommendation",
+    "authors": "Wuhan Chen, Min Gao, Xin Xia, Zongwei Wang, Wentao Li, Shane Culpepper",
+    "published": "2026-04-20",
+    "arxiv_id": "2604.18200v1",
+    "url": "http://arxiv.org/abs/2604.18200v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.18200v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large language models (LLMs) have recently shown promise in recommendation by providing rich semantic knowledge. While most existing approaches rely on external textual corpora to align LLMs with recommender systems, we revisit a more fundamental yet underexplored question: Can recommendation benefit from LLM token embeddings alone without textual input? Through a systematic empirical study, we show that directly injecting token embeddings from a single LLM into sequential recommenders leads to unstable or limited gains, due to semantic misalignment, insufficient task adaptation, and the restricted coverage of individual LLMs. To address these challenges, we propose MLTFR, a Multi-LLM Token Filtering and Routing framework for corpus-free sequential recommendation. MLTFR follows an interaction-guided LLM knowledge integration paradigm, where task-relevant token embeddings are selected via user-guided token filtering to suppress noisy and irrelevant vocabulary signals. To overcome the limitations of single-LLM representations, MLTFR integrates multiple LLM token spaces through a Mixture-of-Experts architecture, with a Fisher-weighted semantic consensus expert to balance heterogeneous experts and prevent domination during training. By jointly filtering informative tokens and aggregating complementary semantic knowledge across multiple LLMs, MLTFR enables stable and effective utilization of LLM token embeddings without textual inputs or backbone modification. Extensive experiments demonstrate that MLTFR consistently outperforms state-of-the-art sequential recommendation baselines and existing alignment methods. Our code is available at: https://github.com/ccwwhhh/MLTFR.",
+    "code_links": [
+      "https://github.com/ccwwhhh/MLTFR"
+    ],
+    "comment": "11 pages,3 figs"
+  },
+  {
+    "title": "Peerispect: Claim Verification in Scientific Peer Reviews",
+    "authors": "Ali Ghorbanpour, Soroush Sadeghian, Alireza Daghighfarsoodeh, Sajad Ebrahimi, Negar Arabzadeh, Seyed Mohammad Hosseini, Ebrahim Bagheri",
+    "published": "2026-04-19",
+    "arxiv_id": "2604.17667v1",
+    "url": "http://arxiv.org/abs/2604.17667v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.17667v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Peer review is central to scientific publishing, yet reviewers frequently include claims that are subjective, rhetorical, or misaligned with the submitted work. Assessing whether review statements are factual and verifiable is crucial for fairness and accountability. At the scale of modern conferences and journals, manually inspecting the grounding of such claims is infeasible. We present Peerispect, an interactive system that operationalizes claim-level verification in peer reviews by extracting check-worthy claims from peer reviews, retrieving relevant evidence from the manuscript, and verifying the claims through natural language inference. Results are presented through a visual interface that highlights evidence directly in the paper, enabling rapid inspection and interpretation. Peerispect is designed as a modular Information Retrieval (IR) pipeline, supporting alternative retrievers, rerankers, and verifiers, and is intended for use by reviewers, authors, and program committees. We demonstrate Peerispect through a live, publicly available demo (https://app.reviewer.ly/app/peerispect) and API services (https://github.com/Reviewerly-Inc/Peerispect), accompanied by a video tutorial (https://www.youtube.com/watch?v=pc9RkvkUh14).",
+    "code_links": [
+      "https://github.com/Reviewerly-Inc/Peerispect"
+    ],
+    "comment": null
+  },
+  {
+    "title": "On the Robustness of LLM-Based Dense Retrievers: A Systematic Analysis of Generalizability and Stability",
+    "authors": "Yongkang Li, Panagiotis Eustratiadis, Yixing Fan, Evangelos Kanoulas",
+    "published": "2026-04-17",
+    "arxiv_id": "2604.16576v1",
+    "url": "http://arxiv.org/abs/2604.16576v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.16576v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Decoder-only large language models (LLMs) are increasingly replacing BERT-style architectures as the backbone for dense retrieval, achieving substantial performance gains and broad adoption. However, the robustness of these LLM-based retrievers remains underexplored. In this paper, we present the first systematic study of the robustness of state-of-the-art open-source LLM-based dense retrievers from two complementary perspectives: generalizability and stability. For generalizability, we evaluate retrieval effectiveness across four benchmarks spanning 30 datasets, using linear mixed-effects models to estimate marginal mean performance and disentangle intrinsic model capability from dataset heterogeneity. Our analysis reveals that while instruction-tuned models generally excel, those optimized for complex reasoning often suffer a ``specialization tax,'' exhibiting limited generalizability in broader contexts. For stability, we assess model resilience against both unintentional query variations~(e.g., paraphrasing, typos) and malicious adversarial attacks~(e.g., corpus poisoning). We find that LLM-based retrievers show improved robustness against typos and corpus poisoning compared to encoder-only baselines, yet remain vulnerable to semantic perturbations like synonymizing. Further analysis shows that embedding geometry (e.g., angular uniformity) provides predictive signals for lexical stability and suggests that scaling model size generally improves robustness. These findings inform future robustness-aware retriever design and principled benchmarking. Our code is publicly available at https://github.com/liyongkang123/Robust_LLM_Retriever_Eval.",
+    "code_links": [
+      "https://github.com/liyongkang123/Robust_LLM_Retriever_Eval"
+    ],
+    "comment": null
+  },
+  {
+    "title": "JFinTEB: Japanese Financial Text Embedding Benchmark",
+    "authors": "Masahiro Suzuki, Hiroki Sakaji",
+    "published": "2026-04-17",
+    "arxiv_id": "2604.15882v1",
+    "url": "http://arxiv.org/abs/2604.15882v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.15882v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "We introduce JFinTEB, the first comprehensive benchmark specifically designed for evaluating Japanese financial text embeddings. Existing embedding benchmarks provide limited coverage of language-specific and domain-specific aspects found in Japanese financial texts. Our benchmark encompasses diverse task categories including retrieval and classification tasks that reflect realistic and well-defined financial text processing scenarios. The retrieval tasks leverage instruction-following datasets and financial text generation queries, while classification tasks cover sentiment analysis, document categorization, and domain-specific classification challenges derived from economic survey data. We conduct extensive evaluations across a wide range of embedding models, including Japanese-specific models of various sizes, multilingual models, and commercial embedding services. We publicly release JFinTEB datasets and evaluation framework at https://github.com/retarfi/JFinTEB to facilitate future research and provide a standardized evaluation protocol for the Japanese financial text mining community. This work addresses a critical gap in Japanese financial text processing resources and establishes a foundation for advancing domain-specific embedding research.",
+    "code_links": [
+      "https://github.com/retarfi/JFinTEB"
+    ],
+    "comment": "5 pages. Accepted at SIGIR 2026 Resource Track"
+  },
+  {
+    "title": "Scattered Hypothesis Generation for Open-Ended Event Forecasting",
+    "authors": "He Chang, Zhulin Tao, Lifang Yang, Xianglin Huang, Yunshan Ma",
+    "published": "2026-04-17",
+    "arxiv_id": "2604.15788v1",
+    "url": "http://arxiv.org/abs/2604.15788v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.15788v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Despite the importance of open-ended event forecasting for risk management, current LLM-based methods predominantly target only the most probable outcomes, neglecting the intrinsic uncertainty of real-world events. To bridge this gap, we advance open-ended event forecasting from pinpoint forecasting to scatter forecasting by introducing the proxy task of hypothesis generation. This paradigm aims to generate an inclusive and diverse set of hypotheses that broadly cover the space of plausible future events. To this end, we propose SCATTER, a reinforcement learning framework that jointly optimizes inclusiveness and diversity of the hypothesis. Specifically, we design a novel hybrid reward that consists of three components: 1) a validity reward that measures semantic alignment with observed events, 2) an intra-group diversity reward to encourage variation within sampled responses, and 3) an inter-group diversity reward to promote exploration across distinct modes. By integrating the validity-gated score into the overall objective, we confine the exploration of wildly diversified outcomes to contextually plausible futures, preventing the mode collapse issue. Experiments on two real-world benchmark datasets, i.e., OpenForecast and OpenEP, demonstrate that SCATTER significantly outperforms strong baselines. Our code is available at https://github.com/Sambac1/SCATTER.",
+    "code_links": [
+      "https://github.com/Sambac1/SCATTER"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Learning Behaviorally Grounded Item Embeddings via Personalized Temporal Contexts",
+    "authors": "Rafael T. Sereicikas, Pedro R. Pires, Gregorio F. Azevedo, Tiago A. Almeida",
+    "published": "2026-04-16",
+    "arxiv_id": "2604.15581v1",
+    "url": "http://arxiv.org/abs/2604.15581v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.15581v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Effective user modeling requires distinguishing between short-term and long-term preference evolution. While item embeddings have become a key component of recommender systems, standard approaches like Item2Vec treat user histories as unordered sets (bag-of-items), implicitly assuming that interactions separated by minutes are as semantically related as those separated by months. This simplification flattens the rich temporal structure of user behavior, obscuring the distinction between coherent consumption sessions and gradual interest drifts. In this work, we introduce TAI2Vec (Time-Aware Item-to-Vector), a family of lightweight embedding models that integrates temporal proximity directly into the representation learning process. Unlike approaches that apply global time constraints, TAI2Vec is user-adaptive, tailoring its temporal definitions to individual interaction paces. We propose two complementary strategies: TAI2Vec-Disc, which utilizes personalized anomaly detection to dynamically segment interactions into semantic sessions, and TAI2Vec-Cont, which employs continuous, user-specific decay functions to weigh item relationships based on their relative temporal distance. Experimental results across eight diverse datasets demonstrate that TAI2Vec consistently produces more accurate and behaviorally grounded representations than static baselines, achieving competitive or superior performance in over 80% of the datasets, with improvements of up to 135%. The source code is publicly available at https://github.com/UFSCar-LaSID/tai2vec.",
+    "code_links": [
+      "https://github.com/UFSCar-LaSID/tai2vec"
+    ],
+    "comment": "Accepted to be published in UMAP'26, 9 pages, 7 figures"
+  },
+  {
+    "title": "Collaborative Filtering Through Weighted Similarities of User and Item Embeddings",
+    "authors": "Pedro R. Pires, Rafael T. Sereicikas, Gregorio F. Azevedo, Tiago A. Almeida",
+    "published": "2026-04-16",
+    "arxiv_id": "2604.15573v1",
+    "url": "http://arxiv.org/abs/2604.15573v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.15573v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In recent years, neural networks and other complex models have dominated recommender systems, often setting new benchmarks for state-of-the-art performance. Yet, despite these advancements, award-winning research has demonstrated that traditional matrix factorization methods can remain competitive, offering simplicity and reduced computational overhead. Hybrid models, which combine matrix factorization with newer techniques, are increasingly employed to harness the strengths of multiple approaches. This paper proposes a novel ensemble method that unifies user-item and item-item recommendations through a weighted similarity framework to deliver top-N recommendations. Our approach is distinctive in its use of shared user and item embeddings for both recommendation strategies, simplifying the architecture and enhancing computational efficiency. Extensive experiments across multiple datasets show that our method achieves competitive performance and is robust in varying scenarios that favor either user-item or item-item recommendations. Additionally, by eliminating the need for embedding-specific fine-tuning, our model allows for the seamless reuse of hyperparameters from the base algorithm without sacrificing performance. This results in a method that is both efficient and easy to implement. Our open-source implementation is available at https://github.com/UFSCar-LaSID/weighted-sims-recommender.",
+    "code_links": [
+      "https://github.com/UFSCar-LaSID/weighted-sims-recommender"
+    ],
+    "comment": "Published in SAC'25, 8 pages, 4 figures"
+  },
+  {
+    "title": "Category-based and Popularity-guided Video Game Recommendation: A Balance-oriented Framework",
+    "authors": "Xiping Li, Jianghong Ma, Kangzhe Liu, Shanshan Feng, Haijun Zhang, Yutong Wang",
+    "published": "2026-04-16",
+    "arxiv_id": "2604.14598v2",
+    "url": "http://arxiv.org/abs/2604.14598v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.14598v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In recent years, the video game industry has experienced substantial growth, presenting players with a vast array of game choices. This surge in options has spurred the need for a specialized recommender system tailored for video games. However, current video game recommendation approaches tend to prioritize accuracy over diversity, potentially leading to unvaried game suggestions. In addition, the existing game recommendation methods commonly lack the ability to establish strict connections between games to enhance accuracy. Furthermore, many existing diversity-focused methods fail to leverage crucial item information, such as item category and popularity during neighbor modeling and message propagation. To address these challenges, we introduce a novel framework, called CPGRec, comprising three modules, namely accuracy-driven, diversity-driven, and comprehensive modules. The first module extends the state-of-the-art accuracy-focused game recommendation method by connecting games in a more stringent manner to enhance recommendation accuracy. The second module connects neighbors with diverse categories within the proposed game graph and harnesses the advantages of popular game nodes to amplify the influence of long-tail games within the player-game bipartite graph, thereby enriching recommendation diversity. The third module combines the above two modules and employs a new negative-sample rating score reweighting method to balance accuracy and diversity. Experimental results on the Steam dataset demonstrate the effectiveness of our proposed method in improving game recommendations. The dataset and source codes are anonymously released at: https://github.com/CPGRec2024/CPGRec.git.",
+    "code_links": [
+      "https://github.com/CPGRec2024/CPGRec"
+    ],
+    "comment": "Published in The Web Conference (WWW) 2024. 11 pages, 8 figures"
+  },
+  {
+    "title": "CPGRec+: A Balance-oriented Framework for Personalized Video Game Recommendations",
+    "authors": "Xiping Li, Aier Yang, Jianghong Ma, Kangzhe Liu, Shanshan Feng, Haijun Zhang, Yi Zhao",
+    "published": "2026-04-16",
+    "arxiv_id": "2604.14586v2",
+    "url": "http://arxiv.org/abs/2604.14586v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.14586v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "The rapid expansion of gaming industry requires advanced recommender systems tailored to its dynamic landscape. Existing Graph Neural Network (GNN)-based methods primarily prioritize accuracy over diversity, overlooking their inherent trade-off. To address this, we previously proposed CPGRec, a balance-oriented gaming recommender system. However, CPGRec fails to account for critical disparities in player-game interactions, which carry varying significance in reflecting players' personal preferences and may exacerbate over-smoothness issues inherent in GNN-based models. Moreover, existing approaches underutilize the reasoning capabilities and extensive knowledge of large language models (LLMs) in addressing these limitations. To bridge this gap, we propose two new modules. First, Preference-informed Edge Reweighting (PER) module assigns signed edge weights to qualitatively distinguish significant player interests and disinterests while then quantitatively measuring preference strength to mitigate over-smoothing in graph convolutions. Second, Preference-informed Representation Generation (PRG) module leverages LLMs to generate contextualized descriptions of games and players by reasoning personal preferences from comparing global and personal interests, thereby refining representations of players and games. Experiments on \\textcolor{black}{two Steam datasets} demonstrate CPGRec+'s superior accuracy and diversity over state-of-the-art models. The code is accessible at https://github.com/HsipingLi/CPGRec-Plus.",
+    "code_links": [
+      "https://github.com/HsipingLi/CPGRec-Plus"
+    ],
+    "comment": "Published in ACM Transactions on Information Systems (TOIS). 43 pages, 9 figures"
+  },
+  {
+    "title": "NewsTorch: A PyTorch-based Toolkit for Learner-oriented News Recommendation",
+    "authors": "Rongyao Wang, Veronica Liesaputra, Zhiyi Huang",
+    "published": "2026-04-16",
+    "arxiv_id": "2604.14510v1",
+    "url": "http://arxiv.org/abs/2604.14510v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.14510v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "News recommender systems are devised to alleviate the information overload, attracting more and more researchers' attention in recent years. The lack of a dedicated learner-oriented news recommendation toolkit hinders the advancement of research in news recommendation. We propose a PyTorch-based news recommendation toolkit called NewsTorch, developed to support learners in acquiring both conceptual understanding and practical experience. This toolkit provides a modular, decoupled, and extensible framework with a learner-friendly GUI platform that supports dataset downloading and preprocessing. It also enables training, validation, and testing of state-of-the-art neural news recommendation models with standardized evaluation metrics, ensuring fair comparison and reproducible experiments. Our open-source toolkit is released on Github: https://github.com/whonor/NewsTorch.",
+    "code_links": [
+      "https://github.com/whonor/NewsTorch"
+    ],
+    "comment": "3 papes"
+  },
+  {
+    "title": "Controlling Authority Retrieval: A Missing Retrieval Objective for Authority-Governed Knowledge",
+    "authors": "Andre Bacellar",
+    "published": "2026-04-15",
+    "arxiv_id": "2604.14488v2",
+    "url": "http://arxiv.org/abs/2604.14488v2",
+    "pdf_url": "https://arxiv.org/pdf/2604.14488v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In law, regulatory regimes for pharmaceuticals and software security, newer authorities can revoke older established ones even when semantically distant. We call this CAR: retrieving the currently active authority frontier for a semantic anchor q, that is, front(cl(A_k(q))). This differs from finding the most similar document by relevance score: argmax_d s(q, d). Theorem 4 characterizes when a set R truly covers the active authority set for q with TCA(R, q)=1, providing conditions necessary and sufficient for any retrieved set R: frontier inclusion (front(cl(A_k(q))) contained in R) and no-ignored-superseder (no superseding document exists in the corpus outside R). Proposition 2 shows that TCA@k <= phi(q) * R_anchor(q) in the worst case over any scope-indexed algorithm, proved by an adversarial permutation argument. We evaluated on three real-world datasets: security advisories (Dense TCA@5=0.270, two-stage 0.975), SCOTUS overruling pairs (Dense TCA=0.172, two-stage 0.926), and FDA drug records (Dense TCA=0.064, two-stage 0.774). A GPT-4o-mini experiment shows Dense RAG produces explicit \"not patched\" claims for 39% of queries where a patch exists; two-stage cuts this to 16%. Four benchmark datasets, domain adapters, and a single-command scorer are released at https://github.com/andremir/car-retrieval.",
+    "code_links": [
+      "https://github.com/andremir/car-retrieval"
+    ],
+    "comment": "23 pages, 13 tables; code and data at https://github.com/andremir/car-retrieval"
+  },
+  {
+    "title": "ID and Graph View Contrastive Learning with Multi-View Attention Fusion for Sequential Recommendation",
+    "authors": "Xiaofan Zhou, Kyumin Lee",
+    "published": "2026-04-15",
+    "arxiv_id": "2604.14114v1",
+    "url": "http://arxiv.org/abs/2604.14114v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.14114v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential recommendation has become increasingly prominent in both academia and industry, particularly in e-commerce. The primary goal is to extract user preferences from historical interaction sequences and predict items a user is likely to engage with next. Recent advances have leveraged contrastive learning and graph neural networks to learn more expressive representations from interaction histories -- graphs capture relational structure between nodes, while ID-based representations encode item-specific information. However, few studies have explored multi-view contrastive learning between ID and graph perspectives to jointly improve user and item representations, especially in settings where only interaction data is available without auxiliary information.\n  To address this gap, we propose Multi-View Contrastive learning for sequential recommendation (MVCrec), a framework that integrates complementary signals from both sequential (ID-based) and graph-based views. MVCrec incorporates three contrastive objectives: within the sequential view, within the graph view, and across views. To effectively fuse the learned representations, we introduce a multi-view attention fusion module that combines global and local attention mechanisms to estimate the likelihood of a target user purchasing a target item. Comprehensive experiments on five real-world benchmark datasets demonstrate that MVCrec consistently outperforms 11 state-of-the-art baselines, achieving improvements of up to 14.44\\% in NDCG@10 and 9.22\\% in HitRatio@10 over the strongest baseline. Our code and datasets are available at https://github.com/sword-Lz/MMCrec.",
+    "code_links": [
+      "https://github.com/sword-Lz/MMCrec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "RoTE: Coarse-to-Fine Multi-Level Rotary Time Embedding for Sequential Recommendation",
+    "authors": "Haolin Zhang, Longtao Xiao, Guohao Cai, Ruixuan Li, Xiu Li",
+    "published": "2026-04-15",
+    "arxiv_id": "2604.13389v1",
+    "url": "http://arxiv.org/abs/2604.13389v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.13389v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential recommendation models have been widely adopted for modeling user behavior. Existing approaches typically construct user interaction sequences by sorting items according to timestamps and then model user preferences from historical behaviors. While effective, such a process only considers the order of temporal information but overlooks the actual time spans between interactions, resulting in a coarse representation of users' temporal dynamics and limiting the model's ability to capture long-term and short-term interest evolution. To address this limitation, we propose RoTE, a novel multi-level temporal embedding module that explicitly models time span information in sequential recommendation. RoTE decomposes each interaction timestamp into multiple temporal granularities, ranging from coarse to fine, and incorporates the resulting temporal representations into item embeddings. This design enables models to capture heterogeneous temporal patterns and better perceive temporal distances among user interactions during sequence modeling. RoTE is a lightweight, plug-and-play module that can be seamlessly integrated into existing Transformer-based sequential recommendation models without modifying their backbone architectures. We apply RoTE to several representative models and conduct extensive experiments on three public benchmarks. Experimental results demonstrate that RoTE consistently enhances the corresponding backbone models, achieving up to a 20.11% improvement in NDCG@5, which confirms the effectiveness and generality of the proposed approach. Our code is available at https://github.com/XiaoLongtaoo/RoTE.",
+    "code_links": [
+      "https://github.com/XiaoLongtaoo/RoTE"
+    ],
+    "comment": "Accepted by SIGIR'26"
+  },
+  {
+    "title": "3DPipe: A Pipelined GPU Framework for Scalable Generalized Spatial Join over Polyhedral Objects",
+    "authors": "Lyuheng Yuan, Da Yan, Akhlaque Ahmad, Fusheng Wang",
+    "published": "2026-04-21",
+    "arxiv_id": "2604.19982v1",
+    "url": "http://arxiv.org/abs/2604.19982v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.19982v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Spatial join is a fundamental operation in spatial databases. With the rapid growth of 3D data in applications such as LiDAR-based object detection and 3D digital pathology, there is an increasing need to support spatial join over 3D datasets. However, existing techniques are largely designed for 2D data, leaving 3D spatial join underexplored and computationally expensive. We present 3DPipe, a pipelined GPU framework for scalable spatial join over polyhedral objects. 3DPipe exploits GPU parallelism across both filtering and refinement stages, incorporates a multi-level pruning strategy for efficient candidate reduction, and employs chunked streaming to handle datasets exceeding GPU memory. Its pipelined execution overlaps CPU data preparation, host-device data transfer, and GPU computation to improve throughput. Experiments show that 3DPipe achieves up to 9.0$\\times$ speedup over the state-of-the-art GPU solution, TDBase, while maintaining excellent scalability. 3DPipe is open-sourced at https://github.com/lyuheng/3dpipe.",
+    "code_links": [
+      "https://github.com/lyuheng/3dpipe"
+    ],
+    "comment": null
+  },
+  {
+    "title": "NeuroLip: An Event-driven Spatiotemporal Learning Framework for Cross-Scene Lip-Motion-based Visual Speaker Recognition",
+    "authors": "Junguang Yao, Wenye Liu, Stjepan Picek, Yue Zheng",
+    "published": "2026-04-17",
+    "arxiv_id": "2604.15718v1",
+    "url": "http://arxiv.org/abs/2604.15718v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.15718v1",
+    "category": "databases",
+    "primary_category": "cs.CV",
+    "abstract": "Visual speaker recognition based on lip motion offers a silent, hands-free, and behavior-driven biometric solution that remains effective even when acoustic cues are unavailable. Compared to traditional methods that rely heavily on appearance-dependent representations, lip motion encodes subject-specific behavioral dynamics driven by consistent articulation patterns and muscle coordination, offering inherent stability across environmental changes. However, capturing these robust, fine-grained dynamics is challenging for conventional frame-based cameras due to motion blur and low dynamic range. To exploit the intrinsic stability of lip motion and address these sensing limitations, we propose NeuroLip, an event-based framework that captures fine-grained lip dynamics under a strict yet practical cross-scene protocol: training is performed under a single controlled condition, while recognition must generalize to unseen viewing and lighting conditions. NeuroLip features a 1) Temporal-aware Voxel Encoding module with adaptive event weighting, 2) Structure-aware Spatial Enhancer that amplifies discriminative behavioral patterns by suppressing noise while preserving vertically structured motion information, and 3) Polarity Consistency Regularization mechanism to retain motion-direction cues encoded in event polarities. To facilitate systematic evaluation, we introduce DVSpeaker, a comprehensive event-based lip-motion dataset comprising 50 subjects recorded under four distinct viewpoint and illumination scenarios. Extensive experiments demonstrate that NeuroLip achieves near-perfect matched-scene accuracy and robust cross-scene generalization, attaining over 71% accuracy on unseen viewpoints and nearly 76% under low-light conditions, outperforming representative existing methods by at least 8.54%. The dataset and code are publicly available at https://github.com/JiuZeongit/NeuroLip.",
+    "code_links": [
+      "https://github.com/JiuZeongit/NeuroLip"
+    ],
+    "comment": null
+  },
+  {
+    "title": "EvoRAG: Making Knowledge Graph-based RAG Automatically Evolve through Feedback-driven Backpropagation",
+    "authors": "Zhenbo Fu, Yuanzhe Zhang, Qiange Wang, Hao Yuan, Yuehao Xu, Enze Yi, Yanfeng Zhang, Ge Yu",
+    "published": "2026-04-17",
+    "arxiv_id": "2604.15676v1",
+    "url": "http://arxiv.org/abs/2604.15676v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.15676v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Knowledge Graph-based Retrieval-Augmented Generation (KG-RAG) has emerged as a promising paradigm for enhancing LLM reasoning by retrieving multi-hop paths from KGs. However, existing KG-RAG frameworks often underperform in real-world scenarios because the pre-captured knowledge dependencies are not tailored to the downstream task or its evolving requirements. These frameworks struggle to adapt to task-specific requirements and lack mechanisms to filter low-contribution knowledge during generation. We observe that feedback on generated responses offers effective supervision for improving KG quality, as it directly reflects user expectations and provides insights into the correctness and usefulness of the output. However, a key challenge lies in effectively linking response-level feedback to triplet-level contribution evaluation and knowledge updates in the KG.\n  In this work, we propose EvoRAG, a self-evolving KG-RAG framework that leverages the feedback over generated responses to continuously refine the KG and enhance reasoning accuracy. EvoRAG introduces a feedback-driven backpropagation mechanism that attributes feedback to retrieved paths by measuring their utility for response and propagates this utility back to individual triplets, supporting fine-grained KG refinements towards more adaptive and accurate reasoning. Through EvoRAG, we establish a closed loop that couples feedback, LLM, and graph data, continuously enhancing the performance and robustness in real-world scenarios. Experimental results show that EvoRAG improves reasoning accuracy by $7.34\\%$ over state-of-the-art KG-RAG frameworks. The source code has been made available at https://github.com/iDC-NEU/EvoRAG.",
+    "code_links": [
+      "https://github.com/iDC-NEU/EvoRAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Data Engineering Patterns for Cross-System Reconciliation in Regulated Enterprises: Architecture, Anomaly Detection, and Governance",
+    "authors": "Zhijun Qiu",
+    "published": "2026-04-16",
+    "arxiv_id": "2604.15108v1",
+    "url": "http://arxiv.org/abs/2604.15108v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.15108v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Regulated enterprises in the United States -- banks, telecommunications providers, large technology companies -- operate across heterogeneous systems that were rarely designed to interoperate. ERP platforms, billing engines, supply chain tools, and financial reporting infrastructure coexist within the same organization, but they do not talk to each other well. The resulting fragmentation produces familiar problems: transactions recorded in one system but unreconciled in another, asset inventories drifting from their systems of record, and audit-readiness that depends on manual effort. The PCAOB's 2024 inspection cycle put a number on the consequences: a 39% aggregate Part I.A deficiency rate across all inspected firms. This paper introduces the GERA Framework (Governed Enterprise Reconciliation Architecture) -- a vendor-neutral, four-layer data architecture that integrates deterministic cross-system reconciliation, statistical anomaly detection (baseline Z-Score with robust alternatives), governed semantic standardization, and NIST CSF 2.0-aligned security controls into a single methodology. The architecture spans four layers (ingestion, staging, core models, and semantic serving), following the multi-layer pattern now common in modern data platforms. The patterns are demonstrated through U.S. broadband operations -- where billing reconciliation, inventory aging, and governance are tightly coupled -- and draw on the author's implementation experience across three regulated enterprise environments: a regional bank, a national broadband provider, and a Fortune 500 technology company's central finance organization. This is a practitioner reference -- an architectural framework paper documenting field-tested patterns -- not a controlled experiment or benchmark study. No proprietary systems, datasets, or internal implementations are disclosed.",
+    "code_links": [
+      "https://github.com/andersonqiu/GERA-Framework"
+    ],
+    "comment": "13 pages, 3 figures, 1 table. Practitioner reference paper. Code and supplementary materials: https://github.com/andersonqiu/GERA-Framework"
+  },
+  {
+    "title": "SQL Query Engine: A Self-Healing LLM Pipeline for Natural Language to PostgreSQL Translation",
+    "authors": "Muhammad Adeel Ijaz",
+    "published": "2026-04-15",
+    "arxiv_id": "2604.16511v1",
+    "url": "http://arxiv.org/abs/2604.16511v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.16511v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "We present SQL Query Engine, an open-source, self-hosted service that translates natural language questions into validated PostgreSQL queries through a two-stage LLM pipeline. The first stage performs automatic schema introspection and SQL generation; a multi-strategy response parser extracts SQL from any LLM output format (JSON, code blocks, or raw text) without requiring structured output APIs. The second stage executes the query against PostgreSQL and, upon failure or empty results, enters an iterative self-healing loop in which the LLM diagnoses the error using full SQLSTATE codes and PostgreSQL diagnostic messages. Two mechanisms prevent regressions: early-accept returns successful queries immediately without LLM re-evaluation, and best-result tracking preserves the best partial result across retries. Schema context is cached per session in Redis, progress events stream via Redis Pub/Sub and SSE, and an OpenAI-compatible /v1/chat/completions endpoint lets existing tools work without modification. All database connections are read-only at the driver level. We evaluate across five LLM backends on a synthetic benchmark (75 questions, three databases) where the self-healing loop yields up to +9.3pp accuracy gains with zero regressions on the best model (Llama 4 Scout 17B, 57.3%), and on BIRD (437 questions, 11 databases migrated from SQLite to PostgreSQL) where the full pipeline reaches 49.0% execution accuracy (GPT-OSS-120B, +4.6pp). Source code: https://github.com/codeadeel/sqlqueryengine.",
+    "code_links": [
+      "https://github.com/codeadeel/sqlqueryengine"
+    ],
+    "comment": "16 pages, 5 tables, 4 figures"
+  },
+  {
+    "title": "YUV20K: A Complexity-Driven Benchmark and Trajectory-Aware Alignment Model for Video Camouflaged Object Detection",
+    "authors": "Yiyu Liu, Shuo Ye, Chao Hao, Zitong Yu",
+    "published": "2026-04-11",
+    "arxiv_id": "2604.09985v1",
+    "url": "http://arxiv.org/abs/2604.09985v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.09985v1",
+    "category": "databases",
+    "primary_category": "cs.CV",
+    "abstract": "Video Camouflaged Object Detection (VCOD) is currently constrained by the scarcity of challenging benchmarks and the limited robustness of models against erratic motion dynamics. Existing methods often struggle with Motion-Induced Appearance Instability and Temporal Feature Misalignment caused by complex motion scenarios. To address the data bottleneck, we present YUV20K, a pixel-level annoated complexity-driven VCOD benchmark. Comprising 24,295 annotated frames across 91 scenes and 47 kinds of species, it specifically targets challenging scenarios like large-displacement motion, camera motion and other 4 types scenarios. On the methodological front, we propose a novel framework featuring two key modules: Motion Feature Stabilization (MFS) and Trajectory-Aware Alignment (TAA). The MFS module utilizes frame-agnostic Semantic Basis Primitives to stablize features, while the TAA module leverages trajectory-guided deformable sampling to ensure precise temporal alignment. Extensive experiments demonstrate that our method significantly outperforms state-of-the-art competitors on existing datasets and establishes a new baseline on the challenging YUV20K. Notably, our framework exhibits superior cross-domain generalization and robustness when confronting complex spatiotemporal scenarios. Our code and dataset will be available at https://github.com/K1NSA/YUV20K",
+    "code_links": [
+      "https://github.com/K1NSA/YUV20K"
+    ],
+    "comment": null
+  },
+  {
+    "title": "AV-SQL: Decomposing Complex Text-to-SQL Queries with Agentic Views",
+    "authors": "Minh Tam Pham, Trinh Pham, Tong Chen, Hongzhi Yin, Quoc Viet Hung Nguyen, Thanh Tam Nguyen",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.07041v1",
+    "url": "http://arxiv.org/abs/2604.07041v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.07041v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text-to-SQL is the task of translating natural language queries into executable SQL for a given database, enabling non-expert users to access structured data without writing SQL manually. Despite rapid advances driven by large language models (LLMs), existing approaches still struggle with complex queries in real-world settings, where database schemas are large and questions require multi-step reasoning over many interrelated tables. In such cases, providing the full schema often exceeds the context window, while one-shot generation frequently produces non-executable SQL due to syntax errors and incorrect schema linking. To address these challenges, we introduce AV-SQL, a framework that decomposes complex Text-to-SQL into a pipeline of specialized LLM agents. Central to AV-SQL is the concept of agentic views: agent-generated Common Table Expressions (CTEs) that encapsulate intermediate query logic and filter relevant schema elements from large schemas. AV-SQL operates in three stages: (1) a rewriter agent compresses and clarifies the input query; (2) a view generator agent processes schema chunks to produce agentic views; and (3) a planner, generator, and revisor agent collaboratively compose these views into the final SQL query. Extensive experiments show that AV-SQL achieves 70.38% execution accuracy on the challenging Spider 2.0 benchmark, outperforming state-of-the-art baselines, while remaining competitive on standard datasets with 85.59% on Spider, 72.16% on BIRD and 63.78% on KaggleDBQA. Our source code is available at https://github.com/pminhtam/AV-SQL.",
+    "code_links": [
+      "https://github.com/pminhtam/AV-SQL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "SQLStructEval: Structural Evaluation of LLM Text-to-SQL Generation",
+    "authors": "Yixi Zhou, Fan Zhang, Zhiqiao Guo, Yu Chen, Haipeng Zhang, Preslav Nakov, Zhuohan Xie",
+    "published": "2026-04-08",
+    "arxiv_id": "2604.06736v1",
+    "url": "http://arxiv.org/abs/2604.06736v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.06736v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Despite strong performance on Text-to-SQL benchmarks, it remains unclear whether LLM-generated SQL programs are structurally reliable. In this work, we investigate the structural behavior of LLM-generated SQL queries and introduce SQLStructEval, a framework for analyzing program structures through canonical abstract syntax tree (AST) representations. Our experiments on the Spider benchmark show that modern LLMs often produce structurally diverse queries for the same input, even when execution results are correct, and that such variance is frequently triggered by surface-level input changes such as paraphrases or schema presentation. We further show that generating queries in a structured space via a compile-style pipeline can improve both execution accuracy and structural consistency. These findings suggest that structural reliability is a critical yet overlooked dimension for evaluating LLM-based program generation systems. Our code is available at https://anonymous.4open.science/r/StructEval-2435.",
+    "code_links": [],
+    "comment": "17 pages, including figures and tables"
+  },
+  {
+    "title": "Can You Trust the Vectors in Your Vector Database? Black-Hole Attack from Embedding Space Defects",
+    "authors": "Hanxi Li, Jianan Zhou, Jiale Lao, Yibo Wang, Zhengmao Ye, Yang Cao, Junfen Wang, Mingjie Tang",
+    "published": "2026-04-07",
+    "arxiv_id": "2604.05480v1",
+    "url": "http://arxiv.org/abs/2604.05480v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.05480v1",
+    "category": "databases",
+    "primary_category": "cs.CR",
+    "abstract": "Vector databases serve as the retrieval backbone of modern AI applications, yet their security remains largely unexplored. We propose the Black-Hole Attack, a poisoning attack that injects a small number of malicious vectors near the geometric center of the stored vectors. These injected vectors attract queries like a black hole and frequently appear in the top-k retrieval results for most queries. This attack is enabled by a phenomenon we term centrality-driven hubness: in high-dimensional embedding spaces, vectors near the centroid become nearest neighbors of a disproportionately large number of other vectors, while this centroid region is nearly empty in practice. The attack shows that vectors in a vector database cannot be blindly trusted: geometric defects in high-dimensional embeddings make retrieval inherently vulnerable. Our experiments show that malicious vectors appear in up to 99.85% of top-10 results. Additionally, we evaluate existing hubness mitigation methods as potential defenses against the Black-Hole Attack. The results show that these methods either significantly reduce retrieval accuracy or provide limited protection, which indicates the need for more robust defenses against the Black-Hole Attack.",
+    "code_links": [
+      "https://github.com/hanxi19/Black_Hole_Attack_for_Vector_Database"
+    ],
+    "comment": "Source code: https://github.com/hanxi19/Black_Hole_Attack_for_Vector_Database"
+  },
+  {
+    "title": "Automating Database-Native Function Code Synthesis with LLMs",
+    "authors": "Wei Zhou, Xuanhe Zhou, Qikang He, Guoliang Li, Bingsheng He, Quanqing Xu, Fan Wu",
+    "published": "2026-04-02",
+    "arxiv_id": "2604.06231v1",
+    "url": "http://arxiv.org/abs/2604.06231v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.06231v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Database systems incorporate an ever-growing number of functions in their kernels (a.k.a., database native functions) for scenarios like new application support and business migration. This growth causes an urgent demand for automatic database native function synthesis. While recent advances in LLM-based code generation (e.g., Claude Code) show promise, they are too generic for database-specific development. They often hallucinate or overlook critical context because database function synthesis is inherently complex and error-prone, where synthesizing a single function may involve registering multiple function units, linking internal references, and implementing logic correctly. To this end, we propose DBCooker, an LLM-based system for automatically synthesizing database native functions. It consists of three components. First, the function characterization module aggregates multi-source declarations, identifies function units that require specialized coding, and traces cross-unit dependencies. Second, we design operations to address the main synthesis challenges: (1) a pseudo-code-based coding plan generator that constructs structured implementation skeletons by identifying key elements such as reusable referenced functions; (2) a hybrid fill-in-the-blank model guided by probabilistic priors and component awareness to integrate core logic with reusable routines; and (3) three-level progressive validation, including syntax checking, standards compliance, and LLM-guided semantic verification. Finally, an adaptive orchestration strategy unifies these operations with existing tools and dynamically sequences them via the orchestration history of similar functions. Results show that DBCooker outperforms other methods on SQLite, PostgreSQL, and DuckDB (34.55% higher accuracy on average), and can synthesize new functions absent in the latest SQLite (v3.50).",
+    "code_links": [
+      "https://github.com/weAIDB/OpenCook"
+    ],
+    "comment": "Please visit our homepage at: https://code4db.github.io/hi-opencook/. The code is available at: https://github.com/weAIDB/OpenCook"
+  }
+]
