@@ -1,0 +1,422 @@
+[
+  {
+    "title": "Expressiveness Limits of Autoregressive Semantic ID Generation in Generative Recommendation",
+    "authors": "Yupeng Hou, Haven Kim, Clark Mingxuan Ju, Eduardo Escoto, Neil Shah, Julian McAuley",
+    "published": "2026-05-07",
+    "arxiv_id": "2605.06331v1",
+    "url": "http://arxiv.org/abs/2605.06331v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.06331v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation (GR) models generate items by autoregressively producing a sequence of discrete tokens that jointly index the target item. However, this autoregressive generation process also induces a structured decoding space whose impact on model expressiveness remains underexplored. Specifically, token-by-token generation can be viewed as traversing a decoding tree induced by semantic ID tokens, where leaf nodes correspond to candidate items. We observe that the item probabilities produced by GR models are strongly correlated with this tree structure: items that are close in the tree tend to receive similar probabilities for any given user, making it difficult to distinguish among them based on user-specific preferences. We further show theoretically that such structural correlations prevent GR models from representing even simple patterns that can be well captured by conventional collaborative filtering models. To mitigate this issue, we propose Latte, a simple modification that injects a latent token before each semantic ID, reshaping the decoding space from a single tree into multiple latent-token-conditioned trees. This design creates multiple paths with varying tree distances between items, relaxing tree-induced probability coupling and yielding an average of 3.45% relative improvement on NDCG@10. Our code is available at https://github.com/hyp1231/Latte.",
+    "code_links": [
+      "https://github.com/hyp1231/Latte"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Revisiting Uncertainty: On Evidential Learning for Partially Relevant Video Retrieval",
+    "authors": "Jun Li, Peifeng Lai, Xuhang Lou, Jinpeng Wang, Yuting Wang, Ke Chen, Yaowei Wang, Shu-Tao Xia",
+    "published": "2026-05-07",
+    "arxiv_id": "2605.06083v1",
+    "url": "http://arxiv.org/abs/2605.06083v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.06083v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Partially relevant video retrieval aims to retrieve untrimmed videos using text queries that describe only partial content. However, the inherent asymmetry between brief queries and rich video content inevitably introduces uncertainty into the retrieval process. In this setting, vague queries often induce semantic ambiguity across videos, a challenge that is further exacerbated by the sparse temporal supervision within videos, which fails to provide sufficient matching evidence. To address this, we propose Holmes, a hierarchical evidential learning framework that aggregates multi-granular cross-modal evidence to quantify and model uncertainty explicitly. At the inter-video level, similarity scores are interpreted as evidential support and modeled via a Dirichlet distribution. Based on the proposed three-fold principle, we perform fine-grained query identification, which then guides query-adaptive calibrated learning. At the intra-video level, to accumulate denser evidence, we formulate a soft query-clip alignment via flexible optimal transport with an adaptive dustbin, which alleviates sparse temporal supervision while suppressing spurious local responses. Extensive experiments demonstrate that Holmes outperforms state-of-the-art methods. Code is released at https://github.com/lijun2005/ICML26-Holmes.",
+    "code_links": [
+      "https://github.com/lijun2005/ICML26-Holmes"
+    ],
+    "comment": "Accepted by ICML 2026. 16 pages, 6 figures, 3 tables"
+  },
+  {
+    "title": "TabEmbed: Benchmarking and Learning Generalist Embeddings for Tabular Understanding",
+    "authors": "Minjie Qiang, Mingming Zhang, Xiaoyi Bao, Xing Fu, Yu Cheng, Weiqiang Wang, Zhongqing Wang, Ningtao Wang",
+    "published": "2026-05-06",
+    "arxiv_id": "2605.04962v1",
+    "url": "http://arxiv.org/abs/2605.04962v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.04962v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Foundation models have established unified representations for natural language processing, yet this paradigm remains largely unexplored for tabular data. Existing methods face fundamental limitations: LLM-based approaches lack retrieval-compatible vector outputs, whereas text embedding models often fail to capture tabular structure and numerical semantics. To bridge this gap, we first introduce the Tabular Embedding Benchmark (TabBench), a comprehensive suite designed to evaluate the tabular understanding capability of embedding models. We then propose TabEmbed, the first generalist embedding model that unifies tabular classification and retrieval within a shared embedding space. By reformulating diverse tabular tasks as semantic matching problems, TabEmbed leverages large-scale contrastive learning with positive-aware hard negative mining to discern fine-grained structural and numerical nuances. Experimental results on TabBench demonstrate that TabEmbed significantly outperforms state-of-the-art text embedding models, establishing a new baseline for universal tabular representation learning. Code and datasets are publicly available at https://github.com/qiangminjie27/TabEmbed and https://huggingface.co/datasets/qiangminjie27/TabBench.",
+    "code_links": [
+      "https://github.com/qiangminjie27/TabEmbed"
+    ],
+    "comment": "15 pages, 8 figures. Code and datasets are available at https://github.com/qiangminjie27/TabEmbed"
+  },
+  {
+    "title": "Rethinking Convolutional Networks for Attribute-Aware Sequential Recommendation",
+    "authors": "Shereen Elsayed, Ngoc Son Le, Ahmed Rashed, Lars Schmidt-Thieme",
+    "published": "2026-05-06",
+    "arxiv_id": "2605.04723v2",
+    "url": "http://arxiv.org/abs/2605.04723v2",
+    "pdf_url": "https://arxiv.org/pdf/2605.04723v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Attribute-aware sequential recommendation entails predicting the next item a user will interact with based on a chronologically ordered history of past interactions, enriched with item attributes. Existing methods typically leverage self-attention mechanisms to aggregate the entire sequence into a unified representation used for next-item prediction. While effective, these models often suffer from high computational complexity and memory consumption, limiting their ability to process long user histories. This constraint restricts the model's capacity to fully capture long-term user preferences. In some scenarios, modeling item interactions purely through attention may also not be the most effective approach to extract sequential patterns. In this work, we propose ConvRec, an alternative method with linear computational and memory complexity that employs convolutional layers in a hierarchical, down-scaled fashion to generate compact, yet expressive sequence representations. To further enhance the model's ability to capture diverse sequential patterns, each layer aggregates the neighboring items gradually to reach a comprehensive sequence representation. Extensive experiments on four real-world datasets demonstrate that our approach outperforms state-of-the-art sequential recommendation models, highlighting the potential of convolution-based architectures for efficient and effective sequence modeling in recommendation systems. Our implementation code and datasets are available here https://github.com/ismll-research/ConvRec.",
+    "code_links": [
+      "https://github.com/ismll-research/ConvRec"
+    ],
+    "comment": "Accepted at IJCAI-ECAI 2026"
+  },
+  {
+    "title": "Beyond Static Best-of-N: Bayesian List-wise Alignment for LLM-based Recommendation",
+    "authors": "Ruijun Chen, Chongming Gao, Jiawei Chen, Weiqin Yang, Xiangnan He",
+    "published": "2026-05-06",
+    "arxiv_id": "2605.04559v1",
+    "url": "http://arxiv.org/abs/2605.04559v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.04559v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large Language Models have revolutionized recommender systems (LLM4Rec) by leveraging their generative capabilities to model complex user preferences. However, existing LLM4Rec methods primarily rely on token-level objectives, making it difficult to optimize list-level and non-differentiable metrics (e.g., NDCG, fairness) that define actual recommendation quality. While Best-of-N (BoN) directly optimizes these metrics during inference, its high computational cost hinders real-world deployment. To address this, BoN Alignment aims to distill the search capability into the model itself, yet current approaches suffer from two critical limitations: (1) Indiscriminate Supervision, where the static reference fails to distinguish the relative quality of candidates exceeding its empirical range, leading to a loss of ranking guidance; and (2) Gradient Decay, where the effective supervision signal rapidly diminishes as the evolving policy improves, resulting in inefficient optimization.\n  To overcome these challenges, we propose BLADE (Bayesian List-wise Alignment via Dynamic Estimation). Unlike static approaches, BLADE introduces a Bayesian framework that continuously updates the target distribution by fusing historical priors with dynamic evidence from the model's current rollouts. This mechanism constructs a self-evolving target that adapts to the model's growing capabilities, ensuring the training signal remains informative throughout the learning process. Extensive experiments on three real-world datasets demonstrate that BLADE significantly outperforms state-of-the-art baselines. Crucially, it breaks the static performance upper bound, achieving sustained gains in both ranking accuracy (Recall, NDCG) and complex list-wise metrics (Fairness, Diversity). The code is available via https://github.com/RegionCh/BLADE.",
+    "code_links": [
+      "https://github.com/RegionCh/BLADE"
+    ],
+    "comment": "Accepted by SIGIR 2026. 11 pages, 8 figures"
+  },
+  {
+    "title": "DoGMaTiQ: Automated Generation of Question-and-Answer Nuggets for Report Evaluation",
+    "authors": "Bryan Li, William Walden, Yu Hou, Gabrielle Kaili-May Liu, Dawn Lawrie, Jame Mayfield, Eugene Yang, Chris Callison-Burch, Laura Dietz",
+    "published": "2026-05-06",
+    "arxiv_id": "2605.04458v1",
+    "url": "http://arxiv.org/abs/2605.04458v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.04458v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Evaluation of long-form, citation-backed reports has lately received significant attention due to the wide-scale adoption of retrieval-augmented generation (RAG) systems. Core to many evaluation frameworks is the use of atomic facts, or nuggets, to assess a report's coverage of query-relevant information attested in the underlying collection. While nuggets have traditionally been represented as short statements, recent work has used question-answer (QA) representations, enabling fine-grained evaluations that decouple the information need (i.e. the question) from the potentially diverse content that satisfies it (i.e. its answers).\n  A persistent challenge for nugget-based evaluation is the need to manually curate sets of nuggets for each topic in a test collection -- a laborious process that scales poorly to novel information needs. This challenge is acute in cross-lingual settings, where information is found in multilingual source documents. Accordingly, we introduce DoGMaTiQ, a pipeline for generating high-quality QA-based nugget sets in three stages: (1) document-grounded nugget generation, (2) paraphrase clustering, and (3) nugget subselection based on principled quality criteria. We integrate DoGMaTiQ nuggets with AutoArgue -- a recent nugget-based evaluation framework -- to enable fully automatic evaluation of generated reports. We conduct extensive experiments on two cross-lingual TREC shared tasks, NeuCLIR and RAGTIME, showing strong rank correlations with both human-in-the-loop and fully manual judgments. Finally, detailed analysis of our pipeline reveals that a strong LLM nugget generator is key, and that the system rankings induced by DoGMaTiQ are robust to outlier systems. We facilitate future research in report evaluation by publicly releasing our code and artifacts at https://github.com/manestay/dogmatiq.",
+    "code_links": [
+      "https://github.com/manestay/dogmatiq"
+    ],
+    "comment": null
+  },
+  {
+    "title": "EnterpriseRAG-Bench: A RAG Benchmark for Company Internal Knowledge",
+    "authors": "Yuhong Sun, Joachim Rahmfeld, Chris Weaver, Roshan Desai, Wenxi Huang, Mark H. Butler",
+    "published": "2026-05-05",
+    "arxiv_id": "2605.05253v1",
+    "url": "http://arxiv.org/abs/2605.05253v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.05253v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval-Augmented Generation (RAG) has become the standard approach for grounding large language models in information that was not available during training. While existing datasets and benchmarks focus on web or other public sources, there is still no widely adopted dataset that realistically reflects the nature of company-internal knowledge. Meanwhile, startups, enterprises, and researchers are increasingly developing AI Agents designed to operate over exactly this kind of proprietary data. To close this gap, we release a synthetic enterprise corpus, its generation framework, and a leaderboard.\n  We present EnterpriseRAG-Bench, a dataset consisting of approximately 500,000 documents spanning nine enterprise source types (Slack, Gmail, Linear, Google Drive, HubSpot, Fireflies, GitHub, Jira, and Confluence) and 500 questions across ten categories that test distinct retrieval and reasoning capabilities. The corpus is generated with cross-document coherence (grounded in shared projects, people, and initiatives) and augmented with realistic noise such as misfiled documents, near-duplicates, and conflicting information. The question set ranges from simple single-document lookups to multi-document reasoning, constrained retrieval, conflict resolution, and recognizing when information is absent. The generation framework lets teams generate variants tailored to their own industry, scale, and source mix. The dataset, code, evaluation harness, and leaderboard are available at https://github.com/onyx-dot-app/EnterpriseRAG-Bench.",
+    "code_links": [
+      "https://github.com/onyx-dot-app/EnterpriseRAG-Bench"
+    ],
+    "comment": "Code and dataset available at https://github.com/onyx-dot-app/EnterpriseRAG-Bench or https://huggingface.co/datasets/onyx-dot-app/EnterpriseRAG-Bench"
+  },
+  {
+    "title": "RAG over Thinking Traces Can Improve Reasoning Tasks",
+    "authors": "Negar Arabzadeh, Wenjie Ma, Sewon Min, Matei Zaharia",
+    "published": "2026-05-05",
+    "arxiv_id": "2605.03344v1",
+    "url": "http://arxiv.org/abs/2605.03344v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.03344v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval-augmented generation (RAG) has proven effective for knowledge-intensive tasks, but is widely believed to offer limited benefit for reasoning-intensive problems such as math and code generation. We challenge this assumption by showing that the limitation lies not in RAG itself, but in the choice of corpus. Instead of retrieving documents, we propose retrieving thinking traces, i.e., intermediate thinking trajectories generated during problem solving attempts. We show that thinking traces are already a strong retrieval source, and further introduce T3, an offline method that transforms them into structured, retrieval-friendly representations, to improve usability. Using these traces as a corpus, a simple retrieve-then-generate pipeline consistently improves reasoning performance across strong models and benchmarks such as AIME 2025--2026, LiveCodeBench, and GPQA-Diamond, outperforming both non-RAG baselines and retrieval over standard web corpora. For instance, on AIME, RAG with traces generated by Gemini-2-thinking achieves relative gains of +56.3%, +8.6%, and +7.6% for Gemini-2.5-Flash, GPT-OSS-120B, and GPT-5, respectively, even though these are more recent models. Interestingly, RAG on T3 also incurs little or no extra inference cost, and can even reduce inference cost by up to $15%$. Overall, our results suggest that thinking traces are an effective retrieval corpus for reasoning tasks, and transforming them into structured, compact, or diagnostic representations unlocks even stronger gains. Code available at https://github.com/Narabzad/t3.",
+    "code_links": [
+      "https://github.com/Narabzad/t3"
+    ],
+    "comment": null
+  },
+  {
+    "title": "AdaGATE: Adaptive Gap-Aware Token-Efficient Evidence Assembly for Multi-Hop Retrieval-Augmented Generation",
+    "authors": "Yilin Guo, Yinshan Wang, Yixuan Wang",
+    "published": "2026-05-04",
+    "arxiv_id": "2605.05245v1",
+    "url": "http://arxiv.org/abs/2605.05245v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.05245v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Retrieval-augmented generation (RAG) remains brittle on multi-hop questions in realistic deployment settings, where retrieved evidence may be noisy or redundant and only limited context can be passed to the generator. Existing controllers address parts of this problem, but typically either expand context additively, select from a fixed top-k set, or optimize relevance without explicitly repairing missing bridge facts. We propose AdaGATE, a training-free evidence controller for multi-hop RAG that frames evidence selection as a token-constrained repair problem. AdaGATE combines entity centric gap tracking, targeted micro-query generation, and a utility based selection mechanism that balances gap coverage, corroboration, novelty, redundancy, and direct question relevance. We evaluate AdaGATE on HotpotQA under clean, redundancy, and noise injected retrieval conditions. Across all three settings, AdaGATE achieves the best evidence F1 among the compared controllers, reaching 62.3% on clean data and 71.2% under redundancy injection, while using 2.6x fewer input tokens than Adaptive-k. These results suggest that explicit gap-aware repair, combined with token-efficient evidence selection, improves robustness in multi-hop RAG under imperfect retrieval. Our code and evaluation pipeline are available at https://github.com/eliguo/AdaGATE.",
+    "code_links": [
+      "https://github.com/eliguo/AdaGATE"
+    ],
+    "comment": "10 pages, 4 figures, 2 tables"
+  },
+  {
+    "title": "Benchmarking Retrieval Strategies for Biomedical Retrieval-Augmented Generation: A Controlled Empirical Study",
+    "authors": "Devi Prasad Bal, Subhashree Puhan",
+    "published": "2026-05-04",
+    "arxiv_id": "2605.02520v1",
+    "url": "http://arxiv.org/abs/2605.02520v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.02520v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Retrieval-Augmented Generation (RAG) offers a well-established path to grounding large language model (LLM) outputs in external knowledge, yet the question of which retrieval strategy works best in a high-stakes domain such as biomedicine has not received the controlled, multi-metric treatment it deserves. This paper presents a systematic empirical comparison of five retrieval strategies -- Dense Vector Search, Hybrid BM25 + Dense retrieval, Cross-Encoder Reranking, Multi-Query Expansion, and Maximal Marginal Relevance (MMR) -- within a biomedical question-answering RAG pipeline. All strategies share a fixed generation model (GPT-4o-mini), a common vector store (ChromaDB), and OpenAI's text-embedding-3-small embeddings, ensuring that observed differences are attributable to retrieval alone. Evaluation is conducted on 250 question-answer pairs drawn from a preprocessed subset of the BioASQ benchmark (rag-mini-bioasq) using four DeepEval metrics: contextual precision, contextual recall, faithfulness, and answer relevancy, each reported with 95% confidence intervals. A no-context ablation is included as a lower bound. Cross-Encoder Reranking achieves the best composite score (0.827) and highest contextual precision (0.852), confirming that query-document interaction yields measurable retrieval gains. Multi-Query Expansion, despite its recall-oriented design, produces the weakest contextual precision (0.671), suggesting naive query diversification introduces retrieval noise. MMR sacrifices answer relevancy for diversity, while the Dense baseline (composite 0.822) falls within 0.005 points of the top strategy. All RAG conditions dramatically outperform the no-context ablation on answer relevancy (0.658-0.701 vs. 0.287), confirming the practical value of retrieval. The full pipeline, hyperparameters, and evaluation code are publicly available.",
+    "code_links": [
+      "https://github.com/deviprasadbal/RAGHealthcareRetrievalStrategies"
+    ],
+    "comment": "15 pages, 4 figures, 2 tables. Code and data: https://github.com/deviprasadbal/RAGHealthcareRetrievalStrategies Also archived at Zenodo: https://doi.org/10.5281/zenodo.19774692"
+  },
+  {
+    "title": "FEDIN: Frequency-Enhanced Deep Interest Network for Click-Through Rate Prediction",
+    "authors": "Zenan Dai, Jinpeng Wang, Junwei Pan, Dapeng Liu, Lei Xiao, Shu-Tao Xia",
+    "published": "2026-05-03",
+    "arxiv_id": "2605.01726v1",
+    "url": "http://arxiv.org/abs/2605.01726v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.01726v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential recommendation models often struggle to capture latent periodic patterns in user interests, primarily due to the noise inherent in time-domain behavioral data. While frequency-domain analysis offers a global perspective to address this, existing approaches typically treat user sequences in isolation, overlooking the crucial context of the target item. In this work, we present a novel empirical observation: user attention scores exhibit distinct spectral entropy distributions when conditioned on positive versus negative target items. Specifically, true user interests manifest as highly concentrated spectral patterns with lower entropy in the frequency domain, whereas irrelevant behaviors appear as high-entropy noise. Leveraging this insight, we propose the Frequency-Enhanced Deep Interest Network (FEDIN). FEDIN introduces a frequency-domain branch that utilizes a target-aware spectrum filtering mechanism to isolate these periodic interest signals. Extensive experiments on three public datasets demonstrate that FEDIN consistently outperforms state-of-the-art sequential recommendation baselines, demonstrating superior robustness against noise. We have released our code at: https://github.com/otokoneko/FEDIN.",
+    "code_links": [
+      "https://github.com/otokoneko/FEDIN"
+    ],
+    "comment": "Accepted by SIGIR 2026. 6 pages, 4 figures, 2 tables"
+  },
+  {
+    "title": "Beyond Semantic Relevance: Counterfactual Risk Minimization for Robust Retrieval-Augmented Generation",
+    "authors": "Peiyang Liu, Qiang Yan, Ziqiang Cui, Di Liang, Xi Wang, Wei Ye",
+    "published": "2026-05-02",
+    "arxiv_id": "2605.01302v1",
+    "url": "http://arxiv.org/abs/2605.01302v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.01302v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Standard Retrieval-Augmented Generation (RAG) systems predominantly rely on semantic relevance as a proxy for utility. However, this assumption collapses in realistic decision-making scenarios where user queries are laden with cognitive biases, such as false premises or confirmation bias. In such cases, maximizing relevance paradoxically promotes the retrieval of sycophantic evidence that reinforces hallucinations, a critical failure we term the ``Relevance-Robustness Gap''. To bridge this gap, we propose CoRM-RAG (Counterfactual Risk Minimization for RAG), a framework that aligns retrieval with decision safety rather than mere similarity. Grounded in causal intervention, we introduce a Cognitive Perturbation Protocol to simulate user biases during training, which is then distilled into a lightweight Evidence Critic. This scoring module learns to identify documents that possess sufficient evidential strength to steer the model toward correctness despite adversarial query perturbations. Extensive experiments on decision-making benchmarks demonstrate that CoRM-RAG significantly outperforms strong dense retrievers and LLM-based rerankers in adversarial settings, while enabling effective risk-aware abstention through reliable robustness scoring. Our code is available at https://github.com/PeiYangLiu/CoRM-RAG.git.",
+    "code_links": [
+      "https://github.com/PeiYangLiu/CoRM-RAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Chain of Evidence: Pixel-Level Visual Attribution for Iterative Retrieval-Augmented Generation",
+    "authors": "Peiyang Liu, Ziqiang Cui, Xi Wang, Di Liang, Wei Ye",
+    "published": "2026-05-02",
+    "arxiv_id": "2605.01284v1",
+    "url": "http://arxiv.org/abs/2605.01284v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.01284v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Iterative Retrieval-Augmented Generation (iRAG) has emerged as a powerful paradigm for answering complex multi-hop questions by progressively retrieving and reasoning over external documents. However, current systems predominantly operate on parsed text, which creates two critical bottlenecks: (1) \\textit{Coarse-grained attribution}, where users are burdened with manually locating evidence within lengthy documents based on vague text-level citations; and (2) \\textit{Visual semantic loss}, where the conversion of visually rich documents (e.g., slides, PDFs with charts) into text discards spatial logic and layout cues essential for reasoning. To bridge this gap, we present \\textbf{Chain of Evidence (CoE)}, a retriever-agnostic visual attribution framework that leverages Vision-Language Models to reason directly over screenshots of retrieved document candidates. CoE eliminates format-specific parsing and outputs precise bounding boxes, visualizing the complete reasoning chain within the retrieved candidate set. We evaluate CoE on two distinct benchmarks: \\textbf{Wiki-CoE}, a large-scale dataset of structured web pages derived from 2WikiMultiHopQA, and \\textbf{SlideVQA}, a challenging dataset of presentation slides featuring complex diagrams and free-form layouts. Experiments demonstrate that fine-tuned Qwen3-VL-8B-Instruct achieves robust performance, significantly outperforming text-based baselines in scenarios requiring visual layout understanding, while establishing a retriever-agnostic solution for pixel-level interpretable iRAG. Our code is available at https://github.com/PeiYangLiu/CoE.git.",
+    "code_links": [
+      "https://github.com/PeiYangLiu/CoE"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MUDY: Multi-Granular Dynamic Candidate Contextualization for Unsupervised Keyphrase Extraction",
+    "authors": "Hyeongu Kang, Susik Yoon",
+    "published": "2026-05-01",
+    "arxiv_id": "2605.00597v1",
+    "url": "http://arxiv.org/abs/2605.00597v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.00597v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Keyphrase extraction aims to automatically identify concise phrases that effectively represent the content of a document. While recent methods leveraging pre-trained language models (PLMs) have significantly improved the extraction of keyphrases with strong global semantic relevance, they often fall short in capturing the local contextual importance of keyphrases tied to specific subtopics dispersed in a document. In this paper, we propose a novel context-centric framework, MUDY, that effectively captures multi-granular contextual salience of candidate keyphrases. MUDY employs two complementary components: (1) a prompt-based scoring that estimates the generation likelihood of each candidate keyphrase, augmented with candidate-aware weighting to better reflect its local contextual importance, and (2) a self-attention-based scoring that utilizes multi-granular attention patterns from PLMs to assess candidate significance at both the document-wide and segment-specific levels. Evaluations on four real-world datasets demonstrate that MUDY outperforms state-of-the-art baselines in top-k accuracy at various cutoff thresholds. In-depth quantitative and qualitative analyses further highlight the efficacy of context-centric keyphrase extraction with multi-granular saliency. For reproducibility, the source code of MUDY is available at https://github.com/HgKang1/MUDY.",
+    "code_links": [
+      "https://github.com/HgKang1/MUDY"
+    ],
+    "comment": "Accepted to SIGIR 2026"
+  },
+  {
+    "title": "Hierarchical Abstract Tree for Cross-Document Retrieval-Augmented Generation",
+    "authors": "Ziwen Zhao, Menglin Yang",
+    "published": "2026-05-01",
+    "arxiv_id": "2605.00529v1",
+    "url": "http://arxiv.org/abs/2605.00529v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.00529v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Retrieval-augmented generation (RAG) enhances large language models with external knowledge, and tree-based RAG organizes documents into hierarchical indexes to support queries at multiple granularities. However, existing Tree-RAG methods designed for single-document retrieval face critical challenges in scaling to cross-document multi-hop questions: (1) poor distribution adaptability, where $k$-means clustering introduces noise due to rigid distribution assumptions; (2) structural isolation, as tree indexes lack explicit cross-document connections; and (3) coarse abstraction, which obscures fine-grained details. To address these limitations, we propose $Ψ$-RAG, a tree-RAG framework with two key components. First, a hierarchical abstract tree index built through an iterative \"merging and collapse\" process that adapts to data distributions without a priori assumption. Second, a multi-granular retrieval agent that intelligently interacts with the knowledge base with reorganized queries and an agent-powered hybrid retriever. $Ψ$-RAG supports diverse tasks from token-level question answering to document-level summarization. On cross-document multi-hop QA benchmarks, it outperforms RAPTOR by 25.9% and HippoRAG 2 by 7.4% in average F1 score. Code is available at https://github.com/Newiz430/Psi-RAG.",
+    "code_links": [
+      "https://github.com/Newiz430/Psi-RAG"
+    ],
+    "comment": "ICML 2026"
+  },
+  {
+    "title": "DynamicPO: Dynamic Preference Optimization for Recommendation",
+    "authors": "Xingyu Hu, Kai Zhang, Jiancan Wu, Shuli Wang, Chi Wang, Wenshuai Chen, Yinhua Zhu, Haitao Wang, Xingxing Wang, Xiang Wang",
+    "published": "2026-05-01",
+    "arxiv_id": "2605.00327v1",
+    "url": "http://arxiv.org/abs/2605.00327v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.00327v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In large language model (LLM)-based recommendation systems, direct preference optimization (DPO) effectively aligns recommendations with user preferences, requiring multi-negative objective functions to leverage abundant implicit-feedback negatives and sharpen preference boundaries. However, our empirical analyses reveal a counterintuitive phenomenon, preference optimization collapse, where increasing the number of negative samples can lead to performance degradation despite a continuously decreasing training loss. We further theoretically demonstrate that this collapse arises from gradient suppression, caused by the dominance of easily discriminable negatives over boundary-critical negatives that truly define user preference boundaries. As a result, boundary-relevant signals are under-optimized, weakening the model's decision boundary. Motivated by these observations, we propose DynamicPO (Dynamic Preference Optimization), a lightweight and plug-and-play framework comprising two adaptive mechanisms: Dynamic Boundary Negative Selection, which identifies and prioritizes informative negatives near the model's decision boundary, and Dual-Margin Dynamic beta Adjustment, which calibrates optimization strength per sample according to boundary ambiguity. Extensive experiments on three public datasets show that DynamicPO effectively prevents optimization collapse and improves recommendation accuracy on multi-negative preference optimization methods, with negligible computational overhead. Our code and datasets are available at https://github.com/xingyuHuxingyu/DynamicPO.",
+    "code_links": [
+      "https://github.com/xingyuHuxingyu/DynamicPO"
+    ],
+    "comment": "DASFAA2026"
+  },
+  {
+    "title": "Reliable Answers for Recurring Questions: Boosting Text-to-SQL Accuracy with Template Constrained Decoding",
+    "authors": "Smit Jivani, Sarvam Maheshwari, Sunita Sarawagi",
+    "published": "2026-04-30",
+    "arxiv_id": "2604.28028v1",
+    "url": "http://arxiv.org/abs/2604.28028v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.28028v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models (LLMs) have revolutionized Text-to-SQL generation, allowing users to query structured data using natural language with growing ease. Yet, real-world deployment remains challenging, especially in complex or unseen schemas, due to inconsistent accuracy and the risk of generating invalid SQL. We introduce Template Constrained Decoding (TeCoD), a system that addresses these limitations by harnessing the recurrence of query patterns in labeled workloads. TeCoD converts historical NL-SQL pairs into reusable templates and introduces a robust template selection module that uses a fine-tuned natural language inference model to match or reject queries efficiently. Once the template is selected, TeCoD enforces it during SQL generation through grammar-constrained decoding, implemented via a novel partitioned strategy that ensures both syntactic validity and efficiency. Together, these components yield up to 36% higher execution accuracy than in-context learning (ICL) and 2.2x lower latency on matched queries.",
+    "code_links": [
+      "https://github.com/SSLab-CSE-IITB/tecod"
+    ],
+    "comment": "Project Code: https://github.com/SSLab-CSE-IITB/tecod"
+  },
+  {
+    "title": "NeocorRAG: Less Irrelevant Information, More Explicit Evidence, and More Effective Recall via Evidence Chains",
+    "authors": "Shiyao Peng, Qianhe Zheng, Zhuodi Hao, Zichen Tang, Rongjin Li, Qing Huang, Jiayu Huang, Jiacheng Liu, Yifan Zhu, Haihong E",
+    "published": "2026-04-30",
+    "arxiv_id": "2604.27852v1",
+    "url": "http://arxiv.org/abs/2604.27852v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.27852v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Although precise recall is a core objective in Retrieval-Augmented Generation (RAG), a critical oversight persists in the field: improvements in retrieval performance do not consistently translate to commensurate gains in downstream reasoning. To diagnose this gap, we propose the Recall Conversion Rate (RCR), a novel evaluation metric to quantify the contribution of retrieval to reasoning accuracy. Our quantitative analysis of mainstream RAG methods reveals that as Recall@5 improves, the RCR exhibits a near-linear decay. We identify the neglect of retrieval quality in these methods as the underlying cause. In contrast, approaches that focus solely on quality optimization often suffer from inferior recall performance. Both categories lack a comprehensive understanding of retrieval quality optimization, resulting in a trade-off dilemma. To address these challenges, we propose comprehensive retrieval quality optimization criteria and introduce the NeocorRAG framework. This framework achieves holistic retrieval quality optimization by systematically mining and utilizing Evidence Chains. Specifically, NeocorRAG first employs an innovative activated search algorithm to obtain a refined candidate space. Then it ensures precise evidence chain generation through constrained decoding. Finally, the retrieved set of evidence chains guides the retrieval optimization process. Evaluated on benchmarks including HotpotQA, 2WikiMultiHopQA, MuSiQue, and NQ, NeocorRAG achieves SOTA performance on both 3B and 70B parameter models, while consuming less than 20% of tokens used by comparable methods. This study presents an efficient, training-free paradigm for RAG enhancement that effectively optimizes retrieval quality while maintaining high recall. Our code is released at https://github.com/BUPT-Reasoning-Lab/NeocorRAG.",
+    "code_links": [
+      "https://github.com/BUPT-Reasoning-Lab/NeocorRAG"
+    ],
+    "comment": "Accepted to WWW 2026"
+  },
+  {
+    "title": "One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation",
+    "authors": "Ethan Bito, Yongli Ren, Estrid He",
+    "published": "2026-04-30",
+    "arxiv_id": "2604.27599v1",
+    "url": "http://arxiv.org/abs/2604.27599v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.27599v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large language models (LLMs) are increasingly used for recommendation reranking, but their listwise predictions can depend on the order in which candidates are presented. This creates a mismatch between the set-based nature of recommendation and the sequence-based computation of decoder-only LLMs, where permuting an otherwise identical candidate set can change item scores and final rankings. Such order sensitivity makes LLM-based rerankers difficult to rely on, since rankings may reflect prompt serialization rather than user preference. We propose InvariRank, a permutation-invariant listwise reranking framework that addresses this dependence at the architectural level. InvariRank blocks cross-candidate attention with a structured attention mask and negates position-induced scoring changes through shared positional framing under Rotary Positional Embeddings (RoPE). Combined with a listwise learning-to-rank objective, the model scores all candidates in a single forward pass, avoiding permutation-based invariance training objectives that require multiple permutations of a candidate set. Experiments on recommendation benchmarks show that InvariRank maintains competitive ranking effectiveness while producing stable rankings across candidate permutations. The results suggest that architectural invariance is a practical route to reliable and efficient LLM-based recommendation reranking. The source code is at https://github.com/ejbito/InvariRank.",
+    "code_links": [
+      "https://github.com/ejbito/InvariRank"
+    ],
+    "comment": "Accepted at SIGIR 2026"
+  },
+  {
+    "title": "FINER-SQL: Boosting Small Language Models for Text-to-SQL",
+    "authors": "Thanh Dat Hoang, Thanh Trung Huynh, Matthias Weidlich, Thanh Tam Nguyen, Tong Chen, Hongzhi Yin, Quoc Viet Hung Nguyen",
+    "published": "2026-05-05",
+    "arxiv_id": "2605.03465v1",
+    "url": "http://arxiv.org/abs/2605.03465v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.03465v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Large language models have driven major advances in Text-to-SQL generation. However, they suffer from high computational cost, long latency, and data privacy concerns, which make them impractical for many real-world applications. A natural alternative is to use small language models (SLMs), which enable efficient and private on-premise deployment. Yet, SLMs often struggle with weak reasoning and poor instruction following. Conventional reinforcement learning methods based on sparse binary rewards (0/1) provide little learning signal when the generated SQLs are incorrect, leading to unstable or collapsed training. To overcome these issues, we propose FINER-SQL, a scalable and reusable reinforcement learning framework that enhances SLMs through fine-grained execution feedback. Built on group relative policy optimization, FINER-SQL replaces sparse supervision with dense and interpretable rewards that offer continuous feedback even for incorrect SQLs. It introduces two key reward functions: a memory reward, which aligns reasoning with verified traces for semantic stability, and an atomic reward, which measures operation-level overlap to grant partial credit for structurally correct but incomplete SQLs. This approach transforms discrete correctness into continuous learning, enabling stable, critic-free optimization. Experiments on the BIRD and Spider benchmarks show that FINER-SQL achieves up to 67.73\\% and 85\\% execution accuracy with a 3B model -- matching much larger LLMs while reducing inference latency to 5.57~s/sample. These results highlight a cost-efficient and privacy-preserving path toward high-performance Text-to-SQL generation. Our code is available at https://github.com/thanhdath/finer-sql.",
+    "code_links": [
+      "https://github.com/thanhdath/finer-sql"
+    ],
+    "comment": null
+  },
+  {
+    "title": "EGREFINE: An Execution-Grounded Optimization Framework for Text-to-SQL Schema Refinement",
+    "authors": "Jiaqian Wang, Yutao Qi, Wenjin Hou, Yu Pang, Rui Yang",
+    "published": "2026-05-01",
+    "arxiv_id": "2605.00628v1",
+    "url": "http://arxiv.org/abs/2605.00628v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.00628v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text-to-SQL enables non-expert users to query databases in natural language, yet real-world schemas often suffer from ambiguous, abbreviated, or inconsistent naming conventions that degrade model accuracy. Existing approaches treat schemas as fixed and address errors downstream. In this paper, we frame schema refinement as a constrained optimization problem: find a renaming function that maximizes downstream Text-to-SQL execution accuracy while preserving query equivalence through database views. We analyze the computational hardness of this problem, which motivates a column-wise greedy decomposition, and instantiate it as EGRefine: a four-phase pipeline that screens ambiguous columns, generates context-aware candidate names, verifies them through execution-grounded feedback, and materializes the result as non-destructive SQL views. The pipeline carries two structural properties: column-local non-degradation, ensured by the conservative selection rule in the verification phase, and database-level query equivalence, ensured by the view-based materialization phase. Together they make the resulting refinement safe by construction at the column level, with cross-column and prompt-level interactions handled empirically rather than analytically. Across controlled schema-degradation, real-world, and enterprise benchmarks, EGRefine recovers accuracy lost to schema naming noise where applicable and correctly abstains where the underlying task exceeds current Text-to-SQL capabilities, with refined schemas transferring across model families to enable refine-once, serve-many-models deployment. Code and data are publicly available at https://github.com/ai-jiaqian/EGRefine.",
+    "code_links": [
+      "https://github.com/ai-jiaqian/EGRefine"
+    ],
+    "comment": "15 pages, 5 figures, 50 references.Code: https://github.com/ai-jiaqian/EGRefine"
+  },
+  {
+    "title": "Reliable Answers for Recurring Questions: Boosting Text-to-SQL Accuracy with Template Constrained Decoding",
+    "authors": "Smit Jivani, Sarvam Maheshwari, Sunita Sarawagi",
+    "published": "2026-04-30",
+    "arxiv_id": "2604.28028v1",
+    "url": "http://arxiv.org/abs/2604.28028v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.28028v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models (LLMs) have revolutionized Text-to-SQL generation, allowing users to query structured data using natural language with growing ease. Yet, real-world deployment remains challenging, especially in complex or unseen schemas, due to inconsistent accuracy and the risk of generating invalid SQL. We introduce Template Constrained Decoding (TeCoD), a system that addresses these limitations by harnessing the recurrence of query patterns in labeled workloads. TeCoD converts historical NL-SQL pairs into reusable templates and introduces a robust template selection module that uses a fine-tuned natural language inference model to match or reject queries efficiently. Once the template is selected, TeCoD enforces it during SQL generation through grammar-constrained decoding, implemented via a novel partitioned strategy that ensures both syntactic validity and efficiency. Together, these components yield up to 36% higher execution accuracy than in-context learning (ICL) and 2.2x lower latency on matched queries.",
+    "code_links": [
+      "https://github.com/SSLab-CSE-IITB/tecod"
+    ],
+    "comment": "Project Code: https://github.com/SSLab-CSE-IITB/tecod"
+  },
+  {
+    "title": "FineState-Bench: Benchmarking State-Conditioned Grounding for Fine-grained GUI State Setting",
+    "authors": "Fengxian Ji, Jingpu Yang, Zirui Song, Yuanxi Wang, Zhexuan Cui, Yuke Li, Qian Jiang, Xiuying Chen",
+    "published": "2026-04-30",
+    "arxiv_id": "2604.27974v1",
+    "url": "http://arxiv.org/abs/2604.27974v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.27974v1",
+    "category": "databases",
+    "primary_category": "cs.CV",
+    "abstract": "Despite the rapid progress of large vision-language models (LVLMs), fine-grained, state-conditioned GUI interaction remains challenging. Current evaluations offer limited coverage, imprecise target-state definitions, and an overreliance on final-task success, obscuring where and why agents fail. To address this gap, we introduce \\textbf{FineState-Bench}, a benchmark that evaluates whether an agent can correctly ground an instruction to the intended UI control and reach the exact target state. FineState-Bench comprises 2,209 instances across desktop, web, and mobile platforms, spanning four interaction families and 23 UI component types, with each instance explicitly specifying an exact target state for fine-grained state setting. We further propose \\textit{FineState-Metrics}, a four-stage diagnostic pipeline with stage-wise success rates: Localization Success Rate (SR@Loc), Interaction Success Rate (SR@Int), Exact State Success Rate at Locate (ES-SR@Loc), and Exact State Success Rate at Interact (ES-SR@Int), and a plug-and-play \\textit{Visual Diagnostic Assistant} (VDA) that generates a Description and a bounding-box Localization Hint to diagnose visual grounding reason via controlled w/ vs.\\ w/o comparisons. On FineState-Bench, exact goal-state success remains low: ES-SR@Int peaks at 32.8\\% on Web and 22.8\\% on average across platforms. With VDA localization hints, Gemini-2.5-Flash gains +14.9 ES-SR@Int points, suggesting substantial headroom from improved visual grounding, yet overall accuracy is still insufficient for reliable fine-grained state-conditioned interaction \\href{https://github.com/FengxianJi/FineState-Bench}{Github.}",
+    "code_links": [
+      "https://github.com/FengxianJi/FineState-Bench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Graphify: Automated Synthesis of Type-Safe Graph Backends via $O(S)$ GraphQL-to-Gremlin Transpilation",
+    "authors": "Johannes Graf",
+    "published": "2026-04-29",
+    "arxiv_id": "2604.27223v1",
+    "url": "http://arxiv.org/abs/2604.27223v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.27223v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Graph databases offer unparalleled flexibility for managing interconnected data, yet the lack of strict schema enforcement often leads to runtime uncertainties and complex query development. This paper introduces Graphify, an end-to-end framework that enables developers to visually model graph data schemas and automatically synthesize a fully functional, type-safe backend. This paper proposes a formal mapping of GraphQL artifacts to the Gremlin traversal machine, supporting complete CRUD operations and arbitrarily nested queries. The system generates a transpiler capable of converting complex GraphQL requests into a single, optimized Gremlin query, including advanced features such as nested logical predicates, multi-key sorting, and pagination. At the core of the framework is a recursive state machine algorithm that processes GraphQL Abstract Syntax Trees (ASTs) with linear time complexity $O(S)$ relative to the number of selected fields. This paper demonstrates the practical efficiency and theoretical robustness of the approach through formal complexity analysis and empirical evaluation using the MovieLens 100k dataset. The result is a system that enables the generation of graph interfaces in minutes, bridging the gap between flexible graph storage and type-safe API consumption.",
+    "code_links": [
+      "https://github.com/Graf-J/Graphify"
+    ],
+    "comment": "18 pages, 5 figures. Introduces a formal mapping between GraphQL and Gremlin with $O(S)$ time complexity. Includes empirical evaluation on MovieLens 100k. Open-source implementation available at https://github.com/Graf-J/Graphify"
+  },
+  {
+    "title": "Health System Scale Semantic Search Across Unstructured Clinical Notes",
+    "authors": "Faith Wavinya Mutinda, Spandana Makeneni, Anna Lin, Shivaji Dutta, Irit R. Rasooly, Patrick Dibussolo, Shivani Kamath Belman, Hessam Shahriari, Kevin Murphy, Alex B. Ruan, Barbara H. Chaiyachati, Sanjay Chainani, Robert W. Grundmeier, Scott M. Haag, Jeffrey M. Miller, Heather M. Griffis, Ian M. Campbell",
+    "published": "2026-04-28",
+    "arxiv_id": "2604.25605v1",
+    "url": "http://arxiv.org/abs/2604.25605v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.25605v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "Introduction: Semantic search, which retrieves documents based on conceptual similarity rather than keyword matching, offers substantial advantages for retrieval of clinical information. However, deploying semantic search across entire health systems, comprising hundreds of millions of clinical notes, presents formidable engineering, cost, and governance challenges that have prevented adoption. Methods: We deployed a semantic search system at a large children's hospital indexing 166 million clinical notes (484 million vectors) from 1.68 million patients. The system uses instruction-tuned qwen3-embedding-0.6B embeddings, stores vectors in a managed database with storage-optimized indexing, maintains full-text metadata in a low-latency key-value store, and operates within a HIPAA-compliant governance framework. We evaluated the system through three experiments: optimization of embedding model and chunking strategy using a physician-authored benchmark dataset, characterization of full-scale performance (cost, latency, retrieval quality), and clinical utility assessment via comparison of chart abstraction efficiency across three tasks. Results: The system delivers sub-second query latency (median 237 ms single-user, 451 ms 20-user concurrency) with monthly costs of approximately USD 4,000. Qwen3 embeddings with 300-token chunk size achieved 94.6% accuracy on a clinical question-answering benchmark. In clinical utility evaluation across three abstraction tasks, semantic search reduced time-to-completion by 24 to 89% compared to clinician-performed chart review while maintaining comparable inter-rater agreement. Conclusion: Health-system-scale semantic search is both technically and operationally feasible. The system provides infrastructure supporting interactive search, cohort generation, and downstream LLM-powered clinical applications without requiring specialized informatics expertise.",
+    "code_links": [
+      "https://github.com/Ian-Campbell-Lab/clinical-semantic-search"
+    ],
+    "comment": "for associated code, see https://github.com/Ian-Campbell-Lab/clinical-semantic-search"
+  },
+  {
+    "title": "A Demonstration of SQLyzr: A Platform for Fine-Grained Text-to-SQL Evaluation and Analysis",
+    "authors": "Sepideh Abedini, M. Tamer Özsu",
+    "published": "2026-04-23",
+    "arxiv_id": "2604.21214v3",
+    "url": "http://arxiv.org/abs/2604.21214v3",
+    "pdf_url": "https://arxiv.org/pdf/2604.21214v3",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text-to-SQL models have significantly improved with the adoption of Large Language Models (LLMs), leading to their increasing use in real-world applications. Although many benchmarks exist for evaluating the performance of text-to-SQL models, they often rely on a single aggregate score, lack evaluation under realistic settings, and provide limited insight into model behaviour across different query types. In this work, we present SQLyzr, a comprehensive benchmark and evaluation platform for text-to-SQL models. SQLyzr incorporates a diverse set of evaluation metrics that capture multiple aspects of generated queries, while enabling more realistic evaluation through workload alignment with real-world SQL usage patterns and database scaling. It further supports fine-grained query classification, error analysis, and workload augmentation, allowing users to better diagnose and improve text-to-SQL models. This demonstration showcases these capabilities through an interactive experience. Through SQLyzr's graphical interface, users can customize evaluation settings, analyze fine-grained reports, and explore additional features of the platform. We envision that SQLyzr facilitates the evaluation and iterative improvement of text-to-SQL models by addressing key limitations of existing benchmarks. The source code of SQLyzr is available at https://github.com/sepideh-abedini/SQLyzr.",
+    "code_links": [
+      "https://github.com/sepideh-abedini/SQLyzr"
+    ],
+    "comment": null
+  },
+  {
+    "title": "3DPipe: A Pipelined GPU Framework for Scalable Generalized Spatial Join over Polyhedral Objects",
+    "authors": "Lyuheng Yuan, Da Yan, Akhlaque Ahmad, Fusheng Wang",
+    "published": "2026-04-21",
+    "arxiv_id": "2604.19982v1",
+    "url": "http://arxiv.org/abs/2604.19982v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.19982v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Spatial join is a fundamental operation in spatial databases. With the rapid growth of 3D data in applications such as LiDAR-based object detection and 3D digital pathology, there is an increasing need to support spatial join over 3D datasets. However, existing techniques are largely designed for 2D data, leaving 3D spatial join underexplored and computationally expensive. We present 3DPipe, a pipelined GPU framework for scalable spatial join over polyhedral objects. 3DPipe exploits GPU parallelism across both filtering and refinement stages, incorporates a multi-level pruning strategy for efficient candidate reduction, and employs chunked streaming to handle datasets exceeding GPU memory. Its pipelined execution overlaps CPU data preparation, host-device data transfer, and GPU computation to improve throughput. Experiments show that 3DPipe achieves up to 9.0$\\times$ speedup over the state-of-the-art GPU solution, TDBase, while maintaining excellent scalability. 3DPipe is open-sourced at https://github.com/lyuheng/3dpipe.",
+    "code_links": [
+      "https://github.com/lyuheng/3dpipe"
+    ],
+    "comment": null
+  },
+  {
+    "title": "NeuroLip: An Event-driven Spatiotemporal Learning Framework for Cross-Scene Lip-Motion-based Visual Speaker Recognition",
+    "authors": "Junguang Yao, Wenye Liu, Stjepan Picek, Yue Zheng",
+    "published": "2026-04-17",
+    "arxiv_id": "2604.15718v1",
+    "url": "http://arxiv.org/abs/2604.15718v1",
+    "pdf_url": "https://arxiv.org/pdf/2604.15718v1",
+    "category": "databases",
+    "primary_category": "cs.CV",
+    "abstract": "Visual speaker recognition based on lip motion offers a silent, hands-free, and behavior-driven biometric solution that remains effective even when acoustic cues are unavailable. Compared to traditional methods that rely heavily on appearance-dependent representations, lip motion encodes subject-specific behavioral dynamics driven by consistent articulation patterns and muscle coordination, offering inherent stability across environmental changes. However, capturing these robust, fine-grained dynamics is challenging for conventional frame-based cameras due to motion blur and low dynamic range. To exploit the intrinsic stability of lip motion and address these sensing limitations, we propose NeuroLip, an event-based framework that captures fine-grained lip dynamics under a strict yet practical cross-scene protocol: training is performed under a single controlled condition, while recognition must generalize to unseen viewing and lighting conditions. NeuroLip features a 1) Temporal-aware Voxel Encoding module with adaptive event weighting, 2) Structure-aware Spatial Enhancer that amplifies discriminative behavioral patterns by suppressing noise while preserving vertically structured motion information, and 3) Polarity Consistency Regularization mechanism to retain motion-direction cues encoded in event polarities. To facilitate systematic evaluation, we introduce DVSpeaker, a comprehensive event-based lip-motion dataset comprising 50 subjects recorded under four distinct viewpoint and illumination scenarios. Extensive experiments demonstrate that NeuroLip achieves near-perfect matched-scene accuracy and robust cross-scene generalization, attaining over 71% accuracy on unseen viewpoints and nearly 76% under low-light conditions, outperforming representative existing methods by at least 8.54%. The dataset and code are publicly available at https://github.com/JiuZeongit/NeuroLip.",
+    "code_links": [
+      "https://github.com/JiuZeongit/NeuroLip"
+    ],
+    "comment": null
+  }
+]
