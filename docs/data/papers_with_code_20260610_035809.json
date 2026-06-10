@@ -1,0 +1,362 @@
+[
+  {
+    "title": "Generative Archetype-Grounded Item Representations for Sequential Recommendation",
+    "authors": "Yifan Li, Jiahong Liu, Xinni Zhang, Hao Chen, Yankai Chen, Wenhao Yu, Jianting Chen, Irwin King",
+    "published": "2026-06-09",
+    "arxiv_id": "2606.11023v1",
+    "url": "http://arxiv.org/abs/2606.11023v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.11023v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential recommendation aims to predict users' next interaction with items by analyzing their historical behavior. However, the limited quality of item representations remains a critical bottleneck. While pre-trained large language models (LLMs) can provide rich semantic representations, existing approaches only rely on static encoding of fixed attributes, overlooking the crucial role of target audiences in defining item identity. Moreover, the semantic space struggles to reflect actual user behavior, resulting in a significant gap between semantic representations and behavioral patterns. To address these limitations, we propose GenAIR, a general framework that empowers sequential recommendation with Generative Archetype-grounded Item Representations. Specifically, we first leverage an LLM to analyze item metadata and infer textual description of the Archetype, which represents the conceptual profile of the item's ideal target audience. We then extract the corresponding embeddings in a single forward pass. Further, to ground these generative archetypes in real-world behavior, we introduce a behavioral calibration objective, which explicitly incorporates behavioral signals from actual interactions. This objective adjusts the structure of the embedding space to reflect empirical patterns. GenAIR enables seamless integration with most existing models while maintaining high efficiency. Comprehensive experiments conducted on three real-world datasets demonstrate that GenAIR significantly improves the performance of various sequential recommendation models and consistently outperforms state-of-the-art baseline approaches. Implementation codes are available at https://github.com/AI-Santiago/GenAIR.",
+    "code_links": [
+      "https://github.com/AI-Santiago/GenAIR"
+    ],
+    "comment": "Accepted by WWW 2026 (Oral)"
+  },
+  {
+    "title": "ConvMemory v2: A Recall-Preserving Top-10 Evidence Reranker for Conversational Memory Retrieval",
+    "authors": "Taiheng Pan",
+    "published": "2026-06-09",
+    "arxiv_id": "2606.10842v1",
+    "url": "http://arxiv.org/abs/2606.10842v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.10842v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "We describe ConvMemory v2, an opt-in token-evidence reranker that sits after the lightweight ConvMemory v1 reranker and reorders only v1's protected top-10 candidate set. v2 is a fine-tuned ms-marco-MiniLM-L-6-v2 cross-encoder (22,713,601 parameters, measured from the released checkpoint) applied to the ten (query, memory) pairs that v1 has already selected; it does not change which ten memories are returned, so Recall@10 and Hit@10 are identical to v1 by construction, not by statistical coincidence. On the LoCoMo conversational memory benchmark (5 seeds, n = 4955 test rows), v2 raises FULL MRR from v1's 0.5824 to 0.6560 (paired bootstrap +0.0734, 95% CI [+0.0645, +0.0827]) and H@1 from 0.4440 to 0.5474. v2 closes most but not all of the gap to a much more expensive full-pool cross-encoder reference (mxbai-rerank-large-v1 over the top-500, MRR 0.6688): on FULL MRR v2 sits 0.013 below mxbai_top500, but on two raw-dense-hard slices (where v1's protected top-10 has higher recall than mxbai's own top-10) v2 exceeds mxbai_top500. A four-arm load-bearing ablation shows candidate-specific memory text is the mechanism: removing, shuffling, or replacing it collapses MRR below raw dense retrieval. v2 is best understood as a standard recall-preserving cascade pattern with LoCoMo-specific fine-tuning, an explicit anti-shortcut inference contract, and disciplined load-bearing analysis; its advantage over mxbai is slice-specific rather than a general dominance claim. This report extends the v1 technical report (arXiv:2605.28062).",
+    "code_links": [
+      "https://github.com/pth2002/ConvMemory"
+    ],
+    "comment": "19 pages, 3 figures. Single-author technical report. Extends arXiv:2605.28062 (ConvMemory v1). Code and checkpoint: github.com/pth2002/ConvMemory"
+  },
+  {
+    "title": "$τ$-Rec: A Verifiable Benchmark for Agentic Recommender Systems",
+    "authors": "Bharath Sivaram Narasimhan, Karthik R Narasimhan",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.10156v1",
+    "url": "http://arxiv.org/abs/2606.10156v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.10156v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "As recommender systems transition toward agentic, multi-turn conversational interfaces, evaluation paradigms have struggled to keep pace. Current benchmarks often rely on \"LLM-as-a-judge\" evaluations, which introduce subjectivity, high costs and inconsistency. We present $τ$-Rec, a benchmark for agentic recommender systems that replaces subjective evaluation with verifiable rewards and a reveal-tagged elicitation (RTE) mechanism that controls how task constraints surface during dialogue. By testing agents against structured catalog predicates and employing a pass^k reliability metric, $τ$-Rec provides a systematic test for consistent reasoning. Our evaluation of nine configurations across five model families -- GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 Flash, DeepSeek V4 Flash, Qwen3-32B and GPT-5 mini -- reveals a steep reliability cliff, where even the best model achieves only ~57% at pass^1 and ~38% at pass^4, highlighting a critical gap in current conversational agent deployment. All code and data are publicly available at https://github.com/nbharaths/tau-rec.",
+    "code_links": [
+      "https://github.com/nbharaths/tau-rec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Mult-DPO: Multinomial Direct Preference Optimization for Recommender Systems",
+    "authors": "Yaochen Zhu, Harald Steck, James McInerney, Aditya Sinha, Yinhan He, Nathan Kallus, Jundong Li",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.10078v1",
+    "url": "http://arxiv.org/abs/2606.10078v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.10078v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Direct preference optimization (DPO) is a simple and effective alignment strategy for large language models (LLMs) based on pairwise preferences. In recommender systems, however, user feedback is rarely pairwise. For a given context, e.g., a user, a session, or a conversation, we typically observe set-wise preferences with multiple positive items, where every positive item should outrank every unobserved or explicitly negative item, with no prescribed order among the positives or the negatives themselves. A natural generalization is to use the Plackett-Luce (PL) reward model, which extends the Bradley-Terry reward model underlying vanilla DPO from pairwise preferences to full rankings of candidates. However, we show that adapting the PL model to set-wise preferences requires marginalizing over all positive orderings, where the resulting expression is combinatorial in complexity. To address this fundamental challenge, we propose Mult-DPO, a novel DPO objective with a tractable multinomial surrogate likelihood over set-wise preference events for the user-preference alignment of LLM-based recommender systems. The multinomial construction is not itself a ranking distribution, but it is defined on the same reward-induced weight space and admits a closed-form DPO-style objective, enabling direct alignment of LLMs with multiple candidates through a classification-style objective. In addition, we prove that the multinomial DPO loss is a tractable upper bound on the marginalized PL DPO loss when optimizing against the set-wise preference data. We further characterize the tightness of this bound in terms of the relative total weight of positives versus negatives, which provides insights into tightening the bound with richer or harder negatives. Finally, we extend Mult-DPO to the alignment of LLMs with multiple preference levels. Code is available at https://github.com/yaochenzhu/Mult_DPO",
+    "code_links": [
+      "https://github.com/yaochenzhu/Mult_DPO"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Popcorn: A Configurable Benchmark for Visual Evidence in Multimodal Movie Recommendation",
+    "authors": "Ali Tourani, Fatemeh Nazary, Yashar Deldjoo, Tommaso Di Noia",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.09595v1",
+    "url": "http://arxiv.org/abs/2606.09595v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.09595v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Movies are long-form audiovisual works, yet recommender benchmarks often rely on trailers, thumbnails, or metadata. These sources differ in semantics and scalability: full movies preserve consumption-level evidence, trailers concentrate promotional highlights, and thumbnails provide sparse but catalog-scale visual signals. We present Popcorn, a configurable benchmark for visual evidence in multimodal movie recommendation, combining title-aligned full-movie/trailer embeddings with MovieLens-linked thumbnail features encoded by modern visual and vision-language models. Popcorn standardizes modality assembly, fusion, splitting, evaluation, and LLM-augmented metadata through a single configuration contract. Experiments show that thumbnail VLMs provide strong, scalable item-side evidence, while controlled trailer/full-movie comparisons show that visual evidence sources are not interchangeable: the choice of source and fusion strategy affects ranking accuracy, coverage, diversity, and calibration. The framework is available at https://github.com/RecSys-lab/Popcorn.",
+    "code_links": [
+      "https://github.com/RecSys-lab/Popcorn"
+    ],
+    "comment": "8 pages, 3 figures, 3 tables"
+  },
+  {
+    "title": "Closing the Indexing-Decoding Gap in Multimodal Generative Retrieval via Prefix Retention Optimization",
+    "authors": "Yufei Chen, Zihan Wang, Yubao Tang, Yukun Zhao, Maarten de Rijke, Zhaochun Ren",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.09241v2",
+    "url": "http://arxiv.org/abs/2606.09241v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.09241v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal generative retrieval formulates multimodal retrieval as discrete identifier generation, eliminating the need for explicit similarity search over external embeddings. Existing approaches construct identifiers via residual quantization and decode them with trie-constrained beam search. This combination introduces an indexing-decoding gap: identifier learning objectives, including reconstruction and contrastive losses, do not explicitly enforce prefix discriminability during decoding. As a result, even well-optimized identifiers can be irreversibly pruned early in beam search due to low-rank prefixes. We theoretically characterize this gap and derive a survival bound that relates prefix retention to three controllable factors in indexing and decoding. Building on this bound, we propose PRO, prefix retention optimization, a unified framework comprising three mechanisms: (i) prefix ranking distillation aligns quantized prefix rankings with those induced by pre-quantization embeddings using a listwise loss; (ii) vocabulary scheduling increases codebook sizes from shallow to deep residual quantization levels to reduce early competition from non-target prefixes; and (iii) geometric score fusion vectorizes each candidate prefix and incorporates its similarity to the query into beam search scoring, further reducing the indexing-decoding mismatch. Experiments on nine multimodal retrieval tasks show that PRO improves retention of target identifier prefixes and outperforms existing multimodal generative retrieval baselines.",
+    "code_links": [
+      "https://github.com/layingfish/MGR_PRO"
+    ],
+    "comment": "29 pages, 5 figures; code: https://github.com/layingfish/MGR_PRO"
+  },
+  {
+    "title": "Teach Multimodal Recommendation Model to See via Personalized Visual Extraction and Adaptive Learning",
+    "authors": "Yutong Li, Xinyi Zhang, Ziyi Ye, Daoguo Dong, Yu-gang Jiang",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.09082v1",
+    "url": "http://arxiv.org/abs/2606.09082v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.09082v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal sequential recommendation (MSR) incorporates textual and visual information to improve recommendation quality. However, recent studies and our empirical analysis show that visual features are often underutilized, thereby contributing far less than textual signals. We attribute this issue to two factors: insufficient visual representation learning (pretrained encoders fail to capture preference-relevant cues) and unbalanced visual-text optimization (textual features dominate the learning process). To address these issues, we propose Teach Multimodal Recommendation Model to See via Personalized Visual Extraction and Adaptive Learning (REVEAL), a plug-and-play framework that enhances visual representation learning and cross-modal optimization without modifying the original recommendation backbone. REVEAL consists of Feedback-Guided Visual Extraction (FVE), which refines prompt-guided visual extraction through task-level feedback, and Adaptive Visual Learning (AVL), which dynamically reweights visual learning to alleviate modality imbalance. Experiments on multiple real-world datasets and MSR backbones demonstrate that REVEAL consistently improves recommendation performance. Further analysis shows that these gains arise from more effective attention to preference-relevant visual regions and better visual utilization during training. The code is available at https://github.com/YutongLi2024/REVEAL.",
+    "code_links": [
+      "https://github.com/YutongLi2024/REVEAL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "EviProp: Seeded Relevance Diffusion on Chunk-Page Graphs for Long Multimodal Document Retrieval",
+    "authors": "Hongwei Zhang, Xiaoman Wang, Zehui Ling, Ruicheng Zhu, Yue Zhang, Pinlong Cai, Fuke Shen, Botian Shi, Tongquan Wei, Guohang Yan",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.08979v1",
+    "url": "http://arxiv.org/abs/2606.08979v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.08979v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieving evidence pages from visually rich long documents is a key challenge in document question answering. Existing page-level visual retrievers operate under an independent matching paradigm: each page is scored in isolation based on query-page similarity. This paradigm can under-rank evidence pages whose signals are localized in fine-grained chunks or depend on document-internal associations. We propose EviProp, a retrieval method that recovers such pages via seeded relevance diffusion. EviProp models each document as a multimodal Chunk-Page graph with hierarchical, sequential, and similarity links. Given a query, it combines dense visual page priors with sparse chunk seeds, then runs Personalized PageRank to diffuse relevance over the graph. Experiments on MMLongBench-Doc and LongDocURL show consistent gains in evidence-page retrieval over independent visual retrieval and text-visual fusion baselines. Downstream QA results further show that improved retrieval translates into better answer accuracy, with negligible online retrieval overhead. Our code is released at https://github.com/Flyecnu/EviProp.",
+    "code_links": [
+      "https://github.com/Flyecnu/EviProp"
+    ],
+    "comment": null
+  },
+  {
+    "title": "When Should Queries Be Decomposed? A Stage-Aware Study of Query Decomposition for Multi-Condition Retrieval",
+    "authors": "Bochao Yin, Xuan Lu, Zhengyu Qi, Xiaoyu Shen",
+    "published": "2026-06-07",
+    "arxiv_id": "2606.08577v1",
+    "url": "http://arxiv.org/abs/2606.08577v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.08577v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multi-condition retrieval requires systems to identify documents that satisfy multiple distinct constraints, moving beyond mere topical relevance. While query decomposition is widely adopted as an intuitive remedy, its effectiveness across different retrieval pipeline stages remains underexplored. In this paper, we conduct a stage-aware empirical study and uncover a stark, stage-dependent effect: decomposition during initial retrieval frequently harms retrieval performance due to semantic dilution, yet substantially improves reranking by enabling more fine-grained constraint verification. Motivated by these insights, we propose a principled Stage-Aware Decomposition framework that retains the monolithic query during initial retrieval to preserve global semantic context, while employing sub-queries exclusively during reranking for fine-grained constraint matching. Extensive evaluations on the MultiConIR and SSRB benchmarks demonstrate that our framework consistently improves ranking performance for compositional queries across multiple retrieval and reranking models. We release our code at https://github.com/EIT-NLP/Query-Decompose.",
+    "code_links": [
+      "https://github.com/EIT-NLP/Query-Decompose"
+    ],
+    "comment": null
+  },
+  {
+    "title": "TrustMargin: Training-Free Arbitration between Parametric Memory and Retrieved Evidence in Large Language Models",
+    "authors": "Jingyan Xu, Hong Shi, Yi Shan, Penghui Liu, Yunhao Bai, Ningyuan Li, Xueyang Liu",
+    "published": "2026-06-07",
+    "arxiv_id": "2606.08397v1",
+    "url": "http://arxiv.org/abs/2606.08397v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.08397v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models answer knowledge-intensive questions using both parametric memory and retrieved evidence, but neither source is uniformly reliable. Retrieval can fill knowledge gaps, yet distracting passages may override correct closed-book answers. We study this post-generation conflict as answer-level source arbitration: given Direct and RAG answers from the same frozen model, decide which source to trust. We propose TRUSTMARGIN, a training-free, plug-and-play arbitration layer that scores the two existing candidates with the model's own likelihoods. It combines a parametric-prior margin, which tests whether memory accepts the retrieved answer, with an evidence-binding margin, which discounts passage-only salience and measures question-specific support. TRUSTMARGIN selects between Direct and RAG without fine-tuning, external judges, or additional generation. Across 2WIKIMQA and CWQA with three LLaMA scales, TRUSTMARGIN consistently improves over Direct generation and BM25-RAG, recovers part of the Direct/RAG oracle gap, and generalizes to multiple training-free RAG pipelines.",
+    "code_links": [
+      "https://github.com/mojixu/TrustMargin"
+    ],
+    "comment": "13 pages, 6 figures, 9 tables. Code and data are available at https://github.com/mojixu/TrustMargin.git"
+  },
+  {
+    "title": "EmpiriGraph-Psy: A Dataset and LLM Pipeline for Extracting Empirical Relation Graphs from Psychology Abstracts",
+    "authors": "Danqin Zhao, Yicun Liu, Xingwei Tan, Thomas T. Hills",
+    "published": "2026-06-06",
+    "arxiv_id": "2606.08362v1",
+    "url": "http://arxiv.org/abs/2606.08362v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.08362v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Existing scientific relation extraction benchmarks mainly target domains such as computer science, where entities are tasks, methods, datasets, materials, or metrics. This leaves a gap in variable-oriented empirical fields such as psychology, where findings are expressed as relations among constructs, measurements, interventions, and outcomes. We introduce variable-centered empirical graph extraction, the task of mapping scientific abstracts to typed graphs whose nodes are normalized variables and whose edges represent empirical and hierarchical relations. To support this task, we construct EmpiriGraph-Psy, a benchmark of 210 psychology abstracts annotated by domain-trained annotators with normalized variables, concept hierarchies, empirical relation types, and validation states. We evaluate frontier and open-weight LLMs using both direct extraction and a staged graph-construction pipeline that separates variable extraction, normalization, hierarchy construction, evidence selection, relation extraction, and edge validation. The staged pipeline substantially outperforms direct extraction, with the best configuration achieving a macro-F1 of 0.74. Error analysis shows that moderation relations and concept hierarchies remain the most challenging cases, highlighting the difficulty of extracting higher-order empirical claims and implicit abstraction structure from scientific abstracts.",
+    "code_links": [
+      "https://github.com/foxxis-dq828/EmpiriGraph-Psy"
+    ],
+    "comment": "17 pages, 5 figures. Code available at https://github.com/foxxis-dq828/EmpiriGraph-Psy"
+  },
+  {
+    "title": "Your UnEmbedding Matrix is Secretly a Feature Lens for Text Embeddings",
+    "authors": "Songhao Wu, Zhongxin Chen, Yuxuan Liu, Heng Cui, Cong Li, Rui Yan",
+    "published": "2026-06-05",
+    "arxiv_id": "2606.07502v1",
+    "url": "http://arxiv.org/abs/2606.07502v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.07502v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models exhibit impressive zero-shot capabilities across a wide range of downstream tasks. However, they struggle to function as off-the-shelf embedding models, leading to suboptimal performance on massive text embedding benchmarks. In this paper, we identify a potential cause underlying this deficiency. Our motivation stems from an unexpected observation: text embeddings tend to align with frequent but uninformative tokens when projected onto the vocabulary space. We argue that this excessive expression of high-frequency tokens suppresses the model's ability to capture nuanced semantics. To address this, we introduce EmbedFilter, a simple linear transformation designed to refine text embeddings derived from LLMs directly. Specifically, we uncover that the unembedding matrix within LLMs encodes a latent space that is actively writing these frequent tokens into embedding space. By filtering out this subspace, EmbedFilter suppress the influence of high-frequency tokens, thereby enhancing semantic representations. As a compelling byproduct, this enables an inherent dimensionality reduction, lowering index storage and speedup retrieval while fully preserving the refined embedding quality. Our experiments across multiple LLM backbones demonstrate that LLMs equipped with EmbedFilter achieve superior zero-shot downstream performance even with significantly reduced embedding dimensions. We hope our findings provide deeper insights into the mechanisms of LLM-based representations and inspire more principled designs to improve text embeddings training. Our code is available at https://github.com/CentreChen/EmbFilter.",
+    "code_links": [
+      "https://github.com/CentreChen/EmbFilter"
+    ],
+    "comment": "preprint"
+  },
+  {
+    "title": "Less Context, More Accuracy: A Bi-Temporal Memory Engine for LLM Agents Where a Lean Retrieved Context Beats the Full History",
+    "authors": "Liuyin Wang",
+    "published": "2026-06-05",
+    "arxiv_id": "2606.09900v1",
+    "url": "http://arxiv.org/abs/2606.09900v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.09900v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Long-term memory is the missing layer for LLM agents: across sessions they forget, and the common workaround -- replaying the whole history into the prompt -- is expensive, slow, and, as distractors accumulate, less accurate. Most memory systems win on cost or latency but still lose to the full-context baseline on accuracy, and benchmark numbers are reported on inconsistent, non-reproducible harnesses, so one system appears at wildly different scores across sources. We present Engram, an open-source, dual-process memory engine on a bi-temporal data model. A fast write path appends lossless episodes with no LLM on the critical path; an asynchronous path extracts atomic (subject, predicate, object) facts, builds a bi-temporal knowledge graph, and resolves contradictions without an LLM call per fact -- invalidating, never deleting, so every fact keeps provenance and a supersession chain. A hybrid read path fuses dense, lexical, graph, and recency/salience signals, applies a point-in-time (\"as-of\") filter, and assembles a compact, provenance-tagged context. On the full 500-question LongMemEval_S, graded by the official category-specific judge, Engram's lean configuration -- answering from a ~9.6k-token retrieved slice, never the full history -- scores 83.6% vs. 73.2% for full-context (+10.4 points, McNemar p < 10^-6) at ~8x fewer tokens (9.6k vs. 79k), with 0/500 errored. The gain needs a hybrid read path: facts alone lose recall, while facts plus retrieved chunks recover detail. We also contribute a neutral, in-repo evaluation harness with the official judge baked in and the full-context baseline in every table, publish the raw per-question logs, and document the measurement-integrity pitfalls (truncation, home-grown judges, full-history leaks) that silently distort memory benchmarks. Every number ships with a command to reproduce it.",
+    "code_links": [
+      "https://github.com/ly-wang19/engram"
+    ],
+    "comment": "14 pages, 4 figures, 3 tables. Code, reproducible harness, and raw per-question logs: https://github.com/ly-wang19/engram"
+  },
+  {
+    "title": "Benchmarking Open-Source Layout Detection Models for Data Snapshot Extraction from Institutional Documents",
+    "authors": "AJ Carl P. Dy, Aivin V. Solatorio",
+    "published": "2026-06-04",
+    "arxiv_id": "2606.06242v1",
+    "url": "http://arxiv.org/abs/2606.06242v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.06242v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Institutional documents contain substantial amounts of operational and analytical information embedded within figures and tables. Current approaches for extracting visual content from documents are largely built around generic document layout analysis, where figures and tables are treated as uniformly relevant document objects rather than semantically meaningful analytical artifacts. In this work, we introduce a benchmark dataset and evaluation framework for \\textit{data snapshot extraction}, the task of identifying and localizing semantically meaningful visual artifacts within institutional documents. The benchmark spans humanitarian reports, World Bank policy research working papers, and project appraisal documents, and includes annotations for figures and tables that contain reusable analytical information. Using this dataset, we benchmarked multiple open-source layout detection models and evaluated both detection performance and spatial extraction quality. Our results show that current models struggle to generalize to operational institutional documents despite strong performance on conventional academic benchmarks. Common failure modes include confusion between analytical and non-analytical content, fragmentation of composite analytical artifacts, and incomplete extraction of contextual information required for interpretation. These findings highlight a persistent gap between generic document layout analysis and operationally useful data snapshot extraction. We release the source PDFs, annotation dataset, metadata, and source code to support future research in operational document intelligence. The dataset is available at https://huggingface.co/datasets/ai4data/data-snapshot and the source code is available at https://github.com/worldbank/ai4data/tree/main/experimental/data-snapshot.",
+    "code_links": [
+      "https://github.com/worldbank/ai4data"
+    ],
+    "comment": "23 pages, 8 figures"
+  },
+  {
+    "title": "Dual-Stream MLP is All You Need for CTR Prediction",
+    "authors": "Kesha Ou, Zhen Tian, Wayne Xin Zhao, Long Zhang, Sheng Chen, Ji-Rong Wen",
+    "published": "2026-06-03",
+    "arxiv_id": "2606.04944v1",
+    "url": "http://arxiv.org/abs/2606.04944v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.04944v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Click-through rate (CTR) prediction holds a pivotal role in online advertising and recommendation systems, where even small improvements can significantly boost revenue. Existing research primarily focuses on designing dual-stream architectures to capture effective complex feature interactions from both explicit and implicit perspectives. However, these approaches are faced with two major challenges: 1) the high complexity of feature interaction learning, which increases computational demands and the overfitting risk, and 2) the imbalance between explicit and implicit modules, where one module's output may dominate the final prediction. To address these issues, in this paper, we propose Dual-Stream MLP (DS-MLP), a novel feature interaction framework for the CTR prediction task. Specially, it leverages knowledge distillation to consolidate the capacity of learning explicit feature interaction into a main MLP network, while a parallel MLP simultaneously captures implicit feature interactions as a complement. To effectively optimize the dual-stream MLP architecture, we further design a specific learning approach with two alignment strategies for enhancing the compatibility of the two MLP components. Experiments demonstrate that DS-MLP, though merely a vanilla MLP structure (the final model), can achieve state-of-the-art performance across three widely used benchmarks, offering a scalable and efficient solution for large-scale recommendation systems. Our code is available at https://github.com/RUCAIBox/DS-MLP.",
+    "code_links": [
+      "https://github.com/RUCAIBox/DS-MLP"
+    ],
+    "comment": "Accepted by TKDD"
+  },
+  {
+    "title": "Trading Engagement for Sustainability: Carbon-Aware Re-ranking for E-commerce Recommendations",
+    "authors": "Noah Lund Syrdal, Anders Vestrum, Jorgen Bergh",
+    "published": "2026-06-03",
+    "arxiv_id": "2606.04550v1",
+    "url": "http://arxiv.org/abs/2606.04550v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.04550v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "E-commerce recommender systems strongly influence which products users consider and purchase, yet sustainability signals such as Product Carbon Footprint (PCF) are almost never available at catalog scale. We study carbon-aware product recommendation in the realistic setting where PCF labels are missing for most items and must be inferred. We first estimate product-level carbon footprints via a retrieval-augmented PCF estimation pipeline that transfers supervision from the Carbon Catalogue, a small set of life-cycle-assessed products, to a large unlabeled e-commerce catalog using semantic similarity search, few-shot LLM prompting, and a nearest-neighbour fallback. We then apply a carbon-aware post-hoc re-ranking strategy on top of relevance scores produced by three established recommendation models: BPR, NeuMF, and LightGCN. The method trades off predicted user-item engagement against estimated carbon footprint through a single tunable parameter, lambda. In this offline study, engagement is operationalized through Amazon review interactions, which serve as implicit feedback and as a proxy for user interest or purchase behavior. We evaluate the framework on the Amazon Reviews dataset across three product categories: Home and Kitchen, Sports and Outdoors, and Electronics. By sweeping lambda, we construct Pareto frontiers that characterize the achievable engagement and carbon trade-off for each model and category. Substantial carbon reductions are achievable at minimal engagement cost across all models and categories. However, the available carbon headroom varies by model and category, underscoring the importance of model choice and domain context.",
+    "code_links": [
+      "https://github.com/andersvestrum/carbon-aware-recsys"
+    ],
+    "comment": "23 pages, 30 figures. Code available at https://github.com/andersvestrum/carbon-aware-recsys"
+  },
+  {
+    "title": "TRL-Bench: Standardizing Cross-Paradigm Representation-Level Evaluation of Tabular Encoders",
+    "authors": "Wei Pang, Xiangru Jian, Hehan Li, Zhixuan Yu, Alex Xue, Jinyang Li, Zhengyuan Dong, Xinjian Zhao, Hao Xu, Chao Zhang, Reynold Cheng, M. Tamer Özsu, Tianshu Yu",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.09323v1",
+    "url": "http://arxiv.org/abs/2606.09323v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.09323v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Tabular encoders are usually evaluated inside task-specific end-to-end pipelines, so models from different training paradigms are difficult to compare directly even when they operate on similar tabular signals. We introduce TRL-Bench, a multi-granular tabular representation learning (TRL) benchmark that standardizes cross-paradigm representation-level evaluation: each encoder exports row-, column-, or table embeddings through its supported wrapper, and shared lightweight heads probe them across three suites: TRL-CTbench (column/table), TRL-Rbench (row), and TRL-DLTE (compositional Data-Lake Table Enrichment spanning all three granularities). To support this standardized setting, we release curated benchmark assets and task reformulations, including 50 OpenML tables with 123 verified targets, 16 row-pair linkage rewrites, and a 47,772-table DLTE lake derived from 1,379 parent tables. Across 20 models and 16 tasks, TRL-Bench shows that once downstream conditions are standardized, encoder quality is capability-specific rather than captured by a single leaderboard. In TRL-CTbench, generic text encoders often lead on tasks with strong surface-text signal, while tabular specialists win where their pretraining objective aligns with the task. In TRL-Rbench, within-table prediction and cross-table linkage favor different training regimes, with atomic linkage performance correlating strongly with the row-matching stage of DLTE pipelines. In TRL-DLTE, the strongest pipelines combine capability-matched specialists rather than reuse a single encoder, and top end-to-end quality depends on non-additive compositional fit rather than per-stage marginal rank alone. TRL-Bench provides a common protocol for measuring reusable signal in exported tabular representations under shared downstream conditions. Code and data: https://github.com/LOGO-CUHKSZ/TRL-Bench",
+    "code_links": [
+      "https://github.com/LOGO-CUHKSZ/TRL-Bench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Declarative Outcome-Conformant Synthesis: Exact, Closed-Form Specification Satisfaction and a Conformance Benchmark",
+    "authors": "Muhammed Rasin",
+    "published": "2026-06-07",
+    "arxiv_id": "2606.08736v1",
+    "url": "http://arxiv.org/abs/2606.08736v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.08736v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "We study a capability the dominant paradigm in synthetic tabular data does not provide: exact satisfaction of a declared analytical outcome with no source data. Imitation methods (copulas, GANs, diffusion) learn a real distribution and sample from it, and are judged on fidelity to real data. A large, practical class of needs is different: generating data with no source data (\"cold start\") that reproduces a declared outcome (a revenue curve, a churn rate, a group share) across a relational schema. Off-the-shelf imitation tools offer no interface for such targets, and no sampler can hit an exact aggregate, because sampling has variance. On a real public dataset, off-the-shelf learned synthesizers trained on that very data miss the declared monthly aggregate by 74 to 86 percent; a per-period steelman cuts the miss to about 19 percent and still cannot reach 0; a closed-form generator reaches exactly 0. We name this task outcome-conformant synthesis, argue its evaluation axis is conformance rather than fidelity, and show the two axes are orthogonal. We contribute: (1) a formal account showing a widely-used family of exact-aggregate generators is exactly conditional-sum sampling of a Gamma population (via Lukacs' characterization), with closed-form exactness, a closed-form marginal CV, and scale-invariance; a controlled experiment maps the boundary, enforcing the exact aggregate costs at most 0.006 in 1-Wasserstein distance to an arbitrary external marginal, the rest being shape-family mismatch; (2) SpecBench, to our knowledge the first benchmark to measure conformance to analytical outcomes for cold-start relational synthesis; and (3) a closed-form, deterministic reference system. Exact aggregation alone is trivial; the contribution is conformance jointly with closed-form marginals, integrity, determinism, and zero source data. We concede fidelity to imitation where real data exists.",
+    "code_links": [
+      "https://github.com/rasinmuhammed/misata"
+    ],
+    "comment": "22 pages, 1 figure. Benchmark and reference implementation (MIT): https://github.com/rasinmuhammed/misata"
+  },
+  {
+    "title": "TOKI: A Bitemporal Operator Algebra for Contradiction Resolution in LLM-Agent Persistent Memory",
+    "authors": "Ziming Wang",
+    "published": "2026-06-04",
+    "arxiv_id": "2606.06240v1",
+    "url": "http://arxiv.org/abs/2606.06240v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.06240v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Persistent memory for an LLM agent is a write-heavy substrate: every belief update is a versioned write, and a new claim may contradict a stored one. Production systems use four resolution heuristics (last-writer-wins, evidence-weighted merge, await-confirmation, per-rule policy), yet none declares the isolation level it assumes or the write-time anomalies it admits. We show that contradiction resolution is write-time concurrency control and make the missing contract explicit. TOKI types the four heuristics as one family of bitemporal operators over a dual-row schema, each with an isolation precondition and a provenance annotation that preserves the losing fact in an audit row. Four soundness theorems close the contract across isolation, schema, and provenance, lift the guarantees to operator pipelines, and extend the fold operators to n-ary conflict sets. A tightness companion proves that, within the relational schedule model, keyed logging of the adjudicating judge is necessary for replay consistency, which every audited baseline omits. A verdict matrix over eight systems localizes the gap: every baseline that keeps a language-model judge on the write path admits at least one of three write-time anomalies (replay inconsistency, belief-drift skew, audit erasure); a content-addressed engine-layer comparator avoids them only by removing the judge, and TOKI alone excludes all three while keeping it. On its one natural-workload slice the audit-row defence moves LoCoMo by 0.86, and ablating the typed memory layer removes 0.49 accuracy on 1,444 answerable LoCoMo questions; the cross-system comparison stays underpowered and claims no superiority. The contribution is the contract: a write-time correctness specification, proved sound across isolation, schema, and provenance, pinning the guarantee every production heuristic assumes but no deployed system makes explicit.",
+    "code_links": [
+      "https://github.com/ZenAlexa/toki-bitemporal-memory"
+    ],
+    "comment": "43 pages including full appendices (proofs, protocols, and reproducibility ledger). Code, data, and reproducibility artifact: https://github.com/ZenAlexa/toki-bitemporal-memory"
+  },
+  {
+    "title": "Data Flow Control: Data Safety Policies for AI Agents",
+    "authors": "Charlie Summers, Eugene Wu",
+    "published": "2026-06-04",
+    "arxiv_id": "2606.05679v1",
+    "url": "http://arxiv.org/abs/2606.05679v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.05679v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Agents increasingly generate SQL, orchestrate pipelines, and automate data analysis on behalf of users. While recent work improves query correctness, correctness is not safety. A query may be semantically valid yet violate regulatory, privacy, or business constraints that govern how data may be combined and released. We argue that enforcing such constraints is fundamentally a data infrastructure problem.\n  This paper introduces Data Flow Control (DFC), a framework to declaratively specify and guarantee policy enforcement over tuple-level data flows within a DBMS query. A key challenge is defining a policy language that is optimizer-invariant yet efficient to enforce at scale. We formalize data safety as aggregate predicates over provenance monomials and present Passant, a portable query rewriting layer that enforces DFC policies without materializing provenance. Across five DBMS engines -- DuckDB, Umbra, PostgreSQL, DataFusion, and SQLServer -- Passant achieves ~0% overhead and outperforms alternatives by orders of magnitude. As a result, Data Flow Control is the first step towards moving data safety from prompts and post-hoc checks into the data infrastructure. Data Flow Control is available open source at https://github.com/dataflowcontrol/data-flow-control.",
+    "code_links": [
+      "https://github.com/dataflowcontrol/data-flow-control"
+    ],
+    "comment": "15 pages, 12 figures"
+  },
+  {
+    "title": "Bridge the Last-Mile Gap to Semantic Analytics: Compiling Natural-Language Queries into Semantic Operator Pipelines",
+    "authors": "Wenkai Dong, Ruyu Li, Sairam Gurajada, Yifan Wang",
+    "published": "2026-06-03",
+    "arxiv_id": "2606.04641v1",
+    "url": "http://arxiv.org/abs/2606.04641v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.04641v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Automated AI workflows increasingly rely on natural-language reasoning over heterogeneous data, but lack a practical way to execute it through optimized semantic data systems. Recent semantic operator systems, such as Palimpzest and LOTUS, expose declarative operators for filtering, joining, mapping, and aggregating over tables, text, and images using natural-language predicates. However, these systems require users to manually choose operators, order them, write predicates, and adapt the pipeline to backend-specific APIs. This is difficult for non-experts, brittle across backends, and infeasible for automated workflows where queries and data vary at runtime. We present NL2Pipe, a middleware system that compiles natural-language questions into executable semantic operator pipelines, treating this as a three-phase compilation problem. First, a Query-Data Linker grounds question entities against the actual data and discovers implicit bridge entities needed to connect tables, text, and images. Second, a Semantic Planner produces a backend-agnostic action plan of semantic operators and natural-language predicates. Third, a Code Generator translates the plan into executable code for a target backend using an auto-generated reference document capturing operator signatures, example pipelines, and backend constraints. This separates data-aware reasoning from backend-specific code generation, letting the same planning logic support multiple backends. Evaluation shows NL2Pipe substantially outperforms baselines on complex cross-source workloads (e.g., up to 60% higher F1) while maintaining bounded cost and competitive latency. This demonstrates that automatic compilation from natural language to semantic operator pipelines is both practical and effective for bringing semantic analytics to non-expert users and automated AI workflows.",
+    "code_links": [
+      "https://github.com/dongw-netize/NL2Pipe-Compiling-Natural-Language-Questions-into-Semantic-Operator-Pipelines"
+    ],
+    "comment": "4 figures, 7 tables. Code: https://github.com/dongw-netize/NL2Pipe-Compiling-Natural-Language-Questions-into-Semantic-Operator-Pipelines"
+  },
+  {
+    "title": "CAPER: Clause-Aligned Process Supervision for Text-to-SQL",
+    "authors": "Lujie Ban, Jiasheng Shi, Jinyang Li, Xiaolin Han, Tsz Nam Chan, Chenhao Ma",
+    "published": "2026-06-02",
+    "arxiv_id": "2606.03327v1",
+    "url": "http://arxiv.org/abs/2606.03327v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.03327v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text-to-SQL systems are typically evaluated by query-level execution correctness, but this terminal signal provides little guidance about which intermediate SQL decision caused success or failure. Token-level dense supervision is also ill-suited: SQL tokens do not align with complete semantic decisions, can penalize execution-equivalent queries, and are difficult to label reliably at scale. We therefore propose CAPER, which automatically derives clause-level supervision via counterfactual intervention on the SQL abstract syntax tree, enabling root-cause error localization for reward modeling; the resulting data is used to train CAPER-9B, a lightweight Clause-PRM that provides clause-boundary feedback for policy optimization and candidate verification. Experiments on BIRD and Spider show that clause-aligned supervision not only improves execution accuracy, achieving up to a 15.3% relative EX improvement over GPT-5.4, but also strengthens failure-localization capability, reaching 84.53% accuracy and 90.60% MRR on held-out failures. Our project page is at https://github.com/banrichard/RL-NL2SQL.",
+    "code_links": [
+      "https://github.com/banrichard/RL-NL2SQL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Vector Linking via Cross-Model Local Isometric Consistency",
+    "authors": "Ziying Chen, Yang Cao, He Sun, Beining Yang, Tianjian Yang",
+    "published": "2026-05-29",
+    "arxiv_id": "2605.31100v1",
+    "url": "http://arxiv.org/abs/2605.31100v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.31100v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "We study Vector Linking: given two embedding clouds produced by different black-box encoders over partially overlapping datasets, recover cross-model object correspondences using only vectors. Empirically and theoretically, we show that independently trained contrastive encoders exhibit local geometric consistency: short-range distances are approximately preserved up to a scale factor, while long-range distances are not due to model-specific distortion. Building on this, we propose an iterative, reference-based geometric embedding hashing that recovers vector links from a tiny seed set of paired anchors. It represents each vector by distances to sampled paired anchors, proposes candidate links via hash-space matching, and aggregates evidence across views in a Beta-Bernoulli posterior to bootstrap high-confidence links as new anchors. Experiments across multiple benchmarks and embedding model pairs demonstrate accurate and robust linking under varying overlap, seed budgets, and out-of-domain anchors, with applications to vector database integration and cross-model clustering. Code is available at https://github.com/DBgroup-Edinburgh/VecLinking.",
+    "code_links": [
+      "https://github.com/DBgroup-Edinburgh/VecLinking"
+    ],
+    "comment": "Accepted at ICML 2026"
+  },
+  {
+    "title": "Towards Reliable Agentic Progressive Text-to-Visualization with Verification Rules",
+    "authors": "Wenxin Xu, Chen Jason Zhang, Xiaoyong Wei, Haoyang Li, Hwanhee Kim, Yuanfeng Song, Raymond Chi-Wing Wong",
+    "published": "2026-05-28",
+    "arxiv_id": "2605.29692v1",
+    "url": "http://arxiv.org/abs/2605.29692v1",
+    "pdf_url": "https://arxiv.org/pdf/2605.29692v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text-to-Visualization (Text-to-Vis) translates natural language queries into visualization query languages, enabling non-expert users to perform data analysis. However, most existing methods follow a one-shot paradigm that requires users to specify all visualization details in a single round, often leading to cognitive overload and incorrect visualizations. In this paper, we propose PMVis, a progressive multi-turn paradigm for text-to-vis, where users' intents are refined through multi-turn interactions. To support research in this paradigm, we construct PMVisBench, the first dataset designed to capture the progressive and iterative nature of real-world user queries. It is built through VQL simplification and NLQ reconstruction, with explicit rule constraints to ensure each intermediate VQL remains valid and meaningful. Building upon PMVis, we further introduce PMVisAgent, an agent-based framework that simulates realistic user-system dialogues. PMVisAgent consists of a User, a System, and a Validation Agent that performs verification and repair via a ReAct-style tool-use loop to mitigate error accumulation across rounds, with explicit interaction and verification rules to ensure reliability of the multi-agent system. Extensive experiments on PMVisBench demonstrate that PMVisAgent significantly outperforms state-of-the-art text-to-vis baselines. It achieves up to 17.57\\% and 23.21\\% improvements in execution accuracy in single-table and multi-table settings, respectively, while ablation studies confirm the importance of combining progressive interaction with clarification. The code is available at https://github.com/wxxv/PMVis.",
+    "code_links": [
+      "https://github.com/wxxv/PMVis"
+    ],
+    "comment": null
+  }
+]
