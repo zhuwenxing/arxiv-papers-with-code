@@ -1,0 +1,392 @@
+[
+  {
+    "title": "Benchmarking LLM Agents on Meta-Analysis Articles from Nature Portfolio",
+    "authors": "Anzhe Xie, Weihang Su, Yujia Zhou, Yiqun Liu, Qingyao Ai",
+    "published": "2026-06-15",
+    "arxiv_id": "2606.17041v1",
+    "url": "http://arxiv.org/abs/2606.17041v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.17041v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Meta-analysis is a demanding form of evidence synthesis that combines literature retrieval, PI/ECO-guided study selection, and statistical aggregation. Its structured, verifiable workflow makes it an ideal substrate for evaluating systematic scientific reasoning, yet existing benchmarks lack ground truth across the full retrieval-screening-synthesis pipeline. We introduce MetaSyn, a dataset of 442 expert-curated meta-analyses from Nature Portfolio journals. Each entry pairs a research question with PI/ECO criteria, a retrieval corpus of 140k PubMed articles, verified positive studies, hard negatives that are topically similar but PI/ECO-ineligible, and complete search strategies and date bounds.\n  Benchmarking twelve pipeline configurations (nine RAG variants and a protocol-driven agent) reveals a critical screening bottleneck: despite a retrieval ceiling of 90.9% recall at K=200, no system recovers more than 52.7% of ground-truth included literature. Current LLMs fail to reliably separate eligible studies from PI/ECO-failing distractors in pools of comparable topical relevance. Stage-attributed metrics capture where systems succeed and fail; a single end-to-end score does not.",
+    "code_links": [
+      "https://github.com/BFTree/MetaSyn"
+    ],
+    "comment": "13 pages, 7 figures, preprint for arXiv, dataset and code available at https://github.com/BFTree/MetaSyn"
+  },
+  {
+    "title": "Understanding the Behaviors of Environment-aware Information Retrieval",
+    "authors": "Ruifeng Yuan, Chaohao Yuan, David Dai, Yu Rong, Hong Cheng, Hou Pong Chan, Chenghao Xiao",
+    "published": "2026-06-15",
+    "arxiv_id": "2606.16817v1",
+    "url": "http://arxiv.org/abs/2606.16817v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.16817v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Recent retrieval-augmented generation (RAG) approaches have demonstrated strong capability in handling complex queries, yet current research overlooks a critical challenge: different retrievers require fundamentally different query formulation strategies for optimal performance. In this work, we present the first systematic analysis of how LLMs can learn to adapt their query formulation strategies for different retrievers via reinforcement learning (RL). Our empirical study reveals that RL effectively teaches an LLM to tailor its queries to specific retriever characteristics. We discover that different retrievers exhibit surprisingly distinct optimal query styles (e.g., descriptive vs. question-like), suggesting strategies learned for one retriever ineffective for another. We further show that performance can be enhanced by incorporating retriever-specific human guidance and by scaling model size. To facilitate learning over multi-retrieval-step trajectories, we introduce a branching-based rollout technique that improves training stability. Our work provides the first empirical evidence and actionable insights for building truly retriever-aware RAG systems. Code and resources are available at https://github.com/LCO-Embedding/Envs-aware-Information-Retrieval.",
+    "code_links": [
+      "https://github.com/LCO-Embedding/Envs-aware-Information-Retrieval"
+    ],
+    "comment": "ACL 2026 Main"
+  },
+  {
+    "title": "Leveraging Code-Mixed Product Metadata and User Feedback for Personalized Recommendation on Daraz Bangladesh",
+    "authors": "KM Fahim A Bari, Muhammad Abdullah Adnan, Nafis Sadeq",
+    "published": "2026-06-15",
+    "arxiv_id": "2606.16387v1",
+    "url": "http://arxiv.org/abs/2606.16387v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.16387v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Bangladeshi e-commerce platforms host millions of product reviews written in Bengali Unicode, English, and Banglish, where Bengali is phonetically transcribed in Latin script. However, the impact of code-mixed reviews on recommendation performance remains largely unexplored. We present the first such benchmarking on product reviews from Daraz Bangladesh, evaluating six model families under a per-user chronological leave-last-out protocol. To address the severe long-tail sparsity of the dataset, where 59.3% of users have exactly one interaction, we conduct a systematic k-core threshold ablation across five density configurations. The results reveal that Item-based Collaborative Filtering remains stable across settings, Implicit Matrix Factorization degrades sharply with decreasing density, and Explicit Matrix Factorization uniquely improves at higher thresholds. To characterize the impact of code-mixing on recommendation quality, we perform a language-stratified evaluation of content-based filtering using character n-gram TF-IDF profiles. The results provide empirical evidence that fragmentation of the Banglish vocabulary reduces NDCG@10 by 46.8% relative to Bengali-script users, a degradation traceable to transliteration inconsistency across surface forms. This work establishes a reproducible evaluation foundation for recommendation research in code-mixed, low-resource e-commerce settings. The code is publicly available at https://github.com/os-car-war-thy/daraz-recsys.",
+    "code_links": [
+      "https://github.com/os-car-war-thy/daraz-recsys"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MAGE-RAG: Multigranular Adaptive Graph Evidence for Agentic Multimodal RAG in Long-Document QA",
+    "authors": "Yilong Zuo, Xunkai Li, Jing Yuan, Qiangqiang Dai, Hongchao Qin, Ronghua Li",
+    "published": "2026-06-14",
+    "arxiv_id": "2606.15906v1",
+    "url": "http://arxiv.org/abs/2606.15906v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.15906v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Long-document multimodal question answering requires a system to locate sparse evidence in long PDFs and integrate clues from text, tables, images, charts, and complex layouts. Existing RAG methods mostly rely on fixed Top-k retrieval over text chunks or pages. Text retrieval can compress the context but often loses visual and layout information; page-level visual retrieval preserves the original page, yet it also sends large irrelevant regions to the reader, leading to a static trade-off among evidence coverage, noise, and inference cost. This paper proposes MAGE-RAG, a multigranular adaptive graph evidence framework for long-document multimodal QA. MAGE-RAG uses page retrieval as the entry point for query-time evidence construction. Offline, it builds an evidence graph with page nodes and element nodes, encoding containment, reading order, layout adjacency, section hierarchy, and semantic-neighbor relations. At query time, an online evidence controller iteratively activates, opens, searches, and prunes evidence under explicit budgets. The resulting evidence subgraph is then rendered into structured multimodal reader input, allowing the LVLM to consume compact and relevant evidence within a limited context. On LongDocURL and MMLongBench-Doc, we establish a unified comparison and analysis protocol covering Direct MLLM, Text RAG, Page-level Visual RAG, and Graph/Agentic RAG. Experiments show that MAGE-RAG achieves 52.75 overall accuracy on LongDocURL, and 53.26 accuracy with 51.19 F1 on MMLongBench-Doc. Fine-grained breakdowns, budget-performance curves, ablations, and trace-based analysis further show that query-time evidence subgraph construction can balance dispersed evidence coverage with context-noise control. Our code is available at https://github.com/laonuo2004/MAGE-RAG.git.",
+    "code_links": [
+      "https://github.com/laonuo2004/MAGE-RAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MVEB: Massive Video Embedding Benchmark",
+    "authors": "Adnan El Assadi, Roman Solomatin, Isaac Chung, Chenghao Xiao, Deep Shah, Manan Dey, Shriya Sudhakar, Zacharie Bugaud, Wissam Siblini, Ayush Sunil Munot, Yashwanth Devavarapu, Rakshitha Ireddi, Michelle Yang, Márton Kardos, Niklas Muennighoff, Kenneth Enevoldsen",
+    "published": "2026-06-12",
+    "arxiv_id": "2606.14958v1",
+    "url": "http://arxiv.org/abs/2606.14958v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.14958v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "We introduce the Massive Video Embedding Benchmark (MVEB), a 23-task benchmark for video embeddings spanning classification, zero-shot classification, clustering, pair classification, retrieval, and video-centric question answering. We evaluate 33 models and find that no single model dominates: MLLM-based embeddings lead on classification, clustering, pair classification, and QA; multimodal binding leads on retrieval and zero-shot classification; generative MLLMs without contrastive adaptation collapse on cross-modal tasks. Paired video-only vs. audio+video evaluations show that audio's contribution depends on dataset annotation provenance: audio helps when labels were produced from both modalities and hurts when they were produced from visuals alone, a six-point gap consistent across model families. MVEB is derived from MVEB+, a 184-task pool, and is designed to maintain task diversity while reducing evaluation cost. It integrates into the MTEB ecosystem for unified evaluation across text, image, audio, and video. We release MVEB and all 184 tasks along with code and a leaderboard at https://github.com/embeddings-benchmark/mteb.",
+    "code_links": [
+      "https://github.com/embeddings-benchmark/mteb"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Findings of the MAGMaR 2026 Shared Task",
+    "authors": "Alexander Martin, Dengjia Zhang, Joel Brogan, Francis Ferraro, Jeremy Gwinnup, Reno Kriz, Teng Long, Kenton Murray, Andrew Yates, Xiang Xiang",
+    "published": "2026-06-10",
+    "arxiv_id": "2606.12295v1",
+    "url": "http://arxiv.org/abs/2606.12295v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.12295v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "This overview paper presents the results of the shared task for the second workshop on Multimodal Augmented Generation via Multimodal Retrieval (MAGMaR). In this shared task participants submitted systems focused on either (i) video retrieval or (ii) grounded generation of articles given retrieved videos. Teams could submit to either task. For the retrieval task, we had 2 participating teams that submitted a total of 17 systems -- all of which beat a baseline derived from the winner of last year's shared task. On the generation side, we had 4 teams submit 16 systems. All teams had at least one generated report that was labeled the best by a human annotator.",
+    "code_links": [
+      "https://github.com/rekriz11/MAGMAR_2026"
+    ],
+    "comment": "Findings of the 2nd workshop on Multimodal Augmented Generation via Multimodal Retrieval (MAGMaR); Resources at this url: https://github.com/rekriz11/MAGMAR_2026"
+  },
+  {
+    "title": "DeMix: Debugging Training Data with Mixed Data Error Types by Investigating Influence Vectors",
+    "authors": "Jiale Deng, Yanyan Shen, Xiaogang Shi, Chai Junjun",
+    "published": "2026-06-10",
+    "arxiv_id": "2606.11616v1",
+    "url": "http://arxiv.org/abs/2606.11616v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.11616v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "High-quality training data is essential for the success of machine learning models. However, real-world datasets often contain mixed types of errors arising from systematic flaws in data preparation pipelines, including label errors, feature errors, and spurious correlations. Effective debugging of training data requires both detecting erroneous samples and identifying their specific error types to enable targeted repair, yet existing data cleaning and attribution methods fail to adequately address this dual requirement. In this paper, we propose DeMix, a novel framework that simultaneously diagnoses erroneous samples and their error types. Our key insight is that different error types produce distinct patterns on model behavior. DeMix captures such error-specific patterns by influence vectors that characterize how each training sample affects model predictions across all validation samples. We formulate training data debugging as a multi-label classification problem where a classifier is developed to predict error types directly from influence vectors. We further introduce an intervention-based learning strategy that guides the classifier to capture invariant rationales specific to each error type, ensuring the learned classifier generalizes effectively. Empirical evaluations on 11 tasks across tabular data prediction, recommendation systems, and LLM alignment demonstrate that DeMix significantly outperforms state-of-the-art approaches, achieving a 22.61% improvement in data debugging F1-score and a 9.32% gain in task model performance after data repair. Code is available at: https://github.com/SJTU-DMTai/DeMix.",
+    "code_links": [
+      "https://github.com/SJTU-DMTai/DeMix"
+    ],
+    "comment": null
+  },
+  {
+    "title": "A PubMed-Scale Dataset of Structured Biomedical Abstracts",
+    "authors": "Chia-Hsuan Chang, Haerin Song, Brian Ondov, Hua Xu",
+    "published": "2026-06-09",
+    "arxiv_id": "2606.11361v1",
+    "url": "http://arxiv.org/abs/2606.11361v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.11361v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Structured abstracts are important for biomedical literature processing, by facilitating information retrieval, text mining, and knowledge synthesis. However, a vast portion of abstracts indexed in PubMed remain unstructured, presenting a significant bottleneck for downstream text-processing workflows and applications. To resolve this limitation, we introduce Structured PubMed, a comprehensive corpus of section-labeled biomedical abstracts compiled from the complete PubMed database, encompassing over 23.2 million research-article records. The corpus is divided into two distinct subsets: a collection of 5.9 million author-structured abstracts parsed from official XML files, and an automatically labeled collection of 17.2 million originally unstructured abstracts structured via a verbatim-extraction Large Language Model pipeline. Every record is harmonized under a unified five-section schema and mapped to its original PubMed identifier, publication type, and publication date. This dataset can be utilized to train sentence-classification models, benchmark text-segmentation architectures, and perform large-scale, section-specific information extraction at an unprecedented PubMed-wide scale.",
+    "code_links": [
+      "https://github.com/BIDS-Xu-Lab/StructuredPubMed"
+    ],
+    "comment": "Data and code for this work are available at https://doi.org/10.5281/zenodo.20336717 and https://github.com/BIDS-Xu-Lab/StructuredPubMed, respectively"
+  },
+  {
+    "title": "Generative Archetype-Grounded Item Representations for Sequential Recommendation",
+    "authors": "Yifan Li, Jiahong Liu, Xinni Zhang, Hao Chen, Yankai Chen, Wenhao Yu, Jianting Chen, Irwin King",
+    "published": "2026-06-09",
+    "arxiv_id": "2606.11023v1",
+    "url": "http://arxiv.org/abs/2606.11023v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.11023v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sequential recommendation aims to predict users' next interaction with items by analyzing their historical behavior. However, the limited quality of item representations remains a critical bottleneck. While pre-trained large language models (LLMs) can provide rich semantic representations, existing approaches only rely on static encoding of fixed attributes, overlooking the crucial role of target audiences in defining item identity. Moreover, the semantic space struggles to reflect actual user behavior, resulting in a significant gap between semantic representations and behavioral patterns. To address these limitations, we propose GenAIR, a general framework that empowers sequential recommendation with Generative Archetype-grounded Item Representations. Specifically, we first leverage an LLM to analyze item metadata and infer textual description of the Archetype, which represents the conceptual profile of the item's ideal target audience. We then extract the corresponding embeddings in a single forward pass. Further, to ground these generative archetypes in real-world behavior, we introduce a behavioral calibration objective, which explicitly incorporates behavioral signals from actual interactions. This objective adjusts the structure of the embedding space to reflect empirical patterns. GenAIR enables seamless integration with most existing models while maintaining high efficiency. Comprehensive experiments conducted on three real-world datasets demonstrate that GenAIR significantly improves the performance of various sequential recommendation models and consistently outperforms state-of-the-art baseline approaches. Implementation codes are available at https://github.com/AI-Santiago/GenAIR.",
+    "code_links": [
+      "https://github.com/AI-Santiago/GenAIR"
+    ],
+    "comment": "Accepted by WWW 2026 (Oral)"
+  },
+  {
+    "title": "ConvMemory v2: A Recall-Preserving Top-10 Evidence Reranker for Conversational Memory Retrieval",
+    "authors": "Taiheng Pan",
+    "published": "2026-06-09",
+    "arxiv_id": "2606.10842v1",
+    "url": "http://arxiv.org/abs/2606.10842v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.10842v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "We describe ConvMemory v2, an opt-in token-evidence reranker that sits after the lightweight ConvMemory v1 reranker and reorders only v1's protected top-10 candidate set. v2 is a fine-tuned ms-marco-MiniLM-L-6-v2 cross-encoder (22,713,601 parameters, measured from the released checkpoint) applied to the ten (query, memory) pairs that v1 has already selected; it does not change which ten memories are returned, so Recall@10 and Hit@10 are identical to v1 by construction, not by statistical coincidence. On the LoCoMo conversational memory benchmark (5 seeds, n = 4955 test rows), v2 raises FULL MRR from v1's 0.5824 to 0.6560 (paired bootstrap +0.0734, 95% CI [+0.0645, +0.0827]) and H@1 from 0.4440 to 0.5474. v2 closes most but not all of the gap to a much more expensive full-pool cross-encoder reference (mxbai-rerank-large-v1 over the top-500, MRR 0.6688): on FULL MRR v2 sits 0.013 below mxbai_top500, but on two raw-dense-hard slices (where v1's protected top-10 has higher recall than mxbai's own top-10) v2 exceeds mxbai_top500. A four-arm load-bearing ablation shows candidate-specific memory text is the mechanism: removing, shuffling, or replacing it collapses MRR below raw dense retrieval. v2 is best understood as a standard recall-preserving cascade pattern with LoCoMo-specific fine-tuning, an explicit anti-shortcut inference contract, and disciplined load-bearing analysis; its advantage over mxbai is slice-specific rather than a general dominance claim. This report extends the v1 technical report (arXiv:2605.28062).",
+    "code_links": [
+      "https://github.com/pth2002/ConvMemory"
+    ],
+    "comment": "19 pages, 3 figures. Single-author technical report. Extends arXiv:2605.28062 (ConvMemory v1). Code and checkpoint: github.com/pth2002/ConvMemory"
+  },
+  {
+    "title": "$τ$-Rec: A Verifiable Benchmark for Agentic Recommender Systems",
+    "authors": "Bharath Sivaram Narasimhan, Karthik R Narasimhan",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.10156v1",
+    "url": "http://arxiv.org/abs/2606.10156v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.10156v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "As recommender systems transition toward agentic, multi-turn conversational interfaces, evaluation paradigms have struggled to keep pace. Current benchmarks often rely on \"LLM-as-a-judge\" evaluations, which introduce subjectivity, high costs and inconsistency. We present $τ$-Rec, a benchmark for agentic recommender systems that replaces subjective evaluation with verifiable rewards and a reveal-tagged elicitation (RTE) mechanism that controls how task constraints surface during dialogue. By testing agents against structured catalog predicates and employing a pass^k reliability metric, $τ$-Rec provides a systematic test for consistent reasoning. Our evaluation of nine configurations across five model families -- GPT-5.4, Claude Sonnet 4.6, Gemini 2.5 Flash, DeepSeek V4 Flash, Qwen3-32B and GPT-5 mini -- reveals a steep reliability cliff, where even the best model achieves only ~57% at pass^1 and ~38% at pass^4, highlighting a critical gap in current conversational agent deployment. All code and data are publicly available at https://github.com/nbharaths/tau-rec.",
+    "code_links": [
+      "https://github.com/nbharaths/tau-rec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Mult-DPO: Multinomial Direct Preference Optimization for Recommender Systems",
+    "authors": "Yaochen Zhu, Harald Steck, James McInerney, Aditya Sinha, Yinhan He, Nathan Kallus, Jundong Li",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.10078v1",
+    "url": "http://arxiv.org/abs/2606.10078v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.10078v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Direct preference optimization (DPO) is a simple and effective alignment strategy for large language models (LLMs) based on pairwise preferences. In recommender systems, however, user feedback is rarely pairwise. For a given context, e.g., a user, a session, or a conversation, we typically observe set-wise preferences with multiple positive items, where every positive item should outrank every unobserved or explicitly negative item, with no prescribed order among the positives or the negatives themselves. A natural generalization is to use the Plackett-Luce (PL) reward model, which extends the Bradley-Terry reward model underlying vanilla DPO from pairwise preferences to full rankings of candidates. However, we show that adapting the PL model to set-wise preferences requires marginalizing over all positive orderings, where the resulting expression is combinatorial in complexity. To address this fundamental challenge, we propose Mult-DPO, a novel DPO objective with a tractable multinomial surrogate likelihood over set-wise preference events for the user-preference alignment of LLM-based recommender systems. The multinomial construction is not itself a ranking distribution, but it is defined on the same reward-induced weight space and admits a closed-form DPO-style objective, enabling direct alignment of LLMs with multiple candidates through a classification-style objective. In addition, we prove that the multinomial DPO loss is a tractable upper bound on the marginalized PL DPO loss when optimizing against the set-wise preference data. We further characterize the tightness of this bound in terms of the relative total weight of positives versus negatives, which provides insights into tightening the bound with richer or harder negatives. Finally, we extend Mult-DPO to the alignment of LLMs with multiple preference levels. Code is available at https://github.com/yaochenzhu/Mult_DPO",
+    "code_links": [
+      "https://github.com/yaochenzhu/Mult_DPO"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Popcorn: A Configurable Benchmark for Visual Evidence in Multimodal Movie Recommendation",
+    "authors": "Ali Tourani, Fatemeh Nazary, Yashar Deldjoo, Tommaso Di Noia",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.09595v1",
+    "url": "http://arxiv.org/abs/2606.09595v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.09595v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Movies are long-form audiovisual works, yet recommender benchmarks often rely on trailers, thumbnails, or metadata. These sources differ in semantics and scalability: full movies preserve consumption-level evidence, trailers concentrate promotional highlights, and thumbnails provide sparse but catalog-scale visual signals. We present Popcorn, a configurable benchmark for visual evidence in multimodal movie recommendation, combining title-aligned full-movie/trailer embeddings with MovieLens-linked thumbnail features encoded by modern visual and vision-language models. Popcorn standardizes modality assembly, fusion, splitting, evaluation, and LLM-augmented metadata through a single configuration contract. Experiments show that thumbnail VLMs provide strong, scalable item-side evidence, while controlled trailer/full-movie comparisons show that visual evidence sources are not interchangeable: the choice of source and fusion strategy affects ranking accuracy, coverage, diversity, and calibration. The framework is available at https://github.com/RecSys-lab/Popcorn.",
+    "code_links": [
+      "https://github.com/RecSys-lab/Popcorn"
+    ],
+    "comment": "8 pages, 3 figures, 3 tables"
+  },
+  {
+    "title": "Closing the Indexing-Decoding Gap in Multimodal Generative Retrieval via Prefix Retention Optimization",
+    "authors": "Yufei Chen, Zihan Wang, Yubao Tang, Yukun Zhao, Maarten de Rijke, Zhaochun Ren",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.09241v2",
+    "url": "http://arxiv.org/abs/2606.09241v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.09241v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal generative retrieval formulates multimodal retrieval as discrete identifier generation, eliminating the need for explicit similarity search over external embeddings. Existing approaches construct identifiers via residual quantization and decode them with trie-constrained beam search. This combination introduces an indexing-decoding gap: identifier learning objectives, including reconstruction and contrastive losses, do not explicitly enforce prefix discriminability during decoding. As a result, even well-optimized identifiers can be irreversibly pruned early in beam search due to low-rank prefixes. We theoretically characterize this gap and derive a survival bound that relates prefix retention to three controllable factors in indexing and decoding. Building on this bound, we propose PRO, prefix retention optimization, a unified framework comprising three mechanisms: (i) prefix ranking distillation aligns quantized prefix rankings with those induced by pre-quantization embeddings using a listwise loss; (ii) vocabulary scheduling increases codebook sizes from shallow to deep residual quantization levels to reduce early competition from non-target prefixes; and (iii) geometric score fusion vectorizes each candidate prefix and incorporates its similarity to the query into beam search scoring, further reducing the indexing-decoding mismatch. Experiments on nine multimodal retrieval tasks show that PRO improves retention of target identifier prefixes and outperforms existing multimodal generative retrieval baselines.",
+    "code_links": [
+      "https://github.com/layingfish/MGR_PRO"
+    ],
+    "comment": "29 pages, 5 figures; code: https://github.com/layingfish/MGR_PRO"
+  },
+  {
+    "title": "Teach Multimodal Recommendation Model to See via Personalized Visual Extraction and Adaptive Learning",
+    "authors": "Yutong Li, Xinyi Zhang, Ziyi Ye, Daoguo Dong, Yu-gang Jiang",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.09082v1",
+    "url": "http://arxiv.org/abs/2606.09082v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.09082v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal sequential recommendation (MSR) incorporates textual and visual information to improve recommendation quality. However, recent studies and our empirical analysis show that visual features are often underutilized, thereby contributing far less than textual signals. We attribute this issue to two factors: insufficient visual representation learning (pretrained encoders fail to capture preference-relevant cues) and unbalanced visual-text optimization (textual features dominate the learning process). To address these issues, we propose Teach Multimodal Recommendation Model to See via Personalized Visual Extraction and Adaptive Learning (REVEAL), a plug-and-play framework that enhances visual representation learning and cross-modal optimization without modifying the original recommendation backbone. REVEAL consists of Feedback-Guided Visual Extraction (FVE), which refines prompt-guided visual extraction through task-level feedback, and Adaptive Visual Learning (AVL), which dynamically reweights visual learning to alleviate modality imbalance. Experiments on multiple real-world datasets and MSR backbones demonstrate that REVEAL consistently improves recommendation performance. Further analysis shows that these gains arise from more effective attention to preference-relevant visual regions and better visual utilization during training. The code is available at https://github.com/YutongLi2024/REVEAL.",
+    "code_links": [
+      "https://github.com/YutongLi2024/REVEAL"
+    ],
+    "comment": null
+  },
+  {
+    "title": "EviProp: Seeded Relevance Diffusion on Chunk-Page Graphs for Long Multimodal Document Retrieval",
+    "authors": "Hongwei Zhang, Xiaoman Wang, Zehui Ling, Ruicheng Zhu, Yue Zhang, Pinlong Cai, Fuke Shen, Botian Shi, Tongquan Wei, Guohang Yan",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.08979v1",
+    "url": "http://arxiv.org/abs/2606.08979v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.08979v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieving evidence pages from visually rich long documents is a key challenge in document question answering. Existing page-level visual retrievers operate under an independent matching paradigm: each page is scored in isolation based on query-page similarity. This paradigm can under-rank evidence pages whose signals are localized in fine-grained chunks or depend on document-internal associations. We propose EviProp, a retrieval method that recovers such pages via seeded relevance diffusion. EviProp models each document as a multimodal Chunk-Page graph with hierarchical, sequential, and similarity links. Given a query, it combines dense visual page priors with sparse chunk seeds, then runs Personalized PageRank to diffuse relevance over the graph. Experiments on MMLongBench-Doc and LongDocURL show consistent gains in evidence-page retrieval over independent visual retrieval and text-visual fusion baselines. Downstream QA results further show that improved retrieval translates into better answer accuracy, with negligible online retrieval overhead. Our code is released at https://github.com/Flyecnu/EviProp.",
+    "code_links": [
+      "https://github.com/Flyecnu/EviProp"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Filtered ANN as a Phase Transition: When Selectivity-Estimation Error Causes Plan Regret",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-06-15",
+    "arxiv_id": "2606.16341v1",
+    "url": "http://arxiv.org/abs/2606.16341v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.16341v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "A filtered approximate-nearest-neighbor (ANN) query returns the k nearest vectors among those satisfying an attribute predicate P of selectivity s. The best execution strategy -- pre-filter, post-filter, or in-filter -- changes with s, so a system must estimate s and choose. We model this as an argmax over a landscape with phases (regions where each strategy wins) separated by boundaries, and show that selectivity-estimation error produces plan regret -- recall lost versus the oracle strategy -- only in the critical regions around those boundaries. The regret is a wedge of log-width equal to the multiplicative estimation error epsilon and height equal to the local cliff |V'(s*)| epsilon; the flip-margin 1/|V'(s*)| is the condition number of a sibling cardinality-estimation study reappearing as the local boundary theory. The two phase boundaries follow from independent mathematics: order statistics place the post-filter cliff at s ~ k/K, and site percolation places the in-filter cliff at s_c ~ 0.83/M for graph degree M (corpus-size independent). Criticality exists only under a constrained budget B < sqrt(k n). Under pre-registered decision rules we confirm, on synthetic sweeps and real SIFT1M, that regret concentrates ~290x at the boundary and that the regret curves obey a finite-size scaling collapse onto one universal wedge across two decades of corpus size. A real approximate index does not mis-locate the boundary, but a biased cost model opens a persistent miscalibration band that estimation-error robustness cannot fix. The contribution is a characterization, not a new index. Code and the full pre-registration are public.",
+    "code_links": [
+      "https://github.com/samyama-ai/filtered-ann-regret"
+    ],
+    "comment": "8 pages, 4 figures. Code, benchmarks, and full pre-registration:https://github.com/samyama-ai/filtered-ann-regret"
+  },
+  {
+    "title": "MAGE-RAG: Multigranular Adaptive Graph Evidence for Agentic Multimodal RAG in Long-Document QA",
+    "authors": "Yilong Zuo, Xunkai Li, Jing Yuan, Qiangqiang Dai, Hongchao Qin, Ronghua Li",
+    "published": "2026-06-14",
+    "arxiv_id": "2606.15906v1",
+    "url": "http://arxiv.org/abs/2606.15906v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.15906v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "Long-document multimodal question answering requires a system to locate sparse evidence in long PDFs and integrate clues from text, tables, images, charts, and complex layouts. Existing RAG methods mostly rely on fixed Top-k retrieval over text chunks or pages. Text retrieval can compress the context but often loses visual and layout information; page-level visual retrieval preserves the original page, yet it also sends large irrelevant regions to the reader, leading to a static trade-off among evidence coverage, noise, and inference cost. This paper proposes MAGE-RAG, a multigranular adaptive graph evidence framework for long-document multimodal QA. MAGE-RAG uses page retrieval as the entry point for query-time evidence construction. Offline, it builds an evidence graph with page nodes and element nodes, encoding containment, reading order, layout adjacency, section hierarchy, and semantic-neighbor relations. At query time, an online evidence controller iteratively activates, opens, searches, and prunes evidence under explicit budgets. The resulting evidence subgraph is then rendered into structured multimodal reader input, allowing the LVLM to consume compact and relevant evidence within a limited context. On LongDocURL and MMLongBench-Doc, we establish a unified comparison and analysis protocol covering Direct MLLM, Text RAG, Page-level Visual RAG, and Graph/Agentic RAG. Experiments show that MAGE-RAG achieves 52.75 overall accuracy on LongDocURL, and 53.26 accuracy with 51.19 F1 on MMLongBench-Doc. Fine-grained breakdowns, budget-performance curves, ablations, and trace-based analysis further show that query-time evidence subgraph construction can balance dispersed evidence coverage with context-noise control. Our code is available at https://github.com/laonuo2004/MAGE-RAG.git.",
+    "code_links": [
+      "https://github.com/laonuo2004/MAGE-RAG"
+    ],
+    "comment": null
+  },
+  {
+    "title": "When Does q-error Predict Plan Regret? Three Regimes of Cardinality-Estimation Error",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-06-14",
+    "arxiv_id": "2606.15600v1",
+    "url": "http://arxiv.org/abs/2606.15600v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.15600v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Cardinality-estimation (CE) research ranks estimators by q-error, yet it is well known that q-error is an imperfect proxy for query-plan quality. We give a measurement-driven account of when it is a good proxy and when it is not, and why. Modeling plan selection as an argmin over a piecewise-linear cost landscape, we find that plan regret (the cost of the chosen plan relative to the optimal, under true cardinalities) is governed by plan-cost geometry in a regime-dependent way. (i) For small errors, a true-point condition number kappa predicts regret and out-predicts q-error; its predictive power decays to zero as error grows, as a local linearization must. (ii) For large errors -- where deployed learned estimators operate -- an estimator-independent average-case sub-optimality measure ACS-infinity predicts which queries are regret-prone (Spearman rho ~ 0.54 on STATS-CEB), while q-error is nearly uninformative at the query level (rho ~ 0.05). (iii) The worst case is Haritsa's maximum sub-optimality (MSO). The three are one cost-ratio spectrum under three weightings. We prove a limit law ACS-infinity = sum_k r_k pi_k with cardinality-independent combinatorial weights, and validate every claim on STATS-CEB and JOB-light with four released estimators under pre-registered decision rules, and confirm on real PostgreSQL runtime that ACS-infinity predicts regret where q-error does not. The contribution is conceptual and empirical -- an average-case companion to worst-case robust query optimization, and a characterization of when an accuracy metric tracks plan quality -- rather than a new estimator. Code and the full pre-registration are public.",
+    "code_links": [
+      "https://github.com/samyama-ai/ce-metric-eval"
+    ],
+    "comment": "8 pages, 5 figures. Code, benchmarks, and full pre-registration: https://github.com/samyama-ai/ce-metric-eval"
+  },
+  {
+    "title": "Towards an open registry of Earth observation instruments",
+    "authors": "David Montero, César Aybar, Miguel D. Mahecha, Luis Gómez-Chova",
+    "published": "2026-06-11",
+    "arxiv_id": "2606.13923v1",
+    "url": "http://arxiv.org/abs/2606.13923v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.13923v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Earth observation (EO) is essential to understanding the Earth system, enabling the transformation of planetary properties into measurable variables that can be analysed, compared, and modelled. In recent decades, EO capabilities have grown rapidly, accompanied by an even faster expansion in the number and variety of available EO instruments. Today, EO includes instruments deployed on satellites, airborne platforms, and terrestrial or in-situ systems. However, despite this proliferation of instruments, users often lack a single, reliable source describing their existence and key characteristics. Although existing data catalogues have substantially improved dataset discovery, they primarily describe data products rather than providing persistent, curated metadata about the instruments that produced them. Here we present Awesome Earth Observation Instruments, an open, standardized, and community-oriented registry providing machine-readable metadata for EO instruments. The catalogue is hosted on GitHub and allows contributors to submit instrument metadata following a common schema. The schema combines a lightweight core with modular extensions covering spectral, geometric, and data access-related metadata, enabling both standardization and flexibility across diverse EO systems. All submissions undergo automated schema validation and human review. Because the schema is open, versioned, and extensible, the catalogue can continuously evolve as new instruments and metadata requirements emerge. This facilitates the discovery, interpretation, and analysis of EO data in light of instrument characteristics. To support programmatic access and interoperability, we further envisage an API for integration within common EO analysis environments. The catalogue is openly available at https://github.com/awesome-spectral-indices/awesome-earth-observation-instruments.",
+    "code_links": [
+      "https://github.com/awesome-spectral-indices/awesome-earth-observation-instruments"
+    ],
+    "comment": null
+  },
+  {
+    "title": "TRL-Bench: Standardizing Cross-Paradigm Representation-Level Evaluation of Tabular Encoders",
+    "authors": "Wei Pang, Xiangru Jian, Hehan Li, Zhixuan Yu, Alex Xue, Jinyang Li, Zhengyuan Dong, Xinjian Zhao, Hao Xu, Chao Zhang, Reynold Cheng, M. Tamer Özsu, Tianshu Yu",
+    "published": "2026-06-08",
+    "arxiv_id": "2606.09323v1",
+    "url": "http://arxiv.org/abs/2606.09323v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.09323v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Tabular encoders are usually evaluated inside task-specific end-to-end pipelines, so models from different training paradigms are difficult to compare directly even when they operate on similar tabular signals. We introduce TRL-Bench, a multi-granular tabular representation learning (TRL) benchmark that standardizes cross-paradigm representation-level evaluation: each encoder exports row-, column-, or table embeddings through its supported wrapper, and shared lightweight heads probe them across three suites: TRL-CTbench (column/table), TRL-Rbench (row), and TRL-DLTE (compositional Data-Lake Table Enrichment spanning all three granularities). To support this standardized setting, we release curated benchmark assets and task reformulations, including 50 OpenML tables with 123 verified targets, 16 row-pair linkage rewrites, and a 47,772-table DLTE lake derived from 1,379 parent tables. Across 20 models and 16 tasks, TRL-Bench shows that once downstream conditions are standardized, encoder quality is capability-specific rather than captured by a single leaderboard. In TRL-CTbench, generic text encoders often lead on tasks with strong surface-text signal, while tabular specialists win where their pretraining objective aligns with the task. In TRL-Rbench, within-table prediction and cross-table linkage favor different training regimes, with atomic linkage performance correlating strongly with the row-matching stage of DLTE pipelines. In TRL-DLTE, the strongest pipelines combine capability-matched specialists rather than reuse a single encoder, and top end-to-end quality depends on non-additive compositional fit rather than per-stage marginal rank alone. TRL-Bench provides a common protocol for measuring reusable signal in exported tabular representations under shared downstream conditions. Code and data: https://github.com/LOGO-CUHKSZ/TRL-Bench",
+    "code_links": [
+      "https://github.com/LOGO-CUHKSZ/TRL-Bench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Declarative Outcome-Conformant Synthesis: Exact, Closed-Form Specification Satisfaction and a Conformance Benchmark",
+    "authors": "Muhammed Rasin",
+    "published": "2026-06-07",
+    "arxiv_id": "2606.08736v1",
+    "url": "http://arxiv.org/abs/2606.08736v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.08736v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "We study a capability the dominant paradigm in synthetic tabular data does not provide: exact satisfaction of a declared analytical outcome with no source data. Imitation methods (copulas, GANs, diffusion) learn a real distribution and sample from it, and are judged on fidelity to real data. A large, practical class of needs is different: generating data with no source data (\"cold start\") that reproduces a declared outcome (a revenue curve, a churn rate, a group share) across a relational schema. Off-the-shelf imitation tools offer no interface for such targets, and no sampler can hit an exact aggregate, because sampling has variance. On a real public dataset, off-the-shelf learned synthesizers trained on that very data miss the declared monthly aggregate by 74 to 86 percent; a per-period steelman cuts the miss to about 19 percent and still cannot reach 0; a closed-form generator reaches exactly 0. We name this task outcome-conformant synthesis, argue its evaluation axis is conformance rather than fidelity, and show the two axes are orthogonal. We contribute: (1) a formal account showing a widely-used family of exact-aggregate generators is exactly conditional-sum sampling of a Gamma population (via Lukacs' characterization), with closed-form exactness, a closed-form marginal CV, and scale-invariance; a controlled experiment maps the boundary, enforcing the exact aggregate costs at most 0.006 in 1-Wasserstein distance to an arbitrary external marginal, the rest being shape-family mismatch; (2) SpecBench, to our knowledge the first benchmark to measure conformance to analytical outcomes for cold-start relational synthesis; and (3) a closed-form, deterministic reference system. Exact aggregation alone is trivial; the contribution is conformance jointly with closed-form marginals, integrity, determinism, and zero source data. We concede fidelity to imitation where real data exists.",
+    "code_links": [
+      "https://github.com/rasinmuhammed/misata"
+    ],
+    "comment": "22 pages, 1 figure. Benchmark and reference implementation (MIT): https://github.com/rasinmuhammed/misata"
+  },
+  {
+    "title": "TOKI: A Bitemporal Operator Algebra for Contradiction Resolution in LLM-Agent Persistent Memory",
+    "authors": "Ziming Wang",
+    "published": "2026-06-04",
+    "arxiv_id": "2606.06240v1",
+    "url": "http://arxiv.org/abs/2606.06240v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.06240v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Persistent memory for an LLM agent is a write-heavy substrate: every belief update is a versioned write, and a new claim may contradict a stored one. Production systems use four resolution heuristics (last-writer-wins, evidence-weighted merge, await-confirmation, per-rule policy), yet none declares the isolation level it assumes or the write-time anomalies it admits. We show that contradiction resolution is write-time concurrency control and make the missing contract explicit. TOKI types the four heuristics as one family of bitemporal operators over a dual-row schema, each with an isolation precondition and a provenance annotation that preserves the losing fact in an audit row. Four soundness theorems close the contract across isolation, schema, and provenance, lift the guarantees to operator pipelines, and extend the fold operators to n-ary conflict sets. A tightness companion proves that, within the relational schedule model, keyed logging of the adjudicating judge is necessary for replay consistency, which every audited baseline omits. A verdict matrix over eight systems localizes the gap: every baseline that keeps a language-model judge on the write path admits at least one of three write-time anomalies (replay inconsistency, belief-drift skew, audit erasure); a content-addressed engine-layer comparator avoids them only by removing the judge, and TOKI alone excludes all three while keeping it. On its one natural-workload slice the audit-row defence moves LoCoMo by 0.86, and ablating the typed memory layer removes 0.49 accuracy on 1,444 answerable LoCoMo questions; the cross-system comparison stays underpowered and claims no superiority. The contribution is the contract: a write-time correctness specification, proved sound across isolation, schema, and provenance, pinning the guarantee every production heuristic assumes but no deployed system makes explicit.",
+    "code_links": [
+      "https://github.com/ZenAlexa/toki-bitemporal-memory"
+    ],
+    "comment": "43 pages including full appendices (proofs, protocols, and reproducibility ledger). Code, data, and reproducibility artifact: https://github.com/ZenAlexa/toki-bitemporal-memory"
+  },
+  {
+    "title": "Data Flow Control: Data Safety Policies for AI Agents",
+    "authors": "Charlie Summers, Eugene Wu",
+    "published": "2026-06-04",
+    "arxiv_id": "2606.05679v1",
+    "url": "http://arxiv.org/abs/2606.05679v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.05679v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Agents increasingly generate SQL, orchestrate pipelines, and automate data analysis on behalf of users. While recent work improves query correctness, correctness is not safety. A query may be semantically valid yet violate regulatory, privacy, or business constraints that govern how data may be combined and released. We argue that enforcing such constraints is fundamentally a data infrastructure problem.\n  This paper introduces Data Flow Control (DFC), a framework to declaratively specify and guarantee policy enforcement over tuple-level data flows within a DBMS query. A key challenge is defining a policy language that is optimizer-invariant yet efficient to enforce at scale. We formalize data safety as aggregate predicates over provenance monomials and present Passant, a portable query rewriting layer that enforces DFC policies without materializing provenance. Across five DBMS engines -- DuckDB, Umbra, PostgreSQL, DataFusion, and SQLServer -- Passant achieves ~0% overhead and outperforms alternatives by orders of magnitude. As a result, Data Flow Control is the first step towards moving data safety from prompts and post-hoc checks into the data infrastructure. Data Flow Control is available open source at https://github.com/dataflowcontrol/data-flow-control.",
+    "code_links": [
+      "https://github.com/dataflowcontrol/data-flow-control"
+    ],
+    "comment": "15 pages, 12 figures"
+  },
+  {
+    "title": "Bridge the Last-Mile Gap to Semantic Analytics: Compiling Natural-Language Queries into Semantic Operator Pipelines",
+    "authors": "Wenkai Dong, Ruyu Li, Sairam Gurajada, Yifan Wang",
+    "published": "2026-06-03",
+    "arxiv_id": "2606.04641v1",
+    "url": "http://arxiv.org/abs/2606.04641v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.04641v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Automated AI workflows increasingly rely on natural-language reasoning over heterogeneous data, but lack a practical way to execute it through optimized semantic data systems. Recent semantic operator systems, such as Palimpzest and LOTUS, expose declarative operators for filtering, joining, mapping, and aggregating over tables, text, and images using natural-language predicates. However, these systems require users to manually choose operators, order them, write predicates, and adapt the pipeline to backend-specific APIs. This is difficult for non-experts, brittle across backends, and infeasible for automated workflows where queries and data vary at runtime. We present NL2Pipe, a middleware system that compiles natural-language questions into executable semantic operator pipelines, treating this as a three-phase compilation problem. First, a Query-Data Linker grounds question entities against the actual data and discovers implicit bridge entities needed to connect tables, text, and images. Second, a Semantic Planner produces a backend-agnostic action plan of semantic operators and natural-language predicates. Third, a Code Generator translates the plan into executable code for a target backend using an auto-generated reference document capturing operator signatures, example pipelines, and backend constraints. This separates data-aware reasoning from backend-specific code generation, letting the same planning logic support multiple backends. Evaluation shows NL2Pipe substantially outperforms baselines on complex cross-source workloads (e.g., up to 60% higher F1) while maintaining bounded cost and competitive latency. This demonstrates that automatic compilation from natural language to semantic operator pipelines is both practical and effective for bringing semantic analytics to non-expert users and automated AI workflows.",
+    "code_links": [
+      "https://github.com/dongw-netize/NL2Pipe-Compiling-Natural-Language-Questions-into-Semantic-Operator-Pipelines"
+    ],
+    "comment": "4 figures, 7 tables. Code: https://github.com/dongw-netize/NL2Pipe-Compiling-Natural-Language-Questions-into-Semantic-Operator-Pipelines"
+  },
+  {
+    "title": "CAPER: Clause-Aligned Process Supervision for Text-to-SQL",
+    "authors": "Lujie Ban, Jiasheng Shi, Jinyang Li, Xiaolin Han, Tsz Nam Chan, Chenhao Ma",
+    "published": "2026-06-02",
+    "arxiv_id": "2606.03327v1",
+    "url": "http://arxiv.org/abs/2606.03327v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.03327v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Text-to-SQL systems are typically evaluated by query-level execution correctness, but this terminal signal provides little guidance about which intermediate SQL decision caused success or failure. Token-level dense supervision is also ill-suited: SQL tokens do not align with complete semantic decisions, can penalize execution-equivalent queries, and are difficult to label reliably at scale. We therefore propose CAPER, which automatically derives clause-level supervision via counterfactual intervention on the SQL abstract syntax tree, enabling root-cause error localization for reward modeling; the resulting data is used to train CAPER-9B, a lightweight Clause-PRM that provides clause-boundary feedback for policy optimization and candidate verification. Experiments on BIRD and Spider show that clause-aligned supervision not only improves execution accuracy, achieving up to a 15.3% relative EX improvement over GPT-5.4, but also strengthens failure-localization capability, reaching 84.53% accuracy and 90.60% MRR on held-out failures. Our project page is at https://github.com/banrichard/RL-NL2SQL.",
+    "code_links": [
+      "https://github.com/banrichard/RL-NL2SQL"
+    ],
+    "comment": null
+  }
+]
