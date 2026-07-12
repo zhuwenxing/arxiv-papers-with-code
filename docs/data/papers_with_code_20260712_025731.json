@@ -1,0 +1,391 @@
+[
+  {
+    "title": "InductWave: Inductive Multi-Hop Logical Query Answering on Knowledge Graphs",
+    "authors": "Mayank Kharbanda, Michael Cochez, Rajiv Ratn Shah, Raghava Mutharaju",
+    "published": "2026-07-08",
+    "arxiv_id": "2607.07422v1",
+    "url": "http://arxiv.org/abs/2607.07422v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.07422v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Logical Multi-Hop Query Answering over Knowledge Graphs (KGs) can be formulated as querying, with an implicit completeness assumption. Current works mainly focus on Existential First Order Logic (EFO) queries. These EFO queries contain conjunction, disjunction, and negation operators. Most existing works employ transductive reasoning, meaning they are not capable of reasoning over entities unseen during training. In the real world, there is a resource scarcity, and we cannot train a model with all the nodes of a large KG. Hence, we propose InductWave, a wavelet-based inductive embedding method for logical query answering on large KGs. Here, the training graph consists of fewer nodes than the test graph. Our model performs on par with the baseline models while having half the number of message-passing layers. It outperforms all of them in most cases, with 75% of the layers. These fewer resource requirements enable us to evaluate InductWave on massive graphs, such as Wiki-KG. We test our model using extensive experiments across varying train-test graph proportions of the FB15k-(237) dataset, comparing it with the state-of-the-art models. The code and datasets for the model are available at https://github.com/kracr/inductwave/.",
+    "code_links": [
+      "https://github.com/kracr/inductwave"
+    ],
+    "comment": "Under Review at TKDE"
+  },
+  {
+    "title": "When and How to Ask: Dynamic Preference Elicitation Strategies for Conversational Recommendation",
+    "authors": "Feng Xia, Shuo Zhang, Xi Wang",
+    "published": "2026-07-07",
+    "arxiv_id": "2607.06765v1",
+    "url": "http://arxiv.org/abs/2607.06765v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.06765v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Conversational Recommender Systems (CRSs) are interactive systems that use multi-turn natural language dialogue to understand evolving user preferences and provide personalized recommendations. To achieve this goal, CRSs rely on preference elicitation strategies to actively gather informative preference cues from users; however, the timing and selection of these strategies during a conversation remain largely unexplored. While many existing studies emphasize eliciting explicit item attributes and tend to adopt relatively static elicitation strategies, the use of item-based preference elicitation and how it varies across different dialogue stages remains less explored. In this work, we conduct a systematic investigation of preference elicitation strategies from a stage-aware perspective. We provide empirical evidence that optimal preference elicitation strategies are stage-dependent and context-sensitive: attribute-based inquiries are effective in early stages, while item-based strategies become superior as preferences refine. To support this paradigm, we introduce InPE, a dataset enriched with fine-grained annotations for elicitation necessity and strategy selection. With this dataset, we propose COPE (COnversational Preference Elicitation via Mixture of Experts), a novel architecture for strategy modeling. Extensive offline evaluation on our dataset indicates that context-aware preference elicitation strategies are beneficial for conversational recommendation. In addition, the analysis of the predicted strategies uncovers consistent stage-wise tendencies in dialogue progression, providing empirical evidence of common interaction patterns in conversational recommendation systems. Our dataset is available at https://github.com/juanfacabian/InPE.",
+    "code_links": [
+      "https://github.com/juanfacabian/InPE"
+    ],
+    "comment": "Accepted at SIGIR 2026"
+  },
+  {
+    "title": "On the Complexity of Entrywise Power Matrix Factorization",
+    "authors": "Nicolas Gillis, Subhayan Saha, Stefano Sicilia, Arnaud Vandaele",
+    "published": "2026-07-06",
+    "arxiv_id": "2607.04875v1",
+    "url": "http://arxiv.org/abs/2607.04875v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.04875v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CC",
+    "abstract": "Given a nonnegative matrix $X$, a factorization rank $r$ and a real parameter $p$, entrywise power matrix factorization (EPMF) looks for a low-rank matrix $X_r$ such that $X = |X_r|^{\\circ p}$ (exact case) or $X \\approx |X_r|^{\\circ p}$ (approximate case), where $(\\cdot)^{\\circ p}$ denotes the component-wise exponent. EPMF includes the modulus model ($p=1$) and component-wise square factorization ($p=2$) as special cases, the latter being closely related to the square root rank. We analyze the computational complexity of the exact decision problem and the Frobenius-norm approximation problem, and establish a complete complexity landscape. In the exact case, we show that EPMF is equivalent to the combinatorial problem of flipping the signs of the entries of a given matrix $X$ to obtain a rank-$r$ matrix, which we refer to as the signing problem. We first show that the signing problem, and hence exact EPMF, is strongly NP-hard, improving a weak NP-hardness result for the square-root-rank of Fawzi et al. (Math. Prog., 2015). We then show that the signing problem can be solved in polynomial-time when $r$ is fixed. Moreover, when the rank $r$ is part of the input, we show that for generic matrices the algorithm is fixed-parameter tractable (FPT) in the parameter $r$; in fact, the running time is linear in the input size $X$. In the approximate case using the Frobenius norm as an error measure, we show that EPMF is NP-hard, already when $r=2$, the smallest nontrivial case.",
+    "code_links": [],
+    "comment": "27 pages, code available from https://gitlab.com/ngillis/rank-r_signing/"
+  },
+  {
+    "title": "LBR: Towards Mitigating Length Bias in Large Language Models for Recommendation",
+    "authors": "Hongchen Li, Bohao Wang, Jingbang Chen, Weiqin Yang, Hang Pan, Bingde Hu, Can Wang, Jiawei Chen",
+    "published": "2026-07-05",
+    "arxiv_id": "2607.04270v1",
+    "url": "http://arxiv.org/abs/2607.04270v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.04270v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large language models (LLMs) have recently emerged as powerful backbones for recommender systems by reformulating recommendation as a token-level generation task. Despite their promise, we identify a pervasive yet underexplored issue: $\\textit{Length Bias}$. Because items are represented by textual descriptions of varying lengths, LLM-based recommenders can be systematically biased in two ways. On the input side, longer item descriptions occupy more tokens in the context and thus receive disproportionately large aggregate attention mass during user preference modeling. On the output side, decoding based on summed autoregressive log-likelihood score inherently disfavors long items. Worse still, conventional length normalization can introduce an additional bias and even degrade recommendation performance.\n  To address this problem, we propose $\\textbf{LBR}$ ($\\textbf{L}$ength $\\textbf{B}$ias $\\textbf{R}$eduction), a lightweight and model-agnostic framework for mitigating length bias in LLM-based recommendation. LBR mitigates input-side bias via Length-Aware Attention Calibration, which incorporates a length-dependent offset into attention logits to neutralize attention skew. For the output side, LBR introduces Effective Information Length Normalization, replacing naive token count with an information-theoretic length surrogate derived from the branching structure of the prefix tree. Extensive experiments on three real-world Amazon datasets and two representative LLM-based recommenders demonstrate that LBR substantially alleviates length bias while consistently improving recommendation accuracy and fairness, with negligible additional training and inference overhead (with an average NDCG@5 gain of 16.82%). The code is available at https://github.com/Void-JackLee/LBR.",
+    "code_links": [
+      "https://github.com/Void-JackLee/LBR"
+    ],
+    "comment": null
+  },
+  {
+    "title": "The Powerless Noise: How Experimental Settings Shape the Reported Power of Noise",
+    "authors": "Michal Mazuryk, Fleur Dolmans, Louis Gehringer, Ina Klaric, Jia-Huei Ju, Mohammad Aliannejadi",
+    "published": "2026-07-03",
+    "arxiv_id": "2607.03615v1",
+    "url": "http://arxiv.org/abs/2607.03615v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.03615v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recent work has suggested that adding irrelevant documents to the input of retrieval-augmented generation (RAG) systems can improve question-answering performance, a phenomenon referred to as the ``\\textit{Power of Noise}.'' This motivated investigations into the role of noise in information retrieval. In this paper, we reproduce the main findings of Cuconasu et al. \\cite{cuconasu2024power} and evaluate the robustness of the effect under extended experimental settings. We first confirm that the phenomenon holds under the original setup, which uses earlier-generation LLMs, restrictive prompting and constrained decoding settings. We subsequently introduce a series of extensions to investigate the underlying causes of the noise effect, examining the authors' original design choices including the use of different models, instruction prompting, and relaxed output length constraints. Across these ablations, the Power-of-Noise pattern proves highly sensitive to inference configuration: it can appear, weaken, or disappear under small changes to prompt formulation and decoding limits. Combined with our error analysis, which shows substantial contributions from truncation and malformed generations, this variance indicates that the original effect cannot be robustly confirmed as a general benefit of noisy retrieval under these experimental conditions. More broadly, our work highlights the importance of carefully scrutinizing inference design in retrieval-augmented generation systems. Our code is available at https://github.com/ina0105/The-Power-of-Noise-Reproduction.",
+    "code_links": [
+      "https://github.com/ina0105/The-Power-of-Noise-Reproduction"
+    ],
+    "comment": "SIGIR 27 Repro"
+  },
+  {
+    "title": "Beyond Post-Quantization: Native Hash Learning with a Dedicated HASH Token",
+    "authors": "Xinze Liu, Ding Wang, Hengjie Zhu, Dayan Wu",
+    "published": "2026-07-03",
+    "arxiv_id": "2607.03328v1",
+    "url": "http://arxiv.org/abs/2607.03328v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.03328v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Efficient large-scale image retrieval requires compact representations that preserve semantic similarity under fast Hamming-space search. Deep hashing is appealing, but most existing CNN- and ViT-based methods still follow a post-quantization paradigm, where continuous visual features are first learned and binary codes are then produced by a terminal hash projection or binarization operation. This late code generation creates a feature-to-code discrepancy between the continuously optimized representation space and the discrete Hamming space used for retrieval. To address this limitation, we propose HashViT, a Vision Transformer framework for native hash token learning. Instead of treating hashing as a terminal readout, HashViT introduces a dedicated HASH token that serves as a persistent, hash-oriented retrieval state inside the transformer. The HASH token is structurally decomposed into a Hash Register for direct binary code generation and a Semantic Workspace for preserving auxiliary continuous semantics. To enable effective workspace-to-register interaction, we further design a lightweight Hash Refinement Adapter that progressively refines the Hash Register across transformer layers. As a result, binary-oriented representations are formed through token evolution within the backbone, rather than being abruptly induced by an output-level projection. HashViT is optimized with a unified objective that combines learnable semantic center supervision, class-token similarity distillation, and quantization regularization, encouraging the HASH token to encode semantically structured and compact binary representations. Extensive experiments on three widely used benchmarks demonstrate that HashViT achieves state-of-the-art or highly competitive retrieval performance while preserving the efficiency of compact Hamming codes. Code is available at https://github.com/Xinze919/HashViT.",
+    "code_links": [
+      "https://github.com/Xinze919/HashViT"
+    ],
+    "comment": null
+  },
+  {
+    "title": "HETERQA: Benchmarking Record Retrieval over Multiple Heterogeneous Sources",
+    "authors": "Yaodong Su, Hanchang Li, Quanqing Xu, Chuanhui Yang, Yixiang Fang",
+    "published": "2026-07-03",
+    "arxiv_id": "2607.03028v1",
+    "url": "http://arxiv.org/abs/2607.03028v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.03028v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In emerging systems (e.g., social media and e-commerce platforms), data records are often drawn from heterogeneous sources, such as relational tables, text documents, image repositories, spatial databases, and knowledge graphs. Accordingly, retrieving target records for question-answering (QA) tasks requires us to jointly exploit these heterogeneous sources. However, most existing benchmarks are constructed from individual sources, and only a very few recent benchmarks have considered two or three sources. To alleviate this issue, we introduce HETERQA, a comprehensive benchmark with 857 QA pairs for record retrieval over five heterogeneous sources. HETERQA instantiates this setting with Yelp business records, each of which is grounded by multiple sources. We build HETERQA in an answer-driven manner: candidate records are first initialized with record-field constraints, then enriched through heterogeneous sources, and finally cross-verified across required sources before the natural-language question is retained. We validate the benchmark through contradiction detection and human validation, and further evaluate sparse, dense, hybrid, late-interaction, and agentic retrievers under the same metrics. The results show that HETERQA is challenging: hybrid retrieval achieves the strongest Recall@10, Self-RAG achieves the best MRR@10, and all evaluated methods remain far from saturating the benchmark. These findings indicate that HETERQA provides an effective testbed for record retrieval over heterogeneous sources and leaves substantial room for future retrieval methods. The benchmark dataset and source code are publicly available at https://huggingface.co/datasets/hanchang02/HeterQA and https://github.com/hanchang02/HeterQA, respectively.",
+    "code_links": [
+      "https://github.com/hanchang02/HeterQA"
+    ],
+    "comment": "20 pages, 10 figures"
+  },
+  {
+    "title": "MemSyco-Bench: Benchmarking Sycophancy in Agent Memory",
+    "authors": "Zhishang Xiang, Zerui Chen, Yunbo Tang, Zhimin Wei, Ruqin Ning, Yujie Lin, Qinggang Zhang, Jinsong Su",
+    "published": "2026-07-01",
+    "arxiv_id": "2607.01071v2",
+    "url": "http://arxiv.org/abs/2607.01071v2",
+    "pdf_url": "https://arxiv.org/pdf/2607.01071v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Memory has emerged as a cornerstone of modern LLM-based agents, supporting their evolution from single-turn assistants to long-term collaborators. However, memory is not always beneficial: retrieved memories often induce a critical issue of sycophancy, causing agents to over-align with the user at the cost of factual accuracy or objective reasoning. Despite this emerging risk, existing memory benchmarks primarily evaluate whether memories are correctly stored, retrieved, or updated, while overlooking how retrieved memories influence downstream reasoning and decision-making. To bridge this gap, we propose MemSyco-Bench, a comprehensive benchmark for evaluating memory-induced sycophancy in agent systems. MemSyco-Bench measures when memory should influence a decision and how valid memory should be used. Specifically, it covers five tasks that assess whether agents can reject memory as factual evidence, respect its applicable scope, resolve conflicts between memory and objective evidence, track memory updates, and use valid memory for personalization. All related resources are collected for the community at https://github.com/XMUDeepLIT/MemSyco-Bench.",
+    "code_links": [
+      "https://github.com/XMUDeepLIT/MemSyco-Bench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "When to Repair a Graph ANN Index: Navigability-Signal-Triggered Local Repair Protects Tail Recall Under Bursty Churn",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-07-01",
+    "arxiv_id": "2607.00728v1",
+    "url": "http://arxiv.org/abs/2607.00728v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.00728v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DB",
+    "abstract": "Graph approximate-nearest-neighbor (ANN) indexes (HNSW, DiskANN/Vamana) lose recall under insert/delete churn, because deletions orphan the greedy-search paths that route through removed nodes. Production systems restore navigability by repairing the graph on a fixed schedule (consolidate every X operations). We ask whether triggering local edge repair on a measured navigability-degradation signal, rather than a blind clock, spends a fixed repair budget better. On two real ANN datasets (SIFT-128 and Fashion-MNIST-784) under a controlled bursty churn stream, and comparing repair policies at matched amortized repair budget (equal consolidation count), signal-triggered repair Pareto-dominates fixed-cadence repair. The gain is concentrated on worst-case (tail) recall at scarce budget: at roughly one consolidation it improves the minimum recall@10 by +0.014 (SIFT) to +0.050 (Fashion-MNIST) across four stream seeds, with 95% confidence intervals excluding zero, while the mean-recall gain is small (<0.005). The advantage follows a clean drift-severity gradient -- larger for sparser, more fragile graphs -- and fades to parity when the index is robust or budget is ample. A cheap probe-recall signal is a valid, leading indicator of true recall (Spearman rho ~= 0.95). We contribute the mechanism, a budget-matched evaluation protocol that separates repair scheduling from repair spend, and an open, reproducible churn-repair harness. We deliberately do not claim a mean-recall improvement or a new index; a recall-versus-repair-cost bound and data-distribution-drift coupling are left as future work.",
+    "code_links": [
+      "https://github.com/samyama-ai/updatable-graph-index"
+    ],
+    "comment": "7 pages. Code + one-command reproduction: https://github.com/samyama-ai/updatable-graph-index"
+  },
+  {
+    "title": "Identifying and Resolving Pitfalls of Knowledge-Based VQA Benchmarks: Auditing, Repairing, and Augmenting",
+    "authors": "Qian Ma, S M Rayeed, Charles V. Stewart, Qiong Wu, Yao Ma",
+    "published": "2026-06-30",
+    "arxiv_id": "2607.00159v1",
+    "url": "http://arxiv.org/abs/2607.00159v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.00159v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Knowledge-Based Visual Question Answering (KB-VQA) aims to evaluate whether Visual Language Models (VLMs) can retrieve, ground, and reason over external structured knowledge beyond visual evidence. In practice, answer accuracy is widely adopted as the primary evaluation metric, implicitly treating correctness as a proxy for knowledge-grounded reasoning. However, for existing KB-VQA benchmarks, this proxy relies on critical assumptions that are often overlooked and rendered unreliable by benchmark issues: annotated answer must be derivable from the associated knowledge base, question must be well-posed with sufficient constraints, and visual setting must meaningfully require grounded disambiguation. In this work, we show that these assumptions are systematically violated in existing KB-VQA benchmarks. Our audit reveals substantial instances with missing or contradicted answers and underspecified questions that render accuracy a misleading metric. Furthermore, we find that existing datasets rely on visually trivial, single-entity scenes that bypass the need for sophisticated visual-to-knowledge mapping. We demonstrate that even with controlled architectures, these flaws lead to distorted model rankings and overestimations of reasoning capabilities. To address this, we introduce (1) a principled audit-and-repair protocol that restores answer derivability and question clarity, and (2) a controlled multi-entity augmentation protocol that introduces visual ambiguity to challenge initial retrieval and grounded reasoning. Re-evaluation under corrected and augmented settings yields markedly different performance trends. Our findings call for rethinking evaluation protocols and designing more interaction-aware KB-VQA benchmarks that prioritize verifiable reasoning over simple matching.",
+    "code_links": [
+      "https://github.com/VAN-QIAN/ECCV26-ARA"
+    ],
+    "comment": "Accepted to ECCV 2026. The datasets and code are available in https://github.com/VAN-QIAN/ECCV26-ARA"
+  },
+  {
+    "title": "ENC-ODE: Event-level Neurodegenerative Modeling in Continuous Time with Neural ODEs",
+    "authors": "Yujee Song, Seunghun Baek, Guorong Wu, Won Hwa Kim",
+    "published": "2026-06-29",
+    "arxiv_id": "2606.30398v1",
+    "url": "http://arxiv.org/abs/2606.30398v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.30398v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Accurately predicting the temporal evolution of clinical biomarkers is crucial for the early diagnosis and management of neurodegenerative diseases such as Alzheimer's disease. However, this relies on longitudinal data to capture biomarker changes over time, which is often sparse and irregular due to the high cost, labor-intensive nature, and patient burden. To address these challenges, we propose ENC-ODE, an Event-level Neurodegenerative modeling in Continuous time with neural Ordinary Differential Equations. ENC-ODE predicts future biomarker evolution by modeling clinical events through diagnosis-conditioned continuous dynamics. A target-conditioned attention mechanism weights and aggregates event-level predictions for the target time and modality without history compression. Extensive experiments on Alzheimer's Disease Neuroimaging Initiative (ADNI) dataset demonstrate that ENC-ODE outperforms representative sequence models while offering a scalable and neuroscientifically grounded solution for clinical support. The code is available at https://github.com/JardinDelSol/enc-ode.",
+    "code_links": [
+      "https://github.com/JardinDelSol/enc-ode"
+    ],
+    "comment": "MICCAI 2026"
+  },
+  {
+    "title": "Spider 2.0-AIFunc: Extending Real-World Text-to-SQL to AI-Native SQL Workflows",
+    "authors": "Tianyang Liu, Canwen Xu, Fangyu Lei, Nikki Lijing Kuang, Jixuan Chen, Tao Yu, Julian McAuley, Zhewei Yao, Yuxiong He",
+    "published": "2026-07-07",
+    "arxiv_id": "2607.06229v1",
+    "url": "http://arxiv.org/abs/2607.06229v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.06229v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Major cloud data platforms now expose large language model capabilities as native SQL functions, enabling analysts to perform classification, filtering, sentiment analysis, extraction, similarity search, and aggregation within ordinary SQL queries. Yet existing text-to-SQL benchmarks evaluate only conventional SQL and provide no signal on whether models can generate such AI-native SQL. We introduce Spider 2.0-AIFunc, a benchmark of 465 verified instances across 125 real-world databases covering six types of AI functions on the Snowflake platform. Starting from an existing enterprise text-to-SQL benchmark, we construct Spider 2.0-AIFunc through an agent-based pipeline that rewrites source tasks into AI-native form, simultaneously transforming target queries and refining natural language instructions to make the intended AI-native solution explicit and reduce ambiguity. All instances pass a multi-round repeated execution protocol across temporally separated windows to confirm result stability before release. Evaluating ten state-of-the-art language models, we find that the strongest proprietary models reach 67-70% execution accuracy while the best open-source model achieves 58.1%, a gap driven primarily by errors in predicate specification, schema grounding, and AI function parameterization. Agent frameworks designed for traditional text-to-SQL challenges, such as schema retrieval and relevant table selection, do not transfer effectively to AI-native SQL: a minimal agent setup consistently matches or outperforms more elaborate alternatives, suggesting that the strategies these frameworks employ are less critical in this setting. Data are available at https://github.com/Leolty/Spider2-AIFunc .",
+    "code_links": [
+      "https://github.com/Leolty/Spider2-AIFunc"
+    ],
+    "comment": "24 pages, 3 figures, 7 tables"
+  },
+  {
+    "title": "RetractorDB: A Deterministic Edge Signal Processing Engine Based on Rational Beatty Sequences and Fraenkel's Partition",
+    "authors": "Michal Widera",
+    "published": "2026-07-06",
+    "arxiv_id": "2607.07730v1",
+    "url": "http://arxiv.org/abs/2607.07730v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.07730v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "We present RetractorDB, an open-source edge signal processing engine (ESPE) for regular time series whose query semantics is grounded in the number theory of covering systems. RetractorDB is designed to support, not replace, time-series databases (TSDB) and data stream management systems (DSMS): deployed close to the signal source, it pre-processes and filters high-frequency measurements on the edge device through a declarative signal-processing query language, maintains a partial, correctable record of past and scheduled future events in inspectable artifacts, and transmits exact, deterministic results upstream, so that only reduced, already-processed streams reach the central architecture. The data model is differential (a stream is a pair $(s_n, Δ)$ with a constant rational inter-arrival interval), and the core rate-conversion operators, interleave and de-interleave, are proved to be rational Beatty sequences satisfying the conditions of Fraenkel's partition theorem. This yields an algebra in which resampling is an exact, deterministic, first-class operator: de-interleaving inverts interleaving bit-for-bit using rational arithmetic alone, and algebraic rewrite rules license query-plan optimization without changing results. We describe the end-to-end realization of this algebra in a working engine: declarative query language (RQL), compilation to a dependency DAG with rational interval resolution, slot-based runtime scheduling, and an inspectable artifact format with schema and null/gap metadata. We validate the semantics on deterministic query examples drawn from the engine's integration tests, including a complete Pan-Tompkins QRS-detection pipeline over MIT-BIH ECG data expressed entirely within the algebra. A performance evaluation under a real-time operating environment is in progress and deferred to a subsequent version.",
+    "code_links": [
+      "https://github.com/michalwidera/retractordb"
+    ],
+    "comment": "18 pages, 1 figure, 2 tables. Open-source implementation: https://github.com/michalwidera/retractordb"
+  },
+  {
+    "title": "The Decode-Work Law: Margin-Governed, Provably-Exact Spatial Joins over Compressed Geometry",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-07-01",
+    "arxiv_id": "2607.01182v1",
+    "url": "http://arxiv.org/abs/2607.01182v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.01182v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Filter-and-refine spatial joins have always avoided touching exact geometry for certified candidate pairs, but the field never modeled the decompression cost of the pairs that survive the filter. When geometry is stored in a compressed, progressively-decodable multiresolution codec, the join's true cost is bytes decoded. We study provably-exact polygon intersection joins over a Douglas-Peucker level-of-detail (LOD) ladder, certified by a two-sided Hausdorff-margin test, and make two contributions. First, a reproducible mechanism and harness: on real U.S. Census TIGER water polygons, our progressive certificate join returns the exact join result while decoding 3.4-16.8x (median 5.9x) fewer vertices than naive decompress-then-refine, and about 4.9x fewer than the single-approximation multi-step baseline of Brinkhoff et al. (1994), with zero correctness violations (set-equality against a full-precision oracle) across 31 workloads. Second, a characterization we call the decode-work law: decode work is governed by each pair's signed-clearance margin -- how close it is to the predicate-flip boundary -- independent of object size, because the certificate descends the ladder only until its resolution beats the margin. The law is clean on controlled geometry (held-out R2=0.87, size-independent) and directional on real data (R2 ~= 0.55). We are explicit about what does not hold: a near-boundary-vertex predictor is the wrong model (we pre-registered one and rejected it), a selectivity regime forecaster did not materialize, and the worst case is the trivial Omega(v) read bound on adversarially interleaved boundaries. We contribute the mechanism, budget-honest decode accounting, and an open harness; we do not claim a new index.",
+    "code_links": [
+      "https://github.com/samyama-ai/spatial-join-on-compressed"
+    ],
+    "comment": "7 pages. Code + one-command reproduction: https://github.com/samyama-ai/spatial-join-on-compressed"
+  },
+  {
+    "title": "SessionBound: Turning Enterprise Task Approval into Budgeted Database Sessions",
+    "authors": "Minmin Wu",
+    "published": "2026-07-01",
+    "arxiv_id": "2607.00751v1",
+    "url": "http://arxiv.org/abs/2607.00751v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.00751v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Enterprise AI agents are useful for internal analysis, audit, compliance review, and operational investigation, but they create a difficult authorization problem. A manager or data owner may approve a business task, while the agent later generates open-ended SQL below the application layer. Existing systems help identify agents, delegate authority, govern data products, or enforce database policy, but they do not directly turn an approved enterprise task into a bounded database execution context. SessionBound fills this gap. It turns approved enterprise tasks into short-lived, budgeted, and auditable database sessions for AI agents. A control plane defines task templates, accepts task applications, records approvals, assigns budgets, and issues signed task tokens. A database runtime, SessionBoundDB, binds a token to a session and enforces safe views, row scope, denied fields, operation limits, query budgets, disclosure budgets, and receipts. The database does not rely on an LLM to decide whether a query is safe. The agent may generate SQL freely, but each attempt must stay inside the approved boundary. A PostgreSQL prototype passed a 24-scenario validation suite. Microbenchmarks show p50 SessionBound execution around 1.4--1.5 ms versus raw PostgreSQL p50 around 0.052--0.074 ms on small synthetic queries: high relative overhead, but low absolute latency.",
+    "code_links": [
+      "https://github.com/SessionBound/sessionbound"
+    ],
+    "comment": "7 pages, research prototype. Code: https://github.com/SessionBound/sessionbound"
+  },
+  {
+    "title": "When to Repair a Graph ANN Index: Navigability-Signal-Triggered Local Repair Protects Tail Recall Under Bursty Churn",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-07-01",
+    "arxiv_id": "2607.00728v1",
+    "url": "http://arxiv.org/abs/2607.00728v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.00728v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Graph approximate-nearest-neighbor (ANN) indexes (HNSW, DiskANN/Vamana) lose recall under insert/delete churn, because deletions orphan the greedy-search paths that route through removed nodes. Production systems restore navigability by repairing the graph on a fixed schedule (consolidate every X operations). We ask whether triggering local edge repair on a measured navigability-degradation signal, rather than a blind clock, spends a fixed repair budget better. On two real ANN datasets (SIFT-128 and Fashion-MNIST-784) under a controlled bursty churn stream, and comparing repair policies at matched amortized repair budget (equal consolidation count), signal-triggered repair Pareto-dominates fixed-cadence repair. The gain is concentrated on worst-case (tail) recall at scarce budget: at roughly one consolidation it improves the minimum recall@10 by +0.014 (SIFT) to +0.050 (Fashion-MNIST) across four stream seeds, with 95% confidence intervals excluding zero, while the mean-recall gain is small (<0.005). The advantage follows a clean drift-severity gradient -- larger for sparser, more fragile graphs -- and fades to parity when the index is robust or budget is ample. A cheap probe-recall signal is a valid, leading indicator of true recall (Spearman rho ~= 0.95). We contribute the mechanism, a budget-matched evaluation protocol that separates repair scheduling from repair spend, and an open, reproducible churn-repair harness. We deliberately do not claim a mean-recall improvement or a new index; a recall-versus-repair-cost bound and data-distribution-drift coupling are left as future work.",
+    "code_links": [
+      "https://github.com/samyama-ai/updatable-graph-index"
+    ],
+    "comment": "7 pages. Code + one-command reproduction: https://github.com/samyama-ai/updatable-graph-index"
+  },
+  {
+    "title": "Large Databases Need Small, Open-Weight Language Models",
+    "authors": "Parker Glenn, Alfy Samuel",
+    "published": "2026-06-30",
+    "arxiv_id": "2606.31808v1",
+    "url": "http://arxiv.org/abs/2606.31808v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.31808v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Language model systems built around proprietary APIs often operate on a token-based cost model. This becomes prohibitively expensive in the context of large databases, where LM-enhanced relational operators can incur costs exceeding $10,000 for a single set of experiments, hindering thorough research and practical deployment. In this paper, we demonstrate that quantized, open-weight models running locally on just 16GB of VRAM can match or exceed the accuracy of closed-source counterparts at lower latency and a fraction of the price, challenging the prevailing assumption that closed-source LM APIs are necessary for effective LM-database integration. We present and analyze the key system optimizations required to efficiently deploy these open-weight models within an LM-DB system. By integrating these local models into the BlendSQL v0.1.0 framework, we demonstrate a 390x reduction in overall costs and 3.8x reduction in latency compared to a proprietary LM API. We make our code available at https://github.com/CapitalOne-Research/play-by-the-type-rules/tree/main/sembench.",
+    "code_links": [
+      "https://github.com/CapitalOne-Research/play-by-the-type-rules"
+    ],
+    "comment": null
+  },
+  {
+    "title": "How Far Do On-Prem Open LLMs Get on Text-to-SQL? A Cross-Family Size x Technique Frontier on BIRD",
+    "authors": "Vladimir Beskorovainyi",
+    "published": "2026-06-29",
+    "arxiv_id": "2606.29733v1",
+    "url": "http://arxiv.org/abs/2606.29733v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.29733v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Organizations that cannot send data to a cloud API increasingly ask: how good is Text-to-SQL if the model must run on-premises on open weights, and which popular accuracy \"recipes\" are worth their compute? We answer with an honest, fully reproducible benchmark on the BIRD development split (n=1534, Execution Accuracy), evaluating three open model families across two generations -- Qwen2.5-Coder (7B/14B/32B), CodeLlama-Instruct (7B/13B/34B), and Llama-3.x (8B, 70B) -- under one matched protocol, ablating a model-agnostic recipe (schema linking, self-correction, self-consistency) component by component, with every difference tested by the paired McNemar test. Four findings stand out. (i) Generation matters more than raw size, and the recipe is family-robust: Qwen2.5-Coder dominates the older CodeLlama at matched size (39.1 vs 20.9 at 7B), but a modern non-Qwen model (Llama-3.3-70B, 49.2 on a matched serving) is competitive, so CodeLlama's weakness reflects its 2023 generation, not \"non-Qwen = weak\". (ii) Self-correction is a robust, near-free win, significant on all three families where there is room to improve. (iii) Schema linking does not help, and a stronger linker does not rescue it: a retrieval/embedding linker with 96.5% gold-table recall is statistically indistinguishable from no linking, ruling out the \"weak lexical strawman\" objection across three families. (iv) Self-consistency is poor value (+0.13 pp for ~5x tokens, not significant). We report real per-stage cost ($/1k queries) and release all code, predictions, and summaries; archived code and data: https://doi.org/10.5281/zenodo.20952794",
+    "code_links": [
+      "https://github.com/beskvladimir-create/nl2sql-onprem-bench"
+    ],
+    "comment": "9 pages, 4 figures, 3 tables. Code: https://github.com/beskvladimir-create/nl2sql-onprem-bench Data DOI: https://doi.org/10.5281/zenodo.20952794"
+  },
+  {
+    "title": "Algebraic Subgraph Counting",
+    "authors": "Qiuyu Guo, Jianye Yang, Wenjie Zhang, Hanchen Wang, Ying Zhang, Xuemin Lin",
+    "published": "2026-06-28",
+    "arxiv_id": "2606.29128v1",
+    "url": "http://arxiv.org/abs/2606.29128v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.29128v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Subgraph isomorphism counting is a fundamental problem in graph analytics, which aims to find the number of subgraph isomorphisms of a query graph in a data graph. The candidate tree-based framework provides a promising foundation for subgraph counting tasks, offering a unified counting paradigm that can be extended beyond tree patterns. However, supporting subgraph isomorphism within this framework remains challenging, as it requires handling both the non-tree edge constraint and the injective mapping constraint. Although existing solutions employ sampling or learning techniques to address these constraints in this framework, they still either suffer from inherent sampling failures or rely heavily on supervision. In this paper, we propose ASC, an algebraic subgraph counting approach built on the candidate tree-based counting framework. In our method, the non-tree edge constraint is directly incorporated into the candidate tree-based counting process through a matrix-based computation method, enabling subgraph homomorphism counting with high accuracy in polynomial time. Based on the resulting subgraph homomorphism count, we further apply a local sampling method to address the injective mapping constraint, thereby obtaining the final subgraph isomorphism count. Extensive experiments show that ASC can achieve substantially better and more stable performance over the baselines across various datasets, while scaling to billion-edge graphs. Most impressively, as a non-learning method, ASC can even achieve more than an order of magnitude higher average accuracy than the state-of-the-art learning-based method FlowSC with similar efficiency. This paper is the full version of the work accepted at SIGMOD 2027. The code is available at https://github.com/EricaGuoQiuyu/AlgebraicSubgraphCounting.",
+    "code_links": [
+      "https://github.com/EricaGuoQiuyu/AlgebraicSubgraphCounting"
+    ],
+    "comment": "Full version of the paper accepted at SIGMOD 2027"
+  },
+  {
+    "title": "Database Context Compression for Text-to-SQL on Real-World Large Databases",
+    "authors": "Jingwen Liu, Weibin Liao, Xin Gao, Junfeng Zhao, Yasha Wang",
+    "published": "2026-06-26",
+    "arxiv_id": "2606.28601v1",
+    "url": "http://arxiv.org/abs/2606.28601v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.28601v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Recent progress in Text-to-SQL has been driven by stronger language models and prompting strategies, yet performance on real enterprise benchmarks such as Spider 2.0 and BIRD remains far below that on classical academic datasets. We argue that the main bottleneck is no longer reasoning, but database representation. Real databases contain repeated audit columns, large groups of similar tables, opaque identifiers whose meanings are stored only in documentation, and extensive data dictionaries with little query-relevant information. Existing query-aware methods, including schema linking and retrieval-based schema selection, filter this raw context but still operate on redundant and verbose representations. We reformulate the problem as database context compression, a query-agnostic transformation that rewrites schemas, semantic descriptions, and external documentation into a compact representation. We formalize this transformation with the SGCF (Support-Gain Component Factorization) principle, which unifies repeated column extraction, isomorphic table templating, semantic componentization, and evidence purification under a single coverage objective. Based on SGCF, we propose DBCC, a database-side middleware that performs offline structural and semantic compression together with lightweight online evidence purification. DBCC is model-agnostic and can be integrated into existing Text-to-SQL pipelines. On Spider 2.0-Snow and BIRD, DBCC reduces input context by up to two orders of magnitude (from 2.6M to 34.7K tokens on the largest Spider 2.0-Snow subset), improves schema-linking strict recall from 0% to 56.5% under DeepSeek-V3.2 (63.1% under Claude Opus 4.7), and consistently increases end-to-end execution accuracy by 1.8-1.9% over three recent Text-to-SQL systems. Our code is open-sourced at https://github.com/MrBlankness/SchemaCompression.",
+    "code_links": [
+      "https://github.com/MrBlankness/SchemaCompression"
+    ],
+    "comment": null
+  },
+  {
+    "title": "DiStash: A Disaggregated Multi-Stash Transactional Key-Value Store",
+    "authors": "Yiming Gao, Hieu Nguyen, Jun Li, Shahram Ghandeharizadeh",
+    "published": "2026-06-26",
+    "arxiv_id": "2606.27979v1",
+    "url": "http://arxiv.org/abs/2606.27979v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.27979v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "A stash is a storage medium such as Dynamic Random Access Memory (DRAM), Solid State Disk (SSD), Hard Disk Drive (HDD), or Non-Volatile Memory (NVM). This paper presents a disaggregated transactional key-value (KV) store, DiStash, that governs KVs cross pools of stash types. It enables an application to use a single transaction to read and write different copies of one or more key-value pair across the different pools of stashes. It simplifies the application logic by (a) preventing undesirable race conditions that may cause copies of data across different stash pools to reflect different values and/or (b) failures that may result in loss of key-value pairs. A configuration of DiStash may use a pool of stashes as either ephemeral or durable storage. The application dictates whether the content of its participating stashes are inclusive (replicated) or exclusive (tiered). We implement a DiStash by extending FoundationDB. We quantify the tradeoffs with its design decisions using microbenchmarks and eBay's production workload. We open source our implementation at https://github.com/ebay-USC/DiStash.",
+    "code_links": [
+      "https://github.com/ebay-USC/DiStash"
+    ],
+    "comment": "A shorter version of this paper appeared In the Seventeenth TPC Technology Conference on Performance Evaluation and Benchmarking, Pages 115 - 133, co-located with VLDB 2025, London, UK, September 1, 2025"
+  },
+  {
+    "title": "Are We Ready For An Agent-Native Memory System?",
+    "authors": "Wei Zhou, Xuanhe Zhou, Shaokun Han, Hongming Xu, Guoliang Li, Zhiyu Li, Feiyu Xiong, Fan Wu",
+    "published": "2026-06-23",
+    "arxiv_id": "2606.24775v1",
+    "url": "http://arxiv.org/abs/2606.24775v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.24775v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Memory for large language model (LLM) agents has rapidly evolved from simple retrieval-augmented mechanisms into a data management system that supports persistent information storage, retrieval, update, consolidation, and dynamic lifecycle governance throughout agent execution. Despite this evolution, existing evaluations still benchmark agent memory mainly through end-to-end task success metrics (e.g., F1, BLEU), while treating the underlying system as a monolithic black box. As a result, critical system-level concerns, including operational costs, architectural trade-offs across memory modules, and robustness under dynamic knowledge updates, remain insufficiently explored. In this paper, we present a systematic experimental study of agent memory from a data management perspective. We propose an analytical framework that decomposes agent memory into four core modules: memory representation and storage, extraction, retrieval and routing, and maintenance. Under this framework, we evaluate 12 representative memory systems and two reference baselines across five benchmark workloads spanning 11 datasets. Our extensive end-to-end evaluation shows that no single architecture dominates across all scenarios; instead, effectiveness depends heavily on how well the memory structure aligns with the workload bottleneck. Furthermore, through fine-grained ablation studies, we quantify their individual effects on representation fidelity, retrieval precision, update correctness, and long-horizon stability. Finally, we reveal cost-performance trade-offs under realistic workloads, showing localized maintenance is more cost-efficient than global reorganization. Based on these findings, we identify promising directions towards building truly agent-native memory systems. The code is publicly available at https://github.com/OpenDataBox/MemoryData.",
+    "code_links": [
+      "https://github.com/OpenDataBox/MemoryData",
+      "https://github.com/OpenDataBox/awesome-agent-memory"
+    ],
+    "comment": "Paper list available at: https://github.com/OpenDataBox/awesome-agent-memory. Source code available at: https://github.com/OpenDataBox/MemoryData"
+  },
+  {
+    "title": "One Index for Subsumption and Roll-up across Time, Geography, and Ontology",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-06-23",
+    "arxiv_id": "2606.24677v1",
+    "url": "http://arxiv.org/abs/2606.24677v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.24677v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Time-series, geospatial, and ontology systems each maintain a hierarchy -- day <= month <= year, zip <= city, is-a / part-of -- and each indexes it in a separate silo. We observe these are all subsumption posets, with one recurring workload: order testing (is x under y?) and hierarchical roll-up (aggregate a measure over everything under y). We present OEH, a single declarable index that, by a cheap structural probe, encodes a hierarchy as a nested-set order-embedding (trees) or a chain decomposition (low-width DAGs), and answers both subsumption and index-resident monoid roll-up from one structure. On five real hierarchies -- Gene Ontology, NCBI Taxonomy (1.3M), GeoNames (330k), a 2.6M-node calendar, and git commit DAGs -- OEH on trees matches a 2-hop index on query latency using about half the space and building 6--7x faster, and adds roll-up that 2-hop cannot. Its roll-up matches TimescaleDB's continuous aggregates exactly and in the same latency regime, while also answering subsumption. On high-width DAGs the chain index is declined and 2-hop dominates. Order-embedding is classical; our contribution is the unification and the structure-selected index over subsumption and index-resident roll-up.",
+    "code_links": [
+      "https://github.com/samyama-ai/relationship-hierarchy-index"
+    ],
+    "comment": "7 pages, 3 figures. Code and a reproducible benchmark over five real hierarchies (Gene Ontology, NCBI Taxonomy, GeoNames, a 2.6M-node calendar, git commit DAGs): https://github.com/samyama-ai/relationship-hierarchy-index"
+  },
+  {
+    "title": "VISTA Architect: A graph database-oriented health AI system demonstrated in multidisciplinary tumor boards",
+    "authors": "Tuomo Kiiskinen, Jason Fries, Philip Adamson, David Wu, Timothy John Ellis-Caleo, Aaron Fanous, Balasubramanian Narasimhan, Joel Neal, Sylvia Plevritis, Manuel A. Rivas",
+    "published": "2026-06-21",
+    "arxiv_id": "2606.22692v1",
+    "url": "http://arxiv.org/abs/2606.22692v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.22692v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "We introduce VISTA Architect, a database-oriented AI architecture for integrating large language models (LLMs) with longitudinal electronic health records (EHRs). At ingestion, it transforms complex clinical documentation into a persistent, provenance-linked knowledge graph, eliminating repeated reprocessing of raw records at query time. The architecture has two layers: a source-faithful MEDS Graph preserving granular EHR structure with full provenance, and a clinically abstracted Timeline Object Architecture (TOA) that uses graph-guided LLM extraction to synthesize a concise timeline of deduplicated, temporally coherent clinical events. This addresses key limitations of direct long-context prompting and retrieval-augmented generation (RAG), which often miss temporal relationships and incur high cost and latency from repeated raw-text processing. By precomputing clinical synthesis once, downstream queries access an organized patient state and traverse to source documentation only when detailed verification is needed.\n  We demonstrate the system in multidisciplinary thoracic oncology tumor boards at Stanford Medicine, where precise reconstruction of patient histories is critical. Across 1,180 patients, VISTA Architect achieved 96.4% accuracy (mean 9.75/10) on 15 tumor board-salient variables (17,700 evaluations; 95% CI 96.1-96.7%), surpassing a matched BM25 RAG baseline and recent benchmarks for LLM-based clinical extraction. An agentic interface reduced preparation for a 30-patient held-out cohort to about 2.2 minutes without sacrificing accuracy. While configured here for thoracic oncology, the modular design adapts to other specialties through customizable event definitions, episode structures, and agentic tools; validation beyond thoracic oncology remains future work.",
+    "code_links": [
+      "https://github.com/VISTA-Stanford/vista-architect"
+    ],
+    "comment": "22 pages, 4 figures, 6 tables; includes Supplementary Information. Code: https://github.com/VISTA-Stanford/vista-architect (tag v0.1.0-preprint, commit 8837d44)"
+  },
+  {
+    "title": "When Is a Columnar Scan Bandwidth-Bound? A Decode-Throughput Law and Its Cross-Hardware Validation",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-06-21",
+    "arxiv_id": "2606.22423v1",
+    "url": "http://arxiv.org/abs/2606.22423v1",
+    "pdf_url": "https://arxiv.org/pdf/2606.22423v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "A columnar scan that decompresses, filters, and aggregates should be limited only by memory bandwidth (the roofline floor T >= BytesRead/beta), yet real kernels are often compute-bound and leave bandwidth idle. We give a predictive answer to when a scan is bandwidth-bound. Across encodings, predicate selectivities, and two very different machines, a decoder's value throughput T_dec (values decoded per second) is essentially independent of bit-width b: it is set by the decode layout/strategy, not by how many bits each value occupies. Hence the achieved bandwidth fraction obeys a one-parameter law, f = min(1, T_dec * b / (8*beta)), with the compute-to-bandwidth ridge at b* = 8*beta/T_dec. Fitting one T_dec per strategy reproduces measured bandwidth fractions with median error 0.027 on x86/AVX2 and 0.003 on a held-out Apple M4/NEON machine, and the ridge b* shifts correctly with each machine's bandwidth. Inserting FastLanes' reported decode throughput into the law reproduces its \"decode is free at three bits\" headline as the large-T_dec limit, unifying our portable decoder and hand-tuned state of the art in one curve. We add two crossovers, validated on both machines: branch-free predicate evaluation beats branchy in a mid-selectivity band (the sigma(1-sigma) misprediction parabola), and zone-map skipping is clustering-gated rather than selectivity-gated. We release the micro-benchmark, the correctness oracle, and a one-command reproduction. This is a baseline and a model, not a faster kernel: our portable C decoders reach ~2 values/cycle, far below hand-tuned SOTA, and the law holds precisely because it is parameterized by the measured T_dec.",
+    "code_links": [
+      "https://github.com/samyama-ai/bandwidth-bound-scan"
+    ],
+    "comment": "Comments: 6 pages, 4 figures. Code + one-command reproduction: https://github.com/samyama-ai/bandwidth-bound-scan"
+  },
+  {
+    "title": "Knowledge-Graph Grounding Helps LLMs Only for Out-of-Training Knowledge: A Controlled Study on Clinical Question Answering",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-06-21",
+    "arxiv_id": "2606.22419v2",
+    "url": "http://arxiv.org/abs/2606.22419v2",
+    "pdf_url": "https://arxiv.org/pdf/2606.22419v2",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "A recent Nature Medicine study reports that general-purpose frontier LLMs outperform specialized retrieval-augmented clinical tools on medical benchmarks, and that retrieval can hurt strong models. We ask the natural follow-up: does structured knowledge-graph (KG) grounding change this, and when does grounding help at all? We contribute two results. First, a reproduction: the study's headline HealthBench score (~88) is the Consensus variant, not full HealthBench, where frontier models and ideal completions both score ~46-47 under a physician-calibrated grader (agreement 82.5%); we reproduce GPT-5.2 Consensus =90.9 and flag a score-deflating grader bug. Second, a knowledge-boundary result. Using a graph+vector engine (samyama-graph) over the public biomedical KG PrimeKG, neither naive triple retrieval nor an agentic natural-language-to-Cypher loop (82% successful queries) improves MedQA across a weak-to-strong model ladder (all |Delta| <= 3.4). On a synthetic counterfactual KG, and on a hybrid benchmark mixing known and novel facts, the identical pipeline lifts out-of-training accuracy from chance to ~100% (+68 to +79) while adding nothing on known facts (a no-LLM arm answers both). Across three regimes (no-knowledge, graph-aided, hybrid), grounding helps only insofar as the decisive fact lies outside the model's training -- public-KG facts are redundant, private and novel data are where it pays -- matching the study's institutional-data caveat.",
+    "code_links": [
+      "https://github.com/samyama-ai/clinical-llm-graphrag"
+    ],
+    "comment": "9 pages. Code: https://github.com/samyama-ai/clinical-llm-graphrag"
+  }
+]
