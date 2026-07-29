@@ -1,0 +1,317 @@
+[
+  {
+    "title": "Sharpness-aware Model Merging with Salience Recovery for LLM-based Cross-Domain Sequential Recommendation",
+    "authors": "Huwei Ji, Jiajie Su, Yuyuan Li, Xiaohua Feng, Chaochao Chen",
+    "published": "2026-07-28",
+    "arxiv_id": "2607.25366v1",
+    "url": "http://arxiv.org/abs/2607.25366v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.25366v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "LLM-based Cross-Domain Sequential Recommendation (CDSR) leverages LLMs to enhance target performance via deep semantic reasoning, alleviating the dependency on overlapping users. Among LLM-based paradigms, model merging is particularly promising for multi-domain scenarios due to its superior scalability and flexibility in integrating diverse knowledge sources. However, our empirical investigations reveal two critical bottlenecks: (1) cross-domain knowledge conflict; and (2) performance saturation in multi-domain fusion. Our analysis attributes these phenomena to parameter-level misalignment and statistical homogenization during the merging process. To address these bottlenecks, we propose SharpRec, Sharpness-aware Model Merging with Salience Recovery for LLM-based CDSR, a framework designed to lift the performance upper bound of merged models. SharpRec incorporates two synergistic modules: Sharpness-aware Geometric Alignment to establish a stable geometric foundation for interference-free fusion; and Preference Salience Activation to effectively recover the distinctive features essential for bolstering target domain performance. Extensive experiments in both dual-domain and multi-domain scenarios demonstrate that SharpRec consistently outperforms state-of-the-art baselines.",
+    "code_links": [
+      "https://github.com/muyiahhh/SharpRec"
+    ],
+    "comment": "Published in Proceedings of the 32nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD '26). 12 pages, 6 figures, 4 tables. Code available at https://github.com/muyiahhh/SharpRec"
+  },
+  {
+    "title": "TabRank: Chain-of-Thought Distillation for Table Re-Rankers",
+    "authors": "Adarsh Singh, Kushal Raj Bhandari, Jianxi Gao, Soham Dan, Vivek Gupta",
+    "published": "2026-07-28",
+    "arxiv_id": "2607.25182v1",
+    "url": "http://arxiv.org/abs/2607.25182v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.25182v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "The ability to retrieve relevant tables for answering questions is a key task for structured information retrieval. Multi-stage retrieval systems rely heavily on rerankers to refine candidate lists produced by efficient first-stage retrievers. As a result, neural rerankers and LLM-based reranking methods have become increasingly important due to their superior capacity for semantic understanding and reasoning compared to conventional sparse or dense retrieval models. Recently, Large Reasoning Models (LRMs) equipped with explicit chain-of-thought (CoT) reasoning have shown strong improvements in ranking quality in unstructured passage retrieval. In this work, we present TabRank, a framework for training reasoning rerankers for Tabular Retrieval. We first present a comprehensive dataset of 6728 reasoning traces for tabular reranking on the Natural Questions Tables dataset. We then explore two variants of training a compact reasoning model on these reasoning traces: explicit CoT distillation and conditioning the student reranker on the teacher's reasoning trace within the prompt. We stress-test TabRank on several out-of-distribution generalization settings on diverse domains and multi-table scenarios. Our approach significantly improves performance across a variety of table retrieval datasets, increasing Acc@10 by 30.5% on HybridQA, 15.2% on SQA, 52.9% on TabFact, and 13.1% on TATQA subsets of the Multi-Table QA Benchmark compared to the base model. Notably, TabRank generalizes effectively to multi-table reasoning. Our code, data and models are available at https://github.com/AdarshSingh7647/TabRanker",
+    "code_links": [
+      "https://github.com/AdarshSingh7647/TabRanker"
+    ],
+    "comment": "8 pages, 3 figures"
+  },
+  {
+    "title": "CogRec: Structure-Cognitive Fast-and-Slow Reasoning for Generative Recommendation",
+    "authors": "Xiang Liu, Jingsong Su, Shuqi Zhao, Pengbo Mo, Yiming Qiu, Huimu Wang, Mingming Li, Jiao Dai, Jizhong Han, Songlin Hu",
+    "published": "2026-07-27",
+    "arxiv_id": "2607.24402v1",
+    "url": "http://arxiv.org/abs/2607.24402v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.24402v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Semantic-ID-based generative recommendation represents each item as a hierarchical discrete token sequence and reformulates next-item prediction as constrained sequence generation. Existing methods, however, mainly use Semantic IDs as target sequences to be memorized, leaving the hierarchy, intra-layer relations, and item neighborhoods underused as an explicit reasoning space. Explicit reasoning-enhanced generative methods often produce a natural-language rationale before the item identifier, but this rationale is only weakly coupled with the discrete SID space in which the final prediction is made. We propose CogRec, a structure-cognitive fast-and-slow reasoning framework that grounds intermediate reasoning in the same SID topology used for target generation. CogRec augments the vertical SID hierarchy with intra-layer semantic graphs and item-level neighborhoods, and introduces SID Routing to represent recommendation reasoning through layer-wise Match, LateralJump, and Explore operations. Exact matching implements fast semantic localization, whereas lateral and exploratory operations instantiate slower structural navigation. A supervised multi-stage pipeline aligns the newly introduced SID tokens, establishes direct SID generation, and trains natural-language and SID-routing reasoning branches from a shared checkpoint under the same trie-constrained output space. Experiments on three public sequential-recommendation benchmarks show that SID Routing improves its corresponding direct-generation, indicate that structure-grounded reasoning is most useful when prefix matching is insufficient but learnable SID-space transitions remain available, whereas long or weakly supported routes introduce additional decoding cost and accumulated errors. Code is available at https://github.com/caskcsg/CogRec",
+    "code_links": [
+      "https://github.com/caskcsg/CogRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Ranked by Position: Order Sensitivity as an Exploitable Attack Surface in LLM Listwise Recommenders",
+    "authors": "Ge Zhang, Jingru Cheng, Huiyuan Chen",
+    "published": "2026-07-26",
+    "arxiv_id": "2607.24869v1",
+    "url": "http://arxiv.org/abs/2607.24869v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.24869v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large language models (LLMs) used as listwise rerankers in recommendation systems suffer from position bias when serializing candidate sets into prompts. We show this order sensitivity creates an exploitable attack surface: an attacker can promote a label-0 target into the top-$k$ solely by reordering candidates, without changing item content, labels, or model parameters. We introduce $\\mathrm{promo}@k$ to quantify this vulnerability, measuring the fraction of label-0 targets that can be elevated into top-$k$ rankings via permutation. Evaluating across three domains (MovieLens, Amazon Books, and Amazon Fashion), $\\mathrm{promo}@5$ reaches up to 0.57 at an attack budget of $R$ = 50 orderings. Furthermore, ordinary permutation stability predicts vulnerability without running the attack. While a bidirectional T5 encoder scorer reduces exposure, permutation-consistency regularization and architectural invariance effectively mitigate it. Pointwise scoring avoids the bias issue but degrades ranking quality. These results demonstrate that input candidate order in listwise LLM reranking is a security-relevant attack vector. Code and data are available at https://github.com/geoz-lab/position_bias_attack.",
+    "code_links": [
+      "https://github.com/geoz-lab/position_bias_attack"
+    ],
+    "comment": "13 pages, 6 figures, 11 tables. Code and data available at https://github.com/geoz-lab/position_bias_attack"
+  },
+  {
+    "title": "A Frozen 12B Beats Frontier Models on Verified Work: 100% Accuracy, 0 Tokens, Bit-Exact, Forever",
+    "authors": "Sietse Schelpe",
+    "published": "2026-07-26",
+    "arxiv_id": "2607.23806v1",
+    "url": "http://arxiv.org/abs/2607.23806v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.23806v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Improving a language model today means retraining it: enormous compute, a new opaque model each cycle, non-deterministic output. We take the opposite path: the model stays frozen, and a persistent memory of verified solutions grows beside it. Once a problem family is solved and has passed an independent verification step that never consults the answer key, every new instance of that family is answered at zero generation tokens, bit-exact, deterministically. Across 180 fresh instances spanning nine problem families, four architectures from four vendors - dense and mixture-of-experts - each score 180/180 at zero generation tokens per answer: execution-bound capability decoupled from parameter scaling. A negative control attributes the capability fully to the memory: emptied, it solves nothing. The same verify-before-store contract holds for open-ended reasoning: 88/88 consistency-gated acceptances across all four models, machine-checked formal proof, and reasoning-method transfer at 77/80. Memory selection takes 1.4 microseconds; a full reuse completes in 6-23 ms at 36 mWh. Approximate similarity retrieval selects the wrong item 94.3% of the time on a 4,500-item verified store where exact addressing makes zero errors. The store also serves as working context at a scale no shipped engine matches: a 6,000,000-token movable window on a single 46 GB GPU at flat memory, where vLLM stops at 30,399 tokens and SGLang silently truncates past 32,000. On published benchmarks, frontier models remain far ahead of any 12B at raw from-scratch reasoning; on everything this system has solved and verified, the comparison inverts: a frontier API call pays a fresh generation pass on every query, forever, while verified reuse costs zero tokens and returns the identical bits every time. A public testbench with free, rate-limited access accompanies this report: https://corbenic-galahad-bench.hf.space",
+    "code_links": [
+      "https://github.com/corbenicai/galahad-bench"
+    ],
+    "comment": "Industry experience report. 14 pages, 8 figures. Public testbench: https://corbenic-galahad-bench.hf.space; companion repository with SHA-256 provenance manifest: https://github.com/corbenicai/galahad-bench"
+  },
+  {
+    "title": "ClawRec: A Claw-Native Recommender System",
+    "authors": "Chenghao Wu, Kesha Ou, Xiaolei Wang, Bowen Zheng, Bingqian Li, Enze Liu, Wayne Xin Zhao, Weitao Li, Long Zhang, Sheng Chen, Ji-Rong Wen",
+    "published": "2026-07-26",
+    "arxiv_id": "2607.23779v1",
+    "url": "http://arxiv.org/abs/2607.23779v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.23779v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems have become integral to navigating the modern digital ecosystem. Yet most deployed systems remain confined within single-platform boundaries, observing localized interaction traces and ranking items from isolated candidate spaces. This design is poorly suited to real-world tasks that unfold through searches, content consumption, and comparisons across multiple information sources. Claw-style personal agents, with persistent access to authorized cross-platform context, create an opportunity for recommendation to operate around the user rather than any single platform. In this paper, we introduce Claw-native recommender systems, a new paradigm that moves beyond platform-local ranking to produce unified, complementary recommendation slates spanning diverse sources and content forms. To instantiate this paradigm, we present ClawRec, the first recommender system designed to operate natively in this environment. ClawRec maintains an evidence-linked, temporally structured user state that connects cross-platform behaviors with cross-source recommendations. It organizes retrieval around functional source roles and selects candidates according to their marginal utility, producing non-redundant slates aligned with the user's active task. To enable rigorous evaluation, we introduce ClawRec-SimBench, a benchmark constructed from sequences of concrete life events and cross-platform behavior trajectories. Experiments show that ClawRec outperforms the strongest baselines, achieving an NDCG@20 of 0.6134 (+0.1126) and a Hit@20 of 0.6944 (+0.0854), while also improving user state quality and temporal alignment. Our code and dataset are available at https://github.com/RUCAIBox/ClawRec.",
+    "code_links": [
+      "https://github.com/RUCAIBox/ClawRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "When Does Few-Shot Prompting Help? A Systematic Empirical Study of Shot-Count Effects Across Model Scale, Architecture, and Output Parsing Robustness",
+    "authors": "Ayush Dwivedi, Ashvi Soni",
+    "published": "2026-07-25",
+    "arxiv_id": "2607.22969v1",
+    "url": "http://arxiv.org/abs/2607.22969v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.22969v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Few-shot prompting, the practice of prepending a small number of input-output demonstration pairs to a query before presenting it to a large language model (LLM), is among the most widely adopted inference-time techniques in NLP. Yet little systematic work investigates how shot count interacts with model scale, architecture, and output format compliance in determining classification performance. This paper presents a controlled study of five LLMs across six shot-count configurations (k in {0,1,2,3,5,8}) on the AG News four-class benchmark (n=200). Our models span proprietary and open-source families: Gemini Flash Lite, GPT-4o-mini, Llama 3.1 8B, Llama 3.3 70B, and Llama 4 Scout 17B. We report macro-averaged F1 with 95% bootstrap confidence intervals (B=10,000), permutation-test p-values, and Cohen's d effect sizes across all 30 configurations. Our findings reveal four qualitatively distinct behavioral regimes: (1) models already well-calibrated at zero-shot that show modest, statistically insignificant gains (Gemini, GPT-4o-mini); (2) models that undergo catastrophic zero-shot failure but recover dramatically with a single example (Llama 3.1 8B, d=10.98, p<0.0001); (3) models optimal at zero-shot that degrade monotonically with additional examples (Llama 4 Scout); and (4) models exhibiting a U-shaped curve (Llama 3.3 70B: 0-shot F1=0.907, 2-shot F1=0.635, 5-shot F1=0.785 with parser corrected). We additionally identify, diagnose, and correct a systematic parsing artifact that artificially deflated Llama 3.3 70B performance by up to 206%, constituting a methodological contribution to LLM evaluation practice. Our results demonstrate that the relationship between shot count and classification performance is not monotonic, not universal, and not predictable from model scale alone.",
+    "code_links": [
+      "https://github.com/a-dwivedi/few-shot-prompting-study"
+    ],
+    "comment": "12 pages, 4 figures, 8 tables. Code available at https://github.com/a-dwivedi/few-shot-prompting-study"
+  },
+  {
+    "title": "Beyond Exact Match: How Evaluation Methodology Dominates Model Choice in LLM-Based Product Attribute Extraction",
+    "authors": "Ayush Dwivedi, Ashvi Soni",
+    "published": "2026-07-24",
+    "arxiv_id": "2607.22949v1",
+    "url": "http://arxiv.org/abs/2607.22949v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.22949v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large language models (LLMs) have become a default choice for structured product attribute extraction in e-commerce pipelines, with practitioners reporting widely varying performance across models, datasets, and prompting strategies. This paper presents a controlled empirical study comparing four prompting strategies -- zero-shot, few-shot, schema-guided, and definition-augmented -- across two production-grade LLMs (GPT-4o-mini and Gemini 2.5 Flash) on the MAVE benchmark. We evaluate 6,400 attribute-level predictions using both exact and fuzzy string matching, and conduct a rigorous noise audit of the ground truth labels. We formally decompose F1 variance across four experimental factors and find that evaluation methodology produces variance approximately 23 times larger than model choice and 5 times larger than prompting strategy choice. We further establish that the MAVE benchmark exhibits a 23.2% ground truth noise rate against modern LLM outputs. Paired permutation tests (B=10,000) confirm that the inter-protocol F1 gap is highly significant (p<0.0001) and Cohen's kappa of 0.769 between protocols indicates substantial agreement. We conclude that for production attribute extraction pipelines, evaluation methodology and data quality dominate the impact of model selection and prompt engineering.",
+    "code_links": [
+      "https://github.com/a-dwivedi/llm-product-attribute-extraction"
+    ],
+    "comment": "9 pages, 3 figures, 8 tables. Preprint under review. Code available at https://github.com/a-dwivedi/llm-product-attribute-extraction"
+  },
+  {
+    "title": "REPREC: Representation Driven Parameter-Efficient Recommendation System",
+    "authors": "Harshini Kavuru, Dwipam Katariya, Giri Iyengar, Pranab Mohanty, Kalanand Mishra, Kalanand Mishra",
+    "published": "2026-07-24",
+    "arxiv_id": "2607.24845v1",
+    "url": "http://arxiv.org/abs/2607.24845v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.24845v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Large language models (LLMs) have been applied to sequential recommendation by formulating it as a natural language task. Previous work has improved personalization by incorporating collaborative and sequential signals through input conditioning or LLM fine-tuning. However, existing approaches often rely on one or more of the following: LLM fine-tuning, additional architectural modules, representation distillation, or item-level conditioning over long interaction histories, increasing training complexity and deployment cost. We propose REPREC, a lightweight framework that reformulates LLM-based sequential recommendation through lightweight user representation alignment. REPREC maps a fixed-size user embedding from a frozen sequential encoder into a small set of learned soft tokens through a lightweight MLP injector that conditions a frozen LLM, leaving both pretrained backbones unchanged while training only the injector. We conducted exhaustive experiments on multiple benchmark datasets and demonstrate that REPREC consistently outperforms LoRA while remaining compatible with different pretrained sequential encoders and LLM backbones, enabling a modular and production-friendly recommendation pipeline without modifying either pretrained component. The gains are particularly pronounced for casual and core users across all datasets, highlighting REPREC's effectiveness in low-data regimes. Finally, when trained on short prompt histories and evaluated with longer contexts, REPREC maintains 85-100% of LoRA's performance while reducing per-epoch training time by an average of 1.51X, demonstrating an effective balance between recommendation quality and computational efficiency for production deployment. The code is available at https://github.com/phdbotcode/REPREC",
+    "code_links": [
+      "https://github.com/phdbotcode/REPREC"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Reflector: Arrangement-Aware Harmonic Retrieval for Sample-Based Composition",
+    "authors": "Austin Rockman",
+    "published": "2026-07-24",
+    "arxiv_id": "2607.22413v1",
+    "url": "http://arxiv.org/abs/2607.22413v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.22413v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.SD",
+    "abstract": "Sample retrieval tools can help composers find harmonically compatible material, but querying from a fixed reference sample becomes less informative as arrangements evolve and the harmonic context shifts with each musical decision. We present Reflector, an interactive audio workstation that tracks harmonic combinations as they accumulate on the composer's timeline and adapts retrieval as the arrangement develops. The system is organized around a fixed interval-class oracle: a hand-designed table of weights that scores how pitch-class content combines between sources. An encoder trained entirely on synthetic audio learns to approximate the oracle in a 128-dimensional embedding space, where dot products stand in for compatibility scores at interactive speed. As the composer arranges material on a multi-track timeline, a sweep-line analysis discovers co-sounding regions, computes oracle-weighted centroids, and retrieves against the composite harmonic identity of the session as it evolves. Session centroids projected into a navigable 3-D space reveal structural harmonic relations across the composer's body of work. This paper is a systems account: we give the design rationale for each architectural decision, characterize Reflector's behavior through intrinsic measurements on a working sample library, and describe the implementation. The characterization yields a central finding: the learned embedding preserves the kernel's pairwise judgments while covering the whole library, something the kernel cannot do when used directly as a retrieval rule, because the embedding's normalized geometry cannot express the degenerate solutions that direct scoring favors. The entire pipeline runs locally with no copyrighted training data. Reflector is free, and the training pipeline is open source.",
+    "code_links": [
+      "https://github.com/austinrockman/reflector"
+    ],
+    "comment": "15 pages, 7 figures, 1 table, code, application, and other resources at https://github.com/austinrockman/reflector"
+  },
+  {
+    "title": "MedJudgeRAG: Option-Wise Evidence Judgment with Dynamic Knowledge Graphs for Medical MCQA",
+    "authors": "Seongwon Seo, Seung Hwan Cho, Young-Min Kim",
+    "published": "2026-07-24",
+    "arxiv_id": "2607.24838v1",
+    "url": "http://arxiv.org/abs/2607.24838v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.24838v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In medical multiple-choice question answering (MCQA), Retrieval-Augmented Generation (RAG) can supplement the domain knowledge of language models (LMs). However, since vanilla RAG indiscriminately utilizes retrieved documents, it can degrade LM performance. To address this, we propose MedJudgeRAG. Our framework represents retrieved documents as a dynamic knowledge graph (KG) composed of entities and relations. For each option, the model judges an evidence verdict from the retrieved documents and the KG. Based on the verdict combination, the model determines a knowledge utilization strategy to reason toward the final answer. These capabilities are trained via supervised fine-tuning using structured reasoning traces generated by a teacher LM. The training employs a weighted cross-entropy loss that differentially weights the KG and reasoning segments. Experiments on two medical MCQA benchmarks demonstrate that MedJudgeRAG consistently outperforms both vanilla RAG and parametric baselines. Furthermore, ablation analysis reveals that the dynamic KG is more effective as graph-conditioned supervision at training time than as an explicit output at inference time. Our code is available at https://github.com/hyu-amllab/medjudgerag, and the generated reasoning traces are released at https://huggingface.co/datasets/youarethewon/medjudgerag.",
+    "code_links": [
+      "https://github.com/hyu-amllab/medjudgerag"
+    ],
+    "comment": "16 pages, 2 figures, Accepted at The Workshop on Graph Foundation Models at the 43 rd International Conference on Machine Learning (ICML 2026)"
+  },
+  {
+    "title": "StARS: Socially Appropriate Robot Actions via a Recommender System-Driven Approach",
+    "authors": "Erencem Ozbey, Fethiye Irmak Dogan, Jin Huang, Hatice Gunes",
+    "published": "2026-07-23",
+    "arxiv_id": "2607.21802v1",
+    "url": "http://arxiv.org/abs/2607.21802v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.21802v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.RO",
+    "abstract": "Social appropriateness in human-robot interaction (HRI) is not universal: different people can judge the same robot action differently in the same situation. To capture this inter-subject variability, we reformulate socially appropriate action generation as a preference modelling problem inspired by recommender systems, treating annotators as users, contexts/scenes as items, and appropriateness scores over a set of candidate robot actions as targets. We propose StARS, a novel model-agnostic framework that integrates collaborative filtering with learnable scene representations to generate user-specific appropriateness scores over candidate robot actions. StARS is model-agnostic: it can be integrated with various scene encoders and backbones, enabling personalisation without redesigning the underlying model. We evaluate StARS on two socially aware robotics datasets, MannersDB+ and SocNav1, and analyse robustness under sparse preference feedback. Across datasets and backbones, StARS consistently improves performance and agreement with annotators, supporting personalised action selection aligned with user norms. Our code is publicly available at https://github.com/Cambridge-AFAR/StARS.git.",
+    "code_links": [
+      "https://github.com/Cambridge-AFAR/StARS"
+    ],
+    "comment": "IROS 2026"
+  },
+  {
+    "title": "Fast and Efficient Approximate Nearest Neighbor Search for High-Dimensional LLM Embeddings",
+    "authors": "Nico Hezel, Kai Uwe Barthel, Bruno Schilling, Konstantin Schall, Andre Moelle, Klaus Jung",
+    "published": "2026-07-23",
+    "arxiv_id": "2607.20957v1",
+    "url": "http://arxiv.org/abs/2607.20957v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.20957v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "The annual SISAP Indexing Challenge benchmarks Approximate Nearest Neighbor Search (ANNS) algorithms under rigorous constraints. This paper presents our submissions for the 2026 edition, addressing both $k$-Nearest Neighbor Graph (kNNG) construction on 1024-dimensional BGE-M3 embeddings (Task 1) and Maximum Inner Product Search (MIPS) on unnormalized Llama-3.2-8B features (Task 2). To optimize construction speed, we utilize Equi-Voronoi Polytopes (EVP) for efficient quantization, supplemented by targeted reranking strategies to maintain high recall. For MIPS, we transform the asymmetric inner product problem into a Euclidean search space via dimensionality augmentation. To reduce query latency and optimize memory access, we introduce a 1D presorting mechanism via Fast Linear Assignment Sorting (FLAS) prior to graph construction. This significantly improves spatial locality and cache hit rates during subsequent graph traversal.\n  Source Code: https://github.com/Visual-Computing/sisap26-deglib",
+    "code_links": [
+      "https://github.com/Visual-Computing/sisap26-deglib"
+    ],
+    "comment": null
+  },
+  {
+    "title": "UniRank: Benchmarking Ranking Models for Unified Sequential Modeling and Feature Interaction",
+    "authors": "Honghao Li, Xianquan Wang, Zibin Zhang, Yi Zhang, Kangyi Lin, Yiwen Zhang",
+    "published": "2026-07-22",
+    "arxiv_id": "2607.19987v2",
+    "url": "http://arxiv.org/abs/2607.19987v2",
+    "pdf_url": "https://arxiv.org/pdf/2607.19987v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Ranking is a core stage in online advertising and recommender systems. Modern ranking models increasingly unify sequential modeling and feature interaction, yet many advances rely on proprietary data, closed implementations, and large-scale industrial infrastructure. This setting limits reproducible comparison and hinders academic study of scaling laws, long-sequence modeling, and multi-task ranking. To address these limitations, this paper proposes UniRank, an open benchmark for ranking models that unify sequential modeling and feature interaction. UniRank uses chronological pointwise autoregressive supervision, standardizes evaluation across feedback tasks, and provides a PyTorch toolkit with Distributed Data Parallel training, operator optimization, mixed-precision training, attention optimization, and other efficiency techniques that reduce hardware requirements. We benchmark 15 representative unified ranking models on five large-scale public datasets from short-video, advertising, and e-commerce platforms, with the largest dataset containing over 700 million instances and the longest behavior sequence exceeding 10^5 interactions. UniRank provides a reproducible basis for comparing unified ranking models, studying scaling laws under limited compute, and narrowing the gap between academic and industrial ranking research. We believe UniRank benefits researchers, practitioners, and beginners through reproducible experiments, production-oriented evaluation, and accessible implementations. Code and data are available at https://github.com/salmon1802/UniRank.",
+    "code_links": [
+      "https://github.com/salmon1802/UniRank"
+    ],
+    "comment": "11 pages, 6 figures, and 7 tables. Code and data: https://github.com/salmon1802/UniRank"
+  },
+  {
+    "title": "WorkSurface-Bench: Benchmarking Enterprise Agents on Multi-Surface Knowledge Routing",
+    "authors": "Hao Liang, Meiyi Qiang, Sizhe Qiu, Linzhuang Sun, Wentao Zhang",
+    "published": "2026-07-28",
+    "arxiv_id": "2607.25765v1",
+    "url": "http://arxiv.org/abs/2607.25765v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.25765v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Enterprise agents often need to integrate heterogeneous knowledge sources: documents for narrative facts, tables for computation, and dependency graphs for file relationships. Existing benchmarks typically evaluate retrieval or tool use without distinguishing whether an agent first selects the appropriate knowledge sources. We introduce WorkSurface-Bench, a benchmark for evaluating this capability as surface routing. It contains 1,151 atomic tasks derived from persona-scoped Workspace-Bench-Lite workspaces, spanning document, table, graph, and cross-surface questions. Its reference answers are auditable: table answers are reproduced through executed DuckDB queries, document answers are grounded in verified text spans, and graph answers are traced to source dependency annotations. We evaluate four model backbones across six controlled agent settings, yielding 27,624 protocol-error-free trajectories. Under gold-constrained tool access, agents achieve 98.7-99.8 Route F1, while Answer remains only 56.1-75.3 percent, showing that correct surface selection is necessary but insufficient for task completion. Matched interventions further show that surface hints improve Answer for three of four models, whereas removing irrelevant tools primarily improves routing and efficiency. In an independent three-annotator audit, all 200 sampled tasks pass all six quality criteria by majority vote, with 192 receiving unanimous judgments on every criterion. We release the dataset, construction pipeline, scoring code, and agent harness at https://github.com/haolpku/WorkSurface-Bench.",
+    "code_links": [
+      "https://github.com/haolpku/WorkSurface-Bench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "ERUnderstand: Evaluating Vision-Language Models on Structured ER Diagrams",
+    "authors": "Ali Ansari, Yasmin Mohammadi, Farnoush Nili, Parsa Esmaeilkhani, Longin Jan Latecki, Eduard Dragut",
+    "published": "2026-07-27",
+    "arxiv_id": "2607.24707v1",
+    "url": "http://arxiv.org/abs/2607.24707v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.24707v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Entity-Relationship Diagrams (ERDs) are central to conceptual database design, yet they are typically available only as rendered images rather than machine-readable schemas, limiting AI-assisted database engineering. We introduce ERUnderstand, the first large-scale benchmark for structured understanding of ER diagrams, comprising 2,960 diagrams collected from curated educational sources, real-world schemas, and synthetically generated examples spanning diverse domains, notations, complexity levels, and Extended Entity-Relationship (EER) constructs. Each diagram is paired with a standardized machine-readable representation for fine-grained evaluation of schema elements. Evaluating state-of-the-art Vision-Language Models (VLMs), we find that while common ERD elements are recovered reliably (F1 > 0.74), performance drops sharply on weak entities (as low as 0.28 F1), multivalued attributes (0.14 F1), and N-ary relationships (0.07 F1). Reasoning-augmented models improve overall performance by 15-25% but remain sensitive to linguistic priors and increasing diagram complexity. ERUnderstand provides a standardized benchmark for evaluating multimodal understanding of conceptual database schemas. The benchmark, dataset, evaluation toolkit, and generation code are publicly available at https://github.com/salinaria/ERUnderstand.",
+    "code_links": [
+      "https://github.com/salinaria/ERUnderstand"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Beyond Scale and Generation: Understanding Language Model-based Entity Matching",
+    "authors": "Zeyu Zhang, Xue Li, Iacer Calixto, Paul Groth, Sebastian Schelter",
+    "published": "2026-07-27",
+    "arxiv_id": "2607.24688v1",
+    "url": "http://arxiv.org/abs/2607.24688v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.24688v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Entity matching identifies records that refer to the same real-world entity. Language models can be adapted to this task through bi-encoder, cross-encoder, and generative matcher architectures. However, prior studies often conflate matcher architecture with differences in model backbone, model variant(reflecting different pretraining objectives), and model size, making it difficult to isolate the sources of performance gains. We address this issue through a controlled factorial study spanning three matcher architectures, three model variants and three model sizes from the Qwen3 family, and nine datasets, totaling 1,215 fine-tuning runs. We also evaluate cross-dataset transferability and computational cost.\n  Our results show that model variant is critical for bi-encoders: embedding-oriented variants provide stronger initialization and more favorable representation geometry predictive of downstream matching performance. Cross-encoders retain a consistent advantage over bi-encoders because they jointly encode record pairs rather than representing each record independently, although larger models partially narrow this gap. Generative matchers do not universally outperform cross-encoders. Instead, their advantages concentrate under distribution shift, including subtle unseen differences in record schemas and cross-dataset transfer. We further find that larger models rely more heavily on shortcut learning and therefore do not necessarily perform better. These findings clarify the factors underlying performance differences across matcher architectures and motivate future research and benchmark designs that better disentangle architectural choices from model-level factors while explicitly evaluating distribution shift and cross-dataset transferability. We release our experimental results, code, training scripts, and evaluation data at https://github.com/Jantory/llm-trained-matcher.",
+    "code_links": [
+      "https://github.com/Jantory/llm-trained-matcher"
+    ],
+    "comment": "12 pages, 6 figures, 7 tables. Preprint. Under review"
+  },
+  {
+    "title": "ABISS: Evaluating Text-to-SQL Systems Through Agent Interaction",
+    "authors": "Giovanni Sullutrone, Luca Sala, Sania Aftar, Georgia Koutrika, Sonia Bergamaschi",
+    "published": "2026-07-25",
+    "arxiv_id": "2607.23340v1",
+    "url": "http://arxiv.org/abs/2607.23340v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.23340v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Large Language Models (LLMs) demonstrate high performance on curated Text-to-SQL benchmarks; nevertheless, real-world users frequently pose ambiguous or unanswerable questions that current systems handle poorly. Three interconnected gaps hinder progress: incomplete taxonomies, realistic benchmark generation for real-world settings, and static user interaction. We address all of the above issues through three contributions: (1) a unified taxonomy of 8 categories covering ambiguous and unanswerable questions; (2) a multi-agent generation pipeline with a two-stage process (NLQ generation followed by SQL grounding) and an explicit Category Conformance validation stage, producing questions from arbitrary databases validated by a council of local open-source models; and (3) ABISS (Ambiguity Benchmark using Interaction-Simulated Sessions), a dynamic simulation environment where Text-to-SQL agents interact with style-aware simulated users across multi-turn dialogues. Experiments with eight open-source models on ABISS-BIRD and ABISS-Spider reveal two fundamental bottlenecks. The first is subcategory classification: models detect that a question is problematic yet struggle to pinpoint the specific subcategory. The second is clarification-conditioned SQL generation: even after receiving useful user information, models often still fail in the final resolution step. Providing the ground truth category yields large gains in both execution and feedback across both datasets, yet ambiguous-question execution remains low even under oracle category labels. We release our code for data generation and benchmark on GitHub (https://github.com/giosullutrone/ABISS-Evaluating-Text-to-SQL-Systems-Through-Agent-Interaction).",
+    "code_links": [
+      "https://github.com/giosullutrone/ABISS-Evaluating-Text-to-SQL-Systems-Through-Agent-Interaction"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Auto-Fill: Learning to Predict Missing Values Accurately with Specialist Language Models",
+    "authors": "Yurong Liu, Yeye He, Haoyu Dong, Junjie Xing, Shi Han, Dongmei Zhang, Surajit Chaudhuri",
+    "published": "2026-07-22",
+    "arxiv_id": "2607.19847v1",
+    "url": "http://arxiv.org/abs/2607.19847v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.19847v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Predicting missing cell values in tabular data is a fundamental problem in data cleaning. While state-of-the-art reasoning models show great promise in predicting missing values in tables, by reasoning holistically across rows and columns, they are costly to deploy at scale and tend to be overconfident, often generating hallucinated or false-positive predictions.\n  In this paper, we observe that achieving high-precision missing-value prediction in tables requires a distinct combination of three capabilities: (1) world knowledge, (2) text-based reasoning, and (3) code-based reasoning. We systematically explore design choices for combining these capabilities, and propose an Auto-Fill approach that post-trains three specialist small language models (SLMs), each optimized for one capability. We develop a calibrated ensemble mechanism that either dynamically selects the most confident specialist or abstains, ensuring high accuracy.\n  Extensive experiments on 11 benchmarks with 2200 real tables drawn from diverse domains show that Auto-Fill achieves superior accuracy compared to state-of-the-art reasoning models (e.g., o3-pro, Gemini 3 Pro, and DeepSeek R1), while operating at a fraction (less than 1%) of the cost of these frontier models. Our results highlight the effectiveness of specialization and calibrated abstention in the important domain of tabular data. Auto-Fill is publicly available at https://github.com/lyrain2001/auto-fill.",
+    "code_links": [
+      "https://github.com/lyrain2001/auto-fill"
+    ],
+    "comment": "VLDB 2026"
+  },
+  {
+    "title": "FIFA World Cup 2026 as a Contamination-Free Benchmark for LLM Forecasting Agents: Four Models, a Bookmaker, and 104 Matches",
+    "authors": "Jiacheng Ding, Cong Guo, Jason Xu",
+    "published": "2026-07-20",
+    "arxiv_id": "2607.17765v1",
+    "url": "http://arxiv.org/abs/2607.17765v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.17765v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "We introduce WC2026-Agents, a benchmark and dataset for evaluating large language models (LLMs) as autonomous forecasting agents on real, future events. For every one of the 104 matches of the 2026 FIFA World Cup, four frontier models -- Claude Opus 4.8, ChatGPT (GPT-5.5, high reasoning), Gemini 3.1 Pro, and Grok (Expert Mode) -- ran an identical search-act-reflect loop: gather evidence with a web tool, commit to a 1X2 (team-A win / draw / team-B win) distribution and a virtual 100-USD bet, and, after the match, reflect given only the final score. Because every match kicked off after the models' training cutoffs, the benchmark is contamination-free by construction. Crucially, we pair the four agents with a fifth competitor drawn from the same information environment -- the pre-match betting market -- collected as per-match 1X2 odds, giving an economically grounded baseline and letting us score not just what an agent predicts but what it does with money. The release contains 416 forecasts and 414 reflections with verbatim reasoning, ground truth (including penalty shootouts), odds, and a reproducible evaluation suite. A reference evaluation surfaces findings that raw accuracy hides: the four agents issue an identical top pick in 92% of matches and none beats the market's Brier score; indeed, a naive flat stake on the market favorite out-earns all four agents. Yet the agents diverge sharply as decision-makers: betting return-on-investment ranges from -18% to +10%, fading the market is unprofitable for all four, the share of forecasts that cite the market ranges from 12% to 100%, and self-reported error rates on wrong picks range from 36% to 86%. The benchmark thus measures calibration, decision quality, and self-knowledge -- axes on which frontier models differ even when their predictions do not. Data and code: https://github.com/graphuofm/FIFA2026LLM",
+    "code_links": [
+      "https://github.com/graphuofm/FIFA2026LLM"
+    ],
+    "comment": null
+  },
+  {
+    "title": "An Explicit World Model Based on Data-First Ontology: DaoQL Multimodal Storage Validation and Counterfactual Reasoning Evaluation",
+    "authors": "Zhanbo Li, Shifeng Wu, Xiangjin Meng, Wenjie Cai",
+    "published": "2026-07-19",
+    "arxiv_id": "2607.17269v1",
+    "url": "http://arxiv.org/abs/2607.17269v1",
+    "pdf_url": "https://arxiv.org/pdf/2607.17269v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Large language models encode world models implicitly in neural weights, which exposes four structural risks in high-precision domains such as medicine and finance: hallucination, frozen knowledge, poor explainability, and poor modifiability. This paper proposes data-first ontology: LLMs are treated as reasoning and language engines, while deterministic knowledge is moved into an explicit multimodal database, DaoQL. We formalize an explicit world model and show that, under rule independence, deterministic evaluation, and fixed conflict resolution, explicit models provide a sufficient condition for composable counterfactual decomposability; implicit models lack atomic read/delta semantics and therefore provide no comparable architectural guarantee. The implemented system focuses on DaoQL's verified storage layer and explicit Eval path, integrating graph, column, vector, and full-text engines within one process. KVCache graph nodes, expert hot updates, and the DaoQL-Agent runtime remain future work. On an embedded same-machine setup, DaoQL reports graph BFS at 1.20 ms, HNSW at 83.1 us, and a Fluent hybrid query at 105.8 us; these results indicate engineering potential but must be interpreted with deployment-shape differences from client-server systems. Exploratory measurements on LDBC SNB SF1 and ANN-Benchmarks further show 34/34 query coverage with interactive-class queries mostly in the sub-millisecond to millisecond range, but only 1.8 QPS overall due to long-tail BI/IC queries; ANN-Benchmarks reaches Recall@10 >= 99% at thousand-level QPS after a bridge-edge protection fix. In a five-domain counterfactual experiment (n = 1250), DaoQL+GPT-4o achieves 94% composable counterfactual decomposability, 49 percentage points above GPT-4o alone. The paper explicitly separates provable structure, preliminary empirical evidence, and architectural roadmap claims.",
+    "code_links": [
+      "https://github.com/zhanbolee/DaoQL-Edu"
+    ],
+    "comment": "20 pages, 2 figures. Code: https://github.com/zhanbolee/DaoQL-Edu"
+  }
+]
