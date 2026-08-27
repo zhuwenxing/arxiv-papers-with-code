@@ -1,0 +1,375 @@
+[
+  {
+    "title": "RetrievalRouter: Joint Modality and Architecture Selection for Document Retrieval",
+    "authors": "Emre Kuru, Mehmet Onur Keskin, Reza Farahbakhsh, Noel Crespi",
+    "published": "2026-08-26",
+    "arxiv_id": "2608.25625v1",
+    "url": "http://arxiv.org/abs/2608.25625v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.25625v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Document retrieval increasingly supports high-stakes information access in finance, healthcare, and law. Modern retrieval pipelines vary both in modality (text or multimodal) and in retrieval architecture (dense or late-interaction). These choices impose a hard compromise: the most effective pipelines are too slow and expensive to run at scale, while the fastest fail to retrieve evidence from complex documents. Practitioners must therefore choose between missed evidence and unusable latency, with no principled basis for adapting that choice at the query level. We show that this compromise is unnecessary. Not every query requires the same pipeline. Across benchmarks spanning financial and scientific corpora, no static pipeline dominates. We introduce RetrievalRouter, a lightweight query-aware router that learns, from the query text alone, which retrieval pipeline best fits each query. A single tunable parameter exposes the full accuracy-latency frontier, and for every static baseline, RetrievalRouter offers an operating point that is simultaneously more accurate and faster. Against the best static baseline, RetrievalRouter is 2.5% more accurate and 12.4 times faster. Furthermore, compared with prior adaptive strategy selection methods, RetrievalRouter achieves significantly higher nDCG@5 across accuracy-oriented settings, while matching or numerically outperforming them on both nDCG@5 and latency in latency-oriented settings. Our code and data are available at https://github.com/emrekuruu/retrieval-router.",
+    "code_links": [
+      "https://github.com/emrekuruu/retrieval-router"
+    ],
+    "comment": "Accepted at EMNLP 2026"
+  },
+  {
+    "title": "DocPC: Document-Level Visual Retrieval via Representative Page Composition",
+    "authors": "Chengsong You, Junwei Zhou, Nan Du",
+    "published": "2026-08-26",
+    "arxiv_id": "2608.25434v1",
+    "url": "http://arxiv.org/abs/2608.25434v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.25434v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Visual document retrieval has advanced by encoding page screenshots with vision-language models, bypassing OCR pipelines. However, existing methods remain page-centric, misaligned with real-world scenarios requiring complete document retrieval. A naive page-then-document aggregation suffers from linear indexing cost and degraded retrieval when relevance spans multiple pages. We propose DocPC, a document-level visual retrieval framework based on Representative Page Composition: selecting representative pages and composing them into a single grid image for document-level indexing, reducing indexed images, vectors, and storage by 10.1x and end-to-end indexing time by roughly 7.7x. To handle multi-positive supervision prevalent at the document level, we combine multi-positive contrastive learning with sparsely scheduled listwise optimization. We also introduce DocViRe, a benchmark with multi-positive relevance annotations. DocPC-ColQwen achieves NDCG@5 of 44.09 on DocViRe, outperforming the strongest page-level baseline at 38.91 while reducing storage by 10.1x. Code is available at https://anonymous.4open.science/r/DocPC-Document-Level-Visual-Retrieval-via-Representative-Page-Composition-1D52. Data is available at https://huggingface.co/datasets/anonymous-7219/docpc.",
+    "code_links": [],
+    "comment": "15 pages, 5 figures, 8 tables"
+  },
+  {
+    "title": "Tlow: Flow-based Item Tokenizer for Recommendation",
+    "authors": "Nian Li, Chonggang Song, Jingtao Ding, Lingling Yi, Yong Li, Qingmin Liao",
+    "published": "2026-08-25",
+    "arxiv_id": "2608.24176v1",
+    "url": "http://arxiv.org/abs/2608.24176v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.24176v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Item tokenizer encodes semantic embeddings into token IDs to replace the randomly assigned item IDs used in traditional recommendation models, fundamentally addressing the problems of excessive parameters and cold starts. However, the most common tokenizer, RQ-VAE, suffers from low decoding efficiency due to the inherent dependencies among its codebooks. Meanwhile, efficient independent tokenizers such as optimized product quantization (OPQ) still struggle with dimensional correlations and distribution complexity of semantic embeddings. In this work, we propose a f\\underline{low}-based item \\underline{T}okenizer (Tlow) to transform raw semantic embeddings into a latent space where embeddings conform to a unified standard normal distribution, achieving dual advantages of dimensional independence and distributional simplicity. Independent tokenization performed on these latent embeddings yields semantically clear token IDs. Additionally, we introduce a novel codebook guidance to align the codebook space with the token embedding space, further aiding the learning of more semantically distinct token embeddings. Offline experiments on four public datasets demonstrate that Tlow's tokenization and codebook guidance significantly improve recommendation performance. The improvement on cross-domain and multi-modal recommendations also proves the effectiveness of item tokenization in a simplified embedding space. Online experiments for a multi-modal retrieval task on China's largest social media platform WeChat validate Tlow's powerful distribution transformation capability. The retrieval model based on token IDs improves user CTR by 10.32\\% globally and by 11.64\\% for new items. Our codes are available at https://github.com/wjjln/Tlow.",
+    "code_links": [
+      "https://github.com/wjjln/Tlow"
+    ],
+    "comment": "CIKM'26 Applied Research"
+  },
+  {
+    "title": "SQLite is Enough. Lexical, Semantic, and Hybrid Search with scrydb",
+    "authors": "Timo Breuer",
+    "published": "2026-08-25",
+    "arxiv_id": "2608.24060v1",
+    "url": "http://arxiv.org/abs/2608.24060v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.24060v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "This work introduces scrydb, a Python library that enables lexical, semantic, and hybrid search within SQLite. For lexical search, scrydb leverages SQLite's full-text search extension FTS5. Semantic search builds on sqlite-vec, a SQLite extension for vector search. Furthermore, the library allows users to rerank and fuse retrieval results to combine both lexical and semantic approaches, providing a lightweight solution for downstream tasks in information retrieval (IR) or agentic search. We evaluate scrydb on various IR benchmark datasets and demonstrate its effectiveness in text retrieval based on keyword matching, semantic similarity, and rank fusion. In addition, we provide insights into query latency and the trade-off between efficiency and effectiveness. scrydb is available under the MIT license.",
+    "code_links": [
+      "https://github.com/breuert/scrydb"
+    ],
+    "comment": "Software available at https://github.com/breuert/scrydb"
+  },
+  {
+    "title": "WeMM-Embedding: WeChat Multi-Modal Embedding Technical Report",
+    "authors": "Junjie Zhou, Ke Mei, Lei Li, Tianyi Wang, Fengyun Rao, Jing Lyu",
+    "published": "2026-08-25",
+    "arxiv_id": "2608.24053v1",
+    "url": "http://arxiv.org/abs/2608.24053v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.24053v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Universal multimodal embeddings are becoming a core component of modern AI systems, enabling heterogeneous content to be represented in a shared space for applications such as retrieval, recommendation, classification, and agentic systems. In this report, we present WeMM-Embedding, a family of universal multimodal embedding models supporting text, images, videos, visual documents, and arbitrarily interleaved multimodal inputs with flexible output dimensions. The family comprises 2B, 4B, and 9B variants and is trained in two stages: a large-scale multimodal alignment stage, followed by a refinement stage using curated data, fine-grained relevance supervision, and cross-scale knowledge transfer. Across extensive evaluations, WeMM-Embedding achieves leading performance on multiple public benchmarks. Notably, the 2B variant already surpasses the previously leading 8B open-source baseline on MMEB-v2, while the 9B variant further achieves a new state-of-the-art overall score of 80.6. WeMM-Embedding also demonstrates strong practical performance across WeChat applications, with substantial gains on a 26-task in-house benchmark and consistent improvements across 14 online A/B tests. It has been deployed at scale across recommendation and search applications, including WeChat Channels, Official Accounts, Moments, and e-commerce services. We have released the model weights and code to facilitate future research at https://github.com/Tencent/WeMM-Embedding.",
+    "code_links": [
+      "https://github.com/Tencent/WeMM-Embedding"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Adaptive Item-based Collaborative Structures via Noise Rescheduling in Diffusion for Generative Recommendation",
+    "authors": "Jiaqi Wang, Tianying Liu, Heng Chang, Jihong Guan, Wengen Li, Shuigeng Zhou",
+    "published": "2026-08-24",
+    "arxiv_id": "2608.23400v1",
+    "url": "http://arxiv.org/abs/2608.23400v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.23400v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Discrete Diffusion Models (DDMs) have recently been introduced to recommendation systems, modeling user history as a token generation process via iterative denoising. However, while effective at capturing user-level sequential patterns, these methods often fail to explicitly integrate item-based collaborative filtering information, a critical component for accurate recommendation. This deficiency manifests in two key aspects: (1) the item representation is often semantic-focused, lacking collaborative priors for diffusion training; and (2) the denoising process employs a uniform noise schedule, treating all tokens indiscriminately and ignoring item-level adaptive structural dependencies. To bridge this gap, we propose ANR-DiffRec, a unified framework designed to encode item-based collaborative structures into discrete diffusion for generative recommendation. First, we explicitly incorporate an item co-occurrence matrix to guide semantic ID generation, providing a structured collaborative prior for discrete diffusion training. Second, we introduce an item-based adaptive noise rescheduling mechanism that dynamically adjusts denoising weights according to both local contextual recoverability and behavior-aware item dependencies. Specifically, the proposed strategy jointly models intra-item structural context and inter-item collaborative signals, enabling structure-aware denoising during diffusion training. Extensive experiments on multiple benchmarks demonstrate that our method consistently outperforms state-of-the-art generative recommendation models. Code: https://github.com/CalmaQi/ANR-DiffRec.",
+    "code_links": [
+      "https://github.com/CalmaQi/ANR-DiffRec"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Hierarchical Exponential-Gaussian Mixtures for Watch-Time Distribution Prediction",
+    "authors": "Sofia Gulevskaia, Mikhail Trapeznikov, Aleksandr Poslavsky, Alexander D'yakonov",
+    "published": "2026-08-24",
+    "arxiv_id": "2608.23356v1",
+    "url": "http://arxiv.org/abs/2608.23356v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.23356v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Accurate watch-time (WT) prediction is an important requirement for short-video recommendations. Yet WT distributions are near-zero-inflated, long-tailed and multimodal. The recent Exponential-Gaussian Mixture Network (EGMN) models the full conditional WT distribution rather than a single point estimate and achieves state-of-the-art performance. Our large-scale reproduction study reveals that EGMN is vulnerable to variance collapse, component redundancy, and inactive components. We propose a Hierarchical Exponential-Gaussian Mixture (HEGM) model that addresses these failure modes through a hierarchical skip-watch decomposition, KL-based variance regularization, structured initialization, removing the forced Gaussian shift and the entropy regularizer. Across public and large-scale industrial datasets, HEGM improves ranking accuracy and threshold-event prediction, while maintaining competitive point-estimation accuracy and substantially improving mixture stability and interpretability. A 1.5-month production A/B test confirms statistically significant engagement lifts. Our code and models are publicly released at https://github.com/rw404/HEGM.",
+    "code_links": [
+      "https://github.com/rw404/HEGM"
+    ],
+    "comment": "16 pages, 8 figures, 7 tables, accepted at IEEE International Conference on Data Mining (ICDM 2026)"
+  },
+  {
+    "title": "The Laws of Context Allocation: Causal Measurement and Closed-Loop Orchestration in Generative Search",
+    "authors": "Peiyang Liu, Xi Wang, Di Liang, Wei Ye",
+    "published": "2026-08-24",
+    "arxiv_id": "2608.23252v1",
+    "url": "http://arxiv.org/abs/2608.23252v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.23252v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "As Retrieval-Augmented Generation (RAG) shifts toward diverse portfolio generation, it is stymied by two critical bottlenecks: flawed measurement of evidence utilization, and suboptimal context budget allocation. We resolve both sequentially.\n  To resolve measurement, we expose a pervasive ``diagnostic illusion'': standard relevance proxies fail catastrophically on hard negatives. We replace them with an efficient causal leave-one-out probe that accurately isolates generative reliance and formally calibrates the structural dilution of LLM attention.\n  To resolve allocation, we deploy this causal probe in a deconfounded factorial grid. We prove that the prevailing strategy of monolithic context widening is an architectural trap penalized by relevance decay. Instead, allocating compute iteratively across multiple sequential generations drives transformative portfolio recall gains of 16.7--20.5 absolute percentage points, scaling robustly up to 32B models.\n  Finally, we unify these solutions into a deployable closed-loop submodular scheduler. Augmented by an attribution-steered contrastive decoder to override LLM attention inertia, our architecture systematically forces fresh evidence integration. By dominating classical open-loop baselines, we establish sequential, feedback-driven orchestration as the definitive paradigm for generative search. Our code, data, and causal measurement instruments are available at https://github.com/PeiYangLiu/ascp.",
+    "code_links": [
+      "https://github.com/PeiYangLiu/ascp"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Training-Free Pseudo-Fusion for Composed Image Retrieval with Diffusion Models and Multimodal Large Language Models",
+    "authors": "Fan Xu, Luis A. Leiva",
+    "published": "2026-08-24",
+    "arxiv_id": "2608.23102v1",
+    "url": "http://arxiv.org/abs/2608.23102v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.23102v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Composed Image Retrieval (CIR) is an emerging paradigm in content-based image retrieval that enables users to formulate compositional queries by combining a reference image with an auxiliary modality, usually text-based. This approach supports fine-grained search where the target image shares structural elements with the user-provided image while incorporating the modifications specified by the auxiliary text. Conventional CIR methods rely on multimodal fusion to combine visual and textual features into a joint query embedding, which requires training modules that align composed queries with the targets. In this work, we propose PeFuse (for pseudo-fusion), a training-free framework that leverages pretrained Diffusion Models and Multimodal Large Language Models to bridge modalities via generative conversion. We introduce two novel strategies: uni-directional and bi-directional conversion, which convert CIR into four single-modality retrieval problems. These methods reformulate CIR as either intra-modal or cross-modal single-query retrieval tasks, bypassing the need for dedicated task-specific training. Extensive experiments on standard benchmarks demonstrate that converting CIR into text-to-image retrieval tasks is more effective than alternative conversion strategies, achieving competitive or superior performance compared with state-of-the-art methods, while maintaining high flexibility thanks to replaceable components of the conversion pipeline. These results highlight the effectiveness of the pseudo-fusion paradigm for zero-shot CIR. Our code is publicly available at: https://github.com/StevenXuf/PeFuse4CIR.",
+    "code_links": [
+      "https://github.com/StevenXuf/PeFuse4CIR"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Cascading Relevance-driven Recommendation Network for CTR Prediction in Trigger-Introduced Recommendation",
+    "authors": "Kaixuan Chen, Wenwen Wang, Xing Fang, Yang Huang, Jing Wang",
+    "published": "2026-08-24",
+    "arxiv_id": "2608.22973v1",
+    "url": "http://arxiv.org/abs/2608.22973v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.22973v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "E-commerce has emerged as crucial platforms for people's daily consumption and shopping interests. There is a new recommendation scenario, Trigger-Introduced Recommendation (TIR), where users click interested product, which is defined as the trigger item, containing their instant interest, and in the undertaking page following the relevant target items. Distinguished from traditional search and recommendation scenarios, trigger contains relatively strong instant interest, which is more vague and implicit compared to search terms. Relying on large amounts of labeled data, existing methods lack the exploration of trigger relevance, which affects users' immersive experience. To alleviate this problem, we propose the Cascading Relevance-driven Recommendation Network (CRRN) to emphasize the interaction and relevance between trigger and target, comprising three essential components: 1) the Trigger-Target Interaction layer extracts interaction features of trigger and target based on personalized gating. 2) Cascading Interest Fusion module explicitly estimates users' trigger intention and fuses instant and personalized interests adaptively with cascading attention blocks. 3) Category-assisted Pairwise Loss enhances trigger relevance with the guidance of category association between trigger and target. Extensive experiment results show that CRRN outperforms recent state-of-the-art methods on both industrial and public datasets. Online A/B tests further validate the effectiveness of our method. Our code is available at https://github.com/a-little-cabbage/CRRN.",
+    "code_links": [
+      "https://github.com/a-little-cabbage/CRRN"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Better Retrieval, Worse Robustness: How Multi-hop RAG Amplifies Upstream ASR Errors",
+    "authors": "Zhenghua Bao",
+    "published": "2026-08-24",
+    "arxiv_id": "2608.22872v2",
+    "url": "http://arxiv.org/abs/2608.22872v2",
+    "pdf_url": "https://arxiv.org/pdf/2608.22872v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Speech-based applications pass spoken queries through automatic speech recognition (ASR) before any retrieval module, so ASR errors enter the pipeline as a fixed upstream constraint. We empirically test whether two extensions to standard retrieval-augmented generation (RAG), entity-graph linking and iterative reformulation, absorb or amplify these errors. Using four English accents synthesized through neural TTS, we evaluate four RAG configurations on three multi-hop QA benchmarks (HotpotQA, 2WikiMultiHopQA and MuSiQue) against a clean-text oracle. Although the structurally richer configurations generally retain higher absolute F1 under ASR input, both extensions amplify the error: the F1 gap from clean text to the highest-WER accent is 36-67% larger under their combination than under naive dense retrieval, on all three benchmarks. The dominant failure mode is corruption of one or more query entities, accounting for 87-96% of degradation cases on 2WikiMultiHopQA across all four methods. Two lightweight surface-form mitigations leave most of the gap intact, indicating that downstream retrieval structure amplifies remaining entity errors. We release code and data at https://github.com/Continuum-AI-Corp/spoken-multihop-rag .",
+    "code_links": [
+      "https://github.com/Continuum-AI-Corp/spoken-multihop-rag"
+    ],
+    "comment": "Accepted to EMNLP 2026 (Main Conference)"
+  },
+  {
+    "title": "Risk-Aware Reranking for Agentic Tool Retrieval",
+    "authors": "Qinfei Li, Xiaoxuan Dong, Jin Zhang, Dexu Yu, Wenhao Deng, Junchen Fu, Youhua Li, Hanwen Du, Chunxiao Li",
+    "published": "2026-08-24",
+    "arxiv_id": "2608.22751v1",
+    "url": "http://arxiv.org/abs/2608.22751v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.22751v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Tool retrieval determines which external tools are exposed to an LLM agent for a user query or task, making retrieval a critical pre-execution safety boundary. Unlike document retrieval, tool retrieval exposes executable actions: a tool that is useful for one task may be unnecessary or risky for another. However, existing tool-retrieval methods primarily optimize semantic relevance, and safety evaluations often focus on failures after tool execution rather than risks introduced during retrieval. We study risk-aware tool retrieval, where the goal is to retrieve useful tools while reducing exposure to higher-risk tools. We propose a lightweight reranking framework on top of a frozen first-stage retriever. The framework models query-conditioned relevance and tool-level exposure risk separately, combines them through an explicit parameter controlling the tradeoff between safety and utility, smooths scores over a ToolGraph, and optionally applies rule-based safety constraints. To support retrieval-time safety evaluation, we annotate 6,108 tools across UltraTool and Seal-Tools with five ordinal risk levels and define metrics that measure risky-tool exposure in the top-$k$ results. Experiments on UltraTool and Seal-Tools show that our approach improves the relevance--safety tradeoff over relevance-only retrievers and reranking baselines, with the rule-filtered variant providing a conservative operating point for safety-critical deployments. These findings indicate that retrieval-stage filtering can reduce the candidate action space exposed to agents before execution, complementing downstream tool-use safeguards. The code and supplementary materials are available at: https://github.com/qli447/risk-aware-tool-retrieval-release.",
+    "code_links": [
+      "https://github.com/qli447/risk-aware-tool-retrieval-release"
+    ],
+    "comment": "Accepted by CIKM 2026"
+  },
+  {
+    "title": "Rethinking Item Tokenization in Generative Recommenders: From Fixed Atoms to Semantic Subwords",
+    "authors": "Xinrui Miao, Mingjia Yin, Jiaqing Zhang, Wei Guo, Yong Liu, Yuyang Ye, Hao Wang, Enhong Chen",
+    "published": "2026-08-24",
+    "arxiv_id": "2608.22734v1",
+    "url": "http://arxiv.org/abs/2608.22734v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.22734v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In generative recommender systems, items are typically tokenized into fixed-length semantic ID sequences for autoregressive next-item prediction. However, for user-context modeling, this fine-grained representation triggers Intra-item Attention Overload: excessive attention is spent on low-level intra-item dependencies rather than high-level inter-item behavioral transitions.\n  To address this, we propose Semantic Subword Tokenization (SST), which represents historical items as variable-length semantic subwords while preserving fixed-length target decoding. SST first applies Item-level Subword Tokenization (IST) to merge stable adjacent atom tokens into compact semantic subword tokens, thereby reducing intra-item reassembly in the encoder. It then introduces Behavior-induced Co-occurrence Augmentation (BCA) to inject coarse-grained semantic prefix transition signals, guiding the freed modeling capacity toward inter-item behavioral regularities. Extensive experiments on three public datasets and three generative recommender backbones show empirical improvements of SST over fixed-length and transferable variable-length SID baselines. Code is available at https://github.com/mxrcandy/Semantic-Subword-Tokenization.",
+    "code_links": [
+      "https://github.com/mxrcandy/Semantic-Subword-Tokenization"
+    ],
+    "comment": "13 pages, 6 figures, 8 tables. Accepted to CIKM 2026"
+  },
+  {
+    "title": "EnSI-RAG: Entity-Structure-Indexed Retrieval-Augmented Generation for Long-Document Question Answering",
+    "authors": "Xuanyu Meng, Jiashuo Sun, Jash Rajesh Parekh, Jiawei Han",
+    "published": "2026-08-21",
+    "arxiv_id": "2608.21252v1",
+    "url": "http://arxiv.org/abs/2608.21252v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.21252v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Question answering (QA) over long, connected documents remains challenging because relevant evidence may span multiple entities and their relationships. Existing retrieval-augmented generation (RAG) methods typically index documents as raw chunks and retrieve them through embedding similarity. Their performance degrades when chunk boundaries separate entities from supporting evidence or when a question requires multi-hop reasoning across the corpus. We propose EnSI-RAG (Entity-Structure-Indexed Retrieval-Augmented Generation), a framework that constructs a query-independent, entity-centered index. Each record (e, t, k, v) represents an entity e, its type t, a semantic category k in {property, relation, aspect}, and a value v, while retaining links to the original source passages. At query time, these records serve as retrieval handles, and an LLM synthesizes the retrieved passages into the final answer. This design separates evidence localization from answer synthesis while preserving traceable source evidence. Across Loong and Oolong, EnSI-RAG achieves an average accuracy of 78.24. Relative to the published baseline scores used as references, this is 6.62 points higher, suggesting its effectiveness across these settings. The code is available at https://github.com/RamonMeng/EnSI-RAG.",
+    "code_links": [
+      "https://github.com/RamonMeng/EnSI-RAG"
+    ],
+    "comment": "21 pages, preprint"
+  },
+  {
+    "title": "Graph Engineering in the Era of LLM Agents: From Individual Intelligence to System Intelligence",
+    "authors": "Yuyuan Feng, Zhishang Xiang, Chaobin Yang, Qichao Ma, Zerui Chen, Yujing Zhang, Ke Huang, Chuanjie Wu, Zhaoxu Liu, Yili Wang, Xin He, Jiapu Wang, Zijin Hong, Hao Chen, Yuanchen Bei, Kun Wang, Shengyuan Chen, Ningyu Zhang, Enyan Dai, Linhao Luo, Qingyi Pan, Qi Wang, Wenqi Fan, Guangjing Wang, Na Zou, Yangqiu Song, Xin Wang, Zechao Li, Xia Hu, Qing Li, Xiao Huang, Zhihong Zhang, Jinsong Su, Qinggang Zhang, Yi Chang",
+    "published": "2026-08-21",
+    "arxiv_id": "2608.21156v2",
+    "url": "http://arxiv.org/abs/2608.21156v2",
+    "pdf_url": "https://arxiv.org/pdf/2608.21156v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "LLMs have evolved from language generators to autonomous agents capable of complex, long-horizon tasks. This evolution has produced paradigms including Prompt Engineering to elicit model capabilities, Context Engineering to manage information access, Harness Engineering to organize external tools and resources, and Loop Engineering to support continual reflection and self-improvement. Yet as tasks grow more complex, individual intelligence faces a fundamental limit: many tasks require heterogeneous expertise, interdependent subtasks, parallel execution, independent verification, and persistent state, exceeding any single agent's organizational capacity. Augmenting one agent's capabilities or context cannot resolve this architectural mismatch; intelligence must instead be distributed across specialized agents and organized at the system level. We call this System Intelligence: an agent system's ability to organize and coordinate multiple intelligent components into a coherent, adaptive whole pursuing a shared objective. Achieving it requires more than adding agents; it demands explicit structures to organize work, coordinate heterogeneous agents, and maintain evolving execution states. We introduce Graph Engineering, an emerging paradigm for next-generation agent systems. Unlike prior paradigms that mainly optimize individual interactions or agent-level behavior, Graph Engineering constructs explicit, dynamic, evolving graph structures representing tasks, agents, and system states. These abstractions provide a unified foundation for organizing complex objectives, orchestrating heterogeneous agents, modeling system dynamics, and enabling scalable agent evolution. We systematically review the principles, methodologies, and applications of Graph Engineering for LLM agents. Related papers, open-source data, and projects are collected at https://github.com/DEEP-JLU/Awesome-Graph-Engineering.",
+    "code_links": [
+      "https://github.com/DEEP-JLU/Awesome-Graph-Engineering"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Trustworthy RAG: An Evaluation Agent for Detecting Misinformation and Knowledge Poisoning in Generative AI Systems",
+    "authors": "Balkrishna Giri, Md Toufique Hasan, Jussi Rasku, Muhammad Waseem, Pekka Abrahamsson",
+    "published": "2026-08-21",
+    "arxiv_id": "2608.21095v1",
+    "url": "http://arxiv.org/abs/2608.21095v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.21095v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.SE",
+    "abstract": "Retrieval-Augmented Generation (RAG) grounds Large Language Model (LLM) outputs in external knowledge, but RAG systems usually trust whatever they retrieve, creating a Security-Reliability Gap: high semantic relevance does not guarantee factual truth. Adversaries exploit this through knowledge poisoning, inserting malicious documents to cause targeted misinformation. We propose an Evaluation Agent, middleware that combines Natural Language Inference (NLI) factual verification, a five-signal poison detector with relevance-weighted aggregation, and a Trust Index T = 0.4 F + 0.35 C + 0.25 (1 - P ) with a non-linear dampener for high-contamination contexts. On TruthfulQA with Llama 3.3 70B, the agent reaches 91% accuracy and 100% precision, with 100% recall on instruction injection, while in-place edits, such as entity swaps, remain hard to detect. Across three LLMs the Trust Index stays discriminative, with a Receiver Operating Characteristic Area Under the Curve (ROC-AUC) of 0.73 to 0.81; generation style matters more than model size, and per-LLM threshold calibration restores baseline competitive accuracy, whereas a weaker FEVER result shows that cross-dataset generalization requires domain-specific calibration. In a software-engineering use case, a secure-coding assistant over guidance from the Open Worldwide Application Security Project (OWASP) Top 10 and the Common Weakness Enumeration (CWE), the agent reliably blocks instruction injection of unsafe advice (F1 92%), while contradiction and subtle semantic weakening remain hard. Throughout, the agent measures detection of poisoned context before generation, not whether the LLM adopts the injected misinformation. We release the proposed approach, attack generator, and experimental artifacts at the link: https://github.com/GPT-Laboratory/TrustworthyRAG.",
+    "code_links": [
+      "https://github.com/GPT-Laboratory/TrustworthyRAG"
+    ],
+    "comment": "7 pages, 1 figure. Accepted for publication in the Main Research Track of the Twenty-First International Conference on Software Engineering Advances (ICSEA 2026)"
+  },
+  {
+    "title": "SQLite is Enough. Lexical, Semantic, and Hybrid Search with scrydb",
+    "authors": "Timo Breuer",
+    "published": "2026-08-25",
+    "arxiv_id": "2608.24060v1",
+    "url": "http://arxiv.org/abs/2608.24060v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.24060v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "This work introduces scrydb, a Python library that enables lexical, semantic, and hybrid search within SQLite. For lexical search, scrydb leverages SQLite's full-text search extension FTS5. Semantic search builds on sqlite-vec, a SQLite extension for vector search. Furthermore, the library allows users to rerank and fuse retrieval results to combine both lexical and semantic approaches, providing a lightweight solution for downstream tasks in information retrieval (IR) or agentic search. We evaluate scrydb on various IR benchmark datasets and demonstrate its effectiveness in text retrieval based on keyword matching, semantic similarity, and rank fusion. In addition, we provide insights into query latency and the trade-off between efficiency and effectiveness. scrydb is available under the MIT license.",
+    "code_links": [
+      "https://github.com/breuert/scrydb"
+    ],
+    "comment": "Software available at https://github.com/breuert/scrydb"
+  },
+  {
+    "title": "RAD: Rule-Augmented Relational Anomaly Detection",
+    "authors": "Noah Dahle, Anne Tumlin, Ngoc Tran, Xenofon Koutsoukos, Tyler Derr",
+    "published": "2026-08-24",
+    "arxiv_id": "2608.23468v1",
+    "url": "http://arxiv.org/abs/2608.23468v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.23468v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Anomaly detection is often applied to data stored in relational databases, yet most existing methods require flattening multiple tables into a single feature matrix. This flattening can obscure entity identity, schema structure, and multi-hop dependencies, limiting the detection of anomalies that depend on relational context rather than isolated feature values. Beyond preserving relational structure, relational anomaly detection raises an additional challenge: how to incorporate symbolic behavioral evidence into learned relational representations. To address these challenges, we study relational anomaly detection, where the goal is to identify anomalous entities or events in a multi-table database. We propose RAD, a rule-augmented relational anomaly detector that combines heterogeneous graph representation learning with refined symbolic rule signals. RAD derives candidate rules from random-forest paths over flattened summaries of the entities or events being scored, refines them into compact interpretable predicates, injects the resulting rule features into the graph model, and learns anomaly scores using reconstruction-based and pairwise-ranking supervision. To evaluate this setting, we introduce a relational anomaly detection benchmark spanning three settings: LANL cybersecurity event detection and two unexpected user-churn anomaly tasks derived from Amazon and H&M relational databases. Experiments show that RAD improves anomaly ranking over flattened tabular detectors and relational baselines under natural class imbalance, achieving the best average rank on AUROC and AUPRC across the benchmark. Ablations show that direct rule injection and ranking-based supervision are key contributors to performance, while edge reconstruction is not uniformly beneficial. Our code and data are available at: https://github.com/noahd15/RAD_RelationalAnomalyDetection.",
+    "code_links": [
+      "https://github.com/noahd15/RAD_RelationalAnomalyDetection"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Consistency Is Not Coherence: Orientation Search for Certified Alignments Between 4D Defence Upper Ontologies",
+    "authors": "Fabio Rovai",
+    "published": "2026-08-22",
+    "arxiv_id": "2608.21914v1",
+    "url": "http://arxiv.org/abs/2608.21914v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.21914v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "We align three upper ontologies that sit under UK and NATO defence data infrastructure: the Information Exchange Standard (IES), the Higher Quality Data Model (HQDM) that underpins the National Digital Twin, and Basic Formal Ontology (BFO). No public alignment between IES and HQDM existed. Promoting a hand-curated 17-correspondence crosswalk to OWL and reasoning over the complete merged ontologies with HermiT produces three results that we believe matter beyond this pair.",
+    "code_links": [
+      "https://github.com/fabio-rovai/ies-hqdm-crosswalk"
+    ],
+    "comment": "14 pages. Long paper accepted at the Ontology Matching 2026 workshop (OM 2026), co-located with ISWC 2026. Code and data: https://github.com/fabio-rovai/ies-hqdm-crosswalk"
+  },
+  {
+    "title": "EnSI-RAG: Entity-Structure-Indexed Retrieval-Augmented Generation for Long-Document Question Answering",
+    "authors": "Xuanyu Meng, Jiashuo Sun, Jash Rajesh Parekh, Jiawei Han",
+    "published": "2026-08-21",
+    "arxiv_id": "2608.21252v1",
+    "url": "http://arxiv.org/abs/2608.21252v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.21252v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Question answering (QA) over long, connected documents remains challenging because relevant evidence may span multiple entities and their relationships. Existing retrieval-augmented generation (RAG) methods typically index documents as raw chunks and retrieve them through embedding similarity. Their performance degrades when chunk boundaries separate entities from supporting evidence or when a question requires multi-hop reasoning across the corpus. We propose EnSI-RAG (Entity-Structure-Indexed Retrieval-Augmented Generation), a framework that constructs a query-independent, entity-centered index. Each record (e, t, k, v) represents an entity e, its type t, a semantic category k in {property, relation, aspect}, and a value v, while retaining links to the original source passages. At query time, these records serve as retrieval handles, and an LLM synthesizes the retrieved passages into the final answer. This design separates evidence localization from answer synthesis while preserving traceable source evidence. Across Loong and Oolong, EnSI-RAG achieves an average accuracy of 78.24. Relative to the published baseline scores used as references, this is 6.62 points higher, suggesting its effectiveness across these settings. The code is available at https://github.com/RamonMeng/EnSI-RAG.",
+    "code_links": [
+      "https://github.com/RamonMeng/EnSI-RAG"
+    ],
+    "comment": "21 pages, preprint"
+  },
+  {
+    "title": "One Success Isn't Reliability: Thinkingbox, a Sandbox and Benchmark for Agents in Stateful Business Workflows",
+    "authors": "Zhuochun Li, Youngmin Ko, Ali Keramati, Nicola Ferri, Susana Palmaz Lopez Pelaez, Liang-Chun Tsai, Calvin Wang, Mirco Milletari, Tuhin Kundu, Vadim Smolyakov, Kjartan Olafsson, Tommy Guy",
+    "published": "2026-08-20",
+    "arxiv_id": "2608.19741v1",
+    "url": "http://arxiv.org/abs/2608.19741v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.19741v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Recent agent benchmarks increasingly ground evaluation in executable environments, from code repair to web navigation, app APIs, and function calling. Yet completing consequential work beyond code requires more than producing a plausible response or valid tool call: agents must gather missing information over multiple turns, follow domain policies, coordinate dependent tools, and realize the correct persistent state transition without collateral effects. In this paper, we introduce Thinkingbox, a sandbox for tool-agent-user interaction that provides isolated MCP-compatible tool sessions, complete execution traces, and outcome evaluation over terminal backend state. Built on this sandbox, Thinkingbox-bench contains 507 policy-conditioned workflows across numerous scenarios, including retail, hospitality, auto insurance, neobank internal IT, and consulting IT/HR support. Each attempt is evaluated by task-specific executable checks that accept valid trajectories while rejecting wrong, missing, or extra effects; designated tasks additionally check required properties of the final response. Across proprietary and open-weight models, the strongest achieves 65.36% pass@1, but only 25.25% pass^20. Moreover, many failed trials show clean termination and valid state-changing actions, showing that response or tool-call-level signals are not clear proxies for end-to-end task completion. Thinkingbox-bench reveals a large gap between occasionally finding a successful trajectory and reliably completing stateful business tasks. We release both Thinkingbox and Thinkingbox-Bench: https://github.com/microsoft/thinkingbox",
+    "code_links": [
+      "https://github.com/microsoft/thinkingbox"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Quipu: A Governed Bitemporal Knowledge Graph Store",
+    "authors": "Steve Brown",
+    "published": "2026-08-17",
+    "arxiv_id": "2608.16813v1",
+    "url": "http://arxiv.org/abs/2608.16813v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.16813v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Agents now write knowledge graphs, but knowledge-graph stores still carry defaults set when humans curated them: accept writes now and clean later, keep one time axis or none, treat every writer's facts as equally trustworthy, and leave governance to dashboards and middleware. These four defaults are individually convenient and jointly untenable under agent workloads. We present Quipu, an embeddable store that inverts all four: no fact enters except through a gate whose predicates evaluate the pending post-state; data, trust labels, verdicts, and the rules themselves are bitemporal; named graphs are the unit of authority and trust, composed under a lattice whose one invariant is that composition never widens; and the governance specification $Σ$, the trace, and signed verdicts are facts in the store they govern, making the audit $T \\models Σ$ a query. We evaluate with Census, a deterministic multi-writer lifecycle whose single seeded run scores every research question against planted ground truth: the gated store ends with 0 of 6 planted defects versus 6 of 6 ungated; all 7 composition probes uphold the lattice contract; 50 of 50 satisfied verdicts re-derive faithfully as of their instant while all 50 would be misreported under a latest-only rule set; and the SARC reference checker agrees with the in-store audit verdict-for-verdict, differing only on coverage semantics. A recorded trace from a governed writer surfaces a live enforcement gap the audit names with its remediation. On DEMM-Bench, an external decision-evidence sufficiency benchmark, a content-only reading of the exported records answers all 512 property-level governance questions correctly with zero overclaim under all eight degradation conditions, while container-presence baselines overclaim on up to 87.5% of them -- and the run surfaced, and led us to close, a gap in what a denial's verdict attests.",
+    "code_links": [
+      "https://github.com/scbrown/quipu"
+    ],
+    "comment": "15 pages, 2 figures, 4 tables. Subtitle: \"Start strict: rethinking knowledge-graph defaults for agent-written knowledge\". Source and the benchmark/census/ artifacts behind every reported number are archived at doi:10.5281/zenodo.21878428 (concept DOI, resolves to newest release). Development repository: github.com/scbrown/quipu"
+  },
+  {
+    "title": "NeuRoute: Logit-Guided Neural Routing for Billion-Scale Vector Search with Sub-Hour Index Construction",
+    "authors": "Xingqiao Wang, Zi Wang, Xiaowei Xu",
+    "published": "2026-08-15",
+    "arxiv_id": "2608.15438v1",
+    "url": "http://arxiv.org/abs/2608.15438v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.15438v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Building approximate nearest neighbor (ANN) indexes at billion scale is often dominated by expensive global clustering or graph construction, making time-to-index a first-order systems concern. We present NeuRoute, a learned hashing index that turns short binary codes into an effective routing primitive for large-scale vector search. NeuRoute trains a lightweight neural network encoder with a selective similarity-preserving objective to produce well-balanced binary addresses. During construction, NeuRoute organizes vectors into buckets by their codes and performs bucket-local clustering in the encoder's low-dimensional space to form centroids. At query time, NeuRoute exploits the encoder logits as an uncertainty signal: it uses deviation-to-threshold scores to prioritize uncertain-bit perturbations for query-adaptive multi-bucket probing, scores bucket-local centroids by their distances to the query to form a compact candidate cluster set, and applies centroid-stage gating with heap-quality-driven early stopping to prune low-value clusters before exact refinement. On billion-scale benchmarks, NeuRoute achieves strong accuracy-throughput trade-offs with fast index construction: on BigANN-1B it reaches $90.3\\%$ Recall@10 at 2,414 QPS and is $1.7\\times$ faster than OPQ+IVF-PQ (refine) at comparable accuracy, while completing end-to-end training+construction in under an hour on both BigANN-1B and Deep1B-1B. These results show that logit-guided neural routing can make hashing competitive as a lightweight ANN indexing framework at billion scale. Source code and artifacts are available at https://github.com/XingqiaoWang/NeuRoute.",
+    "code_links": [
+      "https://github.com/XingqiaoWang/NeuRoute"
+    ],
+    "comment": "34 pages, 9 figures"
+  },
+  {
+    "title": "InSituANN: Revisiting IVF for PCIe-Efficient Billion-Scale Vector Search",
+    "authors": "Yuemeng Xu, Zongxi Liu, Junyu Long, Yiming Huang, Jiarui Guo, Yangyujia Wang, Jiachen Xu, Dongyuan Yu, Zongwei Lv, Tong Yang",
+    "published": "2026-08-09",
+    "arxiv_id": "2608.08751v1",
+    "url": "http://arxiv.org/abs/2608.08751v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.08751v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Approximate nearest neighbor search (ANNS) over billion-scale vector datasets has become a foundational operator for modern retrieval systems, powering large-scale recommendation, semantic search, and LLM/RAG workloads. Although GPUs offer massive parallelism and high-bandwidth memory for batched vector search, their limited VRAM capacity makes fully GPU-resident billion-scale indexes difficult to deploy. In CPU-GPU heterogeneous designs, keeping the base vectors in host memory avoids this capacity limit, but naively offloading fine search to the GPU introduces a new bottleneck: large volumes of base-vector data must be streamed over PCIe.\n  We present InSituANN, an IVF-based ANNS engine that enables billion-scale vector search on a single commodity GPU. InSituANN keeps original base vectors in host memory, performs fine search in situ, and uses the GPU for compact routing and optional pruning. As a result, query processing avoids PCIe transfers of high-dimensional base vectors while retaining the simplicity of IVF. Beyond query performance, we further design an ultra-fast IVF construction path for InSituANN. On SIFT-1B, InSituANN builds the IVF index in 5.2 minutes, about 350x faster than the measured 30.4-hour HNSW build. At matched recall on billion-scale datasets, InSituANN improves end-to-end throughput by 104.9x-4298.2x over the PCIe-bound Rummy baseline and by 2.4x-4.6x over DiskANN on SIFT-1B and DEEP-1B. Together with strong recall-throughput trade-offs and lower index space than graph-based alternatives, these gains make billion-scale retrieval practical on cost-efficient hardware.\n  We open-source InSituANN at https://github.com/mindtravel/InSituANN-OpenSource.",
+    "code_links": [
+      "https://github.com/mindtravel/InSituANN-OpenSource"
+    ],
+    "comment": "16 pages, 19 figures"
+  },
+  {
+    "title": "Beyond Tables: Doc2DB-Bench for Relationally Faithful Document-to-Database Construction",
+    "authors": "Zhuowen Liang, Zhengxuan Zhang, Jiayang Wang, Jiazhuo Chen, Nan Tang",
+    "published": "2026-08-09",
+    "arxiv_id": "2608.08459v1",
+    "url": "http://arxiv.org/abs/2608.08459v1",
+    "pdf_url": "https://arxiv.org/pdf/2608.08459v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Practical AI systems increasingly need to turn long, heterogeneous documents into queryable relational databases, not isolated spreadsheets. In domains such as finance, healthcare, education, transportation, and enterprise operations, downstream workflows rely on normalized schemas, entity identities, keys, cross-table relationships, and integrity constraints for analytics, compliance, auditing, and SQL-backed decision making. Existing Document-to-Table benchmarks are insufficient for this setting: flattening evidence into single tables can duplicate entities, obscure many-to-many relationships, create sparse records, and avoid testing whether extracted facts form a valid database instance. This creates an urgent need to evaluate document understanding as database construction rather than field extraction. We introduce Doc2DB-Bench, a benchmark for Document-to-Database construction, containing 203 long-document instances across 42 schemas and seven domain groups, with 117 entity tables, 132 relationship tables, 7,341 rows, and 41,935 cells. Built through a controllable DB-to-Doc synthesis pipeline and organized by a taxonomy of intra-table extraction and inter-table reasoning, the generated documents undergo authenticity verification, proving indistinguishable from real-world references. Doc2DB-Bench thus provides a testbed for reliable, auditable, and relationally faithful LLM-based data systems. The benchmark is publicly available at https://github.com/SetonLiang/Doc2DB-Bench.",
+    "code_links": [
+      "https://github.com/SetonLiang/Doc2DB-Bench"
+    ],
+    "comment": "24 pages, 13 figures, 7 tables"
+  }
+]
