@@ -1,0 +1,392 @@
+[
+  {
+    "title": "SPRIG: Semantic-ID-enhanced Paths for Knowledge Graph-based Generative Recommendation",
+    "authors": "Justin Hangoebl, Marta Moscati, Alessandro B. Melchiorre, Shah Nawaz, Markus Schedl",
+    "published": "2026-10-05",
+    "arxiv_id": "2610.06590v1",
+    "url": "http://arxiv.org/abs/2610.06590v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.06590v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems leveraging generative models often generate item identifiers directly, rather than ranking catalog items by a recommendation score. Recent work extends beyond pure sequential interaction signals by incorporating item content and structured relationships among items, with two distinct directions emerging. Semantic IDs (SIDs) enrich item representations by replacing opaque, randomly initialized embeddings with hierarchically quantized discrete codes derived from item content. Knowledge-graph (KG) path reasoning instead generates entity-relation paths that ground recommendations in structured relationships between items, attributes, and external entities, thereby enriching the relational context. These two lines have complementary limitations: SID-based models lack relational grounding, while KG-based generative recommenders still represent items as arbitrary, opaque tokens tied to large embedding tables, limiting parameter sharing and generalization. We propose SPRIG, a generative recommender that integrates content-derived SIDs into KG path reasoning. SPRIG is trained on information-rich KG paths that terminate in items represented as discrete, content-derived tokens, combining the advantages of both approaches. We evaluate SPRIG on movie and music recommendation datasets against baselines spanning sequential language models, KG-augmented methods, and SID-based approaches. Our results show that SPRIG achieves competitive performance over prior generative models while using fewer parameters and a lower compute cost. Code: https://github.com/justinhangoebl/semantic-id-knowledge-graph-recommender",
+    "code_links": [
+      "https://github.com/justinhangoebl/semantic-id-knowledge-graph-recommender"
+    ],
+    "comment": "Accepted as a short paper at CIKM 2026. 5 pages, 1 figure, 2 tables"
+  },
+  {
+    "title": "Constraint-Aware Conversational Job Recommendation in Code-Mixed Low-Resource Settings",
+    "authors": "Md Arman Hossain, Mubashir Jawad, Fariha Khandaker Moon, Sonia Binte Siraj, Masfiqur Rahaman, Raihan ul Islam, Ahmed Wasif Reza, Nafis Sadeq",
+    "published": "2026-10-05",
+    "arxiv_id": "2610.05787v1",
+    "url": "http://arxiv.org/abs/2610.05787v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.05787v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Conversational job recommendation requires jointly modeling semantic relevance, user preferences, eligibility requirements, and the noisy language used in real-world career discussions. These challenges are especially pronounced in low-resource, code-mixed settings, where strict constraint matching can incorrectly eliminate otherwise suitable jobs. We introduce JobCCC, a conversational job recommendation benchmark for Bangladesh comprising 22,410 structured job postings and 988 multi-turn career-advice dialogues derived from regional Reddit communities. Each dialogue is annotated with evolving seeker preferences and linked to a ground-truth job, and is evaluated in semantically equivalent English and Romanized Bangla--English variants. We compare sparse BM25 retrieval, multilingual dense retrieval, and their hard-constraint-filtered counterparts against Weighted Soft-Constraint-Aware Ranking (W-SCAR), our multi-criteria ranking framework that combines lexical relevance, semantic relevance, and graded utilities for experience, location, education, and salary using the Technique for Order Preference by Similarity to Ideal Solution (TOPSIS). Experiments reveal that strict filtering consistently degrades retrieval because incomplete extraction and brittle attribute matching irreversibly remove relevant jobs. W-SCAR avoids destructive pruning and achieves more balanced performance across the two language conditions, obtaining 37.37% and 38.43% Hit@10 on English and Banglish, respectively. The code and dataset are publicly available at \\href{https://github.com/M-Jawad01/Conversational-Job-Recommendation-System-LLM}{GitHub} and \\href{https://huggingface.co/datasets/Armans33115/JobCCC-Conversational-Job-Recommendation-Bangladesh}{Hugging Face}, respectively.",
+    "code_links": [
+      "https://github.com/M-Jawad01/Conversational-Job-Recommendation-System-LLM"
+    ],
+    "comment": "Submitted to WSDM 2027"
+  },
+  {
+    "title": "Beyond Semantic Similarity: Performance and Costs of Agentic Retrieval for Complex Tasks",
+    "authors": "Reza Esfandiarpoor, Radek Osmulski, Yauhen Babakhin, Gabriel de Souza P. Moreira, Oliver Holworthy, Jie He, Ronay Ak, Jiarui Cai, Ryan Chesler, Bo Liu, Even Oldridge",
+    "published": "2026-10-05",
+    "arxiv_id": "2610.05750v1",
+    "url": "http://arxiv.org/abs/2610.05750v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.05750v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Modern information systems, including many agentic workflows, use dense retrieval to explore large amounts of unstructured data. However, dense retrieval relies on surface-level semantic similarity, which is insufficient for increasingly complex search applications. Here, we investigate agentic retrieval that combines the reasoning capabilities of Large Language Models (LLMs) with the efficient corpus exploration of retrievers in a ReAct agentic loop to solve complex retrieval tasks. In our experiments, we show that agentic retrieval is more effective than standard retrieval, improving nDCG@10 by 8.7 points using the same embedding model. Moreover, while specialized retrieval methods struggle on out-of-domain tasks, agentic retrieval is highly generalizable: the same pipeline achieves competitive results on both the ViDoRe v3 and BRIGHT leaderboards. However, this improvement comes at a cost. On average, agentic retrieval takes 107.4 seconds, compared to 0.67 seconds for standard retrieval, and consumes 764.1K input and 5.8K output tokens per query. In short, our study demonstrates the effectiveness of agentic retrieval in modern data systems and motivates future work on more cost-efficient retrieval agents for large-scale deployment.",
+    "code_links": [
+      "https://github.com/NVIDIA/NeMo-Retriever"
+    ],
+    "comment": "Code: https://github.com/NVIDIA/NeMo-Retriever/tree/main/retrieval-bench"
+  },
+  {
+    "title": "Cut Binary Cross Entropy: Efficient Large-Vocabulary Loss and Gradient Kernels for Sequential Recommendation",
+    "authors": "Yaoyiran Li, Haowen Ning, Mohamed Hammad",
+    "published": "2026-10-04",
+    "arxiv_id": "2610.05559v1",
+    "url": "http://arxiv.org/abs/2610.05559v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.05559v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Industrial sequential recommender systems operate over massive item catalogs (e.g., 10^5--10^7 items). Multi-label recommendation models are trained with Binary Cross-Entropy (BCE) loss over the full vocabulary, but standard BCE materializes a dense [B, N, V] logits tensor in High Bandwidth Memory (HBM), incurring prohibitive $O(BNV)$ memory and fatal Out-Of-Memory (OOM) errors. While chunked loss optimizations exist for Softmax Cross-Entropy in LLMs, large-scale multi-label BCE optimization remains unexplored across deep learning ecosystems.\n  We propose CutBCE, an exact, hardware-accelerated BCE loss and gradient operator implemented in JAX and Pallas for large-vocabulary workloads. CutBCE introduces (1) an exact fused reformulation evaluating dense background loss and sparse target corrections; (2) a custom Vector-Jacobian Product (VJP) with a dedicated Pallas TPU backward kernel computing logit tiles on-chip in both passes so logits and their gradients never reside in HBM; (3) dynamic VMEM budgeting and sharding-aware collective hoisting for distributed meshes; and (4) count-based zero-overhead training metrics. On single-chip TPU v5e/v6e mini-benchmarks, CutBCE eliminates OOM errors with up to 91.9% speedup. On 8-chip TPU slice training for multi-label SASRec with 876k items (Yambda-50M), CutBCE reduces peak HBM by 65.7% (>14 GiB saved per chip) and increases training speed by 225.9% with comparable accuracy. CutBCE is open-sourced at https://github.com/AI-Hypercomputer/RecML/blob/main/recml/core/ops/binary_cross_entropy_ops.py.",
+    "code_links": [
+      "https://github.com/AI-Hypercomputer/RecML"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Benchmarking Literature Retrieval for a Model Organism: A Dictyostelium Case Study",
+    "authors": "Yun Wang, Gad Shaulsky, Tomaž Curk, Blaž Zupan",
+    "published": "2026-10-02",
+    "arxiv_id": "2610.03130v1",
+    "url": "http://arxiv.org/abs/2610.03130v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.03130v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Biological literature retrieval systems are often developed and evaluated using broad biomedical corpora and general-purpose search tasks. However, many curated knowledge bases operate in narrower model-organism domains, where the literature is sparse and terminology is organism-specific. We introduce a retrieval benchmark from dictyBase for Dictyostelium, a model organism in cell and developmental biology. The benchmark consists of curator-generated biological queries linked to PubMed-indexed articles, together with structured gene annotations. Using this benchmark, we study three factors in niche biological retrieval: cross-encoder reranking, gene-aware query expansion, and abstract-only versus full-text retrieval. We report that reranking and gene-aware query expansion improve retrieval selectively: reranking is most useful when the model is well suited to biological evidence matching, whereas curated annotations help clarify compact biological queries by reducing vocabulary mismatch. Full-text chunks substantially improve retrieval when abstracts omit supporting evidence, increasing both candidate recall and top-rank performance, although these cases are harder than queries supported by abstracts. Data and code are publicly available at https://github.com/fulaibaowang/dictycite, and the benchmark dataset is additionally archived on Zenodo.",
+    "code_links": [
+      "https://github.com/fulaibaowang/dictycite"
+    ],
+    "comment": "15 pages, 5 figures. Submitted version (before peer review) of a paper accepted at Discovery Science 2026 (DS 2026); to appear in the Springer proceedings. Code and data: https://github.com/fulaibaowang/dictycite ; dataset: https://doi.org/10.5281/zenodo.20308282"
+  },
+  {
+    "title": "When the Label Ignores the Request: Auditing Policy-Selected Targets in Synthetic Conversational Music Recommendation",
+    "authors": "Sanjeev Suresh",
+    "published": "2026-09-30",
+    "arxiv_id": "2609.39696v1",
+    "url": "http://arxiv.org/abs/2609.39696v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.39696v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Synthetic dialogues generated by LLM pipelines now serve as complete conversational-recommendation benchmarks: an LLM listener talks to an LLM recommender, and the track logged next in the conversation becomes the official label for each turn. These policy-selected labels make large-scale evaluation reproducible, but they are proxies for what the simulated user asked. We audit the one place where label and request are directly comparable: turns where the user asks for an exact song by name. In the RecSys Challenge 2026 TalkPlay benchmark, using visible dialogue and catalog metadata alone, we find that the official label contradicts the user's exact-song request in half of the audited development turns. This matters beyond one benchmark: naming the desired item is the dominant intent in real music search, where deployed systems avoid substituting an alternative for an exactly named item, on the premise that it costs satisfaction. A small training-time supplement closes most of the gap: adding catalog-resolved request-satisfying targets to a small fraction of training turns yields a 53.3% relative gain in nDCG@20 on the 43 conflict turns while leaving the official metric intact, verified against a matched control that detects the same requests but trains only on official labels.",
+    "code_links": [
+      "https://github.com/Sanjeev-S/recsys2026-request-audit"
+    ],
+    "comment": "6 pages, 2 tables. Camera-ready version (CC BY 4.0). RecSys Challenge 2026 Workshop at ACM RecSys 2026, Minneapolis, October 2, 2026. Code and audit artifacts: https://github.com/Sanjeev-S/recsys2026-request-audit"
+  },
+  {
+    "title": "Residual Trajectory Distillation for Generative Retrieval",
+    "authors": "Weihao Shen, Wei Chen, Fuwei Zhang, Guojun Liu, Qingsong Hua, Wei Lin, Fuzhen Zhuang",
+    "published": "2026-09-30",
+    "arxiv_id": "2609.39319v1",
+    "url": "http://arxiv.org/abs/2609.39319v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.39319v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative retrieval has emerged as a general retrieval paradigm, representing items with discrete Semantic IDs (SIDs) and retrieving them through autoregressive identifier generation. When SIDs are constructed with residual quantization (RQ), standard retrieval training supervises only the selected codes and discards the residual trajectories that produce them. The same hard code can nevertheless arise from different preferences over competing codewords, while the residual trajectory also contains information about subsequent quantization decisions. As a result, hard SID supervision collapses distinct quantization behaviors into identical targets and leaves information available during indexing unused in retrieval training. We introduce ResTD, a Residual Trajectory Distillation framework that transfers this discarded indexing information into retrieval training. Treating the frozen RQ indexer as a process teacher, it distills residual-induced codeword preferences into SID-decoding states. This supervision recovers distinctions hidden by hard assignments and allows earlier decoder states to capture information about subsequent quantization decisions before the corresponding SID suffix is generated. In this way, richer information from SID construction is incorporated into retrieval learning while preserving the original retrieval index and inference procedure. Experiments on multilingual e-commerce retrieval show consistent improvements over strong baselines and matched training controls. Controlled comparisons show that residual-derived targets outperform the tested codebook-only soft targets. Representation probes further show that future codebook preferences become more recoverable from earlier decoder states. ResTD can also be readily extended beyond retrieval to generative recommendation. Code is available at: https://github.com/Nevaeh7/iclr2027_ResTD.git.",
+    "code_links": [
+      "https://github.com/Nevaeh7/iclr2027_ResTD"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Learning Multiresolution Relevance for Hierarchical Generative Retrieval",
+    "authors": "Weihao Shen, Wei Chen, Fuwei Zhang, Guojun Liu, Qingsong Hua, Wei Lin, Fuzhen Zhuang",
+    "published": "2026-09-30",
+    "arxiv_id": "2609.39312v1",
+    "url": "http://arxiv.org/abs/2609.39312v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.39312v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative retrieval with semantic identifiers (SIDs) makes successive decisions over a document hierarchy. Relevant documents for the same query may share coarse prefixes and diverge at finer depths, with branching patterns varying across queries. These paths reveal how relevance is distributed across successive refinements, yet standard full-SID supervision treats them as separate training targets. To make this allocation explicit, we formulate multiresolution relevance as consistent conditional distributions induced by a single document-level relevance measure across the SID hierarchy. We introduce \\textbf{RARS}, \\textbf{R}esolution-\\textbf{A}ligned \\textbf{R}elevance \\textbf{S}upervision, which uses the resulting refinement-level distributions to supervise a shared query representation. RARS aggregates document relevance over prefixes and trains a prefix-conditioned predictor to allocate relevance among sibling branches. All relevance-bearing children participate in local competition, and each local loss is weighted by the relevance mass reaching its parent. This objective trains the query encoder to capture both the coarse structure shared by relevant documents and their finer branch allocations. The predictor is discarded after training, preserving standard autoregressive retrieval at inference. Experiments on three multilingual ESCI locales show consistent improvements over matched full-SID training under autoregressive decoding. RARS also outperforms grouped soft-target, decoder soft-target, and sampled-tree supervision under a common retrieval rule. The gains persist across alternative identifier structures and relevance definitions. Code is available at: https://github.com/Nevaeh7/RARS",
+    "code_links": [
+      "https://github.com/Nevaeh7/RARS"
+    ],
+    "comment": null
+  },
+  {
+    "title": "O-Funnel: Lossless Structural Capture and Requirement-Driven Extraction from Drifting, Heterogeneous Documents",
+    "authors": "Osama Mustafa",
+    "published": "2026-09-30",
+    "arxiv_id": "2609.39209v1",
+    "url": "http://arxiv.org/abs/2609.39209v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.39209v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DB",
+    "abstract": "Pulling a fixed set of fields out of documents that arrive in many formats and under drifting schemas is usually done with hand-written byte patterns, which break whenever a key is renamed, a value is reformatted, or a lookalike value appears first. We argue the cause is structural: one pattern must both describe the value and locate it among its surroundings. O-Funnel separates the two. It transcribes any XML, JSON, CSV, HTML or key-value text document into one typed tree over five constructors, gated by an oracle that rejects any capture that does not reconstruct its source. Each needed field is declared in the tree's own terms and located by fusing independent evidence (key, path, value shape, synonym, key spelling, record neighborhood, value profile), so the best-supported node wins and a missing field is reported with a reason. Data no requirement claims becomes residue that a funnel traces back to the requirements to learn new key aliases. On 34,989 real PubMed records, O-Funnel matches a hand-written parser (F1 1.00). After a five-element schema rename, the parser's regular expressions fall to 0.20 while O-Funnel stays at 1.00, with every capture verified complete. On constructed suites that isolate regex failure modes it raises F1 from 0.43 to 1.00, and from 0.80 to 0.94 after self-improvement; on held-out schema-matching instances it is competitive with classical matchers without training. O-Funnel is a dependency-free Python library (pip install ofunnel).",
+    "code_links": [
+      "https://github.com/osamaa-mustafa/ofunnel"
+    ],
+    "comment": "21 pages, 3 figures. Code and benchmarks: https://github.com/osamaa-mustafa/ofunnel"
+  },
+  {
+    "title": "RouteRec: Behavior-Guided Sparse Routing for Sequential Recommendation",
+    "authors": "Junyeong Song, Jaemin Yoo",
+    "published": "2026-09-30",
+    "arxiv_id": "2609.39007v1",
+    "url": "http://arxiv.org/abs/2609.39007v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.39007v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Sessionized interaction histories contain behavioral patterns that can improve sequential recommendation. However, existing models process all sessions through the same parameterized blocks, regardless of their behavioral differences. Mixture of Experts (MoE) enables conditional computation, but it leaves open what should guide expert allocation. We propose RouteRec, a sequential recommender that uses observed session behavior as the routing criterion. RouteRec summarizes four types of behavioral evidence from sessionized histories: interaction tempo, item-group focus, repetition and carryover, and popularity tendency. It uses these cues to route computation at macro, mid, and micro scopes. Cue-derived scores first select expert groups; within each selected group, the current backbone state then refines expert selection. Across six public datasets and 18 dataset-metric combinations, RouteRec ranks first in 12 and second in three, yielding the best overall average rank of 1.61 compared with 4.11 for the next-best baseline. Additional analyses suggest that the behavioral cues guide expert allocation beyond added capacity and produce routing patterns aligned with observed behavior. Our code is available at https://github.com/jy1559/RouteRec",
+    "code_links": [
+      "https://github.com/jy1559/RouteRec"
+    ],
+    "comment": "Accepted at CIKM 2026. 12 pages, 12 figures, 7 tables"
+  },
+  {
+    "title": "SkillSeek: Revisiting Agent Skill Retrieval at Marketplace Scale",
+    "authors": "Guanqun Yang, Wenlong Zhang, Tian Shi, Ping Wang",
+    "published": "2026-09-30",
+    "arxiv_id": "2609.38822v1",
+    "url": "http://arxiv.org/abs/2609.38822v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.38822v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Anthropic's Agent Skills package reusable procedural know-how for an LLM agent into SKILL.md directories, and open-source aggregations have grown past 230,000 skills, making selection rather than authoring the bottleneck. The standing answer in the literature outsources selection to the agent itself: an LLM-mediated retrieval loop that rewrites queries and refines candidates inside the agent's decision loop, paying LLM tokens on every task. We present SkillSeek, an open-source two-stage skill retriever built from the standard IR recipe (a BGE-base bi-encoder feeding a small cross-encoder, exposed over MCP). Across a $4 \\times 11$ grid of pool, backbone, and method on the 89-task SkillsBench benchmark, SkillSeek reaches observed parity with the LLM-mediated loop of Liu et al. at essentially no extra cost: plain bm25 alone records a pass rate at or above their refined loop on three of four settings, and a small cross-encoder covers the remaining difference on the fourth. A first-stage recall ceiling explains the pattern, and total per-trial spend drops from USD 51.30 to USD 27.54 (within fifty cents of the no-skill baseline). Under the SkillsBench tasks and OpenHands harness we tested, this positions the standard IR recipe as a strong default for agent-skill retrieval, with LLM-mediated alternatives a natural fit for cases where deterministic methods fall short.",
+    "code_links": [
+      "https://github.com/guanqun-yang/SkillSeek"
+    ],
+    "comment": "Accepted at AACL-IJCNLP 2026. Code at https://github.com/guanqun-yang/SkillSeek"
+  },
+  {
+    "title": "PatchHolmes: Agentic Patch Retrieval via Listwise Selection",
+    "authors": "Guanqun Yang, Yingming Zhou, Jiangrui Zheng, Shudong Hao, Xueqing Liu",
+    "published": "2026-09-30",
+    "arxiv_id": "2609.38807v1",
+    "url": "http://arxiv.org/abs/2609.38807v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.38807v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Patch retrieval, the task of finding the commit that fixes a known vulnerability, is the foundation of vulnerability management workflows, yet 60% to 63% of CVEs in the major advisory databases lack a patch link. We present PatchHolmes, a two-phase patch retrieval system that pairs a hybrid first-stage retriever with an agentic second-stage inspection loop. Unlike pointwise prior work that scores each candidate independently, the Phase 2 agent reads the top-100 listwise: it sees the full candidate list at once and selectively reads 3 to 10 commits through four budgeted tools before submitting a single best commit. On GitHubAD, PatchHolmes beats the pointwise binary classifier Favia by 25.34% Recall@1 and the retrieve-and-CoT baseline IRCoT by 31.40%, at one agent conversation per CVE versus Favia's ten; with the candidate set held identical, the agent adds 27.32% Recall@1 over taking the retriever's top candidate, and the same agent, transferred unchanged to PatchFinder_top10, lifts Recall@1 from PatchFinder's own top-1 pick (24.28%) to 39.86%. Swapping the LLM backbone within the Qwen family changes Recall@1 by under 1%, and a second model family (gpt-oss) stays far above the no-agent floor, so the gain comes from the listwise agent loop; the entire system runs on a frozen open-weight model over a local Git repository, without fine-tuning or external search APIs.",
+    "code_links": [
+      "https://github.com/Aizhouym/PatchHolmes"
+    ],
+    "comment": "Accepted at AACL-IJCNLP 2026. Code at https://github.com/Aizhouym/PatchHolmes"
+  },
+  {
+    "title": "Doc2LoRA Provides Decodable Representations of Scientific Ideas",
+    "authors": "Chand Sahil Mansuri, Joel Zachariah, Sadamori Kojaku",
+    "published": "2026-09-29",
+    "arxiv_id": "2609.38374v1",
+    "url": "http://arxiv.org/abs/2609.38374v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.38374v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Representing scientific papers as points in a space lets us search for similar papers and inquire about how fields relate to one another and drive innovation. Beyond search, the vector space of papers invites generation: mixing papers through simple vector operations creates new points, mirroring combinatorial novelty, the recombination of existing ideas into new ones. However, a mixed point often represents an idea no paper has yet realized, with no papers nearby to identify the idea. We propose representing each paper by a LoRA adapter generated by the Doc-to-LoRA hypernetwork. Every point in the space, including mixtures, thus represents a large language model (LLM) open to questions and instructions in natural language. On papers from the American Physical Society (APS), we instruct the LLM at the average of each subfield to name the field in a few words and obtain labels closer to the official names than the labels of five baselines, as judged by word overlap and a panel of five LLM judges. We also ask the LLMs at points between two APS papers to write an abstract and obtain descriptions shifting from one paper to the other in step with the mixing weight. While Doc-to-LoRA is trained for generation, a small invertible transform makes the embeddings competitive for search, on par with SPECTER2 and EmbeddingGemma and close to SBERT. Because the transform is invertible, every point in the transformed space still maps back to an LLM. The embeddings thus serve both search and generation, enabling researchers to question the idea at any point in the space as a starting point for generating new ideas.",
+    "code_links": [
+      "https://github.com/skojaku/doc2lora-embedding"
+    ],
+    "comment": "32 pages, 4 figures, 12 tables. Code: https://github.com/skojaku/doc2lora-embedding"
+  },
+  {
+    "title": "Effective Dense Retrieval using Only In-Context Examples",
+    "authors": "Nour Jedidi, Abdul Basit Ali, Hang Li, Jimmy Lin",
+    "published": "2026-09-29",
+    "arxiv_id": "2609.38099v1",
+    "url": "http://arxiv.org/abs/2609.38099v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.38099v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Turning decoder-only large language models (LLMs) into strong dense retrievers typically requires some form of retriever training. In this paper, we ask whether LLMs can instead be prompted to produce effective representations for dense retrieval given only a few in-context examples. To answer this, we introduce RICE (Representations from In-Context Examples), a simple \"training-free\" approach that extracts high-quality dense representations from LLMs. To do so, RICE conditions the LLM on examples that provide a shared context for query and document encoding. Our results demonstrate that RICE embeddings can substantially improve the accuracy of prompt-based LLM embeddings, establishing it as a simple method to build LLM-based dense retrievers that do not require training. We release our code at https://github.com/nourj98/RICE.",
+    "code_links": [
+      "https://github.com/nourj98/RICE"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Argo-Bench: Evaluating Data Agents on Enterprise-Scale Workflows",
+    "authors": "Gabriel Tomitsuka, Arman Raayatsanati, Emma Xing, Duke Gand, Joseph J Ma",
+    "published": "2026-10-01",
+    "arxiv_id": "2610.02122v1",
+    "url": "http://arxiv.org/abs/2610.02122v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.02122v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Real-world enterprise data science and analytics workflows require reasoning across dozens of tables, performing statistical analyses, and acting on the results. Established text-to-SQL benchmarks evaluate query generation alone, and audits have found their answer keys frequently wrong. Because real enterprise warehouses are too sensitive to release, these benchmarks are built on public datasets where a business event fits in a single table. We introduce Argo-Bench, an evaluation framework comprising 210 data science and analytics tasks. Drawing on public data, peer-reviewed industry literature, and regulatory filings, we simulate a food delivery platform in New York City at true scale, with 81 million orders in 2024, grounded economics, fraud patterns, and marketplace incentives. We export this world to an ERP warehouse of 235 tables and 7.5 billion rows, modeled on the Oracle E-Business Suite schema. The simulator's ground-truth state is withheld from the warehouse the agent sees, so tasks require reconstructing facts by navigating the warehouse before acting on them. Argo-Bench goes beyond text-to-SQL: the agent files actions such as banning fraudulent accounts, allocating courier incentive budgets, or issuing back pay, and the grader scores each by its consequences in the simulator. Every task has an executable reference solution that demonstrates solvability using only the warehouse. The strongest of 14 frontier and open-weight models scores 95 or higher on only 34.8% of tasks and averages 59.5 points. We hope Argo-Bench drives progress toward agents that understand, navigate, and act within real data environments.",
+    "code_links": [
+      "https://github.com/TextQLLabs/Argo-Bench"
+    ],
+    "comment": "41 pages, 4 figures, 18 tables. Code: https://github.com/TextQLLabs/Argo-Bench. Data: https://huggingface.co/datasets/textql/Argo-Bench. Website: https://argo-bench.com"
+  },
+  {
+    "title": "A High-Density EEG Dataset for Stimulus-Driven Auditory Attention",
+    "authors": "Ruofan Yan, Na Lu, Shu Peng, Wenlong You, Zhige Chen, Yuxuan Yan, Yan Liu, Kay Chen Tan, Jibin Wu",
+    "published": "2026-10-01",
+    "arxiv_id": "2610.01303v1",
+    "url": "http://arxiv.org/abs/2610.01303v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.01303v1",
+    "category": "databases",
+    "primary_category": "q-bio.NC",
+    "abstract": "Stimulus-driven auditory attention determines which sound gains priority when multiple sources compete without an explicit listening goal, yet most computational studies focus either on acoustic salience or on decoding predefined attended targets. This study investigates instruction-free auditory competition using the Stimulus-driven Auditory Attention (SAAD) paradigm and develops a neurophysiologically informed framework that integrates stimulus-derived sound priority with trial-specific EEG evidence. Behavioral analysis using a Bradley--Terry model showed that sound priority estimated from previous competitions generalized to unseen sound pairings, improving held-out prediction from an AUC of 0.577 to 0.718. EEG analysis further revealed mid-to-late centro-temporal lateralization associated with the reported selection side, with neural information remaining predictive beyond acoustic asymmetry. Guided by these findings, the proposed model first estimates a latent priority for each competing sound and forms relative stimulus evidence from their difference. A multi-scale EEG pathway with complementary signed and power-based readouts then extracts trial-specific neural evidence, which is incorporated through gated decision-level integration. The framework is evaluated using mirror-constrained and pairing-held-out protocols, together with representative acoustic, EEG, multimodal baselines, and systematic ablations. The results support a computational account in which spontaneous auditory selection reflects the interaction between generalizable stimulus priority and trial-specific neural variability.",
+    "code_links": [
+      "https://github.com/yanruofan628/saad-preprocessing"
+    ],
+    "comment": "12 pages, 5 figures, 3 tables.Dataset available at at https://zenodo.org/records/20557225. Code available at https://github.com/yanruofan628/saad-preprocessing"
+  },
+  {
+    "title": "Fixing the Fixpoint: A Formal Theory of Convergence Detection for Incremental Recursive Computation",
+    "authors": "Chengxi Yang, Tej Chajed, Thomas Reps",
+    "published": "2026-09-30",
+    "arxiv_id": "2610.00530v1",
+    "url": "http://arxiv.org/abs/2610.00530v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.00530v1",
+    "category": "databases",
+    "primary_category": "cs.PL",
+    "abstract": "Modern incremental computation theories like DBSP have enabled efficient incrementalization of general recursive computations. To do so, they require a runtime Fixpoint Detection (FPD) mechanism to detect whether an iterative computation has reached the fixpoint and thus should terminate. However, we show that the commonly suggested \"FirstZero\" strategy is unsound even in naturally arising cases, and that exact FPD is impossible for arbitrary DBSP circuits with expressive primitive nodes. This issue reveals a fundamental gap between the mathematical specification and implementations of such theories. To fill this gap, using DBSP as a core calculus, we develop a formal theory of convergence detection. Within this theory, we define internal convergence (IntConv) as a declarative criterion corresponding to the internal-state-stability strategy used by practical implementations, and prove that IntConv is a sufficient condition for external convergence. We then define the state fixpoint (StFP) predicate and a sound and complete StFP detector. Combining the StFP detector with fixed-input and zero-output checks yields a sound and complete IntConv detector. Moreover, for a large class of useful circuits (programs) including Datalog queries, nested while queries, and their incrementally optimized versions, we show that IntConv is not only sound but also complete (meaning any convergence in the theory implies the convergence in our criterion). As a result, our theory provides semantic guarantees for convergence detection on all these circuits. Our results are formally verified in Lean, with the formalization available at https://github.com/Arcadia-Y/fixing-the-fixpoint/.",
+    "code_links": [
+      "https://github.com/Arcadia-Y/fixing-the-fixpoint"
+    ],
+    "comment": null
+  },
+  {
+    "title": "O-Funnel: Lossless Structural Capture and Requirement-Driven Extraction from Drifting, Heterogeneous Documents",
+    "authors": "Osama Mustafa",
+    "published": "2026-09-30",
+    "arxiv_id": "2609.39209v1",
+    "url": "http://arxiv.org/abs/2609.39209v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.39209v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Pulling a fixed set of fields out of documents that arrive in many formats and under drifting schemas is usually done with hand-written byte patterns, which break whenever a key is renamed, a value is reformatted, or a lookalike value appears first. We argue the cause is structural: one pattern must both describe the value and locate it among its surroundings. O-Funnel separates the two. It transcribes any XML, JSON, CSV, HTML or key-value text document into one typed tree over five constructors, gated by an oracle that rejects any capture that does not reconstruct its source. Each needed field is declared in the tree's own terms and located by fusing independent evidence (key, path, value shape, synonym, key spelling, record neighborhood, value profile), so the best-supported node wins and a missing field is reported with a reason. Data no requirement claims becomes residue that a funnel traces back to the requirements to learn new key aliases. On 34,989 real PubMed records, O-Funnel matches a hand-written parser (F1 1.00). After a five-element schema rename, the parser's regular expressions fall to 0.20 while O-Funnel stays at 1.00, with every capture verified complete. On constructed suites that isolate regex failure modes it raises F1 from 0.43 to 1.00, and from 0.80 to 0.94 after self-improvement; on held-out schema-matching instances it is competitive with classical matchers without training. O-Funnel is a dependency-free Python library (pip install ofunnel).",
+    "code_links": [
+      "https://github.com/osamaa-mustafa/ofunnel"
+    ],
+    "comment": "21 pages, 3 figures. Code and benchmarks: https://github.com/osamaa-mustafa/ofunnel"
+  },
+  {
+    "title": "Independent Verification Paths Are Not Independent: A Case Study of Common-Mode Failure in a Satellite Catalogue Pipeline",
+    "authors": "Fabio Rovai",
+    "published": "2026-09-29",
+    "arxiv_id": "2609.37603v1",
+    "url": "http://arxiv.org/abs/2609.37603v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.37603v1",
+    "category": "databases",
+    "primary_category": "cs.SE",
+    "abstract": "A common safeguard for a data pipeline is redundant computation: derive each published number by two routes built on different technology and refuse to exit when they disagree. We report one such gate failing, in a cross-catalogue integrity study of two open registers of Earth-orbiting objects. A gate comparing a set-based Python path with SPARQL queries over the emitted RDF graph printed ALL CROSS-CHECKS AGREE on seven counts. Three were wrong, one overstated more than fourfold (932 against 220). Both paths imported the same constants, which encoded a misreading of the source's status vocabulary, so the error was common-mode and the gate could not see it. We give the mechanism, an object-level ledger reconciling every figure, and three checks that go back to the source's documentation, measured on the defective code and on its correction. We then checked that correction against each object's phase history, held in a source file the pipeline never read. The correction was also wrong: 42 of its 261 disagreements are artefacts, and none of our three checks flagged them. Finally, in a controlled replication with three pinned models and tools disabled, 72 of 75 paths generated on request as independent checks computed the defective count, 29 of 30 even when the prompt carried the source's own definitions of the codes. The evidence is one pipeline and one defect family. Within it, redundancy verified implementation, and the errors that reached publication were errors of meaning.",
+    "code_links": [
+      "https://github.com/fabio-rovai/space-object-register-ontology"
+    ],
+    "comment": "Accepted at the AI for Science workshop (NeurIPS 2026). Code, prompts, raw model outputs and per-trial records: https://github.com/fabio-rovai/space-object-register-ontology (paper/gates/), archived at https://doi.org/10.5281/zenodo.22002834"
+  },
+  {
+    "title": "Epistemic Typing as a PostgreSQL Table Access Method: Adversarial Conflict Resolution Under Confidence Forgery and Sybil Coordination",
+    "authors": "Venkata Maguluri, Swapna Kommuri, Kritica Sinha, Ashish Sood",
+    "published": "2026-09-29",
+    "arxiv_id": "2609.36795v1",
+    "url": "http://arxiv.org/abs/2609.36795v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.36795v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "We describe KNDB, a PostgreSQL 18 table access method (TAM) that types every row with an engine-assigned epistemic kind (MEASURED, INFERRED, or DERIVED) and resolves per-slot conflicts inside every write-time heapam callback. Rows land as ordinary heap tuples; seven of the 44 TAM callbacks are overridden (tuple_insert, multi_insert, tuple_update, tuple_delete, tuple_insert_speculative, tuple_complete_speculative, relation_toast_am), the other 37 delegate to heap; we provide a completeness argument over the interface as a paper artefact. This paper reports the engineering behind that decision and the adversarial evaluation that motivated it. On a confidence-forgery workload where an attacker asserts INFERRED writes with confidence in [0.95,1.0] against honest MEASURED writes with confidence in [0.5,0.9], KNDB beats a confidence-only baseline by 63 percentage points on the Book-Author fusion dataset and 92.7 points on the Zheng crowdsourcing dataset. Both wins are proven load-bearing on the kind axis by a source-rebuild disable-and-test in which the lattice is neutralised and the win vanishes. Against four truth-discovery baselines (TruthFinder, CRH, CATD, ACCU) reimplemented from the original equations and validated to within 0.3 percentage points of the published numbers, KNDB is competitive below a per-dataset density-saturation cell and dominant at or above it. We formalise the cell as k* ~ rho_alg * h_top, where h_top is per-slot top honest surface-form support, and validate the prediction within +/-20% on Book-Author and +/-30% on Zheng. Because the kind axis is assigned by the engine from independent metadata and cannot be forged at write time, KNDB's k* is unbounded. The paper is honest about where KNDB loses: CRH and ACCU outperform KNDB below saturation on Zheng, and KNDB scores zero on three temporal knowledge-editing benchmarks whose ground truth is last-writer-wins.",
+    "code_links": [
+      "https://github.com/emailvenkatm/kndb"
+    ],
+    "comment": "13 pages, 1 figure. Under review at PVLDB Volume 20. Code and benchmark artifacts: https://github.com/emailvenkatm/kndb (branch postgres-experiment)"
+  },
+  {
+    "title": "DataMagic: Authoring Data Videos through Declarative Multi-Agent Orchestration",
+    "authors": "Yupeng Xie, Zhenyang Wang, Liangwei Wang, Jiayi Zhu, Zhouan Shen, Yuyu Luo",
+    "published": "2026-09-27",
+    "arxiv_id": "2609.33403v1",
+    "url": "http://arxiv.org/abs/2609.33403v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.33403v1",
+    "category": "databases",
+    "primary_category": "cs.HC",
+    "abstract": "Data videos communicate data insights through dynamic charts, voice narration, and synchronized animations, and have become a widely adopted form of data storytelling. However, producing them requires expertise in data analysis, narrative design, and video editing. Static visualization tools lack narrative and animation capabilities; authoring tools rely on pre-prepared charts rather than raw data; and pixel-level models generate videos end-to-end but cannot guarantee data accuracy or provenance. End-to-end automatic generation faces two core challenges: how to uniformly represent charts, narration, and animations together with their temporal relationships, and how to efficiently search a vast design space for narrative-coherent compositions. We present DataMagic, which authors data videos from raw tabular data through declarative multi-agent orchestration. First, the declarative specification DVSpec unifies charts, narration, and animations with data-bound references and declarative synchronization, ensuring data provenance and automatic audio-visual alignment. Second, a \"Generate-then-Orchestrate\" multi-agent strategy generates candidate scenes in parallel and then optimizes narrative coherence through global orchestration. DVSpec provides a shared state for three complementary interaction modes, bridging full automation with fine-grained human control. Evaluations on 109 real-world samples show that even the most advanced LLM (e.g., GPT-5) achieves only 2.13/5 with execution success rates between 48.62% and 86.24%; DataMagic improves quality to 3.89 (+83%) with success rates above 95%, with the most significant gains in animation and narrative dimensions. A user study shows that, compared to a conversational LLM workflow, DataMagic improves creation efficiency (79.7% reduction in task time) and reduces perceived cognitive load. Project page: https://github.com/HKUSTDial/DataMagic.",
+    "code_links": [
+      "https://github.com/HKUSTDial/DataMagic"
+    ],
+    "comment": "Accepted at IEEE VIS 2026"
+  },
+  {
+    "title": "Spend Classification Without Leakage: An Evaluation Harness and What It Changed in a Deployed System",
+    "authors": "Harshit Gupta",
+    "published": "2026-09-21",
+    "arxiv_id": "2609.25502v1",
+    "url": "http://arxiv.org/abs/2609.25502v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.25502v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Assigning a standard commodity code to a free-text purchase line underpins enterprise spend analytics, and its reported accuracy cannot be checked. Published results use proprietary data or private samples under undocumented protocols; no two compare and there is no public benchmark. We build a harness with four protocols over 1.26 million labelled purchase lines from two US state governments. Enterprises rebuy continuously, so random splits put matching item text on both sides: 60.7% and 61.2% of test rows, 54.7% and 60.6% byte for byte. On California orders the best classical baseline scores 56.0% on repeated text but 31.9% on novel text, a 24-point gap widening with taxonomy depth. Embedding retrieval shrinks the gap from 23.8 to 19.1 points; a fine-tuned transformer does not escape it. On one corpus leaky evaluation cannot separate retrieval from the transformer, while three leak-free protocols put the transformer 2.3 to 3.6 points ahead, so leaky splits hide real differences, not just flatter both. We derive an upper bound on text-only classifiers from identical text with conflicting codes: 79.4% commodity accuracy on one corpus against 98.4% on the other, so accuracy does not compare across datasets. Spend-weighting the bound reflects the amount field more than labels. In a deployment of 920,927 lines, reviewers accepted 32.4% of suggestions on the novel-text population; 29.7-35.2% brackets benchmark rates near 31.9% and 34.8%. We release the harness in production use.",
+    "code_links": [
+      "https://github.com/harshitg93/spend-classification-benchmark"
+    ],
+    "comment": "16 pages, 17 tables. Harness, protocol definitions and code reproducing every number: https://github.com/harshitg93/spend-classification-benchmark"
+  },
+  {
+    "title": "Reading the Data Back: Enriching Variable-Level Metadata for Model-Data Consistency Checks",
+    "authors": "Eryk Kulikowski",
+    "published": "2026-09-20",
+    "arxiv_id": "2609.23767v1",
+    "url": "http://arxiv.org/abs/2609.23767v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.23767v1",
+    "category": "databases",
+    "primary_category": "cs.DL",
+    "abstract": "Purpose: Research data repositories often lack variable-level metadata. Model-choice screening, checking whether a reported model suits the values of its outcome variable, also requires summaries of those values and links to the analyses that use them. We ask how repositories can represent and acquire them as metadata with evidence and review histories. Methods: We propose a metadata application profile compatible with the Data Documentation Initiative Cross-Domain Integration (DDI-CDI) model, linking versioned variables and empirical profiles to reported analyses, estimators, and analysis roles. Extraction provenance and review decisions are recorded separately. We evaluate streaming data profiling, deterministic extraction from Stata and R code, and language-model extraction of analysis records from papers. Results: A worked export of one replication package illustrates the profile: it passes shape and interchange checks and answers four queries, one of which returns the analyses that raise no alert. Screening 4,868 replication datasets from six political-science journals links outcomes to profiled columns in 1,440 deposits and flags 965, including 14 of the 21 deposits with a hand-verified linear model on a count, proportion, binary, or ordinal outcome. AI-assisted adjudication yields 55% precision on a near-balanced sample of 119 count and proportion candidates; screening rules were developed on the same corpus. Conclusion: The profile makes analysis-variable relationships queryable while preserving evidence and review history; screening yields review candidates with context. Code, metadata, and measurements are released.",
+    "code_links": [
+      "https://github.com/ErykKul/reading-the-data-back"
+    ],
+    "comment": "21 pages, 8 tables, 2 figures. Submitted to the International Journal on Digital Libraries. Code, metadata profile and census artifacts: https://github.com/ErykKul/reading-the-data-back"
+  },
+  {
+    "title": "Mind the Gaps: A Curated Benchmark for Form Field Detection",
+    "authors": "Iheb Brini, Omar Moured, Hamza Gbada, Elisa Barney",
+    "published": "2026-09-20",
+    "arxiv_id": "2609.23679v1",
+    "url": "http://arxiv.org/abs/2609.23679v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.23679v1",
+    "category": "databases",
+    "primary_category": "cs.CV",
+    "abstract": "Form Field Detection (FFD) is a fundamental component of document understanding systems, enabling applications ranging from large-scale industrial digitization to accessible form interaction for automated analysis. Unlike conventional object detection tasks, FFD is inherently challenging because fields are often defined by layout structure and whitespace rather than visible foreground content. Existing large-scale datasets frequently rely on heuristic annotation pipelines, resulting in noisy and inconsistent labels that hinder reliable evaluation. In this work, we introduce mini-CommonForms, a carefully curated FFD benchmark with consistent, high-quality annotations, and present a detailed evaluation of state-of-the-art detection approaches. The benchmark is designed to support reproducible research in document automation and accessibility-oriented applications. Dataset and code are available at https://github.com/moured/mini-commonforms",
+    "code_links": [
+      "https://github.com/moured/mini-commonforms"
+    ],
+    "comment": "Accepted at the International Workshop on Document Analysis Systems (DAS) 2026. Dataset: https://huggingface.co/datasets/omoured/minicommonform"
+  },
+  {
+    "title": "Same Pattern, Different Answer: A Reference Semantics and Divergence Map for GQL and SQL/PGQ Path Patterns",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-09-19",
+    "arxiv_id": "2609.23032v1",
+    "url": "http://arxiv.org/abs/2609.23032v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.23032v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "GQL (ISO/IEC 39075:2024) is the first international standard for a graph query language, and SQL/PGQ (ISO/IEC 9075-16:2023) embeds the same pattern-matching core, GPML, in SQL. Both fix a precise semantics for path patterns: four path modes, four selectors, quantified segments. What engines compute for those patterns has never been measured. Work on GQL is theoretical and runs no engine; cross-engine work measures performance and normalises the semantics away. We build an executable reference semantics for the GPML path core and gate it against the six worked answers printed in the standard's own reference exposition. We then run a 17-construct suite against six releases of five products - Kuzu, DuckPGQ, Neo4j at 5.26 and 2026.04, Memgraph, Apache AGE - scoring each cell as conforming, diverging, rejected, or inexpressible in that dialect. Nine of seventeen constructs draw more than one answer across the engines that accepted them. Of 26 disagreements, 15 are silent - the query runs, returns a different multiset, raises no error - a silence ratio of 0.58. Scoring each divergence against the path mode each engine's manual declares separates language from implementation: 9 of 15 are documented differences, 6 are departures from the standard the engine implements. A metamorphic layer needing no reference semantics finds 39 self-consistency violations, yielding two minimal defects. No engine we measured parses the order the standard's own examples are written in, except the authors' own, which added it after this suite reported the gap. Suite, semantics, reproducers and results are open source.",
+    "code_links": [
+      "https://github.com/samyama-ai/gpml-conformance"
+    ],
+    "comment": "13 pages, 3 figures. Artifact: https://github.com/samyama-ai/gpml-conformance"
+  },
+  {
+    "title": "EHR2Trace: Auditable EHR Data Infrastructure for Patient World Models and Clinical Agents",
+    "authors": "Xinye Yang, Yuli Wang, Cheng Ting Lin, Harrison Bai",
+    "published": "2026-09-18",
+    "arxiv_id": "2609.38193v1",
+    "url": "http://arxiv.org/abs/2609.38193v1",
+    "pdf_url": "https://arxiv.org/pdf/2609.38193v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Patient world models and clinical agents aim to predict changes in patients' health and support clinical work. Developing these systems requires reliable histories of patient conditions, treatments, and the information available at each decision. Electronic health records (EHRs) contain these histories, but differences in how events are recorded make them difficult to use consistently. We present EHR2Trace, a system that converts EHRs from different sources into traceable patient events for model training and evaluation. It links events to source records, separates event time from information availability, and distinguishes medication orders, dispensing, and administration. A shared event representation supports both OMOP and MEDS exports, with automated validation and reproducible builds. Across three clinical datasets, EHR2Trace converted 846.4 million events, with every applicable check passing except one unit-consistency check on MIMIC-IV, and detected all 28 injected faults. A controlled prediction experiment showed that assigning later diagnoses to admission time substantially inflated measured performance, and that a model trained on such data lost accuracy when deployed on histories filtered by availability. EHR2Trace provides a reusable data foundation for patient world models and clinical agents, helping researchers inspect patient histories, check conversion decisions, and evaluate models with explicit data rules.",
+    "code_links": [
+      "https://github.com/Yangxinyee/ehr2trace"
+    ],
+    "comment": "13 pages, 3 figures, 6 tables. Code and experiment records: https://github.com/Yangxinyee/ehr2trace"
+  }
+]
