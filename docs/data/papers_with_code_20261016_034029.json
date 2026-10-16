@@ -1,0 +1,453 @@
+[
+  {
+    "title": "GACC-Bench: Benchmarking Goal-Adaptive Context Compression Ability across Large Language Models",
+    "authors": "Weiting Liu, Zhiyu Pan, Shuhong Wang, Zhenquan Yao, Jungang Li, Li Zhao, Jian Jiang, Jianfeng Feng, Ai Han, Wenlian Lu",
+    "published": "2026-10-15",
+    "arxiv_id": "2610.21893v1",
+    "url": "http://arxiv.org/abs/2610.21893v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.21893v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Context compression in long-running applications of large language models (LLMs) must preserve goal-relevant information, often before specific downstream questions are known. We introduce GACC-Bench, a benchmark for Goal-Adaptive Context Compression that evaluates how reliably LLMs adapt information retention to specified high-level goals. For each source context, we derive one or more high-level goals by grouping source-grounded questions according to shared downstream objectives. The benchmark contains 500 goals and 2,571 questions over 281 document and agent-trace contexts from seven collections spanning diverse domains, with all instances reviewed by human experts. The compressor receives a source context, a goal, and a context-length budget, with the associated evaluation questions withheld. A fixed reader answers these questions individually using the same compressed context. Our evaluation of ten LLM compressors reveals substantial gaps to full-context performance even for the best-performing model, particularly in supporting correct answers to every question associated with a goal. Compared with goal-agnostic compression, target-goal conditioning consistently improves accuracy, whereas mismatched-goal conditioning reduces it. GACC-Bench is available at https://github.com/weiting24/GACC-Bench.",
+    "code_links": [
+      "https://github.com/weiting24/GACC-Bench"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Retrieved but Not Read: Understanding Why Search-Augmented LLMs Fail to Use Available Evidence",
+    "authors": "Owen Walters, Lihu Chen, Francesca Toni",
+    "published": "2026-10-15",
+    "arxiv_id": "2610.21731v1",
+    "url": "http://arxiv.org/abs/2610.21731v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.21731v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Web search allows LLMs to access up-to-date information, but it remains unclear why they sometimes produce outdated answers even when relevant evidence is available. To study this problem, we construct temporal facts whose values changed after the models' training cutoffs. We evaluate one proprietary model under deployed web search and six open-weight model configurations under controlled retrieval. We find that models often answer from search snippets without opening the source pages, which is associated with higher rates of outdated answers and unfaithful citations. Our controlled experiments and layer-wise analysis reveal a gap between the availability of evidence and its effective use. Even when retrieved evidence influences internal predictions, models may still favour outdated information in their final answers. We hope these findings will help advance research on the reliable use of retrieved evidence in search-augmented LLMs.",
+    "code_links": [
+      "https://github.com/ojwwalters/retrieved-but-not-read"
+    ],
+    "comment": "14 pages, 4 figures, 16 tables. Code and data: https://github.com/ojwwalters/retrieved-but-not-read"
+  },
+  {
+    "title": "RecSoup: Efficient Model Merging Approach for Controllable Multi-Objective Recommendation",
+    "authors": "Zidong Jia, Guofu Xie, Xiao Zhang",
+    "published": "2026-10-15",
+    "arxiv_id": "2610.21220v1",
+    "url": "http://arxiv.org/abs/2610.21220v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.21220v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems often need to balance multiple conflicting objectives. Controllable Multi-Objective Recommendation (CMOR) enables dynamic adjustment of objective trade-offs at inference time without retraining, adapting to shifting user or system requirements. Existing CMOR approaches typically rely on output-level reranking or parameter-generating modules, which either limit the scope of feasible trade-offs or incur substantial training and inference cost. Model merging provides a promising alternative by reusing multiple objective-specific models via parameter combination. However, its direct application to recommender systems is challenging due to the lack of a shared linear regime and cross-objective interference. To address these issues, we propose RecSoup, a lightweight two-stage approach for effective CMOR via specialized model merging. RecSoup first mitigates parameter interference across objectives through a pruning strategy that jointly considers objective-specific importance and cross-objective relevance. It then performs adaptive parameter merging via a learnable preference-to-coefficient mapping, allowing dynamic trade-off control at inference time without joint retraining or additional generative modules. Theoretically, we prove that RecSoup outperforms the parameter generation paradigm in effectiveness and efficiency, as it can fully navigate the Pareto front without smoothness constraints. Extensive experiments on multiple benchmarks demonstrate that RecSoup achieves improved Pareto front quality and effective controllability while delivers 165--228x faster inference-time latency than parameter generation approaches. Code is available at https://github.com/35798642/RECSOUP.git.",
+    "code_links": [
+      "https://github.com/35798642/RECSOUP"
+    ],
+    "comment": "Accepted at CIKM 2026"
+  },
+  {
+    "title": "ReviewPilot: A Multi-Agent System for Screening and Data Extraction in Systematic Reviews",
+    "authors": "Zhaoqian Xue, Shaoze Zhou, Xuexin Li, Junting Mu, Haozheng Liu, Zhongyin Wang, Yichun He, Renkai Ma, Hao Zhou, Sarah Bratt, Siyuan Ma, Chen Chen, Lingyao Li",
+    "published": "2026-10-15",
+    "arxiv_id": "2610.21042v1",
+    "url": "http://arxiv.org/abs/2610.21042v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.21042v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Systematic literature reviews follow the PRISMA process of screening scholarly works and extracting evidence from included studies. Deep research tools based on large language models (LLMs) can search and summarize the literature but do not record which studies are excluded or where extracted values come from. We develop a conversational multi-agent system called ReviewPilot that automates the PRISMA workflow from paper screening to information extraction. Researchers can tailor criteria and schemas through dialogue, and a project memory keeps their configurations and revisions. Each screening decision comes with its reason and each extracted value with its source. On epidemiological expert reviews, ReviewPilot outperforms a single-prompt LLM and AgentSLR across three LLMs, with screening macro F1 up to 0.776 and extraction F1 up to 0.788. Case studies in biomedicine and human-computer interaction show close agreement with human annotators, suggesting that ReviewPilot can transfer beyond epidemiology. Code is available at https://github.com/ZhaoqianXue/ReviewPilot.",
+    "code_links": [
+      "https://github.com/ZhaoqianXue/ReviewPilot"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Idea2Prior: Auditable Paper Retrieval and Ranking from Research Ideas",
+    "authors": "Shitian Yang, Ruijie Tao, Jian Huang",
+    "published": "2026-10-14",
+    "arxiv_id": "2610.20857v1",
+    "url": "http://arxiv.org/abs/2610.20857v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.20857v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Finding a paper from an informal research idea requires more than matching topic words: relevant work may use different terminology, and its distinguishing mechanism may be absent from the abstract. We present \\system{}, an auditable literature-search system built on PaperArena. It combines multi-source discovery, identity verification, facet-based abstract assessment, semantic citation expansion, and joint Expert ranking. A retrieval-only mode ranks up to five papers from a shortlist of at most 60, using complete available abstracts and locally selected PDF evidence from five fixed acquisition attempts, without generating a long-form report. In a historical comparison covering ten queries from each of EASY, MEDIUM, and HARD, aggregate reported Hit@5 is 53.3\\% for \\system{}, 43.3\\% for ChatGPT web Deep Research, and 36.7\\% for Gemini web Deep Research under the documented accounting convention. The advantage is concentrated in EASY and MEDIUM; ChatGPT leads on HARD. Selected \\system{} runs average 8 minutes 53 seconds, compared with user-reported web averages of 5.2 and 4.7 minutes. A separate nine-query API sample averages \\$0.0945 per task; this is a historical cost observation, not a matched comparison with web subscription costs. Pairwise Top 5 coverage ranges from 6\\% to 34\\%, showing differing returned evidence sets. The system also exposes optional implementation analysis and citation-evolution tools. These results support targeted idea-to-paper retrieval while leaving general web research, forum search, and broader relevance evaluation open. https://github.com/ystok66/IDEA2PRIOR",
+    "code_links": [
+      "https://github.com/ystok66/IDEA2PRIOR"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Knowledge Graphs as Files: An Agent Harness Where Tool Creation and Tool Use Co-Evolve",
+    "authors": "Yuyang Bai, Yu Wang, Yu Zhang",
+    "published": "2026-10-13",
+    "arxiv_id": "2610.18616v2",
+    "url": "http://arxiv.org/abs/2610.18616v2",
+    "pdf_url": "https://arxiv.org/pdf/2610.18616v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Searching text-rich knowledge graphs requires following relations while examining textual evidence. Predefined graph interfaces constrain what evidence agents can access, even when they write code to combine tool calls or process retrieved subgraphs. We propose direct knowledge graph interaction (DKGI), a harness in which language model agents create graph access tools directly over complete node and edge files. The agent writes Python code to follow relations, combine node sets, and select textual evidence, interleaving execution with shell search and file inspection. This lets agents process large node sets in bulk while returning selected text for the model to assess. Execution feedback guides tool creation and revision, while the evolving tools determine what evidence the agent gathers next. On benchmark datasets spanning three domains, training-free DKGI exceeds the strongest published baseline by at least 6.7 Hit@1 points on every graph, even with a minimal harness. Controlled ablations show the benefits of multi-turn programming over shell-only access and predefined graph tools, while trajectories show agents revising code to extend searches or address errors. These findings highlight the value of allowing tool creation and tool use to co-evolve during graph search. Our code and data are available at https://github.com/leopoldwhite/DKGI.",
+    "code_links": [
+      "https://github.com/leopoldwhite/DKGI"
+    ],
+    "comment": "27 pages. Code and data: https://github.com/leopoldwhite/DKGI"
+  },
+  {
+    "title": "KNN Implementation Details Can Dramatically Change Performance: An Example from Cover Trees",
+    "authors": "Amol Khanna, Edward Raff",
+    "published": "2026-10-12",
+    "arxiv_id": "2610.16940v1",
+    "url": "http://arxiv.org/abs/2610.16940v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.16940v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Nearest neighbor search algorithms are widely used and have a long history, but we find that key implementation details are seldom reviewed in articles about them. These details can materially impact performance, and thus change the conclusions one makes about a given algorithm's superiority. In this article, we highlight these impacts by reviewing the Cover Tree as an example, producing RustKNN, a unified Rust implementation of three construction variants of the Cover Tree with three query modes. Our analysis reveals: (1) the optimal query strategy depends on $k$ and on the dataset (single-tree search is fastest at $k{=}1$ on three of our four largest datasets, while dual-tree search is fastest at $k{\\ge}5$ on the three largest), and choosing the wrong query mode can cost up to a $7.5\\times$ factor in runtime; (2) the cover tree base parameter, set to 2 in theory and 1.3 in practice, is not a safe default for dual-tree search: 1.3 is optimal on only one of seven datasets, and on covtype it is $1.6\\times$ slower than the optimum; (3) among five micro-optimizations, only early-exit distance computation has a consistent effect, and that effect grows with dimension (none at $d{=}32$, $1.31\\times$ at $d{=}54$, and $1.49\\times$ at $d{=}784$); and (4) all-nearest-neighbor and held-out benchmarks yield different implementation rankings. All main timing tables report medians over 20 independent allocations with bootstrap 95% confidence intervals. RustKNN is open source at https://github.com/CrowdStrike/RustKNN.",
+    "code_links": [
+      "https://github.com/CrowdStrike/RustKNN"
+    ],
+    "comment": "40th Conference on Neural Information Processing Systems (NeurIPS 2026). Track on Evaluations and Datasets"
+  },
+  {
+    "title": "EHR-Bench: A Chinese Multi-Task Benchmark for Recruitment AI",
+    "authors": "Ruijia Yang, Bing Xu, Zulong Chen, Zhipeng Xu, Jia Xu, Yipeng Yu, Ying Zhou, Zeyi Wen",
+    "published": "2026-10-12",
+    "arxiv_id": "2610.16689v1",
+    "url": "http://arxiv.org/abs/2610.16689v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.16689v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Recruitment applications span diverse operations, from drafting job descriptions and interpreting queries to organizing profiles, assessing fit, and recommending candidates and jobs. Systematic LLM evaluation therefore requires task coverage that reflects this range of business needs. We introduce EHR-Bench, an open Chinese benchmark comprising twelve tasks across six capability families and five recruitment scenarios. The tasks cover generation, extraction, classification, retrieval, semantic similarity, and reciprocal ranking within one evaluation framework. An internal recruitment dataset guides task definitions, the occupation taxonomy and sampling targets, output requirements, and scoring protocols. Following these specifications, we construct 8,336 task instances from public materials and controlled augmentation, with source-aware expert review and documented provenance. We evaluate twelve LLMs through task-level, capability-level, and aggregate comparisons. Closely ranked models exhibit distinct task strengths, and performance varies across input sources, reference evidence, and candidate pools. Five shared models retain the same observed Overall ordering on a private operational reference, with variation in capability and task correspondence. EHR-Bench provides a reproducible foundation for systematic model assessment, task-specific model selection, and further research on LLMs for recruitment. The project repository is available at https://github.com/EhrBench/EHR-Bench.",
+    "code_links": [
+      "https://github.com/EhrBench/EHR-Bench"
+    ],
+    "comment": "36 pages, 9 figures, 41 tables"
+  },
+  {
+    "title": "Tackling the Modality Inhibitance Effect with Wavelet-based Modality Integration in Multi-modal Recommendation",
+    "authors": "Rongqing Kenneth Ong, Andy W. H. Khong",
+    "published": "2026-10-12",
+    "arxiv_id": "2610.16229v1",
+    "url": "http://arxiv.org/abs/2610.16229v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.16229v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Harnessing rich modality features has recently gained prominence in multi-modal recommendation systems (MRSs). To delineate user modality preferences, existing works focus on modality fusion, which can be achieved via attentive summation or concatenation. In this work, we introduce the modality inhibitance effect - a phenomenon which limits existing MRSs when these models transit from dual-modal to tri-modal configurations resulting in significant performance degradation. In particular, apart from the modal-specific contamination encapsulated in the newly introduced modality, the inclusion of new features results in excessive informational redundancy, thereby severely impeding effective integration within current approaches. To address the modality inhibitance effect, we propose a new multi-scale modality wavelet (MMWave) multi-modal recommender, which aims to fully capitalize on essential modality features and suppress modal-specific noise. This is acheived by employing wavelet decomposition from a multi-scale (time \\& frequency) perspective, ensuring that only essential (non-redundant) features of each modality are extracted. We then account for the latent associations between item modality features by designing a new structure-aware multi-modal graph learning module that captures high-order latent structural information pertaining to items. To modulate the relative contributions of modality features and achieve effective integration, we then propose a new adaptive modality regulator component that employs a new cross-weight integration strategy. Experiments conducted on four real-world datasets validate the efficacy of our proposed model. The source code for this work has been made publicly available at https://github.com/kennethorq/MMWave.",
+    "code_links": [
+      "https://github.com/kennethorq/MMWave"
+    ],
+    "comment": "Published in IEEE Transactions on Knowledge and Data Engineering (TKDE) 2026"
+  },
+  {
+    "title": "Local Citation Recommendation Without Graph Signals",
+    "authors": "Benjamin Basseri, Pavlos Protopapas, Kemeng Zhang, Alberto Accomazzi, Stephanie Jarmak, Anna Kelbert",
+    "published": "2026-10-11",
+    "arxiv_id": "2610.15832v1",
+    "url": "http://arxiv.org/abs/2610.15832v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.15832v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Resolving correct citations can be a time-consuming task for research writers. We address local citation recommendation (LCR), where the goal is to retrieve appropriate references for a given sentence. Web tools generally depend on the existing citation graph, which may bias results toward citation count or more recent publications. LCR research using full paper texts has been limited by the lack of publicly available data. We present a new dataset, the Local Citation Recommendation Corpus (LCRC), containing 14,735 scientific statements derived from astrophysics review papers, each with one or more citation targets whose full text is accessible via API. Using this dataset we systematically compare retrieval methods and develop a citation recommendation system that avoids citation graph bias while achieving 8.0% improvement in Recall@25 and 6.9% improvement in NDCG@25 over dense retrieval baselines without model fine-tuning. To support reproducibility, we make our code and dataset publicly available.",
+    "code_links": [
+      "https://github.com/benjaminb/citeline"
+    ],
+    "comment": "Accepted at WASP 2026, co-located with AACL-IJCNLP 2026. 16 pages, 3 figures, 2 tables. Dataset: https://huggingface.co/datasets/adsabs/LCRC Code: https://github.com/benjaminb/citeline"
+  },
+  {
+    "title": "Self-improving data synthesis enables scalable adaptation of embedding models",
+    "authors": "Zucan Lyu, Rui Tang, Jianlyu Chen, Peisheng Jin, Defu Lian",
+    "published": "2026-10-10",
+    "arxiv_id": "2610.14730v2",
+    "url": "http://arxiv.org/abs/2610.14730v2",
+    "pdf_url": "https://arxiv.org/pdf/2610.14730v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "AI agents require specialised retrieval across domains and tasks, but adapting embedding models is constrained by costly manual training-data design. Here we introduce SYNTRA, a self-improving agentic framework that turns a few retrieval examples into reusable synthesis instructions. Given an unlabelled corpus and a few relevant query-document pairs, SYNTRA infers implicit information needs and relevance criteria, then uses feedback on trial outputs to refine instructions for query generation and relevance assessment. Experiments across 24 datasets spanning 15 domains demonstrate that the same synthesis workflow produces effective training data, benefiting even strong embedding models with and without existing labelled training sets. Self-improvement strengthens this supervision on all six evaluated tasks, yielding better retrieval than human calibration on four. The training value persists at larger scales: on MS MARCO, retrieval gains continue across a 32-fold range of synthetic training-data sizes. SYNTRA thus enables scalable embedding-model adaptation with minimal human intervention.",
+    "code_links": [
+      "https://github.com/zucanlv/SYNTRA"
+    ],
+    "comment": "30 pages, 6 figures; supplementary information included (27 pages). Code: https://github.com/zucanlv/SYNTRA . Data: https://huggingface.co/datasets/ZucanLyu/SYNTRA"
+  },
+  {
+    "title": "RES-MR: Risk-Aware Reasoning for Explainable and Safe Medication Recommendation",
+    "authors": "Cong Wang, Jin Li, Shoujin Wang, Yishuo Li, Huilin Gu, Wenpeng Lu",
+    "published": "2026-10-10",
+    "arxiv_id": "2610.14474v1",
+    "url": "http://arxiv.org/abs/2610.14474v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.14474v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Medication recommendations seek to deliver personalized drug combinations based on patients' clinical information, where ensuring transparent decision-making and personalized safety are of paramount importance. However, existing approaches predominantly operate as ``black boxes'', offering limited interpretability and hindering clinician trust. Furthermore, they typically rely on fixed, patient-agnostic safety constraints, neglecting the heterogeneity of risk tolerance across individuals, which poses significant risks to vulnerable populations. To address these gaps, we propose \\textbf{RES-MR}, a novel Risk-aware Reasoning framework for Explainable and Safe Medication Recommendation using LLMs. RES-MR follows a two-stage training paradigm: (1) an explainable clinical reasoning distillation stage to elicit diagnostic capabilities by fine-tuning on synthesized reasoning trajectories, grounded in patient-specific knowledge from graph retrieval; and (2) a risk-aware policy optimization stage to dynamically balance therapeutic efficacy with personalized safety. This stage employs disentangled drug factors to construct patient-specific reference prototypes that capture desired therapeutic drug features and risk features to avoid. These prototypes enable risk boundary calibration and guide the model toward safe recommendations via reward shaping and clipping. Extensive experiments on benchmark datasets demonstrate that RES-MR significantly outperforms state-of-the-art baselines in terms of accuracy, safety, and explainability. Our code and data are available at: https://github.com/wangcong2001/RES-MR.",
+    "code_links": [
+      "https://github.com/wangcong2001/RES-MR"
+    ],
+    "comment": "12 pages"
+  },
+  {
+    "title": "Do you \"see\" what I \"see\"? A Multi-panel Visual Question Answer Dataset for Large Language Model Chart Analysis",
+    "authors": "Daniel J. Evans, J. P. Naiman, JooYoung Seo, J. Stephen Downie",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.14173v1",
+    "url": "http://arxiv.org/abs/2610.14173v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.14173v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DL",
+    "abstract": "Digital libraries increasingly host scientific publications whose figures encode primary research findings, yet making this visual content searchable, accessible, and reusable remains an open challenge. Large language and multimodal models (LLMs/LMMs) provide the possibility to automate many figure parsing tasks such as determining data trends or extracting data from plots. In this work, we consider if these models can reliably support task-oriented visual data analysis when presented with synthetic, but realistic, scientific figures that contain multiple charts. Our Visual Question Answering (VQA) process scaffolds our tasks along a four-level description model from basic conceptual answers to interpretive and analytical understanding. Additionally, we outline our process for synthetically generating our single and multi-panel (charts in which there are multiple panels present) plots and testing the data with various LMMs using quantitative analysis. In general, we find LMMs become less accurate with increasing figure complexity as the number of panels, number of plot elements, and difficulty of questions increase. Finally, because LMM accuracy is expected to change rapidly, our analysis also considers cost relative to performance as a metric to inform future user decisions. We provide the detailed question-answer pairs used in this analysis, along with the code used to generate random plots, question-answer pairs and detailed bounding-box metadata for chart elements. The code and data are available at https://github.com/ReadingTimeMachine/LLM_VQA_MultiPanel and https://huggingface.co/datasets/ReadingTimeMachine/visual\\_qa\\_multipanel",
+    "code_links": [
+      "https://github.com/ReadingTimeMachine/LLM_VQA_MultiPanel"
+    ],
+    "comment": "16 pages, 4 figures, accepted to The 30th International Conference on Theory and Practice of Digital Libraries, 2026"
+  },
+  {
+    "title": "RATED: Reliability-Aware AI Agent Tool Retrieval via Execution Dynamics",
+    "authors": "Weiliang Chen, Song Liao",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.13889v1",
+    "url": "http://arxiv.org/abs/2610.13889v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.13889v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "As AI agents increasingly rely on external tools, accurate retrieval is essential for reliable behavior. Existing methods optimize semantic relevance but largely ignore tool availability during execution. To address this gap, we propose RATED (Reliability-Aware Tool Retrieval via Execution Dynamics), a retrieval framework that combines robust semantic matching with dynamic reliability adaptation. RATED employs a frozen dual-encoder with contrastive fine-tuning for semantic matching, and a lightweight contextual bandit module that re-ranks candidates based on real-time execution feedback. This design enables rapid adaptation to runtime tool failures without expensive model retraining. We introduce EcoAgent, a benchmark of 5,172 real-world tools and over 210,000 query-tool pairs for offline retrieval and dynamic reliability evaluation. Experimental results demonstrate that RATED achieves a 52.2% relative MRR improvement over the ToolLLM API retriever on real-world queries, and reduces fault selection rate from 86.2% to 2.9% under severe API outage scenarios with a 30% failure rate, while incurring negligible latency overhead of less than 1 ms over encode-only inference. The code and dataset are available at https://github.com/Elliotes/EcoAgent.",
+    "code_links": [
+      "https://github.com/Elliotes/EcoAgent"
+    ],
+    "comment": "Accepted at CIKM 2026"
+  },
+  {
+    "title": "SPARQL-LLM in the TEXT2SPARQL 2026 Challenge",
+    "authors": "Panayiotis Smeros, Vincent Emonet, Ruijie Wang, Ana-Claudia Sima, Tarcisio Mendes de Farias",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.13648v1",
+    "url": "http://arxiv.org/abs/2610.13648v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.13648v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Querying distributed data represented as Knowledge Graphs (KGs) via SPARQL remains a difficult task, requiring fluency in query syntax, endpoint specifications, and schema details. Knowledge Graph Question Answering (KGQA) systems address this by automatically translating natural language into SPARQL, and recent advances in Large Language Models (LLMs) have made this translation increasingly feasible. In this paper, we describe SPARQL-LLM, our open-source KGQA system, in the context of the TEXT2SPARQL 2026 challenge. In this challenge, SPARQL-LLM ranks first overall among eight competing approaches across all datasets, achieving up to 59% higher accuracy than the second-best approach and supporting multilingual question answering in English, German, and Spanish. SPARQL-LLM is publicly released at https://github.com/sib-swiss/sparql-llm and deployed in production over decentralized bioinformatics KGs at https://www.expasy.org/chat.",
+    "code_links": [
+      "https://github.com/sib-swiss/sparql-llm"
+    ],
+    "comment": "6 pages, 1 figure, 5 tables"
+  },
+  {
+    "title": "Locate, Judge, Read: Role-Specialized Tool Agents over a Knowledge-Point Index for Open-Domain Multimodal Document QA",
+    "authors": "Wenlin Lin, Fanzhe Wei",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.13128v1",
+    "url": "http://arxiv.org/abs/2610.13128v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.13128v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Question answering over large heterogeneous document collections requires first finding the right passages and then reading them, yet current retrieval-augmented agents give one model both kinds of tools and let it schedule itself. We present KnowForge, a pipeline separated by job: a hybrid-retrieval knowledge-point index; a Locator agent that can only search; a code-scheduled bridge judge that forces the missing second hop; a typed, size-bounded evidence pool that merges every search's ranking; a Deep Reader agent that can only read text, images and tables; and a synthesizer with a format checker. With a self-hosted Qwen3.6-35B-A3B (3B active), KnowForge reaches F1 47.5 on the full open-domain M3DocVQA (2,441 questions, 3,368 PDFs), +11.0 over the published M3DocRAG system and +7.1 over one-shot retrieve-and-answer on the same index and model, and 53.5 with DeepSeek-V4-Flash. On MultiHop-RAG it reaches 73.5 accuracy, above the strongest published RAG and GraphRAG results (71.2); on the single-document MMLongBench-Doc it lifts the same model from 34.8 to 47.0, level with GPT-4o reading page images (46.3). Per-job ablations on the full benchmarks attribute the gain: the Deep Reader is worth 3.8, 9.8 and 0 points on the three corpora, tracking how visual each is; merging both agents into one with all tools and twice the rounds loses 1.9 F1 because it keeps searching instead of reading; a round-budget sweep shows a step at four Locator rounds and a plateau beyond; query latency scales with model calls rather than corpus size. We serve the three indexed benchmarks as read-only knowledge bases (free registration) and release all prompts and the runner code: https://github.com/metask-ai/knowforge-bench",
+    "code_links": [
+      "https://github.com/metask-ai/knowforge-bench"
+    ],
+    "comment": "17 pages, 3 figures, 11 tables. Code, prompts and benchmark runner: https://github.com/metask-ai/knowforge-bench"
+  },
+  {
+    "title": "Syn-Omni: Structured Specialization and Progressive Collaboration for Omnimodal Embeddings",
+    "authors": "Youngtaek Oh, Qiyu Wu, Hiromi Wakaki, Junmo Kim, Yuki Mitsufuji",
+    "published": "2026-10-08",
+    "arxiv_id": "2610.12256v1",
+    "url": "http://arxiv.org/abs/2610.12256v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.12256v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Omnimodal embeddings naturally involve both shared representations and modality-specific features across heterogeneous inputs. However, existing omnimodal embedding methods often rely on a single shared parameter space over mixed-modality data, limiting structural separation between universal and modality-specific representations. To address this, we propose Syn-Omni, a unified framework for structured omnimodal adaptation with modality specialization and controlled cross-modal collaboration. Specifically, we introduce Orthogonal Modality-Expert LoRA (OME-LoRA), which decomposes adaptation into a shared LoRA path for universal semantics and modality-expert LoRA paths for modality-aware specialization. Furthermore, Progressive Synergy Routing (PSR) enables experts to first establish modality-specific priors, then gradually interact with other modality-experts for cross-modal synergy. Evaluated across 81 diverse tasks spanning image, video, audio, and audiovisual modalities, Syn-Omni consistently outperforms omnimodal baselines, demonstrating the effectiveness of structured specialization and cross-modal progressive collaboration.",
+    "code_links": [
+      "https://github.com/sony/syn-omni"
+    ],
+    "comment": "Accepted to EMNLP 2026 (Long, Findings). Code: https://github.com/sony/syn-omni"
+  },
+  {
+    "title": "TurboProm: Low Cost and High Performance Metrics Observability at Scale",
+    "authors": "Milind Srivastava, Zeying Zhu, Peilin Xin, Yancheng Yuan, Zaoxing Liu, Vyas Sekar",
+    "published": "2026-10-10",
+    "arxiv_id": "2610.14483v1",
+    "url": "http://arxiv.org/abs/2610.14483v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.14483v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Many large enterprise and cloud deployments rely on metrics observability solutions (e.g., Prometheus) to monitor key performance indicators of system health (e.g., CPU, memory, network, app-level statistics). Monitoring and analyzing these metrics presents a significant challenge in terms of cost-latency tradeoffs at scale. Ideally, system operators would like immediately deployable and backwards compatible solutions to improve the cost-latency tradeoffs without significant impact on the fidelity of their observability applications. Unfortunately, existing solutions including state-of-art timeseries databases and custom approximate querying solutions fail on one or more aspects.\n  In this paper, we present the design and implementation of TurboProm, a backwards-compatible drop-in accelerator for metrics observability deployments. TurboProm recasts metrics analytics tasks using a semantic-preserving summary view rather than classical query-centric view. Instead of estimating query results on raw timeseries metrics data, TurboProm uses semantic-preserving summaries that enable high-fidelity analytics with significant cost-latency improvements. We present a practical implementation of TurboProm that can be retrofitted to any existing observability deployment. We evaluate TurboProm on diverse real and synthetic workloads against state-of-art solutions and show that it can provide significant reduction in query latency and cost. TurboProm is open-source at https://github.com/ProjectASAP/ASAPQuery.",
+    "code_links": [
+      "https://github.com/ProjectASAP/ASAPQuery"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Same Query, Different Answer: Run-to-Run Variance in Semantic Query Processing",
+    "authors": "Oktie Hassanzadeh, Dharmashankar Subramanian",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.13823v1",
+    "url": "http://arxiv.org/abs/2610.13823v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.13823v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Semantic query engines ask a large language model (LLM) to judge individual rows, and benchmarks compare these engines on the quality of a few executions at temperature 0. We measure how much another execution changes. We re-execute the text and tabular workloads of SemBench, LRO-Bench, and UDA-Bench through their own harnesses, log every one of 1.2 million model calls, and reanalyze SemBench's published executions. At temperature 0, between 0.07% and 10.2% of rows change their operator output over five executions, depending on the model, and up to 24.0% on one task. Plans amplify these changes exponentially in the number of rows an answer exposes, as a possible-worlds model predicts: on UDA-Bench, a few percent of extracted values change, but about two thirds of the answers do. In SemBench's published results, 21% of text results change quality between executions, including on engines whose plans are deterministic. Several per-query system comparisons, and 16 of 28 tests of LRO-Bench's implementation recommendations, are not settled by the executions the benchmarks run. Changing rows are rows on which models disagree with each other; identical requests within one execution disagree as often as across executions; and one execution's decision margin or reasoning length predicts which rows change. Voting reduces the variance but does not remove it, and a calibrated cascade keeps its guarantee while the rows it returns change. We derive reporting rules for benchmarks and design rules for engines.",
+    "code_links": [
+      "https://github.com/semviews/sqp-variance-study"
+    ],
+    "comment": "Code and data: https://github.com/semviews/sqp-variance-study"
+  },
+  {
+    "title": "Time-Varying Favorite-Longshot Bias in Polymarket Weather Markets",
+    "authors": "Shouchen Qiu, Huaijun Qiu",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.13593v1",
+    "url": "http://arxiv.org/abs/2610.13593v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.13593v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Prediction-market prices combine traders' judgments about future outcomes, but their errors may be concentrated in particular price ranges and change as settlement approaches. Prior cross-category evidence shows that Polymarket weather markets have larger pricing bias than other major categories, without separating low-price longshots from high-price favorites. This study compares the two ranges at different horizons in daily maximum-temperature markets. Event-level probability scores, cubic B-spline recalibration, and Buy-NO tests are used to examine the form and effect of the bias. Longshot overpricing mainly occurs at distant horizons, whereas favorite overpricing becomes much stronger during the final 1-12 hours and is nearly one order of magnitude larger. Event-level scores improve toward the daily temperature peak, while simple recalibration yields no statistically significant gains. The Buy-NO results in the corresponding time windows also show that the main pricing error is concentrated at the favorite end.",
+    "code_links": [
+      "https://github.com/ShouchenQiu/PolyWeatherData"
+    ],
+    "comment": "5 pages, 4 figures, 3 tables. Accepted at the IEEE ICDM 2026 Teen Research Symposium (Teen Track), Shenyang, China, November 2026. Code available at https://github.com/ShouchenQiu/PolyWeatherData"
+  },
+  {
+    "title": "CALQA: Conformal Screening of Forecast-Ensemble Configurations from One Mergeable State",
+    "authors": "Xiufeng Liu, Ruyu Liu, Yusen Liu, Huan Huo, Per Sieverts Nielsen",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.13249v1",
+    "url": "http://arxiv.org/abs/2610.13249v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.13249v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "AutoML systems fit ensemble weights over model libraries; a search can score, per category, market or time pane, thousands of weightings of the quantile-averaged (Vincentized) ensemble for the narrowest conformally calibrated interval; exact calibration scores a group's rows per candidate. We present CALQA, a fixed-size integer aggregate per group and pane that stores histograms of normalised block scores at a net of weight vectors. One GROUP BY builds it; it merges by addition, retracts deletions by subtraction and scores any candidate without reading a row. We prove that its score never falls below the exact split-conformal shift and exceeds it by at most the net distance plus a grid gap; that coverage carries over to each fixed weight vector and, for i.i.d. blocks and up to a union-bound slack, to a searched weight vector deployed with the state's shift; and how small any such state can be. The state is thus a screen: it ranks all candidates, and exact recomputation re-checks the top 100. On five public panels (604 groups, 10,000 candidates each) this two-stage plan matches exact search on held-out blocks (99.95% of its Winkler score), 1.3-59 times faster. On two real panels of about $10^8$ rows (smart meters, retail sales) it is 44-54 times faster at 99.98-100.01% of that score and beats sample screens with the same re-check in regret at less total time. Picks deployed with their exact shift need a held-out coverage check. The state does not pay off for small or greedy searches, off-net weights at ample memory or full twelve-member support.",
+    "code_links": [
+      "https://github.com/xiufengliu/calqa"
+    ],
+    "comment": "17 pages, 5 figures. Extended version with full proofs. Code: https://github.com/xiufengliu/calqa"
+  },
+  {
+    "title": "Semantic Views: Certified Reuse of LLM Labels Across Semantic Queries",
+    "authors": "Oktie Hassanzadeh, Dharmashankar Subramanian",
+    "published": "2026-10-08",
+    "arxiv_id": "2610.12768v1",
+    "url": "http://arxiv.org/abs/2610.12768v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.12768v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Semantic query engines evaluate natural-language filters with a large language model, and every evaluation is a costly oracle call. Optimizers that reduce these calls face a dilemma: cascades that trust a cheap proxy miss their precision and recall targets on many queries, methods with finite-sample guarantees save little, and all of them discard the oracle's labels when the query ends. We present SemViews, a certified semantic filter that orders tuples by signals that cost no oracle calls (the labels that earlier queries left behind as semantic views, a local embedding, and a helper model's score), refines that order with labels it must pay for anyway, and certifies its answer with fresh stratified oracle samples. The answer meets user precision and recall targets with probability at least $1-δ$ for every workload and every catalog, so a stale or misleading view can cost oracle calls but never accuracy. On four workloads replayed against 725,000 recorded oracle labels, SemViews meets both targets on 99.63% of queries and saves 28%-45% of the oracle calls, whereas the only prior method in our study with the same guarantee needs 1.32x-1.71x as many calls. When a question returns in different words, views cut its calls by a further 27%-36%, with both targets met on at least 99.8% of such queries; similarity caches and entailment-based reuse meet them on only 17%-47%.",
+    "code_links": [
+      "https://github.com/semviews/lotus-semviews"
+    ],
+    "comment": "Code and data: https://github.com/semviews/lotus-semviews"
+  },
+  {
+    "title": "Soft Voting for Policy-Aware Private Data Synthesis",
+    "authors": "Yingge Hu, Gautham Ramesh Babu, Mostafa Milani",
+    "published": "2026-10-08",
+    "arxiv_id": "2610.11285v1",
+    "url": "http://arxiv.org/abs/2610.11285v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.11285v1",
+    "category": "databases",
+    "primary_category": "cs.CR",
+    "abstract": "Blowfish privacy relaxes differential privacy (DP) by protecting only the attribute-value substitutions a data owner specifies as edges of a policy graph. A sparser policy can reduce the noise required by a mechanism, but only when the released statistic changes less across protected substitutions than across arbitrary DP neighbors. We study this question for evolutionary, nearest-neighbor DP synthesizers such as Private Evolution (PE) and its tabular instantiation Tab-PE, which score private records against a candidate population and release a noisy vote histogram. Their hard vote is constant inside each candidate's decision region and jumps at its boundary. Its policy-specific sensitivity therefore equals the full worst-case value whenever at least one protected substitution crosses a boundary, regardless of how short that substitution is. Because every round we examined contained such a substitution, the policy graph gave no reduction in noise. We propose BF-Soft, a temperature-smoothed soft vote whose response changes gradually with distance. Its sensitivity has a tight closed-form bound in the policy graph's reach and the temperature, independent of the number of candidates, and the bound can be computed once before synthesis. It also predicts from the policy alone when policy-aware smoothing cannot substantially reduce noise: protecting a flat categorical or binary attribute drives the reach to its maximum. On real and synthetic datasets under narrow numeric policies, BF-Soft reduces error relative to hard voting at strong privacy budgets, while the advantage reverses at weaker budgets. A public-data pilot predicts when soft voting is beneficial without spending private budget.",
+    "code_links": [
+      "https://github.com/ayanamirei629/Soft-Voting-for-Policy-Aware-Private-Data-Synthesis"
+    ],
+    "comment": "22 pages, 11 figures, 4 tables. Extended version with full proofs and additional experiments. Code: https://github.com/ayanamirei629/Soft-Voting-for-Policy-Aware-Private-Data-Synthesis"
+  },
+  {
+    "title": "LDPGraph: Locally Differentially Private Graph Synthesis by Exploiting Neighborhood Structure",
+    "authors": "Jiawei Dong, Zhikun Zhang, Quan Yuan, Zhe Liu, Yunjun Gao",
+    "published": "2026-10-07",
+    "arxiv_id": "2610.09642v1",
+    "url": "http://arxiv.org/abs/2610.09642v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.09642v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "The widespread application of graph data inevitably brings significant privacy risks, as its unprotected use can lead to the leakage of sensitive information. These risks are particularly acute in the setting with an untrusted curator, where the data remains decentralized and each user only holds the connections to their neighbors. To mitigate such privacy risks, we adopt local differential privacy (LDP) to collect users' private information and generate a synthetic graph. However, existing methods suffer from either excessive noise injection by perturbing the local adjacency lists or significant structural information loss due to the simplistic graph encoding process. To address these issues, we propose LDPGraph, an effective graph synthesis algorithm that takes one step further by exploiting neighborhood structures under LDP. To obtain neighborhood statistics beyond degrees, LDPGraph aggregates a noisy global view from perturbed adjacency lists and combines it with projected local connections to estimate node-level triangle counts. To correct the structural inconsistency caused by separately perturbing degree and triangle count, LDPGraph jointly refines them into feasible degree-triangle targets. To reconstruct a global graph from these estimated targets, LDPGraph adopts a triangle-first strategy that first preserves local clustering structures and then fulfills remaining degree requirements. Extensive experiments on four real-world datasets and multiple commonly used graph metrics validate the superiority of LDPGraph. Source code is available at https://github.com/ZJU-TrustAID/LDPGraph.",
+    "code_links": [
+      "https://github.com/ZJU-TrustAID/LDPGraph"
+    ],
+    "comment": "Accepted at IEEE ICDE 2027. Extended version with appendices"
+  },
+  {
+    "title": "Correspondences as Decisions: JevNexus for Decision-Centric Schema Matching",
+    "authors": "Runze Li, Hanchen Wang, Ying Zhang, Wenjie Zhang",
+    "published": "2026-10-07",
+    "arxiv_id": "2610.09487v1",
+    "url": "http://arxiv.org/abs/2610.09487v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.09487v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Schema matching increasingly uses generative language models to rerank retrieved column candidates, although the underlying task is a bounded correspondence decision. We present JevNexus, which combines typed pairwise decisions with schema/instance evidence and invokes listwise refinement only when the evidence disagrees and the fused margin is small. The evaluation covers 561 cases from six benchmark families. JevNexus obtains dataset-macro MRR and Hits@1 of 0.930 and 0.909, compared with 0.926 and 0.903 for Magneto, while reducing mean latency from 123.452 to 15.929 seconds (7.750). Paired analysis finds no statistically significant difference in either MRR or Hits@1. The gate invokes listwise refinement for only 5.665% of source columns and avoids the degradation caused by unconditional refinement. Code and experimental artifacts are available at https://github.com/RazeenLI/JevNexus.",
+    "code_links": [
+      "https://github.com/RazeenLI/JevNexus"
+    ],
+    "comment": "12 pages, 9 figures"
+  },
+  {
+    "title": "Building Navigable Graphs Without Search in Three Composable Stages",
+    "authors": "Édgar Chávez",
+    "published": "2026-10-06",
+    "arxiv_id": "2610.09041v1",
+    "url": "http://arxiv.org/abs/2610.09041v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.09041v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Navigable graphs can be built without searching for neighbors: partition the data, evaluate every pair inside each part, and select each point's edges from the candidates. We give such a construction in three separable stages and show that the middle one decides the quality. The pool is any partition with a few memberships per point. The ending turns a point's candidates into out-edges; ours keeps a bounded heap, prunes by occlusion with a per-corpus slack, and appends reverse edges, re-pruning only where a list overflows. The spine is any edge set, exempt from the prune, that keeps the graph reachable from its entry; ours, half-space-proximal edges over a random sample, routes monotonically to every sampled point and replaces a spanning tree at 1/10 to 1/500 of its cost. The ending composes with any partitioner: on PiPNN's own candidate pool it beats PiPNN's ending on each of six corpora from $10^6$ to $10^8$ points, by 3 to 14% in distance evaluations at equal recall, and with 60 to 120 memberships per point the composed build matches or beats a full dense construction at k=10 and k=100 on all six, in 0.5 to 0.9 of its build time, deterministically. The analysis explains why. Once a pool is localised its quality is set by the data: every pool built on GIST lands within 4% of the exact-kNN ceiling, and the pairs a block cover misses are predicted, point by point, by the local clustering of the kNN graph, whose zero-clustering tail sets the memberships a corpus needs and grows with n. All code, patches and logs are public.",
+    "code_links": [
+      "https://github.com/zevahcle/graft-ann",
+      "https://github.com/zevahcle/fgraft-experiments"
+    ],
+    "comment": "26 pages. Code: github.com/zevahcle/graft-ann (branch fgraft); experiments, logs and patches: github.com/zevahcle/fgraft-experiments"
+  },
+  {
+    "title": "SOLO: Certified-Recall Metric Similarity Search with Scan-Only Sampled Inverted Lists",
+    "authors": "Édgar Chávez",
+    "published": "2026-10-01",
+    "arxiv_id": "2610.02387v2",
+    "url": "http://arxiv.org/abs/2610.02387v2",
+    "pdf_url": "https://arxiv.org/pdf/2610.02387v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "In every fast nearest-neighbor index, recall is measured, never predicted: each operating point is tuned by serving it against ground truth. SOLO is an index whose recall is computed from the index itself, before any query is served. SOLO is an inverted file whose vocabulary is a random sample of the database. Each object's $k_b$ nearest sample points are stored once, ranked; at serve time an object is posted under the first $b \\le k_b$ of them, and a query scans the lists of its $k_s$ nearest sample points exhaustively, with the true distance. Recall depends on the product $b \\cdot k_s$ (an equal-work law), so the search-side $k_s$ compensates for a small $b$ with no rebuild. There is no beam, vote or pruning bound, so a true neighbor is missed only if it shares no sample point with the query -- a membership event decided by stored integers, not by a search. Recall is therefore a count: one ground-truth pass over a sample of the operator's queries certifies every $(b, k_s)$ at once, with nothing served. The certificate matches served recall to four decimals from $10^6$ to $10^9$ objects, including 768-dimensional text embeddings under inner product with shifted queries. No graph index has an analogous object. The rest is the same rule applied recursively: a list that outgrows a bound is sampled and split like the database, and so is the vocabulary itself, which is what drives resident memory down. Deep-100M is served at recall 0.9977 from 1 GB of enforced resident memory, Deep-1B at 0.9925 from 96 MB. Inserts are one search, deletes are exact, and throughput reaches $1.8\\times$ a tuned HNSW at $10^8$. Every number is reported against HNSW, DiskANN, GRAFT, NAPP, misi, SPANN, ScaNN and RaBitQ on the same hardware and ground truth.",
+    "code_links": [
+      "https://github.com/zevahcle/SOLO"
+    ],
+    "comment": "31 pages. v2: journal version. Rewritten for readability; adds a self-contained explanation of the recall certificate , the resident-memory law as its own section, ScaNN and RaBitQ arms in the capped table, and the 8-bit router served end to end at 10^9. Code and manifests: https://github.com/zevahcle/SOLO"
+  },
+  {
+    "title": "Argo-Bench: Evaluating Data Agents on Enterprise-Scale Workflows",
+    "authors": "Gabriel Tomitsuka, Arman Raayatsanati, Emma Xing, Duke Gand, Joseph J Ma",
+    "published": "2026-10-01",
+    "arxiv_id": "2610.02122v1",
+    "url": "http://arxiv.org/abs/2610.02122v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.02122v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Real-world enterprise data science and analytics workflows require reasoning across dozens of tables, performing statistical analyses, and acting on the results. Established text-to-SQL benchmarks evaluate query generation alone, and audits have found their answer keys frequently wrong. Because real enterprise warehouses are too sensitive to release, these benchmarks are built on public datasets where a business event fits in a single table. We introduce Argo-Bench, an evaluation framework comprising 210 data science and analytics tasks. Drawing on public data, peer-reviewed industry literature, and regulatory filings, we simulate a food delivery platform in New York City at true scale, with 81 million orders in 2024, grounded economics, fraud patterns, and marketplace incentives. We export this world to an ERP warehouse of 235 tables and 7.5 billion rows, modeled on the Oracle E-Business Suite schema. The simulator's ground-truth state is withheld from the warehouse the agent sees, so tasks require reconstructing facts by navigating the warehouse before acting on them. Argo-Bench goes beyond text-to-SQL: the agent files actions such as banning fraudulent accounts, allocating courier incentive budgets, or issuing back pay, and the grader scores each by its consequences in the simulator. Every task has an executable reference solution that demonstrates solvability using only the warehouse. The strongest of 14 frontier and open-weight models scores 95 or higher on only 34.8% of tasks and averages 59.5 points. We hope Argo-Bench drives progress toward agents that understand, navigate, and act within real data environments.",
+    "code_links": [
+      "https://github.com/TextQLLabs/Argo-Bench"
+    ],
+    "comment": "41 pages, 4 figures, 18 tables. Code: https://github.com/TextQLLabs/Argo-Bench. Data: https://huggingface.co/datasets/textql/Argo-Bench. Website: https://argo-bench.com"
+  },
+  {
+    "title": "A High-Density EEG Dataset for Stimulus-Driven Auditory Attention",
+    "authors": "Ruofan Yan, Na Lu, Shu Peng, Wenlong You, Zhige Chen, Yuxuan Yan, Yan Liu, Kay Chen Tan, Jibin Wu",
+    "published": "2026-10-01",
+    "arxiv_id": "2610.01303v1",
+    "url": "http://arxiv.org/abs/2610.01303v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.01303v1",
+    "category": "databases",
+    "primary_category": "q-bio.NC",
+    "abstract": "Stimulus-driven auditory attention determines which sound gains priority when multiple sources compete without an explicit listening goal, yet most computational studies focus either on acoustic salience or on decoding predefined attended targets. This study investigates instruction-free auditory competition using the Stimulus-driven Auditory Attention (SAAD) paradigm and develops a neurophysiologically informed framework that integrates stimulus-derived sound priority with trial-specific EEG evidence. Behavioral analysis using a Bradley--Terry model showed that sound priority estimated from previous competitions generalized to unseen sound pairings, improving held-out prediction from an AUC of 0.577 to 0.718. EEG analysis further revealed mid-to-late centro-temporal lateralization associated with the reported selection side, with neural information remaining predictive beyond acoustic asymmetry. Guided by these findings, the proposed model first estimates a latent priority for each competing sound and forms relative stimulus evidence from their difference. A multi-scale EEG pathway with complementary signed and power-based readouts then extracts trial-specific neural evidence, which is incorporated through gated decision-level integration. The framework is evaluated using mirror-constrained and pairing-held-out protocols, together with representative acoustic, EEG, multimodal baselines, and systematic ablations. The results support a computational account in which spontaneous auditory selection reflects the interaction between generalizable stimulus priority and trial-specific neural variability.",
+    "code_links": [
+      "https://github.com/yanruofan628/saad-preprocessing"
+    ],
+    "comment": "12 pages, 5 figures, 3 tables.Dataset available at at https://zenodo.org/records/20557225. Code available at https://github.com/yanruofan628/saad-preprocessing"
+  },
+  {
+    "title": "Fixing the Fixpoint: A Formal Theory of Convergence Detection for Incremental Recursive Computation",
+    "authors": "Chengxi Yang, Tej Chajed, Thomas Reps",
+    "published": "2026-09-30",
+    "arxiv_id": "2610.00530v1",
+    "url": "http://arxiv.org/abs/2610.00530v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.00530v1",
+    "category": "databases",
+    "primary_category": "cs.PL",
+    "abstract": "Modern incremental computation theories like DBSP have enabled efficient incrementalization of general recursive computations. To do so, they require a runtime Fixpoint Detection (FPD) mechanism to detect whether an iterative computation has reached the fixpoint and thus should terminate. However, we show that the commonly suggested \"FirstZero\" strategy is unsound even in naturally arising cases, and that exact FPD is impossible for arbitrary DBSP circuits with expressive primitive nodes. This issue reveals a fundamental gap between the mathematical specification and implementations of such theories. To fill this gap, using DBSP as a core calculus, we develop a formal theory of convergence detection. Within this theory, we define internal convergence (IntConv) as a declarative criterion corresponding to the internal-state-stability strategy used by practical implementations, and prove that IntConv is a sufficient condition for external convergence. We then define the state fixpoint (StFP) predicate and a sound and complete StFP detector. Combining the StFP detector with fixed-input and zero-output checks yields a sound and complete IntConv detector. Moreover, for a large class of useful circuits (programs) including Datalog queries, nested while queries, and their incrementally optimized versions, we show that IntConv is not only sound but also complete (meaning any convergence in the theory implies the convergence in our criterion). As a result, our theory provides semantic guarantees for convergence detection on all these circuits. Our results are formally verified in Lean, with the formalization available at https://github.com/Arcadia-Y/fixing-the-fixpoint/.",
+    "code_links": [
+      "https://github.com/Arcadia-Y/fixing-the-fixpoint"
+    ],
+    "comment": null
+  }
+]
