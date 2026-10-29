@@ -1,0 +1,378 @@
+[
+  {
+    "title": "Can Complementary Signals Bridge Similarity Islands? Manifold-Augmented Graph Embedding for Multimodal Recommendation",
+    "authors": "Zhenye Yang, Jinpeng Chen, Wenbo Fu, Jun Ma, Huan Li, Qimin Zhou, Tao Wang, Li Sun, Senzhang Wang",
+    "published": "2026-10-27",
+    "arxiv_id": "2610.37409v1",
+    "url": "http://arxiv.org/abs/2610.37409v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.37409v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Multimodal Recommender Systems (MMRS) leverage rich item features to mitigate data sparsity, yet similarity-driven graph construction and propagation can favor semantically similar substitutes over functionally related complements. When behavioral associations connect semantically distant items, complementary signals can remain geometrically isolated, yielding fragmented \"Similarity Islands\" and semantic drift when standard propagation is applied. To overcome these limitations, we propose MAGE (Manifold-Augmented Graph Embedding), a framework for personalized multimodal ranking that decouples complementarity modeling into offline geometric warping and online topological propagation. The offline phase enhances item representations by extracting complement-aware residual directions via a Soft Conceptor mechanism and injecting them under a local gap-preserving constraint, incorporating co-purchase evidence while controlling the magnitude of geometric perturbation. Synergistically, the online phase employs an asymmetric dual-stream GNN that treats visual features as stable anchors and augmented textual features as flexible probes, fused through a self-calibrated cross-modal mechanism to reconcile shared semantics and modality-specific residual cues. Extensive experiments on four Amazon datasets show that MAGE yields consistent improvements over strong multimodal recommendation baselines. Together with the supporting analyses in the appendix, these results suggest that geometry-aware augmentation can alleviate the semantic mismatch that arises in complementary recommendation settings. Our code is available at https://github.com/Alex-bupt/mage.",
+    "code_links": [
+      "https://github.com/Alex-bupt/mage"
+    ],
+    "comment": "Accepted at NeurIPS 2026. 33 pages, including references and appendices"
+  },
+  {
+    "title": "AutoRSE: Evaluating LLM Agents as Recommendation Engineers for Self-Evolving Recommender Systems",
+    "authors": "Rui Tian, Yi Fang, Yejin Hua, Du Wang, Yuzhe Wang, Minxuan Shan, Zirui Ren, Xinyu Lin, Chongming Gao, Wenjie Wang, Fuli Feng",
+    "published": "2026-10-27",
+    "arxiv_id": "2610.37228v1",
+    "url": "http://arxiv.org/abs/2610.37228v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.37228v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender Systems Engineer Agents (RSE-Agents), which use LLM-based agents to autonomously improve recommendation algorithms, are emerging as a promising paradigm. However, their capabilities and limitations remain poorly understood due to the lack of a unified, standardized evaluation framework and systematic trajectory-level analysis. To address this gap, we introduce AutoRSE, an evaluation framework spanning six representative industrial-grade recommendation tasks, and conduct a large-scale empirical study of three frontier LLMs across three widely used agent harnesses. Our results show that RSE-Agents consistently enhance the performance of backbones on five of the six tasks, with an average relative improvement of 16.1%, indicating that they can already autonomously improve recommendation performance. However, trajectory-level analysis also reveals that current RSE-Agents function primarily as engineering optimizers rather than algorithmic improvers: their gains are largely driven by hyperparameter tuning, training strategies, and model ensembling, while genuine algorithmic innovations are rare. Since the largest gains in recommender systems often stem from algorithmic advances, this behavior underscores a fundamental limitation of current RSE-Agents. To probe this limitation, we perform idea-injection experiments and show that agents equipped with innovative ideas from frontier research or human experts achieve substantially larger improvements than those relying on self-generated ideas. These results suggest that idea generation is a central bottleneck of current RSE-Agents, highlights a key direction for the future recommendation system research. Our implementation is publicly available on GitHub: https://github.com/Ray-Tiann/AutoRSE.",
+    "code_links": [
+      "https://github.com/Ray-Tiann/AutoRSE"
+    ],
+    "comment": "12 pages, 7 figures. Code: https://github.com/Ray-Tiann/AutoRSE"
+  },
+  {
+    "title": "Lossless Compression of Proximity Graph Indexes for Efficient Approximate Nearest Neighbors Search",
+    "authors": "Francesco Benocci, Leonard Dahlmann, Francesco Gargiulo, Tobias Heuer, Silvio Martinico, Franco Maria Nardini, Cosimo Rulli, Rossano Venturini",
+    "published": "2026-10-27",
+    "arxiv_id": "2610.37176v1",
+    "url": "http://arxiv.org/abs/2610.37176v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.37176v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Graph-based Approximate Nearest Neighbor (ANN) indexes, such as HNSW, are the backbone of modern vector search. However, their massive memory footprint creates a severe infrastructure bottleneck. While vector quantization is widely adopted to reduce the memory required to store data vectors, the graph's edge structure increasingly dominates total memory usage. Compressing these adjacency lists for online search presents a critical system challenge: because decompression occurs during query processing, i.e., while navigating the graph, memory savings cannot come at the expense of query latency. In this paper, we present a compression technique explicitly tailored for live HNSW routing. By applying offline graph permutations to artificially induce structural locality, we enable the use of SIMD-accelerated integer compressors, such as Stream VByte, for rapid on-the-fly decompression. Evaluated across diverse real-world workloads, we significantly outperform the current state of the art in both compression ratio and query latency. Our experimental results show that we achieve compression ratios up to 52.7% with negligible penalties in latency compared to the uncompressed baseline. Furthermore, our technique has been effectively deployed in production at eBay, achieving up to 44.3% reduction in edge storage with no degradation in query latency.",
+    "code_links": [
+      "https://github.com/TusKANNy/kannolo",
+      "https://github.com/tusKANNy/papers_reproducibility"
+    ],
+    "comment": "7 pages, 5 figures, Accepted at CIKM 2026. Code: https://github.com/TusKANNy/kannolo. Reproducibility: https://github.com/tusKANNy/papers_reproducibility/tree/main/cikm2026"
+  },
+  {
+    "title": "Tessera: Structure-Completed Evidence Units for Web Retrieval-Augmented Generation",
+    "authors": "Peichun Hua, He Sun, Zirui Zhuang, Qi Qi, Yiming Qiu, Shinan Liu, Yunming Xiao",
+    "published": "2026-10-27",
+    "arxiv_id": "2610.37080v1",
+    "url": "http://arxiv.org/abs/2610.37080v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.37080v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Web retrieval-augmented generation (RAG) splits a page into fixed-size text chunks or, in recent visual pipelines, screenshot tiles, and the retrieved item serves at once as the unit of indexing, ranking, and reading. We trace answer evidence from source HTML to reader input over the full English Wikipedia and find that this coupling loses evidence in text and screenshot pipelines alike: evidence present in the source page often fails to reach the reader intact, particularly structured content such as tables and infoboxes, which chunking separates from the headers and context that give it meaning. Stronger extraction, context expansion, and larger reader budgets leave the loss in place. We present Tessera, a training-free evidence delivery layer that decouples what a pipeline retrieves from what its reader reads. Given the pages behind any ranked list, Tessera rebuilds their HTML into fine-grained evidence units, each completed with its page title, section path, and table headers, selects the units relevant to the query, and packs them into the reader context at an unchanged token budget. The index, the retriever, and the reader stay as they are, so Tessera applies to text, screenshot, and agentic pipelines. Across three question answering benchmarks, Tessera improves answer accuracy by 5 to 6 points on text and screenshot pipelines, consistently across readers, retrievers, and reader budgets, and outperforms strong HTML-aware and structure-aware RAG baselines under matched budgets. The gains carry over to multi-step agentic search. Our code is publicly available at https://github.com/sarendis56/Tessera.",
+    "code_links": [
+      "https://github.com/sarendis56/Tessera"
+    ],
+    "comment": "13 pages, 7 figures, 17 tables"
+  },
+  {
+    "title": "Do We Need an LLM to Know Why Sources Conflict? Decision Models for Knowledge-Conflict Typing in RAG",
+    "authors": "Parv Khatri, Harshul Jain, Mehak Kapoor, Tanya Sah",
+    "published": "2026-10-27",
+    "arxiv_id": "2610.36915v1",
+    "url": "http://arxiv.org/abs/2610.36915v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.36915v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "When the sources retrieved for a query disagree, the right response depends on why they disagree: a question with several valid answers, a contested topic, stale information and a false source each call for different behaviour. Cattan et al. (2025) showed that telling a generator the conflict type improves its responses by about 24 points, but that predicting the type is hard even for frontier LLMs. We study whether typed decision models, which return probabilities over fixed options in a single forward pass instead of generating text, can do this classification fast and cheaply. Using the CONFLICTS benchmark and the original paper's prompt verbatim, we evaluate all 11 decision models served by one commercial inference gateway, from 7 providers, against Gemini models on identical inputs. Asked directly, the decision models reach 50.0--67.0% accuracy; 10 of the 11 match or exceed Gemini 2.5 Flash, the paper's model (61.3%), at 4--39x lower billed cost (2 were free) and 2.6--6.0x lower latency. The current Gemini 3.8 Flash (70.0%) is significantly more accurate than 8 of them, but sending each decision model's least confident quarter of queries to it gives a cascade statistically tied with it for 8 of the 11, at 25--37% of its cost. End to end, answers generated with the types of 10 of the 11 follow the expected behaviour as often as with the LLM's types. Decomposing the taxonomy into yes/no questions lowers accuracy for every model, and a repair fitted on one model does not transfer. Pre-specified diagnostics show that dates play no measurable role and that sensitivity to source order varies widely between models. Decision models detect a planted false source less reliably than the LLM as hard labels, but their probabilities still separate planted from clean sources. We release code, prompts and all model outputs at https://github.com/Parv17k/decision-models-conflict-typing.",
+    "code_links": [
+      "https://github.com/Parv17k/decision-models-conflict-typing"
+    ],
+    "comment": "15 pages, 2 figures, 8 tables. Code, prompts and all model outputs: https://github.com/Parv17k/decision-models-conflict-typing"
+  },
+  {
+    "title": "CCP-DP: Cross-cluster context-guided phase dynamic programming for DNA storage sequence reconstruction",
+    "authors": "Zixin Zhang, Guanjin Qu, Huaming Wu",
+    "published": "2026-10-27",
+    "arxiv_id": "2610.36559v1",
+    "url": "http://arxiv.org/abs/2610.36559v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.36559v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Motivation: DNA data storage offers high information density and long-term stability, but accurate sequence reconstruction remains challenging under limited sequencing coverage and strong insertion, deletion, and substitution (IDS) noise. Existing reconstruction methods mainly rely on local evidence within individual read clusters. When sequencing coverage is low or indel-induced phase shifts become pronounced, such local evidence may be insufficient to distinguish closely competing candidate sequences.\n  Results: We present Cross-Cluster Context-Guided Phase Dynamic Programming (CCP-DP), which uses dataset-level cross-cluster information to complement cluster-local evidence and selectively refines ambiguous provisional consensuses. Under the main benchmark settings, CCP-DP achieved exact reconstruction rates of 95.36%-99.98% and outperformed existing methods on multiple datasets. At $5\\times$ coverage, CCP-DP improved exact reconstruction by 6.2-17.5 percentage points over the stronger of BBS and CPL across the tested IDS conditions, while maintaining low reconstruction error and computational overhead. Overall, CCP-DP introduces cross-cluster shared information as a complementary source of evidence for DNA sequence reconstruction under challenging conditions.\n  Availability: Source code is available at https://github.com/ZixinZ3899/CCP-DP.",
+    "code_links": [
+      "https://github.com/ZixinZ3899/CCP-DP"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Do Similarity Measures Measure Similarity? How User Activity Creates Phantom Correlation in Recommender Systems",
+    "authors": "Marco Favier, Noah Daniëls, Jens Leysen, Sander Marinus, Bart Goethals",
+    "published": "2026-10-26",
+    "arxiv_id": "2610.35765v1",
+    "url": "http://arxiv.org/abs/2610.35765v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.35765v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Item-item similarity is one of the oldest and most foundational signals in recommender systems: two items are assumed to be similar when the same users consume them. Despite the sparsity and scale of interaction data, the implicit assumption across the field is that item co-occurrence reflects genuine shared preference, capturing what users like together. In this paper, we demonstrate that a substantial fraction of observed item-item similarity is an artifact of variance in user activity rather than shared taste. Even if every user consumed items completely independently, differing only in their total consumption volume, standard similarity measures still detect strong associations between items. We term this phenomenon phantom correlation: spurious item association that emerges strictly from heterogeneous user activity in the complete absence of preference structure. Starting from minimal formal assumptions, we show that independent consumption under varying activity is described by a Rasch model, and we derive how the resulting association depends on item popularity for each similarity measure. By comparing our theoretical baseline against real-world benchmark datasets, we reveal the extent to which popular similarity measures reflect phantom correlation, which bears on how item co-occurrence is interpreted and used in collaborative filtering.",
+    "code_links": [
+      "https://github.com/Mfavier91/Phantom-Correlation"
+    ],
+    "comment": "11 pages, 1 figure, 3 tables. Code: https://github.com/Mfavier91/Phantom-Correlation"
+  },
+  {
+    "title": "HARP-LoRA: Hierarchy-Conditioned Rank Projection for Low-Rank Adaptation in Scientific Table Understanding",
+    "authors": "Hossein Sholehrasa, Mohammadhossein Amini, Doina Caragea, Remya Ampadi Ramachandran, Dan Wu, Zihang Shi, Zelin Li, Lindsey Hulbert, Eder Martinez, Xuan Xu, Majid Jaberi-Douraki",
+    "published": "2026-10-25",
+    "arxiv_id": "2610.34589v1",
+    "url": "http://arxiv.org/abs/2610.34589v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.34589v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Tabular data is widely used in scientific applications, where complex layouts, including multi-level headers, merged cells, captions, and footnotes, make information extraction difficult. This is particularly important in pharmacokinetics (PK), where values must be correctly associated with the drug, species, dose, administration route, unit, and experimental condition. Parameter-efficient fine-tuning methods such as Low-Rank Adaptation (LoRA) reduce adaptation cost but do not explicitly incorporate relationships between table values and surrounding headers. We introduce HARP-LoRA, a hierarchy-conditioned rank projection method for low-rank adaptation in scientific table understanding. HARP-LoRA extends projected LoRA by constructing token-specific intrinsic representations from the row- and column-header hierarchies of each data token. These representations condition the low-rank down-projection, incorporating hierarchical context while keeping the pretrained model and random projection tensors frozen. We evaluate HARP-LoRA on 950 manually annotated PK tables from 587 scientific articles and on WikiTableQuestions (WikiTQ) using Llama~3.2 3B, Llama~3.1 8B, and Gemma~3 27B. With Llama~3.1 8B, HARP-LoRA achieves a PK F1-score of 57.64\\% and WikiTQ accuracy of 53.15\\%, improving over LoRA by 1.42 and 6.56 points, respectively. With Gemma~3 27B, it achieves the best PK F1-score of 70.63\\% and WikiTQ accuracy of 56.87\\%. These results use only 172K, 197K, and 547K trainable parameters, far fewer than LoRA and TableLoRA. Overall, conditioning lightweight adapters on table-header hierarchies improves extraction from scientific tables and reasoning over flatter general-domain tables while maintaining parameter efficiency. Code is available at: https://github.com/hosseinsholehrasa/HARP-LoRA",
+    "code_links": [
+      "https://github.com/hosseinsholehrasa/HARP-LoRA"
+    ],
+    "comment": null
+  },
+  {
+    "title": "The Price of Scale in Proactive Memory Recall",
+    "authors": "Yichuan Chen, Xin Wang",
+    "published": "2026-10-25",
+    "arxiv_id": "2610.34507v1",
+    "url": "http://arxiv.org/abs/2610.34507v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.34507v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "A long-lived assistant that brings up memories without being asked must decide at every turn whether anything in its store is worth an interruption. We show that this decision is a multiple-testing problem whose difficulty grows with the store size $N$. On streaming replays of LongMemEval and LoCoMo, a similarity threshold tuned to 5% false alarms at $N=8$ reaches 87-100% at $N=2048$, across embedding models and for explicit and implicit cues; LLM judges show the same growth from a lower base. We prove that a gate with false-alarm rate $α$ operates at a per-item false-positive rate of about $-\\ln(1-α)/N$, which pins its hit rate to the far left of the single-comparison ROC curve and, under regular variation, makes it decay as a power of $N$ with an explicit constant. The resulting prediction matches the hit rate of a per-$N$ oracle threshold to within one percentage point. The analysis explains why lexical and semantic channels need thresholds growing like $\\ln N$ and $\\sqrt{\\ln N}$, and why per-cue normalisation roughly doubles the hit rate at matched false alarms. A cue-swap conformal gate, which compares the current cue with the user's other cues on the same store, needs no labels and has a finite-sample false-alarm guarantee under exchangeability; on LongMemEval it holds false alarms near 5% at the hit rate of a label-tuned threshold. Three annotators (Fleiss' $κ=0.63$) find that about nine in ten false alarms are genuine interruptions. Code and data: https://github.com/RiverChenStillCompiling/price-of-scale",
+    "code_links": [
+      "https://github.com/RiverChenStillCompiling/price-of-scale"
+    ],
+    "comment": "14 pages, 4 figures, 2 tables. Code and data: https://github.com/RiverChenStillCompiling/price-of-scale"
+  },
+  {
+    "title": "Recovering Business Rules as Cascade Lookups for Enterprise Field Prediction",
+    "authors": "Changxu Duan",
+    "published": "2026-10-25",
+    "arxiv_id": "2610.34258v1",
+    "url": "http://arxiv.org/abs/2610.34258v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.34258v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Enterprise sales-order systems rely on manually maintained configuration rules to determine fields such as payment terms, shipping points, and sales ownership. When these rules are incomplete or stale, operators must enter values by hand, and downstream errors spread into billing, logistics, and reporting. This paper studies whether missing or outdated rules can be recovered from historical transactions instead of being relearned as opaque statistical patterns. We introduce a knowledge-graph-guided workflow in which an LLM agent proposes candidate business keys, meaning column combinations such as customer and document type, validates them through SQL profiling, and compiles the resulting evidence into deterministic cascade lookups. The LLM is used only during offline rule discovery. At inference time, prediction is a transparent key lookup with no model-serving requirement. Experiments on enterprise sales-order prediction and public relational benchmarks show that cascades are most effective when fields follow stable business rules, while learned graph models remain preferable when prediction depends on temporal or neighborhood patterns. Drift analysis further turns residual errors into diagnostics for configuration maintenance. Code and data: https://github.com/Fireblossom/CascadER.",
+    "code_links": [
+      "https://github.com/Fireblossom/CascadER"
+    ],
+    "comment": "Accepted at ECML PKDD 2026 Applied Data Science Track"
+  },
+  {
+    "title": "DyHist: Query-Aware Historical Dynamics Modeling for Temporal Knowledge Graph Extrapolation",
+    "authors": "Peiyuan Jiang, Yao Liu, Yubo Wen, Yanglei Gan, Lu Liu, Ruojie Zhang, Jiaye Yang, Yuewei Xue, Jiaya Deng, Xiaogu Guo, Qiao Liu",
+    "published": "2026-10-24",
+    "arxiv_id": "2610.33473v1",
+    "url": "http://arxiv.org/abs/2610.33473v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.33473v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Temporal Knowledge Graph (TKG) extrapolation aims to predict future facts from observed historical events. Existing methods usually achieve this goal by jointly modeling local historical evolution and long-range historical contexts. First, local evolution modeling often summarizes local history into an overall evolving representation, where query-relevant local deviations may not be sufficiently exploited as useful predictive features. Second, existing long-range history modeling often treats historical recurrence as a stable cue, while overlooking that its reliability may vary across relations and recent contexts. To address these issues, we propose DyHist, a query-aware historical dynamics modeling framework for TKG extrapolation. DyHist captures local dynamics by separating recent evidence from medium-range contexts and explicitly modeling their query-relevant deviations as predictive features. It further uses a relation-aware historical prior to calibrate candidate scores with time-decayed support, recent trends, and relation-specific strength, enabling recurrence signals to contribute differently across relations and recent contexts. Experiments on four benchmarks show that DyHist achieves the best MRR against recent baselines. Code is available at https://github.com/PANPANKK/DyHist.",
+    "code_links": [
+      "https://github.com/PANPANKK/DyHist"
+    ],
+    "comment": null
+  },
+  {
+    "title": "How Much Fresh Data Should CTR Recalibration Use? A Temporal Evaluation of Post-hoc Calibration",
+    "authors": "Rui Liu",
+    "published": "2026-10-23",
+    "arxiv_id": "2610.33168v1",
+    "url": "http://arxiv.org/abs/2610.33168v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.33168v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Offline evaluation of click-through rate (CTR) models still defaults to random splits, although deployed models score future traffic and downstream systems consume calibrated probabilities. On Avazu (40.4M impressions) we train logistic regression (LR), DeepFM, and DCN-v2 under two rolling temporal origins and a random split, three seeds per arm, and recalibrate each test day with Platt scaling and isotonic regression fitted on the preceding hours. At origin 1's nearest test day, random splits report LR's expected calibration error (ECE) at 55-62% of the temporal value in every seed (the deep models' ratio is seed-unstable), and no model's ECE is monotone in temporal distance. With a 6-hour fitting slice, recalibration removes up to 61% of ECE in badly miscalibrated cells but increases it in about a third of applications (14-17 of 48 across seeds). On fixed evaluation sets, a 12-hour slice cuts harm from 13-17 to 3-5 of 36 applications, and 24 hours raises it again. The 12-hour slice subsampled to the 1-hour slice's size (5% of the impressions; 20-25x faster to fit) recovers 88% of the full slice's gain, so impression count alone does not explain it. A slice-ECE gate shows no benefit out-of-origin, and in a simulated auction recalibration moves profit by only about -0.21% to +0.26%. Offline protocols should measure calibration temporally, over multiple origins and seeds; in this data, recalibration fitted on a wide time span beat the freshest few hours, which other logs must confirm.",
+    "code_links": [
+      "https://github.com/RuiLiu0129/ctr-recalibration-temporal"
+    ],
+    "comment": "10 pages, 3 figures, 6 tables. Code and per-cell results: https://github.com/RuiLiu0129/ctr-recalibration-temporal"
+  },
+  {
+    "title": "Every Edge Needs a Quote: Building a Quote-Grounded Knowledge Graph of Healthcare Software Adoption with Language-Model Agents",
+    "authors": "Juan Felipe Duran, Arthur Tobler, Martin Vallières",
+    "published": "2026-10-23",
+    "arxiv_id": "2610.32781v1",
+    "url": "http://arxiv.org/abs/2610.32781v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.32781v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Hospitals regularly buy software that clinicians and patients depend on. Because these purchases are costly, hard to reverse and can affect patient care, buyers look for evidence of which peer institutions already use a product and which systems it connects to. This evidence is public but scattered across vendor websites, press releases and third-party pages. Language-model agents can now collect it at low cost, but the correctness of the extracted claims is difficult to establish, and a wrongly listed customer can mislead buyers and misrepresent an organisation. We present a pipeline that builds a knowledge graph of customer and integration relations from the open web under one rule: every edge must be supported by a verbatim quote from its source page. Pages come from a deterministic crawl of each vendor's site and a budgeted ReAct agent that searches the rest of the web. A permissive extractor proposes relations with quotes, and a layered grounding stage decides which to keep, using a referent step that reads the whole page when a quote names only one side, deterministic checks, and a panel of five model calls voting on nine criteria. On 61 vendors, the pipeline reaches 0.94 precision and 0.71 recall against a page-level key covering the 6,428 candidate relations proposed by its extractor, whose verdicts were drafted by one model and re-checked with a second. Against the golden reference, the marketplace's own curated list, it scores lower, but 89% of the relations it keeps that the reference lacks are stated on a page. A confidence score built from the panel's votes keeps more correct relations than the fixed rule at the same precision, and reaches 0.90 precision at 0.90 recall. We also discuss how narrow, bounded model calls, string-matched evidence and voting address long-context degradation and run-to-run variance.",
+    "code_links": [
+      "https://github.com/MEDomicsLab/healthcare-agentic-kg"
+    ],
+    "comment": "19 pages, 3 figures, 9 tables. Code: https://github.com/MEDomicsLab/healthcare-agentic-kg"
+  },
+  {
+    "title": "SkillRep: Characterizing and Understanding the Representation Design Space of Agent Skill Retrieval",
+    "authors": "Tianyi Sun, Pengfei Yao, Yanze Wang, Hongda Chen, Yunyun Han, Jun Sun, Chuanrui Hu, Yafeng Deng",
+    "published": "2026-10-23",
+    "arxiv_id": "2610.32336v1",
+    "url": "http://arxiv.org/abs/2610.32336v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.32336v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieving the right skill from a large library is essential for LLM agents, yet requests and skills are written for different purposes and in different words. Existing retrievers narrow this request-skill gap with one or two representation choices each, so it is unknown whether their gains hold in combination. No prior work measures the gap itself, so it is also unclear which part of it each choice narrows. We define a representation design space by five choices -- encoder fine-tuning, query-side and document-side expansion, background projection and a lexical channel -- and evaluate them together for the first time, as modules of one retriever, SkillRep. With a 0.6B encoder and LLM expansion, SkillRep improves MRR@10 on SRA-Bench over the strongest same-size retriever by 7.02 points with the official skill pool and 8.79 with UniPool, a 111,247-skill pool we build from public registries, and is best on SkillsBench. The value of each choice depends on the others. Fine-tuning, for instance, reverses the ranking of the four training-free modules and turns them from complementary into overlapping. To understand why, we measure the gap with three quantities: background, the embedding component that does not separate skills; unsaid vocabulary, the gold skill's content a request leaves unsaid; and dilution, the information lost when a skill is encoded into a single vector. They show which part each module narrows and by what mechanism. This reveals that modules narrowing the same part compete for it, while those narrowing different parts complement each other.",
+    "code_links": [
+      "https://github.com/EverMind-AI/SkillCorpus"
+    ],
+    "comment": "12 pages, 3 figures. Code: https://github.com/EverMind-AI/SkillCorpus/tree/main/skillrep"
+  },
+  {
+    "title": "PersonalQuery-Benchmark:Evaluating Retrieval Robustness to Personalized User Expression Differences",
+    "authors": "Wenyu Liang, Hongzhi Yin, Tongtong Wu, Fan Liu, Kexin Dai, Weiqing Wang",
+    "published": "2026-10-23",
+    "arxiv_id": "2610.32164v1",
+    "url": "http://arxiv.org/abs/2610.32164v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.32164v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Existing personalized information retrieval methods mainly model differences in user needs through user preferences and query intent, while paying little attention to the personalized expression differences that arise when different users express the same retrieval need. Existing real query data typically lack stable user identities, long-term expression histories, and intent-matched counterparts, making it difficult to systematically evaluate the impact of personalized expression differences on retrieval outcomes. To this end, we propose PersonalQuery-Benchmark (PQB). PQB models personalized syntactic expression and personalized writing errors from users' historical texts, constructs personalized syntactic expression queries and personalized writing-error queries, and validates benchmark quality through LLM assessment and independent human evaluation. PQB covers three Amazon product domains with 6,516 query instances in total, and is evaluated on five retrieval models representing lexical, learned sparse, dense bi-encoder, late-interaction, and hybrid architectures, together with two LLM-based ranking models. Results show that even when the information need is held fixed, personalized expression differences still induce measurable ranking variation; different retrieval models exhibit clearly different sensitivities to syntactic variation and writing-error variation, while higher overall retrieval effectiveness does not necessarily correspond to stronger robustness against expression variation. PQB provides a new benchmark and evaluation framework for systematically studying personalized expression robustness. The associated code and dataset are available at the following address: https://github.com/cpxjazz123/PersonalQuery-Benchmark.",
+    "code_links": [
+      "https://github.com/cpxjazz123/PersonalQuery-Benchmark"
+    ],
+    "comment": null
+  },
+  {
+    "title": "MICE to Meet You: From Re-ranking Only to End-to-End Retrieval",
+    "authors": "Victor Morand, Yuxuan Zong, Mathias Vast, Josiane Mothe, Benjamin Piwowarski",
+    "published": "2026-10-22",
+    "arxiv_id": "2610.31932v1",
+    "url": "http://arxiv.org/abs/2610.31932v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.31932v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Late-interaction models offer state-of-the-art efficiency-effectiveness trade-offs for neural retrieval by enabling document representations to be pre-computed and efficiently indexed. Yet, their relatively simple interaction mechanisms, typically MaxSim, can limit their effectiveness compared to cross-encoders. MICE, a recently introduced re-ranking architecture, aims to combine cross-encoder-like effectiveness through expressive transformer-based scoring with reduced inference-time computation through document-side pre-computation. However, no practical way to store these document representations was explored. We address this limitation here and introduce MICE-P, the first end-to-end retrieval pipeline with MICE, based on PLAID to index the contextualized document token representations. We conduct a controlled comparison of MICE, ColBERT and cross-encoders by training comparable models using the Ettin Family under matched experimental conditions. Our results show that MICE-P defines a new class of retrieval architecture with an efficiency-effectiveness trade-off of its own: it matches late-interaction retrieval throughput while retaining the effectiveness of cross-encoders.",
+    "code_links": [
+      "https://github.com/xpmir/mice"
+    ],
+    "comment": "code: https://github.com/xpmir/mice"
+  },
+  {
+    "title": "What the Query Remembers: Query Abstraction Governs Lexical and Dense Retrieval of Classical Arabic Poetry",
+    "authors": "Omar Farouk Zouak, Selma Mani, Larbi Said Chikh, Raid Abderrezak Ouahioune",
+    "published": "2026-10-22",
+    "arxiv_id": "2610.31821v1",
+    "url": "http://arxiv.org/abs/2610.31821v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.31821v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "How well a poetry archive can be searched depends on what the user still remembers, not only on what the model understands. We show this for Classical Arabic poetry, benchmarking nine dense encoders and BM25 over two corpora, three indexing modes and two evaluation protocols. Which retriever wins is governed by how much of a poem's wording the query still carries. On tip-of-the-tongue queries BM25 leads every dense encoder, including an 8B state-of-the-art model (0.746 vs. 0.717 Recall@5); on abstract queries it falls to eighth out of ten (0.392 vs. 0.748). Editing the wording of the same queries shows that this ranking largely reflects query composition: adding one remembered half-verse raises BM25 by 38 points, rewriting the quoted words by hand leaves BM25 level with the 8B encoder, and BM25's sensitivity to remembered wording is significantly steeper than that of the strongest dense encoder. The same axis controls explanation augmentation, whose effect swings from +37 to -39 points. The mechanism splits by system type: lexical containment predicts BM25's behaviour, while embedding proximity predicts dense encoders. Finally, the field's two standard protocols, known-item retrieval and thematic relevance, dissociate on the same systems, a result reproduced by two blind human annotators and by two open-weights judges, one of them under a rubric with no literal-match criterion. A benchmark that reports one protocol, or one query register, can give a materially wrong picture. Code and data are available at https://github.com/Ellzo/what-the-query-remembers.",
+    "code_links": [
+      "https://github.com/Ellzo/what-the-query-remembers"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Recovering Business Rules as Cascade Lookups for Enterprise Field Prediction",
+    "authors": "Changxu Duan",
+    "published": "2026-10-25",
+    "arxiv_id": "2610.34258v1",
+    "url": "http://arxiv.org/abs/2610.34258v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.34258v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Enterprise sales-order systems rely on manually maintained configuration rules to determine fields such as payment terms, shipping points, and sales ownership. When these rules are incomplete or stale, operators must enter values by hand, and downstream errors spread into billing, logistics, and reporting. This paper studies whether missing or outdated rules can be recovered from historical transactions instead of being relearned as opaque statistical patterns. We introduce a knowledge-graph-guided workflow in which an LLM agent proposes candidate business keys, meaning column combinations such as customer and document type, validates them through SQL profiling, and compiles the resulting evidence into deterministic cascade lookups. The LLM is used only during offline rule discovery. At inference time, prediction is a transparent key lookup with no model-serving requirement. Experiments on enterprise sales-order prediction and public relational benchmarks show that cascades are most effective when fields follow stable business rules, while learned graph models remain preferable when prediction depends on temporal or neighborhood patterns. Drift analysis further turns residual errors into diagnostics for configuration maintenance. Code and data: https://github.com/Fireblossom/CascadER.",
+    "code_links": [
+      "https://github.com/Fireblossom/CascadER"
+    ],
+    "comment": "Accepted at ECML PKDD 2026 Applied Data Science Track"
+  },
+  {
+    "title": "TT-SAX: A Two-Track Time Series Symbolization for Natural Language Shape Querying",
+    "authors": "Zhao Tan, Xianglong Bao, Zhipeng Xi, Ming Jin",
+    "published": "2026-10-22",
+    "arxiv_id": "2610.30593v1",
+    "url": "http://arxiv.org/abs/2610.30593v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.30593v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Natural language querying for time series databases aims to let users find what they need in long histories of data by asking in plain language. Shape queries ask how a series moves. They are the main challenge of this task. Recent work makes them feasible by using symbolization as a bridge between the query and the long history. However, existing symbolizations were designed for compression, similarity indexing, or classification. What a symbolization should provide for natural language querying has not been systematically studied. We therefore examine the definitions of six classical symbolizations against this task and identify three limitations. (1) Direction is missing from the string, (2) direction is measured at too small a scale, and (3) the letters are arbitrary. Three design principles follow. We follow these principles and make a minimal redesign of SAX called TT-SAX (two-track SAX). The level letters stay. Each segment gains a trend letter. It is measured across neighboring segments rather than inside one, and graded to match the adjectives that queries use. We conduct extensive experiments on the public NLQTSBench benchmark, comparing TT-SAX with the six classical symbolizations across six LLMs. TT-SAX outperforms all six on shape queries, and ablations trace its gains back to the three limitations one by one. This paper is the first systematic study of time series symbolization with natural language querying as the design goal. It provides a foundation for future research on this task. Our code is available at https://github.com/Atlamtiz/tt-sax.",
+    "code_links": [
+      "https://github.com/Atlamtiz/tt-sax"
+    ],
+    "comment": "14 pages, 8 figures, 2 tables. Accepted at the Australasian Database Conference (ADC 2026). This is the submitted manuscript prior to peer review"
+  },
+  {
+    "title": "HCFM: Helmholtz Component Flow Matching for Time Series Anomaly Detection",
+    "authors": "Shyam Sundar Saravanan, Tie Luo, Sanjay Madria",
+    "published": "2026-10-18",
+    "arxiv_id": "2610.25059v1",
+    "url": "http://arxiv.org/abs/2610.25059v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.25059v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Flow Matching (FM) is an efficient simulation-free approach for training flow-based generative models, making it a promising foundation for scalable time-series anomaly detection (TSAD). However, standard FM learns a monolithic vector field in which nominal transport and local density-changing behavior are entangled. This creates a central challenge for TSAD; local expansion and contraction carry crucial anomaly-sensitive information, yet isolating this signal requires expensive Jacobian-trace estimation over the entire field. We propose \\emph{Helmholtz Component Flow Matching} (HCFM), an unsupervised TSAD framework that parameterizes the vector field prediction network with separate transport, compression, and residual heads. The transport head is constrained to be divergence-free, so divergence estimation is restricted to the compression head, while a lightweight residual head absorbs the remaining mismatch. This structured parameterization improves scalability and detection performance by separating volume-preserving nominal transport from density-changing compression, yielding cleaner anomaly signals from distinct deviations of nominal behavior. Experiments on large-scale univariate and multivariate TSAD benchmarks show that HCFM consistently improves detection accuracy while maintaining efficient inference compared with 16 baselines. The code is available at https://github.com/TrustAIoT/HCFM__time-series-anomaly/",
+    "code_links": [
+      "https://github.com/TrustAIoT/HCFM__time-series-anomaly"
+    ],
+    "comment": "To appear as a conference paper in ICDE 2027"
+  },
+  {
+    "title": "TurboProm: Low Cost and High Performance Metrics Observability at Scale",
+    "authors": "Milind Srivastava, Zeying Zhu, Peilin Xin, Yancheng Yuan, Zaoxing Liu, Vyas Sekar",
+    "published": "2026-10-10",
+    "arxiv_id": "2610.14483v1",
+    "url": "http://arxiv.org/abs/2610.14483v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.14483v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Many large enterprise and cloud deployments rely on metrics observability solutions (e.g., Prometheus) to monitor key performance indicators of system health (e.g., CPU, memory, network, app-level statistics). Monitoring and analyzing these metrics presents a significant challenge in terms of cost-latency tradeoffs at scale. Ideally, system operators would like immediately deployable and backwards compatible solutions to improve the cost-latency tradeoffs without significant impact on the fidelity of their observability applications. Unfortunately, existing solutions including state-of-art timeseries databases and custom approximate querying solutions fail on one or more aspects.\n  In this paper, we present the design and implementation of TurboProm, a backwards-compatible drop-in accelerator for metrics observability deployments. TurboProm recasts metrics analytics tasks using a semantic-preserving summary view rather than classical query-centric view. Instead of estimating query results on raw timeseries metrics data, TurboProm uses semantic-preserving summaries that enable high-fidelity analytics with significant cost-latency improvements. We present a practical implementation of TurboProm that can be retrofitted to any existing observability deployment. We evaluate TurboProm on diverse real and synthetic workloads against state-of-art solutions and show that it can provide significant reduction in query latency and cost. TurboProm is open-source at https://github.com/ProjectASAP/ASAPQuery.",
+    "code_links": [
+      "https://github.com/ProjectASAP/ASAPQuery"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Same Query, Different Answer: Run-to-Run Variance in Semantic Query Processing",
+    "authors": "Oktie Hassanzadeh, Dharmashankar Subramanian",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.13823v1",
+    "url": "http://arxiv.org/abs/2610.13823v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.13823v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Semantic query engines ask a large language model (LLM) to judge individual rows, and benchmarks compare these engines on the quality of a few executions at temperature 0. We measure how much another execution changes. We re-execute the text and tabular workloads of SemBench, LRO-Bench, and UDA-Bench through their own harnesses, log every one of 1.2 million model calls, and reanalyze SemBench's published executions. At temperature 0, between 0.07% and 10.2% of rows change their operator output over five executions, depending on the model, and up to 24.0% on one task. Plans amplify these changes exponentially in the number of rows an answer exposes, as a possible-worlds model predicts: on UDA-Bench, a few percent of extracted values change, but about two thirds of the answers do. In SemBench's published results, 21% of text results change quality between executions, including on engines whose plans are deterministic. Several per-query system comparisons, and 16 of 28 tests of LRO-Bench's implementation recommendations, are not settled by the executions the benchmarks run. Changing rows are rows on which models disagree with each other; identical requests within one execution disagree as often as across executions; and one execution's decision margin or reasoning length predicts which rows change. Voting reduces the variance but does not remove it, and a calibrated cascade keeps its guarantee while the rows it returns change. We derive reporting rules for benchmarks and design rules for engines.",
+    "code_links": [
+      "https://github.com/semviews/sqp-variance-study"
+    ],
+    "comment": "Code and data: https://github.com/semviews/sqp-variance-study"
+  },
+  {
+    "title": "Time-Varying Favorite-Longshot Bias in Polymarket Weather Markets",
+    "authors": "Shouchen Qiu, Huaijun Qiu",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.13593v1",
+    "url": "http://arxiv.org/abs/2610.13593v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.13593v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Prediction-market prices combine traders' judgments about future outcomes, but their errors may be concentrated in particular price ranges and change as settlement approaches. Prior cross-category evidence shows that Polymarket weather markets have larger pricing bias than other major categories, without separating low-price longshots from high-price favorites. This study compares the two ranges at different horizons in daily maximum-temperature markets. Event-level probability scores, cubic B-spline recalibration, and Buy-NO tests are used to examine the form and effect of the bias. Longshot overpricing mainly occurs at distant horizons, whereas favorite overpricing becomes much stronger during the final 1-12 hours and is nearly one order of magnitude larger. Event-level scores improve toward the daily temperature peak, while simple recalibration yields no statistically significant gains. The Buy-NO results in the corresponding time windows also show that the main pricing error is concentrated at the favorite end.",
+    "code_links": [
+      "https://github.com/ShouchenQiu/PolyWeatherData"
+    ],
+    "comment": "5 pages, 4 figures, 3 tables. Accepted at the IEEE ICDM 2026 Teen Research Symposium (Teen Track), Shenyang, China, November 2026. Code available at https://github.com/ShouchenQiu/PolyWeatherData"
+  },
+  {
+    "title": "CALQA: Conformal Screening of Forecast-Ensemble Configurations from One Mergeable State",
+    "authors": "Xiufeng Liu, Ruyu Liu, Yusen Liu, Huan Huo, Per Sieverts Nielsen",
+    "published": "2026-10-09",
+    "arxiv_id": "2610.13249v1",
+    "url": "http://arxiv.org/abs/2610.13249v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.13249v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "AutoML systems fit ensemble weights over model libraries; a search can score, per category, market or time pane, thousands of weightings of the quantile-averaged (Vincentized) ensemble for the narrowest conformally calibrated interval; exact calibration scores a group's rows per candidate. We present CALQA, a fixed-size integer aggregate per group and pane that stores histograms of normalised block scores at a net of weight vectors. One GROUP BY builds it; it merges by addition, retracts deletions by subtraction and scores any candidate without reading a row. We prove that its score never falls below the exact split-conformal shift and exceeds it by at most the net distance plus a grid gap; that coverage carries over to each fixed weight vector and, for i.i.d. blocks and up to a union-bound slack, to a searched weight vector deployed with the state's shift; and how small any such state can be. The state is thus a screen: it ranks all candidates, and exact recomputation re-checks the top 100. On five public panels (604 groups, 10,000 candidates each) this two-stage plan matches exact search on held-out blocks (99.95% of its Winkler score), 1.3-59 times faster. On two real panels of about $10^8$ rows (smart meters, retail sales) it is 44-54 times faster at 99.98-100.01% of that score and beats sample screens with the same re-check in regret at less total time. Picks deployed with their exact shift need a held-out coverage check. The state does not pay off for small or greedy searches, off-net weights at ample memory or full twelve-member support.",
+    "code_links": [
+      "https://github.com/xiufengliu/calqa"
+    ],
+    "comment": "17 pages, 5 figures. Extended version with full proofs. Code: https://github.com/xiufengliu/calqa"
+  },
+  {
+    "title": "Semantic Views: Certified Reuse of LLM Labels Across Semantic Queries",
+    "authors": "Oktie Hassanzadeh, Dharmashankar Subramanian",
+    "published": "2026-10-08",
+    "arxiv_id": "2610.12768v1",
+    "url": "http://arxiv.org/abs/2610.12768v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.12768v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Semantic query engines evaluate natural-language filters with a large language model, and every evaluation is a costly oracle call. Optimizers that reduce these calls face a dilemma: cascades that trust a cheap proxy miss their precision and recall targets on many queries, methods with finite-sample guarantees save little, and all of them discard the oracle's labels when the query ends. We present SemViews, a certified semantic filter that orders tuples by signals that cost no oracle calls (the labels that earlier queries left behind as semantic views, a local embedding, and a helper model's score), refines that order with labels it must pay for anyway, and certifies its answer with fresh stratified oracle samples. The answer meets user precision and recall targets with probability at least $1-δ$ for every workload and every catalog, so a stale or misleading view can cost oracle calls but never accuracy. On four workloads replayed against 725,000 recorded oracle labels, SemViews meets both targets on 99.63% of queries and saves 28%-45% of the oracle calls, whereas the only prior method in our study with the same guarantee needs 1.32x-1.71x as many calls. When a question returns in different words, views cut its calls by a further 27%-36%, with both targets met on at least 99.8% of such queries; similarity caches and entailment-based reuse meet them on only 17%-47%.",
+    "code_links": [
+      "https://github.com/semviews/lotus-semviews"
+    ],
+    "comment": "Code and data: https://github.com/semviews/lotus-semviews"
+  }
+]
