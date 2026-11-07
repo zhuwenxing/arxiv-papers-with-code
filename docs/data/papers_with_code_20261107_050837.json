@@ -1,0 +1,449 @@
+[
+  {
+    "title": "What Gets Hacked in a Collaborative Reward for LLM Recommenders: The Part That Does Not Depend on the User",
+    "authors": "Zhuangsheng Li, Liang Dong, Yu Wu, Dailin Li, Yu Xia, Yunhan C. Zhang, Rui Cai, Yi Wu, Julian McAuley",
+    "published": "2026-11-05",
+    "arxiv_id": "2611.07588v1",
+    "url": "http://arxiv.org/abs/2611.07588v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.07588v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Collaborative-filtering (CF) scores provide graded, personalized rewards for training large language model (LLM) recommenders through reinforcement learning. However, these rewards can cause exposure collapse: even though the CF model itself produces diverse top recommendations across users, an LLM optimized with its rewards concentrates on fewer items. We decompose each score into an item-mean component, the item's average CF score across user histories, and a residual component, the current user's score deviation from the average. Through controlled interventions, we identify the item-mean component as a contributor to exposure collapse. Accordingly, we propose two reward corrections: per-item centering removes each item's estimated mean score, while per-item standardization further rescales the residual using its estimated standard deviation. Experiments on two datasets with two identifier schemes show that both corrections substantially improve catalog coverage and exposure evenness. Compared with training on the uncorrected CF reward, our corrections increase the number of distinct items ranked first across users by up to $9.8\\times$, while maintaining comparable ranking accuracy. Code is available at https://anonymous.4open.science/r/LLM4Rec-CF-Bias-27EF/.",
+    "code_links": [],
+    "comment": null
+  },
+  {
+    "title": "MapHub: Daily Relevance Heatmaps of New arXiv Preprints for a Research Community",
+    "authors": "Kaili Cao, Camille Avestruz, Feige Wang",
+    "published": "2026-11-04",
+    "arxiv_id": "2611.07174v1",
+    "url": "http://arxiv.org/abs/2611.07174v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.07174v1",
+    "category": "information_retrieval",
+    "primary_category": "astro-ph.IM",
+    "abstract": "MapHub, the MIDAS arXiv Preprint Hub, assesses each day's new arXiv submissions for every participant in a research community, with a large language model reading each paper against portfolios built for the participants. It publishes the relevance scores, from 0 to 100, as a heatmap that shows whose work each paper touches. In the authors' blind ratings, the top 10\\% of papers by MapHub's scores held about 70\\% of the raters' own top 5\\%, pooled, against about a third for a text-matching baseline. About 6\\% of a day's astro-ph papers reach 30 for each participant, and one every three days reaches 60. MapHub runs on a standard Claude subscription and is designed to be useful for any field: https://github.com/kailicao/maphub-public.",
+    "code_links": [
+      "https://github.com/kailicao/maphub-public"
+    ],
+    "comment": "3 pages, 1 figure, submitted to RNAAS"
+  },
+  {
+    "title": "Signed but Steerable: Measuring and Closing the Text-Vector Integrity Gap in Offline Retrieval-Augmented Generation",
+    "authors": "Georgios Feretzakis, Alexandros Papaspyridis",
+    "published": "2026-11-04",
+    "arxiv_id": "2611.06498v1",
+    "url": "http://arxiv.org/abs/2611.06498v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.06498v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CR",
+    "abstract": "Offline retrieval-augmented generation (RAG) on edge devices is updated through signed knowledge packs that carry text and precomputed embedding vectors. A signature proves who published a pack, not that its vectors encode its text. We study this text-vector integrity gap. A verifier that recomputes vectors and accepts them within a cosine tolerance concedes a predictable share of queries to an attacker who controls the vectors: the hijack rate equals the distribution of angular retrieval margins at the tolerance (the margin law). Margins are small in five corpora and two embedding models, so an idealised tolerance at the level of floating-point noise leaves up to 5.5% of queries exposed (at most 1.2% in any corpus once exact duplicate documents are excluded), and a threshold calibrated from our CPU INT8-FP32 comparison of a small embedding model (at the empirical 0.1% quantile of honest cosines) leaves 98-100% exposed; on a Raspberry Pi 5 running a local language model, such an attack lowers correct answers from 0.75 to 0.39. Integrity audits of compressed vector stores fare no better: on a FAISS product-quantisation index over 57,638 documents, tampered vectors that all pass the audit put the attacker's document first for 25% of targets. Verifying quantisation codes instead, with ambiguity decided by the verifier, a calibrated guard band and canonicalisation, accepted every honest vector in our samples on three platforms and left the publisher no choice. We also show that common floating-point and dynamic-INT8 inference pipelines are not bit-reproducible across batch sizes or architectures, and report pre-registered negative results on abstention, context pruning and semantic screening. We release code and data.",
+    "code_links": [
+      "https://github.com/securagenai/signed-but-steerable"
+    ],
+    "comment": "20 pages, 2 figures, 7 tables. Code and data: https://github.com/securagenai/signed-but-steerable (DOI 10.5281/zenodo.23948839)"
+  },
+  {
+    "title": "Do Search-Augmented Recommenders Use the Latest Search Episode?",
+    "authors": "Jiandong Ding",
+    "published": "2026-11-04",
+    "arxiv_id": "2611.06044v1",
+    "url": "http://arxiv.org/abs/2611.06044v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.06044v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Search-augmented recommenders can use the latest search episode and earlier searches. We introduce FocalSwap to test how these inputs contribute to the next recommendation. For each recommendation, it changes the latest search slot or all search inputs while holding the target, candidates, pre-search history, and scorer fixed. It compares neutral masks with matched observed-search replacements, recording rank changes, RR gains relative to each control, and preference for the true focal search. A planted signal and GenSAR's current-query task confirm that the audit detects known input dependence. We evaluate behavioral and lexical evidence on KuaiSAR and Qilin, and recommendation checkpoints trained using the released SESRec and UniSAR implementations.\n  Across three independently trained UniSAR checkpoints, the estimated all-source benefit depends on the control. On the same 66,139 rows, replacing all search inputs with a neutral ID yields a positive signed contribution, whereas replacing them with category/profile-matched observed search sequences gives smaller estimates, with an interval below zero for one checkpoint. The paired RR gaps range from $+2.770 \\times 10^{-3}$ to $+6.604 \\times 10^{-3}$, and every adjusted interval is above zero. Neutral masks change 59.7-61.7% of target ranks, while matched replacements change 44.1-44.8%. The control contrast persists across five alternative donor assignments per checkpoint. Under the primary neutral-mask and category-matched controls, positive latest-slot contribution is not established in SESRec or UniSAR. These results show why masking evidence should be compared with observed-search replacements when attributing a benefit to broader search state or the latest episode.",
+    "code_links": [
+      "https://github.com/jdding/focalswap"
+    ],
+    "comment": "Accepted at WSDM 2027. Code: https://github.com/jdding/focalswap"
+  },
+  {
+    "title": "Toward a Compositional Knowledge Architecture for a Shared Organizational Cortex",
+    "authors": "Andrew Miracle, Phyl Georgiou, Christine Okoth, Ese Monday",
+    "published": "2026-11-03",
+    "arxiv_id": "2611.05753v1",
+    "url": "http://arxiv.org/abs/2611.05753v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.05753v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Organizations accumulate evidence in conversations, documents, decisions and relationships, but they act on interpretations: judgements assembled from several observations, resting on assumptions, and revised as circumstances change. Existing retrieval, knowledge graphs and agent memory keep the records and lose the interpretation. We propose a four-layer architecture, Signals, Domains, Claims and Dimensions, in which interpretations persist with their justifications and standing, a truth-maintenance network revises that standing as evidence changes, and validated, versioned Dimensions position interpretations on named axes. We call the result a shared organizational cortex. In a registered retrieval experiment, the Dimension term gains 0.028 nDCG@10 (p = 0.002). In system-level comparisons, the full retrieval configuration improves nDCG@10 by 0.081 over Signals-only and 0.053 over graph-augmented Signals-only retrieval (both reported p < 0.001). The architecture gives organizations a persistent, revisable basis for shared judgement.",
+    "code_links": [
+      "https://github.com/withrobinhq/geometric-knowledge-paper-evals"
+    ],
+    "comment": "25 pages, 10 figures, 10 tables. Evaluation and sources in https://github.com/withrobinhq/geometric-knowledge-paper-evals (tag registered-plan)"
+  },
+  {
+    "title": "HARP: Training-Free Dual-Profile Agentic Communication for LLM-Based Recommendation",
+    "authors": "Zhen Tao, Xun Zhou, Xuhui Chen, Ziyue Qiao, Qingqiang Sun",
+    "published": "2026-11-03",
+    "arxiv_id": "2611.05319v1",
+    "url": "http://arxiv.org/abs/2611.05319v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.05319v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "In LLM-based recommendation, memory acts as a user-level agent in a memory-augmented backbone. Yet users and items remain asymmetric: only the user is given a structured profile; it enters a bandwidth-limited reranker prompt; and it is frozen after warmup. We recast LLM-based recommendation as an agentic-communication process in four stages: BUILD a self-description, TRANSMIT it along the collaborative graph, UNDERSTAND the other side, and SYNC it from the next interaction. This formulation reveals three unresolved communication challenges: the item side never produces a comparable self-description (one-sided BUILD); profile-level signals enter only the bandwidth-limited reranker prompt rather than retrieval, where they would not compete for context tokens (prompt-trapped UNDERSTAND); and the user's description is frozen after warmup with no principled update rule (absent SYNC). We instantiate the missing stages as HARP (Homophily-aware Agentic Recommendation via dual Profiles), a training-free, three-operator addition to a frozen LLM backbone: a rule-extracted symmetric item profile (zero extra LLM calls), a channel-decomposable profile-level homophily H(phi_u, phi_i) consumed at retrieval time rather than inside the reranker prompt, and a single-pass reflective update realising in-context profile evolution without any gradient step. On four public benchmarks (Yelp, Books, MovieTV, Goodreads), HARP lifts Hit@1 over the strongest published baseline by 6.9%-24.0%, with family-wise Holm-corrected p < 1e-9 on every dataset. Ablations and a per-case attribution study show that the operators contribute complementary gains, with the retrieval-side gate as the main source; we also report the trade-off introduced by the reflective pass. We formulate agentic communication and provide a training-free instantiation. Code is available at https://github.com/Jove-Zhen/HARP.",
+    "code_links": [
+      "https://github.com/Jove-Zhen/HARP"
+    ],
+    "comment": "Accepted by NeurIPS 2026"
+  },
+  {
+    "title": "Factorized MLLM Embeddings for Composed Image Retrieval",
+    "authors": "WonJun Moon, Seongchan Kim, Dahun Kim, Seungryong Kim",
+    "published": "2026-11-03",
+    "arxiv_id": "2611.05193v2",
+    "url": "http://arxiv.org/abs/2611.05193v2",
+    "pdf_url": "https://arxiv.org/pdf/2611.05193v2",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Composed Image Retrieval (CIR) aims to retrieve a target image given a reference image and a modification text. Although recent approaches leveraging Multimodal Large Language Models (MLLMs) have shown significant progress, we argue that the MLLM's compositional understanding remains underutilized. This stems from directly mapping composed queries into a retrieval embedding via contrastive supervision alone, without explicitly resolving the intended visual modifications. In this work, we introduce Factorized MLLM Embeddings (FactEmbed), which decouples compositional query comprehension from building discriminative embeddings. Rather than directly projecting the composed query into a single embedding without internal reasoning, FactEmbed employs a set of factorized latents that simulate the intended visual modifications via an intermediate target imagination objective. This process encourages the latents to ground into target semantics before forming discriminative representations for retrieval. Subsequently, to propagate these factorized representations throughout the model for retrieval, we optimize a factor-level contrastive loss while distilling the decomposed representations into a deeper attention layer of the MLLM. Finally, for efficient inference, we retain the [EOS] token to establish a global-level embedding on top of these factorized latents, while we exploit the mean-pooled factorized latents to rerank a short candidate list at negligible cost, as both are produced by the same forward pass. Extensive evaluations demonstrate that FactEmbed outperforms prior works across CIR benchmarks.",
+    "code_links": [
+      "https://github.com/cvlab-kaist/FactEmbed"
+    ],
+    "comment": "Project page: https://cvlab-kaist.github.io/FactEmbed/, Code: https://github.com/cvlab-kaist/FactEmbed"
+  },
+  {
+    "title": "$τ$-Rec-Books: A Disclosure-Controlled Benchmark for Requirement Elicitation in Agentic Recommender Systems",
+    "authors": "Bharath Sivaram Narasimhan, Karthik R. Narasimhan",
+    "published": "2026-11-03",
+    "arxiv_id": "2611.04459v1",
+    "url": "http://arxiv.org/abs/2611.04459v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.04459v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "While conversational recommendation systems provide a more natural user interface, they face the challenge of progressively discovering a user's needs before they can recommend an item that satisfies them. To evaluate the ability of AI agents at this elicitation process, we introduce $τ$-Rec-Books, a benchmark that holds each user request fixed while varying only when the user reveals their requirements: all at the start (volunteer), one at the start and the rest when asked (mixed), or some never (hidden). A hidden requirement can be found only by proposing books and inferring it from the user's accept or reject verdicts. We generate 450 tasks over a catalog of 20,000 books from Wikidata, develop a rule-based simulated user to answer the agent, and score recommendations against catalog metadata without an LLM judge. Across four agents and two search interfaces, success rates fall for every agent and interface, on average from 0.975 (volunteer) to 0.756 (mixed) and 0.283 (hidden). Mixed tasks fail mainly because agents do not ask, and when told to ask, every agent reaches at least 0.931. On hidden tasks, most failures come from agents recommending a book they never proposed to the user. When told to propose first, agents only match a simple baseline that proposes popular books, and stay well below one that uses rejection to rule out possible requirements. We release the catalog pipeline, task generator, simulated user, validators, reference agents, and all agent traces at https://github.com/nbharaths/tau-rec/tree/main/data/tracks/books-wikidata-v2.",
+    "code_links": [
+      "https://github.com/nbharaths/tau-rec"
+    ],
+    "comment": "16 pages, 3 figures, 4 tables. Submitted to ECIR 2027 (Resource Track)"
+  },
+  {
+    "title": "DualEvolve: Dual-Level Self-Evolution of Mechanism and Orchestration for Recommendation",
+    "authors": "Tianqi Gao, Chenxu Wang, Wenxuan Yang, Yueqi Mou, Biao Tang, Ming Liu, Peng Yan",
+    "published": "2026-11-03",
+    "arxiv_id": "2611.04439v1",
+    "url": "http://arxiv.org/abs/2611.04439v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.04439v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems are widely used in e-commerce and content platforms, where improvement requires repeated model design, training optimization, and experimental validation. Large language model (LLM) agents increasingly automate this development cycle. Sustained autonomous improvement requires agents to improve both recommendation models and their development workflows. However, task-performance-driven approaches select updates mainly by candidates' final scores, without a separate optimization signal for experimentation quality. We therefore present DualEvolve, a dual-level framework that co-evolves recommendation mechanisms and agent orchestration toward recursive self-improvement. Inner evolution revises model and training code using task feedback to improve recommendation performance. Outer evolution scores the inner-loop experimental process, updates harness and skill rules using these scores and execution traces, and adjusts orchestration choices based on next-round scores to improve the quality of subsequent experiments. Experiments on MovieLens-1M and three Amazon Reviews 2023 subsets cover four recommendation methods and 16 settings. DualEvolve achieves higher test means than Base, OpenEvolve, and DeepEvolve in all 64 setting-metric comparisons, with macro-averaged relative gains over DeepEvolve of 7.6% (HR@5) and 9.0% (NDCG@5).",
+    "code_links": [
+      "https://github.com/ToAdventure/dualevolve"
+    ],
+    "comment": "12 pages, 4 figures, 15 tables. Tianqi Gao and Chenxu Wang contributed equally. Code: https://github.com/ToAdventure/dualevolve"
+  },
+  {
+    "title": "Modular and Efficient Approximate Nearest Neighbors Search with Vectorium and kANNolo",
+    "authors": "Silvio Martinico, Franco Maria Nardini, Cosimo Rulli, Rossano Venturini",
+    "published": "2026-11-02",
+    "arxiv_id": "2611.03927v1",
+    "url": "http://arxiv.org/abs/2611.03927v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.03927v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Approximate Nearest Neighbors (ANN) search over neural embeddings powers modern retrieval systems such as Retrieval-Augmented Generation. Embeddings come in three representations (dense, sparse and multi-vector), and efficient search combines an index structure, a similarity function and a quantization scheme. Existing libraries fix one combination, hard-code each one separately, or factor only one side of the problem, and none covers all three representations. We present Vectorium and kANNolo, two open-source Rust libraries that split this design space into a data-management layer and an indexing layer. Vectorium abstracts the vector, the distance function, the quantizer and the dataset independently, and provides 11 encoders, from 32-bit floats to sub-bit codes. On top of it, kANNolo implements Hierarchical Navigable Small-World (HNSW) graph and Inverted Vector File (IVF) indexes that are generic over representation, encoder and metric, and a two-stage index that composes any first-stage index with any rescoring dataset. Since every combination is specialized at compile time, this modularity adds no run-time overhead, and the resulting indexes reach state-of-the-art performance: our Product Quantization matches Faiss in accuracy at competitive speed, our RaBitQ and HNSW match or outperform their reference implementations, and our IVF outperforms Faiss. Against six dense and five sparse systems on seven public collections, our indexes give the best memory-throughput trade-off on dense data in 9 of 12 collection-accuracy pairs and perform well on out-of-distribution queries. On sparse data, the systems built on Vectorium lead on all three collections, with Seismic and SeismicWave the fastest and kANNolo's indexes the most compact.",
+    "code_links": [
+      "https://github.com/TusKANNy/papers_reproducibility"
+    ],
+    "comment": "39 pages, 11 figures, 17 tables. Submitted to Information Systems. Code and data: https://github.com/TusKANNy/papers_reproducibility/tree/main/information-systems-vectorium-kannolo"
+  },
+  {
+    "title": "From FAIR to AI-FAIR Metadata-First Infrastructure for AI-Enabled Science",
+    "authors": "Elizabeth G. Campolongo, Eric R. Sokol, Marty Downs, Gina Glenne, Gregory E. Maurer, Sydne Record, Dustin R. Rubenstein, Matthew J. Thompson, Christine Laney, Hilmar Lapp, Max Tarjan, Tanya Berger-Wolf",
+    "published": "2026-11-02",
+    "arxiv_id": "2611.03327v1",
+    "url": "http://arxiv.org/abs/2611.03327v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.03327v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Artificial intelligence (AI) technologies and their capabilities have advanced rapidly over the past few years, leading to widespread interest and adoption in the biological and ecological sciences. However, the data infrastructure and computational resources that provide the foundation for AI workflows in ecology and biodiversity science remain fragmented. Moreover, the flow of value remains largely unidirectional: data move from collectors, through repositories and aggregators into models, and finally to research products or management actions. The derived value, such as corrected taxonomies, annotations, quality flags, and insights, rarely returns to source communities. We propose an extension of the original FAIR principles to address the needs of AI-ready infrastructure: the AI-FAIR metadata criteria, which place AI-enabled science in the context of a bidirectional Question-Data-Model triangle. This framework is designed to facilitate large-scale content-based analysis across diverse collections and ensure that the scientists generating the data benefit from the AI-enabled advances built on their data. Alongside these criteria, we introduce an agentic evaluation workflow that both rates existing datasets on the AI-FAIR and traditional FAIR criteria and provides actionable feedback where critical metadata is missing or incomplete. This modular dataset evaluation tool, paired with a domain-appropriate checklist, translates these principles into a reusable assessment of machine-learning readiness, AI-readiness for specified tasks, traceability, and ethical and CARE-aligned stewardship. Through this approach we aim to create a community-informed system to close the model data loop, so that AI also enriches data to further enable scientific discovery.",
+    "code_links": [
+      "https://github.com/FAIR4AI-Bio/evaluator"
+    ],
+    "comment": "8 pages, 3 figures, Code available at: https://github.com/FAIR4AI-Bio/evaluator"
+  },
+  {
+    "title": "Dhārā Bench: An Evidence-Oriented Retrieval Benchmark for Indian Knowledge Systems",
+    "authors": "Avinash Holenarasipur Nagendra, Anand Kaniyaar Sriranga Prasad, Kousik Sarathy Sridharan, Mohan Raghavan",
+    "published": "2026-11-02",
+    "arxiv_id": "2611.03196v1",
+    "url": "http://arxiv.org/abs/2611.03196v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.03196v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Dhārā Bench is a retrieval benchmark for Indian Knowledge Systems (IKS), with 325 questions in 12 categories and 60,121 text chunks from 15 source groups. The categories were developed based on 4,500 questions submitted to the Dhārā application; the evaluation set combines corpus-aligned application queries with expert-contributed questions. The annotations comprise 7,578 question-chunk relevance links involving 6,847 distinct corpus chunks. For 34 composite and multi-hop questions, 401 conjugate groups specify alternative sets of passages that jointly support each question. Chunk identifiers and hierarchical references connect the judgments to their source texts. The paper describes corpus preparation, annotation, and validation, and reports a fixed BM25 baseline implemented with Pyserini with $k_1=0.9$ and $b=0.4$. Across all questions, BM25 achieves MRR@20 of 0.315, Recall@10 of 0.182, and nDCG@10 of 0.205. On the group-annotated subset, complete-evidence scores are CE_Recall@20 = 0.294 and CE_MRR@20 = 0.141. The category results expose particularly weak verse retrieval, while group scores reveal gaps between finding individual passages and completing their support. The corpus and evaluation code are available at https://github.com/Avinash2236/Dhara-Bench.",
+    "code_links": [
+      "https://github.com/Avinash2236/Dhara-Bench"
+    ],
+    "comment": "18 pages, 6 figures, 9 tables. The first two authors contributed equally. Code and data: https://github.com/Avinash2236/Dhara-Bench"
+  },
+  {
+    "title": "RecRSI: Mechanism-Guided Discovery of Recommendation Algorithms",
+    "authors": "Tingran Gan, Zhouziyue Lu, Dian Jin, Tao Li, Yang Gao, Ming Liu, Weiwen Liu, Jianghao Lin, Weinan Zhang, Yong Yu",
+    "published": "2026-11-02",
+    "arxiv_id": "2611.02487v1",
+    "url": "http://arxiv.org/abs/2611.02487v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.02487v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Improving recommendation algorithms for the Web requires coordinating interacting design choices and learning from experiments. We present RecRSI, an LLM-based research framework that uses mechanism hypotheses to organize algorithm discovery. Each hypothesis links a proposed mechanism change to a reference design, a rationale, and an expected observation. MechSpace derives implementable primitives and composition rules from the task source; Research Line uses this space and prior evidence to develop and test hypotheses; Mechanism Feedback carries outcomes and their design context into subsequent research. This organization makes each experiment inform which mechanisms to develop, revise, or combine next. Across four initial recommenders and four datasets, RecRSI yields average relative improvements of 8.48% in NDCG@5 and 6.88% in HR@5 over the initial algorithms, and 2.60% and 2.20%, respectively, over the strongest competing result for each setting and metric. Component and process studies link these gains to coordinated mechanism choices and evidence-guided follow-up. Our code is publicly available at https://github.com/DynamisG210/RecRSI.",
+    "code_links": [
+      "https://github.com/DynamisG210/RecRSI"
+    ],
+    "comment": "13 pages, 4 figures"
+  },
+  {
+    "title": "EvoMemState: Evolving Memory State for Personal Agents",
+    "authors": "Zhishang Xiang, Yunbo Tang, Zhongqiao Liu, Junkai Chen, Zerui Chen, Qingguo Hu, Yuxuan Zhang, William Grant, Qinggang Zhang, Jinsong Su",
+    "published": "2026-11-02",
+    "arxiv_id": "2611.03743v1",
+    "url": "http://arxiv.org/abs/2611.03743v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.03743v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Long-term memory enables large language model (LLM) agents to provide continuous personalized assistance by retaining user information across interactions. Existing systems support this process through fact extraction, organization, updating, and retrieval, but largely maintain memories as independent facts. This fact-centric paradigm may overlook how new facts update, constrain, or conflict with earlier ones, while leaving their applicability, role, and priority for the current request implicit. In this paper, we introduce EvoMemState, a state-centric framework that augments persistent facts with two complementary states: Relational States that capture how facts remain valid and relate to one another as memory evolves, and a Reasoning State that determines how these facts should be applied to the current request. Specifically, EvoMemState consists of three key components: (i) Ontology-Guided Memory State Induction extracts Persistent Facts and constructs Relational States that maintain their validity, scope, and evolving relations. (ii) RL-Based State Evolution internalizes memory-use experience into a policy through reinforcement learning to generate a request-specific Reasoning State. (iii) State-Aware Reasoning then combines the relevant facts with their Relational States and the generated Reasoning State to guide the personal agent. Extensive experiments on long-term dialogue and memory-use benchmarks demonstrate consistent improvements over existing memory systems in retrieval completeness and memory-grounded response accuracy. Our code and implementation details are available at https://github.com/XMUDeepLIT/EvoMemState.git.",
+    "code_links": [
+      "https://github.com/XMUDeepLIT/EvoMemState"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Adversarial Robustness of Retrieval-Based Fact-Checking: Detecting and Mitigating Evidence Contamination",
+    "authors": "Alamgir Munir Qazi, John P. McCrae, Jamal Abdul Nasir",
+    "published": "2026-11-01",
+    "arxiv_id": "2611.02139v1",
+    "url": "http://arxiv.org/abs/2611.02139v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.02139v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Retrieval-based fact-checking systems ground verification in large document collections, creating a critical vulnerability: adversarial evidence contamination. We demonstrate that factually inconsistent but contextually coherent evidence generated to satisfy both retrieval-similarity and linguistic-fluency constraints can systematically mislead verification models. Contaminating just 3.1-7.4% of training corpora with five label-specific strategies causes adversarial content to penetrate up to 35.2% of top-k retrievals, degrading verification accuracy by up to 46.9% relative F1. Existing retrieval-stage defenses, validated against gradient-optimized or syntactically anomalous attacks, transfer poorly to this threat model: detection rates collapse and F1 recovery exhibits high variance across seeds. We propose GLAD (Geometric-Lexical Adversarial Defense), which fuses dense embedding peer-coherence with lexical distributional isolation. Across two benchmarks, two embedding models, and five random seeds, GLAD achieves the highest detection rates (70-86%) and the most consistent F1 recovery, reclaiming 73-80% of contamination-induced degradation on LIAR-RAW while approaching clean baselines on RAWFC. Crucially, unlike defenses that trade clean performance for robustness, GLAD imposes negligible cost on uncontaminated corpora.",
+    "code_links": [
+      "https://github.com/alamgirqazi/glad"
+    ],
+    "comment": "Published in Findings of the Association for Computational Linguistics: EMNLP 2026. 14 pages, 5 figures, 7 tables. Code and dataset: https://github.com/alamgirqazi/glad"
+  },
+  {
+    "title": "DualClusterNet: Personalized Pattern-Space Composition for Next-POI Recommendation",
+    "authors": "Ziyang Su, Guanjie Zheng, Jilin Hu, Linghe Kong",
+    "published": "2026-11-01",
+    "arxiv_id": "2611.03726v1",
+    "url": "http://arxiv.org/abs/2611.03726v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.03726v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Next point-of-interest (POI) recommendation supports personalized place discovery on location-based Web platforms. Mobility routines can recur across users while being realized at different places and adapted to individual preferences. We present DualClusterNet, a causal sequential recommender that composes two population-shared prototype dictionaries. At each observed prefix, soft routers retrieve pattern and spatial mixtures; a factorized multiplicative interaction couples them, feature-wise affine modulation adapts the shared representation, and a separate user-conditioned branch with an additive--projective gate retains individual variation. The prediction head combines this representation with a learned first-order transition term and ranks the complete training POI vocabulary. We evaluate on NYC and TKY using a training-only vocabulary and an original-final-target protocol that neither bridges unknown POIs nor substitutes earlier targets. The available single-seed results show competitive full-candidate ranking, while controlled analyses support the contribution of the compositional and personalized branches. Code is available at https://anonymous.4open.science/r/DualClusterNet-F4EE/.",
+    "code_links": [],
+    "comment": "submitted to WWW2027"
+  },
+  {
+    "title": "CST: Lightweight Risk Triage with Source-Grounded Evidence for Web Discussions",
+    "authors": "Zhihua Wang, Yifeng Gao, Yunhao Feng, Rui Pan, Baiheng Zhao, Zixing Chen, Nan Li",
+    "published": "2026-11-01",
+    "arxiv_id": "2611.01710v1",
+    "url": "http://arxiv.org/abs/2611.01710v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.01710v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Web communities rely on moderators to catch harmful messages such as insults, hate speech, and scams, but no one can read every message. Existing tools give each message a risk score, which tells moderators where to look but not what to read or how to check it. Yet meaning depends on context: the same reply, \"I agree.\", can support or oppose removing someone from a group. Moderators therefore need source-grounded evidence, not just scores: a few key messages kept with their original wording and replies. We present CST, a lightweight triage pipeline that first decides where to look, then what to show. It scores risk by pairing character patterns, which capture exact wording, with sentence meaning from a fixed multilingual model, so it handles several languages and runs on an ordinary CPU. It then groups related messages and picks from each group in turn, so a small reading budget covers different parts of a discussion, and links every pick back to the original thread. Across six tasks from five datasets in several languages, CST ranks harmful messages more accurately than a fully fine-tuned multilingual model and, under the same budget, finds more of them than reading by score alone. In a user study, reviewers needed at least 27% less time with CST's grouped evidence while keeping decision accuracy above 94%. CST turns risk scores into evidence that moderators can read quickly and check in context. Code and dataset reconstruction resources will be released at https://github.com/Kirito14IT/CST-MIL.",
+    "code_links": [
+      "https://github.com/Kirito14IT/CST-MIL"
+    ],
+    "comment": "23 pages"
+  },
+  {
+    "title": "CREDO: Evidence-Conditioned Credit Assignment for Temporal Reasoning Agents",
+    "authors": "Yue Leng, Shengtao Wen, Xiang Chen, Xinyi Zeng, Yu Tian, Sheng-Jun Huang",
+    "published": "2026-11-01",
+    "arxiv_id": "2611.01643v1",
+    "url": "http://arxiv.org/abs/2611.01643v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.01643v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Temporal Knowledge Graph Question Answering (TKGQA) requires language model agents to retrieve evidence, select relevant facts, and perform multi-step temporal reasoning. However, the trajectory-level outcome signal in GRPO does not explicitly distinguish the quality of intermediate decisions: downstream failures can penalize useful evidence acquisition, while identical rewards in all-failed groups eliminate the relative outcome signal despite differences in intermediate progress. We propose Credit Redistribution with Evidence-Driven Opportunities (CREDO), which uses intermediate evidence to recover local supervision, including in all-failed groups, and determine where outcome supervision acts. CREDO assigns positive stage-level credit through comparisons among rollouts of the same question and uses retained answer overlap as an opportunity proxy to shift part of the outcome-policy weight toward reasoning and answering. The framework preserves terminal rewards and trajectory-level advantages, while redistribution conserves total outcome-policy weight per trajectory. Following the public evaluation protocol of prior work, CREDO raises Overall accuracy from 78.0% to 82.4% and Multiple accuracy from 55.0% to 65.6% on MultiTQ relative to the strongest published baseline in our comparison. On TimelineKGQA, it raises cross-KG accuracy from 30.9% to 36.4% relative to our reproduced baseline via direct transfer to ICEWS Actor under matched training and evaluation settings.",
+    "code_links": [
+      "https://github.com/NUAA-MMMI/CREDO"
+    ],
+    "comment": "Code available at https://github.com/NUAA-MMMI/CREDO"
+  },
+  {
+    "title": "LLM-Enhanced Multimodal House Price Prediction using Structured, Textual, and Visual Features",
+    "authors": "Khandokar Md. Rahat Hossain, Souvik Das, Tahsina Hashem, Mohammed Eunus Ali, Tanzima Hashem",
+    "published": "2026-11-01",
+    "arxiv_id": "2611.01615v1",
+    "url": "http://arxiv.org/abs/2611.01615v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.01615v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Accurate house price prediction is essential for real estate buyers, sellers, agents, and financial institutions. Traditional methods rely primarily on structured data, e.g., number of bedrooms, bathrooms, parkings, but they overlook rich contextual information embedded in textual descriptions and property photos. Previous deep learning approaches for house price prediction have fused multimodal data but they fall short to extract structured spatio-temporal and contextual features from texts and semantic visual information from images. In this paper, we introduce a novel multimodal framework that addresses these limitations by systematically integrating structured attributes, textual descriptions, and visual images of properties to achieve higher prediction accuracy while maintaining interpretability. We use a large language model to derive domain-specific spatio-temporal and contextual features from text, and an unsupervised vision-language approach to automatically group photos into meaningful classes like indoor, outdoor, mixed, or floorplan, that are commonly present in real-world house listings. These categories are created without manual labeling by aligning image clusters with carefully designed pseudo text prompts. We fuse all features into a unified representation and use an optimized regressor to predict prices. Experiments on a large real-world property dataset demonstrate that our method outperforms traditional methods and existing multimodal baselines. Ablation studies confirm that the novel textual feature extraction and categorized visual embeddings substantially contribute to more accurate and reliable price predictions.",
+    "code_links": [
+      "https://github.com/rh2975/LLM-VLM-HousePrice"
+    ],
+    "comment": "35 pages, 7 figures, 5 tables. Code: https://github.com/rh2975/LLM-VLM-HousePrice"
+  },
+  {
+    "title": "Autonomous ETL Pipelines for Salesforce M&A Consolidation: A Reference Framework, Jitterbit Mapping, and Reproducible Simulation Study",
+    "authors": "Imran Basha Shaik, Sahla Sultana, Khader Moinuddin Shaik",
+    "published": "2026-11-04",
+    "arxiv_id": "2611.05918v1",
+    "url": "http://arxiv.org/abs/2611.05918v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.05918v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Merging companies that each run Salesforce must consolidate their customer data into a single organization while both source systems remain in use. This requires reconciling different schemas and picklists, resolving duplicate customers across and within organizations, preserving relationships between records, and keeping the target current until cutover. This article proposes a reference framework for an autonomous extract-transform-load pipeline for this task. It combines partitioned bulk extraction, declarative mapping templates, rule-based and statistical quality gates, master data management with deterministic and blocked fuzzy matching, constrained loading with per-record error capture, and change data capture guarded by a data-health circuit breaker. Each stage is mapped to Jitterbit Integration Studio constructs. The framework was implemented as an open reference prototype and evaluated on synthetic two-organization scenarios with known ground truth at three scales, from 32,040 to 383,973 source records, over five random seeds. At a preset threshold, hybrid matching reached pairwise F1 scores of 0.918 for accounts and 0.885 for contacts; calibrating the threshold per object would raise these to 0.938 and 0.963. The quality gates prevented all load failures and all silent loss of unmapped picklist values without wrongly flagging any clean record, whereas removing them produced about 1,000 load failures per run. Over five simulated days of hourly incremental synchronization, replayed events were ignored, an injected upstream fault was contained in the batch in which it occurred, and the target agreed with a full rebuild on more than 99.3 percent of field values. Validation on a production deployment remains future work.",
+    "code_links": [
+      "https://github.com/imran0547/SDFC"
+    ],
+    "comment": "16 pages, 4 figures, 7 tables. Code and data: https://github.com/imran0547/SDFC/tree/add-autonomous-etl-salesforce-ma-consolidation/autonomous-etl-salesforce-ma-consolidation; preprint also archived at https://doi.org/10.5281/zenodo.23935717"
+  },
+  {
+    "title": "When Is One Query per Template Enough? Adapting Learned Cost Models to New Hardware",
+    "authors": "Krish Patel",
+    "published": "2026-11-04",
+    "arxiv_id": "2611.05892v1",
+    "url": "http://arxiv.org/abs/2611.05892v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.05892v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "A learned cost model that predicts query runtimes is trained on measurements from one machine. When the database moves to other hardware, its plans stay the same but their runtimes change, each by its own factor. We ask how to adapt such a model from k queries measured on the new machine: which queries to run, how to use their runtimes, and how many are enough. On PostgreSQL we timed the same plans of 1,162 TPC-H and TPC-DS queries in six environments: a laptop and a server, each with all its processors or pinned to one, the server also pinned to two, and the laptop also with a small buffer pool. No single factor describes the slowdown between two environments: most of its variance lies between query templates, so a speed factor stops improving after a few queries. A correction that fits separate lines for serial and parallel plans and adds an offset for every measured template brings the moved model, with one measured query per template, to an error (geometric mean over templates of the median Q-error) of 1.10 on TPC-H and 1.19 on TPC-DS, close to the same correction on a model trained on the new machine; fine-tuning a DACE-style neural cost model on the same queries gains at most 2%. On templates never measured, no correction we tried is on average more than 2% better than the speed factor. We then fixed hypotheses and timed new data. On TPC-H at ten times the scale the errors follow these results, but two of five repeated tests miss. On the Join Order Benchmark, whose queries differ widely within a template, the model errs by 2.36 even when retrained on the new machine, no correction gains much, and only the test on new templates holds; boosted trees and a neural model fit these queries better, and correcting the neural model works as well as fine-tuning it. We report every test as registered.",
+    "code_links": [
+      "https://github.com/KrishPatel13/query-runtime-transfer"
+    ],
+    "comment": "13 pages, 2 figures, 10 tables. Code and data: https://github.com/KrishPatel13/query-runtime-transfer"
+  },
+  {
+    "title": "The Invocation Bottleneck in LLM-Based Lossless Compression: What Can Be Removed and What Must Be Traded",
+    "authors": "Zhe Yan, Yihao Liu, Antonio Boffa, Huanchen Zhang",
+    "published": "2026-11-04",
+    "arxiv_id": "2611.05871v1",
+    "url": "http://arxiv.org/abs/2611.05871v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.05871v1",
+    "category": "databases",
+    "primary_category": "cs.IT",
+    "abstract": "Large language models (LLMs) compress text far better than classical compressors, but LLM-based compressors are slow, particularly during decompression. We argue that their decoding time has two fundamentally different sources. Execution redundancy, such as per-token host transfers, CPU-side coding, and token-by-token encoding, is work that the coded output does not require and can be removed without changing a single output bit. Sequential dependency, one model call per decoded token, is inherent to lossless decoding and cannot be removed by better execution, only traded for more calls or for more bits. We remove execution redundancy with a GPU-resident pipeline whose block-parallel encoding is made lossless in half precision by batch-invariant kernels, speeding up arithmetic coding by up to 5.8x in encoding and 3.0x in decoding without changing its compression rate. We then study the two ways of trading sequential dependency, speculative dual-model coding (SDMC) and multi-token single-model coding (MSMC), characterize the compression cost of predicting several tokens from a shared prefix, and identify the workloads in which fewer model calls are worth that cost.",
+    "code_links": [
+      "https://github.com/Angie-Yan/LLM-based-Data-Compression"
+    ],
+    "comment": "14 pages, 7 figures, 4 tables. Code: https://github.com/Angie-Yan/LLM-based-Data-Compression"
+  },
+  {
+    "title": "Where Is the Truth When AI Agents Disagree? Dependence-Aware Belief Propagation for Unsupervised Truth Discovery (Extended Version)",
+    "authors": "Laure Berti-Equille",
+    "published": "2026-11-03",
+    "arxiv_id": "2611.04805v1",
+    "url": "http://arxiv.org/abs/2611.04805v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.04805v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "LLM agents often give conflicting answers to the same question, and many deployed agents are variants of one base model, so their errors are correlated. We study truth discovery among such agents: inferring the true answer and each agent's reliability without labels. Classical truth-discovery and crowdsourcing estimators reward an agreeing bloc and can fall below majority vote. We propose BP-TD, which adds per-agent decorrelation weights to mean-field variational inference on a one-coin Dawid-Skene model, so that agents sharing a base model count together as about one vote. Its first iteration is exactly a weighted vote; later iterations estimate agent reliability. With 13 local agents on MMLU, BP-TD beats majority vote without any labels (0.716 vs. 0.624 on 160 questions; 0.707 vs. 0.674 on 10,000) and ranks agents by their true accuracy, which classical estimators invert. The gain depends on the pool: over 2,852 sub-pools of four benchmarks, decorrelation helps when the largest correlated bloc is weaker than the other agents and hurts when it is the strongest, and we found no label-free statistic that tells the two cases apart. Labels change the picture quickly: with 20 labelled questions, selecting the single best agent is more accurate than every aggregator we tested on MMLU, ARC and TruthfulQA.",
+    "code_links": [
+      "https://github.com/LaureBerti/BPTD"
+    ],
+    "comment": "Extended version of a short paper accepted at the 2026 IEEE International Conference on Big Data (IEEE BigData 2026). 11 pages, 6 figures, 3 tables. Code: https://github.com/LaureBerti/BPTD ; code and data archive: doi:10.5281/zenodo.21294747"
+  },
+  {
+    "title": "Modular and Efficient Approximate Nearest Neighbors Search with Vectorium and kANNolo",
+    "authors": "Silvio Martinico, Franco Maria Nardini, Cosimo Rulli, Rossano Venturini",
+    "published": "2026-11-02",
+    "arxiv_id": "2611.03927v1",
+    "url": "http://arxiv.org/abs/2611.03927v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.03927v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "Approximate Nearest Neighbors (ANN) search over neural embeddings powers modern retrieval systems such as Retrieval-Augmented Generation. Embeddings come in three representations (dense, sparse and multi-vector), and efficient search combines an index structure, a similarity function and a quantization scheme. Existing libraries fix one combination, hard-code each one separately, or factor only one side of the problem, and none covers all three representations. We present Vectorium and kANNolo, two open-source Rust libraries that split this design space into a data-management layer and an indexing layer. Vectorium abstracts the vector, the distance function, the quantizer and the dataset independently, and provides 11 encoders, from 32-bit floats to sub-bit codes. On top of it, kANNolo implements Hierarchical Navigable Small-World (HNSW) graph and Inverted Vector File (IVF) indexes that are generic over representation, encoder and metric, and a two-stage index that composes any first-stage index with any rescoring dataset. Since every combination is specialized at compile time, this modularity adds no run-time overhead, and the resulting indexes reach state-of-the-art performance: our Product Quantization matches Faiss in accuracy at competitive speed, our RaBitQ and HNSW match or outperform their reference implementations, and our IVF outperforms Faiss. Against six dense and five sparse systems on seven public collections, our indexes give the best memory-throughput trade-off on dense data in 9 of 12 collection-accuracy pairs and perform well on out-of-distribution queries. On sparse data, the systems built on Vectorium lead on all three collections, with Seismic and SeismicWave the fastest and kANNolo's indexes the most compact.",
+    "code_links": [
+      "https://github.com/TusKANNy/papers_reproducibility"
+    ],
+    "comment": "39 pages, 11 figures, 17 tables. Submitted to Information Systems. Code and data: https://github.com/TusKANNy/papers_reproducibility/tree/main/information-systems-vectorium-kannolo"
+  },
+  {
+    "title": "From FAIR to AI-FAIR Metadata-First Infrastructure for AI-Enabled Science",
+    "authors": "Elizabeth G. Campolongo, Eric R. Sokol, Marty Downs, Gina Glenne, Gregory E. Maurer, Sydne Record, Dustin R. Rubenstein, Matthew J. Thompson, Christine Laney, Hilmar Lapp, Max Tarjan, Tanya Berger-Wolf",
+    "published": "2026-11-02",
+    "arxiv_id": "2611.03327v1",
+    "url": "http://arxiv.org/abs/2611.03327v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.03327v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Artificial intelligence (AI) technologies and their capabilities have advanced rapidly over the past few years, leading to widespread interest and adoption in the biological and ecological sciences. However, the data infrastructure and computational resources that provide the foundation for AI workflows in ecology and biodiversity science remain fragmented. Moreover, the flow of value remains largely unidirectional: data move from collectors, through repositories and aggregators into models, and finally to research products or management actions. The derived value, such as corrected taxonomies, annotations, quality flags, and insights, rarely returns to source communities. We propose an extension of the original FAIR principles to address the needs of AI-ready infrastructure: the AI-FAIR metadata criteria, which place AI-enabled science in the context of a bidirectional Question-Data-Model triangle. This framework is designed to facilitate large-scale content-based analysis across diverse collections and ensure that the scientists generating the data benefit from the AI-enabled advances built on their data. Alongside these criteria, we introduce an agentic evaluation workflow that both rates existing datasets on the AI-FAIR and traditional FAIR criteria and provides actionable feedback where critical metadata is missing or incomplete. This modular dataset evaluation tool, paired with a domain-appropriate checklist, translates these principles into a reusable assessment of machine-learning readiness, AI-readiness for specified tasks, traceability, and ethical and CARE-aligned stewardship. Through this approach we aim to create a community-informed system to close the model data loop, so that AI also enriches data to further enable scientific discovery.",
+    "code_links": [
+      "https://github.com/FAIR4AI-Bio/evaluator"
+    ],
+    "comment": "8 pages, 3 figures, Code available at: https://github.com/FAIR4AI-Bio/evaluator"
+  },
+  {
+    "title": "Ascend-SpMM: Accelerating Sparse Matrix-Dense Matrix Multiplication on Ascend NPUs",
+    "authors": "Jiahe Wang, Yingxia Shao, Shuhan Wang, Qingbo Ge, Hongzheng Li, Yucheng Zhang",
+    "published": "2026-11-01",
+    "arxiv_id": "2611.01936v1",
+    "url": "http://arxiv.org/abs/2611.01936v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.01936v1",
+    "category": "databases",
+    "primary_category": "cs.DC",
+    "abstract": "Sparse Matrix-Dense Matrix Multiplication (SpMM) is a fundamental kernel in graph neural networks and scientific computing, yet its optimization on Ascend NPUs remains largely unexplored. The physically decoupled Cube/Vector architecture and single-threaded scalar instruction dispatch of modern NPUs introduce unique challenges. We present Ascend-SpMM, a novel and systematic framework tailored to the physically decoupled architecture of Ascend NPUs.We introduce a memory-centric cost model that quantifies hardware affinity and guides a conflict-bounded, densityaware task-mapping strategy. The strategy maps dense regions to the high-throughput Cube path and sparse residuals to the flexible Vector path, with a theoretical bound on cross-processor conflicts. To execute these workloads with high efficiency, we further develop highly customized sub-kernels. These kernels leverage hierarchy-aware pipelining and round-robin ring buffer-based implicit synchronization to effectively mask memory latency and reduce instruction pipeline stalls. Extensive experiments demonstrate that Ascend-SpMM achieves a geometric-mean speedup of 12.70-20.55X over the strongest evaluated NPU baseline for each matrix, accelerates end-to-end GNN training by up to 6.8X, and delivers performance competitive with state-of-the-art GPU implementations. The source code of Ascend-SpMM is publicly available at https://github.com/IDMG-Lab/Ascend-SpMM.",
+    "code_links": [
+      "https://github.com/IDMG-Lab/Ascend-SpMM"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Graphs Have Structure: Declarative Manifolds, 3D Z-Order Monoid Roll-ups, and Zero-Simulation Visual Analytics in a Graph DBMS",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-11-01",
+    "arxiv_id": "2611.01879v1",
+    "url": "http://arxiv.org/abs/2611.01879v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.01879v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Every real-world graph is embedded in an ambient structural manifold: proteins fold in Euclidean space ($R^3$), telecom networks sit on a planetary surface ($S^2 \\times R$), and ontologies and calendars form discrete subsumption posets ($(V, \\sqsubseteq)$). Yet property graph databases treat node coordinates as opaque payload scalars, leave spatial proximity edges unindexed, and force visualizers into $O(V^2)$ client-side force-directed simulations that destroy true geometry and truncate hierarchy roll-ups. We elevate ambient manifold structure to a first-class primitive in Samyama Graph. First, we introduce a declarative and auto-detected structural convention contract (samyama.structure/1) persisted in .sgsnap headers that binds node labels to Euclidean 3D, Geo-Spherical, Causal Spacetime, or Poset Hierarchy manifolds. Second, we show that both discrete posets (via Order-Embedded Hierarchy $[tin, tout]$ DFS intervals) and continuous 3D manifolds (via a 63-bit 3D Morton Z-order Structural-Geometric Index, SGI) reduce regional aggregation to 1D rank-interval monoid folds answered directly from index-resident Fenwick trees (SUM, COUNT) and Segment Trees (MIN, MAX). At $100,000$ 3D nodes, SGI builds in $28.14$ ms and answers Morton-interval SUM and MAX roll-ups in $0.048\\,μ$s and $0.104\\,μ$s---$8,345.1\\times$ and $3,824.4\\times$ faster than property scans. Third, we introduce 3D voxel-hashed virtual contact edges weighted by Topological--Geometric Stress $σ(u,v) = d_{graph}(u,v) / d_{manifold}(u,v)$ to isolate long-range tertiary folds, plus manifold-guided $A^*$ shortest-path search that cuts explored states by up to $3.80\\times$ over Dijkstra. Fourth, we replace client layout simulation with server-computed 3D Cone-Tree/Ribbon coordinates and a non-WebGL 2.5D Isometric projection with painter's-order depth sorting and sub-millisecond Level-of-Detail (LoD) macro-cuts.",
+    "code_links": [
+      "https://github.com/samyama-ai/structural-manifold-index",
+      "https://github.com/samyama-ai/samyama-graph"
+    ],
+    "comment": "7 pages, 1 figure, 4 tables. Companion to arXiv:2606.24677 (OEH). Code: https://github.com/samyama-ai/structural-manifold-index and https://github.com/samyama-ai/samyama-graph/pull/2038"
+  },
+  {
+    "title": "Rebuilding a Field's Open-Problem Catalog from the Literature: A Two-Layer Knowledge Graph, and Why Status Must Stay Proposed",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-10-29",
+    "arxiv_id": "2610.39641v1",
+    "url": "http://arxiv.org/abs/2610.39641v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.39641v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "A research field records its open problems in surveys, keynotes and community reports. Those are prose, written every few years, and nobody can ask them who works on a problem now or whether it was settled last year. We argue the problems should be data, and we build the system that makes them so: a hand-curated problem layer carried in unchanged, under an evidence layer rebuilt from a bibliographic index, joined by typed, provenance-carrying links in one graph database and queryable from one language. A language model does four jobs -- per-paper extraction, catalog grounding, per-paper status verdict, and idea generation -- each constrained to a candidate set so out-of-set answers are refused rather than stored. We report a study on two curated catalogs, database research (1,053 problems) and AI research (1,000 problems), each with a prior catalog-only graph. The rebuilt graph answers every question the catalog-only graph answered -- 47 of 47 on databases, 34 of 35 on AI -- plus questions the catalog-only graph refused: recent workers, untouched problems, methods tried, and outside papers bearing on a problem (336 problems, 770 works on databases). The capability we most wanted does not survive its own audit. Of 41 solves and refutes verdicts hand-checked against the papers, 9 are correct, 30 partly correct and 2 wrong; no refutes verdict (0 of 34) disproves an open problem, and only 1 of 7 solves closes the central question. We report that failure in full and draw the design conclusion: a status change must be proposed with its evidence and never applied, making the human reviewer part of the architecture. We close with the data-engineering problems this raises: entity resolution across curated and harvested layers, verifying model status claims, freshness under source quotas, and evaluation without ground truth.",
+    "code_links": [
+      "https://github.com/samyama-ai/open-problems-as-data"
+    ],
+    "comment": "9 pages, 1 figure, 7 tables. Code and data: https://github.com/samyama-ai/open-problems-as-data"
+  },
+  {
+    "title": "Recovering Business Rules as Cascade Lookups for Enterprise Field Prediction",
+    "authors": "Changxu Duan",
+    "published": "2026-10-25",
+    "arxiv_id": "2610.34258v1",
+    "url": "http://arxiv.org/abs/2610.34258v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.34258v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Enterprise sales-order systems rely on manually maintained configuration rules to determine fields such as payment terms, shipping points, and sales ownership. When these rules are incomplete or stale, operators must enter values by hand, and downstream errors spread into billing, logistics, and reporting. This paper studies whether missing or outdated rules can be recovered from historical transactions instead of being relearned as opaque statistical patterns. We introduce a knowledge-graph-guided workflow in which an LLM agent proposes candidate business keys, meaning column combinations such as customer and document type, validates them through SQL profiling, and compiles the resulting evidence into deterministic cascade lookups. The LLM is used only during offline rule discovery. At inference time, prediction is a transparent key lookup with no model-serving requirement. Experiments on enterprise sales-order prediction and public relational benchmarks show that cascades are most effective when fields follow stable business rules, while learned graph models remain preferable when prediction depends on temporal or neighborhood patterns. Drift analysis further turns residual errors into diagnostics for configuration maintenance. Code and data: https://github.com/Fireblossom/CascadER.",
+    "code_links": [
+      "https://github.com/Fireblossom/CascadER"
+    ],
+    "comment": "Accepted at ECML PKDD 2026 Applied Data Science Track"
+  },
+  {
+    "title": "TT-SAX: A Two-Track Time Series Symbolization for Natural Language Shape Querying",
+    "authors": "Zhao Tan, Xianglong Bao, Zhipeng Xi, Ming Jin",
+    "published": "2026-10-22",
+    "arxiv_id": "2610.30593v1",
+    "url": "http://arxiv.org/abs/2610.30593v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.30593v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Natural language querying for time series databases aims to let users find what they need in long histories of data by asking in plain language. Shape queries ask how a series moves. They are the main challenge of this task. Recent work makes them feasible by using symbolization as a bridge between the query and the long history. However, existing symbolizations were designed for compression, similarity indexing, or classification. What a symbolization should provide for natural language querying has not been systematically studied. We therefore examine the definitions of six classical symbolizations against this task and identify three limitations. (1) Direction is missing from the string, (2) direction is measured at too small a scale, and (3) the letters are arbitrary. Three design principles follow. We follow these principles and make a minimal redesign of SAX called TT-SAX (two-track SAX). The level letters stay. Each segment gains a trend letter. It is measured across neighboring segments rather than inside one, and graded to match the adjectives that queries use. We conduct extensive experiments on the public NLQTSBench benchmark, comparing TT-SAX with the six classical symbolizations across six LLMs. TT-SAX outperforms all six on shape queries, and ablations trace its gains back to the three limitations one by one. This paper is the first systematic study of time series symbolization with natural language querying as the design goal. It provides a foundation for future research on this task. Our code is available at https://github.com/Atlamtiz/tt-sax.",
+    "code_links": [
+      "https://github.com/Atlamtiz/tt-sax"
+    ],
+    "comment": "14 pages, 8 figures, 2 tables. Accepted at the Australasian Database Conference (ADC 2026). This is the submitted manuscript prior to peer review"
+  }
+]
