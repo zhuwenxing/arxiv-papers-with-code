@@ -1,0 +1,509 @@
+[
+  {
+    "title": "ReSID: Rethinking Long-Tail Retrieval in Generative Recommendation through Item Reachability",
+    "authors": "Muyu Zou, Shunye Tang, Yi Xu, Haibo Xing, Yandong Wang, Lingyu Mu, Jinxin Hu",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16404v1",
+    "url": "http://arxiv.org/abs/2611.16404v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16404v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Generative recommendation (GR) represents items with discrete Semantic IDs (SIDs) and casts retrieval as sequence generation. Under skewed interaction distributions and tight serving budgets, GR struggles to retrieve long-tail items. In this work, we are the first to study long-tail reachability across the complete pipeline of SID construction, decoding, and matching. We find that under equal code lengths, parallel SID construction consistently outperforms sequential SIDs on tail items. Moreover, even when full generation fails, decoded sequences carry locally consistent information that retrieves relevant tail items via partial matching. Yet this recovery is bounded by upstream search, failing once beam search prunes all prefixes completable within a fixed mismatch tolerance. Motivated by these findings, we propose ReSID to jointly preserve and recover tail candidates. Built on long parallel SIDs, ReSID pairs popularity-debiased and user-semantic-aware beam search to keep promising paths alive with partial SID matching to recover items from surviving tokens. ReSID achieves state-of-the-art long-tail retrieval while maintaining competitive overall accuracy, with lower latency and higher throughput under narrow beams. ReSID is deployed in our production system, serving main user traffic with substantial business gains. We release our complete code and model checkpoints to support full reproducibility and real-world deployment at https://github.com/Gabriel-reina/ReSID.",
+    "code_links": [
+      "https://github.com/Gabriel-reina/ReSID"
+    ],
+    "comment": null
+  },
+  {
+    "title": "GA-HEL: A Knowledge-Driven Expert System for Open-Set, Granularity-Aware Hierarchical Event Linking in Social Media",
+    "authors": "Shengqi Zhou, Zhigang Liu, Wenxiang Zhu, Zhentao Cang",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16194v1",
+    "url": "http://arxiv.org/abs/2611.16194v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16194v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Social-media event intelligence requires a system to determine whether a post belongs to a registered event space, identify the supported hierarchy path, and stop at the deepest level warranted by the evidence. We formulate this requirement as open-set hierarchical event linking over frozen Storyline--Episode--Atomic Event Cards. GA-HEL implements a three-stage, knowledge-driven expert-system funnel: open-set scope control limits candidate exposure before hierarchical reasoning, hierarchy-aware decoders select a supported path and depth, and deterministic legal-path validation checks each record before database-compatible use. A 200-post Pilot supports task and mechanism development, while a separately annotated 497-post Expansion set evaluates transfer across four held-out Storylines and a hard-negative pool. Method implementations, prompts, Event Cards, candidate order, and six systems' predictions were frozen before Expansion Gold annotation. The resulting evaluation combines end-to-end hierarchical matching, open-set rejection, structural validation, ablation, cross-Storyline analysis, and an independent expert reannotation of a fixed audited subset. GA-HEL remains competitive with strong global full-card reasoning while providing explicit scope control and hierarchy-valid structured records. Error analysis identifies unsupported descent from Episode-level evidence to Atomic Events as the dominant remaining challenge. The task definition, frozen resource, and auditable protocol provide a reproducible foundation for scope-aware event intelligence. Code, Event Cards, labels, frozen predictions, and evaluation scripts are available at https://github.com/SHbiao/GAHEL_release.",
+    "code_links": [
+      "https://github.com/SHbiao/GAHEL_release"
+    ],
+    "comment": "16 pages, 6 figures"
+  },
+  {
+    "title": "From Tokens to Behaviors: Rethinking Generative Recommendation for User Trajectory Prediction",
+    "authors": "Jiaqi Wang, Hanchen Yang, Hengyu Zhang, Hongxu Ma, Wenqi Rao, Hongyang Wang, Zhongbo Sun, Renliang Qian, Weixin Chen, Wengen Li, Jihong Guan, Shuigeng Zhou, Qingpeng Cai, Peng Jiang, Hong Cheng",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16159v1",
+    "url": "http://arxiv.org/abs/2611.16159v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16159v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "User behavior trajectory prediction (UBTP) aims to capture how a user's needs evolve over time by predicting the sequence of future interactions from that user's interaction history. Recent generative recommendation (GR) methods address this task through autoregressive generation of semantic IDs (SIDs). However, serial SID decoding couples token generation with behavior state transitions and requires multiple dependent steps per interaction. Discrete item feedback overlooks predictive uncertainty, and teacher-forced training leaves a training-inference gap in trajectory generation. To address these limitations, we propose TraGR, a behavior-aware generative recommendation framework that aligns generation, feedback, and learning with successive user behaviors. Its behavior-level architecture predicts SID tokens in parallel within each interaction and models behavioral transitions through recurrent state updates, with joint SID and item-level supervision. Probability feedback combines the selected behavior with a probability-weighted summary of alternatives to guide subsequent predictions. Relation-aware trajectory learning incorporates collaborative transition signals and later credit assignment into training on model-generated trajectories. Experiments on four public datasets demonstrate that TraGR consistently outperforms state-of-the-art baselines across different prediction horizons. Code: https://github.com/CalmaQi/GR4UBT.",
+    "code_links": [
+      "https://github.com/CalmaQi/GR4UBT"
+    ],
+    "comment": null
+  },
+  {
+    "title": "HyperPage: Learned Page Layouts for Disk-Resident Graph Vector Indexes",
+    "authors": "Xinyu Zhang, Jingze Li, Baihua Zheng, Weiwei Sun",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16149v1",
+    "url": "http://arxiv.org/abs/2611.16149v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16149v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DB",
+    "abstract": "Disk-resident graph indexes such as DiskANN store each vector with its graph edges as one record on SSD pages. A search needs the page of every record it expands, so its page reads depend on the page layout, that is, which records share a page. Search agents trained with reinforcement learning query one such index run after run, and every graph traversal can be logged with the records it expands. We therefore use the logs of a finished run to lay out the index for a declared memory budget, so later runs read fewer pages. In contrast, existing layouts such as Starling and MARGO are computed from the graph and vectors and use no logs. Learning a layout from logs is challenging, because the logs must stay valid under every layout, the saving depends on what the budget caches, and the best layout is NP-hard to find. Our key observation is that DiskANN-style search routes on in-memory codes and the records it expands, never on their page-mates. As a result, the logged traversals price every layout by replay, and cached records add no page reads. Accordingly, we propose HyperPage, which first builds layouts for the declared budget on the logged traversals of uncached records. It then selects one layout, together with the budget split between hot records and a page cache, by replaying validation steps. In addition, a Lagrangian lower bound shows how far a layout may be from the optimum. We learn from one Search-R1 agent run and test on a later run with a different reward, over 1M and 21M passages. Across seven cache budgets, HyperPage reads 5.2% to 21.2% fewer pages than MARGO, and no compared layout reads fewer. The advantage is largest when the cache is small. For example, at 1% of the 1M index, MARGO needs nearly 3 times the budget to read as few pages. On the 21M index, HyperPage also cuts search time per step by up to 10.4%. The saving holds for a second agent model and a second corpus.",
+    "code_links": [
+      "https://github.com/zhangshea/HyperPage"
+    ],
+    "comment": "14 pages, 4 figures, 7 tables. Code available at: https://github.com/zhangshea/HyperPage"
+  },
+  {
+    "title": "Calibrated Early Termination with Bounded Optimality Gaps for Constrained Vector Search",
+    "authors": "Xinyu Zhang, Jingze Li, Baihua Zheng, Weiwei Sun",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16148v1",
+    "url": "http://arxiv.org/abs/2611.16148v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16148v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DB",
+    "abstract": "Vector search over learned embeddings is the retrieval layer of recommendation and retrieval-augmented generation, and many applications cap how many answer items one category may contribute. Graph indexes answer a query by best-first traversal, and where it stops determines its cost and whether its answer is exact. We study early termination for such constrained $k$-nearest-neighbor ($k$-NN) queries, with plain $k$-NN as a special case, and seek the cheapest stopping rule whose answer is exact with probability at least $1-\\varepsilon$. Learned early-termination methods instead target average recall, which does not guarantee exact answers. Multiple testing can calibrate any parameterized stopping rule to our target, but it cannot tell how much a better rule with the same risk and observations would save. Answering this needs a lower bound on the optimum of a rule family too large to enumerate, valid for the query population. Our key idea is to declare the observations a rule may use and to consider every rule monotone in them. Risk-constrained stopping then becomes a linear program over an order polytope, whose Lagrangian minimizers form a nested chain of staircase rules computed exactly by dynamic programming. Fixed-sequence binomial tests along this chain calibrate our rule, CaST, whose failure probability is at most $\\varepsilon$ with confidence $1-δ$. Lagrangian weak duality bounds the optimum of the declared class from below at all risk levels at once, without a union bound over the rules. On two datasets of one million items each, CaST replayed on logged searches costs at most 1.132 times the class optimum for risk levels from 0.03 to 0.10, at 95% joint confidence per setting. Larger savings thus need a rule outside the class. At a common risk target on held-out queries, CaST is faster than every other calibrated rule we time, which take 4.8% to 45.5% more mean time.",
+    "code_links": [
+      "https://github.com/zhangshea/CaST"
+    ],
+    "comment": "14 pages, 5 figures, 3 tables. Code available at https://github.com/zhangshea/CaST"
+  },
+  {
+    "title": "Predicting the Needle in a Petabyte Scale Haystack: Open-Vocabulary Event Anticipation in Satellite Imagery",
+    "authors": "Shreelekha Revankar, Mikhail Klassen, Creon Levit, Ash Hoover, Kavita Bala, Bharath Hariharan",
+    "published": "2026-11-11",
+    "arxiv_id": "2611.16000v1",
+    "url": "http://arxiv.org/abs/2611.16000v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16000v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Satellite constellations now image the Earth daily, capturing the lifecycle of events from deforestation to urban construction. Anticipating these events before completion enables timely intervention, yet existing systems cannot jointly identify where a change occurs, what it will become, and when it will finish across an open vocabulary. Building such a model requires diverse event data, but events are like needles in a haystack, making manual annotation at global scale infeasible. We address this problem by representing change as the vector difference between vision-language model embeddings at distinct time points. This arithmetic approach allows us to search for semantic transformations directly in the latent space, enabling (1) an automated data engine for global event discovery without manual annotation and (2) the largest global satellite event dataset to our knowledge, comprising 21,000+ locations across 64+ event types with ~2M images from PlanetScope and Sentinel-2 spanning six continents, to train (3) a novel global-scale event anticipation model. Our model detects change with a 93.5% max F1 score, outperforms baselines 3.6x on predicted event retrieval, and forecasts completion dates with a 3-day median error, even nine months before completion. Code: https://github.com/ShreelekhaR/predicting-the-needle",
+    "code_links": [
+      "https://github.com/ShreelekhaR/predicting-the-needle"
+    ],
+    "comment": "29 pages, 9 figures, to be published in NeurIPS 2026"
+  },
+  {
+    "title": "SimRec: Learning to Search, Ask, and Recommend from Simulated Interaction",
+    "authors": "Yaxin Zhang, Xingyu Wu, Yuchen Yan, Yuqin Dai, Hong Zhao, Lixing Shen, Zhan Chen, Jian Shao, Yongliang Shen",
+    "published": "2026-11-11",
+    "arxiv_id": "2611.15426v1",
+    "url": "http://arxiv.org/abs/2611.15426v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.15426v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "LLM-based recommendation agents can search catalogs, inspect products, ask users, and revise rejected recommendations. However, these behaviors are often governed by hand-designed workflows, while existing training methods optimize isolated components such as query rewriting or list ranking rather than the interaction policy as a whole. We present SimRec, a reinforcement learning framework that trains the full interaction policy of a tool-integrated recommendation agent. SimRec introduces two components. A task-anchored user simulator provides feedback on every recommendation: conditioned on the current task need rather than on user profile, and it can be an external LLM or the recommender itself under self-play. A task-aligned reward optimizes the whole trajectory with GRPO, crediting natural retrieval quality and valid tool use alongside the final hit, with training-only target injection to handle sparse hits over large catalogs. On ESCI and Amazon C4, SimRec improves the NDCG@100 of a Qwen3-4B agent from 32.23% to 35.42% and from 22.94% to 24.72%}, outperforming training-free agents on far larger backbones and task-aligned baselines on NDCG. Analysis shows that the trained agent verifies candidates, uses preferences, and recovers from rejected recommendations far more often than its untrained counterpart. Our code is available at https://github.com/ZJU-REAL/SimRec .",
+    "code_links": [
+      "https://github.com/ZJU-REAL/SimRec"
+    ],
+    "comment": "19 pages,5 figures,16 tables. Code: https://github.com/ZJU-REAL/SimRec"
+  },
+  {
+    "title": "Vision-Grounded Semantic Learning and Alignment for Scalable Multilingual Text-Based Person Retrieval",
+    "authors": "Xinyu Zhou, Fan Li, Shasha Chen, Min Cao, Ahtamjan Ahmat, Qiaoming Zhu, Mang Ye",
+    "published": "2026-11-11",
+    "arxiv_id": "2611.15328v1",
+    "url": "http://arxiv.org/abs/2611.15328v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.15328v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CV",
+    "abstract": "Multilingual Text-Based Person Retrieval (TBPR) aims to retrieve individuals with texts in multiple languages. Despite its practical importance, it has been overlooked by existing research, which mainly focuses on English-only retrieval. The only prior attempt at multilingual TBPR suffers from (1) the absence of a large-scale, multilingual pretraining dataset and (2) a suboptimal model architecture for multilingual text encoding and cross-modal alignment, which employs a shared encoder that overlooks linguistic heterogeneity and relies on English as a pivot for cross-modal alignment, introducing English-centric bias. For this, we contribute MultiPedes, the first large-scale, pedestrian-centric multilingual pretraining dataset. It contains 10 million image-text pairs across four languages, constructed by a multilingual quality-aware data construction pipeline. We also propose ViSeLA (Vision-grounded Semantic Learning and Alignment), a novel framework featuring: (1) a semantic-aware multilingual learning module that extends the mixture-of-experts architecture by routing language-invariant semantics to specialized experts for improved multilingual feature learning; and (2) a vision-grounded cross-modal alignment module that employs a semantic probe to capture fine-grained semantics across modalities, enabling direct cross-modal alignment without relying on a pivot language. Extensive experiments on both multilingual and English-only TBPR datasets demonstrate the effectiveness of ViSeLA. The dataset and code are available at https://github.com/Flame-Chasers/ViSeLA",
+    "code_links": [
+      "https://github.com/Flame-Chasers/ViSeLA"
+    ],
+    "comment": "Accepted by ACM MM 2026 (Oral). 10 pages"
+  },
+  {
+    "title": "Measuring, Revealing and Mitigating Harmful Content Propagation in Recommender Systems",
+    "authors": "Xiaokun Zhang, Youlin Wu, Junyu Lu, Jiamin Chen, Zhaochun Ren, Hongfei Lin, Fenglong Ma, Xue Liu, Chen Ma",
+    "published": "2026-11-11",
+    "arxiv_id": "2611.15160v1",
+    "url": "http://arxiv.org/abs/2611.15160v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.15160v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems help users navigate vast amounts of information by filtering content according to their historical behaviors. As these systems increasingly shape everyday information access, they largely determine the content users are exposed to. However, current research typically prioritizes catering to user interest, while overlooking the existence and propagation of harmful content, such as violence, hate speech, and pornography. In this work, we take a systematic step toward investigating harmful content in recommender systems from three aspects: measuring, revealing, and mitigating. First, we construct datasets with harmfulness-related annotations and present new evaluation metrics to quantitatively measure the harmfulness of recommendation results. Second, our empirical analysis reveals that users tend to engage with harmful content and prevailing recommendation methods often contribute to the proliferation of such content. Third, to address this issue, we introduce a generic framework, MitiHarm, which integrates harmfulness-related signals into both item and user representation learning. Experiments show that MitiHarm can significantly mitigate the propagation of harmful content while preserving user satisfaction. Resources of this work are available at https://github.com/Zhang-xiaokun/MitiHarm.",
+    "code_links": [
+      "https://github.com/Zhang-xiaokun/MitiHarm"
+    ],
+    "comment": "This work has been acceptted by IEEE TPAMI"
+  },
+  {
+    "title": "Point-in-Time Encoders for Earnings Calls",
+    "authors": "Alessio Brini",
+    "published": "2026-11-10",
+    "arxiv_id": "2611.14325v1",
+    "url": "http://arxiv.org/abs/2611.14325v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.14325v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Text encoders turn earnings calls into vectors for search, for language models that answer from retrieved passages, and for forecasting models. A live retriever can use an encoder trained once on all available text, as finance retrievers are, but a backtest needs an encoder that read no text written after the date of each vector. To address this look-ahead bias, from 412,248 calls we train vintages under four pretraining recipes, with yearly cutoffs from 2010 to 2024, and each vintage reads only text dated on or before its cutoff. We then fine-tune each vintage on the question-answer pairs of the calls themselves. The vintages we train on calls alone, with 33.8M parameters, retrieve answers on held-out calls better than the general retrievers we tested in every test quarter. Their vectors also raise by about half the rank correlation between next-day returns and forecasts built from past returns and firm size. When each vintage continues the previous one, a later vintage retrieves better on earlier quarters than the vintage available at the time, and a point-in-time language model that answers from the passages the later vintage retrieves inherits the gain. The 2024 vintage of our families also forecasts earnings surprises better, although the interval of this gain includes zero on calls that no vintage read. It forecasts returns no better, so point-in-time vintages matter most for retrieval and little for forecasts of returns.",
+    "code_links": [
+      "https://github.com/Alessiobrini/point-in-time-encoders-for-earnings-calls"
+    ],
+    "comment": "10 pages, 3 figures, 7 tables. Accepted at the 3rd IEEE International Workshop on Large Language Models for Finance, IEEE BigData 2026. Code: https://github.com/Alessiobrini/point-in-time-encoders-for-earnings-calls"
+  },
+  {
+    "title": "LUMIR: Decoupled Multimodal Representation Learning from Heterogeneous Data for Next-POI Recommendation",
+    "authors": "Zehui Wang, Wolfram Höpken, Dietmar Jannach",
+    "published": "2026-11-10",
+    "arxiv_id": "2611.14004v1",
+    "url": "http://arxiv.org/abs/2611.14004v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.14004v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "As multimodal tourism-related information collected from heterogeneous data sources has become increasingly available, learning effective representations has attracted attention for improving recommendation performance. Existing approaches often tightly couple multimodal fusion with the architecture and optimization objective of a specific downstream model, which limits the generality and reusability of the learned representations. To address these limitations, we propose LUMIR, a decoupled multimodal representation learning framework based on contrastive learning. Multimodal information collected from heterogeneous data sources is first semantically unified into a shared textual representation space using large language models (LLMs). An interaction-aware fusion mechanism is then designed to model cross-modal interactions, while sequential signals are incorporated as a structural constraint to guide representation learning. To evaluate the learned representations, experiments are conducted on a multimodal point-of-interest (POI) dataset under the next-POI recommendation setting across multiple sequential recommendation backbones. The results show that LUMIR consistently outperforms existing multimodal fusion baselines in both accuracy-oriented and beyond-accuracy metrics, demonstrating that decoupling representation learning from downstream optimization provides an effective paradigm for learning reusable multimodal representations. The code is publicly available at https://github.com/wzehui/LUMIR.",
+    "code_links": [
+      "https://github.com/wzehui/LUMIR"
+    ],
+    "comment": "16 pages. Accepted at the DaQuaMRec Workshop, co-located with ACM RecSys 2026"
+  },
+  {
+    "title": "Controlled Knowledge Engineering for Taxonomy Induction with Tool-Grounded LLM Agents and Runtime-Adaptive Policies",
+    "authors": "Jonas Limniatis, Bennet Schaarmann, Georg Reuber, Robert Stahlbock",
+    "published": "2026-11-10",
+    "arxiv_id": "2611.13966v1",
+    "url": "http://arxiv.org/abs/2611.13966v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.13966v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Taxonomies are structured knowledge representations that support semantic search, recommendation, product catalog organization, and retrieval-augmented generation. Their automated construction from a fixed set of candidate entities requires more than plausible text generation: the resulting hierarchy must be complete, structurally valid, and semantically coherent. Large Language Models (LLMs) are promising for this task, but iterative free-form generation remains vulnerable to omitted or hallucinated entities, invalid hierarchical relations, and inconsistent organizational principles. We introduce TIGA (Taxonomy Induction with Tool-Grounded Agents), a knowledge-engineering architecture that formulates taxonomy induction as an iterative decision process over an explicit state and constrained action space. TIGA combines executable taxonomy-editing tools, an memory that records tool calls, rationales, and outcomes, and a runtime-adaptive organizational policy that the agent revises during inference. An optional global reviewer evaluates the constructed taxonomy against the candidate set and the active policy. We evaluate TIGA on four benchmark taxonomies using two LLM backbones and compare it with single-shot and iterative prompting-based baselines. TIGA achieves the strongest structural-quality results in most evaluated configurations, but does not dominate on every precision measure. The gains are accompanied by substantially higher token consumption, API-call volume, and inference time. Ablation results show consistent benefits from the policy and interaction-memory components, whereas the effect of global review depends on the dataset and the available revision budget. These findings characterize tool grounding and runtime policy adaptation as promising but costly mechanisms for improving the controlled construction of structured knowledge representations.",
+    "code_links": [
+      "https://github.com/bschaarmann/TIGA"
+    ],
+    "comment": "Submitted to Knowledge-Based Systems. Code: https://github.com/bschaarmann/TIGA"
+  },
+  {
+    "title": "From Counterfactual Edits to Human Narratives: LLM-Driven Interpretations for Recommender System Explanations",
+    "authors": "Vojtech Cahlik, Amir Reza Mohammadi, Rodrigo Alves, Pavel Kordik, Eva Zangerle",
+    "published": "2026-11-10",
+    "arxiv_id": "2611.13914v1",
+    "url": "http://arxiv.org/abs/2611.13914v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.13914v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Recommender systems increasingly influence what users discover and consume online, yet the decision logic behind their outputs often remains opaque. Counterfactual explanation (CFX) methods provide an effective way to show which changes to a user's interaction history would alter a recommendation. In recommendation settings, however, CFXs often require many edits, producing long, low-level lists that are hard for users to interpret. Moreover, most evaluations emphasize edit counts while largely overlooking whether the resulting CFXs are coherent and actionable for users. We argue that this gap between generating valid CFXs and communicating model behavior stems from the lack of user-centered abstraction and limited qualitative evaluation. To bridge this gap, we investigate large language models as mediators that summarize raw CFX interaction edit lists into concise natural language explanations describing higher-level preference patterns. We optimize these mediators for correctness, informativeness, and linguistic quality through preference optimization, and evaluate the resulting explanations with human-calibrated metrics derived from separate human-labeled datasets. On the MovieLens-1M dataset, across multiple counterfactual generators and language models, the resulting summaries achieve high overall linguistic quality, while the strongest semantic results are obtained with high-success CFX methods such as ACCENT and SPINRec. Direct Preference Optimization improves the semantic metrics in almost all evaluated settings.",
+    "code_links": [
+      "https://github.com/vcahlik/from-counterfactual-edits-to-human-narratives"
+    ],
+    "comment": "Published at CIKM 2026 (Rome, Italy). Code: https://github.com/vcahlik/from-counterfactual-edits-to-human-narratives"
+  },
+  {
+    "title": "INTENT: Out-of-Sample, Out-of-Time, and Cold-Start Evaluation on User Event Sequences",
+    "authors": "Mattias Kvist, Erik Lidman Hillbom, Edoardo de Cal, Davis Siemens, Adam Fredriksson, Rickard Brüel-Gabrielsson",
+    "published": "2026-11-09",
+    "arxiv_id": "2611.13069v1",
+    "url": "http://arxiv.org/abs/2611.13069v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.13069v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Banks now train foundation models on ordered sequences of customer events such as transactions, app sessions, and authorizations. Deployed, such a model predicts forward in time, often for customers and merchants absent from training, yet each is evaluated on private data, so no two can be compared. Public benchmarks for such sequences rarely test a period the model has not seen; recommendation studies usually hold out each user's last events instead. We present INTENT (INTEraction, Novelty, and Transfer evaluation for next-action prediction), a public benchmark that scores a model in seven cells defined by whether the user, the period, and the target item appeared in training. An audit of 59 public dataset families retains five datasets; the most common defect is the lack of a calendar timestamp that orders events. No date lies within the time span of all five datasets, so each is split at its own cutoff, chosen by one rule fixed before any model is evaluated. Summed over the datasets, every cell holds at least 111,769 users. In reference results the cell determines the best model: a transformer leads on seen items after the cutoff but scores zero on new items, a variant that embeds item metadata helps mainly on MicroLens, and repeating the user's last item leads on new items in four of five datasets. This parameter-free control also shows that on three datasets most of the score lost after the cutoff reflects changed behavior rather than the model. The pipeline, the cutoff rule, and the per-cell user counts are publicly available.",
+    "code_links": [
+      "https://github.com/kthaisociety/intent"
+    ],
+    "comment": "4 pages + references and appendix. Accepted at the MFMB workshop at ACM ICAIF '26 (non-archival). Code: https://github.com/kthaisociety/intent"
+  },
+  {
+    "title": "Proactive Dimension-Adaptive Denoising for Graph Collaborative Filtering via Representation Coherence",
+    "authors": "Wenjun Li, Dong Zhao, Jiaying Shi, Juan Zhang, Zhaoming Pan, Zhimin Zhang",
+    "published": "2026-11-09",
+    "arxiv_id": "2611.11801v1",
+    "url": "http://arxiv.org/abs/2611.11801v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.11801v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Implicit feedback in recommender systems contains noisy interactions (e.g., accidental clicks, impulse purchases) that propagate through user-item graphs and contaminate learned representations. Existing explicit denoising methods uniformly rely on training loss to estimate interaction reliability. However, loss is a fundamentally passive signal: it detects noise only after it has caused prediction errors, and it is heavily confounded by training stage, negative sampling, and hard positives. We propose Noise-aware Dimension Learning (NDL), a proactive dimension-adaptive denoising framework. NDL introduces Representation Coherence Detection (RCD), which evaluates the coherence between an interaction representation and the user's historical preference centroid in embedding space, providing an active noise signal independent of loss. RCD and the loss signal are fused via activity-aware weighting (active users rely more on coherence while cold-start users automatically fall back to loss), and the fused estimate drives an interaction-level dimension-adaptive mask that limits the effective representation capacity of unreliable interactions. A lightweight contrastive regularizer further improves embedding uniformity, stabilizing the geometry on which RCD discriminates. On three public benchmarks NDL consistently outperforms state-of-the-art denoising methods, lifting Recall@5 by +17.95% on Amazon-book, +12.33% on Yelp, and +5.63% on MovieLens-1M over the strongest baseline DAR; the core variant without contrastive learning already surpasses DAR on sparser datasets, confirming representation coherence as the primary driver of these gains. NDL is confined to the training loop and is serving-compatible with LightGCN-based production pipelines, adding no online latency or parameters at inference time. Code: https://github.com/GordonDongZHAO/NDL",
+    "code_links": [
+      "https://github.com/GordonDongZHAO/NDL"
+    ],
+    "comment": "code available at https://github.com/GordonDongZHAO/NDL"
+  },
+  {
+    "title": "An Adaptive, Context-Aware, and Stacked Attention Network-Based Recommendation System to Capture Users' Temporal Preference",
+    "authors": "Jung-Hsien Chiang, Chung-Yao Ma, Chi-Shiang Wang, Pei-Yi Hao",
+    "published": "2026-11-08",
+    "arxiv_id": "2611.11278v1",
+    "url": "http://arxiv.org/abs/2611.11278v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.11278v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommendation systems have become more important since the widespread use of the Internet. The large amount of information means that it is difficult for users to discover they really need. However, users' preferences can change over time because of the age and the impact of social networks. Recommendation systems must capture users' preferences and recommend suitable items, which is a difficult challenge. This study proposes a novel recommendation system that adapts to the changing preferences of users. By learning and adapting to users' changing preferences better recommendations are provided. This study uses context factors as additional information to model users' preferences more precisely. For the proposed recommendation system, the context is based on users' interaction items within each defined time interval. This study proposes two novel attention mechanisms for the recommendation system. The contextual item attention module captures contextual information, changing pattern in users' preference and the importance of items. The multi-head attention module extends the diversity of users' preferences and adapts to changing preferences. The recommendation performance is improved using additional item's temporal information to model the contextual item's representation. Experiments compare the proposed algorithm with several state-of-the-art recommendation methods using three real-world datasets. The experimental results demonstrate that the proposed context-aware recommendation model outperforms traditional methods and demonstrate the effectiveness with which contextual information is captured by the attention mechanism.",
+    "code_links": [
+      "https://github.com/solitude6060/An-Adaptive-Context-Aware-and-Stacked-Attention-Network-Based-Recommendation-System"
+    ],
+    "comment": "12 pages. Accepted version of the article published in IEEE Transactions on Knowledge and Data Engineering. Code: https://github.com/solitude6060/An-Adaptive-Context-Aware-and-Stacked-Attention-Network-Based-Recommendation-System"
+  },
+  {
+    "title": "Lightfoot: Graph Retrieval-Augmented Generation with Exact, Model-Free Document Deletion",
+    "authors": "Uday Allu",
+    "published": "2026-11-07",
+    "arxiv_id": "2611.11010v1",
+    "url": "http://arxiv.org/abs/2611.11010v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.11010v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Graph-based retrieval-augmented generation (GraphRAG) improves multi-hop question answering, but deployed systems face two costs that research comparisons rarely measure: building the graph, and removing documents from it. We present Lightfoot, a GraphRAG system in which every entity, link, fact and synonym edge is a deterministic function of per-passage extractions carrying chunk-level provenance. Indexing makes one language-model call per passage, retrieval makes none, and deleting a document is a database operation with no model calls. On the full 11,402-passage MuSiQue corpus we verify that, after deleting 10% of the documents, the graph is identical to a fresh index of the surviving documents. We compare Lightfoot with HippoRAG 2, LightRAG and fast-graphrag under identical extraction, answer and embedding models on MuSiQue, 2WikiMultiHopQA and HotpotQA. Lightfoot builds the cheapest index on all three datasets, 26-31% below HippoRAG 2 and 3-6x below LightRAG and fast-graphrag. Against HippoRAG 2 it is significantly better on MuSiQue retrieval (+2.8 points recall@5 and +4.3 recall@10 on a held-out split) and on HotpotQA answers (+7.7 points exact match), and significantly worse on 2WikiMultiHopQA (-3.9 recall@2, -8.4 F1). Deleting the same documents took LightRAG 2,187 model calls and 3.7 hours; fast-graphrag has no deletion path. Code and per-question results: https://github.com/udayallu-ml/Lightfoot-GraphRAG",
+    "code_links": [
+      "https://github.com/udayallu-ml/Lightfoot-GraphRAG"
+    ],
+    "comment": "9 pages, 1 figure. Code: https://github.com/udayallu-ml/Lightfoot-GraphRAG"
+  },
+  {
+    "title": "Clinical Evidence-Guided Residual Learning for Medication Recommendation with Dynamic DDI Regularization",
+    "authors": "Zesheng Li, Chengchang Pan, Honggang Qi",
+    "published": "2026-11-07",
+    "arxiv_id": "2611.10613v1",
+    "url": "http://arxiv.org/abs/2611.10613v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.10613v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.LG",
+    "abstract": "Medication recommendation must combine patient-specific treatment evidence with the interaction structure of a prescription. The central challenge is to determine which evidence supports each medication and how strongly to regularize interactions while preserving predictive quality. We propose EviDrug, a clinical evidence-guided residual learning framework. Its clinical-memory backbone integrates a self-trained visit-aware encoder, training-case memory and one medication-set interaction block to establish a patient-specific prescription. A gated refinement head combines the backbone states with clinical associations and history-conditioned medication identities through bounded logit corrections. Drug-drug interaction (DDI) feedback adapts regularization strength using training-query predictions. Across MIMIC-IV, NWICU and SICdb, EviDrug leads twelve published-method baselines in AP, F1 and Jaccard, improving AP by 2.26, 2.06 and 1.71 percentage points over the strongest comparator. These gains come at lower parameter and runtime costs than MetaDrug. Matched controls demonstrate DDI reductions with stable predictive quality. Code is available at https://github.com/LIZESHENG13/EviDrug.",
+    "code_links": [
+      "https://github.com/LIZESHENG13/EviDrug"
+    ],
+    "comment": "13 pages, 6 figures, 8 tables. Supplementary PDF and detailed result tables are included as ancillary files. Code: https://github.com/LIZESHENG13/EviDrug"
+  },
+  {
+    "title": "Close and Sort: Exact Maximum-Likelihood Aggregation of Cyclic Rank-Two Preferences",
+    "authors": "Kehan Liu, Zhaoyun Chen, Xianquan Yan",
+    "published": "2026-11-07",
+    "arxiv_id": "2611.10538v1",
+    "url": "http://arxiv.org/abs/2611.10538v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.10538v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.DS",
+    "abstract": "Pairwise probabilities arise in rank aggregation, recommendation, and human or LLM evaluation, yet converting them into a maximum-likelihood list is a weighted Kemeny problem and is NP-hard in general. Known exact algorithms for rank-two tournaments use only comparison signs and do not optimize this likelihood. We show that the weighted problem is exactly solvable when the skew-symmetric log-odds matrix $W_{ij}=\\log(p_{ij}/p_{ji})$ has rank two, including when the induced preferences contain cycles. Writing $W_{ij}=\\det(h_i,h_j)$ and adding the closing vector $h_0=-\\sum_i h_i$ turns the objective into twice the signed area of a closed polygon. This geometry yields CloseSort, which polar-sorts the $n+1$ edge vectors, cuts after $h_0$, and returns a global maximum-likelihood order in $O(n\\log n)$ time from the factors. The same geometry identifies the runner-up and gives a stability certificate beyond exact rank two. When the smallest determinant $δ$ of two consecutive edges in the closed angular cycle is positive, it is exactly the best-to-runner-up log-likelihood gap. For $W=W_0+E$, the CloseSort order of $W_0$ has regret at most $\\sum_{i<j}|E_{ij}|$ on $W$ and remains optimal whenever this sum is below $δ$, a worst-case tight threshold. In 5,120 determinant-logit simulations, increasing the observations per pair from 4 to 64 raises the fraction on which rank-two projection outperforms the empirical plug-in optimum from 68.6% to 85.7%. On 3,600 Arena-Hard LLM-judge profiles drawn from 63 systems and ten judges, the leading rank-two component captures 89.2% of the log-odds energy. On profiles containing a directed majority triangle, CloseSort reduces normalized regret by 44% relative to Borda and improves the mean normalized objective over each of eight baselines. With factors supplied, it is 8,407 times faster than exact dynamic programming on 18-item rankings.",
+    "code_links": [
+      "https://github.com/sarinstein-yan/close-and-sort"
+    ],
+    "comment": "10 pages, 3 figures, 5 tables. Accepted at the 20th ACM International Conference on Web Search and Data Mining (WSDM 2027). Code: https://github.com/sarinstein-yan/close-and-sort"
+  },
+  {
+    "title": "SAGE-PAIR: Source-Pretrained Routed Residual Adaptation for Sparse-Feedback Recommendation",
+    "authors": "Weiqing Zeng, Zida Yang, Guquan You, Jiexin Zheng, Cong Wang",
+    "published": "2026-11-06",
+    "arxiv_id": "2611.09728v1",
+    "url": "http://arxiv.org/abs/2611.09728v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.09728v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommendation systems often enter a new serving window before enough outcomes are available to retrain the deployed model. We study this regime with 0.05-1.0% target feedback, a range that spans our stress tests while keeping supervision far below the degrees of freedom of the source recommender. At this scale, existing fine-tuning and meta-learning methods still estimate target-specific updates from extremely sparse feedback, leaving the update direction weakly identified. SAGE-PAIR instead transfers a source-supported residual correction space and only calibrates this space using target outcomes. We introduce SAGE-PAIR, a staged adapter that pretrains a low-dimensional global residual on an adjacent source period and adds a soft router over residual experts conditioned on source user profiles. Target feedback then calibrates this residual state rather than relearning the recommender. On a locked test split of KuaiSAR-v2, SAGE-PAIR (Full) achieves a 1.77% relative improvement in NDCG@10, while a core-protocol comparison shows a further 0.25% gain from routed experts beyond source-pretrained PAIR. Matched source-pretrained LoRA and Adapter-Tuning baselines remain near the source model, supporting the need for a different adaptation space. Thus, SAGE-PAIR improves ranking quality with millisecond-scale adaptation and inference costs. Sparse-feedback adaptation is fundamentally governed by the identifiability of the update space rather than by label count alone. Source pretraining supplies estimable correction directions for scarce labels, while user-conditioned routing contributes a consistent, differentiated cross-user correction on top of the global correction. Our code is available at https://anonymous.4open.science/r/SAGE-PAIR-610E/.",
+    "code_links": [],
+    "comment": "14 pages, 2 figures, including 3 pages of supplementary material"
+  },
+  {
+    "title": "Orthogonal Norm Growth in Two-Tower Retrieval: A Popularity Mechanism for Unified Discovery",
+    "authors": "Andrei Atamaniuk",
+    "published": "2026-11-06",
+    "arxiv_id": "2611.09294v1",
+    "url": "http://arxiv.org/abs/2611.09294v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.09294v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Unified search and recommendation systems may update the same item vectors from both interaction streams. We study how repeated updates can increase an item vector's norm and affect retrieval under an unnormalized dot product. A cosine-only loss makes the output gradient perpendicular to the current item vector - tangent to its constant-norm sphere. Training changes encoder parameters, however, so the realized item-vector movement need not remain tangent. We derive sufficient conditions under which it does; every nonzero update then increases squared norm by its squared length. When the tasks share an item encoder, sequential updates from both can accumulate in the same norm, which raw-inner-product serving can expose for either task. This conditional result is not a theorem about joint SGD. Controlled ablations test these conditions. On MovieLens 32M and Amazon Books, accumulated tangent movement accompanies frequency-norm association and additional head-item exposure under raw-dot rather than normalized-item ranking. In a nonlinear tower combining a per-item ID vector with a shared content encoding, active item movement remains near-tangent. We separate its norm change into the ID-update contribution and other output changes, then use a matched training intervention that removes immediate norm growth caused by the ID-row update. The intervention reduces norm-related exposure but also recommendation utility, so it is diagnostic rather than a proposed mitigation. Our logs are recommendation-only: the formulation supplies a shared-representation audit, while prevalence in joint traffic remains open.",
+    "code_links": [],
+    "comment": "6 pages, 1 figure. Accepted at USRW 2026 (non-archival), co-located with ACM RecSys 2026. Supplementary material included as an ancillary file. Workshop: https://usrw-workshop.github.io/2026/accepted-papers.html . Code: https://gitlab.com/wrapper228/usrw_pb"
+  },
+  {
+    "title": "HyperPage: Learned Page Layouts for Disk-Resident Graph Vector Indexes",
+    "authors": "Xinyu Zhang, Jingze Li, Baihua Zheng, Weiwei Sun",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16149v1",
+    "url": "http://arxiv.org/abs/2611.16149v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16149v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Disk-resident graph indexes such as DiskANN store each vector with its graph edges as one record on SSD pages. A search needs the page of every record it expands, so its page reads depend on the page layout, that is, which records share a page. Search agents trained with reinforcement learning query one such index run after run, and every graph traversal can be logged with the records it expands. We therefore use the logs of a finished run to lay out the index for a declared memory budget, so later runs read fewer pages. In contrast, existing layouts such as Starling and MARGO are computed from the graph and vectors and use no logs. Learning a layout from logs is challenging, because the logs must stay valid under every layout, the saving depends on what the budget caches, and the best layout is NP-hard to find. Our key observation is that DiskANN-style search routes on in-memory codes and the records it expands, never on their page-mates. As a result, the logged traversals price every layout by replay, and cached records add no page reads. Accordingly, we propose HyperPage, which first builds layouts for the declared budget on the logged traversals of uncached records. It then selects one layout, together with the budget split between hot records and a page cache, by replaying validation steps. In addition, a Lagrangian lower bound shows how far a layout may be from the optimum. We learn from one Search-R1 agent run and test on a later run with a different reward, over 1M and 21M passages. Across seven cache budgets, HyperPage reads 5.2% to 21.2% fewer pages than MARGO, and no compared layout reads fewer. The advantage is largest when the cache is small. For example, at 1% of the 1M index, MARGO needs nearly 3 times the budget to read as few pages. On the 21M index, HyperPage also cuts search time per step by up to 10.4%. The saving holds for a second agent model and a second corpus.",
+    "code_links": [
+      "https://github.com/zhangshea/HyperPage"
+    ],
+    "comment": "14 pages, 4 figures, 7 tables. Code available at: https://github.com/zhangshea/HyperPage"
+  },
+  {
+    "title": "Calibrated Early Termination with Bounded Optimality Gaps for Constrained Vector Search",
+    "authors": "Xinyu Zhang, Jingze Li, Baihua Zheng, Weiwei Sun",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16148v1",
+    "url": "http://arxiv.org/abs/2611.16148v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16148v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Vector search over learned embeddings is the retrieval layer of recommendation and retrieval-augmented generation, and many applications cap how many answer items one category may contribute. Graph indexes answer a query by best-first traversal, and where it stops determines its cost and whether its answer is exact. We study early termination for such constrained $k$-nearest-neighbor ($k$-NN) queries, with plain $k$-NN as a special case, and seek the cheapest stopping rule whose answer is exact with probability at least $1-\\varepsilon$. Learned early-termination methods instead target average recall, which does not guarantee exact answers. Multiple testing can calibrate any parameterized stopping rule to our target, but it cannot tell how much a better rule with the same risk and observations would save. Answering this needs a lower bound on the optimum of a rule family too large to enumerate, valid for the query population. Our key idea is to declare the observations a rule may use and to consider every rule monotone in them. Risk-constrained stopping then becomes a linear program over an order polytope, whose Lagrangian minimizers form a nested chain of staircase rules computed exactly by dynamic programming. Fixed-sequence binomial tests along this chain calibrate our rule, CaST, whose failure probability is at most $\\varepsilon$ with confidence $1-δ$. Lagrangian weak duality bounds the optimum of the declared class from below at all risk levels at once, without a union bound over the rules. On two datasets of one million items each, CaST replayed on logged searches costs at most 1.132 times the class optimum for risk levels from 0.03 to 0.10, at 95% joint confidence per setting. Larger savings thus need a rule outside the class. At a common risk target on held-out queries, CaST is faster than every other calibrated rule we time, which take 4.8% to 45.5% more mean time.",
+    "code_links": [
+      "https://github.com/zhangshea/CaST"
+    ],
+    "comment": "14 pages, 5 figures, 3 tables. Code available at https://github.com/zhangshea/CaST"
+  },
+  {
+    "title": "Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication",
+    "authors": "Jincheng Gao, Shuo Sun",
+    "published": "2026-11-10",
+    "arxiv_id": "2611.13765v1",
+    "url": "http://arxiv.org/abs/2611.13765v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.13765v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Learning feature interactions is essential for accurate prediction and interpretable modeling, yet a high interaction score may reflect fitting noise rather than a reproducible pattern. Ranking methods score feature pairs but leave the cutoff to the user; testing methods set the cutoff but rely on repeated model refits or a model of the joint feature distribution. We present LENS, a model-agnostic framework for selecting feature interactions through independent replication. LENS trains two models with the same learning algorithm on disjoint data and accesses them only through predictions. For each feature pair, it removes main effects from the joint-effect surface to isolate an interaction pattern, ranks pairs by its strength, and tests whether the second model reproduces it at a meaningful strength. A single multiple-testing correction determines which pairs to retain, using only two model fits regardless of the number of features. We prove that a replication ratio alone can retain arbitrarily weak patterns shared by both fits, whereas a strength floor restores selection consistency, and we characterize when normalization in Friedman's $H^2$ reverses interaction rankings. On 16 synthetic designs, LENS matches leading model-specific ranking methods (e.g., TreeSHAP) and recovers 91% of material interactions, against 45% for the knockoff-based DIAMOND, without selecting false pairs; with 1,225 candidate pairs and no interactions, it makes substantially fewer false discoveries. On large-scale French motor insurance data, it identifies interactions documented in the actuarial literature and recovers 90% of the deviance gain obtained using all pairs. On two credit datasets, LENS selects few pairs while maintaining or slightly improving predictive performance over the additive baseline.",
+    "code_links": [
+      "https://github.com/JinchengGao-Infty/LENS"
+    ],
+    "comment": "20 pages. Code and results: https://github.com/JinchengGao-Infty/LENS"
+  },
+  {
+    "title": "Samyama-SDG: A Declarative GraphQL @count and Regex/Ontology Synthetic Data Compiler with $O(1)$-Memory Referential Integrity and Causal Ground Truth",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-11-08",
+    "arxiv_id": "2611.11295v1",
+    "url": "http://arxiv.org/abs/2611.11295v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.11295v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Synthetic data generators face a divide between declarative relational mockets and domain causal simulators. Declarative generators specify entities, regexes, and foreign keys via schemas, but buffer parent primary-key pools in RAM ($O(N)$ memory) and lack ontology bindings or causal ground truth. Conversely, domain simulators emit realistic streams and ground-truth labels, but require thousands of lines of procedural code per domain.\n  We present Samyama-SDG (sdg-rs), a Rust synthetic data compiler unifying declarative schema compilation with ontology-bound causal simulation. At Layer 1, Samyama-SDG compiles Cardinality-Extended GraphQL schemas (@count, @pk, @ontology, @regex, @dist, @fk, @after) and an Attribute Data Dictionary into a topologically sorted DAG. Combining stateless counter-based seekable PRNGs (SplitMix64 over $(\\text{seed}, \\text{entity}, \\text{row}, \\text{field})$) with index-bijective primary keys $f_{\\text{PK}}(s, E, i)$ lets child tables resolve uniform or Zipfian foreign keys and multi-hop @after constraints in $O(1)$ memory without buffering parent tables. At Layer 2, causal processes layer fault propagation and machine-scorable ground truth (ground_truth.jsonl) over the same seekable PRNG and samyama-ontologies binder. Across three schemas, Samyama-SDG generates $1{,}000{,}000$ records in $128.79\\text{ ms}$--$172.43\\text{ ms}$ ($5.80\\text{M}$--$7.76\\text{M}$ rows/s) and $5{,}000{,}000$ records in $676.12\\text{ ms}$--$808.56\\text{ ms}$ at flat $31.4\\text{ MiB}$--$35.1\\text{ MiB}$ memory, with $0$ conformance errors across $1{,}150{,}000$ foreign keys and $900{,}000$ temporal constraints.",
+    "code_links": [
+      "https://github.com/samyama-ai/samyama-synthetic-data-generator"
+    ],
+    "comment": "7 pages, 3 figures, 3 tables. Code: https://github.com/samyama-ai/samyama-synthetic-data-generator"
+  },
+  {
+    "title": "MongoBench: Do LLMs Know What a MongoDB Query Will Do?",
+    "authors": "Qibai Chen, Haoting Qiu, Yezhou Cheng, Mengxiao Qian",
+    "published": "2026-11-06",
+    "arxiv_id": "2611.09065v1",
+    "url": "http://arxiv.org/abs/2611.09065v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.09065v1",
+    "category": "databases",
+    "primary_category": "cs.SE",
+    "abstract": "LLM agents increasingly operate databases on their own: they generate queries and run them against live data. Two checks are commonly used to judge such an agent - whether it produces a valid query, and whether it reaches the right final answer - but neither tells us whether the agent knows what its query will actually do before it runs. We argue that this consequence prediction ability must be evaluated in its own right, and we build MongoBench to measure it: given a collection of documents and a MongoDB find() filter, a model must return the exact set of matching _ids, with ground truth from a real mongod server. The 300 items each compose three or four documented matching pitfalls and are proposed symmetrically by three vendors' models, so results stratify by item source. Evaluating four models - frontier systems from three vendors and one open-weight reasoner - accuracy ranges from 70.1% to 92.1%, a 22-point spread. Each proposer mispredicts 10-31% of the items it wrote itself, so producing a query does not imply predicting its effect. A failure-mode analysis shows errors are better predicted by which semantic pitfall a query exercises - range comparisons and null - than by surface measures such as document count or the number of composed rules. Prepending a verified rule sheet helps unevenly; executing the original filter against the engine yields reliable match sets, but delegation must be checked: on 28% of items (averaged over three runs) one model's executed filters never passed a canonical check against the intended query, and it answered about 22 of them wrong, while the other three passed on every item. We release the benchmark, the mongod oracle, and the evaluation code with all prompts at https://github.com/research-repo-bai/MongoBench.",
+    "code_links": [
+      "https://github.com/research-repo-bai/MongoBench"
+    ],
+    "comment": "Accepted at CAIT 2026"
+  },
+  {
+    "title": "Autonomous ETL Pipelines for Salesforce M&A Consolidation: A Reference Framework, Jitterbit Mapping, and Reproducible Simulation Study",
+    "authors": "Imran Basha Shaik, Sahla Sultana, Khader Moinuddin Shaik",
+    "published": "2026-11-04",
+    "arxiv_id": "2611.05918v1",
+    "url": "http://arxiv.org/abs/2611.05918v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.05918v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Merging companies that each run Salesforce must consolidate their customer data into a single organization while both source systems remain in use. This requires reconciling different schemas and picklists, resolving duplicate customers across and within organizations, preserving relationships between records, and keeping the target current until cutover. This article proposes a reference framework for an autonomous extract-transform-load pipeline for this task. It combines partitioned bulk extraction, declarative mapping templates, rule-based and statistical quality gates, master data management with deterministic and blocked fuzzy matching, constrained loading with per-record error capture, and change data capture guarded by a data-health circuit breaker. Each stage is mapped to Jitterbit Integration Studio constructs. The framework was implemented as an open reference prototype and evaluated on synthetic two-organization scenarios with known ground truth at three scales, from 32,040 to 383,973 source records, over five random seeds. At a preset threshold, hybrid matching reached pairwise F1 scores of 0.918 for accounts and 0.885 for contacts; calibrating the threshold per object would raise these to 0.938 and 0.963. The quality gates prevented all load failures and all silent loss of unmapped picklist values without wrongly flagging any clean record, whereas removing them produced about 1,000 load failures per run. Over five simulated days of hourly incremental synchronization, replayed events were ignored, an injected upstream fault was contained in the batch in which it occurred, and the target agreed with a full rebuild on more than 99.3 percent of field values. Validation on a production deployment remains future work.",
+    "code_links": [
+      "https://github.com/imran0547/SDFC"
+    ],
+    "comment": "16 pages, 4 figures, 7 tables. Code and data: https://github.com/imran0547/SDFC/tree/add-autonomous-etl-salesforce-ma-consolidation/autonomous-etl-salesforce-ma-consolidation; preprint also archived at https://doi.org/10.5281/zenodo.23935717"
+  },
+  {
+    "title": "When Is One Query per Template Enough? Adapting Learned Cost Models to New Hardware",
+    "authors": "Krish Patel",
+    "published": "2026-11-04",
+    "arxiv_id": "2611.05892v1",
+    "url": "http://arxiv.org/abs/2611.05892v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.05892v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "A learned cost model that predicts query runtimes is trained on measurements from one machine. When the database moves to other hardware, its plans stay the same but their runtimes change, each by its own factor. We ask how to adapt such a model from k queries measured on the new machine: which queries to run, how to use their runtimes, and how many are enough. On PostgreSQL we timed the same plans of 1,162 TPC-H and TPC-DS queries in six environments: a laptop and a server, each with all its processors or pinned to one, the server also pinned to two, and the laptop also with a small buffer pool. No single factor describes the slowdown between two environments: most of its variance lies between query templates, so a speed factor stops improving after a few queries. A correction that fits separate lines for serial and parallel plans and adds an offset for every measured template brings the moved model, with one measured query per template, to an error (geometric mean over templates of the median Q-error) of 1.10 on TPC-H and 1.19 on TPC-DS, close to the same correction on a model trained on the new machine; fine-tuning a DACE-style neural cost model on the same queries gains at most 2%. On templates never measured, no correction we tried is on average more than 2% better than the speed factor. We then fixed hypotheses and timed new data. On TPC-H at ten times the scale the errors follow these results, but two of five repeated tests miss. On the Join Order Benchmark, whose queries differ widely within a template, the model errs by 2.36 even when retrained on the new machine, no correction gains much, and only the test on new templates holds; boosted trees and a neural model fit these queries better, and correcting the neural model works as well as fine-tuning it. We report every test as registered.",
+    "code_links": [
+      "https://github.com/KrishPatel13/query-runtime-transfer"
+    ],
+    "comment": "13 pages, 2 figures, 10 tables. Code and data: https://github.com/KrishPatel13/query-runtime-transfer"
+  },
+  {
+    "title": "The Invocation Bottleneck in LLM-Based Lossless Compression: What Can Be Removed and What Must Be Traded",
+    "authors": "Zhe Yan, Yihao Liu, Antonio Boffa, Huanchen Zhang",
+    "published": "2026-11-04",
+    "arxiv_id": "2611.05871v1",
+    "url": "http://arxiv.org/abs/2611.05871v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.05871v1",
+    "category": "databases",
+    "primary_category": "cs.IT",
+    "abstract": "Large language models (LLMs) compress text far better than classical compressors, but LLM-based compressors are slow, particularly during decompression. We argue that their decoding time has two fundamentally different sources. Execution redundancy, such as per-token host transfers, CPU-side coding, and token-by-token encoding, is work that the coded output does not require and can be removed without changing a single output bit. Sequential dependency, one model call per decoded token, is inherent to lossless decoding and cannot be removed by better execution, only traded for more calls or for more bits. We remove execution redundancy with a GPU-resident pipeline whose block-parallel encoding is made lossless in half precision by batch-invariant kernels, speeding up arithmetic coding by up to 5.8x in encoding and 3.0x in decoding without changing its compression rate. We then study the two ways of trading sequential dependency, speculative dual-model coding (SDMC) and multi-token single-model coding (MSMC), characterize the compression cost of predicting several tokens from a shared prefix, and identify the workloads in which fewer model calls are worth that cost.",
+    "code_links": [
+      "https://github.com/Angie-Yan/LLM-based-Data-Compression"
+    ],
+    "comment": "14 pages, 7 figures, 4 tables. Code: https://github.com/Angie-Yan/LLM-based-Data-Compression"
+  },
+  {
+    "title": "Where Is the Truth When AI Agents Disagree? Dependence-Aware Belief Propagation for Unsupervised Truth Discovery (Extended Version)",
+    "authors": "Laure Berti-Equille",
+    "published": "2026-11-03",
+    "arxiv_id": "2611.04805v1",
+    "url": "http://arxiv.org/abs/2611.04805v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.04805v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "LLM agents often give conflicting answers to the same question, and many deployed agents are variants of one base model, so their errors are correlated. We study truth discovery among such agents: inferring the true answer and each agent's reliability without labels. Classical truth-discovery and crowdsourcing estimators reward an agreeing bloc and can fall below majority vote. We propose BP-TD, which adds per-agent decorrelation weights to mean-field variational inference on a one-coin Dawid-Skene model, so that agents sharing a base model count together as about one vote. Its first iteration is exactly a weighted vote; later iterations estimate agent reliability. With 13 local agents on MMLU, BP-TD beats majority vote without any labels (0.716 vs. 0.624 on 160 questions; 0.707 vs. 0.674 on 10,000) and ranks agents by their true accuracy, which classical estimators invert. The gain depends on the pool: over 2,852 sub-pools of four benchmarks, decorrelation helps when the largest correlated bloc is weaker than the other agents and hurts when it is the strongest, and we found no label-free statistic that tells the two cases apart. Labels change the picture quickly: with 20 labelled questions, selecting the single best agent is more accurate than every aggregator we tested on MMLU, ARC and TruthfulQA.",
+    "code_links": [
+      "https://github.com/LaureBerti/BPTD"
+    ],
+    "comment": "Extended version of a short paper accepted at the 2026 IEEE International Conference on Big Data (IEEE BigData 2026). 11 pages, 6 figures, 3 tables. Code: https://github.com/LaureBerti/BPTD ; code and data archive: doi:10.5281/zenodo.21294747"
+  },
+  {
+    "title": "Modular and Efficient Approximate Nearest Neighbors Search with Vectorium and kANNolo",
+    "authors": "Silvio Martinico, Franco Maria Nardini, Cosimo Rulli, Rossano Venturini",
+    "published": "2026-11-02",
+    "arxiv_id": "2611.03927v1",
+    "url": "http://arxiv.org/abs/2611.03927v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.03927v1",
+    "category": "databases",
+    "primary_category": "cs.IR",
+    "abstract": "Approximate Nearest Neighbors (ANN) search over neural embeddings powers modern retrieval systems such as Retrieval-Augmented Generation. Embeddings come in three representations (dense, sparse and multi-vector), and efficient search combines an index structure, a similarity function and a quantization scheme. Existing libraries fix one combination, hard-code each one separately, or factor only one side of the problem, and none covers all three representations. We present Vectorium and kANNolo, two open-source Rust libraries that split this design space into a data-management layer and an indexing layer. Vectorium abstracts the vector, the distance function, the quantizer and the dataset independently, and provides 11 encoders, from 32-bit floats to sub-bit codes. On top of it, kANNolo implements Hierarchical Navigable Small-World (HNSW) graph and Inverted Vector File (IVF) indexes that are generic over representation, encoder and metric, and a two-stage index that composes any first-stage index with any rescoring dataset. Since every combination is specialized at compile time, this modularity adds no run-time overhead, and the resulting indexes reach state-of-the-art performance: our Product Quantization matches Faiss in accuracy at competitive speed, our RaBitQ and HNSW match or outperform their reference implementations, and our IVF outperforms Faiss. Against six dense and five sparse systems on seven public collections, our indexes give the best memory-throughput trade-off on dense data in 9 of 12 collection-accuracy pairs and perform well on out-of-distribution queries. On sparse data, the systems built on Vectorium lead on all three collections, with Seismic and SeismicWave the fastest and kANNolo's indexes the most compact.",
+    "code_links": [
+      "https://github.com/TusKANNy/papers_reproducibility"
+    ],
+    "comment": "39 pages, 11 figures, 17 tables. Submitted to Information Systems. Code and data: https://github.com/TusKANNy/papers_reproducibility/tree/main/information-systems-vectorium-kannolo"
+  },
+  {
+    "title": "From FAIR to AI-FAIR Metadata-First Infrastructure for AI-Enabled Science",
+    "authors": "Elizabeth G. Campolongo, Eric R. Sokol, Marty Downs, Gina Glenne, Gregory E. Maurer, Sydne Record, Dustin R. Rubenstein, Matthew J. Thompson, Christine Laney, Hilmar Lapp, Max Tarjan, Tanya Berger-Wolf",
+    "published": "2026-11-02",
+    "arxiv_id": "2611.03327v1",
+    "url": "http://arxiv.org/abs/2611.03327v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.03327v1",
+    "category": "databases",
+    "primary_category": "cs.AI",
+    "abstract": "Artificial intelligence (AI) technologies and their capabilities have advanced rapidly over the past few years, leading to widespread interest and adoption in the biological and ecological sciences. However, the data infrastructure and computational resources that provide the foundation for AI workflows in ecology and biodiversity science remain fragmented. Moreover, the flow of value remains largely unidirectional: data move from collectors, through repositories and aggregators into models, and finally to research products or management actions. The derived value, such as corrected taxonomies, annotations, quality flags, and insights, rarely returns to source communities. We propose an extension of the original FAIR principles to address the needs of AI-ready infrastructure: the AI-FAIR metadata criteria, which place AI-enabled science in the context of a bidirectional Question-Data-Model triangle. This framework is designed to facilitate large-scale content-based analysis across diverse collections and ensure that the scientists generating the data benefit from the AI-enabled advances built on their data. Alongside these criteria, we introduce an agentic evaluation workflow that both rates existing datasets on the AI-FAIR and traditional FAIR criteria and provides actionable feedback where critical metadata is missing or incomplete. This modular dataset evaluation tool, paired with a domain-appropriate checklist, translates these principles into a reusable assessment of machine-learning readiness, AI-readiness for specified tasks, traceability, and ethical and CARE-aligned stewardship. Through this approach we aim to create a community-informed system to close the model data loop, so that AI also enriches data to further enable scientific discovery.",
+    "code_links": [
+      "https://github.com/FAIR4AI-Bio/evaluator"
+    ],
+    "comment": "8 pages, 3 figures, Code available at: https://github.com/FAIR4AI-Bio/evaluator"
+  },
+  {
+    "title": "Ascend-SpMM: Accelerating Sparse Matrix-Dense Matrix Multiplication on Ascend NPUs",
+    "authors": "Jiahe Wang, Yingxia Shao, Shuhan Wang, Qingbo Ge, Hongzheng Li, Yucheng Zhang",
+    "published": "2026-11-01",
+    "arxiv_id": "2611.01936v1",
+    "url": "http://arxiv.org/abs/2611.01936v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.01936v1",
+    "category": "databases",
+    "primary_category": "cs.DC",
+    "abstract": "Sparse Matrix-Dense Matrix Multiplication (SpMM) is a fundamental kernel in graph neural networks and scientific computing, yet its optimization on Ascend NPUs remains largely unexplored. The physically decoupled Cube/Vector architecture and single-threaded scalar instruction dispatch of modern NPUs introduce unique challenges. We present Ascend-SpMM, a novel and systematic framework tailored to the physically decoupled architecture of Ascend NPUs.We introduce a memory-centric cost model that quantifies hardware affinity and guides a conflict-bounded, densityaware task-mapping strategy. The strategy maps dense regions to the high-throughput Cube path and sparse residuals to the flexible Vector path, with a theoretical bound on cross-processor conflicts. To execute these workloads with high efficiency, we further develop highly customized sub-kernels. These kernels leverage hierarchy-aware pipelining and round-robin ring buffer-based implicit synchronization to effectively mask memory latency and reduce instruction pipeline stalls. Extensive experiments demonstrate that Ascend-SpMM achieves a geometric-mean speedup of 12.70-20.55X over the strongest evaluated NPU baseline for each matrix, accelerates end-to-end GNN training by up to 6.8X, and delivers performance competitive with state-of-the-art GPU implementations. The source code of Ascend-SpMM is publicly available at https://github.com/IDMG-Lab/Ascend-SpMM.",
+    "code_links": [
+      "https://github.com/IDMG-Lab/Ascend-SpMM"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Graphs Have Structure: Declarative Manifolds, 3D Z-Order Monoid Roll-ups, and Zero-Simulation Visual Analytics in a Graph DBMS",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-11-01",
+    "arxiv_id": "2611.01879v1",
+    "url": "http://arxiv.org/abs/2611.01879v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.01879v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Every real-world graph is embedded in an ambient structural manifold: proteins fold in Euclidean space ($R^3$), telecom networks sit on a planetary surface ($S^2 \\times R$), and ontologies and calendars form discrete subsumption posets ($(V, \\sqsubseteq)$). Yet property graph databases treat node coordinates as opaque payload scalars, leave spatial proximity edges unindexed, and force visualizers into $O(V^2)$ client-side force-directed simulations that destroy true geometry and truncate hierarchy roll-ups. We elevate ambient manifold structure to a first-class primitive in Samyama Graph. First, we introduce a declarative and auto-detected structural convention contract (samyama.structure/1) persisted in .sgsnap headers that binds node labels to Euclidean 3D, Geo-Spherical, Causal Spacetime, or Poset Hierarchy manifolds. Second, we show that both discrete posets (via Order-Embedded Hierarchy $[tin, tout]$ DFS intervals) and continuous 3D manifolds (via a 63-bit 3D Morton Z-order Structural-Geometric Index, SGI) reduce regional aggregation to 1D rank-interval monoid folds answered directly from index-resident Fenwick trees (SUM, COUNT) and Segment Trees (MIN, MAX). At $100,000$ 3D nodes, SGI builds in $28.14$ ms and answers Morton-interval SUM and MAX roll-ups in $0.048\\,μ$s and $0.104\\,μ$s---$8,345.1\\times$ and $3,824.4\\times$ faster than property scans. Third, we introduce 3D voxel-hashed virtual contact edges weighted by Topological--Geometric Stress $σ(u,v) = d_{graph}(u,v) / d_{manifold}(u,v)$ to isolate long-range tertiary folds, plus manifold-guided $A^*$ shortest-path search that cuts explored states by up to $3.80\\times$ over Dijkstra. Fourth, we replace client layout simulation with server-computed 3D Cone-Tree/Ribbon coordinates and a non-WebGL 2.5D Isometric projection with painter's-order depth sorting and sub-millisecond Level-of-Detail (LoD) macro-cuts.",
+    "code_links": [
+      "https://github.com/samyama-ai/structural-manifold-index",
+      "https://github.com/samyama-ai/samyama-graph"
+    ],
+    "comment": "7 pages, 1 figure, 4 tables. Companion to arXiv:2606.24677 (OEH). Code: https://github.com/samyama-ai/structural-manifold-index and https://github.com/samyama-ai/samyama-graph/pull/2038"
+  }
+]
