@@ -249,29 +249,29 @@
         <header>
             <h1>ArXiv Papers with Open Source Code</h1>
             <p class="subtitle">Information Retrieval & Database Research Papers</p>
-            <p class="last-update">Last updated: 2026-11-15 05:25 UTC</p>
+            <p class="last-update">Last updated: 2026-11-16 05:24 UTC</p>
         </header>
         
         
     <div class="statistics">
         <div class="stat-card">
-            <h3>1168</h3>
+            <h3>1172</h3>
             <p>Total Papers</p>
         </div>
         <div class="stat-card">
-            <h3>1138</h3>
+            <h3>1142</h3>
             <p>With GitHub</p>
         </div>
         <div class="stat-card">
-            <h3>20</h3>
+            <h3>21</h3>
             <p>Last 7 Days</p>
         </div>
         <div class="stat-card">
-            <h3>922</h3>
+            <h3>923</h3>
             <p>Information Retrieval</p>
         </div>
         <div class="stat-card">
-            <h3>246</h3>
+            <h3>249</h3>
             <p>Databases</p>
         </div>
     </div>
@@ -290,6 +290,54 @@
         
         <div class="papers-grid" id="papersGrid">
             
+    <div class="paper-card" data-category="information_retrieval" data-date="2026-11-13">
+        <h3 class="paper-title">Explanations that Transfer: Interpreting Medical Retrieval with Sparse AutoEncoders</h3>
+        <div class="paper-meta">
+            <span class="authors">Diane Bouchacourt, Gaëtan Brison</span>
+            <span class="date">2026-11-13</span>
+            <span class="category information_retrieval">Information Retrieval</span>
+        </div>
+        <p class="abstract">Medical AI systems that answer users' queries rely on retrieving medical knowledge from large document collections. In this context, finetuning general models on medical datasets can improve retrieval relevance. Yet the dense embeddings underlying modern retrieval systems remain largely opaque, maki...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2611.18179v1" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="https://arxiv.org/pdf/2611.18179v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/doctolib-lab/medsae" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+
+    <div class="paper-card" data-category="databases" data-date="2026-11-13">
+        <h3 class="paper-title">CANTraj: Recovering Vehicle Trajectories from CAN Signals in Naturalistic Driving</h3>
+        <div class="paper-meta">
+            <span class="authors">Yuhang Wang, Jingxin Yang, Chuheng Wei, Suyang Chen, Haozhuang Chi, Hao Zhou</span>
+            <span class="date">2026-11-13</span>
+            <span class="category databases">Databases</span>
+        </div>
+        <p class="abstract">Open driving releases and usage-based insurance programs often claim to prevent privacy breaches by omitting GPS records when sharing or collecting vehicle data. However, removing GPS coordinates from driving logs does not erase the location information carried by vehicle signals. While prior route-...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2611.18442v1" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="https://arxiv.org/pdf/2611.18442v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/WangYuHang-cmd/GPS--CAN" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+
+    <div class="paper-card" data-category="databases" data-date="2026-11-13">
+        <h3 class="paper-title">LuthorSQL: A One-Pass Text-to-SQL Model as System 1 for a Slower LLM Agent</h3>
+        <div class="paper-meta">
+            <span class="authors">Ibrahim Memon, Armin Karamzade, M. Hanif Jhaveri, Roy Fox</span>
+            <span class="date">2026-11-13</span>
+            <span class="category databases">Databases</span>
+        </div>
+        <p class="abstract">Frontier LLM agents that query databases with tools are among the most accurate text-to-SQL systems, but per-query calls to a hosted model are slow, costly, and expose sensitive organizational queries to external APIs. For example, a Claude Opus 5.5 agent serving 10,000 queries a day costs over $70,...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2611.17780v1" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="https://arxiv.org/pdf/2611.17780v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/IAMIbrahimmemon/luthorsql" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+
     <div class="paper-card" data-category="information_retrieval" data-date="2026-11-12">
         <h3 class="paper-title">ReSID: Rethinking Long-Tail Retrieval in Generative Recommendation through Item Reachability</h3>
         <div class="paper-meta">
@@ -605,6 +653,22 @@
         <div class="paper-links">
             <a href="http://arxiv.org/abs/2611.11295v1" target="_blank" class="arxiv-link">ArXiv</a>
             <a href="https://arxiv.org/pdf/2611.11295v1" target="_blank" class="pdf-link">PDF</a>
+            <a href="https://github.com/samyama-ai/samyama-synthetic-data-generator" target="_blank" class="code-link github">GitHub</a>
+        </div>
+    </div>
+    
+
+    <div class="paper-card" data-category="databases" data-date="2026-11-08">
+        <h3 class="paper-title">Samyama-SDG: A Declarative GraphQL @count and Regex/Ontology Synthetic Data Compiler with $O(1)$-Memory Referential Integrity and Causal Ground Truth</h3>
+        <div class="paper-meta">
+            <span class="authors">Madhulatha Mandarapu, Sandeep Kunkunuru</span>
+            <span class="date">2026-11-08</span>
+            <span class="category databases">Databases</span>
+        </div>
+        <p class="abstract">Synthetic data generators face a divide between declarative relational mockets and domain causal simulators. Declarative generators specify entities, regexes, and foreign keys via schemas, but buffer parent primary-key pools in RAM ($O(N)$ memory) and lack ontology bindings or causal ground truth. C...</p>
+        <div class="paper-links">
+            <a href="http://arxiv.org/abs/2611.11295v2" target="_blank" class="arxiv-link">ArXiv</a>
+            <a href="https://arxiv.org/pdf/2611.11295v2" target="_blank" class="pdf-link">PDF</a>
             <a href="https://github.com/samyama-ai/samyama-synthetic-data-generator" target="_blank" class="code-link github">GitHub</a>
         </div>
     </div>
