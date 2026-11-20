@@ -1,0 +1,409 @@
+[
+  {
+    "title": "Exploring Semantic Table Search in Data Lakes",
+    "authors": "Martin Pekár Christensen, Matteo Lissandrini, Katja Hose",
+    "published": "2026-11-19",
+    "arxiv_id": "2611.25691v1",
+    "url": "http://arxiv.org/abs/2611.25691v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.25691v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Discovery of relevant datasets within data lakes remains a key challenge. Union and join search are effective techniques for discovering data when augmenting an existing table. In exploratory search, instead, keyword search is commonly adopted to find a relatively small set of highly relevant tables matching some search terms. In this context, semantic search is a new technique that exploits the presence of named entities in exemplar tuples used as queries and in target tables. Hence, keyword search and entity search are able to find a diverse set of tables. In this work, we propose \\texttt{Thetis++}, which combines keyword and semantic table search to discover relevant tables that combine the semantic signal with the presence of exact keyword matches. Incorporating multiple paradigms and sources of information allow us to combine the best of multiple worlds. Therefore, we study many alternative techniques for combining rankings and evaluate these for the table search task in data lakes. We explore both unsupervised and supervised techniques, including TOPSIS. Finally, alternative to Thetis++ combining keyword and semantic relevance signals, we study a variant of learning-to-rank for the table search task in data lakes. Our evaluation highlights both the limitations of many standard approaches along with some promising directions offered by learned approaches. Furthermore, while indexes for keyword search are quite efficient, here we provide insights into how to improve the scalability of prefiltering techniques for semantic search, comparing LSH indexes with Hierarchical Navigable Small Worlds. Our experiments show that HNSW drastically improves the runtime of semantic table search by 4.7X on average whilst retaining the high-quality tables. Together, our findings plot the line for effective and efficient data discovery techniques for semantic data lakes.",
+    "code_links": [
+      "https://github.com/dkw-aau/Thetis-extended"
+    ],
+    "comment": "29 pages, 13 figures, GitHub repository at https://github.com/dkw-aau/Thetis-extended"
+  },
+  {
+    "title": "FinVeriQA: Financial Research Agents for Question Answering: Routing, Retrieval, MCP Tool Use, and Provenance-Aware Evidence Verification",
+    "authors": "Meenakshi Rajpurohit, Anna Phan, Ravikumar Komandur Narayanan, Gunanidhi Ramakrishnan, Nathan Howland",
+    "published": "2026-11-18",
+    "arxiv_id": "2611.25071v1",
+    "url": "http://arxiv.org/abs/2611.25071v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.25071v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Large language models (LLMs) write fluent financial analyses but miscompute ratios, recall stale prices, and route questions to the wrong tool with high confidence. We ask which component should do each job in a financial question-answering assistant, and study it with FinVeriQA, an open-source multi-agent research prototype over SEC filings and live market data: a compact typed-decision model (Laya) routes each question and screens out advice requests, Python computes every number, retrieval and tools fetch evidence, Mistral-7B writes a cited answer, a code validator checks that cited IDs exist and that numbers match computed notes, and a Model Context Protocol (MCP) server exposes the pipeline. In live experiments, Laya routed better than Mistral-7B (0.85 vs. 0.52; overall 0.86 vs. 0.68, McNemar p = 0.0003); a 12B Mistral decided no better, and DeepSeek-R1-8B decided better (0.79 vs. 0.68, p = 0.0192) but about 9.9 times more slowly. Mistral-7B computed 29% of 100 financial calculations correctly against 100% for Python, a live quote cut price error from 210% to 0.00%, and hybrid retrieval reached 76% Hit@5 on 50 filing questions. Yet in a live case study, both agent answers passed validation while describing AMD sample data under NVIDIA's and Alphabet's names. A controlled upper-bound study on the FinRank benchmark explains why: when one figure in the shared evidence is corrupted, self-consistency stays confident (agreement 0.55 to 0.59 while accuracy falls from 0.50 to 0.00), and a shared-evidence check (the kind our validator performs) catches 35% of the errors, whereas a check against the original passage catches 77% ($p = 5.96 \\times 10^{-8}$); for DeepSeek-R1-8B, 68% vs. 90%. Verification must be independent of the evidence the writer saw.",
+    "code_links": [
+      "https://github.com/SJSU-CMPE259/AI-Stock-Research-and-Earnings-Assistant"
+    ],
+    "comment": "15 pages, 4 figures, 11 tables. Code: https://github.com/SJSU-CMPE259/AI-Stock-Research-and-Earnings-Assistant"
+  },
+  {
+    "title": "KnowMe Paper Radar: Lightweight Discovery of Promising Papers in the Age of Autoresearch",
+    "authors": "Zhuo Chen, Jian Wang, Jinjie Gu, Lijun Wu",
+    "published": "2026-11-18",
+    "arxiv_id": "2611.23702v1",
+    "url": "http://arxiv.org/abs/2611.23702v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.23702v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "The growing volume of topically similar papers makes it difficult to identify new work that can offer useful research insights or methodological guidance. We present KnowMe Paper Radar, a lightweight discovery tool that combines multiple sources of evidence into personalized reading priorities. Users specify topics, priorities, exclusions and dates; the system brings together topical relevance, recency, author research histories, collaboration paths and direction-specific institutional context. By exposing each score component and its supporting sources, KnowMe helps readers select promising papers for their current questions and discover relevant work beyond familiar authors. Automatic acquisition, version merging and graph-cache reuse keep this workflow convenient without large language model (LLM) inference during ordinary use. Experiments on 174,640 acquired records show more than threefold faster repeated context preparation, while cached abstracts improve normalized discounted cumulative gain at rank 10 (NDCG@10) from 0.412 to 0.598 on expert-judged retrieval tasks. Complementary analyses examine how the same accumulated records support semantic retrieval, research-history modeling and literature-grounded planning. A browser interface and a structured command-line interface (CLI) make these capabilities available to both researchers and research agents, positioning KnowMe as a practical upstream tool for literature-informed recursive self-improvement (RSI) workflows.",
+    "code_links": [
+      "https://github.com/hackerchenzhuo/knowme-research-ai"
+    ],
+    "comment": "Ongoing work. 67 pages with 34 figures and 37 tables. Project website: https://hackerchenzhuo.github.io/knowme-research-ai/en/ GitHub: https://github.com/hackerchenzhuo/knowme-research-ai"
+  },
+  {
+    "title": "Living Context Graphs: Continual Semantic Learning for Enterprise Data Reasoning",
+    "authors": "Varun Agrawal, Ayush Srivastava, Eshan Gujar, Kaushal Kumar, Ayush Gupta",
+    "published": "2026-11-16",
+    "arxiv_id": "2611.20976v1",
+    "url": "http://arxiv.org/abs/2611.20976v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20976v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "Enterprise AI can now perform analytics, reporting, and data-driven workflows, yet the data foundations it relies on remain hard to operationalize: business meaning, relationships, metric definitions, and reporting conventions are absent from database schemas and scattered across undocumented systems and tribal knowledge. We introduce the Living Context Graph (LCG), a continually learned context layer that makes existing enterprise data operational for AI without requiring a copy or transformation of the underlying warehouse. LCG bootstraps base semantics and relationships from the data itself, builds a concept graph that indexes business context as queries are served, writes durable semantic learnings from verified outcomes, and withdraws or re-earns context when later outcomes contradict prior routes. We evaluate LCG through text-to-SQL, a core data-reasoning task, on a transfer-aware split of three BIRD databases comprising 499 questions: 353 form the learning history and 146 are held out and never used to update the context layer. Bootstrapping alone improves overall accuracy by +4.6 percentage points. Learning only from the history raises accuracy on the untouched held-out transfer set by +22.6 points (95% CI [+14.4, +30.8]), exceeding five-shot retrieval from the same history by +12.3 points. Incremental learning reaches the one-shot endpoint within observed evaluation noise on every database. Ablating the graph changes held-out accuracy by at most one question per database but increases per-query cost 2.3-3.3x and median latency 1.8-3.4x: continually learned semantics drive accuracy, while the graph makes that context efficient to serve.",
+    "code_links": [
+      "https://github.com/varunagrawal2002/Living-Context-Graph"
+    ],
+    "comment": "22 pages, 5 figures. Accepted at the NeurIPS 2026 Workshop on Continual Learning in the Era of Foundation Models and Embodied Agents. Data splits and annotations: https://github.com/varunagrawal2002/Living-Context-Graph"
+  },
+  {
+    "title": "What Unlinked Aggregates Still Prove: Ranker Comparisons from Exact and Differentially Private Item Counts",
+    "authors": "Chang Xu, Hao Wang, Gedi Zhou",
+    "published": "2026-11-16",
+    "arxiv_id": "2611.20388v1",
+    "url": "http://arxiv.org/abs/2611.20388v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20388v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Privacy controls can prevent an evaluator from linking purchases to the recommendations users received, while a merchant can still release complete item-level purchase counts for the evaluation cohort. We ask when these counts identify which recommender performs better. The counts constrain who could have bought each item. We bound the performance difference over all assignments consistent with the counts. A reduced transportation network handles full catalogs and can certify attainable endpoints. If the interval excludes zero, it identifies the better recommender for that cohort. With differentially private counts, one confidence guarantee applies jointly to all comparisons from the same release. In two e-commerce cohorts of about 20,000 and 100,000 users, exact counts narrowed every interval compared with bounds that ignored the counts. Most decisions involved a recommender that favors popular items. For NDCG@10, which rewards ranking purchased items higher, each setting combined one of three personalized pairs with a pattern and rate of missing links. Exact counts settled 14 of 168 settings in the smaller cohort and none of 81 in the larger cohort. In the smaller cohort, exact counts broken down by user group settled two personalized pairs when 90% of users remained linked, at the cost of revealing more about individual purchases. Whole-cohort private releases with one count per item retained much of the narrowing but settled no personalized pair in either cohort. Grouping less popular items into bins let private counts settle one personalized pair in the smaller cohort.",
+    "code_links": [
+      "https://github.com/AnthonyXu109/psbd26-artifact"
+    ],
+    "comment": "10 pages, 4 figures. Accepted for publication in the Privacy and Security of Big Data special session at IEEE BigData 2026. Code available at https://github.com/AnthonyXu109/psbd26-artifact"
+  },
+  {
+    "title": "EchoSpec: Training Search Agents to Weigh Evidence Above Echoes",
+    "authors": "Shihao Yang, Can Zeng, Xinzhe Li",
+    "published": "2026-11-15",
+    "arxiv_id": "2611.20034v1",
+    "url": "http://arxiv.org/abs/2611.20034v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20034v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Search agents trained with reinforcement learning decide what to retrieve, when to search again, and when to answer. In real corpora, one claim is copied and paraphrased across many pages while the primary source settling a question appears once. We show that reinforcement-learned search agents grant echoes the credence of independent sources and lose their ability to abstain. Across five base models from 3B to 32B and seven released RL agents on multi-hop Wikipedia questions with primary evidence intact, eight paraphrased false-claim echoes overturn 58-73% of previously correct answers, while exact-match RL drives deleted-evidence abstention below 15%. Conditioning on retrieval localizes the failure to evidence acquisition: once primary evidence enters context, agents overrule eight echoes as reliably as one, whereas echoes fill top ranks and halt search early, so larger budgets, forced search turns, or passive passage filtering alone fail to recover displaced evidence. We introduce EchoSpec, specifying reliability across five corpus transformations with known target answers and training in two stages. Verification warm-start teaches multi-hop bridge-entity recovery past echoes, after which group RL optimizes an evidence-gated $λ$-reward with an outcome-independent acquisition bonus and scale-preserving advantages retaining the optimal rule $λ/(1+λ)$. Across Qwen2.5-3B, Qwen2.5-7B, and Llama-3.1-8B backbones on nine evaluation suites, EchoSpec cuts eight-echo deference by 30-44 points on Qwen2.5-7B down to 29-31%, nearly quadruples eight-echo reach to 26-27% with zero-shot transfer to unseen BGE and BM25 retrievers, and raises standalone QA precision to 47-55%. Code is publicly available at https://github.com/unihsy/EchoSpec.",
+    "code_links": [
+      "https://github.com/unihsy/EchoSpec"
+    ],
+    "comment": "24 pages, 5 figures, 15 tables. Code: https://github.com/unihsy/EchoSpec"
+  },
+  {
+    "title": "StaleBench: Isolating Stale Retrieval in Agent Memory, and Pricing the Fix",
+    "authors": "S M Mahbub Murshed",
+    "published": "2026-11-15",
+    "arxiv_id": "2611.19752v1",
+    "url": "http://arxiv.org/abs/2611.19752v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.19752v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.CL",
+    "abstract": "An agent that stores facts over time eventually stores several versions of the same fact. Asked a value-agnostic question - \"which team does X play for now?\" - a similarity retriever cannot prefer the current version, because every version matches the entity the query names. StaleBench isolates this stale-retrieval failure on 892 real updating facts, with currency labels from the source (Wikidata validity years via TempLAMA), never from a retrieval score. Our central result is that retrieval metrics can rank memory policies backwards: a retention policy and its retain-everything control return the identical statement at rank 1 for every test query, yet differ by 29.5 and 65.6 points in reader accuracy on two readers when no date is shown. Contamination@5, the metric we add, ranks them correctly where current@1 and current@5 do not. Withdrawing the lexical anchor that statements carry costs deployed keying mechanisms tens of points of freshness; entity resolution on both the write path and the query recovers most of the loss. Three deployed systems (Mem0, Graphiti, LangMem) and a reimplemented ERASE each handle supersession differently, and no single scoring convention describes all four. We release the data, a frozen evaluator, and reference baselines.",
+    "code_links": [
+      "https://github.com/thenexuslab/stalebench-release"
+    ],
+    "comment": "Accepted to Findings of EACL 2027. 39 pages, 3 figures. Code and data: https://github.com/thenexuslab/stalebench-release"
+  },
+  {
+    "title": "User First Intelligence: Three Measurements of Search and AI-Answer Analytics (SEO and GEO/AEO), and a Knowledge-Graph Framework for Query Discovery Beyond Search Volume",
+    "authors": "Venkata Pagadala",
+    "published": "2026-11-14",
+    "arxiv_id": "2611.19655v1",
+    "url": "http://arxiv.org/abs/2611.19655v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.19655v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "People say what they want to know in many places besides a search box, and the tools that search and AI-answer optimization (SEO and GEO/AEO) rely on see only part of that demand, through models reported as counts. This paper reports three measurements of such instruments and a framework. On the area-code section of a large US telecom provider's site, two commercial analytics platforms differed on estimated monthly visits by 7.5x to 27.1x (8.6x to 29.9x worldwide); across twelve sections of the domain the ratio ran from 0.20x to 7.24x with no detectable relation to section age, while they agreed on which section is larger in 60 of 66 pairs. On 37,193 reviews of 378 telecom stores linked to a 42,994-node keyword taxonomy, review demand and search volume agreed on branches to a varying degree (Spearman 0.47 to 0.75; 0.91 post hoc) and barely on topics (0.18), on links two blind AI annotators judged two-thirds correct; on the 372 area codes, a public count of Wikipedia requests for each code and vendor volume agreed roughly on ranking (0.45 over 240 articles, gone once keywords matched per code are held constant) and not on magnitudes, predictions fixed first. In one vendor's index of AI answers naming or citing the largest companies of each S&P 500 sector, of four predictions written first, one held, one in direction only and two failed; video and community sites took a median 21% of citation incidences on Google's AI Overviews and AI Mode against 0.6% to 9.2% on four other surfaces, in every sector, and in education answers in each of 13 countries read later. Estimates and sources need measuring per instrument and surface. User First Intelligence (UFI), built on that premise, collects what people ask beyond the website, links it to an industry ontology and scores where an organization does not answer; an open implementation is released, its score not evaluated. No causal claim is made.",
+    "code_links": [
+      "https://github.com/VenkataPagadalaGIT/ufi"
+    ],
+    "comment": "43 pages, 10 figures. Preprint, not peer reviewed. Data and scripts in the ancillary files; implementation at https://github.com/VenkataPagadalaGIT/ufi"
+  },
+  {
+    "title": "LABEL: Literature Asymmetry between Efficacy and Limits in Drug Knowledge and Language Models",
+    "authors": "S M Rayeed, Charles V. Stewart, Yao Ma",
+    "published": "2026-11-14",
+    "arxiv_id": "2611.19166v1",
+    "url": "http://arxiv.org/abs/2611.19166v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.19166v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.AI",
+    "abstract": "Every medication comes with two types of medical facts: indications, which describe what conditions the drug treats (benefits), and contraindications, which describe who must avoid it to prevent serious harm (safety limits). Although contraindications are critical for patient safety and FDA regulations require listing them as rigorously as indications, we find that contraindications are far less documented than indications in general prose. In this paper, we measure how often these texts contain both facts across 574 drugs from PrimeKG by comparing a drug's indications against its own contraindications. Across Wikipedia articles and PubMed abstracts, we find that reference prose names a drug's benefits about twice as often as its safety limits (within-drug odds ratio 2.19). We call this documentation gap LABEL (Literature Asymmetry between Efficacy and Limits). Language models mirror this gap. As we scale Qwen2.5 from 0.5B to 14B, accuracy on indications rises by 18.3 points, whereas accuracy on contraindications remains flat near random guessing. However, when we provide models with a retrieved passage that states the answer, they use safety facts just as effectively as benefits. Furthermore, routing safety questions to official FDA labels boosts accuracy by 15.8 points whenever the label states the fact. Overall, our findings show that models fail on medication safety not because they cannot reason about risk, but because free-text corpora lack safety facts. Clinical AI systems should therefore route medication-safety questions to official regulatory labels and structured databases rather than relying on general public records. Code and data are available at https://github.com/SMRayeed/LABEL.",
+    "code_links": [
+      "https://github.com/SMRayeed/LABEL"
+    ],
+    "comment": "27 pages (9 main + supplementary material), 8 figures, 7 tables"
+  },
+  {
+    "title": "Explanations that Transfer: Interpreting Medical Retrieval with Sparse AutoEncoders",
+    "authors": "Diane Bouchacourt, Gaëtan Brison",
+    "published": "2026-11-13",
+    "arxiv_id": "2611.18179v3",
+    "url": "http://arxiv.org/abs/2611.18179v3",
+    "pdf_url": "https://arxiv.org/pdf/2611.18179v3",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Medical AI systems that answer users' queries rely on retrieving medical knowledge from large document collections. In this context, finetuning general models on medical datasets can improve retrieval relevance. Yet the dense embeddings underlying modern retrieval systems remain largely opaque, making it difficult to understand the mechanics behind their results. Moreover, adapting to a specific medical dataset risks losing transferability to new clinical corpora. In this work, we tackle these issues by applying Sparse Autoencoders (SAEs) to medical information retrieval, transforming dense text embeddings into semantically interpretable representations. To do so, our model combines a reconstruction objective with an InfoNCE contrastive loss that directly preserves query-document relevance. We evaluate three embedding models across six medical retrieval datasets, both in-domain and out-of-domain. Trained on a medical corpus, our sparse codes improve in-domain retrieval over the original embeddings, and lose less out-of-domain performance than their dense counterparts, especially when the target corpus is distant from the training one. Importantly, our experiments show that the method yields interpretable features whose semantic content can be inferred from the queries and documents that activate them most strongly. The interpretation of these features sheds light on why a particular document was retrieved, and transfers beyond the training distribution.",
+    "code_links": [
+      "https://github.com/doctolib-lab/doctosae"
+    ],
+    "comment": "Proceedings of Machine Learning Research 346, 2026 (Machine Learning for Health, ML4H 2026). Code: https://github.com/doctolib-lab/doctosae"
+  },
+  {
+    "title": "KuaiRecV2: Benchmarking Large-Scale Continual Learning for Diversified and Multi-task Recommendation",
+    "authors": "Chenxu Li, Shuchang Liu, Hantao Shu, Wei Yuan, Zhe Xu, Guoqing Hu, Yan Wang, Biao Yang, Xiang Li, Cheng Ling, Fan Yang, Yongqi Liu, Lantao Hu, Han Li, Kaiqiao Zhan, Kun Gai, An Zhang, Xiang Wang",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16795v1",
+    "url": "http://arxiv.org/abs/2611.16795v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16795v1",
+    "category": "information_retrieval",
+    "primary_category": "cs.IR",
+    "abstract": "Recommender systems, which retrieve items of interest to users based on their interaction histories, have recently witnessed several key technological advancements, benefiting from the semantic representation space and model-data scaling. Nevertheless, practitioners and researchers have frequently encountered critical inconsistencies between simple offline evaluations and complex online results, and this gap still exists in the era of large models. In this work, we address several key factors that contribute to this inconsistency: 1) the \\textit{large-scale continual learning challenge} that assumes a practical demand to maintain long-term model effectiveness under dynamic item pools and distributional shifts; 2) the \\textit{combinatorial diversity challenge} that requires the generation strategy to solve the accuracy-diversity trade-off in both the finer token level and the holistic item level; and 3) the \\textit{multi-task reward balancing challenge}, which is particularly critical for modern generative models that can accurately model the sequence distribution but are less controllable for the multi-task demands.\n  To address these challenges and further pave the way for the development of more realistic recommendation solutions, we introduce KuaiRecV2, a deliberately constructed benchmark with industrial-level datasets from Kuaishou. Specifically, we provide a large-scale interaction dataset with million-scale multi-modal item information and long-term interaction records across 30 days, with a dynamic video candidate pool. Additionally, we provide a rigorous benchmark that evaluates retrieval accuracy, diversity, and multi-task performance in one rubric system, where an effective advancement occurs if and only if the new method improves all metrics. The code is available at https://github.com/cxli2333/KuaiRecV2",
+    "code_links": [
+      "https://github.com/cxli2333/KuaiRecV2"
+    ],
+    "comment": "This paper has been accepted to NeurIPS 2026"
+  },
+  {
+    "title": "GenSPARQL: A Generative Extension of SPARQL for Incomplete Knowledge Graphs",
+    "authors": "Jingcheng Wu, Yi Wang, Hongkuan Zhou, Steffen Staab, Bo Xiong",
+    "published": "2026-11-19",
+    "arxiv_id": "2611.26062v1",
+    "url": "http://arxiv.org/abs/2611.26062v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.26062v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Knowledge graphs on the Web are incomplete, and SPARQL answers a query only from the stored triples. Large language models (LLMs) can predict missing facts, but an LLM returns names instead of IRIs and requires one call per binding of a query variable. We present GenSPARQL, a generative extension of SPARQL 1.1 with an operator GENOP that binds values generated by an LLM to query variables during query evaluation. A similarity join maps generated names to entities of the graph, and the query planner invokes the LLM only for the bindings selected by the other graph patterns and filters. In a web workbench, attendees query two graphs built from Wikidata and inspect generated values, mapped entities and LLM calls. In our evaluation with three open-weight LLMs, the embedding similarity maps 83% of the entities named by the LLMs and yields only one incorrect match.",
+    "code_links": [
+      "https://github.com/0sidewalkenforcer0/GenSPARQL"
+    ],
+    "comment": "4 pages, 2 figures, 1 table. Demo paper submitted to The Web Conference 2027 (WWW 2027). Code: https://github.com/0sidewalkenforcer0/GenSPARQL"
+  },
+  {
+    "title": "Cascadeability and the Realization Gap: An Empirical Study of LLM-Powered Semantic Filtering",
+    "authors": "Nan Hou, Kangfei Zhao, Jiadong Xie, Jeffrey Xu Yu",
+    "published": "2026-11-18",
+    "arxiv_id": "2611.23898v1",
+    "url": "http://arxiv.org/abs/2611.23898v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.23898v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Semantic filters enable natural language predicates over unstructured documents, but evaluating every document with a large language model (LLM) oracle is expensive. Proxy cascades reduce oracle invocations using cheaper surrogates, but oracle reduction alone cannot distinguish proxy limitations from calibration bottlenecks and establish practical efficiency. We present a unified benchmark of four representative systems, which formulate query processing as a three-stage workflow comprising proxy construction, threshold calibration, and cascade inference, using a two-threshold acceptance rule. We introduce cascadeability: the maximum empirical oracle reduction attainable from fixed proxy scores at a specified accuracy target, computed retrospectively using complete oracle labels. We investigate 8 research questions, spanning proxy quality, end-to-end performance, workload sensitivities, and component ablations, and reveal our key findings accordingly. Comparing cascadeability with achieved oracle reduction yields a realization gap that, interpreted alongside accuracy, exposes distinct proxy and calibration bottlenecks. The benchmark and diagnostics support evaluation beyond oracle reduction and motivate joint proxy-calibration design, class-sensitive quality assessment, and end-to-end cost optimization. We release a dataset-query benchmark, containing 10 real-world workloads across various domains and difficulties, with annotations of two LLM families.",
+    "code_links": [
+      "https://github.com/Anto-an/semantic_filter_benchmark"
+    ],
+    "comment": "8 pages. Code and data available at https://github.com/Anto-an/semantic_filter_benchmark"
+  },
+  {
+    "title": "Errpedia: Is Your Exact $k$-NN Vector Search Really Exact?",
+    "authors": "Yinuo Deng, Ying Zhang, Hanchen Wang, Wenjie Zhang",
+    "published": "2026-11-17",
+    "arxiv_id": "2611.22474v1",
+    "url": "http://arxiv.org/abs/2611.22474v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.22474v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Exact $k$-nearest-neighbor ($k$-NN) vector search is a common feature of vector libraries and database systems. It serves applications that require exact results and provides the ground truth for evaluating approximate search. However, floating-point rounding and overflow can cause an exact search to return mathematically incorrect top-$k$ result sets. These errors can go unnoticed and affect downstream tasks that rely on exact results. We present Errpedia, a purpose-built dataset for testing the numerical correctness of exact vector search. Errpedia contains 1,616 queries across 21 error categories, with ground truth independently verified using exact rational arithmetic. We evaluate 20 widely used library and database configurations and find that every tested configuration returns mathematically incorrect top-10 result sets on at least 1 applicable query. Failures include misranking nearly equidistant vectors and returning incomplete results: 1 library omits all 10 exact matches to a query, and several systems return fewer than $k$ neighbors. We release Errpedia as a reproducible benchmark for developers and researchers to test their implementations. The dataset is publicly available at https://github.com/dynos01/errpedia.",
+    "code_links": [
+      "https://github.com/dynos01/errpedia"
+    ],
+    "comment": null
+  },
+  {
+    "title": "Pelorus: Warped-Product Graph Indexing for Hyperbolic Vector Search",
+    "authors": "Wenxuan Xiao, Xu Cao",
+    "published": "2026-11-17",
+    "arxiv_id": "2611.22159v1",
+    "url": "http://arxiv.org/abs/2611.22159v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.22159v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Hyperbolic embeddings capture hierarchical relations, but million-scale approximate nearest neighbor search must reconcile geodesic fidelity with memory efficiency. Flat inner-product indices distort order across radial shells, while native hyperbolic graphs repeatedly access full-precision vectors or quantize coordinates with singular conformal scales. We present Pelorus, a warped-product proximity-graph index for hyperbolic vector search. Pelorus separates unquantized FP32 radial and conformal scalars from scale-invariant 2-bit spherical directional codes and defers full-vector FP64 evaluation to a compact reranking tail. A conformal distortion analysis motivates orthogonal-projection debiasing, purity-gated tangent-cone residuals, and Conformal Jacobian gating. QuadriPrune allocates edges across geodesic fibers, same-shell rings, and radial elevators, with spanning-tree chord swaps restoring entry reachability. A single-page record layout and carry-save AVX2 kernel accelerate traversal. Across eight real and synthetic benchmarks on AMD EPYC 9654, Pelorus builds Cohere-1M indices 5.44x faster than full-precision polar graphs on 32 threads, reducing hot navigation memory to 517.0 MB. At 99% Recall@10, it improves Cohere-1M throughput by 4.30x on one thread and 6.31x on 24 threads, and delivers 53,483 QPS on MERU-1M. On clustered narrow shells, tangent-cone residuals raise recall from 34.22% to 99.385%, while isotropic narrow-shell stress tests expose remaining recall limits.",
+    "code_links": [
+      "https://github.com/Astrmira/Pelorus"
+    ],
+    "comment": "30 pages, 6 figures. Full version with proofs and supplementary experiments. Code and artifacts available at https://github.com/Astrmira/Pelorus"
+  },
+  {
+    "title": "A Temporal Algebraic Framework for Data Stream Evaluation Under Delayed Labels and Distribution Shifts",
+    "authors": "Ronaldo C. Prati, Elaine Ribeiro de Faria",
+    "published": "2026-11-16",
+    "arxiv_id": "2611.21914v1",
+    "url": "http://arxiv.org/abs/2611.21914v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.21914v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "In data streams, labels often arrive late or only for some instances, class prevalence drifts, and rare classes vanish from short windows. Standard evaluation then confuses a degraded decision boundary with a change in prevalence, and is biased when labels are delayed or selected by the model. We extend an algebraic framework that obtains pooled (micro) and per-class (macro) measures from one confusion matrix to streams, weighting the counts in time by exponential fading or a sliding window; the update costs O(m^2) per step, whatever the stream length, and each pooled measure stays a weighted combination of the per-class ones. Delayed and selective feedback enter as an observation mask: until its label arrives, an instance is counted with the model's calibrated class probabilities, and the bias of this interim estimate is driven by their calibration error. Audited conventions report no value for a class without verified instances. We separate prior shift from concept drift by monitoring prior-free coordinates (recall and specificity) and attribute a change in a measure to the two sources with a first-order Jacobian decomposition. On synthetic streams and four real datasets, a detector on these coordinates with a memory per class raises no excess false alarms under label shift, unlike the Jacobian alarm and error-rate detectors. The correction for delayed labels recovers recall in some real settings and is only partial for precision, specificity and F1. Twenty-five statements are checked in Lean 4, and the code is in the aggmetrics package.",
+    "code_links": [
+      "https://github.com/rcprati/data-stream-evaluation",
+      "https://github.com/rcprati/aggmetrics-datastream-lean",
+      "https://github.com/rcprati/aggmetrics"
+    ],
+    "comment": "53 pages, 25 tables, 2 figures. Code: https://github.com/rcprati/data-stream-evaluation (experiments), https://github.com/rcprati/aggmetrics-datastream-lean (Lean 4 formalization), https://github.com/rcprati/aggmetrics (aggmetrics >= 0.4.0, subpackage aggmetrics.stream)"
+  },
+  {
+    "title": "Living Context Graphs: Continual Semantic Learning for Enterprise Data Reasoning",
+    "authors": "Varun Agrawal, Ayush Srivastava, Eshan Gujar, Kaushal Kumar, Ayush Gupta",
+    "published": "2026-11-16",
+    "arxiv_id": "2611.20976v1",
+    "url": "http://arxiv.org/abs/2611.20976v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20976v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Enterprise AI can now perform analytics, reporting, and data-driven workflows, yet the data foundations it relies on remain hard to operationalize: business meaning, relationships, metric definitions, and reporting conventions are absent from database schemas and scattered across undocumented systems and tribal knowledge. We introduce the Living Context Graph (LCG), a continually learned context layer that makes existing enterprise data operational for AI without requiring a copy or transformation of the underlying warehouse. LCG bootstraps base semantics and relationships from the data itself, builds a concept graph that indexes business context as queries are served, writes durable semantic learnings from verified outcomes, and withdraws or re-earns context when later outcomes contradict prior routes. We evaluate LCG through text-to-SQL, a core data-reasoning task, on a transfer-aware split of three BIRD databases comprising 499 questions: 353 form the learning history and 146 are held out and never used to update the context layer. Bootstrapping alone improves overall accuracy by +4.6 percentage points. Learning only from the history raises accuracy on the untouched held-out transfer set by +22.6 points (95% CI [+14.4, +30.8]), exceeding five-shot retrieval from the same history by +12.3 points. Incremental learning reaches the one-shot endpoint within observed evaluation noise on every database. Ablating the graph changes held-out accuracy by at most one question per database but increases per-query cost 2.3-3.3x and median latency 1.8-3.4x: continually learned semantics drive accuracy, while the graph makes that context efficient to serve.",
+    "code_links": [
+      "https://github.com/varunagrawal2002/Living-Context-Graph"
+    ],
+    "comment": "22 pages, 5 figures. Accepted at the NeurIPS 2026 Workshop on Continual Learning in the Era of Foundation Models and Embodied Agents. Data splits and annotations: https://github.com/varunagrawal2002/Living-Context-Graph"
+  },
+  {
+    "title": "SiGMA: Site-Grounded Multi-Modal ISAC Data Generation for Environment-Aware Communications",
+    "authors": "Yijie Bian, Wei Guo, Kai Zhang, Xiao Ye, Shurui Xu, Shenghui Song, Jun Zhang, Khaled B. Letaief",
+    "published": "2026-11-16",
+    "arxiv_id": "2611.20665v1",
+    "url": "http://arxiv.org/abs/2611.20665v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.20665v1",
+    "category": "databases",
+    "primary_category": "eess.SP",
+    "abstract": "Learning-based multi-modal integrated sensing and communication (ISAC) requires data that associate environmental observations with the wireless response generated by the same site and dynamic scene state. Acquiring such data at new sites requires sensor calibration, coordinated measurements, and cross-modal association. We present site-grounded multi-modal ISAC data generation (SiGMA), which combines OpenStreetMap (OSM), Overture Maps, and procedural three-dimensional (3D) reconstruction to create georeferenced urban scenes. A shared scene geometry and time-indexed actor state link synchronized red-green-blue (RGB) images, light detection and ranging (LiDAR) point clouds, positioning records, frequency-modulated continuous-wave (FMCW) Radar in-phase and quadrature (IQ) samples, and ray-traced wireless channels. For configurable reflected propagation under direct-link blockage, SiGMA generates optional reconfigurable intelligent surface (RIS) component channels for phase-configuration evaluation across shared scene states. The evaluation results demonstrate that the framework improves zero-shot beam prediction performance on real DeepSense 6G measurements compared with an OSM-derived synthetic-data baseline. A camera-assisted RIS case study further demonstrates the generation of sensing-associated supervision for configurable reflected propagation. The dataset generation pipeline is available at https://github.com/Trans-cending/SiGMA-main.",
+    "code_links": [
+      "https://github.com/Trans-cending/SiGMA-main"
+    ],
+    "comment": null
+  },
+  {
+    "title": "HyperDBDiag: Multi-Root-Cause Identification and Operator-Level Localization for Database Performance Anomalies",
+    "authors": "Hu Wang, Zhengjin Yan, Hong Zhu, Qiong Zuo",
+    "published": "2026-11-14",
+    "arxiv_id": "2611.19241v1",
+    "url": "http://arxiv.org/abs/2611.19241v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.19241v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Database performance anomalies in modern production environments are not always triggered by a single cause. Instead, they often arise from the concurrent interaction of multiple causes within the same time window, posing substantial challenges to accurate operator-level root-cause analysis. When multiple root causes interact through shared resources, metric anomalies may be amplified, attenuated, or masked. Consequently, salient local anomalies may no longer correspond directly to the actual root causes, making conventional single-path diagnosis and shallow correlation-based methods prone to misdiagnosis. To address this challenge, we propose HyperDBDiag, a method for multi-root-cause identification and operator-level localization of database performance anomalies. HyperDBDiag connects root causes, performance metrics, SQL templates, and execution operators in a knowledge graph, captures joint anomaly patterns across metrics with a metric hypergraph, and uses a constrained LLM to determine the final root-cause set and provide remediation suggestions. When finer-grained localization is possible, HyperDBDiag also identifies the associated anomalous SQL statements and execution operators. We evaluate HyperDBDiag on a database performance anomaly dataset constructed using DB-MAGS. Experimental results show that HyperDBDiag effectively reduces graph complexity while improving root-cause localization accuracy.",
+    "code_links": [
+      "https://github.com/Qiuzhidewang/HyperDBDiag"
+    ],
+    "comment": "14 pages, 7 figures, 5 tables. Code and data: https://github.com/Qiuzhidewang/HyperDBDiag"
+  },
+  {
+    "title": "CANTraj: Recovering Vehicle Trajectories from CAN Signals in Naturalistic Driving",
+    "authors": "Yuhang Wang, Jingxin Yang, Chuheng Wei, Suyang Chen, Haozhuang Chi, Hao Zhou",
+    "published": "2026-11-13",
+    "arxiv_id": "2611.18442v1",
+    "url": "http://arxiv.org/abs/2611.18442v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.18442v1",
+    "category": "databases",
+    "primary_category": "cs.CR",
+    "abstract": "Open driving releases and usage-based insurance programs often claim to prevent privacy breaches by omitting GPS records when sharing or collecting vehicle data. However, removing GPS coordinates from driving logs does not erase the location information carried by vehicle signals. While prior route-inference attacks have demonstrated that speed, steering, and driving events can be matched to road networks to reconstruct trajectories, existing studies rely on inconsistent prior assumptions and evaluation metrics and are tested only on small, restricted datasets, making their results difficult to compare and their real-world effectiveness uncertain. We release CANTraj, a naturalistic driving dataset pairing decoded CAN events with time-aligned GNSS trajectories (3,940 drives, 454 drivers), and CANTraj-Bench for evaluating trajectory recovery (3,675 drives, 431 drivers, 1,380 hours, 85,919 km). On 776 evaluation drives from 94 unseen drivers, we compare six re-implemented attacks and benchmark baselines under explicit information-access protocols, paired comparisons, and metrics incorporating failures. Experiments show that combining steering signals with road-network constraints yields the largest gain: With a known start and heading, adding steering to speed raises the online map filter's five-minute route recovery from 56% to 87%, with a median average displacement error of 43 m versus 921 m for map-free dead reckoning. Offline beam search recovers 88% of test routes with the heading and 81% without it. Because methods fail on different windows, we also evaluate an LLM harness that selects among candidate routes on 659 five-minute windows; its best configuration recovers 79% of routes on test and 83% on few-shot, outperforming the best baseline on test and matching it on few-shot. Data and code at huggingface.co/datasets/HenryYHW/CANTraj and github.com/WangYuHang-cmd/GPS--CAN.",
+    "code_links": [
+      "https://github.com/WangYuHang-cmd/GPS--CAN"
+    ],
+    "comment": null
+  },
+  {
+    "title": "LuthorSQL: A One-Pass Text-to-SQL Model as System 1 for a Slower LLM Agent",
+    "authors": "Ibrahim Memon, Armin Karamzade, M. Hanif Jhaveri, Roy Fox",
+    "published": "2026-11-13",
+    "arxiv_id": "2611.17780v1",
+    "url": "http://arxiv.org/abs/2611.17780v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.17780v1",
+    "category": "databases",
+    "primary_category": "cs.CL",
+    "abstract": "Frontier LLM agents that query databases with tools are among the most accurate text-to-SQL systems, but per-query calls to a hosted model are slow, costly, and expose sensitive organizational queries to external APIs. For example, a Claude Opus 5.5 agent serving 10,000 queries a day costs over $70,000 a year at list price. To what extent can local hardware already owned by an organization offload this burden without compromising the agent's accuracy? We present LuthorSQL, a non-autoregressive 7B text-to-SQL model that serves as a rapid System 1 gate for a slower LLM agent (System 2), escalating queries only when uncertain. LuthorSQL makes a single forward pass to predict slot scores over a bounded grammar for query plans, compiles and runs up to 32 candidate plans, and chooses an answer using a trained validator. On its own, LuthorSQL reaches 68.03% execution accuracy on BIRD's hidden test set at 0.84 s per question on a single GPU, maintains its accuracy in 9 GB with 8-bit quantized weights, and transfers zero-shot to Snowflake, BigQuery, MySQL, PostgreSQL, and DuckDB within 3.1 points of its native SQLite accuracy. Combined with Claude Opus 5.5 in a pre-registered confidence cascade over 227 questions on databases published after Opus's training cutoff, LuthorSQL answers nearly half of all questions locally and cuts API cost by 33.3% at the same accuracy. Finally, contamination probing shows that Opus reproduces 48-92% of public benchmark gold queries verbatim without seeing the schema; however, its tool-assisted accuracy holds on renamed schemas and reaches 95.6-97.4% on post-cutoff databases. Code and data: https://github.com/IAMIbrahimmemon/luthorsql",
+    "code_links": [
+      "https://github.com/IAMIbrahimmemon/luthorsql"
+    ],
+    "comment": "8-page main text plus appendix, 23 pages"
+  },
+  {
+    "title": "[Experiment, Analysis, and Benchmark] How well do LLMs comprehend and design relational database schemata?",
+    "authors": "Sriom Chakrabarti, Sean Bin Yang, Arijit Khan, Sebastian Link",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.17044v1",
+    "url": "http://arxiv.org/abs/2611.17044v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.17044v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Large Language Models (LLMs) are increasingly used for database tasks, yet most work, such as Text2SQL, assumes that the relational schema already exists. We ask whether LLMs can design a schema from natural language requirements (Text2Schema), verbalize an existing schema (Schema2Text), and preserve its structure through a Schema-to-Text-to-Schema round trip. We present SchemaBridge, a benchmark of 902 schemata from three collections, stratified by size and constraint complexity, that scores fidelity separately for tables, attributes, domain (data types and nullability), entity, and referential integrity. Evaluating six open-weight and proprietary LLMs, we find that: (i) human-written requirements under-specify schemata, with no model exceeding 0.27 referential integrity F1; (ii) LLM-generated descriptions carry far more structure when explicitly asked to be complete, raising GPT-5.4-mini's referential F1 on SchemaBench from 0.228 to 0.909, even as BLEU, ROUGE-L, and BERTScore decrease; (iii) controlled experiments show that both constructor and describer choices influence round-trip fidelity under fixed settings; and (iv) masked schema experiments show that structural cues support recovery of keys and relationships, while joint data-type and nullability information is poorly retained through verbalization.\n  Code and data are available at https://github.com/iamsriom/SchemaBridge",
+    "code_links": [
+      "https://github.com/iamsriom/SchemaBridge"
+    ],
+    "comment": null
+  },
+  {
+    "title": "HyperPage: Learned Page Layouts for Disk-Resident Graph Vector Indexes",
+    "authors": "Xinyu Zhang, Jingze Li, Baihua Zheng, Weiwei Sun",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16149v1",
+    "url": "http://arxiv.org/abs/2611.16149v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16149v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Disk-resident graph indexes such as DiskANN store each vector with its graph edges as one record on SSD pages. A search needs the page of every record it expands, so its page reads depend on the page layout, that is, which records share a page. Search agents trained with reinforcement learning query one such index run after run, and every graph traversal can be logged with the records it expands. We therefore use the logs of a finished run to lay out the index for a declared memory budget, so later runs read fewer pages. In contrast, existing layouts such as Starling and MARGO are computed from the graph and vectors and use no logs. Learning a layout from logs is challenging, because the logs must stay valid under every layout, the saving depends on what the budget caches, and the best layout is NP-hard to find. Our key observation is that DiskANN-style search routes on in-memory codes and the records it expands, never on their page-mates. As a result, the logged traversals price every layout by replay, and cached records add no page reads. Accordingly, we propose HyperPage, which first builds layouts for the declared budget on the logged traversals of uncached records. It then selects one layout, together with the budget split between hot records and a page cache, by replaying validation steps. In addition, a Lagrangian lower bound shows how far a layout may be from the optimum. We learn from one Search-R1 agent run and test on a later run with a different reward, over 1M and 21M passages. Across seven cache budgets, HyperPage reads 5.2% to 21.2% fewer pages than MARGO, and no compared layout reads fewer. The advantage is largest when the cache is small. For example, at 1% of the 1M index, MARGO needs nearly 3 times the budget to read as few pages. On the 21M index, HyperPage also cuts search time per step by up to 10.4%. The saving holds for a second agent model and a second corpus.",
+    "code_links": [
+      "https://github.com/zhangshea/HyperPage"
+    ],
+    "comment": "14 pages, 4 figures, 7 tables. Code available at: https://github.com/zhangshea/HyperPage"
+  },
+  {
+    "title": "Calibrated Early Termination with Bounded Optimality Gaps for Constrained Vector Search",
+    "authors": "Xinyu Zhang, Jingze Li, Baihua Zheng, Weiwei Sun",
+    "published": "2026-11-12",
+    "arxiv_id": "2611.16148v1",
+    "url": "http://arxiv.org/abs/2611.16148v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.16148v1",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Vector search over learned embeddings is the retrieval layer of recommendation and retrieval-augmented generation, and many applications cap how many answer items one category may contribute. Graph indexes answer a query by best-first traversal, and where it stops determines its cost and whether its answer is exact. We study early termination for such constrained $k$-nearest-neighbor ($k$-NN) queries, with plain $k$-NN as a special case, and seek the cheapest stopping rule whose answer is exact with probability at least $1-\\varepsilon$. Learned early-termination methods instead target average recall, which does not guarantee exact answers. Multiple testing can calibrate any parameterized stopping rule to our target, but it cannot tell how much a better rule with the same risk and observations would save. Answering this needs a lower bound on the optimum of a rule family too large to enumerate, valid for the query population. Our key idea is to declare the observations a rule may use and to consider every rule monotone in them. Risk-constrained stopping then becomes a linear program over an order polytope, whose Lagrangian minimizers form a nested chain of staircase rules computed exactly by dynamic programming. Fixed-sequence binomial tests along this chain calibrate our rule, CaST, whose failure probability is at most $\\varepsilon$ with confidence $1-δ$. Lagrangian weak duality bounds the optimum of the declared class from below at all risk levels at once, without a union bound over the rules. On two datasets of one million items each, CaST replayed on logged searches costs at most 1.132 times the class optimum for risk levels from 0.03 to 0.10, at 95% joint confidence per setting. Larger savings thus need a rule outside the class. At a common risk target on held-out queries, CaST is faster than every other calibrated rule we time, which take 4.8% to 45.5% more mean time.",
+    "code_links": [
+      "https://github.com/zhangshea/CaST"
+    ],
+    "comment": "14 pages, 5 figures, 3 tables. Code available at https://github.com/zhangshea/CaST"
+  },
+  {
+    "title": "Beyond Interaction Scores: Selecting Feature Interactions via Independent Replication",
+    "authors": "Jincheng Gao, Shuo Sun",
+    "published": "2026-11-10",
+    "arxiv_id": "2611.13765v1",
+    "url": "http://arxiv.org/abs/2611.13765v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.13765v1",
+    "category": "databases",
+    "primary_category": "cs.LG",
+    "abstract": "Learning feature interactions is essential for accurate prediction and interpretable modeling, yet a high interaction score may reflect fitting noise rather than a reproducible pattern. Ranking methods score feature pairs but leave the cutoff to the user; testing methods set the cutoff but rely on repeated model refits or a model of the joint feature distribution. We present LENS, a model-agnostic framework for selecting feature interactions through independent replication. LENS trains two models with the same learning algorithm on disjoint data and accesses them only through predictions. For each feature pair, it removes main effects from the joint-effect surface to isolate an interaction pattern, ranks pairs by its strength, and tests whether the second model reproduces it at a meaningful strength. A single multiple-testing correction determines which pairs to retain, using only two model fits regardless of the number of features. We prove that a replication ratio alone can retain arbitrarily weak patterns shared by both fits, whereas a strength floor restores selection consistency, and we characterize when normalization in Friedman's $H^2$ reverses interaction rankings. On 16 synthetic designs, LENS matches leading model-specific ranking methods (e.g., TreeSHAP) and recovers 91% of material interactions, against 45% for the knockoff-based DIAMOND, without selecting false pairs; with 1,225 candidate pairs and no interactions, it makes substantially fewer false discoveries. On large-scale French motor insurance data, it identifies interactions documented in the actuarial literature and recovers 90% of the deviance gain obtained using all pairs. On two credit datasets, LENS selects few pairs while maintaining or slightly improving predictive performance over the additive baseline.",
+    "code_links": [
+      "https://github.com/JinchengGao-Infty/LENS"
+    ],
+    "comment": "20 pages. Code and results: https://github.com/JinchengGao-Infty/LENS"
+  },
+  {
+    "title": "Samyama-SDG: A Declarative GraphQL @count and Regex/Ontology Synthetic Data Compiler with $O(1)$-Memory Referential Integrity and Causal Ground Truth",
+    "authors": "Madhulatha Mandarapu, Sandeep Kunkunuru",
+    "published": "2026-11-08",
+    "arxiv_id": "2611.11295v2",
+    "url": "http://arxiv.org/abs/2611.11295v2",
+    "pdf_url": "https://arxiv.org/pdf/2611.11295v2",
+    "category": "databases",
+    "primary_category": "cs.DB",
+    "abstract": "Synthetic data generators face a divide between declarative relational mockets and domain causal simulators. Declarative generators specify entities, regexes, and foreign keys via schemas, but buffer parent primary-key pools in RAM ($O(N)$ memory) and lack ontology bindings or causal ground truth. Conversely, domain simulators emit realistic streams and ground-truth labels, but require thousands of lines of procedural code per domain.\n  We present Samyama-SDG (sdg-rs), a Rust synthetic data compiler unifying declarative schema compilation with ontology-bound causal simulation. At Layer 1, Samyama-SDG compiles Cardinality-Extended GraphQL schemas (@count, @pk, @ontology, @regex, @dist, @fk, @after) and an Attribute Data Dictionary into a topologically sorted DAG. Combining stateless counter-based seekable PRNGs (SplitMix64 over $(\\text{seed}, \\text{entity}, \\text{row}, \\text{field})$) with index-bijective primary keys $f_{\\text{PK}}(s, E, i)$ lets child tables resolve uniform or Zipfian foreign keys and multi-hop @after constraints in $O(1)$ memory without buffering parent tables. At Layer 2, causal processes layer fault propagation and machine-scorable ground truth (ground_truth.jsonl) over the same seekable PRNG and samyama-ontologies binder. Across three schemas, Samyama-SDG generates $1{,}000{,}000$ records in $128.79\\text{ ms}$--$172.43\\text{ ms}$ ($5.80\\text{M}$--$7.76\\text{M}$ rows/s) and $5{,}000{,}000$ records in $676.12\\text{ ms}$--$808.56\\text{ ms}$ at flat $31.4\\text{ MiB}$--$35.1\\text{ MiB}$ memory, with $0$ conformance errors across $1{,}150{,}000$ foreign keys and $900{,}000$ temporal constraints.",
+    "code_links": [
+      "https://github.com/samyama-ai/samyama-synthetic-data-generator"
+    ],
+    "comment": "8 pages, 3 figures, 4 tables. v2 adds an end-to-end differentially private fit-generate-audit example on a public table (Section 4) and positioning on orthogonal differential-privacy marginal fitting via the post-processing theorem and updates companion citations. Code: https://github.com/samyama-ai/samyama-synthetic-data-generator (tag v2.1.0)"
+  },
+  {
+    "title": "MongoBench: Do LLMs Know What a MongoDB Query Will Do?",
+    "authors": "Qibai Chen, Haoting Qiu, Yezhou Cheng, Mengxiao Qian",
+    "published": "2026-11-06",
+    "arxiv_id": "2611.09065v1",
+    "url": "http://arxiv.org/abs/2611.09065v1",
+    "pdf_url": "https://arxiv.org/pdf/2611.09065v1",
+    "category": "databases",
+    "primary_category": "cs.SE",
+    "abstract": "LLM agents increasingly operate databases on their own: they generate queries and run them against live data. Two checks are commonly used to judge such an agent - whether it produces a valid query, and whether it reaches the right final answer - but neither tells us whether the agent knows what its query will actually do before it runs. We argue that this consequence prediction ability must be evaluated in its own right, and we build MongoBench to measure it: given a collection of documents and a MongoDB find() filter, a model must return the exact set of matching _ids, with ground truth from a real mongod server. The 300 items each compose three or four documented matching pitfalls and are proposed symmetrically by three vendors' models, so results stratify by item source. Evaluating four models - frontier systems from three vendors and one open-weight reasoner - accuracy ranges from 70.1% to 92.1%, a 22-point spread. Each proposer mispredicts 10-31% of the items it wrote itself, so producing a query does not imply predicting its effect. A failure-mode analysis shows errors are better predicted by which semantic pitfall a query exercises - range comparisons and null - than by surface measures such as document count or the number of composed rules. Prepending a verified rule sheet helps unevenly; executing the original filter against the engine yields reliable match sets, but delegation must be checked: on 28% of items (averaged over three runs) one model's executed filters never passed a canonical check against the intended query, and it answered about 22 of them wrong, while the other three passed on every item. We release the benchmark, the mongod oracle, and the evaluation code with all prompts at https://github.com/research-repo-bai/MongoBench.",
+    "code_links": [
+      "https://github.com/research-repo-bai/MongoBench"
+    ],
+    "comment": "Accepted at CAIT 2026"
+  }
+]
